@@ -1,0 +1,14 @@
+---
+title: "Teaching"
+site: html_document
+---
+
+## Associate Instructor
+
+STAT 147, Summer 2021
+
+## Current TA Courses
+
+## Previous TA Courses
+
+

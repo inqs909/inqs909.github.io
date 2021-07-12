@@ -1,0 +1,19 @@
+name: "inqs-website"
+title: "INQS"
+base_url: inqs909.github.io
+output_dir: "docs"
+navbar: 
+  left:
+    - text: "HOME"
+      href: index.html
+  right:
+    - text: "Teaching"
+      href: teaching.html
+    - text: "Research"
+      href: research.html
+    - text: "Education"
+      href: education.html
+output:
+  html_document:
+    css: styles.css
+    theme: yeti
