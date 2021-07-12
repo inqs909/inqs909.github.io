@@ -3,7 +3,7 @@
     "path": "~/inqs909.github.io/teaching.Rmd",
     "project_path": "teaching.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "1909696381",
     "contents": "",
     "dirty": false,
     "created": 1626076758605.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "2,17",
+        "cursorPosition": "9,0",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1626076781,
+    "lastKnownWriteTime": 1626077738,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1626076781850,
+    "last_content_update": 1626077738136,
     "read_only": false,
     "read_only_alternatives": []
 }
