@@ -1,0 +1,175 @@
+---
+title: "RcppArmadillo"
+description: "Documenting my experience implementing RcppArmadillo to my research."
+summary: "Documenting my experience implementing RcppArmadillo to my research."
+author: "Isaac Quintanilla"
+draft: false
+date: 2021-05-01
+image: "BB2.jpg"
+categories: 
+  - RCPP
+knitr:
+  opts_chunk: 
+    echo: true
+    message: false
+    warning: false
+    
+---
+
+```{Rcpp, eval = TRUE, echo = FALSE}
+#| eval: true
+#| echo: false
+
+#include <RcppArmadillo.h>
+#include <Rcpp.h>
+
+using namespace Rcpp;
+using namespace arma;
+
+// [[Rcpp::depends(RcppArmadillo)]]
+
+// [[Rcpp::export]]
+
+double mean_cpp(arma::vec x){
+  int n = x.size();
+  double x_sum = sum(x);
+  double x_mean = x_sum / n; 
+  return x_mean; 
+}
+
+```
+
+## Journey
+
+When I first started using Rcpp for my research, I had no idea what I was doing. All I knew was that you can incorporate C++[^1] code in your R scripts to speed up data processing. I did spend some time learning C++ through [www.learningcpp.com](https://www.learncpp.com/), but I didn't get far because my example program did not go well. Troubleshooting the problem was a nightmare. However, it did give me an idea of how C++ programming looks like.
+
+[^1]: I may write C++ as cpp at times.
+
+Once, I decided to implement C++ for my research, I focused on how to incorporate it in R. At the time, I had a fairly strong R background, and I knew you can use C++ in R via Rcpp. Therefore, I spent some time learning more about Rcpp from their [website](http://www.rcpp.org/) and book. After reading everything I could, I didn't learn much. It was really advanced and not written for a newbie. However, I did learn that you can compile a C++ function[^2] that can be executed in R via Rcpp. The challenge was to build a cpp file that contained functions for my analysis. I turned to [Advanced R](https://adv-r.hadley.nz/rcpp.html) by Hadley Wickham for more help.
+
+[^2]: It may be called a function or program. Not really sure.
+
+Wickham's book provided the necessary information to build basic functions to use in R. I learned how to write basic functions in cpp and making them executable with `cppFunction`. Additionally, the book covers the basic classes, looping, and function exporting. I felt prepared to write and use functions in R! However, my research required linear algebra, and it would have been a nightmare to program matrix multiplication with the basics. These challenges led me to [RcppArmadillo](http://dirk.eddelbuettel.com/code/rcpp.armadillo.html).
+
+RcppArmadillo is designed to incorporate the [Armadillo](http://arma.sourceforge.net/) library in R via Rcpp. The Armadillo library contains functions that make it easy to conduct linear algebra in cpp. Additionally, it isn't difficult to learn the syntax. The library is implemented to closely follow Matlab[^3] syntax.
+
+[^3]: I never learned Matlab.
+
+After writing functions and troubleshooting problems, I was able to export my functions to R. Making sure everything worked, I ran the same data on both my R and cpp functions, and it worked! I was able to produce the same value for each function. It gave me the confidence that I would be able to complete my research.
+
+After successfully implementing cpp in my research, I wanted to know how much faster was my code. Going back to Wickham's book, there was information on benchmarking different functions. Using the [bench](https://www.tidyverse.org/blog/2018/06/bench-1.0.1/) package to identify how long each function was taking to execute, I found my R function took 13 times longer than my cpp function. I was shocked! I knew cpp would make my code faster, but I didn't expect it to be that much faster[^4]. This convinced me that all my efforts were worth it!
+
+[^4]: I will admit, I don't know what I am doing when benchmarking these functions, but based on my experiences, this is true.
+
+## Using RcppArmadillo
+
+I like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: `file_name.cpp`. The first lines in my files are given below[^5]:
+
+[^5]: I am still shaky on what each thing does.
+
+``` default
+#include <RcppArmadillo.h>
+#include <Rcpp.h>
+
+using namespace Rcpp;
+using namespace arma;
+
+// [[Rcpp::depends(RcppArmadillo)]]
+```
+
+The first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the `library()` function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R's `::` operator. The last line is used by the `sourcecpp()` function in R. It helps with library dependency.
+
+Now we can create functions to be utilized in R. The code below calculates the mean in cpp:
+
+``` default
+// [[Rcpp::export]]
+
+double mean_cpp(arma::vec x){
+  int n = x.size();
+  double x_sum = sum(x);
+  double x_mean = x_sum / n; 
+  return x_mean; 
+}
+```
+
+The first line tells R to make the following function accessible to the user[^6]. The remaining lines are the function itself. Creating a function in cpp is similar to R[^7]. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:
+
+[^6]: If you don't have the first line. R will not make it executable, but the function may be utilized by other functions within the cpp file.
+
+[^7]: There are occasions where it is not as straight forward.
+
+``` default
+#include <RcppArmadillo.h>
+#include <Rcpp.h>
+
+using namespace Rcpp;
+using namespace arma;
+
+// [[Rcpp::depends(RcppArmadillo)]]
+
+// [[Rcpp::export]]
+
+double mean_cpp(arma::vec x){
+  int n = x.size();
+  double x_sum = sum(x);
+  double x_mean = x_sum / n; 
+  return x_mean; 
+}
+```
+
+In R, you will need to load the following packages[^8]:
+
+[^8]: You may need to install other software such as rtools40. In linux, I have r-base-dev installed which may solve some of the needed dependencies.
+
+```{r}
+library(Rcpp)
+library(RcppArmadillo)
+```
+
+The next step is to compile your cpp file. You can do this with the `sourceCpp()` function:
+
+```{r}
+#| eval: false
+
+Rcpp::sourceCpp("example_cpp.cpp")
+```
+
+This will compile your functions and make them executable in R. You can now use your function like any other R function.
+
+```{r}
+#| eval: true
+
+## Generating Data
+Y <- rnorm(1000)
+
+## Using mean_cpp
+mean_cpp(Y)
+
+## Using Built-in mean functions
+mean(Y)
+```
+
+To see the speed gains, we can use the `mark()` function from the `bench` package.
+
+```{r}
+#| eval: true
+
+bench::mark(
+  mean(Y),
+  mean_cpp(Y)
+)
+```
+
+You can see that the cpp function is much faster than the R built-in function.
+
+## Speed Gains Explanation
+
+You may be asking why is R much slower than cpp. From what I can gather, R is an interpreted language while cpp is a compiled language. While I don't really know what the difference is, it makes cpp much faster.
+
+I like to think there is a difference of requirements. You need to be more careful with cpp because it does not convert inputs to the correct data type. R will do it automatically. Therefore, R takes more time to ensure everything is correct before computing a function. Cpp requires more thinking from the user, but will reward them with speed gains. I am sure there is way more to this simple explanation, but the end result is that cpp is much faster than R.
+
+## Next Steps ...
+
+As my research is progressing, I am noticing the need to incorporate different methods not found in the Armadillo library. For example, I want to incorporate the [GNU Scientific Library](https://www.gnu.org/software/gsl/). I learned there is an R package exists for the library, [RcppGSL](https://dirk.eddelbuettel.com/code/rcpp.gsl.html)! This gives me hope that I can use it for my research. However, I want to use the Armadillo library alongside with GSL. This has a potential to bring new problems with data type incompatibilities. I have ideas for potential solutions, but I will need to test them out.
+
+I also want to learn more about the capabilities of Rcpp. Specifically, what other functions does it contain. I learned that Rcpp has functions for distribution functions. This can be useful for expanding my research.

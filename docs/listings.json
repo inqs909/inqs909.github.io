@@ -1,0 +1,22 @@
+[
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/blog/2021-05-03-smart-program/index.html",
+      "/blog/2021-04-20-incorporating-rcpp/index.html",
+      "/blog/2021-04-15-rcpp-and-research/index.html",
+      "/blog/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/photos.html",
+    "items": [
+      "/photos/bigbear/index.html",
+      "/photos/bluff/index.html",
+      "/photos/diamond/index.html",
+      "/photos/heart/index.html",
+      "/photos/joshua/index.html",
+      "/photos/gregory/index.html"
+    ]
+  }
+]

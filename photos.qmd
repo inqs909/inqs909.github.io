@@ -1,0 +1,11 @@
+---
+title: Photos
+editor: source
+listing:
+  contents: photos
+  type: grid
+  image-height: "300px"
+  grid-columns: 2
+  fields: [title, image]
+---
+

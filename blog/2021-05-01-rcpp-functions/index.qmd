@@ -1,0 +1,255 @@
+---
+title: "Rcpp Functions"
+description: "I describe some of the functions available in Rcpp. If you want to get straight to the material, go to Rcpp Functions."
+author: "Isaac Quintanilla"
+date: 2021-05-01
+draft: true
+categories: 
+  - RCPP
+image: "JT7.jpg"
+knitr:
+  opts_chunk: 
+    echo: true
+    message: false
+    warning: false
+---
+
+
+```{Rcpp}
+#| eval: true
+#| echo: false
+
+
+#include <RcppArmadillo.h>
+#include <Rcpp.h>
+
+using namespace Rcpp;
+using namespace arma;
+
+// [[Rcpp::depends(RcppArmadillo)]]
+
+
+// [[Rcpp::export]]
+
+double fact (int x){
+  if (x == 0){
+    return 1;
+  } else if (x == 1){
+    return 1;
+  } else {
+    int ide = x - 1;
+    arma::vec ff = linspace(1, x, x);
+    arma::vec ccpp = cumprod(ff);
+    double post = ccpp[ide];
+    return post;
+  }
+}
+```
+
+```{Rcpp}
+#| eval: true
+#| echo: false
+
+#include <Rcpp.h>
+using namespace Rcpp;
+
+// [[Rcpp::export]]
+
+double qnorm_cpp(double p, double mean, double sd, int lower, int log){
+  double val = R::qnorm(p, mean, sd, lower, log);
+  return val;
+}
+
+
+// [[Rcpp::export]]
+
+double fact_cpp(double x){
+  NumericVector y = NumericVector::create(x);
+  double val = Rcpp::factorial(y)[0];
+  return val;
+}
+
+
+```
+
+## Journey
+
+When I was implementing [RcppArmadillo](http://dirk.eddelbuettel.com/code/rcpp.armadillo.html), there were a couple scenarios where I couldn't find an easy function for a certain result. This is partly due to strictly sticking with the [Armadillo](http://arma.sourceforge.net/) library for all my needs. I built functions to resolve these issues. However, I got to the point where I couldn't rely on the armadillo library to compute the needed value. I needed to compute the value from the inverse cumulative distribution function (iCDF) of a standard normal distribution. The armadillo library is only for linear algebra and scientific computing. It did not have any distribution functions[^1]. Therefore, I needed to find a solution to my problem.
+
+[^1]: I didn't find any in its documentation.
+
+Hadley Wickham's [book](https://adv-r.hadley.nz/) describes how to use R functions in cpp code. However, I worried that this may computationally taxing by switching from one language to another. Therefore, I searched for potential solutions to compute the iCDF of a normal distribution. This has brought me to this incredible website: [Rcpp for everyone](https://teuder.github.io/rcpp4everyone_en/).
+
+Rcpp for everyone is an excellent website that provides the complete basics of using cpp in R. It is comprehensive that can answer the majority[^2] of your questions when implementing Rcpp. Highly recommend reading it before you implement Rcpp in your code.
+
+[^2]: If not all.
+
+To obtain the iCDF, I needed to use the [R Math Library](https://teuder.github.io/rcpp4everyone_en/310_Rmath.html)[^3]. This library seems to be loaded when you included in the `Rcpp.h` file. However, you will need to include the line `using namespace R` or `R::` in your cpp code. Below is an example of making `qnorm` executable in R:
+
+[^3]: For more information about the R Math Library, click [here](https://cran.r-project.org/doc/manuals/r-release/R-admin.html#The-standalone-Rmath-library).
+
+``` default
+double qnorm_cpp(double p, double mean, double sd, int lower, int log){
+  double val = R::qnorm(p, mean, sd, lower, log);
+  return val;
+}
+```
+
+Now it can be used to obtain the iCDF of a standard normal distribution:
+
+```{r}
+qnorm_cpp(0.5, 0,1,0,0)
+qnorm(0.5, 0, 1)
+```
+
+For my research, I didn't need create an executable function for R. However, I did worry about compatibility issues with the Armadillo library. Fortunately, the function returns a double value making it easy to work with.
+
+Once I learned about these different functions, I decided to clean my cpp code with a couple of other functions. For example, I needed to take the factorial of a number. The Armadillo library does not provide a useful function. Therefore, I wrote a function:
+
+``` default
+double fact (int x){
+  if (x == 0){
+    return 1;
+  } else if (x == 1){
+    return 1;
+  } else {
+    int ide = x - 1;
+    arma::vec ff = linspace(1, x, x);
+    arma::vec ccpp = cumprod(ff);
+    double post = ccpp[ide];
+    return post;
+  }
+}
+```
+
+As you can see, it isn't a pretty function. However the Rcpp provides the following function: `factorial`[^4]. Below is the implementation of the function to obtain a double value:
+
+[^4]: Note that this is misspelled in Rcpp for everyone.
+
+``` default
+double fact_cpp(double x){
+  NumericVector y = NumericVector::create(x);
+  double val = Rcpp::factorial(y)[0];
+  return val;
+}
+```
+
+Below is code to benchmark the 2 functions:
+
+```{r}
+bench::mark(
+fact(5),
+fact_cpp(5)
+)
+```
+
+Notice the Rcpp function is slightly faster than my Armadillo implementation.
+
+## Rcpp Functions
+
+For more accurate information, I highly recommend looking Rcpp for everyone's [Chapter 23](https://teuder.github.io/rcpp4everyone_en/230_R_function.html) and [Chapter 31](https://teuder.github.io/rcpp4everyone_en/310_Rmath.html). I will talk about certain functions I think are important to know.
+
+### Distributions
+
+As the same with R, the R Math library and Rcpp contain four different functions for each distribution. The letter at the beginning of the distribution indicates the functions capabilities.
+
+| Letter | Functionality                                                 |
+|:-------|:--------------------------------------------------------------|
+| `dXXX` | returns the height of the probability density function        |
+| `pXXX` | returns the cumulative density function value                 |
+| `qXXX` | returns the inverse cumulative density function (percentiles) |
+| `rXXX` | returns a randomly generated number                           |
+
+#### Rcpp
+
+The Rcpp distribution functions are vectorized to accept and return vector. The tables below provide more details about each function.
+
+*dXXX*
+
+| Argument | Data Type     | Description      |
+|:---------|:--------------|:-----------------|
+| `x`      | NumericVector | random variable  |
+| `par`    | double        | parameters       |
+| `log`    | bool          | return log value |
+
+*pXXX*
+
+| Argument | Data Type     | Description        |
+|:---------|:--------------|:-------------------|
+| `q`      | NumericVector | random variable    |
+| `par`    | double        | parameters         |
+| `lower`  | bool          | return lower value |
+| `log`    | bool          | return log value   |
+
+*qXXX*
+
+| Argument | Data Type     | Description        |
+|:---------|:--------------|:-------------------|
+| `p`      | NumericVector | probability        |
+| `par`    | double        | parameters         |
+| `lower`  | bool          | return lower value |
+| `log`    | bool          | return log value   |
+
+*rXXX*
+
+| Argument | Data Type | Description                |
+|:---------|:----------|:---------------------------|
+| `n`      | int       | number of random variables |
+| `par`    | double    | parameters                 |
+
+#### R
+
+The R Math library distribution functions return scalar values. The tables below describe the functions in more detail.
+
+*dXXX*
+
+| Argument | Data Type | Description      |
+|:---------|:----------|:-----------------|
+| `x`      | double    | random variable  |
+| `par`    | double    | parameters       |
+| `log`    | int       | return log value |
+
+*pXXX*
+
+| Argument | Data Type | Description        |
+|:---------|:----------|:-------------------|
+| `q`      | double    | random variable    |
+| `par`    | double    | parameters         |
+| `lower`  | int       | return lower value |
+| `log`    | int       | return log value   |
+
+*qXXX*
+
+| Argument | Data Type     | Description        |
+|:---------|:--------------|:-------------------|
+| `p`      | NumericVector | probability        |
+| `par`    | double        | parameters         |
+| `lower`  | int           | return lower value |
+| `log`    | int           | return log value   |
+
+*rXXX*
+
+| Argument | Data Type | Description |
+|:---------|:----------|:------------|
+| `par`    | double    | parameters  |
+
+#### Available Distributions
+
+The table below describe a select number of distribution functions available in R and Rcpp.
+
+| code  | Distributions            |
+|:------|:-------------------------|
+| unif  | Uniform Distribution     |
+| norm  | Normal Distribution      |
+| chisq | $\chi²$ Distribution     |
+| t     | t Distribution           |
+| f     | F Distribution           |
+| exp   | Exponential Distribution |
+| binom | Binomial Distribution    |
+| pois  | Poisson Distribution     |
+
+### apply functions
+
+## Next steps ..
+
+I don't know

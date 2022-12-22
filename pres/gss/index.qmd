@@ -1,0 +1,6 @@
+---
+title: "Time-Varying Coefficient Models"
+url_slides: "files/GSS/Presentation_GSS.html"
+date: "2020-04-21"
+description: A talk on time-varying coefficient models. 
+---

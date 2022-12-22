@@ -1,0 +1,39 @@
+---
+title: "Projects"
+editor: visual
+css: projects.css
+---
+
+::: content-block
+::: features
+::: {.feature .box}
+### The `ucrstats` package
+
+An R package designed to teach statistical methods in R.
+
+::: learn-more
+[Learn more »](https://ucrgradstat.github.io/ucrstats/)
+:::
+:::
+
+::: {.feature .box}
+### The SMART Program
+
+A mentoring program for undergraduate students to completer statistical projects at UC Riverside.
+
+::: learn-more
+[Learn more »](https://ucrgradstat.github.io/smart/)
+:::
+:::
+
+::: {.feature .box}
+### The `tvcm` Package
+
+The `tvcm` package allows you to fit time-varying coefficient models in R
+
+::: learn-more
+[Learn more »](https://inqs909.github.io/tvcm/)
+:::
+:::
+:::
+:::

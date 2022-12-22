@@ -1,0 +1,64 @@
+---
+css: styles.css
+editor_options: 
+  chunk_output_type: console
+---
+
+::: container
+::: grid
+::: {.g-col-12 .g-col-md-6}
+![](img/avatar.jpg){.rounded-circle fig-align="center" width="60%"}
+
+### Isaac Quintanilla Salinas
+
+##### Assistant Professor of Statistics
+
+[CSU Channel Islands](https://www.csuci.edu)
+
+```{=html}
+<a class="btn btn-primary" href="https://github.com/inqs909" role="button">Github</a>
+<a class="btn btn-primary" href="https://gitlab.com/inqs909">Gitlab</a>
+```
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Biography
+
+Isaac Quintanilla Salinas is a recent graduate from the [Department of Statistics](https://statistics.ucr.edu/) at the [University of California, Riverside](https://www.ucr.edu) with a PhD in Applied Statistics. He is joining the [Department of Mathematics](https://math.csuci.edu/) at the California State University Channel Islands this upcoming Fall 2022. Prior to his doctoral research, Dr. Quintanilla Salinas has earned his MPH from San Diego State University and BS in Biology from the California State University Monterey Bay.
+
+Dr. Quintanilla Salinas research focuses on developing statistical models to understand the association between survival and longitudinal outcomes. His dissertation "Multilevel Time-Varying Joint Models for Longitudinal and Survival Outcomes" develops a novel model to address challenges of modeling dependent outcomes.
+:::
+:::
+:::
+
+::: content-block
+::: features
+::: {.feature .box}
+### Education
+
+-   UC Riverside
+
+    -   PhD in Applied Statistics
+
+-   San Diego State University
+
+    -   Master's in Public Health
+
+-   CSU Monterey Bay
+
+    -   BS Biology
+:::
+
+::: {.feature .box}
+### Interests
+
+-   Joint Longitudinal and Survival Models
+
+-   Health Equity
+
+-   Education
+
+-   Algorithmic Bias
+:::
+:::
+:::

@@ -1,0 +1,16 @@
+---
+title: "Welcome!"
+description: "Welcome to the INQS Blog. A blog documenting my experiences through Statistics. I hope you enjoy reading my blog!"
+summary: "Welcome to the INQS Blog. A blog documenting my experiences through Statistics. I hope you enjoy reading my blog!"
+author: "Isaac Quintanilla Salinas"
+date: 2021-04-14
+image: "sunset.jpg"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Welcome! I've decided to create this blog as a way to record my journey in Statistics. As I am working through my PhD, I've read numerous posts on vast topics. As I was reading about topics related to Rcpp. I noticed how difficult it was to implement Rcpp for my needs. At the same moment, it dawned on me that I am reading from individuals that at some point in time were struggling with the same issues. This inspired me to create a blog of my own with the same intentions to help other individuals. My hope is to demonstrate how I overcame the challenges I faced to others that are facing similar issues.
+
+I don't know how this blog will go. It's going to be a learning experience. I don't even know how many blog posts I will write in a year. I don't even know what topics I will write about. However, I hope overtime, I can create a blog that may help people.

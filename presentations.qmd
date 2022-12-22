@@ -1,0 +1,63 @@
+---
+title: "Presentations"
+css: styles.css
+editor: source
+---
+
+::: content-block
+::: features
+::: {.feature .box}
+#### UCR High-Performance Computing Center
+
+May 20, 2022
+
+[Slides](files/GSS/HPCC/hpcc_5-20.html){.btn-action-primary .btn-action .btn .btn-success role="button"}
+:::
+
+::: {.feature .box}
+#### Data Processing
+
+April 21, 2022
+
+[Slides](files/hiss_3/hiss_3.html){.btn-action-primary .btn-action .btn .btn-success role="button"}
+:::
+
+::: {.feature .box}
+#### Overview of Joint Longitudinal-Survival Models: Modeling the Association Between Dependent Outcomes
+
+June 12, 2021
+
+[Slides](files/niss_1/niss_1.html){.btn-action-primary .btn-action .btn .btn-success role="button"}
+:::
+
+::: {.feature .box}
+#### Parallel Processing for Statistics
+
+December 18, 2020
+:::
+
+::: {.feature .box}
+#### Time-Varying Coefficient Models for Longitudinal Data
+
+October 16, 2020
+
+[Slides](files/UCM/Presentation_UCM.html){.btn-action-primary .btn-action .btn .btn-success role="button"}
+:::
+
+::: {.feature .box}
+#### Time-Varying Coefficient Models
+
+April 21, 2020
+
+[Slides](files/GSS/Presentation_GSS.html){.btn-action-primary .btn-action .btn .btn-success role="button"}
+:::
+
+::: {.feature .box}
+#### Data Manipulation
+
+October 21, 2019
+
+[Slides](files/hiss_1/dplyr_tidyr.html){.btn-action-primary .btn-action .btn .btn-success role="button"}
+:::
+:::
+:::

@@ -1,0 +1,71 @@
+---
+title: "Multilevel Time-Varying Joint Models for Longitudinal and Survival Outcomes"
+format: revealjs
+author: Isaac Quintanilla Salinas
+date: 08/04/2022
+incremental: true
+preview-links: true
+---
+
+## About Me
+
+- San Bernardino, CA
+- CSU - Monterey Bay
+    - BS Biology
+- San Diego State University
+    - MPH Biostatistics
+- UC - Riverside
+    - PhD Applied Statistics
+
+## Longitudinal Data
+
+- Repeated Measurements collected at different time points
+- Measurements are correlated with each other
+- Linear Mixed Effects Models
+    - Fixed Effects accounts for the population-level effects
+    - Random Effects account for the individual-level effects
+        - Induce the correlation between the repeated measurements
+
+## Survival Data 
+
+- Time to Event Data
+- Censoring Mechanisms
+- Cox Proportional Hazard Model
+
+
+## Joint Models
+
+- Model a set covariates to a set of dependent outcomes
+    - Repeated Measurements
+    - Time to event
+- Joint Models utilized random effects to induce the correlation between the dependent outcomes
+    - Allows to construct the likelihood function
+- Model the association between the repeated measurements and time to event
+
+## Time-varying Coefficient Functions
+
+- The association between the dependent outcomes is not constant
+- We model it using a time-varying coefficient function
+    - The coefficient is now a function of time
+
+::: {.fragment}
+$$
+T =  Y(t)\beta(t)
+$$
+:::
+
+## Resources {.scrollable}
+
+- #rstats
+    - [https://www.t4rstats.com/index.html](https://www.t4rstats.com/index.html)
+- Rstudio
+    - [https://www.rstudio.com/](https://www.rstudio.com/)
+- SACNAS
+    - [https://www.sacnas.org/](https://www.sacnas.org/)
+- Center for Minorities in Mathematics
+    - [https://minoritymath.org/](https://minoritymath.org/)
+    - [https://minoritymath.org/mathematically-uncensored/](https://minoritymath.org/mathematically-uncensored/)
+- Inspiration
+    - [https://www.lathisms.org/](https://www.lathisms.org/)
+    - [https://mathematicallygiftedandblack.com/](https://mathematicallygiftedandblack.com/)
+

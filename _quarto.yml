@@ -1,0 +1,34 @@
+project:
+  type: website
+  render: 
+    - "*.qmd"
+    - "!files/"
+  output-dir: docs
+  resources: 
+    - "files/" 
+    - "photos/"
+    - "resources/"
+
+  
+website:
+  title: "INQS"
+  site-url: www.inqs.info
+  navbar:
+    right:
+      - courses.qmd
+      - projects.qmd
+      - presentations.qmd
+      - pubs.qmd
+      - blog.qmd
+      - photos.qmd
+
+
+
+format:
+  html:
+    theme:
+      light: theme.scss
+      dark: dark.scss
+
+editor: visual
+

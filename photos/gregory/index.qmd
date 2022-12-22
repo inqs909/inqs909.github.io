@@ -1,0 +1,24 @@
+---
+title: "Lake Gregory"
+editor: source
+image: "img/LG1.jpg"
+
+format: html
+knitr: 
+  opts_chunk: 
+    echo: false
+    message: false
+    
+---
+
+```{r}
+library(pixture)
+
+pixgallery(
+  list.files("img", 
+             full.names=TRUE),
+  dim="350px",
+  gap = "10px"
+)
+```
+

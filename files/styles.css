@@ -1,0 +1,170 @@
+
+
+/* Profile Image */
+/*
+.gravatar {
+		width: 100%;
+		margin-left: auto;
+    margin-right: auto;
+	}
+	
+
+.centerImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  width:  250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+/* Header Colors */
+/*
+h1 {
+  color:    #17A589;
+}
+
+h2 {
+  color:    #17A589;
+}
+
+h3 {
+  color:    #17A589;
+}
+
+*/
+/* Body section customization */
+
+body {
+  background-color: white;
+  color: black;
+  font-size: 16 px;
+}
+
+/* Navbar customization */
+/*
+.navbar {
+    background-color: #21211E;
+    border-color: #21211E;
+    font-color: white;
+    font-size: 20px;
+}
+
+.navbar .navbar-nav > li > a:hover,
+.navbar .navbar-nav > li > a:focus {
+    background-color: #17A589;
+    color: white;
+}
+.navbar .navbar-nav > .active > a,
+.navbar .navbar-nav > .active > a:hover,
+.navbar .navbar-nav > .active > a:focus {
+  color: white;
+  background-color: #17A589;
+}
+.navbar .navbar-toggle:hover,
+.navbar .navbar-toggle:focus {
+  background-color: #17A589;
+}
+.navbar .navbar-collapse,
+.navbar .navbar-form {
+  border-color: #17A589;
+}
+
+.nav.navbar-nav li a {
+    color: white;
+}
+
+*/
+/*Dropdown Menu*/
+/*
+
+a.dropdown-toggle:hover {
+  background-color: #17A589 !important;
+}
+
+
+.navbar-default .dropdown-menu {
+  background-color: #2D2D29;
+}
+
+  .navbar-default .dropdown-menu>li>a:hover {
+    background-color: #17A589;
+  }
+
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover{
+      color: white;
+      background-color: #17A589;
+  }
+
+.navbar-default .dropdown-menu>.active>a {
+    color: white !important;
+    background-color: #17A589;
+}
+
+*/
+
+
+/* The blocks on my website */
+/*
+.content-panel {
+	background-color: #2D2D29;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-top: 20px;
+	box-shadow: 0px 0px 0px 0px, 0px 6px 12px rgba(0, 0, 0, 0.2);
+	border-bottom: 5px solid #17A589;
+	color: white;
+	font-size: 1.5em;
+
+}
+
+.content-panel-intro {
+	background-color: #2D2D29;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-top: 20px;
+	box-shadow: 0px 0px 0px 0px, 0px 6px 12px rgba(0, 0, 0, 0.2);
+	border-bottom: 5px solid #17A589;
+	color: white;
+	font-size: 1.5em;
+
+}
+
+.column-35 {
+  float: left;
+  width: 35%;
+}
+
+.column-65 {
+  float: left;
+  width: 65%;
+  font-size: 1.25em;
+}
+
+*/
+/* Clear floats after the columns */
+/*
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+*/
+/* Link Colors */
+/*
+a:link{
+  color: #17A589;
+}
+
+a:hover {
+  color: white;
+}
+
+*/

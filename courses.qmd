@@ -1,0 +1,51 @@
+---
+title: "Courses"
+css: courses.css
+editor: visual
+---
+
+::: content-block
+## CSU Channel Islands
+
+-   [Math 352: Probability and Statistics](https://m352.inqs.info)
+
+-   [Math 453: Mathematical Statistics](https://m453.inqs.info)
+:::
+
+::: content-block
+## UC Riverside
+
+::: {.panel-tabset .nav-pills}
+## All
+
+-   STAT 127: Introduction to Quality Management
+
+-   STAT 147: Introduction to Statistical Computing
+
+-   STAT 100: Introduction to Statistics
+
+-   STAT 170: Regression and ANOVA
+
+-   STAT 048: Introduction to Business Statistics
+
+-   UB: Math Courses
+
+-   UB: Public Health Courses
+
+-   UB: Research Courses
+
+## Associate Instructor
+
+-   STAT 127: Introduction to Quality Management
+
+-   STAT 147: Introduction to Statistical Computing
+
+## Teaching Assistant
+
+-   STAT 100: Introduction to Statistics
+
+-   STAT 170: Regression and ANOVA
+
+-   STAT 048: Introduction to Business Statistics
+:::
+:::

@@ -1,0 +1,843 @@
+---
+title: "Time-Varying Coefficient Models for Longitudinal data"
+author: "Isaac Quintanilla"
+date: "2020-10-16"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: 16:9
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(cache = TRUE)
+library(tidyverse)
+library(gganimate)
+library(gifski)
+load("bin.RData")
+load("norm.RData")
+K_epa<-function(u){
+  x<-as.numeric(u)
+  xx<-3/4*(1-x^2)
+  xxx<-ifelse(xx>0,xx,0)
+  return(xx)
+}
+
+#Kernel with bandwidth h
+Kh<-function(t,t0,h){
+  hh<-abs(t-t0)/h
+  x<-ifelse(hh<=1,K_epa(hh)/h,0)
+  return(x)
+}
+
+#Vectorize Kernel function
+Kh.vec.t<-Vectorize(Kh,"t")
+```
+
+```{r, load_refs, include=FALSE, cache=FALSE}
+library(RefManageR)
+BibOptions(check.entries = FALSE,
+           bib.style = "authoryear",
+           cite.style = "authoryear",
+           style = "markdown",
+           hyperlink = FALSE,
+           dashed = FALSE)
+Bib <- ReadBib("VCM.bib", check = FALSE)
+RBib<-ReadBib("RBIB.bib",check = F)
+
+```
+
+## Presentation Access
+
+This presentation is available at:
+
+[gitlab.com/inqs909/vcm](https://gitlab.com/inqs909/vcm)
+
+---
+## Thank You to all essential workers!
+
+
+- Healthcare workers
+
+- Farmworkers
+
+- Grocery workers
+
+- All other essential workers
+
+---
+
+## UC Merced Land Acknowledgement
+
+We pause to acknowledge all local indigenous peoples, including the Yokuts and Miwuk, who inhabited this land. We embrace their continued connection to this region and thank them for allowing us to live, work, learn, and collaborate on their traditional homeland. Let us now take a moment of silence to pay respect to their elders and to all Yokuts and Miwuk people, past and present.
+
+---
+
+## UCR Land Acknowledgement
+
+I would like to respectfully acknowledge and recognize our responsibility to the original and current caretakers of this land, water, and air: the Cahuilla [ka-wee-ahh], Tongva [tong-va], Luiseño [loo-say-ngo], and Serrano [se-ran-oh] peoples and all of their ancestors and descendants, past, present, and future. Today this meeting place is home to many Indigenous peoples from all over the world, including UCR faculty, students, and staff, and we are grateful to have the opportunity to live and work on these homelands. 
+
+---
+## Table of Contents
+
+--
+
+* Longitudinal Data
+
+--
+
+* Time-Varying Coefficient Models
+
+--
+
+* Standard Error Estimation
+
+--
+
+* Bandwidth and Kernel Function
+
+--
+
+* Simulation Study
+
+---
+layout: false
+class: inverse, middle, center
+
+# Longitudinal Data
+
+---
+
+## Longitudinal Data
+
+Longitudinal Data are repeated measurements for a subject collected at different time points.
+
+- Measurements can be collected at equally or irregular time points
+
+- Each subject may contain different measurements
+
+- Each measurement is correlated with one another
+
+---
+layout: false
+class: inverse, middle, center
+
+# Time-Varying Coefficient Models
+---
+## Model
+Parametric Model:
+.size130[
+$$
+Y=\boldsymbol X^\mathrm T\boldsymbol\beta+\epsilon
+$$
+]
+
+--
+
+- $\boldsymbol \beta=(\beta_1,\beta_2,...,\beta_p)^T$
+- $\boldsymbol X=(X_1,X_2,...,X_p)^T$
+- $Y$ response variable
+- $\epsilon$ error term
+
+
+---
+## Model
+
+Time-Varying Coefficient Model:
+
+.size130[
+$$
+Y=\boldsymbol X^\mathrm T\boldsymbol\beta(t)+\epsilon
+$$
+]
+
+--
+
+- $\boldsymbol \beta(t)=\{\beta_1(t),\beta_2(t),....\beta_p(t)\}^T$
+- $\boldsymbol X=(X_1,X_2,...,X_p)^T$
+- $Y$ response variable
+- $\epsilon$ error term
+
+???
+- $\boldsymbol \beta$ vector of coefficients
+- $\boldsymbol X$ vector of predictors
+- $Y$ response variable
+- $\epsilon$ error term
+- $\boldsymbol \beta(t)$ varying coefficient
+
+
+---
+
+## Estimation
+
+- $\boldsymbol \beta (t)$ is unknown
+
+--
+
+### Approximation techniques
+
+- Polynomial Splines
+
+- Smoothing Splines
+
+- Local Polynomials
+
+???
+
+We will focus on local polynomials
+
+- directly estimate the function at a grid point
+
+- The function is described by a set of gridpoints
+
+- Use Local Linear models
+
+---
+
+## Local Linear Model
+
+For a set of grid points, the varying coefficient is approximated around $t_0$ with a Taylor's Expansion
+.size130[
+$$
+\boldsymbol \beta(t)\approx \boldsymbol \beta(t_0)+\boldsymbol \beta^\prime(t_0)(t-t_0)
+$$
+]
+
+--
+
+The model can be rewritten as
+.size130[
+$$
+\boldsymbol \beta(t)\approx \boldsymbol a+\boldsymbol b (t-t_0)
+$$
+]
+
+
+???
+
+* $\boldsymbol \beta(t_0)$ is the function
+* $\boldsymbol \beta(t_0)^\prime$ is the first derivative with respect to t
+* As long as we are in the neighborhood of $t_0$ this approximation is correct.
+* No higher order polynomial are necessary
+* Lessens the chances to be affected by the curse of dimensionality
+* You need to choose a bandwidth and kernel function
+
+---
+
+### Estimation Procedure
+
+
+```{r,echo=FALSE,fig.align='center',fig.width=12,message=FALSE,warning=FALSE}
+gg.curve <- ggplot(data=data.frame(x=seq(0,1,length.out = 100),y=sin(pi*seq(0,1,length.out = 100)),y.pred=sin(pi*seq(0,1,length.out = 100))+rnorm(100,0,.01)))+geom_line(aes(x=x,y=y),col="red")+geom_line(aes(x=x,y=y.pred),col="blue")+theme_bw()
+gg.curve + transition_reveal(x)
+```
+
+---
+
+### Estimating value $t_0=0.5$
+
+Bandwidth and Kernel Function
+
+```{r,echo=FALSE,fig.align='center',fig.width=12,message=FALSE,warning=FALSE}
+gg.curve <- ggplot(data=data.frame(x=seq(0,1,length.out = 100),y=sin(pi*seq(0,1,length.out=100))))+geom_line(aes(x=x,y=y),col="red")+geom_line(data=data.frame(x=seq(0,0.5,length.out=50),y=sin(pi*seq(0,0.5,length.out=50))+rnorm(50,0,0.01)),aes(x=x,y=y),col="blue")+theme_bw()+
+  geom_rect(aes(xmin=.4,xmax=.6,ymin=0,ymax=Inf,fill="gray87"),alpha=0.002)+
+  geom_polygon(data = data.frame(x=seq(0.4,0.6,length.out = 50),y=Kh.vec.t(seq(0.4,0.6,length.out = 50),0.5,0.1)/20),aes(x=x,y=y))+guides(fill=FALSE)
+
+  
+gg.curve
+```
+
+
+---
+## Local Least Squares
+To find the estimates of the varying coefficient, we minimize the local least squares function. 
+For $n$ subjects, each subject containing $n_i$ measurements, the local least squares is formulated as
+
+\begin{equation}
+L(\boldsymbol a,\boldsymbol b)=\sum^n_{i=1}\sum^{n_i}_{j=1}\left[Y_{ij}-\boldsymbol X_i^\mathrm T \{\boldsymbol a+\boldsymbol b(t_{ij}-t_0)\} \right]^2K_h(t_{ij},t_0)
+\end{equation}
+
+--
+- $t_{ij}$: time point
+
+--
+- $Y_{ij}$: outcome 
+
+--
+- $\boldsymbol X_{i}$: time-invariant predictors
+
+--
+- $K_h(\cdot)$: kernel function with associated bandwidth $h$
+
+---
+## Weighted Least Squares Estimator
+
+The estimates for $\boldsymbol a (t_0)$ are found with with least squares estimator:
+
+\begin{equation}
+\hat {\boldsymbol a} (t_0)=(\boldsymbol I_p, \boldsymbol 0_p)\left(\sum_{i=1}^n\mathcal X_i^\mathrm T \mathcal K_i \mathcal X_i\right)^{-1}\left(\sum_{i=1}^n\mathcal X_i^\mathrm T \mathcal K_i \mathcal Y_i\right)
+\end{equation}
+
+
+--
+- $\mathcal Y_i$: vector of repeated measurements for $i^{th}$ subject
+
+--
+
+- $\mathcal K_i$: $n_i \times n_i$ diagonal matrix accounting for the weights
+
+--
+
+- $\mathcal X_i$: $n_i \times 2p$ design matrix of local linear model
+
+--
+
+- $p$: number of predictors
+
+???
+
+Since we only care about the function, we do not need to know how the first derivative looks like.
+
+Next slide is messy
+
+---
+## Asymptotic Theory
+
+According to `r Citet(Bib,"zhangVariableBandwidthSelection2000")`, the asymptotic distribution is
+
+\begin{equation}
+cov^{-1/2}\{\hat{\boldsymbol a}(t_0)\}[\hat{\boldsymbol a}(t_0)-\boldsymbol a (t_0)-bias\{\hat{\boldsymbol a}(t_0)\}]\xrightarrow{D} N(\boldsymbol 0,\boldsymbol I_{p})
+\end{equation}
+
+--
+
+\begin{equation}
+bias\left\lbrace\hat{\boldsymbol a}(t_0)\right\rbrace=2^{-1}h^2\mu_2\boldsymbol a^{\prime\prime}(t_0)
+\end{equation}
+
+--
+
+\begin{equation}
+cov\{\hat{\boldsymbol a}(t_0)\}=\lbrace nh f(_0)E(XX^\mathrm T|T=t_0)\rbrace^{-1}\nu_0\sigma^2(t_0)
+\end{equation}
+
+--
+--
+
+- $\nu_i=\int t^i K^2(t)dt$
+
+--
+
+- $\mu_i=\int t^iK(t)dt$
+
+--
+
+- $f(t_0)$: Density function of $T$
+
+
+???
+
+The main thing to take away is that the estimators are asymptotically normal
+
+---
+
+## Asymptotic Covariance
+
+.size60[
+\begin{eqnarray*}
+& \widehat{cov} \{\hat {\boldsymbol a}(t_0) \} \approx \\
+& (\boldsymbol I_p, \boldsymbol 0_p)\left(\sum_{i=1}^n\mathcal X_i^\mathrm T \mathcal K_i \mathcal X_i\right)^{-1}\left(\sum_{i=1}^n\mathcal X_i^\mathrm T \mathcal K_i \mathcal Q_i \mathcal K_i \mathcal X_i\right)\left(\sum_{i=1}^n\mathcal X_i^\mathrm T \mathcal K_i \mathcal X_i\right)^{-1}(\boldsymbol I_p, \boldsymbol 0_p)^\mathrm T
+\end{eqnarray*}
+]
+
+--
+
+- $\mathcal Q_i$: a diagonal matrix of the squared residuals
+
+- The sandwich estimator is used
+
+???
+
+The sandwich estimator has shown to provide consistent results.
+
+---
+layout: false
+class: inverse, middle, center
+
+# Standard Error Estimation for Longitudinal Data
+
+---
+
+## Standard Errors
+
+Longitudinal data have correlated repeated measurements; therefore, the correlation must be taken into account to accurately estimate the standard errors. The following papers provide methods to estimate the standard error with correlated data.
+
+- `r Citet(Bib,"wuKERNELSMOOTHINGVARYING2000")`
+
+- `r Citet(Bib,"fanProfileLikelihoodInferences2005")`
+
+- `r Citet(Bib,"fanAnalysisLongitudinalData2007a")`
+
+
+---
+
+## Bootstrap Standard Errors
+
+Due to mispecification of the correlation matrix, the standard errors may be biased. An alternative method is to estimate the standard errors via bootstrap. 
+
+
+---
+layout: false
+class: inverse, middle, center
+
+# Bandwidth and Kernel Function
+
+---
+
+## Bandwidth
+
+The choice of bandwidth has an effect on the bias-variance trade-off
+
+--
+
+- Smaller $h$, smaller bias, larger variance
+
+--
+
+- Larger $h$, larger bias, smaller variance
+
+--
+
+- Need to find ideal bandwidth to minimize both
+
+--
+
+- The ideal bandwidth can be found via a cross-validation approach
+
+---
+
+## Kernel Function
+
+Use the Epanechnikov Kernel Function:
+
+$K(z) = \frac{3}{4}(1-z^2)_+$
+
+---
+layout: false
+class: inverse, middle, center
+
+# Simulation Study
+---
+## Normal Simulation Parameters
+
+- 250 Monte Carlo Datasets
+
+- 250 participants
+
+- 25 equally-space time points from 0 to 1
+
+- 1 predictor from $N(-2,1)$
+
+- $\beta_0(t)=\sqrt t$
+
+- $\beta_1(t)=-\sin(t)$
+
+- Outcome was generated from a normal distribution
+
+---
+## Normal Estimation VCM
+
+- WLS estimator was used to obtain vcm estimates at 100 grid points equally spaced from 0 to 1
+
+- $h=0.1$
+
+- Epanechnikov Kernel Function was used
+
+---
+## Normal Data Results
+```{r,echo=FALSE,fig.align='center',fig.width=12}
+ggplot(data=gg.df.norm)+
+      geom_line(aes(x=t,y=X2,group=ind,color=ind,linetype=ind))+
+      xlab("Time")+ylab("Measurement")+theme_bw()+labs(color="")+
+      scale_linetype_manual("",values=c("solid","solid","dashed", "dashed","dotted","dotted"),limits = c("Truth", "Estimated", "2.5th Percentile","97.5th Percentile","95% CI Lower Limit","95% CI Upper Limit"))+
+      scale_color_manual(values=c('blue','green1',"blue",'blue','green1','green1'),limits = c("Truth", "Estimated", "2.5th Percentile","97.5th Percentile","95% CI Lower Limit","95% CI Upper Limit"))
+```
+---
+## Normal Data Results
+```{r,echo=FALSE,fig.align='center',fig.width=12}
+ggplot(data=gg.df.norm)+
+      geom_line(aes(x=t,y=X2,group=ind,color=ind,linetype=ind))+
+      xlab("Time")+ylab("Measurement")+theme_bw()+labs(color="")+
+      scale_linetype_manual("",values=c("solid","solid","dashed", "dashed","dotted","dotted"),limits = c("Truth", "Estimated", "2.5th Percentile","97.5th Percentile","95% CI Lower Limit","95% CI Upper Limit"))+
+      scale_color_manual(values=c('blue','green1',"blue",'blue','green1','green1'),limits = c("Truth", "Estimated", "2.5th Percentile","97.5th Percentile","95% CI Lower Limit","95% CI Upper Limit"))
+```
+
+---
+
+## Thank You!
+
+Be Safe and Healthy!
+
+---
+layout: false
+class: inverse, middle, center
+
+# Appendix
+
+
+---
+layout: false
+class: inverse, middle, center
+
+# Useful References
+
+
+---
+## Varying-Coefficient Models
+
+- `r Citet(Bib,"fanStatisticalMethodsVarying2008")`
+- `r Citet(Bib,"hastieVaryingCoefficientModels1993")`
+- `r Citet(Bib,"hooverNonparametricSmoothingEstimates1998")`
+- `r Citet(Bib,"caiEfficientEstimationInferences2000")`
+- `r Citet(Bib,"zhangVariableBandwidthSelection2000")`
+- `r Citet(Bib,"kurumNonlinearVaryingCoefficientModels2014")`
+- `r Citet(Bib,"kurumTimeVaryingCoefficientModels2016")`
+
+---
+
+## VCM for Longitudinal Data
+
+- `r Citet(Bib,"hooverNonparametricSmoothingEstimates1998")`
+
+- `r Citet(Bib,"wuKERNELSMOOTHINGVARYING2000")`
+
+- `r Citet(Bib,"fanProfileLikelihoodInferences2005")`
+
+- `r Citet(Bib,"fanAnalysisLongitudinalData2007a")`
+
+- `r Citet(Bib,"xueEmpiricalLikelihoodVarying2007")`
+
+- `r Citet(Bib,"fanSemiparametricEstimationCovariance2008")`
+
+---
+layout: false
+class: inverse, middle, center
+
+# Generalized Time-Varying Coefficient Models
+---
+## Model
+
+\begin{equation}
+g\lbrace m(t,\boldsymbol X)\rbrace= E(Y|\boldsymbol X,t)=\boldsymbol X^\mathrm T\boldsymbol{\beta}(t)
+\end{equation}
+
+--
+
+- $\boldsymbol X$: vector of predictors
+
+--
+
+- $Y$: outcome
+
+--
+
+- $t$: time point
+
+--
+
+- $g(\cdot)$: canonical link-function
+
+???
+
+g is a canonical link function
+
+---
+## Local Linear Model
+
+For a set of grid points, the varying coefficient is approximates around $t_0$ with a Taylor's Expansion
+.size130[
+$$
+\boldsymbol \beta(t)\approx \boldsymbol \beta(t_0)+\boldsymbol \beta^\prime(t_0)(t-t_0)
+$$
+]
+
+--
+
+The model can be rewritten as
+.size130[
+$$
+\boldsymbol \beta(t)\approx \boldsymbol a+\boldsymbol b (t-t_0)
+$$
+]
+
+
+???
+
+* $\boldsymbol \beta(t_0)$ is the function
+* $\boldsymbol \beta(t_0)^\prime$ is the first derivative with respect to t
+* As long as we are in the neighborhood of $t_0$ this approximation is correct.
+* No higher order polynomial are necessary
+* Lessens the chances to be affected by the curse of dimensionality
+* You need to choose a bandwidth and kernel function
+
+
+---
+## Local Log-Likelihood Function
+
+For $n$ subjects, each subject containing $n_i$ measurements, the local log-likelihood function is constructed as 
+
+.size90[
+\begin{equation}
+\mathcal{L} (\boldsymbol a,\boldsymbol b)=\sum^n_{i=1}\sum^{n_i}_{j=1}\ell (g^{-1}[ \boldsymbol X_i^\mathrm T\lbrace \boldsymbol a+\boldsymbol b(t_{ij}-t_0)\rbrace],Y_{ij})K_h(t_{ij}-t_0)
+\end{equation}
+]
+
+--
+
+- $\ell(\cdot,\cdot)$: log-likelihood function
+
+--
+- $t_{ij}$: time point
+
+--
+- $Y_{ij}$: outcome 
+
+--
+- $\boldsymbol X_{i}$: time-invariant predictors
+
+--
+- $K_h(\cdot)$: kernel function with associated bandwidth $h$
+
+
+---
+## Estimator
+
+The estimator that minimizes $-\mathcal L(\boldsymbol a,\boldsymbol b)$ is found via a Newton-Raphson algorithm with its update
+
+\begin{equation}
+\boldsymbol c^{(it+1)}=\boldsymbol c^{(it)}-\{\mathcal H^{(it)}\}^{-1}\mathcal G^{(it)} 
+\end{equation}
+
+--
+
+- $\boldsymbol c = (\boldsymbol a^\mathrm T,\boldsymbol b^\mathrm T)^\mathrm T$
+
+--
+
+- $\boldsymbol c^{(it)}$: current iteration of $\boldsymbol c$
+
+--
+
+- $\mathcal H^{(it)}=-\mathcal L^{\prime\prime}(\boldsymbol a,\boldsymbol b)$
+
+--
+
+- $\mathcal G^{(it)}=-\mathcal L^{\prime}(\boldsymbol a,\boldsymbol b)$
+
+--
+
+???
+
+Initial estimates can be obtained from glmmm
+
+---
+## Asymptotic Theory
+
+Based on the regulatory conditions provided by `r Citet(Bib,"caiEfficientEstimationInferences2000")` and `r Citet(Bib,"kurumTimeVaryingCoefficientModels2016")`, the asymptotic distribution for $\boldsymbol c_{ML}$ is given as
+
+\begin{equation}
+\sqrt{nh}\left\{\boldsymbol H\left( \boldsymbol c_{ML}-\boldsymbol c\right)-\mathrm{bias}(\boldsymbol c)+o_P(h^2) \right\}\sim N(0,\boldsymbol \Sigma)
+\end{equation}
+
+
+--
+
+- $\boldsymbol H=diag(1,h)\otimes\boldsymbol I_{p}$
+
+- $\boldsymbol \Sigma$: covariance of $\boldsymbol c$
+
+---
+## One-Step Estimator
+
+To reduce computational burden, `r Citet(Bib,"caiEfficientEstimationInferences2000")` propose the one-step estimator
+
+
+\begin{equation}
+\boldsymbol c_{OS}=\boldsymbol c^{(0)}-\{\mathcal H^{(0)}\}^{-1}\mathcal G^{(0)} 
+\end{equation}
+
+--
+
+- $\boldsymbol c^{(0)}$: initial value of $\boldsymbol c$
+
+--
+
+- $\mathcal H^{(0)}=-\mathcal L^{\prime\prime}(\boldsymbol a,\boldsymbol b)$
+
+--
+
+- $\mathcal G^{(0)}=-\mathcal L^{\prime}(\boldsymbol a,\boldsymbol b)$
+
+--
+
+---
+
+## One-Step Theorem
+
+`r Citet(Bib,"caiEfficientEstimationInferences2000")` provides this theorem
+
+\begin{equation}
+diag(1,h)\otimes \boldsymbol I_{p}\{ \boldsymbol c^{(0)}-\boldsymbol c\}=O_p\{h^2+(nh)^{-1/2}\}.
+\end{equation}
+
+--
+
+This means as long as your initial estimate is close to the truth, $\boldsymbol c_{OS}$ has the same asymptotic distribution of $\boldsymbol c_{ML}$
+
+---
+
+## Using OS Estimator
+
+--
+
+- Find the estimates for the first grid point using a Newton-Raphson algorithm
+
+--
+
+- Use the estimates of the first grid point as the initial values for the next grid point's estimates
+
+--
+
+- Repeat until all grid points' estimates are found
+
+---
+## Standard Error
+
+
+\begin{equation}
+\widehat{cov}\{\hat{\boldsymbol a}(t_0)\}=
+ (\boldsymbol I_{p},\boldsymbol 0_{p})
+\hat{\boldsymbol \Gamma}_1^{-1}\hat{\boldsymbol \Gamma}_2^{-1}\hat{\boldsymbol \Gamma}_1^{-1}
+(\boldsymbol I_{p},\boldsymbol 0_{p})^\mathrm T,  
+\end{equation}
+where
+
+.size60[
+\begin{equation}
+\hat{\boldsymbol \Gamma}_1=\sum_{i=1}^n \sum_{j=1}^{n_i} z_2\left[\boldsymbol X_i^\mathrm T\left\lbrace\hat{\boldsymbol a}(t_0)+\hat{\boldsymbol b}(t_0)(t_{ij}-t_0)\right\rbrace,Y_{ij}\right]\boldsymbol T_{ij} \otimes(\boldsymbol X_i^\mathrm T\boldsymbol X_i)K_h(t_{ij}-t_0),
+\end{equation}
+]
+
+.size60[
+\begin{equation}
+\hat{\boldsymbol \Gamma}_1=\sum_{i=1}^n \sum_{j=1}^{n_i} z_1^2\left[\boldsymbol X_i^\mathrm T\left\lbrace\hat{\boldsymbol a}(t_0)+\hat{\boldsymbol b}(t_0)(t_{ij}-t_0)\right\rbrace,Y_{ij}\right]\boldsymbol T_{ij} \otimes(\boldsymbol X_i^\mathrm T\boldsymbol X_i)K_h(t_{ij}-t_0),
+\end{equation}
+]
+
+--
+
+- $z_j=\frac{\partial^j}{\partial s^j}\ell\{g^{-1}(s),y\}$
+
+--
+
+- $\boldsymbol T_{ij}=(1, t_{ij}-t_0)^\mathrm T(1, t_{ij}-t_0)$ for $j=1,...,n_i$.
+
+---
+## Binary Simulation Parameters
+
+- 250 Monte Carlo Datasets
+
+- 250 participants
+
+- 25 equally-space time points from 0 to 1
+
+- 2 predictor from $N\{(-1,1)^\mathrm T,diag(1.5^2,.5^2)\}$
+
+- $\beta_0(t)=\sin (t)$
+
+- $\beta_1(t)=\sqrt t$
+
+- $\beta_2(t)=-\cos(t)$
+
+- Outcome was generated from a latent normal distribution
+
+---
+## Binary Estimation VCM
+
+- Initial values obtained from GLMM
+
+- OS estimator was used to obtain vcm estimates at 100 grid points equally spaced from 0 to 1
+
+- $h=0.1$
+
+- Epanechnikov Kernel Function was used
+
+---
+## Binary Data Results
+
+```{r,echo=FALSE,fig.align='center',fig.width=12}
+ggplot(data=gg.df.bin)+
+      geom_line(aes(x=t,y=X1,group=ind,color=ind,linetype=ind))+
+      xlab("Time")+ylab("Measurement")+theme_bw()+labs(color="")+
+      scale_linetype_manual("",values=c("solid","solid","dashed", "dashed","dotted","dotted"),limits = c("Truth", "Estimated", "2.5th Percentile","97.5th Percentile","95% CI Lower Limit","95% CI Upper Limit"))+
+      scale_color_manual(values=c('blue','green1',"blue",'blue','green1','green1'),limits = c("Truth", "Estimated", "2.5th Percentile","97.5th Percentile","95% CI Lower Limit","95% CI Upper Limit"))
+
+```
+
+---
+## Binary Data Results
+
+```{r,echo=FALSE,fig.align='center',fig.width=12}
+ggplot(data=gg.df.bin)+
+      geom_line(aes(x=t,y=X2,group=ind,color=ind,linetype=ind))+
+      xlab("Time")+ylab("Measurement")+theme_bw()+labs(color="")+
+      scale_linetype_manual("",values=c("solid","solid","dashed", "dashed","dotted","dotted"),limits = c("Truth", "Estimated", "2.5th Percentile","97.5th Percentile","95% CI Lower Limit","95% CI Upper Limit"))+
+      scale_color_manual(values=c('blue','green1',"blue",'blue','green1','green1'),limits = c("Truth", "Estimated", "2.5th Percentile","97.5th Percentile","95% CI Lower Limit","95% CI Upper Limit"))
+```
+
+---
+
+## Binary Data Results
+
+
+```{r,echo=FALSE,fig.align='center',fig.width=12}
+ggplot(data=gg.df.bin)+
+      geom_line(aes(x=t,y=X3,group=ind,color=ind,linetype=ind))+
+      xlab("Time")+ylab("Measurement")+theme_bw()+labs(color="")+
+      scale_linetype_manual("",values=c("solid","solid","dashed", "dashed","dotted","dotted"),limits = c("Truth", "Estimated", "2.5th Percentile","97.5th Percentile","95% CI Lower Limit","95% CI Upper Limit"))+
+      scale_color_manual(values=c('blue','green1',"blue",'blue','green1','green1'),limits = c("Truth", "Estimated", "2.5th Percentile","97.5th Percentile","95% CI Lower Limit","95% CI Upper Limit"))
+```
+
+
+---
+layout: false
+class: inverse, middle, center
+
+# Bandwidth Selection
+
+---
+
+## Bandwidth Selection
+
+Choosing the correct bandwidth is important for the bias-variance trade-off.
+
+
+---
+
+## Reference
+.scrollable[
+```{r, results='asis', echo=FALSE}
+PrintBibliography(Bib)
+```
+
+```{r, results='asis', echo=FALSE}
+NoCite(RBib,"*")
+PrintBibliography(RBib)
+```
+]
