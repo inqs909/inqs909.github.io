@@ -21,6 +21,10 @@ website:
       - pubs.qmd
       - blog.qmd
       - photos.qmd
+      - icon: github
+        href: https://github.com/inqs909/
+        aria-label: GitHub repo
+
 
 
 

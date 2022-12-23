@@ -13,12 +13,9 @@ editor_options:
 
 ##### Assistant Professor of Statistics
 
-[CSU Channel Islands](https://www.csuci.edu)
+[CSU Channel Islands](https://www.csuci.edu){.btn-action-primary .btn-action .btn .btn-success role="button"}
 
-```{=html}
-<a class="btn btn-primary" href="https://github.com/inqs909" role="button">Github</a>
-<a class="btn btn-primary" href="https://gitlab.com/inqs909">Gitlab</a>
-```
+
 :::
 
 ::: {.g-col-12 .g-col-md-6}
