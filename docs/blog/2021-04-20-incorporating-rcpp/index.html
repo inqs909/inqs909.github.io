@@ -295,12 +295,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Using mean_cpp</span></span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mean_cpp</span>(Y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.05415544</code></pre>
+<pre><code>[1] 0.06045841</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Using Built-in mean functions</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(Y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.05415544</code></pre>
+<pre><code>[1] 0.06045841</code></pre>
 </div>
 </div>
 <p>To see the speed gains, we can use the <code>mark()</code> function from the <code>bench</code> package.</p>
@@ -313,8 +313,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code># A tibble: 2 × 6
   expression       min   median `itr/sec` mem_alloc `gc/sec`
   &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;
-1 mean(Y)       3.33µs   3.75µs   252274.        0B     25.2
-2 mean_cpp(Y)   1.83µs   2.73µs   374312.    7.67KB      0  </code></pre>
+1 mean(Y)        3.3µs   3.77µs   250965.        0B     25.1
+2 mean_cpp(Y)   1.84µs   2.75µs   363711.    7.67KB      0  </code></pre>
 </div>
 </div>
 <p>You can see that the cpp function is much faster than the R built-in function.</p>
