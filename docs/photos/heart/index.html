@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Isaac Quintanilla">
-<meta name="dcterms.date" content="2021-04-15">
-<meta name="description" content="A post describing why I decided to use Rcpp for my research.">
 
-<title>INQS - Rcpp and Research</title>
+<title>INQS - Heart Rock Trail</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,6 +60,11 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="../../site_libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
+<link href="../../site_libs/simplelightbox-0/css/simplelightbox.css" rel="stylesheet">
+<script src="../../site_libs/simplelightbox-0/js/simplelightbox.js"></script>
+<link href="../../site_libs/pixgallery-0/css/pixgallery.css" rel="stylesheet">
+<script src="../../site_libs/pixgallery-binding-0.0.2.2001/pixgallery.js"></script>
 
 
 </head>
@@ -131,34 +133,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Rcpp and Research</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">RCPP</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    A post describing why I decided to use Rcpp for my research.
-  </div>
+<h1 class="title">Heart Rock Trail</h1>
 </div>
+
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Isaac Quintanilla </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 15, 2021</p>
-    </div>
-  </div>
   
     
   </div>
@@ -166,14 +148,12 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This is the first post of my “Rcpp” collection detailing my journey with Rcpp. The “Rcpp” collection contains information about the struggles I faced while implementing Rcpp. Even though my first venture to Rcpp happened in the Summer of 2020, I realized I am learning new things every day. I thought it would be wised to write a blog of everything I have and will learn with Rcpp. I hope this collection will guide other students who have never used c++ before.</p>
-<p>As I am developing my model for my PhD, a major limiting factor is that my model takes a really long time to compute the results I need. Due to the complexity of the model, I need to approximate different components using iterative algorithms. This in turn increases the computation time to obtain results. You can only imagine my frustration when I first coded my model in R and it took more than a week to obtain results!</p>
-<p>Therefore, I decided to focus on speeding up my code. I spent time reading Wickham’s <a href="https://adv-r.hadley.nz/index.html">Advanced R</a> Book to speed up my code. There I learned how about vectorizing code, utilizing built-in optimized functions, and common practices for speed gains. All this work has made me a better R programmer. Unfortunately, when I reran my model, the speed gains was not enough to call my efforts a success.</p>
-<p><img src="https://media.giphy.com/media/Bcpspr9LTSvss/giphy.gif" class="img-fluid"></p>
-<p>Due to the lack of improvements, and knowing I will need expand my model for larger data sets, I set on a quest to improve my model. I attacked this problem on two fronts: looking for mathematical methods to reduce my computation needs and implementing different computing techniques. While both components dramatically improved my computational time, implementing c++ via Rcpp was the biggest game changer for my model.</p>
-<p>After I implemented everything I can from Wickham’s <a href="https://adv-r.hadley.nz/index.html">Book</a>. I began reading more about about c++ from the book’s <a href="https://adv-r.hadley.nz/rcpp.html">c++ chapter</a>. I will be honest, I didn’t know what I was doing. This was my first time learning how to use c++. Nevertheless, I was determined to learn more about the c++ due to the potential speed gains. During the summer of 2020, I spent all my time learning about c++ and Rcpp. By the end of my summer, a model that took 3.5 days to converge was now taking approximately 6 hours!</p>
-<p><img src="https://media.giphy.com/media/xT0GqssRweIhlz209i/giphy.gif" class="img-fluid"></p>
-<p>With this triumph, I have been able to test and diagnose any faults with my model. I can honestly say that implementing Rcpp has drastically improved my PhD experience. I no longer have the feeling of being anxious for days wondering if my model works or not. I feel more productive! With this confidence, I feel prepared to tackle new problems with my research.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="htmlwidget-830e5f5f981f1944d194" style="width:100%;height:100%;" class="pixgallery html-widget "></div>
+<script type="application/json" data-for="htmlwidget-830e5f5f981f1944d194">{"x":{"path":["img/HR1.jpg","img/HR2.jpg","img/HR3.jpg","img/HR4.jpg"],"caption":[],"dim":"350px","gap":"10px","type":"grid"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 
 
 

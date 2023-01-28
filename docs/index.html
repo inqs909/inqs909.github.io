@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Isaac Quintanilla">
-<meta name="dcterms.date" content="2021-04-15">
-<meta name="description" content="A post describing why I decided to use Rcpp for my research.">
 
-<title>INQS - Rcpp and Research</title>
+<title>INQS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -65,6 +62,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -74,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">INQS</span>
     </a>
   </div>
@@ -84,27 +82,27 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../courses.html">
+    <a class="nav-link" href="./courses.html">
  <span class="menu-text">Courses</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects.html">
+    <a class="nav-link" href="./projects.html">
  <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../presentations.html">
+    <a class="nav-link" href="./presentations.html">
  <span class="menu-text">Presentations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../pubs.html">
+    <a class="nav-link" href="./pubs.html">
  <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog.html">
+    <a class="nav-link" href="./blog.html">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../photos.html">
+    <a class="nav-link" href="./photos.html">
  <span class="menu-text">Photos</span></a>
   </li>  
   <li class="nav-item compact">
@@ -129,51 +127,61 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Rcpp and Research</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">RCPP</div>
-  </div>
-  </div>
 
-<div>
-  <div class="description">
-    A post describing why I decided to use Rcpp for my research.
-  </div>
+
+<div class="container">
+<div class="grid">
+<div class="g-col-12 g-col-md-6">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/avatar.jpg" class="rounded-circle img-fluid figure-img" style="width:60.0%"></p>
+</figure>
 </div>
-
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Isaac Quintanilla </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 15, 2021</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-</header>
-
-<p>This is the first post of my “Rcpp” collection detailing my journey with Rcpp. The “Rcpp” collection contains information about the struggles I faced while implementing Rcpp. Even though my first venture to Rcpp happened in the Summer of 2020, I realized I am learning new things every day. I thought it would be wised to write a blog of everything I have and will learn with Rcpp. I hope this collection will guide other students who have never used c++ before.</p>
-<p>As I am developing my model for my PhD, a major limiting factor is that my model takes a really long time to compute the results I need. Due to the complexity of the model, I need to approximate different components using iterative algorithms. This in turn increases the computation time to obtain results. You can only imagine my frustration when I first coded my model in R and it took more than a week to obtain results!</p>
-<p>Therefore, I decided to focus on speeding up my code. I spent time reading Wickham’s <a href="https://adv-r.hadley.nz/index.html">Advanced R</a> Book to speed up my code. There I learned how about vectorizing code, utilizing built-in optimized functions, and common practices for speed gains. All this work has made me a better R programmer. Unfortunately, when I reran my model, the speed gains was not enough to call my efforts a success.</p>
-<p><img src="https://media.giphy.com/media/Bcpspr9LTSvss/giphy.gif" class="img-fluid"></p>
-<p>Due to the lack of improvements, and knowing I will need expand my model for larger data sets, I set on a quest to improve my model. I attacked this problem on two fronts: looking for mathematical methods to reduce my computation needs and implementing different computing techniques. While both components dramatically improved my computational time, implementing c++ via Rcpp was the biggest game changer for my model.</p>
-<p>After I implemented everything I can from Wickham’s <a href="https://adv-r.hadley.nz/index.html">Book</a>. I began reading more about about c++ from the book’s <a href="https://adv-r.hadley.nz/rcpp.html">c++ chapter</a>. I will be honest, I didn’t know what I was doing. This was my first time learning how to use c++. Nevertheless, I was determined to learn more about the c++ due to the potential speed gains. During the summer of 2020, I spent all my time learning about c++ and Rcpp. By the end of my summer, a model that took 3.5 days to converge was now taking approximately 6 hours!</p>
-<p><img src="https://media.giphy.com/media/xT0GqssRweIhlz209i/giphy.gif" class="img-fluid"></p>
-<p>With this triumph, I have been able to test and diagnose any faults with my model. I can honestly say that implementing Rcpp has drastically improved my PhD experience. I no longer have the feeling of being anxious for days wondering if my model works or not. I feel more productive! With this confidence, I feel prepared to tackle new problems with my research.</p>
+<section id="isaac-quintanilla-salinas" class="level3">
+<h3 class="anchored" data-anchor-id="isaac-quintanilla-salinas">Isaac Quintanilla Salinas</h3>
+<section id="assistant-professor-of-statistics" class="level5">
+<h5 class="anchored" data-anchor-id="assistant-professor-of-statistics">Assistant Professor of Statistics</h5>
+<p><a href="https://www.csuci.edu" class="btn-action-primary btn-action btn btn-success" role="button">CSU Channel Islands</a></p>
+</section>
+</section>
+</div>
+<section id="biography" class="level3 g-col-12 g-col-md-6">
+<h3 class="anchored" data-anchor-id="biography">Biography</h3>
+<p>Isaac Quintanilla Salinas is a recent graduate from the <a href="https://statistics.ucr.edu/">Department of Statistics</a> at the <a href="https://www.ucr.edu">University of California, Riverside</a> with a PhD in Applied Statistics. He is joining the <a href="https://math.csuci.edu/">Department of Mathematics</a> at the California State University Channel Islands this upcoming Fall 2022. Prior to his doctoral research, Dr.&nbsp;Quintanilla Salinas has earned his MPH from San Diego State University and BS in Biology from the California State University Monterey Bay.</p>
+<p>Dr.&nbsp;Quintanilla Salinas research focuses on developing statistical models to understand the association between survival and longitudinal outcomes. His dissertation “Multilevel Time-Varying Joint Models for Longitudinal and Survival Outcomes” develops a novel model to address challenges of modeling dependent outcomes.</p>
+</section>
+</div>
+</div>
+<div class="content-block">
+<div class="features">
+<section id="education" class="level3 feature box">
+<h3 class="anchored" data-anchor-id="education">Education</h3>
+<ul>
+<li><p>UC Riverside</p>
+<ul>
+<li>PhD in Applied Statistics</li>
+</ul></li>
+<li><p>San Diego State University</p>
+<ul>
+<li>Master’s in Public Health</li>
+</ul></li>
+<li><p>CSU Monterey Bay</p>
+<ul>
+<li>BS Biology</li>
+</ul></li>
+</ul>
+</section>
+<section id="interests" class="level3 feature box">
+<h3 class="anchored" data-anchor-id="interests">Interests</h3>
+<ul>
+<li><p>Joint Longitudinal and Survival Models</p></li>
+<li><p>Health Equity</p></li>
+<li><p>Education</p></li>
+<li><p>Algorithmic Bias</p></li>
+</ul>
+</section>
+</div>
+</div>
 
 
 

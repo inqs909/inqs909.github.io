@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Isaac Quintanilla">
-<meta name="dcterms.date" content="2021-04-15">
-<meta name="description" content="A post describing why I decided to use Rcpp for my research.">
+<meta name="dcterms.date" content="2021-06-10">
+<meta name="description" content="The Statistical Mentoring in Application, Research, and/or Technology (SMART) Program is a mentoring program where undergraduate students get the opportunity to conduct a statistical project under the supervision of a graduate student. The pilot program was implemented in Spring 2021 where we determined to see the feasibility of both the undergraduate and graduate students to complete the program. For this blog post, I will talk about the inspiration, development and implementation of the SMART Program. As the main architect of the program, I will talk about my thought process and the goals for the future of the program.">
 
-<title>INQS - Rcpp and Research</title>
+<title>INQS - SMART Program</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -131,15 +131,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Rcpp and Research</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">RCPP</div>
-  </div>
-  </div>
+<h1 class="title">SMART Program</h1>
+</div>
 
 <div>
   <div class="description">
-    A post describing why I decided to use Rcpp for my research.
+    The Statistical Mentoring in Application, Research, and/or Technology (SMART) Program is a mentoring program where undergraduate students get the opportunity to conduct a statistical project under the supervision of a graduate student. The pilot program was implemented in Spring 2021 where we determined to see the feasibility of both the undergraduate and graduate students to complete the program. For this blog post, I will talk about the inspiration, development and implementation of the SMART Program. As the main architect of the program, I will talk about my thought process and the goals for the future of the program.
   </div>
 </div>
 
@@ -156,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 15, 2021</p>
+      <p class="date">June 10, 2021</p>
     </div>
   </div>
   
@@ -166,18 +163,47 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This is the first post of my “Rcpp” collection detailing my journey with Rcpp. The “Rcpp” collection contains information about the struggles I faced while implementing Rcpp. Even though my first venture to Rcpp happened in the Summer of 2020, I realized I am learning new things every day. I thought it would be wised to write a blog of everything I have and will learn with Rcpp. I hope this collection will guide other students who have never used c++ before.</p>
-<p>As I am developing my model for my PhD, a major limiting factor is that my model takes a really long time to compute the results I need. Due to the complexity of the model, I need to approximate different components using iterative algorithms. This in turn increases the computation time to obtain results. You can only imagine my frustration when I first coded my model in R and it took more than a week to obtain results!</p>
-<p>Therefore, I decided to focus on speeding up my code. I spent time reading Wickham’s <a href="https://adv-r.hadley.nz/index.html">Advanced R</a> Book to speed up my code. There I learned how about vectorizing code, utilizing built-in optimized functions, and common practices for speed gains. All this work has made me a better R programmer. Unfortunately, when I reran my model, the speed gains was not enough to call my efforts a success.</p>
-<p><img src="https://media.giphy.com/media/Bcpspr9LTSvss/giphy.gif" class="img-fluid"></p>
-<p>Due to the lack of improvements, and knowing I will need expand my model for larger data sets, I set on a quest to improve my model. I attacked this problem on two fronts: looking for mathematical methods to reduce my computation needs and implementing different computing techniques. While both components dramatically improved my computational time, implementing c++ via Rcpp was the biggest game changer for my model.</p>
-<p>After I implemented everything I can from Wickham’s <a href="https://adv-r.hadley.nz/index.html">Book</a>. I began reading more about about c++ from the book’s <a href="https://adv-r.hadley.nz/rcpp.html">c++ chapter</a>. I will be honest, I didn’t know what I was doing. This was my first time learning how to use c++. Nevertheless, I was determined to learn more about the c++ due to the potential speed gains. During the summer of 2020, I spent all my time learning about c++ and Rcpp. By the end of my summer, a model that took 3.5 days to converge was now taking approximately 6 hours!</p>
-<p><img src="https://media.giphy.com/media/xT0GqssRweIhlz209i/giphy.gif" class="img-fluid"></p>
-<p>With this triumph, I have been able to test and diagnose any faults with my model. I can honestly say that implementing Rcpp has drastically improved my PhD experience. I no longer have the feeling of being anxious for days wondering if my model works or not. I feel more productive! With this confidence, I feel prepared to tackle new problems with my research.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>At the beginning 2020, I learned that there were several undergraduate students interested in attending graduate school. However, many of them had the idea that they weren’t capable of succeeding in graduate school. This was nonsense! I TA’ed them through Regression and ANOVA courses and got to see first hand their capabilities. It was shocking to hear that they think like this. While I can go into details of my ideas why they think like this (possibly imposter syndrome<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>), this isn’t the post for it. I was set out to convince and prepare these students to apply to graduate school.</p>
+<p>In the Spring Quarter of 2020, I decided to hold a virtual seminar in applying to graduate school<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. The seminar focused on the application process and choosing the correct degree program. At the end of the seminar, approximately 15 undergraduate students attended, and we had a lively discussion between undergraduate students, graduate students, and faculty. It showed that undergraduate students were interested in pursuing graduate degrees. This motivated me to hold more events similar to this seminar.</p>
+<p>In the Fall Quarter of 2020, I decided to hold a similar seminar for undergraduate students. However, I focused more on writing different statements as well as holding discussion at the end<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. At the same time, my colleague sent me a tweet about a program from the University of Washington, the Statistics and Probability Association <a href="https://spa-drp.github.io/">Direct Reading Program</a>. It is an excellent program, and I decided to implement a similar program. Thus, the beginnings of the SMART Program was born!</p>
+</section>
+<section id="development" class="level2">
+<h2 class="anchored" data-anchor-id="development">Development</h2>
+<p>For the remainder of the Fall quarter, I began talking to other graduate students about creating a mentoring program within the department. I pitched them that they will mentor an undergraduate student for a statistical project. Many students seemed on board to participate in the program. Afterwards, I started asking Teaching Faculty to support the program. By the end of the quarter, I had an idea of the support I will get from the department.</p>
+<p>Towards the end of the year, almost everyone had a rough winter due to the pandemic. Fatigued had set in to many students, and they needed time to rest. I myself struggled through the winter. It was challenging to rest during my break due to competing pressures. While I did manage to get through the winter, I did not want to add any extra pressure to the remaining graduate students that expressed interest in mentoring in the program. I decided to wait until half way through the quarter to begin asking graduate students for their commitment to the program. Fortunately, everyone was excited to be a mentor in the program.</p>
+<p>At the same time, I was worried about having graduate students coming up with a project. I was afraid that students could not come up with an idea that was feasible for an undergraduate student to complete, so I decided to come up with a project that anyone can easily do. Thus the <a href="https://ucrgradstat.github.io/ucrstats/">ucrstats</a> package was born. The idea was for a mentor teach an undergrad about a topic, then the mentee can create a <a href="https://rstudio.github.io/learnr/">learnr</a> tutorial to teach other students. The only thing the mentor needed to do was gather materials and R code for the student to learn about the topic. The tutorials can easily be created using an RMarkdown file. At the end, the mentee will have a product that they can show off and put on their CV. It was a different type of project that focused on programming than the traditional form of research. Fortunately, all other graduate students had project ideas; however, this can be a good back up for those who do not have a project idea. Additionally, the package can be utilized from other graduate students in different departments who want to learn more about statistics.</p>
+</section>
+<section id="recruitment" class="level2">
+<h2 class="anchored" data-anchor-id="recruitment">Recruitment</h2>
+<p>We recruited undergraduate students for the program with an application using Google Forms. We asked for basic things such as what classes you took, write a couple of essays, and your interests in the projects.</p>
+<p>Using all the information we gathered, we began the selection process. We ranked each student based on their interests, the classes they have completed, and how well they met the admission criteria. From their, we selected students based on their rankings.</p>
+<p>Looking back at the application process, there are couple of things I wish we could have done a bit differently. First, I think we should ask for CVs or resumes. This way we can better learn about the student. Second, the application process should begin at least a month before the start of the quarter. We had to operate with some tight deadlines and I did not enjoy the pressure. Other than that I will need to consult with the current cohort for more recommendations.</p>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+<p>The SMART Pilot Program was launched in Spring 2021 with our first cohort of mentors and mentees. We held a small orientation with the mentees to set the expectations<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. The remainder of the quarter went smoothly. There were a few bumps in the roads here and there, but most of it was providing guidance to the mentors. At the end of the quarter, we held a symposium where all groups presented their work.</p>
+<p>Starting a program is tough! I worried about so many things. Mostly making sure both the mentors and mentees were progressing with their projects and gaining something the other time. However, I just needed to have faith that everything will go well. Fortunately, the pilot was a success! I was so impressed by everyone’s presentation, and I think we showed the department how capable both the graduate and undergraduate students are in completing a project. This was certainly a long process, but overall I am glad I started the program and excited to see where it goes from here.</p>
+</section>
+<section id="future" class="level2">
+<h2 class="anchored" data-anchor-id="future">Future</h2>
+<p>As I am writing this post, I am moving on to my sixth year of my graduate program, and I have my eyes on graduating and moving on the next phase of my career. That being said, I don’t really know if I will be involved for the second year of the program. I hope I inspired other graduate students to take on the mantle and continue the program. I truly believe the program is a great asset for the department. If I am around for the second year of the program, I will most likely take a consulting position to ensure that other graduate students can continue the program without relying on me. Otherwise, I will prefer to only coordinate for the second year.</p>
+<p>As for the program itself, I hope the program will serve students from marginalized communities. Particularly communities where Statistics has be utilized against them. We need better statisticians who constantly thinking about how their work can harm the most vulnerable. Those who will advocate for these groups and change the Statistics community for the better. My hope is that the program will train individuals who will advocate for a better future.</p>
 
 
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Really the myth of imposter syndrome and more how Academia is designed only for the privileged.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>The seminar occurred at the beginning of the pandemic. My goal was to create some form of normal for the students during this time. However, other students may have found it difficult to concentrate during the quarter.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>The discussion from the first seminar was the most important part!<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>I wised to have the mentors there as well but could not schedule everyone together.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
