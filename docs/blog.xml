@@ -150,7 +150,7 @@ Goal
 <p>Because I set this goal for two 30 minute sessions, I believe I can complete this task. It is easier to spend a quick 30 minute session than a full hour.</p>
 </div>
 <div id="tabset-2-5" class="tab-pane" aria-labelledby="tabset-2-5-tab">
-<p>Similar to my research goals, I plan to go to the gym in the morning and get them done early so I can focus on other things I am interested in. I plan to go to the gym early every Monday, Tuesday, and Wednesday. This task will be before my writing sessions.</p>
+<p>Similar to my research goals, I plan to go to the gym in the morning and get them done early so I can focus on other things I am interested in. I plan to go to the gym early every Monday, Wednesday, and Friday. This task will be before my writing sessions.</p>
 </div>
 </div>
 </div>
@@ -303,13 +303,13 @@ font-style: italic;">## Generating Data</span></span>
 font-style: italic;">## Using mean_cpp</span></span>
 <span id="cb6-5"><span class="fu" style="color: #4758AB;">mean_cpp</span>(Y)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.03836532</code></pre>
+<pre><code>[1] -0.03316772</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="do" style="color: #5E5E5E;
 font-style: italic;">## Using Built-in mean functions</span></span>
 <span id="cb8-2"><span class="fu" style="color: #4758AB;">mean</span>(Y)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.03836532</code></pre>
+<pre><code>[1] -0.03316772</code></pre>
 </div>
 </div>
 <p>To see the speed gains, we can use the <code>mark()</code> function from the <code>bench</code> package.</p>
@@ -322,8 +322,8 @@ font-style: italic;">## Using Built-in mean functions</span></span>
 <pre><code># A tibble: 2 × 6
   expression       min   median `itr/sec` mem_alloc `gc/sec`
   &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;
-1 mean(Y)       3.32µs   3.75µs   246403.        0B     24.6
-2 mean_cpp(Y)   1.84µs   2.75µs   366259.    7.67KB      0  </code></pre>
+1 mean(Y)       3.33µs   3.74µs   242215.        0B     24.2
+2 mean_cpp(Y)   1.81µs   2.72µs   354967.    7.67KB      0  </code></pre>
 </div>
 </div>
 <p>You can see that the cpp function is much faster than the R built-in function.</p>
