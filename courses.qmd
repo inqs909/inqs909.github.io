@@ -9,7 +9,9 @@ editor: visual
 
 -   [Math 352: Probability and Statistics](https://m352.inqs.info)
 
--   [Math 453: Mathematical Statistics](https://m453.inqs.info)
+-   [Math 408: Advanced Data Analysis](https://m408.inqs.info)
+
+-   [Math 453: Mathematical Statistics](https://inqs909.gitlab.io/m453_f22)
 :::
 
 ::: content-block
