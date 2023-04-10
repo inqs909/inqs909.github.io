@@ -14,18 +14,25 @@
     "text": "This is the first post of my “Rcpp” collection detailing my journey with Rcpp. The “Rcpp” collection contains information about the struggles I faced while implementing Rcpp. Even though my first venture to Rcpp happened in the Summer of 2020, I realized I am learning new things every day. I thought it would be wised to write a blog of everything I have and will learn with Rcpp. I hope this collection will guide other students who have never used c++ before.\nAs I am developing my model for my PhD, a major limiting factor is that my model takes a really long time to compute the results I need. Due to the complexity of the model, I need to approximate different components using iterative algorithms. This in turn increases the computation time to obtain results. You can only imagine my frustration when I first coded my model in R and it took more than a week to obtain results!\nTherefore, I decided to focus on speeding up my code. I spent time reading Wickham’s Advanced R Book to speed up my code. There I learned how about vectorizing code, utilizing built-in optimized functions, and common practices for speed gains. All this work has made me a better R programmer. Unfortunately, when I reran my model, the speed gains was not enough to call my efforts a success.\n\nDue to the lack of improvements, and knowing I will need expand my model for larger data sets, I set on a quest to improve my model. I attacked this problem on two fronts: looking for mathematical methods to reduce my computation needs and implementing different computing techniques. While both components dramatically improved my computational time, implementing c++ via Rcpp was the biggest game changer for my model.\nAfter I implemented everything I can from Wickham’s Book. I began reading more about about c++ from the book’s c++ chapter. I will be honest, I didn’t know what I was doing. This was my first time learning how to use c++. Nevertheless, I was determined to learn more about the c++ due to the potential speed gains. During the summer of 2020, I spent all my time learning about c++ and Rcpp. By the end of my summer, a model that took 3.5 days to converge was now taking approximately 6 hours!\n\nWith this triumph, I have been able to test and diagnose any faults with my model. I can honestly say that implementing Rcpp has drastically improved my PhD experience. I no longer have the feeling of being anxious for days wondering if my model works or not. I feel more productive! With this confidence, I feel prepared to tackle new problems with my research."
   },
   {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html",
+    "title": "RcppArmadillo",
+    "section": "",
+    "text": "When I first started using Rcpp for my research, I had no idea what I was doing. All I knew was that you can incorporate C++1 code in your R scripts to speed up data processing. I did spend some time learning C++ through www.learningcpp.com, but I didn’t get far because my example program did not go well. Troubleshooting the problem was a nightmare. However, it did give me an idea of how C++ programming looks like.\nOnce, I decided to implement C++ for my research, I focused on how to incorporate it in R. At the time, I had a fairly strong R background, and I knew you can use C++ in R via Rcpp. Therefore, I spent some time learning more about Rcpp from their website and book. After reading everything I could, I didn’t learn much. It was really advanced and not written for a newbie. However, I did learn that you can compile a C++ function2 that can be executed in R via Rcpp. The challenge was to build a cpp file that contained functions for my analysis. I turned to Advanced R by Hadley Wickham for more help.\nWickham’s book provided the necessary information to build basic functions to use in R. I learned how to write basic functions in cpp and making them executable with cppFunction. Additionally, the book covers the basic classes, looping, and function exporting. I felt prepared to write and use functions in R! However, my research required linear algebra, and it would have been a nightmare to program matrix multiplication with the basics. These challenges led me to RcppArmadillo.\nRcppArmadillo is designed to incorporate the Armadillo library in R via Rcpp. The Armadillo library contains functions that make it easy to conduct linear algebra in cpp. Additionally, it isn’t difficult to learn the syntax. The library is implemented to closely follow Matlab3 syntax.\nAfter writing functions and troubleshooting problems, I was able to export my functions to R. Making sure everything worked, I ran the same data on both my R and cpp functions, and it worked! I was able to produce the same value for each function. It gave me the confidence that I would be able to complete my research.\nAfter successfully implementing cpp in my research, I wanted to know how much faster was my code. Going back to Wickham’s book, there was information on benchmarking different functions. Using the bench package to identify how long each function was taking to execute, I found my R function took 13 times longer than my cpp function. I was shocked! I knew cpp would make my code faster, but I didn’t expect it to be that much faster4. This convinced me that all my efforts were worth it!"
+  },
+  {
     "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#journey",
     "href": "blog/2021-04-20-incorporating-rcpp/index.html#journey",
     "title": "RcppArmadillo",
-    "section": "Journey",
-    "text": "Journey\nWhen I first started using Rcpp for my research, I had no idea what I was doing. All I knew was that you can incorporate C++1 code in your R scripts to speed up data processing. I did spend some time learning C++ through www.learningcpp.com, but I didn’t get far because my example program did not go well. Troubleshooting the problem was a nightmare. However, it did give me an idea of how C++ programming looks like.\nOnce, I decided to implement C++ for my research, I focused on how to incorporate it in R. At the time, I had a fairly strong R background, and I knew you can use C++ in R via Rcpp. Therefore, I spent some time learning more about Rcpp from their website and book. After reading everything I could, I didn’t learn much. It was really advanced and not written for a newbie. However, I did learn that you can compile a C++ function2 that can be executed in R via Rcpp. The challenge was to build a cpp file that contained functions for my analysis. I turned to Advanced R by Hadley Wickham for more help.\nWickham’s book provided the necessary information to build basic functions to use in R. I learned how to write basic functions in cpp and making them executable with cppFunction. Additionally, the book covers the basic classes, looping, and function exporting. I felt prepared to write and use functions in R! However, my research required linear algebra, and it would have been a nightmare to program matrix multiplication with the basics. These challenges led me to RcppArmadillo.\nRcppArmadillo is designed to incorporate the Armadillo library in R via Rcpp. The Armadillo library contains functions that make it easy to conduct linear algebra in cpp. Additionally, it isn’t difficult to learn the syntax. The library is implemented to closely follow Matlab3 syntax.\nAfter writing functions and troubleshooting problems, I was able to export my functions to R. Making sure everything worked, I ran the same data on both my R and cpp functions, and it worked! I was able to produce the same value for each function. It gave me the confidence that I would be able to complete my research.\nAfter successfully implementing cpp in my research, I wanted to know how much faster was my code. Going back to Wickham’s book, there was information on benchmarking different functions. Using the bench package to identify how long each function was taking to execute, I found my R function took 13 times longer than my cpp function. I was shocked! I knew cpp would make my code faster, but I didn’t expect it to be that much faster4. This convinced me that all my efforts were worth it!"
+    "section": "",
+    "text": "When I first started using Rcpp for my research, I had no idea what I was doing. All I knew was that you can incorporate C++1 code in your R scripts to speed up data processing. I did spend some time learning C++ through www.learningcpp.com, but I didn’t get far because my example program did not go well. Troubleshooting the problem was a nightmare. However, it did give me an idea of how C++ programming looks like.\nOnce, I decided to implement C++ for my research, I focused on how to incorporate it in R. At the time, I had a fairly strong R background, and I knew you can use C++ in R via Rcpp. Therefore, I spent some time learning more about Rcpp from their website and book. After reading everything I could, I didn’t learn much. It was really advanced and not written for a newbie. However, I did learn that you can compile a C++ function2 that can be executed in R via Rcpp. The challenge was to build a cpp file that contained functions for my analysis. I turned to Advanced R by Hadley Wickham for more help.\nWickham’s book provided the necessary information to build basic functions to use in R. I learned how to write basic functions in cpp and making them executable with cppFunction. Additionally, the book covers the basic classes, looping, and function exporting. I felt prepared to write and use functions in R! However, my research required linear algebra, and it would have been a nightmare to program matrix multiplication with the basics. These challenges led me to RcppArmadillo.\nRcppArmadillo is designed to incorporate the Armadillo library in R via Rcpp. The Armadillo library contains functions that make it easy to conduct linear algebra in cpp. Additionally, it isn’t difficult to learn the syntax. The library is implemented to closely follow Matlab3 syntax.\nAfter writing functions and troubleshooting problems, I was able to export my functions to R. Making sure everything worked, I ran the same data on both my R and cpp functions, and it worked! I was able to produce the same value for each function. It gave me the confidence that I would be able to complete my research.\nAfter successfully implementing cpp in my research, I wanted to know how much faster was my code. Going back to Wickham’s book, there was information on benchmarking different functions. Using the bench package to identify how long each function was taking to execute, I found my R function took 13 times longer than my cpp function. I was shocked! I knew cpp would make my code faster, but I didn’t expect it to be that much faster4. This convinced me that all my efforts were worth it!"
   },
   {
     "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
     "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
     "title": "RcppArmadillo",
     "section": "Using RcppArmadillo",
-    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include <RcppArmadillo.h>\n#include <Rcpp.h>\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include <RcppArmadillo.h>\n#include <Rcpp.h>\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY <- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] -0.03496737\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] -0.03496737\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  <bch:expr>  <bch:tm> <bch:tm>     <dbl> <bch:byt>    <dbl>\n1 mean(Y)       3.31µs   3.73µs   247583.        0B     24.8\n2 mean_cpp(Y)   1.84µs   2.76µs   375574.    7.67KB      0  \n\n\nYou can see that the cpp function is much faster than the R built-in function."
+    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] -0.02876794\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] -0.02876794\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.35µs   3.81µs   244202.        0B        0\n2 mean_cpp(Y)   1.86µs   2.77µs   366125.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
   },
   {
     "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
@@ -42,8 +49,22 @@
     "text": "Next Steps …\nAs my research is progressing, I am noticing the need to incorporate different methods not found in the Armadillo library. For example, I want to incorporate the GNU Scientific Library. I learned there is an R package exists for the library, RcppGSL! This gives me hope that I can use it for my research. However, I want to use the Armadillo library alongside with GSL. This has a potential to bring new problems with data type incompatibilities. I have ideas for potential solutions, but I will need to test them out.\nI also want to learn more about the capabilities of Rcpp. Specifically, what other functions does it contain. I learned that Rcpp has functions for distribution functions. This can be useful for expanding my research."
   },
   {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#footnotes",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#footnotes",
+    "title": "RcppArmadillo",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nI may write C++ as cpp at times.↩︎\nIt may be called a function or program. Not really sure.↩︎\nI never learned Matlab.↩︎\nI will admit, I don’t know what I am doing when benchmarking these functions, but based on my experiences, this is true.↩︎\nI am still shaky on what each thing does.↩︎\nIf you don’t have the first line. R will not make it executable, but the function may be utilized by other functions within the cpp file.↩︎\nThere are occasions where it is not as straight forward.↩︎\nYou may need to install other software such as rtools40. In linux, I have r-base-dev installed which may solve some of the needed dependencies.↩︎"
+  },
+  {
     "objectID": "blog/2021-05-03-smart-program/index.html",
     "href": "blog/2021-05-03-smart-program/index.html",
+    "title": "SMART Program",
+    "section": "",
+    "text": "At the beginning 2020, I learned that there were several undergraduate students interested in attending graduate school. However, many of them had the idea that they weren’t capable of succeeding in graduate school. This was nonsense! I TA’ed them through Regression and ANOVA courses and got to see first hand their capabilities. It was shocking to hear that they think like this. While I can go into details of my ideas why they think like this (possibly imposter syndrome1), this isn’t the post for it. I was set out to convince and prepare these students to apply to graduate school.\nIn the Spring Quarter of 2020, I decided to hold a virtual seminar in applying to graduate school2. The seminar focused on the application process and choosing the correct degree program. At the end of the seminar, approximately 15 undergraduate students attended, and we had a lively discussion between undergraduate students, graduate students, and faculty. It showed that undergraduate students were interested in pursuing graduate degrees. This motivated me to hold more events similar to this seminar.\nIn the Fall Quarter of 2020, I decided to hold a similar seminar for undergraduate students. However, I focused more on writing different statements as well as holding discussion at the end3. At the same time, my colleague sent me a tweet about a program from the University of Washington, the Statistics and Probability Association Direct Reading Program. It is an excellent program, and I decided to implement a similar program. Thus, the beginnings of the SMART Program was born!"
+  },
+  {
+    "objectID": "blog/2021-05-03-smart-program/index.html#introduction",
+    "href": "blog/2021-05-03-smart-program/index.html#introduction",
     "title": "SMART Program",
     "section": "",
     "text": "At the beginning 2020, I learned that there were several undergraduate students interested in attending graduate school. However, many of them had the idea that they weren’t capable of succeeding in graduate school. This was nonsense! I TA’ed them through Regression and ANOVA courses and got to see first hand their capabilities. It was shocking to hear that they think like this. While I can go into details of my ideas why they think like this (possibly imposter syndrome1), this isn’t the post for it. I was set out to convince and prepare these students to apply to graduate school.\nIn the Spring Quarter of 2020, I decided to hold a virtual seminar in applying to graduate school2. The seminar focused on the application process and choosing the correct degree program. At the end of the seminar, approximately 15 undergraduate students attended, and we had a lively discussion between undergraduate students, graduate students, and faculty. It showed that undergraduate students were interested in pursuing graduate degrees. This motivated me to hold more events similar to this seminar.\nIn the Fall Quarter of 2020, I decided to hold a similar seminar for undergraduate students. However, I focused more on writing different statements as well as holding discussion at the end3. At the same time, my colleague sent me a tweet about a program from the University of Washington, the Statistics and Probability Association Direct Reading Program. It is an excellent program, and I decided to implement a similar program. Thus, the beginnings of the SMART Program was born!"
@@ -77,8 +98,22 @@
     "text": "Future\nAs I am writing this post, I am moving on to my sixth year of my graduate program, and I have my eyes on graduating and moving on the next phase of my career. That being said, I don’t really know if I will be involved for the second year of the program. I hope I inspired other graduate students to take on the mantle and continue the program. I truly believe the program is a great asset for the department. If I am around for the second year of the program, I will most likely take a consulting position to ensure that other graduate students can continue the program without relying on me. Otherwise, I will prefer to only coordinate for the second year.\nAs for the program itself, I hope the program will serve students from marginalized communities. Particularly communities where Statistics has be utilized against them. We need better statisticians who constantly thinking about how their work can harm the most vulnerable. Those who will advocate for these groups and change the Statistics community for the better. My hope is that the program will train individuals who will advocate for a better future."
   },
   {
+    "objectID": "blog/2021-05-03-smart-program/index.html#footnotes",
+    "href": "blog/2021-05-03-smart-program/index.html#footnotes",
+    "title": "SMART Program",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nReally the myth of imposter syndrome and more how Academia is designed only for the privileged.↩︎\nThe seminar occurred at the beginning of the pandemic. My goal was to create some form of normal for the students during this time. However, other students may have found it difficult to concentrate during the quarter.↩︎\nThe discussion from the first seminar was the most important part!↩︎\nI wised to have the mentors there as well but could not schedule everyone together.↩︎"
+  },
+  {
     "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html",
     "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html",
+    "title": "Wellness Plan Spring 2023",
+    "section": "",
+    "text": "Before designing a wellness plan, I need to assess all areas of my life and see what I can improve. Below is a list of areas that are important to me:\n\n\n\nMental\nEmotional\nSocial\nSpiritual\n\n\n\nPhysical\nEnvironmental\nFinancial\nCareer\n\n\n\nWhile there are many other aspects of my life that I would like to improve on, this is a good starting point for this semester."
+  },
+  {
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#areas-of-improvement",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#areas-of-improvement",
     "title": "Wellness Plan Spring 2023",
     "section": "",
     "text": "Before designing a wellness plan, I need to assess all areas of my life and see what I can improve. Below is a list of areas that are important to me:\n\n\n\nMental\nEmotional\nSocial\nSpiritual\n\n\n\nPhysical\nEnvironmental\nFinancial\nCareer\n\n\n\nWhile there are many other aspects of my life that I would like to improve on, this is a good starting point for this semester."
@@ -105,6 +140,13 @@
     "text": "Accountability\nThere are two ways that I will try told hold myself accountable. First, I will share my wellness plan with friends and family members. Second, I will create an incentive plan for each goal I complete. I will reassess my goals before spring break (3/17/23) and adjust accordingly. Overall, I want to create consistency with these goals. Any positive gain will be a win. At the end of the semester, I plan to reflect on the process and see what worked and what did not."
   },
   {
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#footnotes",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#footnotes",
+    "title": "Wellness Plan Spring 2023",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nwriting means any task related to research↩︎"
+  },
+  {
     "objectID": "blog/welcome/index.html",
     "href": "blog/welcome/index.html",
     "title": "Welcome!",
@@ -114,6 +156,13 @@
   {
     "objectID": "courses.html",
     "href": "courses.html",
+    "title": "Courses",
+    "section": "",
+    "text": "Math 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
+  },
+  {
+    "objectID": "courses.html#csu-channel-islands",
+    "href": "courses.html#csu-channel-islands",
     "title": "Courses",
     "section": "",
     "text": "Math 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
@@ -138,6 +187,230 @@
     "title": "Photos",
     "section": "",
     "text": "Big Bear Lake\n\n\n\n\n\n\n\n\n\n\n\n\n\nBluff Lake\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiamond Valley Lake\n\n\n\n\n\n\n\n\n\n\n\n\n\nHeart Rock Trail\n\n\n\n\n\n\n\n\n\n\n\n\n\nJoshua Tree\n\n\n\n\n\n\n\n\n\n\n\n\n\nLake Gregory\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#study-example",
+    "href": "pres/ci/pres_4_23.html#study-example",
+    "title": "Survival Analysis:",
+    "section": "Study Example",
+    "text": "Study Example\n\nAcute Myelogenous Leukemia (AML) is a blood and bone marrow cancer that makes abnormal blood cells. This is the most common Leukemia found in adults.\nThere are several factors that affect the prognosis (survival rate) of those with AML."
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#data-type",
+    "href": "pres/ci/pres_4_23.html#data-type",
+    "title": "Survival Analysis:",
+    "section": "Data Type",
+    "text": "Data Type\n\nData is typically recorded as time-to-event data.\nFor biomedical studies, researchers are interested in time from diagnosis to death, known as time-to-death."
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#censoring-1",
+    "href": "pres/ci/pres_4_23.html#censoring-1",
+    "title": "Survival Analysis:",
+    "section": "Censoring",
+    "text": "Censoring\n\nCensoring is a mechanism in biomedical studies where we do not observe the true time-to-death.\nNot all the time is observed.\nThe three common types of censoring mechanisms: Right, Left, and Interval."
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#right-censoring",
+    "href": "pres/ci/pres_4_23.html#right-censoring",
+    "title": "Survival Analysis:",
+    "section": "Right Censoring",
+    "text": "Right Censoring"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#left-censoring",
+    "href": "pres/ci/pres_4_23.html#left-censoring",
+    "title": "Survival Analysis:",
+    "section": "Left Censoring",
+    "text": "Left Censoring"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#interval-censoring",
+    "href": "pres/ci/pres_4_23.html#interval-censoring",
+    "title": "Survival Analysis:",
+    "section": "Interval Censoring",
+    "text": "Interval Censoring"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#censoring-affect",
+    "href": "pres/ci/pres_4_23.html#censoring-affect",
+    "title": "Survival Analysis:",
+    "section": "Censoring Affect",
+    "text": "Censoring Affect\n\nCensoring affect the time-to-death information\nHowever, we obtain some information when data is censored\nIncorporate methods to utilize partial information\nCensoring is independent of time-to-death generation\nRight Censoring"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#data-construction",
+    "href": "pres/ci/pres_4_23.html#data-construction",
+    "title": "Survival Analysis:",
+    "section": "Data Construction",
+    "text": "Data Construction\n\n\\(T_i^*\\): True time-to-event\n\\(C_i\\): Censoring Time\n\\(T_i=\\min(T_i^*,C_i)\\): Observed time-to-event\n\\(\\delta_i = I(T_i^*&lt;C_i)\\): Event indicator"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#hazard-function",
+    "href": "pres/ci/pres_4_23.html#hazard-function",
+    "title": "Survival Analysis:",
+    "section": "Hazard Function",
+    "text": "Hazard Function\n\\[\nh(t) = \\lim_{\\Delta t \\rightarrow 0} \\frac{P(t \\le T^* &lt; t + \\Delta t \\mid T^* \\ge t)}{\\Delta t}\n\\]"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#survival-function",
+    "href": "pres/ci/pres_4_23.html#survival-function",
+    "title": "Survival Analysis:",
+    "section": "Survival Function",
+    "text": "Survival Function\n\\[\nS(t) = P(T^* &gt; t)\n\\]"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#cumulative-hazard-function",
+    "href": "pres/ci/pres_4_23.html#cumulative-hazard-function",
+    "title": "Survival Analysis:",
+    "section": "Cumulative Hazard Function",
+    "text": "Cumulative Hazard Function\n\\[\nH(t) = \\int_0^t h(u) du\n\\]"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#survival-and-hazard-function-relationship",
+    "href": "pres/ci/pres_4_23.html#survival-and-hazard-function-relationship",
+    "title": "Survival Analysis:",
+    "section": "Survival and Hazard Function Relationship",
+    "text": "Survival and Hazard Function Relationship\n\\[\nS(t) = e^{-H(t)}\n\\]"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#probability-density-function",
+    "href": "pres/ci/pres_4_23.html#probability-density-function",
+    "title": "Survival Analysis:",
+    "section": "Probability Density Function",
+    "text": "Probability Density Function\n\\[\nf(t) = h(t)S(t)\n\\]"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#survival-curve",
+    "href": "pres/ci/pres_4_23.html#survival-curve",
+    "title": "Survival Analysis:",
+    "section": "Survival Curve",
+    "text": "Survival Curve\n\nThe survival curve will determine what is the probability of suriving up to a certain time.\nA survival curve uses both censored and uncensored data\nA survival curve can be used to determine the median survival time of a disease"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#data",
+    "href": "pres/ci/pres_4_23.html#data",
+    "title": "Survival Analysis:",
+    "section": "Data",
+    "text": "Data\nLet \\(\\{t_j,d_j,R_j\\}^D_{j=1}\\) denote the survival data, where \\(t_1&lt;t_2&lt;\\cdots&lt;t_D\\) are the ordered distinct observed event times, \\(d_j\\) represents the number of events at time point \\(t_j\\), and \\(R_j\\) denotes the number of subjects still at risk of experiencing the event at \\(t_j\\)."
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#kaplan-meier-estimator",
+    "href": "pres/ci/pres_4_23.html#kaplan-meier-estimator",
+    "title": "Survival Analysis:",
+    "section": "Kaplan-Meier Estimator",
+    "text": "Kaplan-Meier Estimator\n\\[\n\\hat{S}(t) = \\prod_{i:t_j \\le t} \\left( 1 - \\frac{d_j}{R_j} \\right)\n\\]"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#standard-error",
+    "href": "pres/ci/pres_4_23.html#standard-error",
+    "title": "Survival Analysis:",
+    "section": "Standard Error",
+    "text": "Standard Error\n\\[\n\\widehat{SE}\\{\\hat S(t)\\}=\\sqrt{\\hat S^2(t)\\sum_{t_j\\leq t}\\frac{d_j}{R_j(R_j-d_j)}}.\n\\]"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#survival-curve-1",
+    "href": "pres/ci/pres_4_23.html#survival-curve-1",
+    "title": "Survival Analysis:",
+    "section": "Survival Curve",
+    "text": "Survival Curve"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#data-1",
+    "href": "pres/ci/pres_4_23.html#data-1",
+    "title": "Survival Analysis:",
+    "section": "Data",
+    "text": "Data\nLet \\(\\{T_i,\\delta_i,\\boldsymbol X_i\\}^n_{i=1}\\) denote the survival data, where \\(T_i\\) is observed event times, \\(\\delta_i\\) is the survival indicator, and \\(\\boldsymbol X_i\\) denotes the a vector of predictor variables."
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#proportional-hazard-model",
+    "href": "pres/ci/pres_4_23.html#proportional-hazard-model",
+    "title": "Survival Analysis:",
+    "section": "Proportional Hazard Model",
+    "text": "Proportional Hazard Model\n\\[\nh(t \\mid \\boldsymbol X) = h_0(t) \\exp(\\boldsymbol\\beta^\\mathrm T\\boldsymbol X)\n\\]\n\n\\(h_0(t)\\): baseline hazard function\n\\(\\boldsymbol\\beta\\): regression coefficients\n\\(\\boldsymbol X\\): predictor variables"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#construction-of-the-likelihood-function",
+    "href": "pres/ci/pres_4_23.html#construction-of-the-likelihood-function",
+    "title": "Survival Analysis:",
+    "section": "Construction of the Likelihood Function",
+    "text": "Construction of the Likelihood Function\nDue to right censoring, likelihood needs careful construction\n\n\nDeath is observed\n\\[\nf(t|\\boldsymbol X,\\boldsymbol \\beta) = h(t)S(t)\n\\]\n\nCensored\n\\[\nS(t)\n\\]"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#likelihood-function",
+    "href": "pres/ci/pres_4_23.html#likelihood-function",
+    "title": "Survival Analysis:",
+    "section": "Likelihood Function",
+    "text": "Likelihood Function\n\\[\nL(\\boldsymbol \\beta) = \\prod_{i=1}^n [h(T_i \\mid \\boldsymbol X_i, \\boldsymbol\\beta)]^{\\delta_i} [S(T_i \\mid \\boldsymbol X_i, \\boldsymbol \\beta)]\n\\]"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#partial-likelihood",
+    "href": "pres/ci/pres_4_23.html#partial-likelihood",
+    "title": "Survival Analysis:",
+    "section": "Partial Likelihood",
+    "text": "Partial Likelihood\n\\[\nL_P(\\boldsymbol\\beta) = \\prod_{i=1}^m \\frac{\\exp(\\boldsymbol\\beta^T \\boldsymbol X_i)}{\\sum_{j \\in R(t_i)} \\exp(\\boldsymbol\\beta^T \\boldsymbol X_j)}\n\\]\n\n\\(R(t_i)\\): the patients at risk prior to time \\(t_i\\)"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#estimation",
+    "href": "pres/ci/pres_4_23.html#estimation",
+    "title": "Survival Analysis:",
+    "section": "Estimation",
+    "text": "Estimation\nThe estimates of \\(\\boldsymbol \\beta\\) can be obtained finding the Maximum Partial Likelihood Estimate (MPLE)"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#sampling-distribution",
+    "href": "pres/ci/pres_4_23.html#sampling-distribution",
+    "title": "Survival Analysis:",
+    "section": "Sampling Distribution",
+    "text": "Sampling Distribution\n\\[\n\\hat{\\boldsymbol \\beta} \\overset{\\circ}{\\sim} N\\left\\{\\boldsymbol \\beta, - I^{-1}(\\boldsymbol \\beta)\\right\\}\n\\]"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#colon-example",
+    "href": "pres/ci/pres_4_23.html#colon-example",
+    "title": "Survival Analysis:",
+    "section": "Colon Example",
+    "text": "Colon Example\n\nColon cancer is a type of cancer found in the large intestine\nWe will be looking whether different treatment types will have an affect on the survival rate"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#colon-survival-curve",
+    "href": "pres/ci/pres_4_23.html#colon-survival-curve",
+    "title": "Survival Analysis:",
+    "section": "Colon Survival Curve",
+    "text": "Colon Survival Curve"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#colon-survival-curve-1",
+    "href": "pres/ci/pres_4_23.html#colon-survival-curve-1",
+    "title": "Survival Analysis:",
+    "section": "Colon Survival Curve",
+    "text": "Colon Survival Curve"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#colon-survival-curve-2",
+    "href": "pres/ci/pres_4_23.html#colon-survival-curve-2",
+    "title": "Survival Analysis:",
+    "section": "Colon Survival Curve",
+    "text": "Colon Survival Curve"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#cox-ph-model",
+    "href": "pres/ci/pres_4_23.html#cox-ph-model",
+    "title": "Survival Analysis:",
+    "section": "Cox PH Model",
+    "text": "Cox PH Model"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#fitting-a-survival-curve",
+    "href": "pres/ci/pres_4_23.html#fitting-a-survival-curve",
+    "title": "Survival Analysis:",
+    "section": "Fitting a Survival Curve",
+    "text": "Fitting a Survival Curve\n\nCodeOutput\n\n\n\n1library(magrittr)\n2library(survival)\n3library(ggsurvfit)\n4df_colon %$% survfit(Surv(time, status) ~ surg)  %&gt;%\n5      ggsurvfit(linewidth = 1) +\n6      add_confidence_interval() +\n7      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)\n\n\n1\n\nPipe package\n\n2\n\nSurvival functions package\n\n3\n\nPlots survival curves package\n\n4\n\nApplies the Kaplan-Meier Function\n\n5\n\nPlots Survival Curve\n\n6\n\nAdds Confidence Intervals\n\n7\n\nDetermines Median Survival Time"
+  },
+  {
+    "objectID": "pres/ci/pres_4_23.html#fitting-cox-ph-model",
+    "href": "pres/ci/pres_4_23.html#fitting-cox-ph-model",
+    "title": "Survival Analysis:",
+    "section": "Fitting Cox PH Model",
+    "text": "Fitting Cox PH Model\n\nCodeOutput\n\n\n\ndf_colon %$% coxph(Surv(time, status) ~ surg)  %&gt;% \n  summary\n\n\n\n\n\n#&gt; Call:\n#&gt; coxph(formula = Surv(time, status) ~ surg)\n#&gt; \n#&gt;   n= 929, number of events= 468 \n#&gt; \n#&gt;                                   coef exp(coef) se(coef)     z Pr(&gt;|z|)  \n#&gt; surgExtended Time Since Surgery 0.2549    1.2903   0.1008 2.529   0.0114 *\n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n#&gt; \n#&gt;                                 exp(coef) exp(-coef) lower .95 upper .95\n#&gt; surgExtended Time Since Surgery      1.29      0.775     1.059     1.572\n#&gt; \n#&gt; Concordance= 0.523  (se = 0.01 )\n#&gt; Likelihood ratio test= 6.17  on 1 df,   p=0.01\n#&gt; Wald test            = 6.39  on 1 df,   p=0.01\n#&gt; Score (logrank) test = 6.43  on 1 df,   p=0.01"
   },
   {
     "objectID": "presentations.html",

@@ -9,7 +9,7 @@
 <link>www.inqs.info/blog.html</link>
 <atom:link href="www.inqs.info/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.2.203</generator>
+<generator>quarto-1.3.290</generator>
 <lastBuildDate>Tue, 31 Jan 2023 08:00:00 GMT</lastBuildDate>
 <item>
   <title>Wellness Plan Spring 2023</title>
@@ -44,16 +44,16 @@
 <section id="goals" class="level2">
 <h2 class="anchored" data-anchor-id="goals">Goals</h2>
 <p>Looking at the areas that I want to focus on, I want to create realistic goals. Additionally, each goal can satisfy multiple aspects of my life. I will use SMART goals to ensure <a href="https://www.ucop.edu/local-human-resources/_files/performance-appraisal/How%20to%20write%20SMART%20Goals%20v2.pdf">SMART</a> goals to make sure I create achievable goals. The period for all the goals is the Spring semester.</p>
-<div class="panel-tabset">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true">Goal 1</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Goal 2</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Goal 3</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" aria-controls="tabset-1-4" aria-selected="false">Goal 4</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" aria-controls="tabset-1-5" aria-selected="false">Goal 5</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
-<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Goal
 </div>
 </div>
@@ -64,12 +64,12 @@ Goal
 <p>I want to increase my research productivity for my own career goals. Additionally, working on this will help me through my tenure process.</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
-<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Goal
 </div>
 </div>
@@ -80,12 +80,12 @@ Goal
 <p>This goal has the potential to serve three aspects of my life: Physical, Environmental, and Financial. Learning how to create new tea drinks will allow me to save money instead of buying them from different coffee shops. Additionally, I will know what ingredients are used in the drinks. Therefore, I will be able to improve the physical aspect of my life. Lastly, this will help the environmental part of my life by reducing my environmental impact and using less plastic.</p>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
-<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Goal
 </div>
 </div>
@@ -96,12 +96,12 @@ Goal
 <p>One of my main goals is to travel more globally and locally. I especially want to get to know small communities located in Southern California. For that reason, I want to make an effort to explore more of Southern CA. This goal has the potential to affect four aspects of my life: mental, social, spiritual, and physical.</p>
 </div>
 <div id="tabset-1-4" class="tab-pane" aria-labelledby="tabset-1-4-tab">
-<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Goal
 </div>
 </div>
@@ -112,12 +112,12 @@ Goal
 <p>When I was planning to move to Camarillo, I wanted to start something new for my physical health. Therefore, I decided to start swimming.</p>
 </div>
 <div id="tabset-1-5" class="tab-pane" aria-labelledby="tabset-1-5-tab">
-<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Goal
 </div>
 </div>
@@ -132,7 +132,7 @@ Goal
 </section>
 <section id="plan" class="level2">
 <h2 class="anchored" data-anchor-id="plan">Plan</h2>
-<div class="panel-tabset">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" aria-controls="tabset-2-1" aria-selected="true">Goal 1</a></li><li class="nav-item"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" aria-controls="tabset-2-2" aria-selected="false">Goal 2</a></li><li class="nav-item"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" aria-controls="tabset-2-3" aria-selected="false">Goal 3</a></li><li class="nav-item"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" aria-controls="tabset-2-4" aria-selected="false">Goal 4</a></li><li class="nav-item"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" aria-controls="tabset-2-5" aria-selected="false">Goal 5</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" aria-labelledby="tabset-2-1-tab">
@@ -235,9 +235,6 @@ Goal
 
 
 
-<div class="cell">
-
-</div>
 <section id="journey" class="level2">
 <h2 class="anchored" data-anchor-id="journey">Journey</h2>
 <p>When I first started using Rcpp for my research, I had no idea what I was doing. All I knew was that you can incorporate C++<sup>1</sup> code in your R scripts to speed up data processing. I did spend some time learning C++ through <a href="https://www.learncpp.com/">www.learningcpp.com</a>, but I didn’t get far because my example program did not go well. Troubleshooting the problem was a nightmare. However, it did give me an idea of how C++ programming looks like.</p>
@@ -286,44 +283,75 @@ Goal
 <span id="cb3-16">}</span></code></pre></div>
 <p>In R, you will need to load the following packages<sup>8</sup>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;">library</span>(Rcpp)</span>
-<span id="cb4-2"><span class="fu" style="color: #4758AB;">library</span>(RcppArmadillo)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(Rcpp)</span>
+<span id="cb4-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(RcppArmadillo)</span></code></pre></div>
 </div>
 <p>The next step is to compile your cpp file. You can do this with the <code>sourceCpp()</code> function:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">Rcpp<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">sourceCpp</span>(<span class="st" style="color: #20794D;">"example_cpp.cpp"</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">Rcpp<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sourceCpp</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"example_cpp.cpp"</span>)</span></code></pre></div>
 </div>
 <p>This will compile your functions and make them executable in R. You can now use your function like any other R function.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
 font-style: italic;">## Generating Data</span></span>
-<span id="cb6-2">Y <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">rnorm</span>(<span class="dv" style="color: #AD0000;">1000</span>)</span>
+<span id="cb6-2">Y <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rnorm</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span>)</span>
 <span id="cb6-3"></span>
 <span id="cb6-4"><span class="do" style="color: #5E5E5E;
+background-color: null;
 font-style: italic;">## Using mean_cpp</span></span>
-<span id="cb6-5"><span class="fu" style="color: #4758AB;">mean_cpp</span>(Y)</span></code></pre></div>
+<span id="cb6-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean_cpp</span>(Y)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.03496737</code></pre>
+<pre><code>[1] -0.02876794</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
 font-style: italic;">## Using Built-in mean functions</span></span>
-<span id="cb8-2"><span class="fu" style="color: #4758AB;">mean</span>(Y)</span></code></pre></div>
+<span id="cb8-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean</span>(Y)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.03496737</code></pre>
+<pre><code>[1] -0.02876794</code></pre>
 </div>
 </div>
 <p>To see the speed gains, we can use the <code>mark()</code> function from the <code>bench</code> package.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">bench<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">mark</span>(</span>
-<span id="cb10-2">  <span class="fu" style="color: #4758AB;">mean</span>(Y),</span>
-<span id="cb10-3">  <span class="fu" style="color: #4758AB;">mean_cpp</span>(Y)</span>
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">bench<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mark</span>(</span>
+<span id="cb10-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean</span>(Y),</span>
+<span id="cb10-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean_cpp</span>(Y)</span>
 <span id="cb10-4">)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 6
   expression       min   median `itr/sec` mem_alloc `gc/sec`
   &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;
-1 mean(Y)       3.31µs   3.73µs   247583.        0B     24.8
-2 mean_cpp(Y)   1.84µs   2.76µs   375574.    7.67KB      0  </code></pre>
+1 mean(Y)       3.35µs   3.81µs   244202.        0B        0
+2 mean_cpp(Y)   1.86µs   2.77µs   366125.    7.67KB        0</code></pre>
 </div>
 </div>
 <p>You can see that the cpp function is much faster than the R built-in function.</p>
@@ -371,7 +399,7 @@ font-style: italic;">## Using Built-in mean functions</span></span>
 <p>This is the first post of my “Rcpp” collection detailing my journey with Rcpp. The “Rcpp” collection contains information about the struggles I faced while implementing Rcpp. Even though my first venture to Rcpp happened in the Summer of 2020, I realized I am learning new things every day. I thought it would be wised to write a blog of everything I have and will learn with Rcpp. I hope this collection will guide other students who have never used c++ before.</p>
 <p>As I am developing my model for my PhD, a major limiting factor is that my model takes a really long time to compute the results I need. Due to the complexity of the model, I need to approximate different components using iterative algorithms. This in turn increases the computation time to obtain results. You can only imagine my frustration when I first coded my model in R and it took more than a week to obtain results!</p>
 <p>Therefore, I decided to focus on speeding up my code. I spent time reading Wickham’s <a href="https://adv-r.hadley.nz/index.html">Advanced R</a> Book to speed up my code. There I learned how about vectorizing code, utilizing built-in optimized functions, and common practices for speed gains. All this work has made me a better R programmer. Unfortunately, when I reran my model, the speed gains was not enough to call my efforts a success.</p>
-<p><img src="www.inqs.info/blog/2021-04-15-rcpp-and-research/https:/media.giphy.com/media/Bcpspr9LTSvss/giphy.gif" class="img-fluid"></p>
+<p><img src="www.inqs.info/blog/2021-04-15-rcpp-and-research/https:/media.giphy.com/media/Bcpspr9LTSvss/giphy.gif" class="quarto-discovered-preview-image img-fluid"></p>
 <p>Due to the lack of improvements, and knowing I will need expand my model for larger data sets, I set on a quest to improve my model. I attacked this problem on two fronts: looking for mathematical methods to reduce my computation needs and implementing different computing techniques. While both components dramatically improved my computational time, implementing c++ via Rcpp was the biggest game changer for my model.</p>
 <p>After I implemented everything I can from Wickham’s <a href="https://adv-r.hadley.nz/index.html">Book</a>. I began reading more about about c++ from the book’s <a href="https://adv-r.hadley.nz/rcpp.html">c++ chapter</a>. I will be honest, I didn’t know what I was doing. This was my first time learning how to use c++. Nevertheless, I was determined to learn more about the c++ due to the potential speed gains. During the summer of 2020, I spent all my time learning about c++ and Rcpp. By the end of my summer, a model that took 3.5 days to converge was now taking approximately 6 hours!</p>
 <p><img src="www.inqs.info/blog/2021-04-15-rcpp-and-research/https:/media.giphy.com/media/xT0GqssRweIhlz209i/giphy.gif" class="img-fluid"></p>
