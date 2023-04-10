@@ -7,6 +7,15 @@ editor: source
 ::: content-block
 ::: features
 ::: {.feature .box}
+#### Survival Analysis: The Life and Death of Statistics
+
+April 10, 2021
+
+[Slides](files/ci/pres_4_23.html){.btn-action-primary .btn-action .btn .btn-success role="button"}
+:::
+
+
+::: {.feature .box}
 #### UCR High-Performance Computing Center
 
 May 20, 2022
