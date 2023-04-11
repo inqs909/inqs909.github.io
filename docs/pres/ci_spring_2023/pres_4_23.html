@@ -691,7 +691,8 @@ h(t \mid \boldsymbol X) = h_0(t) \exp(\boldsymbol\beta^\mathrm T\boldsymbol X)
 </section>
 <section id="how-do-we-estimate-parameters-boldsymbol-beta" class="slide level2">
 <h2>How do we estimate parameters <span class="math inline">\(\boldsymbol \beta\)</span></h2>
-<p>We use a maximum likelihood approach where the likelihood function measures the probability of observing the data given the parameters.</p>
+<p>We use a maximum likelihood approach where we search for the values of <span class="math inline">\(\boldsymbol \beta\)</span> the maximizes the likelihood function.</p>
+<p>The Likelihood function measures the probability of observing the data given the parameters <span class="math inline">\(\boldsymbol \beta\)</span>.</p>
 </section>
 <section id="construction-of-the-likelihood-function" class="slide level2">
 <h2>Construction of the Likelihood Function</h2>
@@ -819,8 +820,8 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 <div class="cell">
 <div class="cell-output-display">
 
-<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-fc68bc7c4db32d017e91" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-fc68bc7c4db32d017e91">{"x":{"filter":"none","vertical":false,"data":[["1","2"],["rxLevamisole","rxLevamisole+5-FU"],[0.98,0.6],[0.11,0.12],[-0.14,-4.32],[0.89,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>term<\/th>\n      <th>estimate<\/th>\n      <th>std.error<\/th>\n      <th>statistic<\/th>\n      <th>p.value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-6df2a60bf819200cc0fd" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-6df2a60bf819200cc0fd">{"x":{"filter":"none","vertical":false,"data":[["1","2"],["rxLevamisole","rxLevamisole+5-FU"],[0.98,0.6],[0.11,0.12],[-0.14,-4.32],[0.89,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>term<\/th>\n      <th>estimate<\/th>\n      <th>std.error<\/th>\n      <th>statistic<\/th>\n      <th>p.value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section></section>
@@ -871,31 +872,31 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 <dl class="code-annotation-container-grid">
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
 <dd class="fragment">
-<span data-code-annotation="1" data-code-lines="1" data-code-cell="annotated-cell-1">Pipe package</span>
+<span data-code-lines="1" data-code-annotation="1" data-code-cell="annotated-cell-1">Pipe package</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
 <dd class="fragment">
-<span data-code-annotation="2" data-code-lines="2" data-code-cell="annotated-cell-1">Survival functions package</span>
+<span data-code-lines="2" data-code-annotation="2" data-code-cell="annotated-cell-1">Survival functions package</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="3">3</dt>
 <dd class="fragment">
-<span data-code-annotation="3" data-code-lines="3" data-code-cell="annotated-cell-1">Plots survival curves package</span>
+<span data-code-lines="3" data-code-annotation="3" data-code-cell="annotated-cell-1">Plots survival curves package</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="4">4</dt>
 <dd class="fragment">
-<span data-code-annotation="4" data-code-lines="4" data-code-cell="annotated-cell-1">Applies the Kaplan-Meier Function</span>
+<span data-code-lines="4" data-code-annotation="4" data-code-cell="annotated-cell-1">Applies the Kaplan-Meier Function</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="5">5</dt>
 <dd class="fragment">
-<span data-code-annotation="5" data-code-lines="5" data-code-cell="annotated-cell-1">Plots Survival Curve</span>
+<span data-code-lines="5" data-code-annotation="5" data-code-cell="annotated-cell-1">Plots Survival Curve</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="6">6</dt>
 <dd class="fragment">
-<span data-code-annotation="6" data-code-lines="6" data-code-cell="annotated-cell-1">Adds Confidence Intervals</span>
+<span data-code-lines="6" data-code-annotation="6" data-code-cell="annotated-cell-1">Adds Confidence Intervals</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="7">7</dt>
 <dd class="fragment">
-<span data-code-annotation="7" data-code-lines="7" data-code-cell="annotated-cell-1">Determines Median Survival Time</span>
+<span data-code-lines="7" data-code-annotation="7" data-code-cell="annotated-cell-1">Determines Median Survival Time</span>
 </dd>
 </dl>
 </div>

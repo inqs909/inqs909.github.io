@@ -256,7 +256,9 @@ $$
 
 ## How do we estimate parameters $\boldsymbol \beta$
 
-We use a maximum likelihood approach where the likelihood function measures the probability of observing the data given the parameters.
+We use a maximum likelihood approach where we search for the values of $\boldsymbol \beta$ the maximizes the likelihood function.
+
+The Likelihood function measures the probability of observing the data given the parameters $\boldsymbol \beta$.
 
 ## Construction of the Likelihood Function
 
