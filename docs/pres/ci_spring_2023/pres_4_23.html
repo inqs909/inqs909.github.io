@@ -309,6 +309,7 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
+      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -673,8 +674,8 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 <div class="cell">
 <div class="cell-output-display">
 
-<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-82a4602b8c8d6295a756" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-82a4602b8c8d6295a756">{"x":{"filter":"none","vertical":false,"data":[["1","2"],["rxLevamisole","rxLevamisole+5-FU"],[0.98,0.6],[0.11,0.12],[-0.14,-4.32],[0.89,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>term<\/th>\n      <th>estimate<\/th>\n      <th>std.error<\/th>\n      <th>statistic<\/th>\n      <th>p.value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-dc99683b55c19c1fd211" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-dc99683b55c19c1fd211">{"x":{"filter":"none","vertical":false,"data":[["1","2"],["rxLevamisole","rxLevamisole+5-FU"],[0.98,0.6],[0.11,0.12],[-0.14,-4.32],[0.89,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>term<\/th>\n      <th>estimate<\/th>\n      <th>std.error<\/th>\n      <th>statistic<\/th>\n      <th>p.value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section></section>
@@ -701,31 +702,31 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 <dl class="code-annotation-container-grid">
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
 <dd class="fragment">
-<span data-code-annotation="1" data-code-cell="annotated-cell-1" data-code-lines="1">Pipe package</span>
+<span data-code-cell="annotated-cell-1" data-code-annotation="1" data-code-lines="1">Pipe package</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
 <dd class="fragment">
-<span data-code-annotation="2" data-code-cell="annotated-cell-1" data-code-lines="2">Survival functions package</span>
+<span data-code-cell="annotated-cell-1" data-code-annotation="2" data-code-lines="2">Survival functions package</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="3">3</dt>
 <dd class="fragment">
-<span data-code-annotation="3" data-code-cell="annotated-cell-1" data-code-lines="3">Plots survival curves package</span>
+<span data-code-cell="annotated-cell-1" data-code-annotation="3" data-code-lines="3">Plots survival curves package</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="4">4</dt>
 <dd class="fragment">
-<span data-code-annotation="4" data-code-cell="annotated-cell-1" data-code-lines="4">Applies the Kaplan-Meier Function</span>
+<span data-code-cell="annotated-cell-1" data-code-annotation="4" data-code-lines="4">Applies the Kaplan-Meier Function</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="5">5</dt>
 <dd class="fragment">
-<span data-code-annotation="5" data-code-cell="annotated-cell-1" data-code-lines="5">Plots Survival Curve</span>
+<span data-code-cell="annotated-cell-1" data-code-annotation="5" data-code-lines="5">Plots Survival Curve</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="6">6</dt>
 <dd class="fragment">
-<span data-code-annotation="6" data-code-cell="annotated-cell-1" data-code-lines="6">Adds Confidence Intervals</span>
+<span data-code-cell="annotated-cell-1" data-code-annotation="6" data-code-lines="6">Adds Confidence Intervals</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="7">7</dt>
 <dd class="fragment">
-<span data-code-annotation="7" data-code-cell="annotated-cell-1" data-code-lines="7">Determines Median Survival Time</span>
+<span data-code-cell="annotated-cell-1" data-code-annotation="7" data-code-lines="7">Determines Median Survival Time</span>
 </dd>
 </dl>
 </div>
@@ -747,10 +748,7 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 <ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Code</a></li><li><a href="#tabset-2-2">Output</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>df_colon <span class="sc">%$%</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> surg)  <span class="sc">%&gt;%</span> </span>
-<span id="cb1-2"><a href="#cb1-2"></a>  summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+
 </div>
 <div id="tabset-2-2">
 <div class="cell">
