@@ -7,7 +7,6 @@ format:
     pointer:
       pointerSize: 32
     incremental: true
-    theme: dark
     scrollable: true
 knitr:
   opts_chunk: 
@@ -435,7 +434,7 @@ df_colon %$% survfit(Surv(time, status) ~ surg)  %>%
 #| eval: false
 
 
-df_colon %$% coxph(Surv(time, status) ~ surg)  %>% #<1>
+df_colon %$% coxph(Surv(time, status) ~ surg)  %>%
   summary
 ```
 
