@@ -6,7 +6,7 @@ format:
   revealjs:
     pointer:
       pointerSize: 32
-    incremental: true
+    incremental: false
     scrollable: true
 knitr:
   opts_chunk: 
@@ -25,33 +25,49 @@ filters:
 
 ## Study Example
 
+::: incremental
+
 -   Acute Myelogenous Leukemia (AML) is a blood and bone marrow cancer that makes abnormal blood cells. This is the most common Leukemia found in adults.
 
 -   There are several factors that affect the prognosis (survival rate) of those with AML.
 
 -   **How do we determine the survival rate of AML patients?**
 
+:::
+
 ## How do determine the survival rate?
+
+::: incremental
 
 -   Measure from diagnosis to event of interest
 
 -   Construct a probability of surviving up to a certain time point
 
+:::
+
 ## Data Type
+
+::: incremental
 
 -   Data is typically recorded as time-to-event data.
 
 -   For biomedical studies, researchers are interested in time from diagnosis to death, known as time-to-death.
 
+:::
+
 # Censoring
 
 ## Censoring
+
+::: incremental
 
 -   Censoring is a mechanism in biomedical studies where we do not observe the true time-to-death.
 
 -   Not all the time is observed.
 
 -   Three common types of censoring mechanisms: *Right, Left,* and *Interval.*
+
+:::
 
 ## Left Censoring
 
@@ -153,6 +169,8 @@ ggplot(dat, aes(x = ID, y = t1, shape = ifelse(censored, "Death", "Censored"))) 
 
 ## Censoring
 
+::: incremental
+
 -   Censoring affects the time-to-death information
 
 -   However, we obtain some information when data is censored
@@ -163,7 +181,11 @@ ggplot(dat, aes(x = ID, y = t1, shape = ifelse(censored, "Death", "Censored"))) 
 
 -   Right Censoring
 
+:::
+
 ## Data Construction
+
+::: incremental
 
 -   $T_i^*$: True time-to-event
 
@@ -172,6 +194,8 @@ ggplot(dat, aes(x = ID, y = t1, shape = ifelse(censored, "Death", "Censored"))) 
 -   $T_i=\min(T_i^*,C_i)$: Observed time-to-event
 
 -   $\delta_i = I(T_i^*<C_i)$: Event indicator
+
+:::
 
 # Survival Analysis Functions
 
@@ -217,11 +241,15 @@ $$
 
 ## Survival Curve
 
+::: incremental
+
 -   The survival curve will determine what is the probability of suriving up to a certain time.
 
 -   A survival curve uses both censored and uncensored data
 
 -   A survival curve can be used to determine the median survival time of a disease
+
+:::
 
 ## Data
 

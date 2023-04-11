@@ -32,7 +32,7 @@
     "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
     "title": "RcppArmadillo",
     "section": "Using RcppArmadillo",
-    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.009254629\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.009254629\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.34µs   3.77µs   245012.        0B        0\n2 mean_cpp(Y)   1.81µs   2.74µs   372865.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
+    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.0001036435\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.0001036435\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.33µs   3.67µs   254796.        0B        0\n2 mean_cpp(Y)   1.81µs   2.76µs   373251.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
   },
   {
     "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
@@ -193,28 +193,28 @@
     "href": "pres/ci_spring_2023/pres_4_23.html#study-example",
     "title": "Survival Analysis:",
     "section": "Study Example",
-    "text": "Study Example\n\nAcute Myelogenous Leukemia (AML) is a blood and bone marrow cancer that makes abnormal blood cells. This is the most common Leukemia found in adults.\nThere are several factors that affect the prognosis (survival rate) of those with AML.\nHow do we determine the survival rate of AML patients?"
+    "text": "Study Example\n\n\nAcute Myelogenous Leukemia (AML) is a blood and bone marrow cancer that makes abnormal blood cells. This is the most common Leukemia found in adults.\nThere are several factors that affect the prognosis (survival rate) of those with AML.\nHow do we determine the survival rate of AML patients?"
   },
   {
     "objectID": "pres/ci_spring_2023/pres_4_23.html#how-do-determine-the-survival-rate",
     "href": "pres/ci_spring_2023/pres_4_23.html#how-do-determine-the-survival-rate",
     "title": "Survival Analysis:",
     "section": "How do determine the survival rate?",
-    "text": "How do determine the survival rate?\n\nMeasure from diagnosis to event of interest\nConstruct a probability of surviving up to a certain time point"
+    "text": "How do determine the survival rate?\n\n\nMeasure from diagnosis to event of interest\nConstruct a probability of surviving up to a certain time point"
   },
   {
     "objectID": "pres/ci_spring_2023/pres_4_23.html#data-type",
     "href": "pres/ci_spring_2023/pres_4_23.html#data-type",
     "title": "Survival Analysis:",
     "section": "Data Type",
-    "text": "Data Type\n\nData is typically recorded as time-to-event data.\nFor biomedical studies, researchers are interested in time from diagnosis to death, known as time-to-death."
+    "text": "Data Type\n\n\nData is typically recorded as time-to-event data.\nFor biomedical studies, researchers are interested in time from diagnosis to death, known as time-to-death."
   },
   {
     "objectID": "pres/ci_spring_2023/pres_4_23.html#censoring-1",
     "href": "pres/ci_spring_2023/pres_4_23.html#censoring-1",
     "title": "Survival Analysis:",
     "section": "Censoring",
-    "text": "Censoring\n\nCensoring is a mechanism in biomedical studies where we do not observe the true time-to-death.\nNot all the time is observed.\nThree common types of censoring mechanisms: Right, Left, and Interval."
+    "text": "Censoring\n\n\nCensoring is a mechanism in biomedical studies where we do not observe the true time-to-death.\nNot all the time is observed.\nThree common types of censoring mechanisms: Right, Left, and Interval."
   },
   {
     "objectID": "pres/ci_spring_2023/pres_4_23.html#left-censoring",
@@ -242,14 +242,14 @@
     "href": "pres/ci_spring_2023/pres_4_23.html#censoring-2",
     "title": "Survival Analysis:",
     "section": "Censoring",
-    "text": "Censoring\n\nCensoring affects the time-to-death information\nHowever, we obtain some information when data is censored\nIncorporate methods to utilize partial information\nCensoring is independent of time-to-death generation\nRight Censoring"
+    "text": "Censoring\n\n\nCensoring affects the time-to-death information\nHowever, we obtain some information when data is censored\nIncorporate methods to utilize partial information\nCensoring is independent of time-to-death generation\nRight Censoring"
   },
   {
     "objectID": "pres/ci_spring_2023/pres_4_23.html#data-construction",
     "href": "pres/ci_spring_2023/pres_4_23.html#data-construction",
     "title": "Survival Analysis:",
     "section": "Data Construction",
-    "text": "Data Construction\n\n\\(T_i^*\\): True time-to-event\n\\(C_i\\): Censoring Time\n\\(T_i=\\min(T_i^*,C_i)\\): Observed time-to-event\n\\(\\delta_i = I(T_i^*&lt;C_i)\\): Event indicator"
+    "text": "Data Construction\n\n\n\\(T_i^*\\): True time-to-event\n\\(C_i\\): Censoring Time\n\\(T_i=\\min(T_i^*,C_i)\\): Observed time-to-event\n\\(\\delta_i = I(T_i^*&lt;C_i)\\): Event indicator"
   },
   {
     "objectID": "pres/ci_spring_2023/pres_4_23.html#survivial-analysis-functions",
@@ -298,7 +298,7 @@
     "href": "pres/ci_spring_2023/pres_4_23.html#survival-curve",
     "title": "Survival Analysis:",
     "section": "Survival Curve",
-    "text": "Survival Curve\n\nThe survival curve will determine what is the probability of suriving up to a certain time.\nA survival curve uses both censored and uncensored data\nA survival curve can be used to determine the median survival time of a disease"
+    "text": "Survival Curve\n\n\nThe survival curve will determine what is the probability of suriving up to a certain time.\nA survival curve uses both censored and uncensored data\nA survival curve can be used to determine the median survival time of a disease"
   },
   {
     "objectID": "pres/ci_spring_2023/pres_4_23.html#data",

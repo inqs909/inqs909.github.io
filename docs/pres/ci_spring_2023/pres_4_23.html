@@ -420,25 +420,25 @@ Isaac Quintanilla Salinas
 <h1>Background Information</h1>
 <div class="agenda">
 <ul>
-<li class="fragment"><div class="agenda-active">
+<li><div class="agenda-active">
 <p>Background Information</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>Censoring</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>Survival Analysis Functions</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>Survival Rate</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>Cox Proportional Hazard Model</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>Example</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>R Code</p>
 </div></li>
 </ul>
@@ -446,50 +446,56 @@ Isaac Quintanilla Salinas
 </section>
 <section id="study-example" class="slide level2">
 <h2>Study Example</h2>
+<div>
 <ul>
 <li class="fragment"><p>Acute Myelogenous Leukemia (AML) is a blood and bone marrow cancer that makes abnormal blood cells. This is the most common Leukemia found in adults.</p></li>
 <li class="fragment"><p>There are several factors that affect the prognosis (survival rate) of those with AML.</p></li>
 <li class="fragment"><p><strong>How do we determine the survival rate of AML patients?</strong></p></li>
 </ul>
+</div>
 </section>
 <section id="how-do-determine-the-survival-rate" class="slide level2">
 <h2>How do determine the survival rate?</h2>
+<div>
 <ul>
 <li class="fragment"><p>Measure from diagnosis to event of interest</p></li>
 <li class="fragment"><p>Construct a probability of surviving up to a certain time point</p></li>
 </ul>
+</div>
 </section>
 <section id="data-type" class="slide level2">
 <h2>Data Type</h2>
+<div>
 <ul>
 <li class="fragment"><p>Data is typically recorded as time-to-event data.</p></li>
 <li class="fragment"><p>For biomedical studies, researchers are interested in time from diagnosis to death, known as time-to-death.</p></li>
 </ul>
+</div>
 </section></section>
 <section>
 <section class="title-slide slide level1 agenda-slide center">
 <h1>Censoring</h1>
 <div class="agenda">
 <ul>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Background Information</p>
 </div></li>
-<li class="fragment"><div class="agenda-active">
+<li><div class="agenda-active">
 <p>Censoring</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>Survival Analysis Functions</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>Survival Rate</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>Cox Proportional Hazard Model</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>Example</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>R Code</p>
 </div></li>
 </ul>
@@ -497,11 +503,13 @@ Isaac Quintanilla Salinas
 </section>
 <section id="censoring-1" class="slide level2">
 <h2>Censoring</h2>
+<div>
 <ul>
 <li class="fragment"><p>Censoring is a mechanism in biomedical studies where we do not observe the true time-to-death.</p></li>
 <li class="fragment"><p>Not all the time is observed.</p></li>
 <li class="fragment"><p>Three common types of censoring mechanisms: <em>Right, Left,</em> and <em>Interval.</em></p></li>
 </ul>
+</div>
 </section>
 <section id="left-censoring" class="slide level2">
 <h2>Left Censoring</h2>
@@ -517,6 +525,7 @@ Isaac Quintanilla Salinas
 <img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
 <section id="censoring-2" class="slide level2">
 <h2>Censoring</h2>
+<div>
 <ul>
 <li class="fragment"><p>Censoring affects the time-to-death information</p></li>
 <li class="fragment"><p>However, we obtain some information when data is censored</p></li>
@@ -524,40 +533,43 @@ Isaac Quintanilla Salinas
 <li class="fragment"><p>Censoring is independent of time-to-death generation</p></li>
 <li class="fragment"><p>Right Censoring</p></li>
 </ul>
+</div>
 </section>
 <section id="data-construction" class="slide level2">
 <h2>Data Construction</h2>
+<div>
 <ul>
 <li class="fragment"><p><span class="math inline">\(T_i^*\)</span>: True time-to-event</p></li>
 <li class="fragment"><p><span class="math inline">\(C_i\)</span>: Censoring Time</p></li>
 <li class="fragment"><p><span class="math inline">\(T_i=\min(T_i^*,C_i)\)</span>: Observed time-to-event</p></li>
 <li class="fragment"><p><span class="math inline">\(\delta_i = I(T_i^*&lt;C_i)\)</span>: Event indicator</p></li>
 </ul>
+</div>
 </section></section>
 <section>
 <section class="title-slide slide level1 agenda-slide center">
 <h1>Survival Analysis Functions</h1>
 <div class="agenda">
 <ul>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Background Information</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Censoring</p>
 </div></li>
-<li class="fragment"><div class="agenda-active">
+<li><div class="agenda-active">
 <p>Survival Analysis Functions</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>Survival Rate</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>Cox Proportional Hazard Model</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>Example</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>R Code</p>
 </div></li>
 </ul>
@@ -567,9 +579,9 @@ Isaac Quintanilla Salinas
 <h2>Survivial Analysis Functions</h2>
 <p>Describe the Probability Model</p>
 <ul>
-<li class="fragment">Hazard Function</li>
-<li class="fragment">Survival Function</li>
-<li class="fragment">Cumulative Hazard Function</li>
+<li>Hazard Function</li>
+<li>Survival Function</li>
+<li>Cumulative Hazard Function</li>
 </ul>
 </section>
 <section id="hazard-function" class="slide level2">
@@ -607,25 +619,25 @@ f(t) = h(t)S(t)
 <h1>Survival Rate</h1>
 <div class="agenda">
 <ul>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Background Information</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Censoring</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Survival Analysis Functions</p>
 </div></li>
-<li class="fragment"><div class="agenda-active">
+<li><div class="agenda-active">
 <p>Survival Rate</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>Cox Proportional Hazard Model</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>Example</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>R Code</p>
 </div></li>
 </ul>
@@ -633,11 +645,13 @@ f(t) = h(t)S(t)
 </section>
 <section id="survival-curve" class="slide level2">
 <h2>Survival Curve</h2>
+<div>
 <ul>
 <li class="fragment"><p>The survival curve will determine what is the probability of suriving up to a certain time.</p></li>
 <li class="fragment"><p>A survival curve uses both censored and uncensored data</p></li>
 <li class="fragment"><p>A survival curve can be used to determine the median survival time of a disease</p></li>
 </ul>
+</div>
 </section>
 <section id="data" class="slide level2">
 <h2>Data</h2>
@@ -667,25 +681,25 @@ f(t) = h(t)S(t)
 <h1>Cox Proportional Hazard Model</h1>
 <div class="agenda">
 <ul>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Background Information</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Censoring</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Survival Analysis Functions</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Survival Rate</p>
 </div></li>
-<li class="fragment"><div class="agenda-active">
+<li><div class="agenda-active">
 <p>Cox Proportional Hazard Model</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>Example</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>R Code</p>
 </div></li>
 </ul>
@@ -701,9 +715,9 @@ f(t) = h(t)S(t)
 h(t \mid \boldsymbol X) = h_0(t) \exp(\boldsymbol\beta^\mathrm T\boldsymbol X)
 \]</span></p>
 <ul>
-<li class="fragment"><p><span class="math inline">\(h_0(t)\)</span>: baseline hazard function</p></li>
-<li class="fragment"><p><span class="math inline">\(\boldsymbol\beta\)</span>: regression coefficients</p></li>
-<li class="fragment"><p><span class="math inline">\(\boldsymbol X\)</span>: predictor variables</p></li>
+<li><p><span class="math inline">\(h_0(t)\)</span>: baseline hazard function</p></li>
+<li><p><span class="math inline">\(\boldsymbol\beta\)</span>: regression coefficients</p></li>
+<li><p><span class="math inline">\(\boldsymbol X\)</span>: predictor variables</p></li>
 </ul>
 </section>
 <section id="how-do-we-estimate-parameters-boldsymbol-beta" class="slide level2">
@@ -750,15 +764,15 @@ h_0(t)
 <div class="column" style="width:50%;">
 <h3 id="parameterically">Parameterically</h3>
 <ul>
-<li class="fragment"><p>Weibull</p></li>
-<li class="fragment"><p>log-Normal</p></li>
-<li class="fragment"><p>Gompetz</p></li>
+<li><p>Weibull</p></li>
+<li><p>log-Normal</p></li>
+<li><p>Gompetz</p></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h3 id="nonparametrically">Nonparametrically</h3>
 <ul>
-<li class="fragment"><p>Profile MLE</p></li>
-<li class="fragment"><p>Spline Models</p></li>
+<li><p>Profile MLE</p></li>
+<li><p>Spline Models</p></li>
 </ul>
 </div>
 </div>
@@ -770,8 +784,8 @@ h_0(t)
 L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol X_i)}{\sum_{j \in R(t_i)} \exp(\boldsymbol\beta^T \boldsymbol X_j)}
 \]</span></p>
 <ul>
-<li class="fragment"><span class="math inline">\(R(t_i)\)</span>: the patients at risk prior to time <span class="math inline">\(t_i\)</span></li>
-<li class="fragment"><span class="math inline">\(D\)</span>: Number of individuals experiencing the event</li>
+<li><span class="math inline">\(R(t_i)\)</span>: the patients at risk prior to time <span class="math inline">\(t_i\)</span></li>
+<li><span class="math inline">\(D\)</span>: Number of individuals experiencing the event</li>
 </ul>
 </section>
 <section id="estimation" class="slide level2">
@@ -789,25 +803,25 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 <h1>Example</h1>
 <div class="agenda">
 <ul>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Background Information</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Censoring</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Survival Analysis Functions</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Survival Rate</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Cox Proportional Hazard Model</p>
 </div></li>
-<li class="fragment"><div class="agenda-active">
+<li><div class="agenda-active">
 <p>Example</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<li><div class="agenda-inactive agenda-post-active">
 <p>R Code</p>
 </div></li>
 </ul>
@@ -816,8 +830,8 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 <section id="colon-example" class="slide level2">
 <h2>Colon Example</h2>
 <ul>
-<li class="fragment">Colon cancer is a type of cancer found in the large intestine</li>
-<li class="fragment">We will be looking whether different treatment types will have an affect on the survival rate</li>
+<li>Colon cancer is a type of cancer found in the large intestine</li>
+<li>We will be looking whether different treatment types will have an affect on the survival rate</li>
 </ul>
 </section>
 <section id="colon-survival-curve" class="slide level2">
@@ -837,8 +851,8 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 <div class="cell">
 <div class="cell-output-display">
 
-<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-a1076b2fb639d9a82c0a" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-a1076b2fb639d9a82c0a">{"x":{"filter":"none","vertical":false,"data":[["1","2"],["rxLevamisole","rxLevamisole+5-FU"],[0.98,0.6],[0.11,0.12],[-0.14,-4.32],[0.89,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>term<\/th>\n      <th>estimate<\/th>\n      <th>std.error<\/th>\n      <th>statistic<\/th>\n      <th>p.value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-e03709acb563f4ab0977" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-e03709acb563f4ab0977">{"x":{"filter":"none","vertical":false,"data":[["1","2"],["rxLevamisole","rxLevamisole+5-FU"],[0.98,0.6],[0.11,0.12],[-0.14,-4.32],[0.89,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>term<\/th>\n      <th>estimate<\/th>\n      <th>std.error<\/th>\n      <th>statistic<\/th>\n      <th>p.value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section></section>
@@ -847,25 +861,25 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 <h1>R Code</h1>
 <div class="agenda">
 <ul>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Background Information</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Censoring</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Survival Analysis Functions</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Survival Rate</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Cox Proportional Hazard Model</p>
 </div></li>
-<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<li><div class="agenda-inactive agenda-pre-active">
 <p>Example</p>
 </div></li>
-<li class="fragment"><div class="agenda-active">
+<li><div class="agenda-active">
 <p>R Code</p>
 </div></li>
 </ul>
@@ -887,33 +901,33 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="7" onclick="event.preventDefault();">7</a><span id="annotated-cell-1-7" class="code-annotation-target"><a href="#annotated-cell-1-7"></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-grid">
-<dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
-<dd class="fragment">
-<span data-code-annotation="1" data-code-cell="annotated-cell-1" data-code-lines="1">Pipe package</span>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-lines="1" data-code-cell="annotated-cell-1" data-code-annotation="1">Pipe package</span>
 </dd>
-<dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
-<dd class="fragment">
-<span data-code-annotation="2" data-code-cell="annotated-cell-1" data-code-lines="2">Survival functions package</span>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-lines="2" data-code-cell="annotated-cell-1" data-code-annotation="2">Survival functions package</span>
 </dd>
-<dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="3">3</dt>
-<dd class="fragment">
-<span data-code-annotation="3" data-code-cell="annotated-cell-1" data-code-lines="3">Plots survival curves package</span>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-lines="3" data-code-cell="annotated-cell-1" data-code-annotation="3">Plots survival curves package</span>
 </dd>
-<dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="4">4</dt>
-<dd class="fragment">
-<span data-code-annotation="4" data-code-cell="annotated-cell-1" data-code-lines="4">Applies the Kaplan-Meier Function</span>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="4">4</dt>
+<dd>
+<span data-code-lines="4" data-code-cell="annotated-cell-1" data-code-annotation="4">Applies the Kaplan-Meier Function</span>
 </dd>
-<dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="5">5</dt>
-<dd class="fragment">
-<span data-code-annotation="5" data-code-cell="annotated-cell-1" data-code-lines="5">Plots Survival Curve</span>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="5">5</dt>
+<dd>
+<span data-code-lines="5" data-code-cell="annotated-cell-1" data-code-annotation="5">Plots Survival Curve</span>
 </dd>
-<dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="6">6</dt>
-<dd class="fragment">
-<span data-code-annotation="6" data-code-cell="annotated-cell-1" data-code-lines="6">Adds Confidence Intervals</span>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="6">6</dt>
+<dd>
+<span data-code-lines="6" data-code-cell="annotated-cell-1" data-code-annotation="6">Adds Confidence Intervals</span>
 </dd>
-<dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="7">7</dt>
-<dd class="fragment">
-<span data-code-annotation="7" data-code-cell="annotated-cell-1" data-code-lines="7">Determines Median Survival Time</span>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="7">7</dt>
+<dd>
+<span data-code-lines="7" data-code-cell="annotated-cell-1" data-code-annotation="7">Determines Median Survival Time</span>
 </dd>
 </dl>
 </div>
