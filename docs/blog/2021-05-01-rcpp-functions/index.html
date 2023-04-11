@@ -254,8 +254,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code># A tibble: 2 × 6
   expression       min   median `itr/sec` mem_alloc `gc/sec`
   &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;
-1 fact(5)        968ns   1.22µs   616440.    2.49KB     61.7
-2 fact_cpp(5)    994ns   1.18µs   638830.    2.49KB     63.9</code></pre>
+1 fact(5)     977.07ns   1.23µs   607691.    2.49KB     60.8
+2 fact_cpp(5)   1.04µs   1.19µs   691870.    2.49KB     69.2</code></pre>
 </div>
 </div>
 <p>Notice the Rcpp function is slightly faster than my Armadillo implementation.</p>

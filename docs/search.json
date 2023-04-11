@@ -32,7 +32,7 @@
     "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
     "title": "RcppArmadillo",
     "section": "Using RcppArmadillo",
-    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.04076394\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.04076394\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.35µs   3.58µs   260844.        0B        0\n2 mean_cpp(Y)   1.83µs   2.74µs   373185.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
+    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.05676608\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.05676608\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.36µs   3.61µs   260603.        0B        0\n2 mean_cpp(Y)   1.81µs   2.74µs   376274.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
   },
   {
     "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
@@ -221,21 +221,21 @@
     "href": "pres/ci_spring_2023/pres_4_23.html#left-censoring",
     "title": "Survival Analysis:",
     "section": "Left Censoring",
-    "text": "Left Censoring"
+    "text": "Left Censoring\n\nlibrary(ggplot2)\ndat &lt;- data.frame(ID = 1:10, \n                  t1 = c(7, 9, 10, 5, 5, 10, 5, 6, 6, 7) , \n                  censored = c(1, 1, 1, 0, 0, 1, 0, 1, 1, 1))\nggplot(dat, aes(x = ID, y = t1, shape = ifelse(censored, \"Death\", \"Censored\"))) + geom_point(size = 4) + \n    geom_linerange(aes(ymin = 0, ymax = t1)) +\n    geom_hline(yintercept = 5, lty = 2) +\n    coord_flip() + \n    scale_shape_manual(name = \"Event\", values = c(19, 15)) +\n    ggtitle(\"Left Censoring\") + \n    xlab(\"Patient ID\") +  ylab(\"Days\") + \n    theme_bw()"
   },
   {
     "objectID": "pres/ci_spring_2023/pres_4_23.html#interval-censoring",
     "href": "pres/ci_spring_2023/pres_4_23.html#interval-censoring",
     "title": "Survival Analysis:",
     "section": "Interval Censoring",
-    "text": "Interval Censoring"
+    "text": "Interval Censoring\n\nlibrary(ggplot2)\ndat &lt;- structure(list(ID = 1:5, eventA = c(0L, 1L, 1L, 0L, 1L), \n    eventB = c(1L, 0L, 0L, 1L, 0L), t1 = c(7, 5, 10, 4.5, 2), t2 = c(7, 5, 10, 4.5, \n    8), censored = c(0, 0, 0, 0, 1)), .Names = c(\"ID\", \"eventA\", \n    \"eventB\", \"t1\", \"t2\", \"censored\"), class = \"data.frame\", row.names = c(NA, -5L))\n\ndat$event &lt;- with(dat, ifelse(eventA, \"Censored\", \"Death\"))\n\ndat$id.ordered &lt;- factor(x = dat$ID, levels = order(dat$t2, decreasing = T))\n\nggplot(dat, aes(x = id.ordered)) + \n    geom_linerange(aes(ymin = 0, ymax = t1)) + \n    geom_linerange(aes(ymin = t1, ymax = t2, \n                       linetype = as.factor(censored))) +  \n    geom_point(aes(y = ifelse(censored, \n                              t1 + (t2 - t1) / 2, t2), \n                   shape = event), size = 4) +\n    coord_flip() + \n    scale_linetype_manual(name = \"Censoring\", values = c(1, 2), \n        labels = c(\"Not censored\", \"Interval censored\")) +\n    scale_shape_manual(name = \"Event\", values = c(19, 15)) +\n    ggtitle(\"Interval Censoring\") + \n    xlab(\"Patient ID\") +  ylab(\"Days\") + \n    theme_bw()"
   },
   {
     "objectID": "pres/ci_spring_2023/pres_4_23.html#right-censoring",
     "href": "pres/ci_spring_2023/pres_4_23.html#right-censoring",
     "title": "Survival Analysis:",
     "section": "Right Censoring",
-    "text": "Right Censoring"
+    "text": "Right Censoring\n\nlibrary(ggplot2)\ndat &lt;- data.frame(ID = 1:10, \n                  t1 = c(7, 9, 10, 4, 2, 10, 8, 5, 6, 7) , \n                  censored = c(0, 1, 0, 0, 1, 0, 0, 1, 0, 1))\nggplot(dat, aes(x = ID, y = t1, \n                shape = ifelse(censored, \"Death\", \"Censored\"))) +\n    geom_point(size = 4) + \n    geom_linerange(aes(ymin = 0, ymax = t1)) +\n    geom_hline(yintercept = 10, lty = 2) +\n    coord_flip() + \n    scale_shape_manual(name = \"Event\", values = c(19, 15)) +\n    ggtitle(\"Right Censoring\") + \n    xlab(\"Patient ID\") +  ylab(\"Days\") + \n    theme_bw()"
   },
   {
     "objectID": "pres/ci_spring_2023/pres_4_23.html#censoring-2",
@@ -326,7 +326,7 @@
     "href": "pres/ci_spring_2023/pres_4_23.html#survival-curve-1",
     "title": "Survival Analysis:",
     "section": "Survival Curve",
-    "text": "Survival Curve"
+    "text": "Survival Curve\n\nlibrary(survival)\nlibrary(ggsurvfit)\nlibrary(magrittr)\naml %$% survfit2(Surv(time, status) ~ 1)  %&gt;% \n      ggsurvfit(linewidth = 1) +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
   },
   {
     "objectID": "pres/ci_spring_2023/pres_4_23.html#data-1",
@@ -410,42 +410,42 @@
     "href": "pres/ci_spring_2023/pres_4_23.html#colon-survival-curve",
     "title": "Survival Analysis:",
     "section": "Colon Survival Curve",
-    "text": "Colon Survival Curve"
+    "text": "Colon Survival Curve\n\nlibrary(survival)\nlibrary(ggsurvfit)\nlibrary(magrittr)\nlibrary(tidyverse)\ndf_colon %$% survfit2(Surv(time, status) ~ 1)  %&gt;% \n      ggsurvfit(linewidth = 1) +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
   },
   {
     "objectID": "pres/ci_spring_2023/pres_4_23.html#colon-survival-curve-1",
     "href": "pres/ci_spring_2023/pres_4_23.html#colon-survival-curve-1",
     "title": "Survival Analysis:",
     "section": "Colon Survival Curve",
-    "text": "Colon Survival Curve"
+    "text": "Colon Survival Curve\n\ndf_colon %$% survfit2(Surv(time, status) ~ rx)  %&gt;% \n      ggsurvfit(linewidth = 1) +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
   },
   {
     "objectID": "pres/ci_spring_2023/pres_4_23.html#colon-survival-curve-2",
     "href": "pres/ci_spring_2023/pres_4_23.html#colon-survival-curve-2",
     "title": "Survival Analysis:",
     "section": "Colon Survival Curve",
-    "text": "Colon Survival Curve"
+    "text": "Colon Survival Curve\n\ndf_colon %$% survfit2(Surv(time, status) ~ rx)  %&gt;% \n      ggsurvfit(linewidth = 1) +\n      add_confidence_interval() +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
   },
   {
     "objectID": "pres/ci_spring_2023/pres_4_23.html#cox-ph-model",
     "href": "pres/ci_spring_2023/pres_4_23.html#cox-ph-model",
     "title": "Survival Analysis:",
     "section": "Cox PH Model",
-    "text": "Cox PH Model"
+    "text": "Cox PH Model\n\ndf_colon %$% coxph(Surv(time, status) ~ rx) %&gt;% \n  broom::tidy(exponentiate = T) %&gt;% \n  mutate_if(is.numeric,\n            round,\n            digits = 2) %&gt;% \n  DT::datatable(options = list(dom = 't'))"
   },
   {
     "objectID": "pres/ci_spring_2023/pres_4_23.html#fitting-a-survival-curve",
     "href": "pres/ci_spring_2023/pres_4_23.html#fitting-a-survival-curve",
     "title": "Survival Analysis:",
     "section": "Fitting a Survival Curve",
-    "text": "Fitting a Survival Curve\n\nCodeOutput\n\n\n\n1library(magrittr)\n2library(survival)\n3library(ggsurvfit)\n4df_colon %$% survfit(Surv(time, status) ~ surg)  %&gt;%\n5      ggsurvfit(linewidth = 1) +\n6      add_confidence_interval() +\n7      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)\n\n\n1\n\nPipe package\n\n2\n\nSurvival functions package\n\n3\n\nPlots survival curves package\n\n4\n\nApplies the Kaplan-Meier Function\n\n5\n\nPlots Survival Curve\n\n6\n\nAdds Confidence Intervals\n\n7\n\nDetermines Median Survival Time"
+    "text": "Fitting a Survival Curve\n\nCodeOutput\n\n\n\n1library(magrittr)\n2library(survival)\n3library(ggsurvfit)\n4df_colon %$% survfit(Surv(time, status) ~ surg)  %&gt;%\n5      ggsurvfit(linewidth = 1) +\n6      add_confidence_interval() +\n7      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)\n\n\n1\n\nPipe package\n\n2\n\nSurvival functions package\n\n3\n\nPlots survival curves package\n\n4\n\nApplies the Kaplan-Meier Function\n\n5\n\nPlots Survival Curve\n\n6\n\nAdds Confidence Intervals\n\n7\n\nDetermines Median Survival Time\n\n\n\n\n\n\n\ndf_colon %$% survfit(Surv(time, status) ~ surg)  %&gt;% \n      ggsurvfit(linewidth = 1) + \n      add_confidence_interval() +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
   },
   {
     "objectID": "pres/ci_spring_2023/pres_4_23.html#fitting-cox-ph-model",
     "href": "pres/ci_spring_2023/pres_4_23.html#fitting-cox-ph-model",
     "title": "Survival Analysis:",
     "section": "Fitting Cox PH Model",
-    "text": "Fitting Cox PH Model\n\nCodeOutput\n\n\n\ndf_colon %$% coxph(Surv(time, status) ~ surg)  %&gt;%\n  summary\n\n\n\n\n\n#&gt; Call:\n#&gt; coxph(formula = Surv(time, status) ~ surg)\n#&gt; \n#&gt;   n= 929, number of events= 468 \n#&gt; \n#&gt;                                   coef exp(coef) se(coef)     z Pr(&gt;|z|)  \n#&gt; surgExtended Time Since Surgery 0.2549    1.2903   0.1008 2.529   0.0114 *\n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n#&gt; \n#&gt;                                 exp(coef) exp(-coef) lower .95 upper .95\n#&gt; surgExtended Time Since Surgery      1.29      0.775     1.059     1.572\n#&gt; \n#&gt; Concordance= 0.523  (se = 0.01 )\n#&gt; Likelihood ratio test= 6.17  on 1 df,   p=0.01\n#&gt; Wald test            = 6.39  on 1 df,   p=0.01\n#&gt; Score (logrank) test = 6.43  on 1 df,   p=0.01"
+    "text": "Fitting Cox PH Model\n\nCodeOutput\n\n\n\ndf_colon %$% coxph(Surv(time, status) ~ surg)  %&gt;%\n  summary\n\n\n\n\ndf_colon %$% coxph(Surv(time, status) ~ surg)  %&gt;%\n  summary\n\n#&gt; Call:\n#&gt; coxph(formula = Surv(time, status) ~ surg)\n#&gt; \n#&gt;   n= 929, number of events= 468 \n#&gt; \n#&gt;                                   coef exp(coef) se(coef)     z Pr(&gt;|z|)  \n#&gt; surgExtended Time Since Surgery 0.2549    1.2903   0.1008 2.529   0.0114 *\n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n#&gt; \n#&gt;                                 exp(coef) exp(-coef) lower .95 upper .95\n#&gt; surgExtended Time Since Surgery      1.29      0.775     1.059     1.572\n#&gt; \n#&gt; Concordance= 0.523  (se = 0.01 )\n#&gt; Likelihood ratio test= 6.17  on 1 df,   p=0.01\n#&gt; Wald test            = 6.39  on 1 df,   p=0.01\n#&gt; Score (logrank) test = 6.43  on 1 df,   p=0.01"
   },
   {
     "objectID": "presentations.html",
