@@ -7,6 +7,7 @@ format:
     pointer:
       pointerSize: 32
     incremental: true
+    theme: dark
 knitr:
   opts_chunk: 
     echo: false
@@ -211,7 +212,10 @@ Let $\{t_j,d_j,R_j\}^D_{j=1}$ denote the survival data, where $t_1<t_2<\cdots<t_
 ## Kaplan-Meier Estimator
 
 $$
-\hat{S}(t) = \prod_{i:t_j \le t} \left( 1 - \frac{d_j}{R_j} \right)
+\hat{S}(t) =\left\{\begin{array}{cc} 
+1 & t=0 \\
+\prod_{i:t_j \le t} \left( 1 - \frac{d_j}{R_j} \right) & t_j < t
+\end{array}\right.
 $$
 
 ## Standard Error
@@ -249,6 +253,10 @@ $$
 
 -   $\boldsymbol X$: predictor variables
 
+## How do we estimate parameters $\boldsymbol \beta$
+
+We use a maximum likelihood approach where the likelihood function measures the probability of observing the data given the parameters.
+
 ## Construction of the Likelihood Function
 
 Due to right censoring, likelihood needs careful construction
@@ -277,13 +285,49 @@ $$
 L(\boldsymbol \beta) = \prod_{i=1}^n [h(T_i \mid \boldsymbol X_i, \boldsymbol\beta)]^{\delta_i} [S(T_i \mid \boldsymbol X_i, \boldsymbol \beta)]
 $$
 
+## Likelihood Function
+
+$$
+L(\boldsymbol \beta) = \prod_{i=1}^n \{h_0(t) \exp(\boldsymbol\beta^\mathrm T\boldsymbol x_i)\}^{\delta_i} \exp\left\{-\int^{T_i}_0 h_0(s) \exp(\boldsymbol\beta^\mathrm T\boldsymbol x_i)ds\right\}
+$$
+
+
+## Estimating the Baseline Hazard Function
+
+$$
+h_0(t)
+$$
+
+::: fragment
+::: columns
+::: {.column width="50%"}
+### Parameterically
+
+-   Weibull
+
+-   log-Normal
+
+-   Gompetz
+:::
+
+::: {.column width="50%"}
+### Nonparametrically
+
+-   Profile MLE
+
+-   Spline Models
+:::
+:::
+:::
+
 ## Partial Likelihood
 
 $$
-L_P(\boldsymbol\beta) = \prod_{i=1}^m \frac{\exp(\boldsymbol\beta^T \boldsymbol X_i)}{\sum_{j \in R(t_i)} \exp(\boldsymbol\beta^T \boldsymbol X_j)}
+L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol X_i)}{\sum_{j \in R(t_i)} \exp(\boldsymbol\beta^T \boldsymbol X_j)}
 $$
 
 -   $R(t_i)$: the patients at risk prior to time $t_i$
+-   $D$: Number of individuals experiencing the event
 
 ## Estimation
 
