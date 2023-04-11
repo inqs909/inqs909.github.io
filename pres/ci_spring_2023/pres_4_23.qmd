@@ -17,6 +17,7 @@ knitr:
     comment: "#>" 
 revealjs-plugins:
   - pointer
+filters: 
   - reveal-auto-agenda
 ---
 
@@ -291,7 +292,6 @@ $$
 L(\boldsymbol \beta) = \prod_{i=1}^n \{h_0(t) \exp(\boldsymbol\beta^\mathrm T\boldsymbol x_i)\}^{\delta_i} \exp\left\{-\int^{T_i}_0 h_0(s) \exp(\boldsymbol\beta^\mathrm T\boldsymbol x_i)ds\right\}
 $$
 
-
 ## Estimating the Baseline Hazard Function
 
 $$
@@ -426,13 +426,11 @@ df_colon %$% survfit(Surv(time, status) ~ surg)  %>%
 ## Fitting Cox PH Model
 
 ::: panel-tabset
-
 ## Code
 
 ```{r}
 #| echo: true
 #| eval: false
-
 
 df_colon %$% coxph(Surv(time, status) ~ surg)  %>%
   summary
