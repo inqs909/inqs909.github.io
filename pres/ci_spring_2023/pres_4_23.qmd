@@ -29,6 +29,14 @@ filters:
 
 -   There are several factors that affect the prognosis (survival rate) of those with AML.
 
+-   **How do we determine the survival rate of AML patients?**
+
+## How do determine the survival rate?
+
+-   Measure from diagnosis to event of interest
+
+-   Construct a probability of surviving up to a certain time point
+
 ## Data Type
 
 -   Data is typically recorded as time-to-event data.
@@ -43,35 +51,7 @@ filters:
 
 -   Not all the time is observed.
 
--   The three common types of censoring mechanisms: *Right, Left,* and *Interval.*
-
-## Right Censoring
-
-```{r}
-library(ggplot2)
-dat <- data.frame(ID = 1:10, 
-                  t1 = c(7, 9, 10, 4, 2, 10, 8, 5, 6, 7) , 
-                  censored = c(0, 1, 0, 0, 1, 0, 0, 1, 0, 1))
-# Use ggplot to plot data from dat object
-ggplot(dat, aes(x = ID, y = t1, shape = ifelse(censored, "Death", "Censored"))) + geom_point(size = 4) + 
-    # Plot solid line representing non-interval censored time from 0 to t1
-    geom_linerange(aes(ymin = 0, ymax = t1)) +
-    geom_hline(yintercept = 10, lty = 2) +
-    # Plot line (dotted for censored time) representing time from t1 to t2    # Plot points representing event
-    # The ifelse() function moves censored marker to middle of interval
-    # # Flip coordinates
-    coord_flip() + 
-    # # Add custom name to linetype scale, 
-    # # otherwise it will default to "as.factor(censored))"
-    # # Add custom shape scale.  Change the values to get different shapes.
-    scale_shape_manual(name = "Event", values = c(19, 15)) +
-    # # Add main title and axis labels
-    ggtitle("Right Censoring") + xlab("Patient ID") +  ylab("Days") + 
-    # # I think the bw theme looks better for this graph, 
-    # # but leave it out if you prefer the default theme
-    theme_bw()
-
-```
+-   Three common types of censoring mechanisms: *Right, Left,* and *Interval.*
 
 ## Left Censoring
 
@@ -142,9 +122,38 @@ ggplot(dat, aes(x = id.ordered)) +
     theme_bw()
 ```
 
-## Censoring Affect
+## Right Censoring
 
--   Censoring affect the time-to-death information
+```{r}
+library(ggplot2)
+dat <- data.frame(ID = 1:10, 
+                  t1 = c(7, 9, 10, 4, 2, 10, 8, 5, 6, 7) , 
+                  censored = c(0, 1, 0, 0, 1, 0, 0, 1, 0, 1))
+# Use ggplot to plot data from dat object
+ggplot(dat, aes(x = ID, y = t1, shape = ifelse(censored, "Death", "Censored"))) + geom_point(size = 4) + 
+    # Plot solid line representing non-interval censored time from 0 to t1
+    geom_linerange(aes(ymin = 0, ymax = t1)) +
+    geom_hline(yintercept = 10, lty = 2) +
+    # Plot line (dotted for censored time) representing time from t1 to t2    # Plot points representing event
+    # The ifelse() function moves censored marker to middle of interval
+    # # Flip coordinates
+    coord_flip() + 
+    # # Add custom name to linetype scale, 
+    # # otherwise it will default to "as.factor(censored))"
+    # # Add custom shape scale.  Change the values to get different shapes.
+    scale_shape_manual(name = "Event", values = c(19, 15)) +
+    # # Add main title and axis labels
+    ggtitle("Right Censoring") + xlab("Patient ID") +  ylab("Days") + 
+    # # I think the bw theme looks better for this graph, 
+    # # but leave it out if you prefer the default theme
+    theme_bw()
+
+```
+
+
+## Censoring
+
+-   Censoring affects the time-to-death information
 
 -   However, we obtain some information when data is censored
 
@@ -165,6 +174,14 @@ ggplot(dat, aes(x = id.ordered)) +
 -   $\delta_i = I(T_i^*<C_i)$: Event indicator
 
 # Survival Analysis Functions
+
+## Survivial Analysis Functions
+
+Describe the Probability Model
+
+-   Hazard Function
+-   Survival Function
+-   Cumulative Hazard Function
 
 ## Hazard Function
 

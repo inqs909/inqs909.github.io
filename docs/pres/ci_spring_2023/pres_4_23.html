@@ -449,6 +449,14 @@ Isaac Quintanilla Salinas
 <ul>
 <li class="fragment"><p>Acute Myelogenous Leukemia (AML) is a blood and bone marrow cancer that makes abnormal blood cells. This is the most common Leukemia found in adults.</p></li>
 <li class="fragment"><p>There are several factors that affect the prognosis (survival rate) of those with AML.</p></li>
+<li class="fragment"><p><strong>How do we determine the survival rate of AML patients?</strong></p></li>
+</ul>
+</section>
+<section id="how-do-determine-the-survival-rate" class="slide level2">
+<h2>How do determine the survival rate?</h2>
+<ul>
+<li class="fragment"><p>Measure from diagnosis to event of interest</p></li>
+<li class="fragment"><p>Construct a probability of surviving up to a certain time point</p></li>
 </ul>
 </section>
 <section id="data-type" class="slide level2">
@@ -492,25 +500,25 @@ Isaac Quintanilla Salinas
 <ul>
 <li class="fragment"><p>Censoring is a mechanism in biomedical studies where we do not observe the true time-to-death.</p></li>
 <li class="fragment"><p>Not all the time is observed.</p></li>
-<li class="fragment"><p>The three common types of censoring mechanisms: <em>Right, Left,</em> and <em>Interval.</em></p></li>
+<li class="fragment"><p>Three common types of censoring mechanisms: <em>Right, Left,</em> and <em>Interval.</em></p></li>
 </ul>
 </section>
-<section id="right-censoring" class="slide level2">
-<h2>Right Censoring</h2>
-
-<img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-discovered-preview-image r-stretch" width="960"></section>
 <section id="left-censoring" class="slide level2">
 <h2>Left Censoring</h2>
 
-<img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-discovered-preview-image r-stretch" width="960"></section>
 <section id="interval-censoring" class="slide level2">
 <h2>Interval Censoring</h2>
 
+<img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<section id="right-censoring" class="slide level2">
+<h2>Right Censoring</h2>
+
 <img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
-<section id="censoring-affect" class="slide level2">
-<h2>Censoring Affect</h2>
+<section id="censoring-2" class="slide level2">
+<h2>Censoring</h2>
 <ul>
-<li class="fragment"><p>Censoring affect the time-to-death information</p></li>
+<li class="fragment"><p>Censoring affects the time-to-death information</p></li>
 <li class="fragment"><p>However, we obtain some information when data is censored</p></li>
 <li class="fragment"><p>Incorporate methods to utilize partial information</p></li>
 <li class="fragment"><p>Censoring is independent of time-to-death generation</p></li>
@@ -554,6 +562,15 @@ Isaac Quintanilla Salinas
 </div></li>
 </ul>
 </div>
+</section>
+<section id="survivial-analysis-functions" class="slide level2">
+<h2>Survivial Analysis Functions</h2>
+<p>Describe the Probability Model</p>
+<ul>
+<li class="fragment">Hazard Function</li>
+<li class="fragment">Survival Function</li>
+<li class="fragment">Cumulative Hazard Function</li>
+</ul>
 </section>
 <section id="hazard-function" class="slide level2">
 <h2>Hazard Function</h2>
@@ -820,8 +837,8 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 <div class="cell">
 <div class="cell-output-display">
 
-<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-6df2a60bf819200cc0fd" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-6df2a60bf819200cc0fd">{"x":{"filter":"none","vertical":false,"data":[["1","2"],["rxLevamisole","rxLevamisole+5-FU"],[0.98,0.6],[0.11,0.12],[-0.14,-4.32],[0.89,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>term<\/th>\n      <th>estimate<\/th>\n      <th>std.error<\/th>\n      <th>statistic<\/th>\n      <th>p.value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-a1076b2fb639d9a82c0a" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-a1076b2fb639d9a82c0a">{"x":{"filter":"none","vertical":false,"data":[["1","2"],["rxLevamisole","rxLevamisole+5-FU"],[0.98,0.6],[0.11,0.12],[-0.14,-4.32],[0.89,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>term<\/th>\n      <th>estimate<\/th>\n      <th>std.error<\/th>\n      <th>statistic<\/th>\n      <th>p.value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section></section>
@@ -872,31 +889,31 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 <dl class="code-annotation-container-grid">
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
 <dd class="fragment">
-<span data-code-lines="1" data-code-annotation="1" data-code-cell="annotated-cell-1">Pipe package</span>
+<span data-code-annotation="1" data-code-cell="annotated-cell-1" data-code-lines="1">Pipe package</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
 <dd class="fragment">
-<span data-code-lines="2" data-code-annotation="2" data-code-cell="annotated-cell-1">Survival functions package</span>
+<span data-code-annotation="2" data-code-cell="annotated-cell-1" data-code-lines="2">Survival functions package</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="3">3</dt>
 <dd class="fragment">
-<span data-code-lines="3" data-code-annotation="3" data-code-cell="annotated-cell-1">Plots survival curves package</span>
+<span data-code-annotation="3" data-code-cell="annotated-cell-1" data-code-lines="3">Plots survival curves package</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="4">4</dt>
 <dd class="fragment">
-<span data-code-lines="4" data-code-annotation="4" data-code-cell="annotated-cell-1">Applies the Kaplan-Meier Function</span>
+<span data-code-annotation="4" data-code-cell="annotated-cell-1" data-code-lines="4">Applies the Kaplan-Meier Function</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="5">5</dt>
 <dd class="fragment">
-<span data-code-lines="5" data-code-annotation="5" data-code-cell="annotated-cell-1">Plots Survival Curve</span>
+<span data-code-annotation="5" data-code-cell="annotated-cell-1" data-code-lines="5">Plots Survival Curve</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="6">6</dt>
 <dd class="fragment">
-<span data-code-lines="6" data-code-annotation="6" data-code-cell="annotated-cell-1">Adds Confidence Intervals</span>
+<span data-code-annotation="6" data-code-cell="annotated-cell-1" data-code-lines="6">Adds Confidence Intervals</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-1" data-target-annotation="7">7</dt>
 <dd class="fragment">
-<span data-code-lines="7" data-code-annotation="7" data-code-cell="annotated-cell-1">Determines Median Survival Time</span>
+<span data-code-annotation="7" data-code-cell="annotated-cell-1" data-code-lines="7">Determines Median Survival Time</span>
 </dd>
 </dl>
 </div>
