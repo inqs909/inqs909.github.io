@@ -32,7 +32,7 @@
     "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
     "title": "RcppArmadillo",
     "section": "Using RcppArmadillo",
-    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.05676608\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.05676608\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.36µs   3.61µs   260603.        0B        0\n2 mean_cpp(Y)   1.81µs   2.74µs   376274.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
+    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.04428813\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.04428813\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.34µs   3.67µs   252869.        0B        0\n2 mean_cpp(Y)   1.88µs   2.81µs   370753.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
   },
   {
     "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
@@ -446,6 +446,209 @@
     "title": "Survival Analysis:",
     "section": "Fitting Cox PH Model",
     "text": "Fitting Cox PH Model\n\nCodeOutput\n\n\n\ndf_colon %$% coxph(Surv(time, status) ~ surg)  %&gt;%\n  summary\n\n\n\n\ndf_colon %$% coxph(Surv(time, status) ~ surg)  %&gt;%\n  summary\n\n#&gt; Call:\n#&gt; coxph(formula = Surv(time, status) ~ surg)\n#&gt; \n#&gt;   n= 929, number of events= 468 \n#&gt; \n#&gt;                                   coef exp(coef) se(coef)     z Pr(&gt;|z|)  \n#&gt; surgExtended Time Since Surgery 0.2549    1.2903   0.1008 2.529   0.0114 *\n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n#&gt; \n#&gt;                                 exp(coef) exp(-coef) lower .95 upper .95\n#&gt; surgExtended Time Since Surgery      1.29      0.775     1.059     1.572\n#&gt; \n#&gt; Concordance= 0.523  (se = 0.01 )\n#&gt; Likelihood ratio test= 6.17  on 1 df,   p=0.01\n#&gt; Wald test            = 6.39  on 1 df,   p=0.01\n#&gt; Score (logrank) test = 6.43  on 1 df,   p=0.01"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#access-presentation",
+    "href": "pres/long_beach/pres_4_22.html#access-presentation",
+    "title": "Not Dead… Yet!",
+    "section": "Access Presentation",
+    "text": "Access Presentation"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#survival-analysis",
+    "href": "pres/long_beach/pres_4_22.html#survival-analysis",
+    "title": "Not Dead… Yet!",
+    "section": "Survival Analysis",
+    "text": "Survival Analysis\nSurvival Analysis is a set of tools to analyze time-to-event data. This leads to the survival rate which models the time to percentage of data to observe the event.\n\n\nTo determine the time until a percentile of the data achieves an event\nDetermine which factors may affect the survival rate"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#colon-study",
+    "href": "pres/long_beach/pres_4_22.html#colon-study",
+    "title": "Not Dead… Yet!",
+    "section": "Colon Study",
+    "text": "Colon Study\n\n\nColon cancer is a type of cancer found in the large intestine\nSeveral risk factors affect the survival rate\nWe will look at how different medications affect the survival rate"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#channel-island-birds",
+    "href": "pres/long_beach/pres_4_22.html#channel-island-birds",
+    "title": "Not Dead… Yet!",
+    "section": "Channel Island Birds",
+    "text": "Channel Island Birds"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#channel-island-birds-1",
+    "href": "pres/long_beach/pres_4_22.html#channel-island-birds-1",
+    "title": "Not Dead… Yet!",
+    "section": "Channel Island Birds",
+    "text": "Channel Island Birds\n\n\nWe are interested in how long do bird eggs hatch since being laid\nDetermine the hatch rate for each species\nWhat happens when there is missing data?"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#how-do-we-determine-the-survival-rate",
+    "href": "pres/long_beach/pres_4_22.html#how-do-we-determine-the-survival-rate",
+    "title": "Not Dead… Yet!",
+    "section": "How do we determine the survival rate?",
+    "text": "How do we determine the survival rate?\n\n\nMeasure from first recording to event of interest\nConstruct a probability of surviving up to a certain time point"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#data-type",
+    "href": "pres/long_beach/pres_4_22.html#data-type",
+    "title": "Not Dead… Yet!",
+    "section": "Data Type",
+    "text": "Data Type\n\n\nData is typically recorded as time-to-event data\nFor biomedical studies, researchers are interested in time from diagnosis to death, known as time-to-death"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#censoring-1",
+    "href": "pres/long_beach/pres_4_22.html#censoring-1",
+    "title": "Not Dead… Yet!",
+    "section": "Censoring",
+    "text": "Censoring\n\n\nCensoring is a mechanism where we do not observe the true time-to-event\nNot all the time is observed\nThree common types of censoring mechanisms: Right, Left, and Interval"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#ci-birds-example",
+    "href": "pres/long_beach/pres_4_22.html#ci-birds-example",
+    "title": "Not Dead… Yet!",
+    "section": "CI Birds Example",
+    "text": "CI Birds Example\nYou design a study where you want to record the time it takes for an egg to hatch for different species of birds.\nYou spend a week monitoring different bird nests and record times when eggs are laid."
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#ci-birds-left-censoring",
+    "href": "pres/long_beach/pres_4_22.html#ci-birds-left-censoring",
+    "title": "Not Dead… Yet!",
+    "section": "CI Birds Left Censoring",
+    "text": "CI Birds Left Censoring\nThe day before the eggs hatched, your boat broke down and were not able to go to the islands for a week due to repairs.\n\nDuring this time, 5 eggs hatched!"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#left-censoring",
+    "href": "pres/long_beach/pres_4_22.html#left-censoring",
+    "title": "Not Dead… Yet!",
+    "section": "Left Censoring",
+    "text": "Left Censoring\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\nlibrary(ggplot2)\ndat &lt;- data.frame(ID = 1:10, \n                  t1 = c(7, 9, 10, 5, 5, 10, 5, 6, 6, 7) , \n                  censored = c(1, 1, 1, 0, 0, 1, 0, 1, 1, 1))\nggplot(dat, aes(x = ID, y = t1, shape = ifelse(censored, \"Death\", \"Censored\"))) + geom_point(size = 4) + \n    geom_linerange(aes(ymin = 0, ymax = t1)) +\n    geom_hline(yintercept = 5, lty = 2) +\n    coord_flip() + \n    scale_shape_manual(name = \"Event\", values = c(19, 15)) +\n    # ggtitle(\"Left Censoring\") + \n    xlab(\"Patient ID\") +  ylab(\"Months\") + \n    theme_bw()"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#ci-birds-interval-censoring",
+    "href": "pres/long_beach/pres_4_22.html#ci-birds-interval-censoring",
+    "title": "Not Dead… Yet!",
+    "section": "CI Birds Interval Censoring",
+    "text": "CI Birds Interval Censoring\nAs you been going out to the islands each day to record whether eggs have hatched or not, you can’t travel to the islands for the next few days due to stormy weather.\n\nDuring this time, 8 eggs hatched!"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#interval-censoring",
+    "href": "pres/long_beach/pres_4_22.html#interval-censoring",
+    "title": "Not Dead… Yet!",
+    "section": "Interval Censoring",
+    "text": "Interval Censoring\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\nlibrary(ggplot2)\ndat &lt;- structure(list(ID = 1:6, \n                      eventA = c(0L, 1L, 1L, 0L, 1L, 0L),\n                      eventB = c(1L, 0L, 0L, 1L, 0L, 1L), \n                      t1 = c(7, 4, 9, 4.5, 4, 8), \n                      t2 = c(7, 6, 10, 4.5, 7, 8),\n                      censored = c(0, 1, 1, 0, 1, 0)), \n                 .Names = c(\"ID\", \"eventA\", \"eventB\", \"t1\", \"t2\", \"censored\"), \n                 class = \"data.frame\", row.names = c(NA, -6L))\n\ndat$event &lt;- with(dat, ifelse(eventA, \"Censored\", \"Death\"))\n\ndat$id.ordered &lt;- factor(x = dat$ID, levels = order(dat$t2, decreasing = T))\n\nggplot(dat, aes(x = id.ordered)) + \n    geom_linerange(aes(ymin = 0, ymax = t1)) + \n    geom_linerange(aes(ymin = t1, ymax = t2, \n                       linetype = as.factor(censored))) +  \n    geom_point(aes(y = ifelse(censored, \n                              t1 + (t2 - t1) / 2, t2), \n                   shape = event), size = 4) +\n    coord_flip() + \n    scale_linetype_manual(name = \"Censoring\", values = c(1, 2), \n        labels = c(\"Not censored\", \"Interval censored\")) +\n    scale_shape_manual(name = \"Event\", values = c(19, 15)) +\n    # ggtitle(\"Interval Censoring\") + \n    xlab(\"Eggs\") +  ylab(\"Weeks\") + \n    theme_bw()"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#ci-birds-right-censoring",
+    "href": "pres/long_beach/pres_4_22.html#ci-birds-right-censoring",
+    "title": "Not Dead… Yet!",
+    "section": "CI Birds Right Censoring",
+    "text": "CI Birds Right Censoring\nIt is the end of the study, and their are 5 more eggs that have not hatched yet!\n\nAdditionally, a colleague has informed you that some eggs were eaten by reptiles through out the study. They obtained the day they were eaten or lost."
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#right-censoring",
+    "href": "pres/long_beach/pres_4_22.html#right-censoring",
+    "title": "Not Dead… Yet!",
+    "section": "Right Censoring",
+    "text": "Right Censoring\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\nlibrary(ggplot2)\ndat &lt;- data.frame(ID = 1:10, \n                  t1 = c(7, 9, 10, 4, 2, 10, 8, 5, 6, 7) , \n                  censored = c(0, 1, 0, 0, 1, 0, 0, 1, 0, 1))\nggplot(dat, aes(x = ID, y = t1, \n                shape = ifelse(censored, \"Death\", \"Censored\"))) +\n    geom_point(size = 4) + \n    geom_linerange(aes(ymin = 0, ymax = t1)) +\n    geom_hline(yintercept = 10, lty = 2) +\n    coord_flip() + \n    scale_shape_manual(name = \"Event\", values = c(19, 15)) +\n    # ggtitle(\"Right Censoring\") + \n    xlab(\"Patient ID\") +  ylab(\"Months\") + \n    theme_bw()"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#censoring-2",
+    "href": "pres/long_beach/pres_4_22.html#censoring-2",
+    "title": "Not Dead… Yet!",
+    "section": "Censoring",
+    "text": "Censoring\n\n\nCensoring affects the time-to-event information\nHowever, we obtain some information when data is censored\nIncorporate methods to utilize partial information\nCensoring is independent of time-to-event generation"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#survival-curve",
+    "href": "pres/long_beach/pres_4_22.html#survival-curve",
+    "title": "Not Dead… Yet!",
+    "section": "Survival Curve",
+    "text": "Survival Curve\n\n\nThe survival curve will determine what is the probability of surviving up to a certain time\nA survival curve accounts for both censored and uncensored data\nA survival curve can be used to determine the median survival time of a disease\n\nOr the time for at least half of the eggs to hatch"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#data-notation",
+    "href": "pres/long_beach/pres_4_22.html#data-notation",
+    "title": "Not Dead… Yet!",
+    "section": "Data Notation",
+    "text": "Data Notation\nLet \\(\\{t_j,d_j,R_j\\}^D_{j=1}\\) denote the survival data, where \\(t_1&lt;t_2&lt;\\cdots&lt;t_D\\) are the ordered distinct observed event times, \\(d_j\\) represents the number of events at time point \\(t_j\\), and \\(R_j\\) denotes the number of subjects still at risk of experiencing the event at \\(t_j\\)."
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#kaplan-meier-estimator",
+    "href": "pres/long_beach/pres_4_22.html#kaplan-meier-estimator",
+    "title": "Not Dead… Yet!",
+    "section": "Kaplan-Meier Estimator",
+    "text": "Kaplan-Meier Estimator\n\\[\n\\hat{S}(t) =\\left\\{\\begin{array}{cc}\n1 & t=0 \\\\\n\\prod_{i:t_j \\le t} \\left( 1 - \\frac{d_j}{R_j} \\right) & t_j &lt; t\n\\end{array}\\right.\n\\]"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#standard-error",
+    "href": "pres/long_beach/pres_4_22.html#standard-error",
+    "title": "Not Dead… Yet!",
+    "section": "Standard Error",
+    "text": "Standard Error\n\\[\n\\widehat{SE}\\{\\hat S(t)\\}=\\sqrt{\\hat S^2(t)\\sum_{t_j\\leq t}\\frac{d_j}{R_j(R_j-d_j)}}.\n\\]"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#survival-curve-1",
+    "href": "pres/long_beach/pres_4_22.html#survival-curve-1",
+    "title": "Not Dead… Yet!",
+    "section": "Survival Curve",
+    "text": "Survival Curve\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\nlibrary(survival)\nlibrary(ggsurvfit)\nlibrary(magrittr)\naml %$% survfit(Surv(time, status) ~ 1)  %&gt;% \n      ggsurvfit(linewidth = 1) +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#data",
+    "href": "pres/long_beach/pres_4_22.html#data",
+    "title": "Not Dead… Yet!",
+    "section": "Data",
+    "text": "Data\n\nDescriptionTableCode\n\n\nWe will be looking at the df_colon data set from the ggsurvfit R package.\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(tidyverse)\nlibrary(ggsurvfit)\nlibrary(DT)\nadj_df &lt;- df_colon %&gt;% select(id, rx, time, status)\ndatatable(adj_df, options = list(pageLength = 5, dom = 'i'))"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#fitting-curve",
+    "href": "pres/long_beach/pres_4_22.html#fitting-curve",
+    "title": "Not Dead… Yet!",
+    "section": "Fitting Curve",
+    "text": "Fitting Curve\n\nDescriptionR Code\n\n\nThe survival package contains the necessary functions to fit a model:\n\n\nSurv: Creates an outcome variable\nsurvfit: Fits the survival function\n\n\n\n\n\n1library(survival)\n2outcome &lt;- Surv(data$time, data$censor)\n3model &lt;- survfit(outcome ~ 1)\n\n\n1\n\nLoads the survival package\n\n2\n\nCreate survival outcome object\n\n3\n\nFits Survival Model"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#plotting-the-survival-function",
+    "href": "pres/long_beach/pres_4_22.html#plotting-the-survival-function",
+    "title": "Not Dead… Yet!",
+    "section": "Plotting the Survival Function",
+    "text": "Plotting the Survival Function\n\nDescriptionR Code\n\n\nThe ggsurvfit package provides a set of tools to plot the survival function in a ggplot format. The primary functions are:\n\nggsurvfit: Plots Survival Function\nadd_quantile: Adds line on the percentile\nadd_confidence_interval: Adds pointwise error bars to the plot.\n\n\n\n\nggsurvfit(model) + \n  add_quantile(y_value = 0.5) +\n  add_confidence_interval()"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#fitting-curve-by-groups",
+    "href": "pres/long_beach/pres_4_22.html#fitting-curve-by-groups",
+    "title": "Not Dead… Yet!",
+    "section": "Fitting Curve By Groups",
+    "text": "Fitting Curve By Groups\n\nDescriptionR CodePlotting\n\n\nIf we are interested in fitting survival curves by groups, we can specify the variable that we want to adjust by.\n\n\n\nsurvfit(Surv(time, censor) ~ group, data)\n\n\n\nOnce the model is fitted, feed it to ggsurvfit and the function will do the rest."
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#colon-survival-curve",
+    "href": "pres/long_beach/pres_4_22.html#colon-survival-curve",
+    "title": "Not Dead… Yet!",
+    "section": "Colon Survival Curve",
+    "text": "Colon Survival Curve\n\nTaskPlotR Code\n\n\n\nFit a survival curve using df_colon from the ggsurvfit package.\ntime: time-to-death\nstatus: censoring status\nPlot the survival curve and add a line indicating the 50th percentile\n\n\n\n\n\n\n\n\n\n\n\nlibrary(survival)\nlibrary(ggsurvfit)\nlibrary(magrittr)\nlibrary(tidyverse)\ndf_colon %$% survfit(Surv(time, status) ~ 1)  %&gt;% \n      ggsurvfit() +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#colon-survival-curve-1",
+    "href": "pres/long_beach/pres_4_22.html#colon-survival-curve-1",
+    "title": "Not Dead… Yet!",
+    "section": "Colon Survival Curve",
+    "text": "Colon Survival Curve\n\nTaskPlotR Code\n\n\n\nFit a survival curve using df_colon, stratified by treatment regimen\ntime: time-to-death\nstatus: censoring status\nrx: treatment regimen\nPlot the curvival curve and add a line indicating the 50th percentile\n\n\n\n\n\n\n\n\n\n\n\ndf_colon %$% survfit(Surv(time, status) ~ rx)  %&gt;% \n      ggsurvfit() +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#hypothesis-testing",
+    "href": "pres/long_beach/pres_4_22.html#hypothesis-testing",
+    "title": "Not Dead… Yet!",
+    "section": "Hypothesis Testing",
+    "text": "Hypothesis Testing\n\n\nWhen stratifying the data, Levamisole+5 FU performed better than the other regimens\nIs this a significant improvement? Or due to random chance?\nAdd Confidence Intervals to see if there is a difference"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#colon-survival-curve-2",
+    "href": "pres/long_beach/pres_4_22.html#colon-survival-curve-2",
+    "title": "Not Dead… Yet!",
+    "section": "Colon Survival Curve",
+    "text": "Colon Survival Curve\n\nTaskPlotR Code\n\n\nAdd confidence intervals to the previous plot.\n\n\n\n\n\n\n\n\n\n\ndf_colon %$% survfit(Surv(time, status) ~ rx)  %&gt;% \n      ggsurvfit() +\n      add_confidence_interval() +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
   },
   {
     "objectID": "presentations.html",
