@@ -7,11 +7,23 @@ editor: visual
 ::: content-block
 ## CSU Channel Islands
 
+::: {.panel-tabset .nav-pills}
+## AY 23-24
+
+-   Math 201: Elementary Statistics
+
+-   Math 398: Advanced Research Investigation
+
+-   Math 408: Advanced Data Analysis
+
+## AY 22-23
+
 -   [Math 352: Probability and Statistics](https://m352.inqs.info)
 
--   [Math 408: Advanced Data Analysis](https://m408.inqs.info)
+-   [Math 408: Advanced Data Analysis](https://inqs909.gitlab.io/m408_s23)
 
 -   [Math 453: Mathematical Statistics](https://inqs909.gitlab.io/m453_f22)
+:::
 :::
 
 ::: content-block

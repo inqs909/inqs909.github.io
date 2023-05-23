@@ -24,9 +24,9 @@ filters:
 
 ## Access Presentation
 
-https://www.inqs.info/pres/long_beach/pres_4_22.html#/title-slide
+https://www.inqs.info/pres/long_beach/pres_4\_22.html
 
-Email: isaac.qs@csuci.edu
+Email: isaac.qs\@csuci.edu
 
 # Background Information
 
@@ -467,13 +467,12 @@ Once the model is fitted, feed it to `ggsurvfit` and the function will do the re
 
 ## Colon Survival Curve
 
-::: {.panel-tabset}
-
+::: panel-tabset
 ### Task
 
 -   Fit a survival curve using `df_colon` from the `ggsurvfit` package.
-  -   `time`: time-to-death
-  -   `status`: censoring status
+-   `time`: time-to-death
+-   `status`: censoring status
 -   Plot the survival curve and add a line indicating the 50th percentile
 
 ### Plot
@@ -488,7 +487,6 @@ survfit(Surv(time, status) ~ 1, df_colon)  %>%
       add_quantile(y_value = 0.5, color = "gray50", linewidth = 0.75)
 ```
 
-
 ### R Code
 
 ```{r}
@@ -502,21 +500,18 @@ df_colon %$% survfit(Surv(time, status) ~ 1)  %>%
       ggsurvfit() +
       add_quantile(y_value = 0.5, color = "gray50", linewidth = 0.75)
 ```
-
 :::
 
 ## Colon Survival Curve
 
 ::: panel-tabset
-
 ### Task
 
 -   Fit a survival curve using `df_colon`, stratified by treatment regimen
-  -   `time`: time-to-death
-  -   `status`: censoring status
-  -   `rx`: treatment regimen
+-   `time`: time-to-death
+-   `status`: censoring status
+-   `rx`: treatment regimen
 -   Plot the curvival curve and add a line indicating the 50th percentile
-
 
 ### Plot
 
@@ -525,7 +520,6 @@ df_colon %$% survfit(Surv(time, status) ~ rx)  %>%
       ggsurvfit() +
       add_quantile(y_value = 0.5, color = "gray50", linewidth = 0.75)
 ```
-
 
 ### R Code
 
@@ -536,23 +530,19 @@ df_colon %$% survfit(Surv(time, status) ~ rx)  %>%
       ggsurvfit() +
       add_quantile(y_value = 0.5, color = "gray50", linewidth = 0.75)
 ```
-
 :::
 
 ## Hypothesis Testing
 
 ::: incremental
-
 -   When stratifying the data, Levamisole+5 FU performed better than the other regimens
 -   Is this a significant improvement? Or due to random chance?
 -   Add Confidence Intervals to see if there is a difference
-
 :::
 
 ## Colon Survival Curve
 
 ::: panel-tabset
-
 ### Task
 
 Add confidence intervals to the previous plot.
@@ -577,6 +567,4 @@ df_colon %$% survfit(Surv(time, status) ~ rx)  %>%
       add_quantile(y_value = 0.5, color = "gray50", linewidth = 0.75)
 
 ```
-
-
 :::

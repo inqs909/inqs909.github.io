@@ -7,13 +7,20 @@ editor: source
 ::: content-block
 ::: features
 ::: {.feature .box}
+#### Not Dead ... Yet!: An Introduction to Survival Analysis
+
+April 10, 2021
+
+[Slides](pres/long_beach/pres_4_22.html){.btn-action-primary .btn-action .btn .btn-success role="button"}
+:::
+
+::: {.feature .box}
 #### Survival Analysis: The Life and Death of Statistics
 
 April 10, 2021
 
 [Slides](pres/ci_spring_2023/pres_4_23.html){.btn-action-primary .btn-action .btn .btn-success role="button"}
 :::
-
 
 ::: {.feature .box}
 #### UCR High-Performance Computing Center
