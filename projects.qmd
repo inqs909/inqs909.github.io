@@ -7,12 +7,12 @@ css: projects.css
 ::: content-block
 ::: features
 ::: {.feature .box}
-### The `ucrstats` package
+### The `csustats` package
 
 An R package designed to teach statistical methods in R.
 
 ::: learn-more
-[Learn more »](https://ucrgradstat.github.io/ucrstats/)
+[Learn more »](http://www.inqs.info/csustats/)
 :::
 :::
 
