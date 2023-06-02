@@ -1,0 +1,716 @@
+[
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Wellness Plan Spring 2023\n\n\n\n\n\n\n\nWellness\n\n\n\n\nMy wellness plan for Spring 2023.\n\n\n\n\n\n\nJan 31, 2023\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\n\n  \n\n\n\n\nSMART Program\n\n\n\n\n\nThe Statistical Mentoring in Application, Research, and/or Technology (SMART) Program is a mentoring program where undergraduate students get the opportunity to conduct a statistical project under the supervision of a graduate student. The pilot program was implemented in Spring 2021 where we determined to see the feasibility of both the undergraduate and graduate students to complete the program. For this blog post, I will talk about the inspiration, development and implementation of the SMART Program. As the main architect of the program, I will talk about my thought process and the goals for the future of the program.\n\n\n\n\n\n\nJun 10, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n  \n\n\n\n\nRcppArmadillo\n\n\n\n\n\n\n\nRCPP\n\n\n\n\nDocumenting my experience implementing RcppArmadillo to my research.\n\n\n\n\n\n\nMay 1, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n  \n\n\n\n\nRcpp and Research\n\n\n\n\n\n\n\nRCPP\n\n\n\n\nA post describing why I decided to use Rcpp for my research.\n\n\n\n\n\n\nApr 15, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n  \n\n\n\n\nWelcome!\n\n\n\n\n\nWelcome to the INQS Blog. A blog documenting my experiences through Statistics. I hope you enjoy reading my blog!\n\n\n\n\n\n\nApr 14, 2021\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/2021-04-15-rcpp-and-research/index.html",
+    "href": "blog/2021-04-15-rcpp-and-research/index.html",
+    "title": "Rcpp and Research",
+    "section": "",
+    "text": "This is the first post of my “Rcpp” collection detailing my journey with Rcpp. The “Rcpp” collection contains information about the struggles I faced while implementing Rcpp. Even though my first venture to Rcpp happened in the Summer of 2020, I realized I am learning new things every day. I thought it would be wised to write a blog of everything I have and will learn with Rcpp. I hope this collection will guide other students who have never used c++ before.\nAs I am developing my model for my PhD, a major limiting factor is that my model takes a really long time to compute the results I need. Due to the complexity of the model, I need to approximate different components using iterative algorithms. This in turn increases the computation time to obtain results. You can only imagine my frustration when I first coded my model in R and it took more than a week to obtain results!\nTherefore, I decided to focus on speeding up my code. I spent time reading Wickham’s Advanced R Book to speed up my code. There I learned how about vectorizing code, utilizing built-in optimized functions, and common practices for speed gains. All this work has made me a better R programmer. Unfortunately, when I reran my model, the speed gains was not enough to call my efforts a success.\n\nDue to the lack of improvements, and knowing I will need expand my model for larger data sets, I set on a quest to improve my model. I attacked this problem on two fronts: looking for mathematical methods to reduce my computation needs and implementing different computing techniques. While both components dramatically improved my computational time, implementing c++ via Rcpp was the biggest game changer for my model.\nAfter I implemented everything I can from Wickham’s Book. I began reading more about about c++ from the book’s c++ chapter. I will be honest, I didn’t know what I was doing. This was my first time learning how to use c++. Nevertheless, I was determined to learn more about the c++ due to the potential speed gains. During the summer of 2020, I spent all my time learning about c++ and Rcpp. By the end of my summer, a model that took 3.5 days to converge was now taking approximately 6 hours!\n\nWith this triumph, I have been able to test and diagnose any faults with my model. I can honestly say that implementing Rcpp has drastically improved my PhD experience. I no longer have the feeling of being anxious for days wondering if my model works or not. I feel more productive! With this confidence, I feel prepared to tackle new problems with my research."
+  },
+  {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html",
+    "title": "RcppArmadillo",
+    "section": "",
+    "text": "When I first started using Rcpp for my research, I had no idea what I was doing. All I knew was that you can incorporate C++1 code in your R scripts to speed up data processing. I did spend some time learning C++ through www.learningcpp.com, but I didn’t get far because my example program did not go well. Troubleshooting the problem was a nightmare. However, it did give me an idea of how C++ programming looks like.\nOnce, I decided to implement C++ for my research, I focused on how to incorporate it in R. At the time, I had a fairly strong R background, and I knew you can use C++ in R via Rcpp. Therefore, I spent some time learning more about Rcpp from their website and book. After reading everything I could, I didn’t learn much. It was really advanced and not written for a newbie. However, I did learn that you can compile a C++ function2 that can be executed in R via Rcpp. The challenge was to build a cpp file that contained functions for my analysis. I turned to Advanced R by Hadley Wickham for more help.\nWickham’s book provided the necessary information to build basic functions to use in R. I learned how to write basic functions in cpp and making them executable with cppFunction. Additionally, the book covers the basic classes, looping, and function exporting. I felt prepared to write and use functions in R! However, my research required linear algebra, and it would have been a nightmare to program matrix multiplication with the basics. These challenges led me to RcppArmadillo.\nRcppArmadillo is designed to incorporate the Armadillo library in R via Rcpp. The Armadillo library contains functions that make it easy to conduct linear algebra in cpp. Additionally, it isn’t difficult to learn the syntax. The library is implemented to closely follow Matlab3 syntax.\nAfter writing functions and troubleshooting problems, I was able to export my functions to R. Making sure everything worked, I ran the same data on both my R and cpp functions, and it worked! I was able to produce the same value for each function. It gave me the confidence that I would be able to complete my research.\nAfter successfully implementing cpp in my research, I wanted to know how much faster was my code. Going back to Wickham’s book, there was information on benchmarking different functions. Using the bench package to identify how long each function was taking to execute, I found my R function took 13 times longer than my cpp function. I was shocked! I knew cpp would make my code faster, but I didn’t expect it to be that much faster4. This convinced me that all my efforts were worth it!"
+  },
+  {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#journey",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#journey",
+    "title": "RcppArmadillo",
+    "section": "",
+    "text": "When I first started using Rcpp for my research, I had no idea what I was doing. All I knew was that you can incorporate C++1 code in your R scripts to speed up data processing. I did spend some time learning C++ through www.learningcpp.com, but I didn’t get far because my example program did not go well. Troubleshooting the problem was a nightmare. However, it did give me an idea of how C++ programming looks like.\nOnce, I decided to implement C++ for my research, I focused on how to incorporate it in R. At the time, I had a fairly strong R background, and I knew you can use C++ in R via Rcpp. Therefore, I spent some time learning more about Rcpp from their website and book. After reading everything I could, I didn’t learn much. It was really advanced and not written for a newbie. However, I did learn that you can compile a C++ function2 that can be executed in R via Rcpp. The challenge was to build a cpp file that contained functions for my analysis. I turned to Advanced R by Hadley Wickham for more help.\nWickham’s book provided the necessary information to build basic functions to use in R. I learned how to write basic functions in cpp and making them executable with cppFunction. Additionally, the book covers the basic classes, looping, and function exporting. I felt prepared to write and use functions in R! However, my research required linear algebra, and it would have been a nightmare to program matrix multiplication with the basics. These challenges led me to RcppArmadillo.\nRcppArmadillo is designed to incorporate the Armadillo library in R via Rcpp. The Armadillo library contains functions that make it easy to conduct linear algebra in cpp. Additionally, it isn’t difficult to learn the syntax. The library is implemented to closely follow Matlab3 syntax.\nAfter writing functions and troubleshooting problems, I was able to export my functions to R. Making sure everything worked, I ran the same data on both my R and cpp functions, and it worked! I was able to produce the same value for each function. It gave me the confidence that I would be able to complete my research.\nAfter successfully implementing cpp in my research, I wanted to know how much faster was my code. Going back to Wickham’s book, there was information on benchmarking different functions. Using the bench package to identify how long each function was taking to execute, I found my R function took 13 times longer than my cpp function. I was shocked! I knew cpp would make my code faster, but I didn’t expect it to be that much faster4. This convinced me that all my efforts were worth it!"
+  },
+  {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
+    "title": "RcppArmadillo",
+    "section": "Using RcppArmadillo",
+    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.02746942\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.02746942\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.24µs    3.5µs   268516.        0B     26.9\n2 mean_cpp(Y)   1.84µs   2.75µs   374977.    7.67KB      0  \n\n\nYou can see that the cpp function is much faster than the R built-in function."
+  },
+  {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
+    "title": "RcppArmadillo",
+    "section": "Speed Gains Explanation",
+    "text": "Speed Gains Explanation\nYou may be asking why is R much slower than cpp. From what I can gather, R is an interpreted language while cpp is a compiled language. While I don’t really know what the difference is, it makes cpp much faster.\nI like to think there is a difference of requirements. You need to be more careful with cpp because it does not convert inputs to the correct data type. R will do it automatically. Therefore, R takes more time to ensure everything is correct before computing a function. Cpp requires more thinking from the user, but will reward them with speed gains. I am sure there is way more to this simple explanation, but the end result is that cpp is much faster than R."
+  },
+  {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#next-steps",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#next-steps",
+    "title": "RcppArmadillo",
+    "section": "Next Steps …",
+    "text": "Next Steps …\nAs my research is progressing, I am noticing the need to incorporate different methods not found in the Armadillo library. For example, I want to incorporate the GNU Scientific Library. I learned there is an R package exists for the library, RcppGSL! This gives me hope that I can use it for my research. However, I want to use the Armadillo library alongside with GSL. This has a potential to bring new problems with data type incompatibilities. I have ideas for potential solutions, but I will need to test them out.\nI also want to learn more about the capabilities of Rcpp. Specifically, what other functions does it contain. I learned that Rcpp has functions for distribution functions. This can be useful for expanding my research."
+  },
+  {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#footnotes",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#footnotes",
+    "title": "RcppArmadillo",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nI may write C++ as cpp at times.↩︎\nIt may be called a function or program. Not really sure.↩︎\nI never learned Matlab.↩︎\nI will admit, I don’t know what I am doing when benchmarking these functions, but based on my experiences, this is true.↩︎\nI am still shaky on what each thing does.↩︎\nIf you don’t have the first line. R will not make it executable, but the function may be utilized by other functions within the cpp file.↩︎\nThere are occasions where it is not as straight forward.↩︎\nYou may need to install other software such as rtools40. In linux, I have r-base-dev installed which may solve some of the needed dependencies.↩︎"
+  },
+  {
+    "objectID": "blog/2021-05-03-smart-program/index.html",
+    "href": "blog/2021-05-03-smart-program/index.html",
+    "title": "SMART Program",
+    "section": "",
+    "text": "At the beginning 2020, I learned that there were several undergraduate students interested in attending graduate school. However, many of them had the idea that they weren’t capable of succeeding in graduate school. This was nonsense! I TA’ed them through Regression and ANOVA courses and got to see first hand their capabilities. It was shocking to hear that they think like this. While I can go into details of my ideas why they think like this (possibly imposter syndrome1), this isn’t the post for it. I was set out to convince and prepare these students to apply to graduate school.\nIn the Spring Quarter of 2020, I decided to hold a virtual seminar in applying to graduate school2. The seminar focused on the application process and choosing the correct degree program. At the end of the seminar, approximately 15 undergraduate students attended, and we had a lively discussion between undergraduate students, graduate students, and faculty. It showed that undergraduate students were interested in pursuing graduate degrees. This motivated me to hold more events similar to this seminar.\nIn the Fall Quarter of 2020, I decided to hold a similar seminar for undergraduate students. However, I focused more on writing different statements as well as holding discussion at the end3. At the same time, my colleague sent me a tweet about a program from the University of Washington, the Statistics and Probability Association Direct Reading Program. It is an excellent program, and I decided to implement a similar program. Thus, the beginnings of the SMART Program was born!"
+  },
+  {
+    "objectID": "blog/2021-05-03-smart-program/index.html#introduction",
+    "href": "blog/2021-05-03-smart-program/index.html#introduction",
+    "title": "SMART Program",
+    "section": "",
+    "text": "At the beginning 2020, I learned that there were several undergraduate students interested in attending graduate school. However, many of them had the idea that they weren’t capable of succeeding in graduate school. This was nonsense! I TA’ed them through Regression and ANOVA courses and got to see first hand their capabilities. It was shocking to hear that they think like this. While I can go into details of my ideas why they think like this (possibly imposter syndrome1), this isn’t the post for it. I was set out to convince and prepare these students to apply to graduate school.\nIn the Spring Quarter of 2020, I decided to hold a virtual seminar in applying to graduate school2. The seminar focused on the application process and choosing the correct degree program. At the end of the seminar, approximately 15 undergraduate students attended, and we had a lively discussion between undergraduate students, graduate students, and faculty. It showed that undergraduate students were interested in pursuing graduate degrees. This motivated me to hold more events similar to this seminar.\nIn the Fall Quarter of 2020, I decided to hold a similar seminar for undergraduate students. However, I focused more on writing different statements as well as holding discussion at the end3. At the same time, my colleague sent me a tweet about a program from the University of Washington, the Statistics and Probability Association Direct Reading Program. It is an excellent program, and I decided to implement a similar program. Thus, the beginnings of the SMART Program was born!"
+  },
+  {
+    "objectID": "blog/2021-05-03-smart-program/index.html#development",
+    "href": "blog/2021-05-03-smart-program/index.html#development",
+    "title": "SMART Program",
+    "section": "Development",
+    "text": "Development\nFor the remainder of the Fall quarter, I began talking to other graduate students about creating a mentoring program within the department. I pitched them that they will mentor an undergraduate student for a statistical project. Many students seemed on board to participate in the program. Afterwards, I started asking Teaching Faculty to support the program. By the end of the quarter, I had an idea of the support I will get from the department.\nTowards the end of the year, almost everyone had a rough winter due to the pandemic. Fatigued had set in to many students, and they needed time to rest. I myself struggled through the winter. It was challenging to rest during my break due to competing pressures. While I did manage to get through the winter, I did not want to add any extra pressure to the remaining graduate students that expressed interest in mentoring in the program. I decided to wait until half way through the quarter to begin asking graduate students for their commitment to the program. Fortunately, everyone was excited to be a mentor in the program.\nAt the same time, I was worried about having graduate students coming up with a project. I was afraid that students could not come up with an idea that was feasible for an undergraduate student to complete, so I decided to come up with a project that anyone can easily do. Thus the ucrstats package was born. The idea was for a mentor teach an undergrad about a topic, then the mentee can create a learnr tutorial to teach other students. The only thing the mentor needed to do was gather materials and R code for the student to learn about the topic. The tutorials can easily be created using an RMarkdown file. At the end, the mentee will have a product that they can show off and put on their CV. It was a different type of project that focused on programming than the traditional form of research. Fortunately, all other graduate students had project ideas; however, this can be a good back up for those who do not have a project idea. Additionally, the package can be utilized from other graduate students in different departments who want to learn more about statistics."
+  },
+  {
+    "objectID": "blog/2021-05-03-smart-program/index.html#recruitment",
+    "href": "blog/2021-05-03-smart-program/index.html#recruitment",
+    "title": "SMART Program",
+    "section": "Recruitment",
+    "text": "Recruitment\nWe recruited undergraduate students for the program with an application using Google Forms. We asked for basic things such as what classes you took, write a couple of essays, and your interests in the projects.\nUsing all the information we gathered, we began the selection process. We ranked each student based on their interests, the classes they have completed, and how well they met the admission criteria. From their, we selected students based on their rankings.\nLooking back at the application process, there are couple of things I wish we could have done a bit differently. First, I think we should ask for CVs or resumes. This way we can better learn about the student. Second, the application process should begin at least a month before the start of the quarter. We had to operate with some tight deadlines and I did not enjoy the pressure. Other than that I will need to consult with the current cohort for more recommendations."
+  },
+  {
+    "objectID": "blog/2021-05-03-smart-program/index.html#reflection",
+    "href": "blog/2021-05-03-smart-program/index.html#reflection",
+    "title": "SMART Program",
+    "section": "Reflection",
+    "text": "Reflection\nThe SMART Pilot Program was launched in Spring 2021 with our first cohort of mentors and mentees. We held a small orientation with the mentees to set the expectations4. The remainder of the quarter went smoothly. There were a few bumps in the roads here and there, but most of it was providing guidance to the mentors. At the end of the quarter, we held a symposium where all groups presented their work.\nStarting a program is tough! I worried about so many things. Mostly making sure both the mentors and mentees were progressing with their projects and gaining something the other time. However, I just needed to have faith that everything will go well. Fortunately, the pilot was a success! I was so impressed by everyone’s presentation, and I think we showed the department how capable both the graduate and undergraduate students are in completing a project. This was certainly a long process, but overall I am glad I started the program and excited to see where it goes from here."
+  },
+  {
+    "objectID": "blog/2021-05-03-smart-program/index.html#future",
+    "href": "blog/2021-05-03-smart-program/index.html#future",
+    "title": "SMART Program",
+    "section": "Future",
+    "text": "Future\nAs I am writing this post, I am moving on to my sixth year of my graduate program, and I have my eyes on graduating and moving on the next phase of my career. That being said, I don’t really know if I will be involved for the second year of the program. I hope I inspired other graduate students to take on the mantle and continue the program. I truly believe the program is a great asset for the department. If I am around for the second year of the program, I will most likely take a consulting position to ensure that other graduate students can continue the program without relying on me. Otherwise, I will prefer to only coordinate for the second year.\nAs for the program itself, I hope the program will serve students from marginalized communities. Particularly communities where Statistics has be utilized against them. We need better statisticians who constantly thinking about how their work can harm the most vulnerable. Those who will advocate for these groups and change the Statistics community for the better. My hope is that the program will train individuals who will advocate for a better future."
+  },
+  {
+    "objectID": "blog/2021-05-03-smart-program/index.html#footnotes",
+    "href": "blog/2021-05-03-smart-program/index.html#footnotes",
+    "title": "SMART Program",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nReally the myth of imposter syndrome and more how Academia is designed only for the privileged.↩︎\nThe seminar occurred at the beginning of the pandemic. My goal was to create some form of normal for the students during this time. However, other students may have found it difficult to concentrate during the quarter.↩︎\nThe discussion from the first seminar was the most important part!↩︎\nI wised to have the mentors there as well but could not schedule everyone together.↩︎"
+  },
+  {
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html",
+    "title": "Wellness Plan Spring 2023",
+    "section": "",
+    "text": "Before designing a wellness plan, I need to assess all areas of my life and see what I can improve. Below is a list of areas that are important to me:\n\n\n\nMental\nEmotional\nSocial\nSpiritual\n\n\n\nPhysical\nEnvironmental\nFinancial\nCareer\n\n\n\nWhile there are many other aspects of my life that I would like to improve on, this is a good starting point for this semester."
+  },
+  {
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#areas-of-improvement",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#areas-of-improvement",
+    "title": "Wellness Plan Spring 2023",
+    "section": "",
+    "text": "Before designing a wellness plan, I need to assess all areas of my life and see what I can improve. Below is a list of areas that are important to me:\n\n\n\nMental\nEmotional\nSocial\nSpiritual\n\n\n\nPhysical\nEnvironmental\nFinancial\nCareer\n\n\n\nWhile there are many other aspects of my life that I would like to improve on, this is a good starting point for this semester."
+  },
+  {
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#goals",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#goals",
+    "title": "Wellness Plan Spring 2023",
+    "section": "Goals",
+    "text": "Goals\nLooking at the areas that I want to focus on, I want to create realistic goals. Additionally, each goal can satisfy multiple aspects of my life. I will use SMART goals to ensure SMART goals to make sure I create achievable goals. The period for all the goals is the Spring semester.\n\nGoal 1Goal 2Goal 3Goal 4Goal 5\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will spend at least 1 hour every day, Monday through Friday, working on research related to my dissertation.\n\n\nI want to increase my research productivity for my own career goals. Additionally, working on this will help me through my tenure process.\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will learn how to create a new tea-related beverage at home each month.\n\n\nThis goal has the potential to serve three aspects of my life: Physical, Environmental, and Financial. Learning how to create new tea drinks will allow me to save money instead of buying them from different coffee shops. Additionally, I will know what ingredients are used in the drinks. Therefore, I will be able to improve the physical aspect of my life. Lastly, this will help the environmental part of my life by reducing my environmental impact and using less plastic.\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will travel to a new city in Southern CA each month and buy their local newspaper.\n\n\nOne of my main goals is to travel more globally and locally. I especially want to get to know small communities located in Southern California. For that reason, I want to make an effort to explore more of Southern CA. This goal has the potential to affect four aspects of my life: mental, social, spiritual, and physical.\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will go swimming two times a week for 30 minutes.\n\n\nWhen I was planning to move to Camarillo, I wanted to start something new for my physical health. Therefore, I decided to start swimming.\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will go to the gym three times a week for 1 hour.\n\n\nSimilar to swimming, I want to develop new habits and exercise more. Developing this habit and going to the gym more will help my physical health."
+  },
+  {
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#plan",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#plan",
+    "title": "Wellness Plan Spring 2023",
+    "section": "Plan",
+    "text": "Plan\n\nGoal 1Goal 2Goal 3Goal 4Goal 5\n\n\nSince I am struggling to keep my research productivity up, I will try new strategies. To get more research done, I plan to work on research as the very first thing I do when I get into my office. If I complete this task at the beginning of my day, I will get it out of the way and focus on things that are easier for me. The idea is to do the things I struggle with at the very beginning of my day.\nAdditionally, I plan to use the Forest App to maintain my focus. I will do a 20 minute session of writing1 and then do a 10 minute break. I will repeat this process until I complete an hour of writing.\n\n\nRight now, I am working on learning how to make a chai latte at home. So far, I have learned how to make oat milk how I like it. Next, I want to make chai concentrate using raw ingredients. I have bought many of the tools and feel ready to start experimenting with making the concentrate.\nOther types of teas that I want to learn are hibiscus and Thai.\n\n\nI first plan to visit Ojai in February. Depending on the weather, I want to visit Twentynine Palms for the super bloom; otherwise, I will visit Carpinteria. Lastly, I want to visit Idyllwild. I want to visit a special event/festival for each location if possible.\n\n\nBecause I set this goal for two 30 minute sessions, I believe I can complete this task. It is easier to spend a quick 30 minute session than a full hour.\n\n\nSimilar to my research goals, I plan to go to the gym in the morning and get them done early so I can focus on other things I am interested in. I plan to go to the gym early every Monday, Wednesday, and Friday. This task will be before my writing sessions."
+  },
+  {
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#accountability",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#accountability",
+    "title": "Wellness Plan Spring 2023",
+    "section": "Accountability",
+    "text": "Accountability\nThere are two ways that I will try told hold myself accountable. First, I will share my wellness plan with friends and family members. Second, I will create an incentive plan for each goal I complete. I will reassess my goals before spring break (3/17/23) and adjust accordingly. Overall, I want to create consistency with these goals. Any positive gain will be a win. At the end of the semester, I plan to reflect on the process and see what worked and what did not."
+  },
+  {
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#footnotes",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#footnotes",
+    "title": "Wellness Plan Spring 2023",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nwriting means any task related to research↩︎"
+  },
+  {
+    "objectID": "blog/welcome/index.html",
+    "href": "blog/welcome/index.html",
+    "title": "Welcome!",
+    "section": "",
+    "text": "Welcome! I’ve decided to create this blog as a way to record my journey in Statistics. As I am working through my PhD, I’ve read numerous posts on vast topics. As I was reading about topics related to Rcpp. I noticed how difficult it was to implement Rcpp for my needs. At the same moment, it dawned on me that I am reading from individuals that at some point in time were struggling with the same issues. This inspired me to create a blog of my own with the same intentions to help other individuals. My hope is to demonstrate how I overcame the challenges I faced to others that are facing similar issues.\nI don’t know how this blog will go. It’s going to be a learning experience. I don’t even know how many blog posts I will write in a year. I don’t even know what topics I will write about. However, I hope overtime, I can create a blog that may help people."
+  },
+  {
+    "objectID": "courses.html",
+    "href": "courses.html",
+    "title": "Courses",
+    "section": "",
+    "text": "AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
+  },
+  {
+    "objectID": "courses.html#csu-channel-islands",
+    "href": "courses.html#csu-channel-islands",
+    "title": "Courses",
+    "section": "",
+    "text": "AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
+  },
+  {
+    "objectID": "courses.html#uc-riverside",
+    "href": "courses.html#uc-riverside",
+    "title": "Courses",
+    "section": "UC Riverside",
+    "text": "UC Riverside\n\nAllAssociate InstructorTeaching Assistant\n\n\n\nSTAT 127: Introduction to Quality Management\nSTAT 147: Introduction to Statistical Computing\nSTAT 100: Introduction to Statistics\nSTAT 170: Regression and ANOVA\nSTAT 048: Introduction to Business Statistics\nUB: Math Courses\nUB: Public Health Courses\nUB: Research Courses\n\n\n\n\nSTAT 127: Introduction to Quality Management\nSTAT 147: Introduction to Statistical Computing\n\n\n\n\nSTAT 100: Introduction to Statistics\nSTAT 170: Regression and ANOVA\nSTAT 048: Introduction to Business Statistics"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "INQS",
+    "section": "",
+    "text": "Isaac Quintanilla Salinas\n\nAssistant Professor of Statistics\nCSU Channel Islands\n\n\n\n\nBiography\nIsaac Quintanilla Salinas is a recent graduate from the Department of Statistics at the University of California, Riverside with a PhD in Applied Statistics. He is joining the Department of Mathematics at the California State University Channel Islands this upcoming Fall 2022. Prior to his doctoral research, Dr. Quintanilla Salinas has earned his MPH from San Diego State University and BS in Biology from the California State University Monterey Bay.\nDr. Quintanilla Salinas research focuses on developing statistical models to understand the association between survival and longitudinal outcomes. His dissertation “Multilevel Time-Varying Joint Models for Longitudinal and Survival Outcomes” develops a novel model to address challenges of modeling dependent outcomes.\n\n\n\n\n\n\nEducation\n\nUC Riverside\n\nPhD in Applied Statistics\n\nSan Diego State University\n\nMaster’s in Public Health\n\nCSU Monterey Bay\n\nBS Biology\n\n\n\n\nInterests\n\nJoint Longitudinal and Survival Models\nHealth Equity\nEducation\nAlgorithmic Bias"
+  },
+  {
+    "objectID": "photos.html",
+    "href": "photos.html",
+    "title": "Photos",
+    "section": "",
+    "text": "Big Bear Lake\n\n\n\n\n\n\n\n\n\n\n\n\n\nBluff Lake\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiamond Valley Lake\n\n\n\n\n\n\n\n\n\n\n\n\n\nHeart Rock Trail\n\n\n\n\n\n\n\n\n\n\n\n\n\nJoshua Tree\n\n\n\n\n\n\n\n\n\n\n\n\n\nLake Gregory\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "photos/bigbear/index.html",
+    "href": "photos/bigbear/index.html",
+    "title": "Big Bear Lake",
+    "section": "",
+    "text": "library(pixture)\n\npixgallery(\n  list.files(\"img\", \n             full.names=TRUE),\n  dim=\"350px\",\n  gap = \"10px\"\n)"
+  },
+  {
+    "objectID": "photos/bluff/index.html",
+    "href": "photos/bluff/index.html",
+    "title": "Bluff Lake",
+    "section": "",
+    "text": "library(pixture)\n\npixgallery(\n  list.files(\"img\", \n             full.names=TRUE),\n  dim=\"350px\",\n  gap = \"10px\"\n)"
+  },
+  {
+    "objectID": "photos/diamond/index.html",
+    "href": "photos/diamond/index.html",
+    "title": "Diamond Valley Lake",
+    "section": "",
+    "text": "library(pixture)\n\npixgallery(\n  list.files(\"img\", \n             full.names=TRUE),\n  dim=\"350px\",\n  gap = \"10px\"\n)"
+  },
+  {
+    "objectID": "photos/gregory/index.html",
+    "href": "photos/gregory/index.html",
+    "title": "Lake Gregory",
+    "section": "",
+    "text": "library(pixture)\n\npixgallery(\n  list.files(\"img\", \n             full.names=TRUE),\n  dim=\"350px\",\n  gap = \"10px\"\n)"
+  },
+  {
+    "objectID": "photos/heart/index.html",
+    "href": "photos/heart/index.html",
+    "title": "Heart Rock Trail",
+    "section": "",
+    "text": "library(pixture)\n\npixgallery(\n  list.files(\"img\", \n             full.names=TRUE),\n  dim=\"350px\",\n  gap = \"10px\"\n)"
+  },
+  {
+    "objectID": "photos/joshua/index.html",
+    "href": "photos/joshua/index.html",
+    "title": "Joshua Tree",
+    "section": "",
+    "text": "library(pixture)\n\npixgallery(\n  list.files(\"img\",\n             full.names=TRUE),\n  dim=\"350px\",\n  gap = \"10px\"\n)"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#study-example",
+    "href": "pres/ci_spring_2023/pres_4_23.html#study-example",
+    "title": "Survival Analysis:",
+    "section": "Study Example",
+    "text": "Study Example\n\n\nAcute Myelogenous Leukemia (AML) is a blood and bone marrow cancer that makes abnormal blood cells. This is the most common Leukemia found in adults.\nThere are several factors that affect the prognosis (survival rate) of those with AML.\nHow do we determine the survival rate of AML patients?"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#how-do-determine-the-survival-rate",
+    "href": "pres/ci_spring_2023/pres_4_23.html#how-do-determine-the-survival-rate",
+    "title": "Survival Analysis:",
+    "section": "How do determine the survival rate?",
+    "text": "How do determine the survival rate?\n\n\nMeasure from diagnosis to event of interest\nConstruct a probability of surviving up to a certain time point"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#data-type",
+    "href": "pres/ci_spring_2023/pres_4_23.html#data-type",
+    "title": "Survival Analysis:",
+    "section": "Data Type",
+    "text": "Data Type\n\n\nData is typically recorded as time-to-event data.\nFor biomedical studies, researchers are interested in time from diagnosis to death, known as time-to-death."
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#censoring-1",
+    "href": "pres/ci_spring_2023/pres_4_23.html#censoring-1",
+    "title": "Survival Analysis:",
+    "section": "Censoring",
+    "text": "Censoring\n\n\nCensoring is a mechanism in biomedical studies where we do not observe the true time-to-death.\nNot all the time is observed.\nThree common types of censoring mechanisms: Right, Left, and Interval."
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#left-censoring",
+    "href": "pres/ci_spring_2023/pres_4_23.html#left-censoring",
+    "title": "Survival Analysis:",
+    "section": "Left Censoring",
+    "text": "Left Censoring\n\nlibrary(ggplot2)\ndat &lt;- data.frame(ID = 1:10, \n                  t1 = c(7, 9, 10, 5, 5, 10, 5, 6, 6, 7) , \n                  censored = c(1, 1, 1, 0, 0, 1, 0, 1, 1, 1))\nggplot(dat, aes(x = ID, y = t1, shape = ifelse(censored, \"Death\", \"Censored\"))) + geom_point(size = 4) + \n    geom_linerange(aes(ymin = 0, ymax = t1)) +\n    geom_hline(yintercept = 5, lty = 2) +\n    coord_flip() + \n    scale_shape_manual(name = \"Event\", values = c(19, 15)) +\n    ggtitle(\"Left Censoring\") + \n    xlab(\"Patient ID\") +  ylab(\"Days\") + \n    theme_bw()"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#interval-censoring",
+    "href": "pres/ci_spring_2023/pres_4_23.html#interval-censoring",
+    "title": "Survival Analysis:",
+    "section": "Interval Censoring",
+    "text": "Interval Censoring\n\nlibrary(ggplot2)\ndat &lt;- structure(list(ID = 1:5, eventA = c(0L, 1L, 1L, 0L, 1L), \n    eventB = c(1L, 0L, 0L, 1L, 0L), t1 = c(7, 5, 10, 4.5, 2), t2 = c(7, 5, 10, 4.5, \n    8), censored = c(0, 0, 0, 0, 1)), .Names = c(\"ID\", \"eventA\", \n    \"eventB\", \"t1\", \"t2\", \"censored\"), class = \"data.frame\", row.names = c(NA, -5L))\n\ndat$event &lt;- with(dat, ifelse(eventA, \"Censored\", \"Death\"))\n\ndat$id.ordered &lt;- factor(x = dat$ID, levels = order(dat$t2, decreasing = T))\n\nggplot(dat, aes(x = id.ordered)) + \n    geom_linerange(aes(ymin = 0, ymax = t1)) + \n    geom_linerange(aes(ymin = t1, ymax = t2, \n                       linetype = as.factor(censored))) +  \n    geom_point(aes(y = ifelse(censored, \n                              t1 + (t2 - t1) / 2, t2), \n                   shape = event), size = 4) +\n    coord_flip() + \n    scale_linetype_manual(name = \"Censoring\", values = c(1, 2), \n        labels = c(\"Not censored\", \"Interval censored\")) +\n    scale_shape_manual(name = \"Event\", values = c(19, 15)) +\n    ggtitle(\"Interval Censoring\") + \n    xlab(\"Patient ID\") +  ylab(\"Days\") + \n    theme_bw()"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#right-censoring",
+    "href": "pres/ci_spring_2023/pres_4_23.html#right-censoring",
+    "title": "Survival Analysis:",
+    "section": "Right Censoring",
+    "text": "Right Censoring\n\nlibrary(ggplot2)\ndat &lt;- data.frame(ID = 1:10, \n                  t1 = c(7, 9, 10, 4, 2, 10, 8, 5, 6, 7) , \n                  censored = c(0, 1, 0, 0, 1, 0, 0, 1, 0, 1))\nggplot(dat, aes(x = ID, y = t1, \n                shape = ifelse(censored, \"Death\", \"Censored\"))) +\n    geom_point(size = 4) + \n    geom_linerange(aes(ymin = 0, ymax = t1)) +\n    geom_hline(yintercept = 10, lty = 2) +\n    coord_flip() + \n    scale_shape_manual(name = \"Event\", values = c(19, 15)) +\n    ggtitle(\"Right Censoring\") + \n    xlab(\"Patient ID\") +  ylab(\"Days\") + \n    theme_bw()"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#censoring-2",
+    "href": "pres/ci_spring_2023/pres_4_23.html#censoring-2",
+    "title": "Survival Analysis:",
+    "section": "Censoring",
+    "text": "Censoring\n\n\nCensoring affects the time-to-death information\nHowever, we obtain some information when data is censored\nIncorporate methods to utilize partial information\nCensoring is independent of time-to-death generation\nRight Censoring"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#data-construction",
+    "href": "pres/ci_spring_2023/pres_4_23.html#data-construction",
+    "title": "Survival Analysis:",
+    "section": "Data Construction",
+    "text": "Data Construction\n\n\n\\(T_i^*\\): True time-to-event\n\\(C_i\\): Censoring Time\n\\(T_i=\\min(T_i^*,C_i)\\): Observed time-to-event\n\\(\\delta_i = I(T_i^*&lt;C_i)\\): Event indicator"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#survivial-analysis-functions",
+    "href": "pres/ci_spring_2023/pres_4_23.html#survivial-analysis-functions",
+    "title": "Survival Analysis:",
+    "section": "Survivial Analysis Functions",
+    "text": "Survivial Analysis Functions\nDescribe the Probability Model\n\nHazard Function\nSurvival Function\nCumulative Hazard Function"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#hazard-function",
+    "href": "pres/ci_spring_2023/pres_4_23.html#hazard-function",
+    "title": "Survival Analysis:",
+    "section": "Hazard Function",
+    "text": "Hazard Function\n\\[\nh(t) = \\lim_{\\Delta t \\rightarrow 0} \\frac{P(t \\le T^* &lt; t + \\Delta t \\mid T^* \\ge t)}{\\Delta t}\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#survival-function",
+    "href": "pres/ci_spring_2023/pres_4_23.html#survival-function",
+    "title": "Survival Analysis:",
+    "section": "Survival Function",
+    "text": "Survival Function\n\\[\nS(t) = P(T^* &gt; t)\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#cumulative-hazard-function",
+    "href": "pres/ci_spring_2023/pres_4_23.html#cumulative-hazard-function",
+    "title": "Survival Analysis:",
+    "section": "Cumulative Hazard Function",
+    "text": "Cumulative Hazard Function\n\\[\nH(t) = \\int_0^t h(u) du\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#survival-and-hazard-function-relationship",
+    "href": "pres/ci_spring_2023/pres_4_23.html#survival-and-hazard-function-relationship",
+    "title": "Survival Analysis:",
+    "section": "Survival and Hazard Function Relationship",
+    "text": "Survival and Hazard Function Relationship\n\\[\nS(t) = e^{-H(t)}\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#probability-density-function",
+    "href": "pres/ci_spring_2023/pres_4_23.html#probability-density-function",
+    "title": "Survival Analysis:",
+    "section": "Probability Density Function",
+    "text": "Probability Density Function\n\\[\nf(t) = h(t)S(t)\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#survival-curve",
+    "href": "pres/ci_spring_2023/pres_4_23.html#survival-curve",
+    "title": "Survival Analysis:",
+    "section": "Survival Curve",
+    "text": "Survival Curve\n\n\nThe survival curve will determine what is the probability of suriving up to a certain time.\nA survival curve uses both censored and uncensored data\nA survival curve can be used to determine the median survival time of a disease"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#data",
+    "href": "pres/ci_spring_2023/pres_4_23.html#data",
+    "title": "Survival Analysis:",
+    "section": "Data",
+    "text": "Data\nLet \\(\\{t_j,d_j,R_j\\}^D_{j=1}\\) denote the survival data, where \\(t_1&lt;t_2&lt;\\cdots&lt;t_D\\) are the ordered distinct observed event times, \\(d_j\\) represents the number of events at time point \\(t_j\\), and \\(R_j\\) denotes the number of subjects still at risk of experiencing the event at \\(t_j\\)."
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#kaplan-meier-estimator",
+    "href": "pres/ci_spring_2023/pres_4_23.html#kaplan-meier-estimator",
+    "title": "Survival Analysis:",
+    "section": "Kaplan-Meier Estimator",
+    "text": "Kaplan-Meier Estimator\n\\[\n\\hat{S}(t) =\\left\\{\\begin{array}{cc}\n1 & t=0 \\\\\n\\prod_{i:t_j \\le t} \\left( 1 - \\frac{d_j}{R_j} \\right) & t_j &lt; t\n\\end{array}\\right.\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#standard-error",
+    "href": "pres/ci_spring_2023/pres_4_23.html#standard-error",
+    "title": "Survival Analysis:",
+    "section": "Standard Error",
+    "text": "Standard Error\n\\[\n\\widehat{SE}\\{\\hat S(t)\\}=\\sqrt{\\hat S^2(t)\\sum_{t_j\\leq t}\\frac{d_j}{R_j(R_j-d_j)}}.\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#survival-curve-1",
+    "href": "pres/ci_spring_2023/pres_4_23.html#survival-curve-1",
+    "title": "Survival Analysis:",
+    "section": "Survival Curve",
+    "text": "Survival Curve\n\nlibrary(survival)\nlibrary(ggsurvfit)\nlibrary(magrittr)\naml %$% survfit2(Surv(time, status) ~ 1)  %&gt;% \n      ggsurvfit(linewidth = 1) +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#data-1",
+    "href": "pres/ci_spring_2023/pres_4_23.html#data-1",
+    "title": "Survival Analysis:",
+    "section": "Data",
+    "text": "Data\nLet \\(\\{T_i,\\delta_i,\\boldsymbol X_i\\}^n_{i=1}\\) denote the survival data, where \\(T_i\\) is observed event times, \\(\\delta_i\\) is the survival indicator, and \\(\\boldsymbol X_i\\) denotes the a vector of predictor variables."
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#proportional-hazard-model",
+    "href": "pres/ci_spring_2023/pres_4_23.html#proportional-hazard-model",
+    "title": "Survival Analysis:",
+    "section": "Proportional Hazard Model",
+    "text": "Proportional Hazard Model\n\\[\nh(t \\mid \\boldsymbol X) = h_0(t) \\exp(\\boldsymbol\\beta^\\mathrm T\\boldsymbol X)\n\\]\n\n\\(h_0(t)\\): baseline hazard function\n\\(\\boldsymbol\\beta\\): regression coefficients\n\\(\\boldsymbol X\\): predictor variables"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#how-do-we-estimate-parameters-boldsymbol-beta",
+    "href": "pres/ci_spring_2023/pres_4_23.html#how-do-we-estimate-parameters-boldsymbol-beta",
+    "title": "Survival Analysis:",
+    "section": "How do we estimate parameters \\(\\boldsymbol \\beta\\)",
+    "text": "How do we estimate parameters \\(\\boldsymbol \\beta\\)\nWe use a maximum likelihood approach where we search for the values of \\(\\boldsymbol \\beta\\) the maximizes the likelihood function.\nThe Likelihood function measures the probability of observing the data given the parameters \\(\\boldsymbol \\beta\\)."
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#construction-of-the-likelihood-function",
+    "href": "pres/ci_spring_2023/pres_4_23.html#construction-of-the-likelihood-function",
+    "title": "Survival Analysis:",
+    "section": "Construction of the Likelihood Function",
+    "text": "Construction of the Likelihood Function\nDue to right censoring, likelihood needs careful construction\n\n\nDeath is observed\n\\[\nf(t|\\boldsymbol X,\\boldsymbol \\beta) = h(t)S(t)\n\\]\n\nCensored\n\\[\nS(t)\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#likelihood-function",
+    "href": "pres/ci_spring_2023/pres_4_23.html#likelihood-function",
+    "title": "Survival Analysis:",
+    "section": "Likelihood Function",
+    "text": "Likelihood Function\n\\[\nL(\\boldsymbol \\beta) = \\prod_{i=1}^n [h(T_i \\mid \\boldsymbol X_i, \\boldsymbol\\beta)]^{\\delta_i} [S(T_i \\mid \\boldsymbol X_i, \\boldsymbol \\beta)]\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#likelihood-function-1",
+    "href": "pres/ci_spring_2023/pres_4_23.html#likelihood-function-1",
+    "title": "Survival Analysis:",
+    "section": "Likelihood Function",
+    "text": "Likelihood Function\n\\[\nL(\\boldsymbol \\beta) = \\prod_{i=1}^n \\{h_0(t) \\exp(\\boldsymbol\\beta^\\mathrm T\\boldsymbol x_i)\\}^{\\delta_i} \\exp\\left\\{-\\int^{T_i}_0 h_0(s) \\exp(\\boldsymbol\\beta^\\mathrm T\\boldsymbol x_i)ds\\right\\}\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#estimating-the-baseline-hazard-function",
+    "href": "pres/ci_spring_2023/pres_4_23.html#estimating-the-baseline-hazard-function",
+    "title": "Survival Analysis:",
+    "section": "Estimating the Baseline Hazard Function",
+    "text": "Estimating the Baseline Hazard Function\n\\[\nh_0(t)\n\\]\n\n\n\nParameterically\n\nWeibull\nlog-Normal\nGompetz\n\n\nNonparametrically\n\nProfile MLE\nSpline Models"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#partial-likelihood",
+    "href": "pres/ci_spring_2023/pres_4_23.html#partial-likelihood",
+    "title": "Survival Analysis:",
+    "section": "Partial Likelihood",
+    "text": "Partial Likelihood\n\\[\nL_P(\\boldsymbol\\beta) = \\prod_{i=1}^D \\frac{\\exp(\\boldsymbol\\beta^T \\boldsymbol X_i)}{\\sum_{j \\in R(t_i)} \\exp(\\boldsymbol\\beta^T \\boldsymbol X_j)}\n\\]\n\n\\(R(t_i)\\): the patients at risk prior to time \\(t_i\\)\n\\(D\\): Number of individuals experiencing the event"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#estimation",
+    "href": "pres/ci_spring_2023/pres_4_23.html#estimation",
+    "title": "Survival Analysis:",
+    "section": "Estimation",
+    "text": "Estimation\nThe estimates of \\(\\boldsymbol \\beta\\) can be obtained finding the Maximum Partial Likelihood Estimate (MPLE)"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#sampling-distribution",
+    "href": "pres/ci_spring_2023/pres_4_23.html#sampling-distribution",
+    "title": "Survival Analysis:",
+    "section": "Sampling Distribution",
+    "text": "Sampling Distribution\n\\[\n\\hat{\\boldsymbol \\beta} \\overset{\\circ}{\\sim} N\\left\\{\\boldsymbol \\beta, - I^{-1}(\\boldsymbol \\beta)\\right\\}\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#colon-example",
+    "href": "pres/ci_spring_2023/pres_4_23.html#colon-example",
+    "title": "Survival Analysis:",
+    "section": "Colon Example",
+    "text": "Colon Example\n\nColon cancer is a type of cancer found in the large intestine\nWe will be looking whether different treatment types will have an affect on the survival rate"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#colon-survival-curve",
+    "href": "pres/ci_spring_2023/pres_4_23.html#colon-survival-curve",
+    "title": "Survival Analysis:",
+    "section": "Colon Survival Curve",
+    "text": "Colon Survival Curve\n\nlibrary(survival)\nlibrary(ggsurvfit)\nlibrary(magrittr)\nlibrary(tidyverse)\ndf_colon %$% survfit2(Surv(time, status) ~ 1)  %&gt;% \n      ggsurvfit(linewidth = 1) +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#colon-survival-curve-1",
+    "href": "pres/ci_spring_2023/pres_4_23.html#colon-survival-curve-1",
+    "title": "Survival Analysis:",
+    "section": "Colon Survival Curve",
+    "text": "Colon Survival Curve\n\ndf_colon %$% survfit2(Surv(time, status) ~ rx)  %&gt;% \n      ggsurvfit(linewidth = 1) +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#colon-survival-curve-2",
+    "href": "pres/ci_spring_2023/pres_4_23.html#colon-survival-curve-2",
+    "title": "Survival Analysis:",
+    "section": "Colon Survival Curve",
+    "text": "Colon Survival Curve\n\ndf_colon %$% survfit2(Surv(time, status) ~ rx)  %&gt;% \n      ggsurvfit(linewidth = 1) +\n      add_confidence_interval() +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#cox-ph-model",
+    "href": "pres/ci_spring_2023/pres_4_23.html#cox-ph-model",
+    "title": "Survival Analysis:",
+    "section": "Cox PH Model",
+    "text": "Cox PH Model\n\ndf_colon %$% coxph(Surv(time, status) ~ rx) %&gt;% \n  broom::tidy(exponentiate = T) %&gt;% \n  mutate_if(is.numeric,\n            round,\n            digits = 2) %&gt;% \n  DT::datatable(options = list(dom = 't'))"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#fitting-a-survival-curve",
+    "href": "pres/ci_spring_2023/pres_4_23.html#fitting-a-survival-curve",
+    "title": "Survival Analysis:",
+    "section": "Fitting a Survival Curve",
+    "text": "Fitting a Survival Curve\n\nCodeOutput\n\n\n\n1library(magrittr)\n2library(survival)\n3library(ggsurvfit)\n4df_colon %$% survfit(Surv(time, status) ~ surg)  %&gt;%\n5      ggsurvfit(linewidth = 1) +\n6      add_confidence_interval() +\n7      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)\n\n\n1\n\nPipe package\n\n2\n\nSurvival functions package\n\n3\n\nPlots survival curves package\n\n4\n\nApplies the Kaplan-Meier Function\n\n5\n\nPlots Survival Curve\n\n6\n\nAdds Confidence Intervals\n\n7\n\nDetermines Median Survival Time\n\n\n\n\n\n\n\ndf_colon %$% survfit(Surv(time, status) ~ surg)  %&gt;% \n      ggsurvfit(linewidth = 1) + \n      add_confidence_interval() +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#fitting-cox-ph-model",
+    "href": "pres/ci_spring_2023/pres_4_23.html#fitting-cox-ph-model",
+    "title": "Survival Analysis:",
+    "section": "Fitting Cox PH Model",
+    "text": "Fitting Cox PH Model\n\nCodeOutput\n\n\n\ndf_colon %$% coxph(Surv(time, status) ~ surg)  %&gt;%\n  summary\n\n\n\n\ndf_colon %$% coxph(Surv(time, status) ~ surg)  %&gt;%\n  summary\n\n#&gt; Call:\n#&gt; coxph(formula = Surv(time, status) ~ surg)\n#&gt; \n#&gt;   n= 929, number of events= 468 \n#&gt; \n#&gt;                                   coef exp(coef) se(coef)     z Pr(&gt;|z|)  \n#&gt; surgExtended Time Since Surgery 0.2549    1.2903   0.1008 2.529   0.0114 *\n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n#&gt; \n#&gt;                                 exp(coef) exp(-coef) lower .95 upper .95\n#&gt; surgExtended Time Since Surgery      1.29      0.775     1.059     1.572\n#&gt; \n#&gt; Concordance= 0.523  (se = 0.01 )\n#&gt; Likelihood ratio test= 6.17  on 1 df,   p=0.01\n#&gt; Wald test            = 6.39  on 1 df,   p=0.01\n#&gt; Score (logrank) test = 6.43  on 1 df,   p=0.01"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#access-presentation",
+    "href": "pres/long_beach/pres_4_22.html#access-presentation",
+    "title": "Not Dead… Yet!",
+    "section": "Access Presentation",
+    "text": "Access Presentation\nhttps://www.inqs.info/pres/long_beach/pres_4_22.html\nEmail: isaac.qs@csuci.edu"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#survival-analysis",
+    "href": "pres/long_beach/pres_4_22.html#survival-analysis",
+    "title": "Not Dead… Yet!",
+    "section": "Survival Analysis",
+    "text": "Survival Analysis\nSurvival Analysis is a set of tools to analyze time-to-event data. This leads to the survival rate which models the time to percentage of data to observe the event.\n\n\nTo determine the time until a percentile of the data achieves an event\nDetermine which factors may affect the survival rate"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#colon-study",
+    "href": "pres/long_beach/pres_4_22.html#colon-study",
+    "title": "Not Dead… Yet!",
+    "section": "Colon Study",
+    "text": "Colon Study\n\n\nColon cancer is a type of cancer found in the large intestine\nSeveral risk factors affect the survival rate\nWe will look at how different medications affect the survival rate"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#channel-island-birds",
+    "href": "pres/long_beach/pres_4_22.html#channel-island-birds",
+    "title": "Not Dead… Yet!",
+    "section": "Channel Island Birds",
+    "text": "Channel Island Birds"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#channel-island-birds-1",
+    "href": "pres/long_beach/pres_4_22.html#channel-island-birds-1",
+    "title": "Not Dead… Yet!",
+    "section": "Channel Island Birds",
+    "text": "Channel Island Birds\n\n\nWe are interested in how long do bird eggs hatch since being laid\nDetermine the hatch rate for each species\nWhat happens when there is missing data?"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#how-do-we-determine-the-survival-rate",
+    "href": "pres/long_beach/pres_4_22.html#how-do-we-determine-the-survival-rate",
+    "title": "Not Dead… Yet!",
+    "section": "How do we determine the survival rate?",
+    "text": "How do we determine the survival rate?\n\n\nMeasure from first recording to event of interest\nConstruct a probability of surviving up to a certain time point"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#data-type",
+    "href": "pres/long_beach/pres_4_22.html#data-type",
+    "title": "Not Dead… Yet!",
+    "section": "Data Type",
+    "text": "Data Type\n\n\nData is typically recorded as time-to-event data\nFor biomedical studies, researchers are interested in time from diagnosis to death, known as time-to-death"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#censoring-1",
+    "href": "pres/long_beach/pres_4_22.html#censoring-1",
+    "title": "Not Dead… Yet!",
+    "section": "Censoring",
+    "text": "Censoring\n\n\nCensoring is a mechanism where we do not observe the true time-to-event\nNot all the time is observed\nThree common types of censoring mechanisms: Right, Left, and Interval"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#ci-birds-example",
+    "href": "pres/long_beach/pres_4_22.html#ci-birds-example",
+    "title": "Not Dead… Yet!",
+    "section": "CI Birds Example",
+    "text": "CI Birds Example\nYou design a study where you want to record the time it takes for an egg to hatch for different species of birds.\nYou spend a week monitoring different bird nests and record times when eggs are laid."
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#ci-birds-left-censoring",
+    "href": "pres/long_beach/pres_4_22.html#ci-birds-left-censoring",
+    "title": "Not Dead… Yet!",
+    "section": "CI Birds Left Censoring",
+    "text": "CI Birds Left Censoring\nThe day before the eggs hatched, your boat broke down and were not able to go to the islands for a week due to repairs.\n\nDuring this time, 5 eggs hatched!"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#left-censoring",
+    "href": "pres/long_beach/pres_4_22.html#left-censoring",
+    "title": "Not Dead… Yet!",
+    "section": "Left Censoring",
+    "text": "Left Censoring\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\nlibrary(ggplot2)\ndat &lt;- data.frame(ID = 1:10, \n                  t1 = c(7, 9, 10, 5, 5, 10, 5, 6, 6, 7) , \n                  censored = c(1, 1, 1, 0, 0, 1, 0, 1, 1, 1))\nggplot(dat, aes(x = ID, y = t1, shape = ifelse(censored, \"Death\", \"Censored\"))) + geom_point(size = 4) + \n    geom_linerange(aes(ymin = 0, ymax = t1)) +\n    geom_hline(yintercept = 5, lty = 2) +\n    coord_flip() + \n    scale_shape_manual(name = \"Event\", values = c(19, 15)) +\n    # ggtitle(\"Left Censoring\") + \n    xlab(\"Patient ID\") +  ylab(\"Months\") + \n    theme_bw()"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#ci-birds-interval-censoring",
+    "href": "pres/long_beach/pres_4_22.html#ci-birds-interval-censoring",
+    "title": "Not Dead… Yet!",
+    "section": "CI Birds Interval Censoring",
+    "text": "CI Birds Interval Censoring\nAs you been going out to the islands each day to record whether eggs have hatched or not, you can’t travel to the islands for the next few days due to stormy weather.\n\nDuring this time, 8 eggs hatched!"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#interval-censoring",
+    "href": "pres/long_beach/pres_4_22.html#interval-censoring",
+    "title": "Not Dead… Yet!",
+    "section": "Interval Censoring",
+    "text": "Interval Censoring\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\nlibrary(ggplot2)\ndat &lt;- structure(list(ID = 1:6, \n                      eventA = c(0L, 1L, 1L, 0L, 1L, 0L),\n                      eventB = c(1L, 0L, 0L, 1L, 0L, 1L), \n                      t1 = c(7, 4, 9, 4.5, 4, 8), \n                      t2 = c(7, 6, 10, 4.5, 7, 8),\n                      censored = c(0, 1, 1, 0, 1, 0)), \n                 .Names = c(\"ID\", \"eventA\", \"eventB\", \"t1\", \"t2\", \"censored\"), \n                 class = \"data.frame\", row.names = c(NA, -6L))\n\ndat$event &lt;- with(dat, ifelse(eventA, \"Censored\", \"Death\"))\n\ndat$id.ordered &lt;- factor(x = dat$ID, levels = order(dat$t2, decreasing = T))\n\nggplot(dat, aes(x = id.ordered)) + \n    geom_linerange(aes(ymin = 0, ymax = t1)) + \n    geom_linerange(aes(ymin = t1, ymax = t2, \n                       linetype = as.factor(censored))) +  \n    geom_point(aes(y = ifelse(censored, \n                              t1 + (t2 - t1) / 2, t2), \n                   shape = event), size = 4) +\n    coord_flip() + \n    scale_linetype_manual(name = \"Censoring\", values = c(1, 2), \n        labels = c(\"Not censored\", \"Interval censored\")) +\n    scale_shape_manual(name = \"Event\", values = c(19, 15)) +\n    # ggtitle(\"Interval Censoring\") + \n    xlab(\"Eggs\") +  ylab(\"Weeks\") + \n    theme_bw()"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#ci-birds-right-censoring",
+    "href": "pres/long_beach/pres_4_22.html#ci-birds-right-censoring",
+    "title": "Not Dead… Yet!",
+    "section": "CI Birds Right Censoring",
+    "text": "CI Birds Right Censoring\nIt is the end of the study, and their are 5 more eggs that have not hatched yet!\n\nAdditionally, a colleague has informed you that some eggs were eaten by reptiles through out the study. They obtained the day they were eaten or lost."
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#right-censoring",
+    "href": "pres/long_beach/pres_4_22.html#right-censoring",
+    "title": "Not Dead… Yet!",
+    "section": "Right Censoring",
+    "text": "Right Censoring\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\nlibrary(ggplot2)\ndat &lt;- data.frame(ID = 1:10, \n                  t1 = c(7, 9, 10, 4, 2, 10, 8, 5, 6, 7) , \n                  censored = c(0, 1, 0, 0, 1, 0, 0, 1, 0, 1))\nggplot(dat, aes(x = ID, y = t1, \n                shape = ifelse(censored, \"Death\", \"Censored\"))) +\n    geom_point(size = 4) + \n    geom_linerange(aes(ymin = 0, ymax = t1)) +\n    geom_hline(yintercept = 10, lty = 2) +\n    coord_flip() + \n    scale_shape_manual(name = \"Event\", values = c(19, 15)) +\n    # ggtitle(\"Right Censoring\") + \n    xlab(\"Patient ID\") +  ylab(\"Months\") + \n    theme_bw()"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#censoring-2",
+    "href": "pres/long_beach/pres_4_22.html#censoring-2",
+    "title": "Not Dead… Yet!",
+    "section": "Censoring",
+    "text": "Censoring\n\n\nCensoring affects the time-to-event information\nHowever, we obtain some information when data is censored\nIncorporate methods to utilize partial information\nCensoring is independent of time-to-event generation"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#survival-curve",
+    "href": "pres/long_beach/pres_4_22.html#survival-curve",
+    "title": "Not Dead… Yet!",
+    "section": "Survival Curve",
+    "text": "Survival Curve\n\n\nThe survival curve will determine what is the probability of surviving up to a certain time\nA survival curve accounts for both censored and uncensored data\nA survival curve can be used to determine the median survival time of a disease\n\nOr the time for at least half of the eggs to hatch"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#data-notation",
+    "href": "pres/long_beach/pres_4_22.html#data-notation",
+    "title": "Not Dead… Yet!",
+    "section": "Data Notation",
+    "text": "Data Notation\nLet \\(\\{t_j,d_j,R_j\\}^D_{j=1}\\) denote the survival data, where \\(t_1&lt;t_2&lt;\\cdots&lt;t_D\\) are the ordered distinct observed event times, \\(d_j\\) represents the number of events at time point \\(t_j\\), and \\(R_j\\) denotes the number of subjects still at risk of experiencing the event at \\(t_j\\)."
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#kaplan-meier-estimator",
+    "href": "pres/long_beach/pres_4_22.html#kaplan-meier-estimator",
+    "title": "Not Dead… Yet!",
+    "section": "Kaplan-Meier Estimator",
+    "text": "Kaplan-Meier Estimator\n\\[\n\\hat{S}(t) =\\left\\{\\begin{array}{cc}\n1 & t=0 \\\\\n\\prod_{i:t_j \\le t} \\left( 1 - \\frac{d_j}{R_j} \\right) & t_j &lt; t\n\\end{array}\\right.\n\\]"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#standard-error",
+    "href": "pres/long_beach/pres_4_22.html#standard-error",
+    "title": "Not Dead… Yet!",
+    "section": "Standard Error",
+    "text": "Standard Error\n\\[\n\\widehat{SE}\\{\\hat S(t)\\}=\\sqrt{\\hat S^2(t)\\sum_{t_j\\leq t}\\frac{d_j}{R_j(R_j-d_j)}}.\n\\]"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#survival-curve-1",
+    "href": "pres/long_beach/pres_4_22.html#survival-curve-1",
+    "title": "Not Dead… Yet!",
+    "section": "Survival Curve",
+    "text": "Survival Curve\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\nlibrary(survival)\nlibrary(ggsurvfit)\nlibrary(magrittr)\naml %$% survfit(Surv(time, status) ~ 1)  %&gt;% \n      ggsurvfit(linewidth = 1) +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#data",
+    "href": "pres/long_beach/pres_4_22.html#data",
+    "title": "Not Dead… Yet!",
+    "section": "Data",
+    "text": "Data\n\nDescriptionTableCode\n\n\nWe will be looking at the df_colon data set from the ggsurvfit R package.\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(tidyverse)\nlibrary(ggsurvfit)\nlibrary(DT)\nadj_df &lt;- df_colon %&gt;% select(id, rx, time, status)\ndatatable(adj_df, options = list(pageLength = 5, dom = 'i'))"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#fitting-curve",
+    "href": "pres/long_beach/pres_4_22.html#fitting-curve",
+    "title": "Not Dead… Yet!",
+    "section": "Fitting Curve",
+    "text": "Fitting Curve\n\nDescriptionR Code\n\n\nThe survival package contains the necessary functions to fit a model:\n\n\nSurv: Creates an outcome variable\nsurvfit: Fits the survival function\n\n\n\n\n\n1library(survival)\n2outcome &lt;- Surv(data$time, data$censor)\n3model &lt;- survfit(outcome ~ 1)\n\n\n1\n\nLoads the survival package\n\n2\n\nCreate survival outcome object\n\n3\n\nFits Survival Model"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#plotting-the-survival-function",
+    "href": "pres/long_beach/pres_4_22.html#plotting-the-survival-function",
+    "title": "Not Dead… Yet!",
+    "section": "Plotting the Survival Function",
+    "text": "Plotting the Survival Function\n\nDescriptionR Code\n\n\nThe ggsurvfit package provides a set of tools to plot the survival function in a ggplot format. The primary functions are:\n\nggsurvfit: Plots Survival Function\nadd_quantile: Adds line on the percentile\nadd_confidence_interval: Adds pointwise error bars to the plot.\n\n\n\n\nggsurvfit(model) + \n  add_quantile(y_value = 0.5) +\n  add_confidence_interval()"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#fitting-curve-by-groups",
+    "href": "pres/long_beach/pres_4_22.html#fitting-curve-by-groups",
+    "title": "Not Dead… Yet!",
+    "section": "Fitting Curve By Groups",
+    "text": "Fitting Curve By Groups\n\nDescriptionR CodePlotting\n\n\nIf we are interested in fitting survival curves by groups, we can specify the variable that we want to adjust by.\n\n\n\nsurvfit(Surv(time, censor) ~ group, data)\n\n\n\nOnce the model is fitted, feed it to ggsurvfit and the function will do the rest."
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#colon-survival-curve",
+    "href": "pres/long_beach/pres_4_22.html#colon-survival-curve",
+    "title": "Not Dead… Yet!",
+    "section": "Colon Survival Curve",
+    "text": "Colon Survival Curve\n\nTaskPlotR Code\n\n\n\nFit a survival curve using df_colon from the ggsurvfit package.\ntime: time-to-death\nstatus: censoring status\nPlot the survival curve and add a line indicating the 50th percentile\n\n\n\n\n\n\n\n\n\n\n\nlibrary(survival)\nlibrary(ggsurvfit)\nlibrary(magrittr)\nlibrary(tidyverse)\ndf_colon %$% survfit(Surv(time, status) ~ 1)  %&gt;% \n      ggsurvfit() +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#colon-survival-curve-1",
+    "href": "pres/long_beach/pres_4_22.html#colon-survival-curve-1",
+    "title": "Not Dead… Yet!",
+    "section": "Colon Survival Curve",
+    "text": "Colon Survival Curve\n\nTaskPlotR Code\n\n\n\nFit a survival curve using df_colon, stratified by treatment regimen\ntime: time-to-death\nstatus: censoring status\nrx: treatment regimen\nPlot the curvival curve and add a line indicating the 50th percentile\n\n\n\n\n\n\n\n\n\n\n\ndf_colon %$% survfit(Surv(time, status) ~ rx)  %&gt;% \n      ggsurvfit() +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#hypothesis-testing",
+    "href": "pres/long_beach/pres_4_22.html#hypothesis-testing",
+    "title": "Not Dead… Yet!",
+    "section": "Hypothesis Testing",
+    "text": "Hypothesis Testing\n\n\nWhen stratifying the data, Levamisole+5 FU performed better than the other regimens\nIs this a significant improvement? Or due to random chance?\nAdd Confidence Intervals to see if there is a difference"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#colon-survival-curve-2",
+    "href": "pres/long_beach/pres_4_22.html#colon-survival-curve-2",
+    "title": "Not Dead… Yet!",
+    "section": "Colon Survival Curve",
+    "text": "Colon Survival Curve\n\nTaskPlotR Code\n\n\nAdd confidence intervals to the previous plot.\n\n\n\n\n\n\n\n\n\n\ndf_colon %$% survfit(Surv(time, status) ~ rx)  %&gt;% \n      ggsurvfit() +\n      add_confidence_interval() +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "presentations.html",
+    "href": "presentations.html",
+    "title": "Presentations",
+    "section": "",
+    "text": "Not Dead … Yet!: An Introduction to Survival Analysis\nApril 10, 2021\nSlides\n\n\nSurvival Analysis: The Life and Death of Statistics\nApril 10, 2021\nSlides\n\n\nUCR High-Performance Computing Center\nMay 20, 2022\nSlides\n\n\nData Processing\nApril 21, 2022\nSlides\n\n\nOverview of Joint Longitudinal-Survival Models: Modeling the Association Between Dependent Outcomes\nJune 12, 2021\nSlides\n\n\nParallel Processing for Statistics\nDecember 18, 2020\n\n\nTime-Varying Coefficient Models for Longitudinal Data\nOctober 16, 2020\nSlides\n\n\nTime-Varying Coefficient Models\nApril 21, 2020\nSlides\n\n\nData Manipulation\nOctober 21, 2019\nSlides"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "The csustats package\nAn R package designed to teach statistical methods in R.\n\nLearn more »\n\n\n\nThe SMART Program\nA mentoring program for undergraduate students to completer statistical projects at UC Riverside.\n\nLearn more »\n\n\n\nThe tvcm Package\nThe tvcm package allows you to fit time-varying coefficient models in R\n\nLearn more »"
+  },
+  {
+    "objectID": "pubs.html",
+    "href": "pubs.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Association Between Parental Barriers to Accessing a Usual Source of Care and Children’s Receipt of Preventative Services.\nJohn Bellettiere, Emmeline Chuang, Suzanne C Hughes, Isaac Quintanilla, C Richard Hofstetter, and Melbourne F Hovell\n\nLearn more »\n\n\n\nSelective Array‐based Sensing of Anabolic Steroids in Aqueous Solution by Host:Guest Reporter Complexes.\nAdam D Gill, Lizeth Perez, Isaac Quintanilla Salinas, Samantha R Byers, Yang Liu, Briana L Hickey, Wenwan Zhong, and Richard J Hooley\n\nLearn more »\n\n\n\nGlioblastoma in elderly: treatment patterns and survival. CNS Oncology.\nJean-Aine Pretanvil, Isaac Quintanilla Salinas, and David E Piccioni\n\nLearn more »\n\n\n\nDonor age and early graft failure after lung transplantation: a cohort study.\nMR Baldwin, ER Peterson, I Easthausen, I Quintanilla, E Colago, JR Sonnett, F D’Ovidio, J Costa, JM Diamond, JD Christie, SM Arcasoy, and DJ Lederer\n\nLearn more »"
+  }
+]
