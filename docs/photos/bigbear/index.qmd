@@ -7,7 +7,7 @@ knitr:
   opts_chunk: 
     eval: true
     message: false
-    echo: true
+    echo: false
     
 ---
 
