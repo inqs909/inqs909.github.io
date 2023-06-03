@@ -5,7 +5,7 @@ image: "img/BL1.jpg"
 format: html
 knitr: 
   opts_chunk: 
-    eval: false
+    eval: true
     message: false
     
 ---

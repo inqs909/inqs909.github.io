@@ -7,25 +7,19 @@ knitr:
   opts_chunk: 
     eval: true
     message: false
-    echo: false
-    
 ---
 
-```{r}
-#| include: false
-library(bslib)
-```
-
-
 
 ```{r}
-card(
-  height = 300,
-  full_screen = TRUE,
-  card_image(
-    file = "img/BB1.jpg"
-  )
+library(pixture)
+
+pixgallery(
+  list.files("img", 
+             full.names=TRUE),
+  dim="350px",
+  gap = "10px"
 )
+
 ```
 
 
