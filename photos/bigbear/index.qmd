@@ -5,19 +5,27 @@ image: "img/BB1.jpg"
 format: html
 knitr: 
   opts_chunk: 
-    eval: false
+    eval: true
     message: false
+    echo: true
     
 ---
 
 ```{r}
-library(pixture)
+#| include: false
+library(bslib)
+```
 
-pixgallery(
-  list.files("img", 
-             full.names=TRUE),
-  dim="350px",
-  gap = "10px"
+
+
+```{r}
+card(
+  height = 300,
+  full_screen = TRUE,
+  card_image(
+    file = "img/BB1.jpg"
+  )
 )
 ```
+
 

@@ -141,6 +141,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="../../blog.html" rel="" target="">
  <span class="menu-text">Blog</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../photos.html" rel="" target="">
+ <span class="menu-text">Photos</span></a>
+  </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/inqs909/" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub repo">
 </i> 
@@ -251,8 +255,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code># A tibble: 2 × 6
   expression       min   median `itr/sec` mem_alloc `gc/sec`
   &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;
-1 fact(5)        933ns   1.27µs   613797.    2.49KB     61.4
-2 fact_cpp(5)    999ns   1.33µs   603278.    2.49KB      0  </code></pre>
+1 fact(5)     939.12ns   1.25µs   621914.    2.49KB     62.2
+2 fact_cpp(5)   1.01µs   1.27µs   612021.    2.49KB      0  </code></pre>
 </div>
 </div>
 <p>Notice the Rcpp function is slightly faster than my Armadillo implementation.</p>
