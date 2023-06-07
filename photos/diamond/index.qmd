@@ -5,6 +5,7 @@ format: html
 image: "img/DV1.jpg"
 knitr: 
   opts_chunk: 
+    echo: false
     eval: true
     message: false
     

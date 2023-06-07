@@ -4,7 +4,8 @@ editor: source
 format: html
 image: "img/JT1.jpg"
 knitr: 
-  opts_chunk: 
+  opts_chunk:
+    echo: false 
     eval: true
     message: false
     
