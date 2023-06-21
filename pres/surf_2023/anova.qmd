@@ -1,0 +1,59 @@
+---
+title: "One- & Two-Way ANOVA"
+format:
+  revealjs:
+    slide-number: true
+    header: Analysis of Variance
+    footer: <https://www.inqs.info/pres/surf_2023/anova.html>
+    sc-sb-title: true
+    scrollable: true
+    controls-tutorial: true
+    incremental: false 
+    chalkboard:
+      src: chalkboard.json
+      storage: chalkboard_pres
+      theme: whiteboard
+      chalk-width: 4
+knitr:
+  opts_chunk: 
+    echo: true
+    eval: true
+    message: false
+    warnings: false
+    comment: "#>" 
+    
+revealjs-plugins:
+  - pointer
+  
+filters: 
+  - reveal-header
+  - code-fullscreen
+  - reveal-auto-agenda
+
+auto-agenda:
+  heading: Agenda
+
+editor: visual
+---
+
+## Presentation
+
+The presentation can be found here: [www.inqs.info/pres/surf_2023/anova.html](https://www.inqs.info/pres/surf_2023/anova.html)
+
+{{< qrcode https://www.inqs.info/pres/surf_2023/anova.html>}}
+
+# Hypothesis Testing
+
+## Hypothesis Testing
+
+# t-tests
+
+## t-tests
+
+# One-way ANOVA
+
+## 1-way ANOVA
+
+# Two-way ANOVA
+
+## 2-way ANOVA
