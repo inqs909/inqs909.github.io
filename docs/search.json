@@ -32,7 +32,7 @@
     "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
     "title": "RcppArmadillo",
     "section": "Using RcppArmadillo",
-    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.01338864\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.01338864\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.23µs   3.48µs   266937.        0B     26.7\n2 mean_cpp(Y)   1.82µs   2.74µs   372273.    7.67KB      0  \n\n\nYou can see that the cpp function is much faster than the R built-in function."
+    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.04388838\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.04388838\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.24µs   3.49µs   267784.        0B     26.8\n2 mean_cpp(Y)   1.85µs   2.75µs   382777.    7.67KB      0  \n\n\nYou can see that the cpp function is much faster than the R built-in function."
   },
   {
     "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
@@ -669,28 +669,203 @@
     "href": "pres/surf_2023/anova.html#hypothesis-testing-1",
     "title": "One- & Two-Way ANOVA",
     "section": "Hypothesis Testing",
-    "text": "Hypothesis Testing"
+    "text": "Hypothesis Testing\nA hypothesis test is a statistical procedure to determine whether the null hypothesis is true or not. If we find that the null hypothesis is true, we claim: Fail to reject the null hypothesis. If we find the the null hypothesis to be false, we claim : Reject the null hypothesis."
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#null-hypothesis-h_0",
+    "href": "pres/surf_2023/anova.html#null-hypothesis-h_0",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Null Hypothesis (\\(H_0\\))",
+    "text": "Null Hypothesis (\\(H_0\\))\nThe null hypothesis is the claim that is initially believed to be true. For the most part, it is always equal to the hypothesized value."
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#alternative-hypothesis-h_a",
+    "href": "pres/surf_2023/anova.html#alternative-hypothesis-h_a",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Alternative Hypothesis (\\(H_a\\))",
+    "text": "Alternative Hypothesis (\\(H_a\\))\nThe alternative hypothesis contradicts the null hypothesis."
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#test-statistic-and-distribution",
+    "href": "pres/surf_2023/anova.html#test-statistic-and-distribution",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Test Statistic and Distribution",
+    "text": "Test Statistic and Distribution\nTo conduct a hypothesis test, we compute a test statistic based on the distribution of the null hypothesis. Then we determine if the test statistic is in the rejection region of the distribution of the null hypothesis. If it is in the rejection region, we reject the null hypothesis. Otherwise we fail to reject the null hypothesis."
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#test-statistic",
+    "href": "pres/surf_2023/anova.html#test-statistic",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Test Statistic",
+    "text": "Test Statistic\nA test statistic determines the quantifies the distance of the observed \\(\\hat\\mu\\) with the hypothesized mean \\(\\mu_0\\), assuming null hypothesis is true."
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#rejection-region",
+    "href": "pres/surf_2023/anova.html#rejection-region",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Rejection Region",
+    "text": "Rejection Region\nThe rejection region is determined by our \\(\\alpha\\) value. \\(\\alpha\\) determines the probability you are willing to be wrong if you reject the null hypothesis. This probability is something you want to set yourself at the beginning of a study. In general, the majority of researched set this to be \\(\\alpha=0.05\\)."
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#side-vs-2-side-tests",
+    "href": "pres/surf_2023/anova.html#side-vs-2-side-tests",
+    "title": "One- & Two-Way ANOVA",
+    "section": "1-Side vs 2-Side Tests",
+    "text": "1-Side vs 2-Side Tests\nThere are 3 types of null and alternative hypothesis, The first type of hypothesis (\\(H_a:\\mu\\ne\\mu_0\\)) is considered a 2-sided hypothesis because the rejection region is located in 2 regions. The remaining two hypotheses are considered 1-sided because the rejection region is located on one side of the distribution.\n\n\n\nNull Hypothesis\nAlternative Hypothesis\nSide\n\n\n\n\n\\(H_0: \\mu=\\mu_0\\)\n\\(H_a: \\mu\\ne\\mu_0\\)\n2-sided\n\n\n\\(H_0: \\mu\\le\\mu_0\\)\n\\(H_a: \\mu&gt;\\mu_0\\)\n1-sided\n\n\n\\(H_0: \\mu\\ge\\mu_0\\)\n\\(H_0: \\mu&lt;\\mu_0\\)\n1-sided"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#rejection-region-1",
+    "href": "pres/surf_2023/anova.html#rejection-region-1",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Rejection Region",
+    "text": "Rejection Region"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#rejecting-the-null-hypothesis",
+    "href": "pres/surf_2023/anova.html#rejecting-the-null-hypothesis",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Rejecting the Null Hypothesis",
+    "text": "Rejecting the Null Hypothesis\nThe p-value approach is one of the most common methods to report significant results. It is easier to interpret the p-value because it provides the probability of observing our test statistics, or something more extreme, given that the null hypothesis is true. Depending on the type of test, your p-value may be constructed as:\n\n\n\nAlternative Hypothesis\np-value\n\n\n\n\n\\(\\mu&gt;\\mu_0\\)\n\\(P(X&gt;T(x))=p\\)\n\n\n\\(\\mu&lt;\\mu_0\\)\n\\(P(X&lt;T(x))=p\\)\n\n\n\\(\\mu\\ne\\mu_0\\)\n\\(2\\times P(X&gt;|T(X)|)=p\\)\n\n\n\nIf \\(p &lt; \\alpha\\), then you reject \\(H_0\\); otherwise, you will fail to reject \\(H_0\\)."
   },
   {
     "objectID": "pres/surf_2023/anova.html#t-tests-1",
     "href": "pres/surf_2023/anova.html#t-tests-1",
     "title": "One- & Two-Way ANOVA",
     "section": "t-tests",
-    "text": "t-tests"
+    "text": "t-tests\nT-tests are used to determine if the population means between two groups are different from each other. We generally"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#analysis-of-variance",
+    "href": "pres/surf_2023/anova.html#analysis-of-variance",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Analysis of Variance",
+    "text": "Analysis of Variance\nAnalysis of variance (ANOVA) tests to whether there is a difference between a collection of means while we control the family-wise error rate."
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#hypothesis",
+    "href": "pres/surf_2023/anova.html#hypothesis",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Hypothesis",
+    "text": "Hypothesis\n\\(H_0:\\ \\mu_1=\\mu_2=\\cdots=\\mu_k\\)\n\\(H_a:\\) At least one mean pair is different"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#anova-table",
+    "href": "pres/surf_2023/anova.html#anova-table",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Anova Table",
+    "text": "Anova Table\n\n\n\n\n\n\n\n\n\n\nSource\nDF\nSS\nMS\nF\n\n\n\n\nGroup\n\\(DFG=k-1\\)\n\\(SSG\\)\n\\(MSG=\\frac{SSG}{DFG}\\)\n\\(F=\\frac{MSG}{MSE}\\)\n\n\nError\n\\(DFE=N-k\\)\n\\(SSE\\)\n\\(MSE=\\frac{SSE}{DFE}\\)\n\n\n\nTotal\n\\(TDF=N-1\\)\n\\(TSS=SSG+SSE\\)\n\n\n\n\n\n\n\\(N:\\) Total Sample size\n\\(k:\\) number of groups"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#test-statistics",
+    "href": "pres/surf_2023/anova.html#test-statistics",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Test Statistics",
+    "text": "Test Statistics\n\n\n\\(SSG = \\sum_{i=1}^kn_i(\\bar y_{i.}-\\bar y_{..})^2\\)\n\n\\(SSE = \\sum^k_{i=1}\\sum^{n_i}_{j=1}(y_{ij}-\\bar y_{i.})^2\\)\n\n\n\n\\(i:\\) indexes the group\n\\(j:\\) indexes the observation in group\n\\(y_{ij}:\\) \\(j\\)th observation in \\(i\\)th group\n\\(\\bar y_{i.}:\\) mean in \\(i\\)th group\n\\(\\bar y_{..}:\\) overall mean of entire data set\n\\(n_i:\\) sample size of \\(i\\)th group"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#assumptions",
+    "href": "pres/surf_2023/anova.html#assumptions",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Assumptions",
+    "text": "Assumptions\n\nIndependence\n\nWere observations collected randomly?\n\nNormality\n\nQQ Plot\nShapiro-Wilks Test\n\nEqual Variance\n\nBartlett’s Test\nLevene’s Test"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#multiple-comparison-tests-1",
+    "href": "pres/surf_2023/anova.html#multiple-comparison-tests-1",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Multiple Comparison Tests",
+    "text": "Multiple Comparison Tests\n\nFisher’s Least Significance Difference\nBonferroni’s Test\nScheffe’s Test\nTukey’s Honest Significant Difference"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#bonferronis-tests",
+    "href": "pres/surf_2023/anova.html#bonferronis-tests",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Bonferroni’s Tests",
+    "text": "Bonferroni’s Tests\n\nBonferroni’s Test conducts a set of \\(k\\) t-tests to each mean pair\nControls family-wise error rate by dividing \\(\\alpha/k\\)"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#scheffes-test",
+    "href": "pres/surf_2023/anova.html#scheffes-test",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Scheffe’s Test",
+    "text": "Scheffe’s Test\n\nScheffe’s method compares mean square difference between full and reduced models.\nIt ensures control of the family-wise error rate by testing the largest and smallest model.\nScheffe’s tests the following hypothesis: \\(H_0: \\sum_i\\lambda_i\\mu_i=0\\)"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#tukeys-honest-significant-difference-tests",
+    "href": "pres/surf_2023/anova.html#tukeys-honest-significant-difference-tests",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Tukey’s Honest Significant Difference Tests",
+    "text": "Tukey’s Honest Significant Difference Tests\n\nTukey’s test will look for the pairs that are greater than the HSD value. HSD value is the minimum absolute difference needed for a pair of means to be considered different.\nThis method requires a balanced design (\\(n_1=n_2=\\ldots=n_k=n\\))"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#comparison-of-methods",
+    "href": "pres/surf_2023/anova.html#comparison-of-methods",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Comparison of Methods",
+    "text": "Comparison of Methods\n\nBonferroni’s Method\n\nUse Bonferroni’s method if you were interested in testing different mean pairs before you started to collect data.\nGood for balanced and unbalanced designs\nConsidered the least conservative method (most likely to reject \\(H_0\\))\n\nScheffe’s Method\n\nUse Scheffe’s method if you are interested data-driven differences.\nCan test linear combinations\nGood for unbalanced designs\nConsidereded more conservative method (least likely to reject \\(H_0\\))\n\nTukey’s HSD\n\nUse Tukey’s HSD when you are interested in testing difference of all mean pairs.\nGood for balanced designs.\nConsidered more conservative method (least likely to reject \\(H_0\\))"
   },
   {
     "objectID": "pres/surf_2023/anova.html#way-anova",
     "href": "pres/surf_2023/anova.html#way-anova",
     "title": "One- & Two-Way ANOVA",
-    "section": "1-way ANOVA",
-    "text": "1-way ANOVA"
+    "section": "2-way ANOVA",
+    "text": "2-way ANOVA\nTwo-way ANOVA is a one-way ANOVA that was adjusted by a grouping variable."
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#anova-table-1",
+    "href": "pres/surf_2023/anova.html#anova-table-1",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Anova Table",
+    "text": "Anova Table\n\n\n\n\n\n\n\n\n\n\nSource\nDF\nSS\nMS\nF\n\n\n\n\nGrp\n\\(DFG=G-1\\)\n\\(SSG\\)\n\\(MSG=\\frac{SSG}{DFG}\\)\n\\(F_G=\\frac{MSG}{MSE}\\)\n\n\nAdj\n\\(DFA=A-1\\)\n\\(SSA\\)\n\\(MSA=\\frac{SSA}{DFA}\\)\n\\(F_A=\\frac{MSA}{MSE}\\)\n\n\nInt\n\\(DFI=(G-1)(A-1)\\)\n\\(SSI\\)\n\\(MSI=\\frac{SSI}{DFI}\\)\n\\(F_I=\\frac{MSI}{MSE}\\)\n\n\nError\n\\(DFE=AGK-AG\\)\n\\(SSE\\)\n\\(MSE=\\frac{SSE}{DFE}\\)\n\n\n\nTotal\n\\(TDF=AGK-1\\)\n\\(TSS=SSG+SSA+SSE\\)\n\n\n\n\n\n\n\\(A:\\) Number of Adjusted groups\n\\(G:\\) Number of Experimental groups\n\\(k:\\) Number of Replicates"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#order-of-analysis",
+    "href": "pres/surf_2023/anova.html#order-of-analysis",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Order of Analysis",
+    "text": "Order of Analysis\n\n\\(H_0:\\) No interaction Effect\n\nReject \\(H_0:\\) Conduct 1-way Anova\nOtherwise: Remove from model and move on to next step\n\n\\(H_0:\\) No Adjustment Effect\n\nReject \\(H_0:\\) Keep in model, move on to next step\nOtherwise: Remove from model, move one to next step\n\n\\(H_0\\): No Experimental Group Effect\n\nReject \\(H_0:\\) Move on to multiple comparison"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#grouped-statistics",
+    "href": "pres/surf_2023/anova.html#grouped-statistics",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Grouped Statistics",
+    "text": "Grouped Statistics"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#graphical-visualization",
+    "href": "pres/surf_2023/anova.html#graphical-visualization",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Graphical Visualization",
+    "text": "Graphical Visualization"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#t-test",
+    "href": "pres/surf_2023/anova.html#t-test",
+    "title": "One- & Two-Way ANOVA",
+    "section": "t-test",
+    "text": "t-test"
   },
   {
     "objectID": "pres/surf_2023/anova.html#way-anova-1",
     "href": "pres/surf_2023/anova.html#way-anova-1",
     "title": "One- & Two-Way ANOVA",
-    "section": "2-way ANOVA",
-    "text": "2-way ANOVA\n\n\nhttps://www.inqs.info/pres/surf_2023/anova.html\n\n\n\n\n\n\n \n\n\nAnalysis of Variance"
+    "section": "1-Way ANOVA",
+    "text": "1-Way ANOVA"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#way-anova-2",
+    "href": "pres/surf_2023/anova.html#way-anova-2",
+    "title": "One- & Two-Way ANOVA",
+    "section": "2-Way ANOVA",
+    "text": "2-Way ANOVA"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#diagnostics",
+    "href": "pres/surf_2023/anova.html#diagnostics",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Diagnostics",
+    "text": "Diagnostics\n\n\nhttps://www.inqs.info/pres/surf_2023/anova.html\n\n\n\n\n\n\n \n\n\nAnalysis of Variance"
   },
   {
     "objectID": "presentations.html",

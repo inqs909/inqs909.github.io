@@ -345,7 +345,6 @@
 <section id="presentation" class="slide level2">
 <h2>Presentation</h2>
 <p>The presentation can be found here: <a href="https://www.inqs.info/pres/surf_2023/anova.html">www.inqs.info/pres/surf_2023/anova.html</a></p>
-<p></p>
 </section>
 <section>
 <section class="title-slide slide level1 agenda-slide center">
@@ -365,13 +364,101 @@
 <p>One-way ANOVA</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
+<p>Multiple Comparison Tests</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
 <p>Two-way ANOVA</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>R Code</p>
 </div></li>
 </ul>
 </div>
 </section>
 <section id="hypothesis-testing-1" class="slide level2">
 <h2>Hypothesis Testing</h2>
+<p>A hypothesis test is a statistical procedure to determine whether the null hypothesis is true or not. If we find that the null hypothesis is true, we claim: <strong>Fail to reject the null hypothesis</strong>. If we find the the null hypothesis to be false, we claim : <strong>Reject the null hypothesis.</strong></p>
+</section>
+<section id="null-hypothesis-h_0" class="slide level2">
+<h2>Null Hypothesis (<span class="math inline">\(H_0\)</span>)</h2>
+<p>The null hypothesis is the claim that is initially believed to be true. For the most part, it is always equal to the hypothesized value.</p>
+</section>
+<section id="alternative-hypothesis-h_a" class="slide level2">
+<h2>Alternative Hypothesis (<span class="math inline">\(H_a\)</span>)</h2>
+<p>The alternative hypothesis contradicts the null hypothesis.</p>
+</section>
+<section id="test-statistic-and-distribution" class="slide level2">
+<h2>Test Statistic and Distribution</h2>
+<p>To conduct a hypothesis test, we compute a test statistic based on the distribution of the null hypothesis. Then we determine if the test statistic is in the rejection region of the distribution of the null hypothesis. If it is in the rejection region, we reject the null hypothesis. Otherwise we fail to reject the null hypothesis.</p>
+</section>
+<section id="test-statistic" class="slide level2">
+<h2>Test Statistic</h2>
+<p>A test statistic determines the quantifies the distance of the observed <span class="math inline">\(\hat\mu\)</span> with the hypothesized mean <span class="math inline">\(\mu_0\)</span>, assuming null hypothesis is true.</p>
+</section>
+<section id="rejection-region" class="slide level2">
+<h2>Rejection Region</h2>
+<p>The rejection region is determined by our <span class="math inline">\(\alpha\)</span> value. <span class="math inline">\(\alpha\)</span> determines the probability you are willing to be wrong if you reject the null hypothesis. This probability is something you want to set yourself at the beginning of a study. In general, the majority of researched set this to be <span class="math inline">\(\alpha=0.05\)</span>.</p>
+</section>
+<section id="side-vs-2-side-tests" class="slide level2">
+<h2>1-Side vs 2-Side Tests</h2>
+<p>There are 3 types of null and alternative hypothesis, The first type of hypothesis (<span class="math inline">\(H_a:\mu\ne\mu_0\)</span>) is considered a 2-sided hypothesis because the rejection region is located in 2 regions. The remaining two hypotheses are considered 1-sided because the rejection region is located on one side of the distribution.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Null Hypothesis</th>
+<th>Alternative Hypothesis</th>
+<th>Side</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(H_0: \mu=\mu_0\)</span></td>
+<td><span class="math inline">\(H_a: \mu\ne\mu_0\)</span></td>
+<td>2-sided</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(H_0: \mu\le\mu_0\)</span></td>
+<td><span class="math inline">\(H_a: \mu&gt;\mu_0\)</span></td>
+<td>1-sided</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(H_0: \mu\ge\mu_0\)</span></td>
+<td><span class="math inline">\(H_0: \mu&lt;\mu_0\)</span></td>
+<td>1-sided</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="rejection-region-1" class="slide level2">
+<h2>Rejection Region</h2>
+
+<img data-src="https://www.researchgate.net/publication/333914148/figure/fig1/AS:772049484128256@1561082349475/Rejection-and-non-rejection-regions-of-the-null-hypothesis.png" class="r-stretch quarto-figure-center"></section>
+<section id="rejecting-the-null-hypothesis" class="slide level2">
+<h2>Rejecting the Null Hypothesis</h2>
+<p>The p-value approach is one of the most common methods to report significant results. It is easier to interpret the p-value because it provides the probability of observing our test statistics, or something more extreme, given that the null hypothesis is true. Depending on the type of test, your p-value may be constructed as:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Alternative Hypothesis</th>
+<th>p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\mu&gt;\mu_0\)</span></td>
+<td><span class="math inline">\(P(X&gt;T(x))=p\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mu&lt;\mu_0\)</span></td>
+<td><span class="math inline">\(P(X&lt;T(x))=p\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mu\ne\mu_0\)</span></td>
+<td><span class="math inline">\(2\times P(X&gt;|T(X)|)=p\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>If <span class="math inline">\(p &lt; \alpha\)</span>, then you reject <span class="math inline">\(H_0\)</span>; otherwise, you will fail to reject <span class="math inline">\(H_0\)</span>.</p>
 </section></section>
 <section>
 <section class="title-slide slide level1 agenda-slide center">
@@ -391,13 +478,20 @@
 <p>One-way ANOVA</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
+<p>Multiple Comparison Tests</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
 <p>Two-way ANOVA</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>R Code</p>
 </div></li>
 </ul>
 </div>
 </section>
 <section id="t-tests-1" class="slide level2">
 <h2>t-tests</h2>
+<p>T-tests are used to determine if the population means between two groups are different from each other. We generally</p>
 </section></section>
 <section>
 <section class="title-slide slide level1 agenda-slide center">
@@ -417,13 +511,194 @@
 <p>One-way ANOVA</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
+<p>Multiple Comparison Tests</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
 <p>Two-way ANOVA</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>R Code</p>
 </div></li>
 </ul>
 </div>
 </section>
-<section id="way-anova" class="slide level2">
-<h2>1-way ANOVA</h2>
+<section id="analysis-of-variance" class="slide level2">
+<h2>Analysis of Variance</h2>
+<p>Analysis of variance (ANOVA) tests to whether there is a difference between a collection of means while we control the family-wise error rate.</p>
+</section>
+<section id="hypothesis" class="slide level2">
+<h2>Hypothesis</h2>
+<p><span class="math inline">\(H_0:\ \mu_1=\mu_2=\cdots=\mu_k\)</span></p>
+<p><span class="math inline">\(H_a:\)</span> At least one mean pair is different</p>
+</section>
+<section id="anova-table" class="slide level2">
+<h2>Anova Table</h2>
+<table>
+<colgroup>
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 22%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>DF</th>
+<th>SS</th>
+<th>MS</th>
+<th>F</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Group</td>
+<td><span class="math inline">\(DFG=k-1\)</span></td>
+<td><span class="math inline">\(SSG\)</span></td>
+<td><span class="math inline">\(MSG=\frac{SSG}{DFG}\)</span></td>
+<td><span class="math inline">\(F=\frac{MSG}{MSE}\)</span></td>
+</tr>
+<tr class="even">
+<td>Error</td>
+<td><span class="math inline">\(DFE=N-k\)</span></td>
+<td><span class="math inline">\(SSE\)</span></td>
+<td><span class="math inline">\(MSE=\frac{SSE}{DFE}\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td><span class="math inline">\(TDF=N-1\)</span></td>
+<td><span class="math inline">\(TSS=SSG+SSE\)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><span class="math inline">\(N:\)</span> Total Sample size</p></li>
+<li><p><span class="math inline">\(k:\)</span> number of groups</p></li>
+</ul>
+</section>
+<section id="test-statistics" class="slide level2">
+<h2>Test Statistics</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><span class="math inline">\(SSG = \sum_{i=1}^kn_i(\bar y_{i.}-\bar y_{..})^2\)</span></p>
+</div><div class="column" style="width:60%;">
+<p><span class="math inline">\(SSE = \sum^k_{i=1}\sum^{n_i}_{j=1}(y_{ij}-\bar y_{i.})^2\)</span></p>
+</div>
+</div>
+<ul>
+<li><p><span class="math inline">\(i:\)</span> indexes the group</p></li>
+<li><p><span class="math inline">\(j:\)</span> indexes the observation in group</p></li>
+<li><p><span class="math inline">\(y_{ij}:\)</span> <span class="math inline">\(j\)</span>th observation in <span class="math inline">\(i\)</span>th group</p></li>
+<li><p><span class="math inline">\(\bar y_{i.}:\)</span> mean in <span class="math inline">\(i\)</span>th group</p></li>
+<li><p><span class="math inline">\(\bar y_{..}:\)</span> overall mean of entire data set</p></li>
+<li><p><span class="math inline">\(n_i:\)</span> sample size of <span class="math inline">\(i\)</span>th group</p></li>
+</ul>
+</section>
+<section id="assumptions" class="slide level2">
+<h2>Assumptions</h2>
+<ul>
+<li><p>Independence</p>
+<ul>
+<li>Were observations collected randomly?</li>
+</ul></li>
+<li><p>Normality</p>
+<ul>
+<li><p>QQ Plot</p></li>
+<li><p>Shapiro-Wilks Test</p></li>
+</ul></li>
+<li><p>Equal Variance</p>
+<ul>
+<li><p>Bartlett’s Test</p></li>
+<li><p>Levene’s Test</p></li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section class="title-slide slide level1 agenda-slide center">
+<h1>Multiple Comparison Tests</h1>
+<div class="agenda-heading">
+<p>Agenda</p>
+</div>
+<div class="agenda">
+<ul>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Hypothesis Testing</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>t-tests</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>One-way ANOVA</p>
+</div></li>
+<li><div class="agenda-active">
+<p>Multiple Comparison Tests</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Two-way ANOVA</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>R Code</p>
+</div></li>
+</ul>
+</div>
+</section>
+<section id="multiple-comparison-tests-1" class="slide level2">
+<h2>Multiple Comparison Tests</h2>
+<ul>
+<li><p>Fisher’s Least Significance Difference</p></li>
+<li><p>Bonferroni’s Test</p></li>
+<li><p>Scheffe’s Test</p></li>
+<li><p>Tukey’s Honest Significant Difference</p></li>
+</ul>
+</section>
+<section id="bonferronis-tests" class="slide level2">
+<h2>Bonferroni’s Tests</h2>
+<ul>
+<li><p>Bonferroni’s Test conducts a set of <span class="math inline">\(k\)</span> t-tests to each mean pair</p></li>
+<li><p>Controls family-wise error rate by dividing <span class="math inline">\(\alpha/k\)</span></p></li>
+</ul>
+</section>
+<section id="scheffes-test" class="slide level2">
+<h2>Scheffe’s Test</h2>
+<ul>
+<li><p>Scheffe’s method compares mean square difference between full and reduced models.</p></li>
+<li><p>It ensures control of the family-wise error rate by testing the largest and smallest model.</p></li>
+<li><p>Scheffe’s tests the following hypothesis: <span class="math inline">\(H_0: \sum_i\lambda_i\mu_i=0\)</span></p></li>
+</ul>
+</section>
+<section id="tukeys-honest-significant-difference-tests" class="slide level2">
+<h2>Tukey’s Honest Significant Difference Tests</h2>
+<ul>
+<li><p>Tukey’s test will look for the pairs that are greater than the HSD value. HSD value is the minimum absolute difference needed for a pair of means to be considered different.</p></li>
+<li><p>This method requires a balanced design (<span class="math inline">\(n_1=n_2=\ldots=n_k=n\)</span>)</p></li>
+</ul>
+</section>
+<section id="comparison-of-methods" class="slide level2">
+<h2>Comparison of Methods</h2>
+<ul>
+<li>Bonferroni’s Method
+<ul>
+<li>Use Bonferroni’s method if you were interested in testing different mean pairs before you started to collect data.</li>
+<li>Good for balanced and unbalanced designs</li>
+<li>Considered the least conservative method (most likely to reject <span class="math inline">\(H_0\)</span>)</li>
+</ul></li>
+<li>Scheffe’s Method
+<ul>
+<li>Use Scheffe’s method if you are interested data-driven differences.</li>
+<li>Can test linear combinations</li>
+<li>Good for unbalanced designs</li>
+<li>Considereded more conservative method (least likely to reject <span class="math inline">\(H_0\)</span>)</li>
+</ul></li>
+<li>Tukey’s HSD
+<ul>
+<li>Use Tukey’s HSD when you are interested in testing difference of all mean pairs.</li>
+<li>Good for balanced designs.</li>
+<li>Considered more conservative method (least likely to reject <span class="math inline">\(H_0\)</span>)</li>
+</ul></li>
+</ul>
 </section></section>
 <section>
 <section class="title-slide slide level1 agenda-slide center">
@@ -442,14 +717,150 @@
 <li><div class="agenda-inactive agenda-pre-active">
 <p>One-way ANOVA</p>
 </div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Multiple Comparison Tests</p>
+</div></li>
 <li><div class="agenda-active">
 <p>Two-way ANOVA</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>R Code</p>
 </div></li>
 </ul>
 </div>
 </section>
-<section id="way-anova-1" class="slide level2">
+<section id="way-anova" class="slide level2">
 <h2>2-way ANOVA</h2>
+<p>Two-way ANOVA is a one-way ANOVA that was adjusted by a grouping variable.</p>
+</section>
+<section id="anova-table-1" class="slide level2">
+<h2>Anova Table</h2>
+<table>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 19%">
+<col style="width: 20%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>DF</th>
+<th>SS</th>
+<th>MS</th>
+<th>F</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Grp</td>
+<td><span class="math inline">\(DFG=G-1\)</span></td>
+<td><span class="math inline">\(SSG\)</span></td>
+<td><span class="math inline">\(MSG=\frac{SSG}{DFG}\)</span></td>
+<td><span class="math inline">\(F_G=\frac{MSG}{MSE}\)</span></td>
+</tr>
+<tr class="even">
+<td>Adj</td>
+<td><span class="math inline">\(DFA=A-1\)</span></td>
+<td><span class="math inline">\(SSA\)</span></td>
+<td><span class="math inline">\(MSA=\frac{SSA}{DFA}\)</span></td>
+<td><span class="math inline">\(F_A=\frac{MSA}{MSE}\)</span></td>
+</tr>
+<tr class="odd">
+<td>Int</td>
+<td><span class="math inline">\(DFI=(G-1)(A-1)\)</span></td>
+<td><span class="math inline">\(SSI\)</span></td>
+<td><span class="math inline">\(MSI=\frac{SSI}{DFI}\)</span></td>
+<td><span class="math inline">\(F_I=\frac{MSI}{MSE}\)</span></td>
+</tr>
+<tr class="even">
+<td>Error</td>
+<td><span class="math inline">\(DFE=AGK-AG\)</span></td>
+<td><span class="math inline">\(SSE\)</span></td>
+<td><span class="math inline">\(MSE=\frac{SSE}{DFE}\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td><span class="math inline">\(TDF=AGK-1\)</span></td>
+<td><span class="math inline">\(TSS=SSG+SSA+SSE\)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><span class="math inline">\(A:\)</span> Number of Adjusted groups</p></li>
+<li><p><span class="math inline">\(G:\)</span> Number of Experimental groups</p></li>
+<li><p><span class="math inline">\(k:\)</span> Number of Replicates</p></li>
+</ul>
+</section>
+<section id="order-of-analysis" class="slide level2">
+<h2>Order of Analysis</h2>
+<ul>
+<li><p><span class="math inline">\(H_0:\)</span> No interaction Effect</p>
+<ul>
+<li>Reject <span class="math inline">\(H_0:\)</span> Conduct 1-way Anova</li>
+<li>Otherwise: Remove from model and move on to next step</li>
+</ul></li>
+<li><p><span class="math inline">\(H_0:\)</span> No Adjustment Effect</p>
+<ul>
+<li>Reject <span class="math inline">\(H_0:\)</span> Keep in model, move on to next step</li>
+<li>Otherwise: Remove from model, move one to next step</li>
+</ul></li>
+<li><p><span class="math inline">\(H_0\)</span>: No Experimental Group Effect</p>
+<ul>
+<li>Reject <span class="math inline">\(H_0:\)</span> Move on to multiple comparison</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section class="title-slide slide level1 agenda-slide center">
+<h1>R Code</h1>
+<div class="agenda-heading">
+<p>Agenda</p>
+</div>
+<div class="agenda">
+<ul>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Hypothesis Testing</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>t-tests</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>One-way ANOVA</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Multiple Comparison Tests</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Two-way ANOVA</p>
+</div></li>
+<li><div class="agenda-active">
+<p>R Code</p>
+</div></li>
+</ul>
+</div>
+</section>
+<section id="grouped-statistics" class="slide level2">
+<h2>Grouped Statistics</h2>
+</section>
+<section id="graphical-visualization" class="slide level2">
+<h2>Graphical Visualization</h2>
+</section>
+<section id="t-test" class="slide level2">
+<h2>t-test</h2>
+</section>
+<section id="way-anova-1" class="slide level2">
+<h2>1-Way ANOVA</h2>
+</section>
+<section id="way-anova-2" class="slide level2">
+<h2>2-Way ANOVA</h2>
+</section>
+<section id="diagnostics" class="slide level2">
+<h2>Diagnostics</h2>
 
 <div class="footer footer-default">
 <p><a href="https://www.inqs.info/pres/surf_2023/anova.html" class="uri">https://www.inqs.info/pres/surf_2023/anova.html</a></p>
