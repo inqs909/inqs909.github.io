@@ -7,13 +7,14 @@ format:
     header: Analysis of Variance
     sc-sb-title: true
     scrollable: true
-    controls-tutorial: true
+    controls: true
     incremental: false 
     chalkboard:
       src: chalkboard.json
       storage: chalkboard_pres
       theme: whiteboard
       chalk-width: 4
+    
 knitr:
   opts_chunk: 
     echo: true
@@ -92,14 +93,6 @@ The p-value approach is one of the most common methods to report significant res
 | $\mu\ne\mu_0$          | $2\times P(X>|T(X)|)=p$ |
 
 If $p < \alpha$, then you reject $H_0$; otherwise, you will fail to reject $H_0$.
-
-# t-tests
-
-## t-tests
-
-T-tests are used to determine if the population means between two groups are different from each other. We generally 
-
-
 
 # One-way ANOVA
 

@@ -358,9 +358,6 @@
 <p>Hypothesis Testing</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>t-tests</p>
-</div></li>
-<li><div class="agenda-inactive agenda-post-active">
 <p>One-way ANOVA</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
@@ -462,39 +459,6 @@
 </section></section>
 <section>
 <section class="title-slide slide level1 agenda-slide center">
-<h1>t-tests</h1>
-<div class="agenda-heading">
-<p>Agenda</p>
-</div>
-<div class="agenda">
-<ul>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Hypothesis Testing</p>
-</div></li>
-<li><div class="agenda-active">
-<p>t-tests</p>
-</div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>One-way ANOVA</p>
-</div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>Multiple Comparison Tests</p>
-</div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>Two-way ANOVA</p>
-</div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>R Code</p>
-</div></li>
-</ul>
-</div>
-</section>
-<section id="t-tests-1" class="slide level2">
-<h2>t-tests</h2>
-<p>T-tests are used to determine if the population means between two groups are different from each other. We generally</p>
-</section></section>
-<section>
-<section class="title-slide slide level1 agenda-slide center">
 <h1>One-way ANOVA</h1>
 <div class="agenda-heading">
 <p>Agenda</p>
@@ -503,9 +467,6 @@
 <ul>
 <li><div class="agenda-inactive agenda-pre-active">
 <p>Hypothesis Testing</p>
-</div></li>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>t-tests</p>
 </div></li>
 <li><div class="agenda-active">
 <p>One-way ANOVA</p>
@@ -628,9 +589,6 @@
 <p>Hypothesis Testing</p>
 </div></li>
 <li><div class="agenda-inactive agenda-pre-active">
-<p>t-tests</p>
-</div></li>
-<li><div class="agenda-inactive agenda-pre-active">
 <p>One-way ANOVA</p>
 </div></li>
 <li><div class="agenda-active">
@@ -710,9 +668,6 @@
 <ul>
 <li><div class="agenda-inactive agenda-pre-active">
 <p>Hypothesis Testing</p>
-</div></li>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>t-tests</p>
 </div></li>
 <li><div class="agenda-inactive agenda-pre-active">
 <p>One-way ANOVA</p>
@@ -827,9 +782,6 @@
 <p>Hypothesis Testing</p>
 </div></li>
 <li><div class="agenda-inactive agenda-pre-active">
-<p>t-tests</p>
-</div></li>
-<li><div class="agenda-inactive agenda-pre-active">
 <p>One-way ANOVA</p>
 </div></li>
 <li><div class="agenda-inactive agenda-pre-active">
@@ -906,7 +858,7 @@
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
+'controlsAuto': false,
 'previewLinksAuto': false,
 'smaller': false,
 'pdfSeparateFragments': false,
@@ -919,11 +871,11 @@
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
-        controlsTutorial: true,
+        controlsTutorial: false,
 
         // Determines where controls appear, "edges" or "bottom-right"
         controlsLayout: 'edges',
