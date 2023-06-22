@@ -249,14 +249,187 @@ Two-way ANOVA is a one-way ANOVA that was adjusted by a grouping variable.
 
 # R Code
 
+## Data and Packages
+
+```{r}
+library(tidyverse)
+library(car)
+df <- ToothGrowth %>% mutate(dose = as.character(dose))
+df %>% summary()
+```
+
+
 ## Grouped Statistics
+
+::: panel-tabset
+
+### R Code
+
+```{r}
+#| eval: false
+
+summary_df <- df %>% group_by(supp, dose) %>% summarize(mean = mean(len), 
+                                       sd = sd(len)) 
+summary_df %>% print
+```
+
+
+### Output
+
+```{r}
+#| echo: false
+summary_df <- df %>% group_by(supp, dose) %>% summarize(mean = mean(len), 
+                                       sd = sd(len)) 
+summary_df %>% print
+```
+
+:::
 
 ## Graphical Visualization
 
-## t-test
+::: panel-tabset
+
+### Code
+
+```{r}
+#| eval: false
+
+df %>% ggplot(aes(x=supp, 
+                  y = len, 
+                  color = dose)) + geom_boxplot() +
+        theme_bw()
+```
+
+### Output
+```{r}
+#| echo: false
+
+df %>% ggplot(aes(x=supp, 
+                  y = len, 
+                  color = dose)) + geom_boxplot() +
+        theme_bw()
+```
+
+:::
+
+## Graphical Output
+
+::: panel-tabset
+
+### Code
+
+```{r}
+#| eval: false
+df %>% ggplot(aes(x = as.numeric(dose), 
+                  y = len,
+                  color = supp)) + 
+        geom_point() +
+        geom_line(aes(x = as.numeric(dose),
+                      y = mean,
+                      color = supp),
+                  summary_df) +
+        theme_bw()
+```
+
+
+### Output
+
+```{r}
+#| echo: false
+df %>% ggplot(aes(x = as.numeric(dose), 
+                  y = len,
+                  color = supp)) + 
+        geom_point() +
+        geom_line(aes(x = as.numeric(dose),
+                      y = mean,
+                      color = supp),
+                  summary_df) +
+        theme_bw()
+```
+
+
+:::
+
 
 ## 1-Way ANOVA
 
+
+::: panel-tabset
+
+### Code
+
+```{r}
+#| eval: false
+one_aov <- df %>% aov(len ~ dose, .)
+Anova(one_aov)
+```
+
+### Output
+
+```{r}
+#| echo: false
+one_aov <- df %>% aov(len ~ dose, .)
+Anova(one_aov)
+```
+
+:::
+
 ## 2-Way ANOVA
 
+::: panel-tabset
+
+### Code
+
+```{r}
+#| eval: false
+two_aov <- df %>% aov(len ~ dose*supp, .)
+Anova(two_aov)
+```
+
+
+### Output
+
+```{r}
+#| echo: false
+two_aov <- df %>% aov(len ~ dose*supp, .)
+Anova(two_aov)
+```
+
+
 ## Diagnostics
+
+::: panel-tabset
+
+### Linearity
+
+```{r}
+plot(two_aov, 1)
+```
+
+### Constant Vaiances
+
+```{r}
+leveneTest(two_aov)
+```
+
+### Normality
+
+```{r}
+plot(two_aov, 2)
+```
+
+### Normality
+
+```{r}
+shapiro.test(resid(two_aov))
+```
+:::
+
+## TukeyHSD
+
+```{r}
+TukeyHSD(two_aov)
+```
+
+
+

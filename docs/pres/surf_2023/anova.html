@@ -36,6 +36,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -796,23 +861,244 @@
 </ul>
 </div>
 </section>
+<section id="data-and-packages" class="slide level2">
+<h2>Data and Packages</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(car)</span>
+<span id="cb1-3"><a href="#cb1-3"></a>df <span class="ot">&lt;-</span> ToothGrowth <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">dose =</span> <span class="fu">as.character</span>(dose))</span>
+<span id="cb1-4"><a href="#cb1-4"></a>df <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;       len        supp        dose          
+#&gt;  Min.   : 4.20   OJ:30   Length:60         
+#&gt;  1st Qu.:13.07   VC:30   Class :character  
+#&gt;  Median :19.25           Mode  :character  
+#&gt;  Mean   :18.81                             
+#&gt;  3rd Qu.:25.27                             
+#&gt;  Max.   :33.90</code></pre>
+</div>
+</div>
+</section>
 <section id="grouped-statistics" class="slide level2">
 <h2>Grouped Statistics</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">R Code</a></li><li><a href="#tabset-1-2">Output</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>summary_df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(supp, dose) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(len), </span>
+<span id="cb3-2"><a href="#cb3-2"></a>                                       <span class="at">sd =</span> <span class="fu">sd</span>(len)) </span>
+<span id="cb3-3"><a href="#cb3-3"></a>summary_df <span class="sc">%&gt;%</span> print</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; # A tibble: 6 × 4
+#&gt; # Groups:   supp [2]
+#&gt;   supp  dose   mean    sd
+#&gt;   &lt;fct&gt; &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt;
+#&gt; 1 OJ    0.5   13.2   4.46
+#&gt; 2 OJ    1     22.7   3.91
+#&gt; 3 OJ    2     26.1   2.66
+#&gt; 4 VC    0.5    7.98  2.75
+#&gt; 5 VC    1     16.8   2.52
+#&gt; 6 VC    2     26.1   4.80</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="graphical-visualization" class="slide level2">
 <h2>Graphical Visualization</h2>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Code</a></li><li><a href="#tabset-2-2">Output</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>supp, </span>
+<span id="cb5-2"><a href="#cb5-2"></a>                  <span class="at">y =</span> len, </span>
+<span id="cb5-3"><a href="#cb5-3"></a>                  <span class="at">color =</span> dose)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a>        <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="anova_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="t-test" class="slide level2">
-<h2>t-test</h2>
+<section id="graphical-output" class="slide level2">
+<h2>Graphical Output</h2>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Code</a></li><li><a href="#tabset-3-2">Output</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.numeric</span>(dose), </span>
+<span id="cb6-2"><a href="#cb6-2"></a>                  <span class="at">y =</span> len,</span>
+<span id="cb6-3"><a href="#cb6-3"></a>                  <span class="at">color =</span> supp)) <span class="sc">+</span> </span>
+<span id="cb6-4"><a href="#cb6-4"></a>        <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a>        <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.numeric</span>(dose),</span>
+<span id="cb6-6"><a href="#cb6-6"></a>                      <span class="at">y =</span> mean,</span>
+<span id="cb6-7"><a href="#cb6-7"></a>                      <span class="at">color =</span> supp),</span>
+<span id="cb6-8"><a href="#cb6-8"></a>                  summary_df) <span class="sc">+</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a>        <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-3-2">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="anova_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="way-anova-1" class="slide level2">
 <h2>1-Way ANOVA</h2>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Code</a></li><li><a href="#tabset-4-2">Output</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>one_aov <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">aov</span>(len <span class="sc">~</span> dose, .)</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">Anova</span>(one_aov)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-4-2">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; Anova Table (Type II tests)
+#&gt; 
+#&gt; Response: len
+#&gt;           Sum Sq Df F value    Pr(&gt;F)    
+#&gt; dose      2426.4  2  67.416 9.533e-16 ***
+#&gt; Residuals 1025.8 57                      
+#&gt; ---
+#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="way-anova-2" class="slide level2">
 <h2>2-Way ANOVA</h2>
+<p>::: panel-tabset</p>
+<h3 id="code-3">Code</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>two_aov <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">aov</span>(len <span class="sc">~</span> dose<span class="sc">*</span>supp, .)</span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">Anova</span>(two_aov)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<h3 id="output-4">Output</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; Anova Table (Type II tests)
+#&gt; 
+#&gt; Response: len
+#&gt;            Sum Sq Df F value    Pr(&gt;F)    
+#&gt; dose      2426.43  2  92.000 &lt; 2.2e-16 ***
+#&gt; supp       205.35  1  15.572 0.0002312 ***
+#&gt; dose:supp  108.32  2   4.107 0.0218603 *  
+#&gt; Residuals  712.11 54                      
+#&gt; ---
+#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
 </section>
 <section id="diagnostics" class="slide level2">
 <h2>Diagnostics</h2>
+<div class="panel-tabset">
+<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">Linearity</a></li><li><a href="#tabset-5-2">Constant Vaiances</a></li><li><a href="#tabset-5-3">Normality</a></li><li><a href="#tabset-5-4">Normality</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">plot</span>(two_aov, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="anova_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
+</div>
+</div>
+</div>
+<div id="tabset-5-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">leveneTest</span>(two_aov)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; Levene's Test for Homogeneity of Variance (center = median)
+#&gt;       Df F value Pr(&gt;F)
+#&gt; group  5  1.7086 0.1484
+#&gt;       54</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-5-3">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">plot</span>(two_aov, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="anova_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
+</div>
+</div>
+</div>
+<div id="tabset-5-4">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">shapiro.test</span>(<span class="fu">resid</span>(two_aov))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; 
+#&gt;  Shapiro-Wilk normality test
+#&gt; 
+#&gt; data:  resid(two_aov)
+#&gt; W = 0.98499, p-value = 0.6694</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="tukeyhsd" class="slide level2">
+<h2>TukeyHSD</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">TukeyHSD</span>(two_aov)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt;   Tukey multiple comparisons of means
+#&gt;     95% family-wise confidence level
+#&gt; 
+#&gt; Fit: aov(formula = len ~ dose * supp, data = .)
+#&gt; 
+#&gt; $dose
+#&gt;         diff       lwr       upr   p adj
+#&gt; 1-0.5  9.130  6.362488 11.897512 0.0e+00
+#&gt; 2-0.5 15.495 12.727488 18.262512 0.0e+00
+#&gt; 2-1    6.365  3.597488  9.132512 2.7e-06
+#&gt; 
+#&gt; $supp
+#&gt;       diff       lwr       upr     p adj
+#&gt; VC-OJ -3.7 -5.579828 -1.820172 0.0002312
+#&gt; 
+#&gt; $`dose:supp`
+#&gt;                 diff        lwr         upr     p adj
+#&gt; 1:OJ-0.5:OJ     9.47   4.671876  14.2681238 0.0000046
+#&gt; 2:OJ-0.5:OJ    12.83   8.031876  17.6281238 0.0000000
+#&gt; 0.5:VC-0.5:OJ  -5.25 -10.048124  -0.4518762 0.0242521
+#&gt; 1:VC-0.5:OJ     3.54  -1.258124   8.3381238 0.2640208
+#&gt; 2:VC-0.5:OJ    12.91   8.111876  17.7081238 0.0000000
+#&gt; 2:OJ-1:OJ       3.36  -1.438124   8.1581238 0.3187361
+#&gt; 0.5:VC-1:OJ   -14.72 -19.518124  -9.9218762 0.0000000
+#&gt; 1:VC-1:OJ      -5.93 -10.728124  -1.1318762 0.0073930
+#&gt; 2:VC-1:OJ       3.44  -1.358124   8.2381238 0.2936430
+#&gt; 0.5:VC-2:OJ   -18.08 -22.878124 -13.2818762 0.0000000
+#&gt; 1:VC-2:OJ      -9.29 -14.088124  -4.4918762 0.0000069
+#&gt; 2:VC-2:OJ       0.08  -4.718124   4.8781238 1.0000000
+#&gt; 1:VC-0.5:VC     8.79   3.991876  13.5881238 0.0000210
+#&gt; 2:VC-0.5:VC    18.16  13.361876  22.9581238 0.0000000
+#&gt; 2:VC-1:VC       9.37   4.571876  14.1681238 0.0000058</code></pre>
+</div>
+</div>
 
 <div class="footer footer-default">
 <p><a href="https://www.inqs.info/pres/surf_2023/anova.html" class="uri">https://www.inqs.info/pres/surf_2023/anova.html</a></p>
