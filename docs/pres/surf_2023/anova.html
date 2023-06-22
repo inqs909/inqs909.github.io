@@ -455,11 +455,13 @@
 </section>
 <section id="test-statistic" class="slide level2">
 <h2>Test Statistic</h2>
-<p>A test statistic determines the quantifies the distance of the observed <span class="math inline">\(\hat\mu\)</span> with the hypothesized mean <span class="math inline">\(\mu_0\)</span>, assuming null hypothesis is true.</p>
+<p>A test statistic quantifies the distance of the observed <span class="math inline">\(\hat\mu\)</span> with the hypothesized mean <span class="math inline">\(\mu_0\)</span>, assuming null hypothesis is true.</p>
 </section>
 <section id="rejection-region" class="slide level2">
 <h2>Rejection Region</h2>
-<p>The rejection region is determined by our <span class="math inline">\(\alpha\)</span> value. <span class="math inline">\(\alpha\)</span> determines the probability you are willing to be wrong if you reject the null hypothesis. This probability is something you want to set yourself at the beginning of a study. In general, the majority of researched set this to be <span class="math inline">\(\alpha=0.05\)</span>.</p>
+<p>The rejection region is determined by our <span class="math inline">\(\alpha\)</span> value.</p>
+<p><span class="math inline">\(\alpha\)</span> determines the probability you are willing to be wrong if you reject the null hypothesis.</p>
+<p>This probability is something you want to set yourself at the beginning of a study. In general, the majority of researchers set it to be <span class="math inline">\(\alpha=0.05\)</span>.</p>
 </section>
 <section id="side-vs-2-side-tests" class="slide level2">
 <h2>1-Side vs 2-Side Tests</h2>
@@ -895,9 +897,10 @@
 </div>
 <div id="tabset-1-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>summary_df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(supp, dose) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(len), </span>
-<span id="cb3-2"><a href="#cb3-2"></a>                                       <span class="at">sd =</span> <span class="fu">sd</span>(len)) </span>
-<span id="cb3-3"><a href="#cb3-3"></a>summary_df <span class="sc">%&gt;%</span> print</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>summary_df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(supp, dose) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="#cb3-2"></a>                  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(len), </span>
+<span id="cb3-3"><a href="#cb3-3"></a>                            <span class="at">sd =</span> <span class="fu">sd</span>(len)) </span>
+<span id="cb3-4"><a href="#cb3-4"></a>summary_df <span class="sc">%&gt;%</span> print</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-1-3">
@@ -1008,8 +1011,8 @@
 </div>
 </div>
 </section>
-<section id="way-anova-2" class="slide level2">
-<h2>2-Way ANOVA</h2>
+<section id="way-anova-interaction-included" class="slide level2">
+<h2>2-Way ANOVA: Interaction Included</h2>
 <div class="panel-tabset">
 <ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">Description</a></li><li><a href="#tabset-5-2">Code</a></li><li><a href="#tabset-5-3">Output</a></li></ul>
 <div class="tab-content">
@@ -1101,7 +1104,7 @@
 <section id="diagnostics" class="slide level2">
 <h2>Diagnostics</h2>
 <div class="panel-tabset">
-<ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1">Linearity</a></li><li><a href="#tabset-7-2">Constant Vaiances</a></li><li><a href="#tabset-7-3">Normality</a></li><li><a href="#tabset-7-4">Normality</a></li></ul>
+<ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1">Linearity</a></li><li><a href="#tabset-7-2">Constant Variances</a></li><li><a href="#tabset-7-3">Normality</a></li><li><a href="#tabset-7-4">Normality</a></li></ul>
 <div class="tab-content">
 <div id="tabset-7-1">
 <div class="cell">
@@ -1147,8 +1150,8 @@
 </div>
 </div>
 </section>
-<section id="tukeyhsd" class="slide level2">
-<h2>TukeyHSD</h2>
+<section id="tukey-hsd" class="slide level2">
+<h2>Tukey HSD</h2>
 <div class="panel-tabset">
 <ul id="tabset-8" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-8-1">Tukey HSD</a></li><li><a href="#tabset-8-2">Comparison Plot</a></li></ul>
 <div class="tab-content">

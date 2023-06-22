@@ -61,11 +61,15 @@ To conduct a hypothesis test, we compute a test statistic based on the distribut
 
 ## Test Statistic
 
-A test statistic determines the quantifies the distance of the observed $\hat\mu$ with the hypothesized mean $\mu_0$, assuming null hypothesis is true.
+A test statistic quantifies the distance of the observed $\hat\mu$ with the hypothesized mean $\mu_0$, assuming null hypothesis is true.
 
 ## Rejection Region
 
-The rejection region is determined by our $\alpha$ value. $\alpha$ determines the probability you are willing to be wrong if you reject the null hypothesis. This probability is something you want to set yourself at the beginning of a study. In general, the majority of researched set this to be $\alpha=0.05$.
+The rejection region is determined by our $\alpha$ value.
+
+$\alpha$ determines the probability you are willing to be wrong if you reject the null hypothesis.
+
+This probability is something you want to set yourself at the beginning of a study. In general, the majority of researchers set it to be $\alpha=0.05$.
 
 ## 1-Side vs 2-Side Tests
 
@@ -261,12 +265,11 @@ df %>% summary()
 
 ## ToothGrowth Data
 
-The `ToothGrowth` data is built in R for further analysis. It provides the length (`len`) tooth cells in 60 guinea pigs. It measures whether dosage (`dose`: 0.5, 1, 2), and/or supplement (`supp`: OJ or VC) has an affect on tooth cells. Researchers are also interested if there is an interaction between supplement and dose. 
+The `ToothGrowth` data is built in R for further analysis. It provides the length (`len`) tooth cells in 60 guinea pigs. It measures whether dosage (`dose`: 0.5, 1, 2), and/or supplement (`supp`: OJ or VC) has an affect on tooth cells. Researchers are also interested if there is an interaction between supplement and dose.
 
 ## Grouped Statistics
 
 ::: panel-tabset
-
 ### Description
 
 We will need to obtain basic descriptive statistics on cell length for each group (dosage and supplement).
@@ -276,8 +279,9 @@ We will need to obtain basic descriptive statistics on cell length for each grou
 ```{r}
 #| eval: false
 
-summary_df <- df %>% group_by(supp, dose) %>% summarize(mean = mean(len), 
-                                       sd = sd(len)) 
+summary_df <- df %>% group_by(supp, dose) %>% 
+                  summarize(mean = mean(len), 
+                            sd = sd(len)) 
 summary_df %>% print
 ```
 
@@ -294,7 +298,6 @@ summary_df %>% print
 ## Graphical Visualization
 
 ::: panel-tabset
-
 ### Description
 
 Create Boxplots to show the relationship of length data with respect to dosage and supplement.
@@ -325,7 +328,6 @@ df %>% ggplot(aes(x=supp,
 ## Graphical Output
 
 ::: panel-tabset
-
 ### Description
 
 Create a scatter and line plot to display relationship with dosage and supplement by length.
@@ -366,7 +368,6 @@ df %>% ggplot(aes(x = as.numeric(dose),
 ## 1-Way ANOVA
 
 ::: panel-tabset
-
 ### Description
 
 Conduct a 1-way anova using the `aov()` function and obtain the ANOVA table using the `anova()` function. Testing whether dosage has an effect on tooth length. Note, keep dosage as a character variable in R because it is numeric.
@@ -388,10 +389,9 @@ anova(one_aov)
 ```
 :::
 
-## 2-Way ANOVA
+## 2-Way ANOVA: Interaction Included
 
 ::: panel-tabset
-
 ### Description
 
 Conduct a 2-way ANOVA using the `aov()` function and obtain the ANOVA table using the `anova()` function. Testing whether dosage has an effect on tooth length. We are also incorporating an interaction term.
@@ -418,7 +418,6 @@ Anova(two_aov, type = 3)
 ## 2-way ANOVA: No Interaction
 
 ::: panel-tabset
-
 ### Description
 
 Conduct a 2-way ANOVA using the `aov()` function and obtain the ANOVA table using the `Anova()` function. Testing whether dosage has an effect on tooth length. We are also excluding an interaction term.
@@ -440,7 +439,6 @@ anova(two_aov_add)
 ```
 :::
 
-
 ## Diagnostics
 
 ::: panel-tabset
@@ -450,7 +448,7 @@ anova(two_aov_add)
 plot(two_aov, 1)
 ```
 
-### Constant Vaiances
+### Constant Variances
 
 ```{r}
 leveneTest(two_aov)
@@ -471,19 +469,16 @@ shapiro.test(resid(two_aov))
 ```
 
 Fail to Reject $H_0$ is good here!
-
 :::
 
-## TukeyHSD
+## Tukey HSD
 
 ::: panel-tabset
-
 ### Tukey HSD
 
 ```{r}
 TukeyHSD(two_aov)
 ```
-
 
 ### Comparison Plot
 
@@ -501,6 +496,4 @@ df %>% ggplot(aes(x = as.numeric(dose),
         theme_bw()
 
 ```
-
-
 :::
