@@ -32,7 +32,7 @@
     "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
     "title": "RcppArmadillo",
     "section": "Using RcppArmadillo",
-    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] -0.03190561\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] -0.03190561\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.24µs   3.47µs   268781.        0B     26.9\n2 mean_cpp(Y)   1.83µs   2.74µs   380912.    7.67KB      0  \n\n\nYou can see that the cpp function is much faster than the R built-in function."
+    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] -0.006736312\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] -0.006736312\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.24µs   3.51µs   268744.        0B     26.9\n2 mean_cpp(Y)   1.84µs   2.78µs   370495.    7.67KB      0  \n\n\nYou can see that the cpp function is much faster than the R built-in function."
   },
   {
     "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
@@ -725,14 +725,14 @@
     "href": "pres/surf_2023/anova.html#rejecting-the-null-hypothesis",
     "title": "One- & Two-Way ANOVA",
     "section": "Rejecting the Null Hypothesis",
-    "text": "Rejecting the Null Hypothesis\nThe p-value approach is one of the most common methods to report significant results. It is easier to interpret the p-value because it provides the probability of observing our test statistics, or something more extreme, given that the null hypothesis is true. Depending on the type of test, your p-value may be constructed as:\n\n\n\nAlternative Hypothesis\np-value\n\n\n\n\n\\(\\mu&gt;\\mu_0\\)\n\\(P(X&gt;T(x))=p\\)\n\n\n\\(\\mu&lt;\\mu_0\\)\n\\(P(X&lt;T(x))=p\\)\n\n\n\\(\\mu\\ne\\mu_0\\)\n\\(2\\times P(X&gt;|T(X)|)=p\\)\n\n\n\nIf \\(p &lt; \\alpha\\), then you reject \\(H_0\\); otherwise, you will fail to reject \\(H_0\\)."
+    "text": "Rejecting the Null Hypothesis\nThe p-value approach is one of the most common methods to report significant results. It is easier to interpret the p-value because it provides the probability of observing our test statistics, or something more extreme, given that the null hypothesis is true. Depending on the type of test, your p-value may be constructed as:\n\n\n\nAlternative Hypothesis\np-value\n\n\n\n\n\\(\\mu&gt;\\mu_0\\)\n\\(P(Y&gt;T(x))=p\\)\n\n\n\\(\\mu&lt;\\mu_0\\)\n\\(P(Y&lt;T(x))=p\\)\n\n\n\\(\\mu\\ne\\mu_0\\)\n\\(2\\times P(Y&gt;|T(x)|)=p\\)\n\n\n\nIf \\(p &lt; \\alpha\\), then you reject \\(H_0\\); otherwise, you will fail to reject \\(H_0\\)."
   },
   {
     "objectID": "pres/surf_2023/anova.html#analysis-of-variance",
     "href": "pres/surf_2023/anova.html#analysis-of-variance",
     "title": "One- & Two-Way ANOVA",
     "section": "Analysis of Variance",
-    "text": "Analysis of Variance\nAnalysis of variance (ANOVA) tests to whether there is a difference between a collection of means while we control the family-wise error rate."
+    "text": "Analysis of Variance\nAnalysis of variance (ANOVA) tests to whether there is a difference between a collection of means (experimental variable) while we control the family-wise error rate."
   },
   {
     "objectID": "pres/surf_2023/anova.html#hypothesis",
@@ -802,7 +802,7 @@
     "href": "pres/surf_2023/anova.html#way-anova",
     "title": "One- & Two-Way ANOVA",
     "section": "2-way ANOVA",
-    "text": "2-way ANOVA\nTwo-way ANOVA is a one-way ANOVA that was adjusted by a grouping variable."
+    "text": "2-way ANOVA\nTwo-way ANOVA is a one-way ANOVA that was adjusted by a grouping variable.\nA two-way ANOVA will test whether the if interaction between the experimental and control variable affects mean of outcomes, if the experimental variable affects the means of outcomes, and the control variables affects the means of outcomes."
   },
   {
     "objectID": "pres/surf_2023/anova.html#anova-table-1",
@@ -816,7 +816,7 @@
     "href": "pres/surf_2023/anova.html#order-of-analysis",
     "title": "One- & Two-Way ANOVA",
     "section": "Order of Analysis",
-    "text": "Order of Analysis\n\n\\(H_0:\\) No interaction Effect\n\nReject \\(H_0:\\) Conduct 1-way Anova\nOtherwise: Remove from model and move on to next step\n\n\\(H_0:\\) No Adjustment Effect\n\nReject \\(H_0:\\) Keep in model, move on to next step\nOtherwise: Remove from model, move one to next step\n\n\\(H_0\\): No Experimental Group Effect\n\nReject \\(H_0:\\) Move on to multiple comparison"
+    "text": "Order of Analysis\n\n\\(H_0:\\) No interaction Effect\n\nReject \\(H_0:\\) Conduct multiple comparisons tests\nOtherwise: Remove interaction from the model and move on to next step\n\n\\(H_0:\\) No Control Effect\n\nReject \\(H_0:\\) Keep in model, move on to next step\nOtherwise: Remove control variable from model, move one to next step\n\n\\(H_0\\): No Experimental Group Effect\n\nReject \\(H_0:\\) Conduct multiple comparison tests\nOtherwise: Check if control variable makes experimental variable significant. If so, use model with both experimental and control variable and run multiple comparison tests."
   },
   {
     "objectID": "pres/surf_2023/anova.html#data-and-packages",
@@ -826,53 +826,67 @@
     "text": "Data and Packages\n\nlibrary(tidyverse)\nlibrary(car)\ndf &lt;- ToothGrowth %&gt;% mutate(dose = as.character(dose))\ndf %&gt;% summary()\n\n#&gt;       len        supp        dose          \n#&gt;  Min.   : 4.20   OJ:30   Length:60         \n#&gt;  1st Qu.:13.07   VC:30   Class :character  \n#&gt;  Median :19.25           Mode  :character  \n#&gt;  Mean   :18.81                             \n#&gt;  3rd Qu.:25.27                             \n#&gt;  Max.   :33.90"
   },
   {
+    "objectID": "pres/surf_2023/anova.html#toothgrowth-data",
+    "href": "pres/surf_2023/anova.html#toothgrowth-data",
+    "title": "One- & Two-Way ANOVA",
+    "section": "ToothGrowth Data",
+    "text": "ToothGrowth Data\nThe ToothGrowth data is built in R for further analysis. It provides the length (len) tooth cells in 60 guinea pigs. It measures whether dosage (dose: 0.5, 1, 2), and/or supplement (supp: OJ or VC) has an affect on tooth cells. Researchers are also interested if there is an interaction between supplement and dose."
+  },
+  {
     "objectID": "pres/surf_2023/anova.html#grouped-statistics",
     "href": "pres/surf_2023/anova.html#grouped-statistics",
     "title": "One- & Two-Way ANOVA",
     "section": "Grouped Statistics",
-    "text": "Grouped Statistics\n\nR CodeOutput\n\n\n\nsummary_df &lt;- df %&gt;% group_by(supp, dose) %&gt;% summarize(mean = mean(len), \n                                       sd = sd(len)) \nsummary_df %&gt;% print\n\n\n\n\n\n#&gt; # A tibble: 6 × 4\n#&gt; # Groups:   supp [2]\n#&gt;   supp  dose   mean    sd\n#&gt;   &lt;fct&gt; &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt;\n#&gt; 1 OJ    0.5   13.2   4.46\n#&gt; 2 OJ    1     22.7   3.91\n#&gt; 3 OJ    2     26.1   2.66\n#&gt; 4 VC    0.5    7.98  2.75\n#&gt; 5 VC    1     16.8   2.52\n#&gt; 6 VC    2     26.1   4.80"
+    "text": "Grouped Statistics\n\nDescriptionR CodeOutput\n\n\nWe will need to obtain basic descriptive statistics on cell length for each group (dosage and supplement).\n\n\n\nsummary_df &lt;- df %&gt;% group_by(supp, dose) %&gt;% summarize(mean = mean(len), \n                                       sd = sd(len)) \nsummary_df %&gt;% print\n\n\n\n\n\n#&gt; # A tibble: 6 × 4\n#&gt; # Groups:   supp [2]\n#&gt;   supp  dose   mean    sd\n#&gt;   &lt;fct&gt; &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt;\n#&gt; 1 OJ    0.5   13.2   4.46\n#&gt; 2 OJ    1     22.7   3.91\n#&gt; 3 OJ    2     26.1   2.66\n#&gt; 4 VC    0.5    7.98  2.75\n#&gt; 5 VC    1     16.8   2.52\n#&gt; 6 VC    2     26.1   4.80"
   },
   {
     "objectID": "pres/surf_2023/anova.html#graphical-visualization",
     "href": "pres/surf_2023/anova.html#graphical-visualization",
     "title": "One- & Two-Way ANOVA",
     "section": "Graphical Visualization",
-    "text": "Graphical Visualization\n\nCodeOutput\n\n\n\ndf %&gt;% ggplot(aes(x=supp, \n                  y = len, \n                  color = dose)) + geom_boxplot() +\n        theme_bw()"
+    "text": "Graphical Visualization\n\nDescriptionCodeOutput\n\n\nCreate Boxplots to show the relationship of length data with respect to dosage and supplement.\n\n\n\ndf %&gt;% ggplot(aes(x=supp, \n                  y = len, \n                  color = dose)) + geom_boxplot() +\n        theme_bw()"
   },
   {
     "objectID": "pres/surf_2023/anova.html#graphical-output",
     "href": "pres/surf_2023/anova.html#graphical-output",
     "title": "One- & Two-Way ANOVA",
     "section": "Graphical Output",
-    "text": "Graphical Output\n\nCodeOutput\n\n\n\ndf %&gt;% ggplot(aes(x = as.numeric(dose), \n                  y = len,\n                  color = supp)) + \n        geom_point() +\n        geom_line(aes(x = as.numeric(dose),\n                      y = mean,\n                      color = supp),\n                  summary_df) +\n        theme_bw()"
+    "text": "Graphical Output\n\nDescriptionCodeOutput\n\n\nCreate a scatter and line plot to display relationship with dosage and supplement by length.\n\n\n\ndf %&gt;% ggplot(aes(x = as.numeric(dose), \n                  y = len,\n                  color = supp)) + \n        geom_point() +\n        geom_line(aes(x = as.numeric(dose),\n                      y = mean,\n                      color = supp),\n                  summary_df) +\n        xlab(\"Dosage\") +\n        theme_bw()"
   },
   {
     "objectID": "pres/surf_2023/anova.html#way-anova-1",
     "href": "pres/surf_2023/anova.html#way-anova-1",
     "title": "One- & Two-Way ANOVA",
     "section": "1-Way ANOVA",
-    "text": "1-Way ANOVA\n\nCodeOutput\n\n\n\none_aov &lt;- df %&gt;% aov(len ~ dose, .)\nAnova(one_aov)\n\n\n\n\n\n#&gt; Anova Table (Type II tests)\n#&gt; \n#&gt; Response: len\n#&gt;           Sum Sq Df F value    Pr(&gt;F)    \n#&gt; dose      2426.4  2  67.416 9.533e-16 ***\n#&gt; Residuals 1025.8 57                      \n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+    "text": "1-Way ANOVA\n\nDescriptionCodeOutput\n\n\nConduct a 1-way anova using the aov() function and obtain the ANOVA table using the anova() function. Testing whether dosage has an effect on tooth length. Note, keep dosage as a character variable in R because it is numeric.\n\n\n\none_aov &lt;- aov(len ~ dose, df)\nanova(one_aov)\n\n\n\n\n\n#&gt; Analysis of Variance Table\n#&gt; \n#&gt; Response: len\n#&gt;           Df Sum Sq Mean Sq F value    Pr(&gt;F)    \n#&gt; dose       2 2426.4  1213.2  67.416 9.533e-16 ***\n#&gt; Residuals 57 1025.8    18.0                      \n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
   },
   {
     "objectID": "pres/surf_2023/anova.html#way-anova-2",
     "href": "pres/surf_2023/anova.html#way-anova-2",
     "title": "One- & Two-Way ANOVA",
     "section": "2-Way ANOVA",
-    "text": "2-Way ANOVA\n::: panel-tabset\nCode\n\ntwo_aov &lt;- df %&gt;% aov(len ~ dose*supp, .)\nAnova(two_aov)\n\nOutput\n\n\n#&gt; Anova Table (Type II tests)\n#&gt; \n#&gt; Response: len\n#&gt;            Sum Sq Df F value    Pr(&gt;F)    \n#&gt; dose      2426.43  2  92.000 &lt; 2.2e-16 ***\n#&gt; supp       205.35  1  15.572 0.0002312 ***\n#&gt; dose:supp  108.32  2   4.107 0.0218603 *  \n#&gt; Residuals  712.11 54                      \n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+    "text": "2-Way ANOVA\n\nDescriptionCodeOutput\n\n\nConduct a 2-way ANOVA using the aov() function and obtain the ANOVA table using the anova() function. Testing whether dosage has an effect on tooth length. We are also incorporating an interaction term.\n\n\n\ntwo_aov &lt;- aov(len ~ dose * supp, df)\nanova(two_aov)\n\n\n\n\n\n#&gt; Analysis of Variance Table\n#&gt; \n#&gt; Response: len\n#&gt;           Df  Sum Sq Mean Sq F value    Pr(&gt;F)    \n#&gt; dose       2 2426.43 1213.22  92.000 &lt; 2.2e-16 ***\n#&gt; supp       1  205.35  205.35  15.572 0.0002312 ***\n#&gt; dose:supp  2  108.32   54.16   4.107 0.0218603 *  \n#&gt; Residuals 54  712.11   13.19                      \n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n#&gt; Anova Table (Type II tests)\n#&gt; \n#&gt; Response: len\n#&gt;            Sum Sq Df F value    Pr(&gt;F)    \n#&gt; dose      2426.43  2  92.000 &lt; 2.2e-16 ***\n#&gt; supp       205.35  1  15.572 0.0002312 ***\n#&gt; dose:supp  108.32  2   4.107 0.0218603 *  \n#&gt; Residuals  712.11 54                      \n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n#&gt; Anova Table (Type III tests)\n#&gt; \n#&gt; Response: len\n#&gt;              Sum Sq Df F value    Pr(&gt;F)    \n#&gt; (Intercept) 1750.33  1 132.730 3.603e-16 ***\n#&gt; dose         885.26  2  33.565 3.363e-10 ***\n#&gt; supp         137.81  1  10.450  0.002092 ** \n#&gt; dose:supp    108.32  2   4.107  0.021860 *  \n#&gt; Residuals    712.11 54                      \n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#way-anova-no-interaction",
+    "href": "pres/surf_2023/anova.html#way-anova-no-interaction",
+    "title": "One- & Two-Way ANOVA",
+    "section": "2-way ANOVA: No Interaction",
+    "text": "2-way ANOVA: No Interaction\n\nDescriptionCodeOutput\n\n\nConduct a 2-way ANOVA using the aov() function and obtain the ANOVA table using the Anova() function. Testing whether dosage has an effect on tooth length. We are also excluding an interaction term.\n\n\n\ntwo_aov_add &lt;- aov(len ~ dose + supp, df)\nanova(two_aov_add)\n\n\n\n\n\n#&gt; Analysis of Variance Table\n#&gt; \n#&gt; Response: len\n#&gt;           Df  Sum Sq Mean Sq F value    Pr(&gt;F)    \n#&gt; dose       2 2426.43 1213.22  82.811 &lt; 2.2e-16 ***\n#&gt; supp       1  205.35  205.35  14.017 0.0004293 ***\n#&gt; Residuals 56  820.43   14.65                      \n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
   },
   {
     "objectID": "pres/surf_2023/anova.html#diagnostics",
     "href": "pres/surf_2023/anova.html#diagnostics",
     "title": "One- & Two-Way ANOVA",
     "section": "Diagnostics",
-    "text": "Diagnostics\n\nLinearityConstant VaiancesNormalityNormality\n\n\n\nplot(two_aov, 1)\n\n\n\n\n\n\n\nleveneTest(two_aov)\n\n#&gt; Levene's Test for Homogeneity of Variance (center = median)\n#&gt;       Df F value Pr(&gt;F)\n#&gt; group  5  1.7086 0.1484\n#&gt;       54\n\n\n\n\n\nplot(two_aov, 2)\n\n\n\n\n\n\n\nshapiro.test(resid(two_aov))\n\n#&gt; \n#&gt;  Shapiro-Wilk normality test\n#&gt; \n#&gt; data:  resid(two_aov)\n#&gt; W = 0.98499, p-value = 0.6694"
+    "text": "Diagnostics\n\nLinearityConstant VaiancesNormalityNormality\n\n\n\nplot(two_aov, 1)\n\n\n\n\n\n\n\nleveneTest(two_aov)\n\n#&gt; Levene's Test for Homogeneity of Variance (center = median)\n#&gt;       Df F value Pr(&gt;F)\n#&gt; group  5  1.7086 0.1484\n#&gt;       54\n\n\nFail to Reject \\(H_0\\) is good here!\n\n\n\nplot(two_aov, 2)\n\n\n\n\n\n\n\nshapiro.test(resid(two_aov))\n\n#&gt; \n#&gt;  Shapiro-Wilk normality test\n#&gt; \n#&gt; data:  resid(two_aov)\n#&gt; W = 0.98499, p-value = 0.6694\n\n\nFail to Reject \\(H_0\\) is good here!"
   },
   {
     "objectID": "pres/surf_2023/anova.html#tukeyhsd",
     "href": "pres/surf_2023/anova.html#tukeyhsd",
     "title": "One- & Two-Way ANOVA",
     "section": "TukeyHSD",
-    "text": "TukeyHSD\n\nTukeyHSD(two_aov)\n\n#&gt;   Tukey multiple comparisons of means\n#&gt;     95% family-wise confidence level\n#&gt; \n#&gt; Fit: aov(formula = len ~ dose * supp, data = .)\n#&gt; \n#&gt; $dose\n#&gt;         diff       lwr       upr   p adj\n#&gt; 1-0.5  9.130  6.362488 11.897512 0.0e+00\n#&gt; 2-0.5 15.495 12.727488 18.262512 0.0e+00\n#&gt; 2-1    6.365  3.597488  9.132512 2.7e-06\n#&gt; \n#&gt; $supp\n#&gt;       diff       lwr       upr     p adj\n#&gt; VC-OJ -3.7 -5.579828 -1.820172 0.0002312\n#&gt; \n#&gt; $`dose:supp`\n#&gt;                 diff        lwr         upr     p adj\n#&gt; 1:OJ-0.5:OJ     9.47   4.671876  14.2681238 0.0000046\n#&gt; 2:OJ-0.5:OJ    12.83   8.031876  17.6281238 0.0000000\n#&gt; 0.5:VC-0.5:OJ  -5.25 -10.048124  -0.4518762 0.0242521\n#&gt; 1:VC-0.5:OJ     3.54  -1.258124   8.3381238 0.2640208\n#&gt; 2:VC-0.5:OJ    12.91   8.111876  17.7081238 0.0000000\n#&gt; 2:OJ-1:OJ       3.36  -1.438124   8.1581238 0.3187361\n#&gt; 0.5:VC-1:OJ   -14.72 -19.518124  -9.9218762 0.0000000\n#&gt; 1:VC-1:OJ      -5.93 -10.728124  -1.1318762 0.0073930\n#&gt; 2:VC-1:OJ       3.44  -1.358124   8.2381238 0.2936430\n#&gt; 0.5:VC-2:OJ   -18.08 -22.878124 -13.2818762 0.0000000\n#&gt; 1:VC-2:OJ      -9.29 -14.088124  -4.4918762 0.0000069\n#&gt; 2:VC-2:OJ       0.08  -4.718124   4.8781238 1.0000000\n#&gt; 1:VC-0.5:VC     8.79   3.991876  13.5881238 0.0000210\n#&gt; 2:VC-0.5:VC    18.16  13.361876  22.9581238 0.0000000\n#&gt; 2:VC-1:VC       9.37   4.571876  14.1681238 0.0000058\n\n\n\n\nhttps://www.inqs.info/pres/surf_2023/anova.html\n\n\n\n\n\n\n \n\n\nAnalysis of Variance"
+    "text": "TukeyHSD\n\nTukey HSDComparison Plot\n\n\n\nTukeyHSD(two_aov)\n\n#&gt;   Tukey multiple comparisons of means\n#&gt;     95% family-wise confidence level\n#&gt; \n#&gt; Fit: aov(formula = len ~ dose * supp, data = .)\n#&gt; \n#&gt; $dose\n#&gt;         diff       lwr       upr   p adj\n#&gt; 1-0.5  9.130  6.362488 11.897512 0.0e+00\n#&gt; 2-0.5 15.495 12.727488 18.262512 0.0e+00\n#&gt; 2-1    6.365  3.597488  9.132512 2.7e-06\n#&gt; \n#&gt; $supp\n#&gt;       diff       lwr       upr     p adj\n#&gt; VC-OJ -3.7 -5.579828 -1.820172 0.0002312\n#&gt; \n#&gt; $`dose:supp`\n#&gt;                 diff        lwr         upr     p adj\n#&gt; 1:OJ-0.5:OJ     9.47   4.671876  14.2681238 0.0000046\n#&gt; 2:OJ-0.5:OJ    12.83   8.031876  17.6281238 0.0000000\n#&gt; 0.5:VC-0.5:OJ  -5.25 -10.048124  -0.4518762 0.0242521\n#&gt; 1:VC-0.5:OJ     3.54  -1.258124   8.3381238 0.2640208\n#&gt; 2:VC-0.5:OJ    12.91   8.111876  17.7081238 0.0000000\n#&gt; 2:OJ-1:OJ       3.36  -1.438124   8.1581238 0.3187361\n#&gt; 0.5:VC-1:OJ   -14.72 -19.518124  -9.9218762 0.0000000\n#&gt; 1:VC-1:OJ      -5.93 -10.728124  -1.1318762 0.0073930\n#&gt; 2:VC-1:OJ       3.44  -1.358124   8.2381238 0.2936430\n#&gt; 0.5:VC-2:OJ   -18.08 -22.878124 -13.2818762 0.0000000\n#&gt; 1:VC-2:OJ      -9.29 -14.088124  -4.4918762 0.0000069\n#&gt; 2:VC-2:OJ       0.08  -4.718124   4.8781238 1.0000000\n#&gt; 1:VC-0.5:VC     8.79   3.991876  13.5881238 0.0000210\n#&gt; 2:VC-0.5:VC    18.16  13.361876  22.9581238 0.0000000\n#&gt; 2:VC-1:VC       9.37   4.571876  14.1681238 0.0000058\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://www.inqs.info/pres/surf_2023/anova.html\n\n\n\n\n\n\n \n\n\nAnalysis of Variance"
   },
   {
     "objectID": "presentations.html",
