@@ -37,7 +37,7 @@ format:
 
 ```{=tex}
 \begin{large}
-  {\bf EDUCATION}
+  {\bf Education}
   \vspace{3pt}
   \hrule
   \begin{multicols}{2}
@@ -121,7 +121,7 @@ format:
 \vspace{3pt}
 
 ```{=tex}
-\begin{large}{\bf EXPERIENCE}
+\begin{large}{\bf Experience}
   \vspace{3pt}
   \hrule
   \begin{multicols}{2}
@@ -296,7 +296,6 @@ format:
   \end{multicols}
   \vspace{-0.25cm}
 \end{large}
-\vspace{-0.16cm}
 ```
 -   STAT 127: Introduction to Quality Management
 -   STAT 147: Introduction to Statistical Computing
@@ -317,12 +316,10 @@ format:
   \end{multicols}
   \vspace{-0.25cm}
 \end{large}
-\vspace{-0.16cm}
 ```
 -   STAT 048: Introduction to Business Statistics
 -   STAT 100: Introduction to Statistics
 -   STAT 170: Regression and ANOVA
-
 
 \vspace{7pt}
 
@@ -343,8 +340,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
--   Developed, coordinated and mentored for the Statistical Mentoring in Applied, Research, and Technology (SMART) Program. Developed a mentoring program for undergraduate students to be mentored by graduate students for a quarter. Coordinated the pilot program in Spring 2021. Mentored an undergraduate student in developing an R package to teach advanced statistical
-techniques.
+-   Developed, coordinated and mentored for the Statistical Mentoring in Applied, Research, and Technology (SMART) Program. Developed a mentoring program for undergraduate students to be mentored by graduate students for a quarter. Coordinated the pilot program in Spring 2021. Mentored an undergraduate student in developing an R package to teach advanced statistical techniques.
 
 \vspace{7pt}
 
@@ -365,17 +361,15 @@ techniques.
 \end{large}
 \vspace{-0.16cm}
 ```
+-   Summer 2020: Taught Public Health and Geometry to underserved High School students from UC Riverside's Upward Bound Program. My responsibilities were to deliver instructions in a virtual setting. An R package was developed to teach public health concepts and programming simultaneously.
 
--   Summer 2020: Taught Public Health and Geometry to underserved High School students from UC Riverside’s Upward Bound Program. My responsibilities were to deliver instructions in a virtual setting. An R package was developed to teach public health concepts and programming simultaneously.
+-   Summer 2019: Taught Statistics and Data Analysis to underserved High School students from UC Riverside's Upward Bound Program. I was responsible in developing both the Statistics and Data Analysis course to teach students how to work with data. Students learned how to analyzed different types of data and how to program in R.
 
--   Summer 2019: Taught Statistics and Data Analysis to underserved High School students from UC Riverside’s Upward Bound Program. I was responsible in developing both the Statistics and Data Analysis course to teach students how to work with data. Students learned how to analyzed different types of data and how to program in R.
+-   Summer 2018: Taught Public Health, 2nd Year Research (STEM/Social Science/Humanities), and Math (Algebra 2, Pre-Calculus, and Calculus Levels) to underserved High School students from UC Riverside's Upward Bound Program. I was responsible in developing the Public Health course and challenge students perspectives about different communities. Second Year Research entailed advising students on their research projects in any field they chose.
 
--   Summer 2018: Taught Public Health, 2nd Year Research (STEM/Social Science/Humanities), and Math (Algebra 2, Pre-Calculus, and Calculus Levels) to underserved High School students from UC Riverside’s Upward Bound Program. I was responsible in developing the Public Health course and challenge students perspectives about different communities. Second Year Research entailed advising students on their research projects in any field they chose.
-
--   Summer 2017: Taught Epidemiology, Math Research, and Math/Science (Pre-Calculus and Calculus Levels) to underserved High School students from UC Riverside’s Upward Bound Program. I was responsible in developing the Epidemiology to help High School students develop there critical thinking skills and raise awareness of the different career options they could pursue.
+-   Summer 2017: Taught Epidemiology, Math Research, and Math/Science (Pre-Calculus and Calculus Levels) to underserved High School students from UC Riverside's Upward Bound Program. I was responsible in developing the Epidemiology to help High School students develop there critical thinking skills and raise awareness of the different career options they could pursue.
 
 \vspace{7pt}
-
 
 ```{=tex}
 \begin{large}
@@ -394,7 +388,6 @@ techniques.
 \end{large}
 \vspace{-0.16cm}
 ```
-
 -   Mentored students to conduct literature reviews, write manuscripts, and analyze data. In addition, I worked with my colleagues to develop a course in statistics. The course focused on teaching the basics of statistics which included descriptive statistics, statistical tests, and regression.
 
 \vspace{7pt}
@@ -413,14 +406,11 @@ techniques.
   \end{multicols}
   \vspace{-0.25cm}
 \end{large}
-\vspace{-0.16cm}
 ```
-
 -   Department of Mathematics and Statistics: Math Tutor
 -   Academic Skills Achievement Program: Science (Chemistry) Tutor
 
 \vspace{7pt}
-
 
 <!-- Publications -->
 
@@ -438,7 +428,7 @@ techniques.
 ```
 -   Flores A, Cappiello L, **Salinas INQ**. Challenges and Successes of Emergency Online Teaching in Statistics Courses. Journal of Statistics and Data Science Education doi:https://arxiv.org/abs/2302.01476
 
-- Magdalen0, Francisco, **Salinas INQ**, and Rothstein, Stephen. Vocal Functional Flexibility in a Non-Primate Vocal Learning Species. Journal of Language Evolution
+-   Magdalen0, Francisco, **Salinas INQ**, and Rothstein, Stephen. Vocal Functional Flexibility in a Non-Primate Vocal Learning Species. Journal of Language Evolution
 
 ```{=tex}
 \begin{normalsize}
@@ -464,7 +454,6 @@ techniques.
 
 -   Santibáñez M, Yoon S, **Quintanilla I**, Ta T, Fernandez A. Border Health Status Report 2012-2014. California Department of Public Health Office of Binational and Border Health. 2015.
 
-
 ```{=tex}
 \begin{normalsize}
   {\bf Posters}
@@ -484,7 +473,6 @@ techniques.
   \hrule
 \end{large}
 ```
-
 ```{=tex}
 \begin{large}
     \textbf{Overview of Joint Longitudinal-Survival Models: Modeling the Association Between Dependent Outcomes\newline Presenter: Isaac Quintanilla}
@@ -492,10 +480,7 @@ techniques.
 \end{large}
 \vspace{-0.16cm}
 ```
-
-
 \vspace{7pt}
-
 
 ```{=tex}
 \begin{large}
@@ -504,10 +489,7 @@ techniques.
 \end{large}
 \vspace{-0.16cm}
 ```
-
-
 \vspace{7pt}
-
 
 ```{=tex}
 \begin{large}
@@ -516,10 +498,7 @@ techniques.
 \end{large}
 \vspace{-0.16cm}
 ```
-
-
 \vspace{7pt}
-
 
 ```{=tex}
 \begin{large}
@@ -528,8 +507,6 @@ techniques.
 \end{large}
 \vspace{-0.16cm}
 ```
-
-
 \vspace{7pt}
 
 ```{=tex}
@@ -539,10 +516,7 @@ techniques.
 \end{large}
 \vspace{-0.16cm}
 ```
-
-
 \vspace{7pt}
-
 
 ```{=tex}
 \begin{large}
@@ -551,8 +525,6 @@ techniques.
 \end{large}
 \vspace{-0.16cm}
 ```
-
-
 \vspace{7pt}
 
 \newpage
@@ -566,8 +538,6 @@ techniques.
   \hrule
 \end{large}
 ```
-
-
 ```{=tex}
 \begin{large}
   \begin{multicols}{2}
@@ -585,8 +555,6 @@ techniques.
 \end{large}
 \vspace{-0.16cm}
 ```
-
-
 \vspace{7pt}
 
 ```{=tex}
@@ -606,10 +574,7 @@ techniques.
 \end{large}
 \vspace{-0.16cm}
 ```
-
-
 \vspace{7pt}
-
 
 ```{=tex}
 \begin{large}
@@ -628,10 +593,7 @@ techniques.
 \end{large}
 \vspace{-0.16cm}
 ```
-
-
 \vspace{7pt}
-
 
 ```{=tex}
 \begin{large}
@@ -650,8 +612,6 @@ techniques.
 \end{large}
 \vspace{-0.16cm}
 ```
-
-
 \vspace{7pt}
 
 ```{=tex}
@@ -671,8 +631,6 @@ techniques.
 \end{large}
 \vspace{-0.16cm}
 ```
-
-
 \vspace{7pt}
 
 ```{=tex}
@@ -692,8 +650,6 @@ techniques.
 \end{large}
 \vspace{-0.16cm}
 ```
-
-
 \vspace{7pt}
 
 ```{=tex}
@@ -713,10 +669,7 @@ techniques.
 \end{large}
 \vspace{-0.16cm}
 ```
-
-
 \vspace{7pt}
-
 
 ```{=tex}
 \begin{large}{\bf Grants and Awards}
@@ -725,16 +678,14 @@ techniques.
 \end{large}
 \vspace{-0.16cm}
 ```
-
 -   2023-2027: California Educational Learning Lab Grant - Building a Critical Mass for Data Science
--   2023-2024: CSUCI Research, Scholarly, and Created Activities Grant
+-   2023-2024: CSUCI Research, Scholarly, and Creative Activities Grant
 -   2021: CNAS DEI Scholarship
 -   2021: UCR Statistics Department Outstanding TA Award
 -   2020-2021: Graduate Research Mentorship Fellowship
 -   2016-2019: Eugene Cota-Robles Fellowship
 -   2013: SDSU Graduate Equity Fellowship
 -   2013: CSUMB Capstone Grant
-
 
 <!-- SKILLS -->
 
