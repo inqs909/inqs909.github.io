@@ -8,6 +8,7 @@ project:
     - "files/" 
     - "photos/"
     - "resources/"
+    - "cv/"
 
   
 website:
@@ -19,6 +20,7 @@ website:
       - projects.qmd
       - presentations.qmd
       - pubs.qmd
+      - cv.qmd
       - blog.qmd
       - books.qmd
       - photos.qmd

@@ -1,0 +1,703 @@
+---
+format: 
+  pdf: 
+    documentclass: article
+    geometry:
+      - top=1in
+      - left=0.75in
+      - right=0.75in
+      - bottom=1in
+      - heightrounded
+    fontfamily: libertinus
+    colorlinks: true
+    fontsize: '16'
+    include-in-header: 
+      text: |
+        \usepackage{multicol}
+        \usepackage{lipsum}
+        \usepackage{hyperref}
+        \pagestyle{empty}
+        \setlength{\multicolsep}{2pt plus 1.0pt minus 0.75pt}% 50% of original values
+        \setlength{\columnsep}{3em}
+---
+
+<!-- TITLE -->
+
+```{=tex}
+\begin{huge}\begin{center}{\bf Isaac Noe Quintanilla Salinas}\end{center}\end{huge}
+```
+<!-- CONTACT INFO -->
+
+```{=tex}
+\begin{center}isaac.qs@csuci.edu ∙ \href{https://www.inqs.info}{www.inqs.info} ∙ \href{https://github.com/inqs909}{Github} 
+\end{center}
+\vspace{15pt}
+```
+<!-- EDUCATION: 1ST BULLET -->
+
+```{=tex}
+\begin{large}
+  {\bf Education}
+  \vspace{3pt}
+  \hrule
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf University of California, Riverside}\end{flushleft}
+    \begin{flushright}Riverside, CA\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}PhD: Applied Statistics\end{flushleft}
+    \begin{flushright}2022\end{flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+\end{large}
+```
+-   Dissertation: Multilevel Time-Varying Joint Models for Longitudinal and Survival Outcomes
+
+\vspace{0.2cm}
+
+<!-- EDUCATION: 2ND BULLET -->
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf San Diego State University}\end{flushleft}
+    \begin{flushright}San Diego, CA\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}MPH: Biometry\end{flushleft}
+    \begin{flushright}2015\end{flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+\end{large}
+```
+-   Capstone: Patient-Physician Communication and Infleunza Vaccine Uptake
+
+<!-- EDUCATION: 3rd Bullet -->
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf California State University Monterey Bay}\end{flushleft}
+    \begin{flushright}Seaside, CA\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}BS: Biology\end{flushleft}
+    \begin{flushright}2013\end{flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+  \textit{Minor in Mathematics}
+  \vspace{-0.25cm}
+\end{large}
+```
+-   Capstone: Phylogenic and Biochemical Analysis of novel *Acidovorax* Species isolated using Diazinon enrichment culture.
+
+<!-- Professional Appointments -->
+
+```{=tex}
+\begin{large}{\bf Professional Appointments}
+  \vspace{3pt}
+  \hrule
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf Assisstant Professor}\end{flushleft}
+    \begin{flushright}Camarillo, CA\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+    \begin{multicols}{2}
+    \begin{flushleft}California State University Channel Islands\end{flushleft}
+  \end{multicols}
+  \vspace{-0.25cm}
+  \begin{multicols}{2}
+    \begin{flushleft}Department of Mathematics\end{flushleft}
+  \end{multicols}
+  \vspace{-0.25cm}
+\end{large}
+\vspace{3pt}
+```
+<!-- EXPERIENCE : 1ST BULLET-->
+
+\vspace{3pt}
+
+```{=tex}
+\begin{large}{\bf Experience}
+  \vspace{3pt}
+  \hrule
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf{Doctoral Dissertation}}\end{flushleft}
+    \begin{flushright}2018-2022\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textit{University of California, Riverside}\end{flushleft}
+    \begin{flushright}Riverside, CA\end{flushright}\end
+  {multicols}
+  \vspace{-0.25cm}
+  \textit{Multilevel Time-Varying Joint Models for Longitudinal and Survival Outcomes}
+
+\end{large}
+\vspace{-0.16cm}
+```
+-   Developed a novel statistical model to capture the time-dynamic association between longitudinal and survival outcomes.
+
+\vspace{7pt}
+
+<!-- EXPERIENCE : 2ND BULLET -->
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf {Research Internship}}\end{flushleft}
+    \begin{flushright}2015-2016\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textit{University of California, San Diego}\end
+    {flushleft}\begin{flushright}San Diego, CA\end
+    {flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+  \textit{Project: Association between religiosity and clinical trial participation}
+
+\end{large}
+\vspace{-0.16cm}
+```
+-   Evaluating the relationship between religiosity and participation barriers and benefits to cancer clinical trials among Hispanic Americans. We used different psychometrics to measure religiosity and participation in cancer clinical trials. We used basic correlation to measure the association. \vspace{7pt}
+
+<!-- EXPERIENCE : 2ND BULLET -->
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf {Internship}}\end{flushleft}
+    \begin{flushright}2015-2016\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textit{CDPH Office of Binational and Border Health}\end
+    {flushleft}\begin{flushright}San Diego, CA\end
+    {flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+  \textit{Project: Antibiotic Usage Study along the CA Border Region}
+
+\end{large}
+\vspace{-0.16cm}
+```
+-   Evaluating the relationship between certain demographics and antibiotic usage behaviors among shigellosis cases in the California-Mexico Border Regions. I created basic descriptive statistics and bivariate statistics to test the association between characteristics. I created a visual graphs to guide the analysis such as displaying the antibiotic duration by patient. \vspace{7pt}
+
+<!-- EXPERIENCE : 2ND BULLET -->
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf {Summer Internship}}\end{flushleft}
+    \begin{flushright}Summer 2014\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textit{Los Angeles County Department of Public Health}\end
+    {flushleft}\begin{flushright}Los Angeles, CA\end
+    {flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+  \textit{Project: Vaccine Exemption Study in Los Angeles County}
+
+\end{large}
+\vspace{-0.16cm}
+```
+-   Performed a spatial analysis on the geographic distribution on vaccine exemption rates among kindergarten students in Los Angeles County. Conducted a literature review to learn more about different spatial statistics, vaccine-preventable-diseases, and personal belief exemptions.
+
+\vspace{7pt}
+
+<!-- EXPERIENCE : 2ND BULLET -->
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf {Internship}}\end{flushleft}
+    \begin{flushright}2013-2014\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textit{SDSU Center for Behavior Epidemiology and Community Health}\end
+    {flushleft}\begin{flushright}San Diego, CA\end
+    {flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+  \textit{Project Fresh Air}
+
+\end{large}
+\vspace{-0.16cm}
+```
+-   Project Fresh Air is an intervention study to see how the behaviors of participants change once knowing the air quality in their homes. I helped with day to day tasks from collecting both biological samples to creating visual charts in R while learning about intervention studies.
+
+\vspace{7pt}
+
+<!-- EXPERIENCE : 3RD BULLET -->
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf {Summer Research Internships}}\end{flushleft}
+    \begin{flushright}Summer 2012\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textit{Columbia University Medical Center}\end{flushleft}
+    \begin{flushright}New York, NY\end{flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+  \textit{Project: Donor Age and Mortality after Lung Transplantation Study}
+\end{large}
+\vspace{-0.16cm}
+```
+-   Analyzed the effects of lung donor age and post-lung transplant mortality.
+-   Developed proportional hazard models and survival curves to evaluate the relationship between donor age and mortality.
+-   Research was published in the American Journal of Transplantation.
+
+\vspace{3pt}
+
+```{=tex}
+\begin{large}{\bf Teaching, Mentoring, and Tutoring}
+  \vspace{3pt}
+  \hrule
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf{Assistant Professor}}\end{flushleft}
+    \begin{flushright}2022-Present\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textit{California State University Channel Islands}\end{flushleft}
+    \begin{flushright}Camarillo, CA\end{flushright}\end
+  {multicols}
+
+\end{large}
+\vspace{-0.16cm}
+```
+-   MATH 352: Probability and Statistics
+-   MATH 408: Advance Data Analysis
+-   MATH 453: Mathematical Statistics
+
+\vspace{7pt}
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf {Associate Instructor}}\end{flushleft}
+    \begin{flushright}2021-2022\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textit{University of California, Riverside}\end
+    {flushleft}\begin{flushright}Riverside, CA\end
+    {flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+\end{large}
+```
+-   STAT 127: Introduction to Quality Management
+-   STAT 147: Introduction to Statistical Computing
+
+\vspace{7pt}
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf {Teaching Assistant}}\end{flushleft}
+    \begin{flushright}2017-2021\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textit{University of California, Riverside}\end
+    {flushleft}\begin{flushright}Riverside, CA\end
+    {flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+\end{large}
+```
+-   STAT 048: Introduction to Business Statistics
+-   STAT 100: Introduction to Statistics
+-   STAT 170: Regression and ANOVA
+
+\vspace{7pt}
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf {Creator, Coordinator, and Mentor}}\end{flushleft}
+    \begin{flushright}2017-2021\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textit{University of California, Riverside}\end
+    {flushleft}\begin{flushright}Riverside, CA\end
+    {flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+  \textit{SMART Program}
+\end{large}
+\vspace{-0.16cm}
+```
+-   Developed, coordinated and mentored for the Statistical Mentoring in Applied, Research, and Technology (SMART) Program. Developed a mentoring program for undergraduate students to be mentored by graduate students for a quarter. Coordinated the pilot program in Spring 2021. Mentored an undergraduate student in developing an R package to teach advanced statistical techniques.
+
+\vspace{7pt}
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf {Instructor}}\end{flushleft}
+    \begin{flushright}Summer 2017, 2018, 2019, 2020\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textit{University of California, Riverside}\end
+    {flushleft}\begin{flushright}Riverside, CA\end
+    {flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+  \textit{Upward Bound}
+\end{large}
+\vspace{-0.16cm}
+```
+-   Summer 2020: Taught Public Health and Geometry to underserved High School students from UC Riverside's Upward Bound Program. My responsibilities were to deliver instructions in a virtual setting. An R package was developed to teach public health concepts and programming simultaneously.
+
+-   Summer 2019: Taught Statistics and Data Analysis to underserved High School students from UC Riverside's Upward Bound Program. I was responsible in developing both the Statistics and Data Analysis course to teach students how to work with data. Students learned how to analyzed different types of data and how to program in R.
+
+-   Summer 2018: Taught Public Health, 2nd Year Research (STEM/Social Science/Humanities), and Math (Algebra 2, Pre-Calculus, and Calculus Levels) to underserved High School students from UC Riverside's Upward Bound Program. I was responsible in developing the Public Health course and challenge students perspectives about different communities. Second Year Research entailed advising students on their research projects in any field they chose.
+
+-   Summer 2017: Taught Epidemiology, Math Research, and Math/Science (Pre-Calculus and Calculus Levels) to underserved High School students from UC Riverside's Upward Bound Program. I was responsible in developing the Epidemiology to help High School students develop there critical thinking skills and raise awareness of the different career options they could pursue.
+
+\vspace{7pt}
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf {Mentor/Instructor}}\end{flushleft}
+    \begin{flushright}Summer 2015 and 2016\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textit{University of California, San Diego}\end
+    {flushleft}\begin{flushright}San Diego, CA\end
+    {flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+  \textit{Summer Science Enrichment Program}
+\end{large}
+\vspace{-0.16cm}
+```
+-   Mentored students to conduct literature reviews, write manuscripts, and analyze data. In addition, I worked with my colleagues to develop a course in statistics. The course focused on teaching the basics of statistics which included descriptive statistics, statistical tests, and regression.
+
+\vspace{7pt}
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf {Tutor}}\end{flushleft}
+    \begin{flushright}2011-2013\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textit{California State University, Monterey Bay}\end
+    {flushleft}\begin{flushright}Seaside, CA\end
+    {flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+\end{large}
+```
+-   Department of Mathematics and Statistics: Math Tutor
+-   Academic Skills Achievement Program: Science (Chemistry) Tutor
+
+\vspace{7pt}
+
+<!-- Publications -->
+
+```{=tex}
+\begin{large}
+  {\bf Publications}
+  \vspace{3pt}
+  \hrule
+\end{large}
+
+\begin{normalsize}
+  {\bf In-Review}
+  \vspace{3pt}
+\end{normalsize}
+```
+-   Flores A, Cappiello L, **Salinas INQ**. Challenges and Successes of Emergency Online Teaching in Statistics Courses. Journal of Statistics and Data Science Education doi:https://arxiv.org/abs/2302.01476
+
+-   Magdalen0, Francisco, **Salinas INQ**, and Rothstein, Stephen. Vocal Functional Flexibility in a Non-Primate Vocal Learning Species. Journal of Language Evolution
+
+```{=tex}
+\begin{normalsize}
+  {\bf Peer-Reviewed Journals}
+  \vspace{3pt}
+\end{normalsize}
+```
+-   Gill AS, Perez L, **Salinas INQ**, Byers SR, Liu Y, Hickey BL, Zhong W, Hooley RJ. Selective Array-based Sensing of Anabolic Steroids in Aqueous Solution by Host:Guest Reporter Complexes. Chemistry. 2019. 25(7):1740-1745. doi: 10.1002/chem.201804854
+
+-   Bellettiere J, Chuang E, Hughes SC, **Quintanilla I**, Hofstetter CR, Hovell MF. Association Between Parental Barriers to Accessing a Usual Source of Care and Children's Receipt of Preventative Services. Public Health Reports. 2017. 132(3):316-325. doi:10.1177/0033354917699831
+
+-   Pretanvil JA, **Salinas IQ**, Piccioni DE. Glioblastoma in elderly: treatment patterns and survival. CNS Oncology. 2016. 6(1):19-28. doi: 10.2217/cns-2016-0023.
+
+-   Baldwin MR, Peterson E, Easthausen I, **Quintanilla I**, Colago E, Sonett JR, D'Ovidio F, Bacchetta M, Costa J, Diamond J, Christie JD, Arcasoy SM, Lederer DJ. Donor age and early graft failure after lung transplantation: a cohort study. Am J Transplant. 2013. 13(10):2685-95. Epub 2013/08/26. DOI: 10.1111/ajt.12428.
+
+```{=tex}
+\begin{normalsize}
+  {\bf Reports}
+  \vspace{3pt}
+\end{normalsize}
+```
+-   Santibáñez M, Yoon S, Britton J, **Quintanilla I**, Dowling SH, Noregia A, Fernandez A. Border Health Epidemiology Report 2015. California Department of Public Health Office of Binational and Border Health. 2016.
+
+-   Santibáñez M, Yoon S, **Quintanilla I**, Ta T, Fernandez A. Border Health Status Report 2012-2014. California Department of Public Health Office of Binational and Border Health. 2015.
+
+```{=tex}
+\begin{normalsize}
+  {\bf Posters}
+  \vspace{3pt}
+\end{normalsize}
+```
+-   **Quintanilla, I**. (2016). Geographic Distribution of Vaccine Personal Belief Exemptions in San Diego County. Poster presented at San Diego County Epidemiology Exchange. San Diego, CA.
+
+-   Reuter C., **Quintanilla I**., Bellettiere J., Berardi V., Robusto K., Hughes S., Hovell M. (2015). The Effect of Prompts to Increase Stair Use Among Escalator Users. Poster presented at SDSU Student Research Symposium. San Diego, CA.
+
+-   **Quintanilla Salinas I**, Munoz Brittany, Anastasia Steph, Haffa A. (2013). Phylogenetic and Biochemical Analysis of novel Acidovorax Species isolated using Diazinon enrichment culture. Poster presented at CSUMB Capstone Festival. Seaside, CA.
+
+```{=tex}
+\begin{large}
+  {\bf Presentations}
+  \vspace{4pt}
+  \hrule
+\end{large}
+```
+```{=tex}
+\begin{large}
+    \textbf{Overview of Joint Longitudinal-Survival Models: Modeling the Association Between Dependent Outcomes\newline Presenter: Isaac Quintanilla}
+    \textit{\newline National Institute of Statistical Sciences \newline Virtual \newline June 2021}
+\end{large}
+\vspace{-0.16cm}
+```
+\vspace{7pt}
+
+```{=tex}
+\begin{large}
+    \textbf{Geographic Distribution of Vaccine Personal Belief Exemption in San Diego County.\newline Presenter: Isaac Quintanilla}
+    \textit{\newline San Diego County Epidemiology Exchange \newline San Diego, CA \newline 2016}
+\end{large}
+\vspace{-0.16cm}
+```
+\vspace{7pt}
+
+```{=tex}
+\begin{large}
+    \textbf{Vaccination Exemptions among School Children in Los Angeles County\newline Presenter: Isaac Quintanilla}
+    \textit{\newline Public Health Scholar Presentations \newline Los Angeles, CA \newline 2014}
+\end{large}
+\vspace{-0.16cm}
+```
+\vspace{7pt}
+
+```{=tex}
+\begin{large}
+    \textbf{Phylogenetic and Biochemical Analysis of a Novel Acidovorax Species Isolated Using Diazinon Enrichment Culture \newline Presenter: Isaac Quintanilla}
+    \textit{\newline SEP Capstone Spring 2013 Capstone Festival \newline Seaside, CA \newline 2013}
+\end{large}
+\vspace{-0.16cm}
+```
+\vspace{7pt}
+
+```{=tex}
+\begin{large}
+    \textbf{Phylogenetic and Biochemical Analysis of a Novel Acidovorax Species Isolated Using Diazinon Enrichment Culture \newline Presenter: Isaac Quintanilla and Brittany Munoz}
+    \textit{\newline Tri-Beta Pacific District Convention \newline Azusa, CA \newline 2013}
+\end{large}
+\vspace{-0.16cm}
+```
+\vspace{7pt}
+
+```{=tex}
+\begin{large}
+    \textbf{Donor Age and Mortality after Lung Transplantation: A Cohort Study \newline Presenters: Isaac Quintanilla and Imaani Easthausen}
+    \textit{\newline BEST Research Symposium \newline New York, NY \newline 2012}
+\end{large}
+\vspace{-0.16cm}
+```
+\vspace{7pt}
+
+\newpage
+
+<!-- Educational Programs -->
+
+```{=tex}
+\begin{large}
+  {\bf Educational Programs}
+  \vspace{3pt}
+  \hrule
+\end{large}
+```
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf {CSU AGEP}}\end{flushleft}
+    \begin{flushright}2023-2024\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textbf{Early Career Faculty Program}\end
+    {flushleft}\begin{flushright}Pomona, CA\end
+    {flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+    \textit{California State Polytechnic University Pomona}
+\end{large}
+\vspace{-0.16cm}
+```
+\vspace{7pt}
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf {Embedded Peer Educator Collaboration}}\end{flushleft}
+    \begin{flushright}Summer 2023\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textbf{Faculty Institute}\end
+    {flushleft}\begin{flushright}Camarillo, CA\end
+    {flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+    \textit{California State University Channel Islands}
+\end{large}
+\vspace{-0.16cm}
+```
+\vspace{7pt}
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf {Communiy-Based Research}}\end{flushleft}
+    \begin{flushright}2022-2023\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textbf{Faculty Fellows Program}\end
+    {flushleft}\begin{flushright}Camarillo, CA\end
+    {flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+    \textit{California State University Channel Islands}
+\end{large}
+\vspace{-0.16cm}
+```
+\vspace{7pt}
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf {Minority Training Program in}}\end{flushleft}
+    \begin{flushright}2015\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textbf{Cancer Control Research}\end
+    {flushleft}\begin{flushright}Los Angeles, CA\end
+    {flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+    \textit{Univerity of California, Los Angeles \newline Fielding School of Public Health}
+\end{large}
+\vspace{-0.16cm}
+```
+\vspace{7pt}
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf {Public Health Scholars Program}}\end{flushleft}
+    \begin{flushright}2014\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textit{County of Los Angeles}\end
+    {flushleft}\begin{flushright}Los Angeles, CA\end
+    {flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+    \textit{Department of Public Health}
+\end{large}
+\vspace{-0.16cm}
+```
+\vspace{7pt}
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf {Biostatistics Enrichment Summer Training}}\end{flushleft}
+    \begin{flushright}2012\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textbf{Diversity Program}\end
+    {flushleft}\begin{flushright}New York, NY\end
+    {flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+  \textit{Columbia University Medical Center \newline Mailman School of Public Health \newline Department of Biostatistics}
+\end{large}
+\vspace{-0.16cm}
+```
+\vspace{7pt}
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf{Summer Medical and Dental}}\end{flushleft}
+    \begin{flushright}2011\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}\textbf{Education Program}\end
+    {flushleft}\begin{flushright}New York, NY\end
+    {flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+  \textit{Columbia University Medical Center \newline College of Physicians and Surgeons}
+\end{large}
+\vspace{-0.16cm}
+```
+\vspace{7pt}
+
+```{=tex}
+\begin{large}{\bf Grants and Awards}
+  \vspace{3pt}
+  \hrule
+\end{large}
+\vspace{-0.16cm}
+```
+-   2023-2027: California Educational Learning Lab Grant - Building a Critical Mass for Data Science
+-   2023-2024: CSUCI Research, Scholarly, and Creative Activities Grant
+-   2021: CNAS DEI Scholarship
+-   2021: UCR Statistics Department Outstanding TA Award
+-   2020-2021: Graduate Research Mentorship Fellowship
+-   2016-2019: Eugene Cota-Robles Fellowship
+-   2013: SDSU Graduate Equity Fellowship
+-   2013: CSUMB Capstone Grant
+
+<!-- SKILLS -->
+
+```{=tex}
+\begin{large}{\bf SKILLS}
+  \vspace{3pt}
+  \hrule
+\end{large}
+\vspace{-0.16cm}
+```
+-   **Languages:** R, Bash, Git, Markdown, SAS, SPSS, ArcGIS, LaTeX
+
+-   **Tools:** SAS, SPSS, ArcGIS, LaTeX
+
+-   **OS:** Windows and Linux\
