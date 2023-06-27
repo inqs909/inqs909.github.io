@@ -1,0 +1,32 @@
+---
+title: "Teach Students How To Learn"
+date: "2023-06-26"
+image: https://www.booksb2bportal.com/covers/31/9781620363164_L.jpg
+categories: [learning]
+---
+
+::: {.callout-tip icon="false"}
+## Book
+
+Teach Students How to Learn: Strategies You Can Incorporate Into Any Course to Improve Student Metacognition, Study Skills, and Motivation
+
+1st Edition
+
+Saundra Yancy McGuire and Stephanie McGuire
+:::
+
+Before I read this book, I attended a talk by Dr. Saundra McGuire on her book *Teach Students How to Learn*, and I was shocked on how effective her strategies were in helping students ace their classes. Honestly, it sounded to good to be true. BUT, Dr. McGuire experience made me believe in the potential of those strategies. Therefore, I decided I wanted to learn more by reading her book.
+
+Her book is bueatifully written, and explained the study strategies in a thoughtful. Additionally, I agree with her that teaching students about metacognition and Bloom's taxonomy is important. I wish I knew about it when I was in college[^1]. After reading this book, I am definitely planning to incorporate some of her recommended strategies in my classes.
+
+[^1]: A phrase she probably has heard a million times.
+
+::: {.callout-note icon="false"}
+## Book Availability
+
+Ebook Available from the Broome Library: [Faculty](https://csu-ci.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma999861965202903&context=L&vid=01CALS_UCI:JSBL&lang=en&search_scope=MyInst_and_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,Teach%20your%20students%20how%20to%20learn&offset=0) \| [Students](https://csu-ci.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma999861865202903&context=L&vid=01CALS_UCI:JSBL&lang=en&search_scope=MyInst_and_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,Teach%20yourself%20how%20to%20learn&offset=0)
+
+Amazon Links:
+
+[Faculty](https://www.amazon.com/Teach-Students-How-Learn-Metacognition/dp/162036316X/ref=sr_1_1?keywords=teach+your+students+how+to+learn&qid=1687845214&s=books&sprefix=Teach+your+studen%2Cstripbooks%2C136&sr=1-1) \| [Students](https://www.amazon.com/Teach-Yourself-How-Learn-Strategies/dp/1620367564/ref=pd_bxgy_img_sccl_1/134-5912753-3439629?pd_rd_w=TjjWb&content-id=amzn1.sym.26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_p=26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_r=W8KMEN1AP369CZTT5AVM&pd_rd_wg=Dtt6Q&pd_rd_r=edcc0f3d-0609-45df-a9eb-ba6b09f96cbd&pd_rd_i=1620367564&psc=1) \| [Parents](https://www.amazon.com/Parents-Guide-Studying-Learning-School/dp/B09QFFLJTX?ref_=ast_author_dp)
+:::

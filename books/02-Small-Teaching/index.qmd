@@ -1,0 +1,30 @@
+---
+title: "Small Teaching"
+date: "2023-06-26"
+image: https://images.squarespace-cdn.com/content/v1/5e9b1f63b456412b3606fdb7/e07bfdd5-0c15-4ba2-a26a-26169ed9d4f5/SmallTeaching2ndEd%28Green%29Standup.jpg
+categories: [learning]
+---
+
+::: {.callout-tip icon="false"}
+## Book
+
+Small Teaching: Everyday Lessons from the Science of Learning
+
+2nd Edition
+
+James Lang
+:::
+
+This is a wonderful book related to teaching college courses. As a new professor, I wonder what is necessary for my students to succeed, and *Small Teaching* provides a useful set of tools that are easy to implement in my class.
+
+What I enjoyed most about the book is how the chapters were divided. Each chapter provides the overall concepts, then dives into the theory, and provides strategies in implementing the concept. My favorite parts were the the theory sections.
+
+If you are a new instructor, or a veteran, I do recommend reading this book.
+
+::: {.callout-note icon="false"}
+## Book Availability
+
+Physical Copy Available from the Broome Library: [Link](https://csu-ci.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma999866865102903&context=L&vid=01CALS_UCI:JSBL&lang=en&search_scope=MyInst_and_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,small%20teaching&offset=0)
+
+[Amazon Link](https://www.amazon.com/Small-Teaching-Everyday-Lessons-Learning/dp/1119755549/ref=pd_lpo_sccl_1/134-5912753-3439629?pd_rd_w=YtcPV&content-id=amzn1.sym.116f529c-aa4d-4763-b2b6-4d614ec7dc00&pf_rd_p=116f529c-aa4d-4763-b2b6-4d614ec7dc00&pf_rd_r=GRDQ75XXRHMPGQ619RQA&pd_rd_wg=qbsaZ&pd_rd_r=800b7b8b-71cc-4a4f-9cde-08551025786d&pd_rd_i=1119755549&psc=1)
+:::

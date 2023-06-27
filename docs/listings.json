@@ -10,6 +10,13 @@
     ]
   },
   {
+    "listing": "/books.html",
+    "items": [
+      "/books/01-Teach-your-students-how-to-learn/index.html",
+      "/books/02-Small-Teaching/index.html"
+    ]
+  },
+  {
     "listing": "/photos.html",
     "items": [
       "/photos/bigbear/index.html",

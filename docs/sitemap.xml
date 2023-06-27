@@ -2,90 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>www.inqs.info/blog.html</loc>
-    <lastmod>2023-06-24T00:35:11.917Z</lastmod>
+    <lastmod>2023-06-27T06:08:43.836Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/blog/2021-04-15-rcpp-and-research/index.html</loc>
-    <lastmod>2023-06-24T00:35:12.217Z</lastmod>
+    <lastmod>2023-06-27T06:08:44.120Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/blog/2021-04-20-incorporating-rcpp/index.html</loc>
-    <lastmod>2023-06-24T00:35:17.765Z</lastmod>
+    <lastmod>2023-06-27T06:08:49.184Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/blog/2021-05-03-smart-program/index.html</loc>
-    <lastmod>2023-06-24T00:35:26.249Z</lastmod>
+    <lastmod>2023-06-27T06:08:58.284Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/blog/2023-01-27-wellness-plan-spring-2023/index.html</loc>
-    <lastmod>2023-06-24T00:35:27.069Z</lastmod>
+    <lastmod>2023-06-27T06:08:59.020Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/blog/welcome/index.html</loc>
-    <lastmod>2023-06-24T00:35:27.721Z</lastmod>
+    <lastmod>2023-06-27T06:08:59.604Z</lastmod>
+  </url>
+  <url>
+    <loc>www.inqs.info/books.html</loc>
+    <lastmod>2023-06-27T06:08:59.888Z</lastmod>
+  </url>
+  <url>
+    <loc>www.inqs.info/books/01-Teach-your-students-how-to-learn/index.html</loc>
+    <lastmod>2023-06-27T06:09:00.176Z</lastmod>
+  </url>
+  <url>
+    <loc>www.inqs.info/books/02-Small-Teaching/index.html</loc>
+    <lastmod>2023-06-27T06:09:00.468Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/courses.html</loc>
-    <lastmod>2023-06-24T00:35:27.965Z</lastmod>
+    <lastmod>2023-06-27T06:09:00.708Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/index.html</loc>
-    <lastmod>2023-06-24T00:35:32.821Z</lastmod>
+    <lastmod>2023-06-27T06:09:05.180Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/photos.html</loc>
-    <lastmod>2023-06-24T00:35:33.185Z</lastmod>
+    <lastmod>2023-06-27T06:09:05.488Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/photos/bigbear/index.html</loc>
-    <lastmod>2023-06-24T00:35:33.973Z</lastmod>
+    <lastmod>2023-06-27T06:09:06.228Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/photos/bluff/index.html</loc>
-    <lastmod>2023-06-24T00:35:34.857Z</lastmod>
+    <lastmod>2023-06-27T06:09:06.976Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/photos/diamond/index.html</loc>
-    <lastmod>2023-06-24T00:35:35.805Z</lastmod>
+    <lastmod>2023-06-27T06:09:07.704Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/photos/gregory/index.html</loc>
-    <lastmod>2023-06-24T00:35:36.693Z</lastmod>
+    <lastmod>2023-06-27T06:09:08.428Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/photos/heart/index.html</loc>
-    <lastmod>2023-06-24T00:35:37.669Z</lastmod>
+    <lastmod>2023-06-27T06:09:09.272Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/photos/joshua/index.html</loc>
-    <lastmod>2023-06-24T00:35:38.465Z</lastmod>
+    <lastmod>2023-06-27T06:09:10.004Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/pres/ci_spring_2023/pres_4_23.html</loc>
-    <lastmod>2023-06-24T00:35:44.393Z</lastmod>
+    <lastmod>2023-06-27T06:09:15.268Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/pres/gss/index.html</loc>
-    <lastmod>2023-06-24T00:35:44.613Z</lastmod>
+    <lastmod>2023-06-27T06:09:15.484Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/pres/long_beach/pres_4_22.html</loc>
-    <lastmod>2023-06-24T00:35:50.133Z</lastmod>
+    <lastmod>2023-06-27T06:09:20.236Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/pres/surf_2023/anova.html</loc>
-    <lastmod>2023-06-24T00:35:53.953Z</lastmod>
+    <lastmod>2023-06-27T06:09:23.400Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/presentations.html</loc>
-    <lastmod>2023-06-24T00:35:54.241Z</lastmod>
+    <lastmod>2023-06-27T06:09:23.620Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/projects.html</loc>
-    <lastmod>2023-06-24T00:35:54.485Z</lastmod>
+    <lastmod>2023-06-27T06:09:23.832Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/pubs.html</loc>
-    <lastmod>2023-06-24T00:35:54.737Z</lastmod>
+    <lastmod>2023-06-27T06:09:24.052Z</lastmod>
   </url>
 </urlset>

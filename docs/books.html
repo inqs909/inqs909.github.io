@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>INQS</title>
+<title>INQS - Reading List</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -61,12 +63,42 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<link rel="stylesheet" href="styles.css">
-</head>
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
 
-<body class="nav-fixed fullcontent">
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="alternate" type="application/rss+xml" title="INQS" href="books.xml"></head>
+
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -104,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./books.html" rel="" target="">
+    <a class="nav-link active" href="./books.html" rel="" target="" aria-current="page">
  <span class="menu-text">Reading List</span></a>
   </li>  
   <li class="nav-item">
@@ -125,72 +157,107 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="learning">learning <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
-
-
-<div class="container">
-<div class="grid">
-<div class="g-col-12 g-col-md-6">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/avatar.jpg" class="rounded-circle img-fluid figure-img" style="width:60.0%"></p>
-</figure>
-</div>
-<section id="isaac-quintanilla-salinas" class="level3">
-<h3 class="anchored" data-anchor-id="isaac-quintanilla-salinas">Isaac Quintanilla Salinas</h3>
-<section id="assistant-professor-of-statistics" class="level5">
-<h5 class="anchored" data-anchor-id="assistant-professor-of-statistics">Assistant Professor of Statistics</h5>
-<p><a href="https://www.csuci.edu" class="btn-action-primary btn-action btn btn-success" role="button">CSU Channel Islands</a></p>
-</section>
-</section>
-</div>
-<section id="biography" class="level3 g-col-12 g-col-md-6">
-<h3 class="anchored" data-anchor-id="biography">Biography</h3>
-<p>Isaac Quintanilla Salinas is a recent graduate from the <a href="https://statistics.ucr.edu/">Department of Statistics</a> at the <a href="https://www.ucr.edu">University of California, Riverside</a> with a PhD in Applied Statistics. He is joining the <a href="https://math.csuci.edu/">Department of Mathematics</a> at the California State University Channel Islands this upcoming Fall 2022. Prior to his doctoral research, Dr.&nbsp;Quintanilla Salinas has earned his MPH from San Diego State University and BS in Biology from the California State University Monterey Bay.</p>
-<p>Dr.&nbsp;Quintanilla Salinas research focuses on developing statistical models to understand the association between survival and longitudinal outcomes. His dissertation “Multilevel Time-Varying Joint Models for Longitudinal and Survival Outcomes” develops a novel model to address challenges of modeling dependent outcomes.</p>
-</section>
-</div>
-</div>
-<div class="content-block">
-<div class="features">
-<section id="education" class="level3 feature box">
-<h3 class="anchored" data-anchor-id="education">Education</h3>
-<ul>
-<li><p>UC Riverside</p>
-<ul>
-<li>PhD in Applied Statistics</li>
-</ul></li>
-<li><p>San Diego State University</p>
-<ul>
-<li>Master’s in Public Health</li>
-</ul></li>
-<li><p>CSU Monterey Bay</p>
-<ul>
-<li>BS Biology</li>
-</ul></li>
-</ul>
-</section>
-<section id="interests" class="level3 feature box">
-<h3 class="anchored" data-anchor-id="interests">Interests</h3>
-<ul>
-<li><p>Joint Longitudinal and Survival Models</p></li>
-<li><p>Health Equity</p></li>
-<li><p>Education</p></li>
-<li><p>Algorithmic Bias</p></li>
-</ul>
-</section>
-</div>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Reading List</h1>
 </div>
 
 
 
-</main> <!-- /main -->
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="learning" data-listing-date-sort="1687762800000" data-listing-file-modified-sort="1687846102996" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./books/01-Teach-your-students-how-to-learn/index.html"> <img src="https://www.booksb2bportal.com/covers/31/9781620363164_L.jpg" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./books/01-Teach-your-students-how-to-learn/index.html">
+<h3 class="no-anchor listing-title">
+Teach Students How To Learn
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('learning'); return false;">
+learning
+</div>
+</div>
+<a href="./books/01-Teach-your-students-how-to-learn/index.html">
+<div class="listing-description">
+Teach Students How to Learn: Strategies You Can Incorporate Into Any Course to Improve Student Metacognition, Study Skills, and Motivation
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./books/01-Teach-your-students-how-to-learn/index.html">
+<div class="listing-date">
+Jun 26, 2023
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="learning" data-listing-date-sort="1687762800000" data-listing-file-modified-sort="1687846113220" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./books/02-Small-Teaching/index.html"> <img src="https://images.squarespace-cdn.com/content/v1/5e9b1f63b456412b3606fdb7/e07bfdd5-0c15-4ba2-a26a-26169ed9d4f5/SmallTeaching2ndEd%28Green%29Standup.jpg" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./books/02-Small-Teaching/index.html">
+<h3 class="no-anchor listing-title">
+Small Teaching
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('learning'); return false;">
+learning
+</div>
+</div>
+<a href="./books/02-Small-Teaching/index.html">
+<div class="listing-description">
+Small Teaching: Everyday Lessons from the Science of Learning
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./books/02-Small-Teaching/index.html">
+<div class="listing-date">
+Jun 26, 2023
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

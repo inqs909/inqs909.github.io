@@ -20,6 +20,7 @@ website:
       - presentations.qmd
       - pubs.qmd
       - blog.qmd
+      - books.qmd
       - photos.qmd
       - icon: github
         href: https://github.com/inqs909/
