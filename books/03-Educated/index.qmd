@@ -1,0 +1,24 @@
+---
+title: "Educated"
+date: "2023-06-29"
+image: https://cdn.theatlantic.com/thumbor/Yzb9Cnagznat5AwrVFO73wGIUTw=/0x833:1837x2670/1080x1080/media/img/2018/02/CULT_C2C_Educated/original.jpg
+categories: [memoir]
+---
+
+::: {.callout-tip icon="false"}
+## Book
+
+Educated
+
+Tara Westover
+:::
+
+*Currently Reading*
+
+::: {.callout-note icon="false"}
+## Book Availability
+
+Physical Book Available from the Broome Library
+
+[Amazon Link](https://www.amazon.com/Educated-Memoir-Tara-Westover/dp/0399590501)
+:::
