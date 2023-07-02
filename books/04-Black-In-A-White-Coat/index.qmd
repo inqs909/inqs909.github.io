@@ -8,7 +8,7 @@ categories: [memoir]
 ::: {.callout-tip icon="false"}
 ## Book
 
-# **Black Man in a White Coat: A Doctor's Reflections on Race and Medicine**
+Black Man in a White Coat: A Doctor's Reflections on Race and Medicine
 
 Damon Tweedy M.D.
 :::
