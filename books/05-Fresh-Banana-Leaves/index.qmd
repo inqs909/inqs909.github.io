@@ -2,13 +2,13 @@
 title: "Fresh Banana Leaves"
 date: "2023-07-03"
 image: https://m.media-amazon.com/images/I/51ODZV9jl2L._SL500_.jpg
-categories: [learning]
+categories: [indigenous studies, environmental conservation]
 ---
 
 ::: {.callout-tip icon="false"}
 ## Book
 
-Fresh Banana Leaves
+Fresh Banana Leaves: Healing Indigenous Landscapes Through Indigenous Science
 
 Jessica Hernandez PhD
 :::
