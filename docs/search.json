@@ -32,7 +32,7 @@
     "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
     "title": "RcppArmadillo",
     "section": "Using RcppArmadillo",
-    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.01562301\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.01562301\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.28µs    3.5µs   267935.        0B     26.8\n2 mean_cpp(Y)   1.83µs   2.74µs   379825.    7.67KB      0  \n\n\nYou can see that the cpp function is much faster than the R built-in function."
+    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.00498493\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.00498493\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.24µs    3.5µs   267827.        0B     26.8\n2 mean_cpp(Y)   1.82µs   2.73µs   382612.    7.67KB      0  \n\n\nYou can see that the cpp function is much faster than the R built-in function."
   },
   {
     "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
@@ -158,42 +158,42 @@
     "href": "books.html",
     "title": "Reading List",
     "section": "",
-    "text": "Black Man in a White Coat\n\n\n\n\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\n\n\nJul 2, 2023\n\n\n\n\n\n\n  \n\n\n\n\nEducated\n\n\n\n\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\n\n\nJun 29, 2023\n\n\n\n\n\n\n  \n\n\n\n\nTeach Students How To Learn\n\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\n\n\nJun 26, 2023\n\n\n\n\n\n\n  \n\n\n\n\nSmall Teaching\n\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\n\n\nJun 26, 2023\n\n\n\n\n\n\nNo matching items"
+    "text": "Fresh Banana Leaves\n\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\n\n\nJul 3, 2023\n\n\n\n\n\n\n  \n\n\n\n\nBlack Man in a White Coat\n\n\n\n\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\n\n\nJul 2, 2023\n\n\n\n\n\n\n  \n\n\n\n\nEducated\n\n\n\n\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\n\n\nJun 29, 2023\n\n\n\n\n\n\n  \n\n\n\n\nTeach Students How To Learn\n\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\n\n\nJun 26, 2023\n\n\n\n\n\n\n  \n\n\n\n\nSmall Teaching\n\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\n\n\nJun 26, 2023\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "books/01-Teach-your-students-how-to-learn/index.html",
     "href": "books/01-Teach-your-students-how-to-learn/index.html",
     "title": "Teach Students How To Learn",
     "section": "",
-    "text": "Book\n\n\n\nTeach Students How to Learn: Strategies You Can Incorporate Into Any Course to Improve Student Metacognition, Study Skills, and Motivation\n1st Edition\nSaundra Yancy McGuire and Stephanie McGuire\nBefore I read this book, I attended a talk by Dr. Saundra McGuire on her book Teach Students How to Learn, and I was shocked on how effective her strategies were in helping students ace their classes. Honestly, it sounded to good to be true. BUT, Dr. McGuire experience made me believe in the potential of those strategies. Therefore, I decided I wanted to learn more by reading her book.\nHer book is beautifully written, and explained the study strategies in a thoughtful. Additionally, I agree with her that teaching students about metacognition and Bloom’s taxonomy is important. I wish I knew about it when I was in college1. After reading this book, I am definitely planning to incorporate some of her recommended strategies in my classes."
-  },
-  {
-    "objectID": "books/01-Teach-your-students-how-to-learn/index.html#footnotes",
-    "href": "books/01-Teach-your-students-how-to-learn/index.html#footnotes",
-    "title": "Teach Students How To Learn",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nA phrase she probably has heard a million times.↩︎"
+    "text": "Book\n\n\n\nTeach Students How to Learn: Strategies You Can Incorporate Into Any Course to Improve Student Metacognition, Study Skills, and Motivation\n1st Edition\nSaundra Yancy McGuire and Stephanie McGuire\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nEbook Available from the Broome Library: Faculty | Students\nAmazon Links:\nFaculty | Students | Parents"
   },
   {
     "objectID": "books/02-Small-Teaching/index.html",
     "href": "books/02-Small-Teaching/index.html",
     "title": "Small Teaching",
     "section": "",
-    "text": "Book\n\n\n\nSmall Teaching: Everyday Lessons from the Science of Learning\n2nd Edition\nJames Lang\n\n\nThis is a wonderful book related to teaching college courses. As a new professor, I wonder what is necessary for my students to succeed, and Small Teaching provides a useful set of tools that are easy to implement in my class.\nWhat I enjoyed most about the book is how the chapters were divided. Each chapter provides the overall concepts, then dives into the theory, and provides strategies in implementing the concept. My favorite parts were the the theory sections.\nIf you are a new instructor, or a veteran, I do recommend reading this book.\n\n\n\n\n\n\nBook Availability\n\n\n\nPhysical Copy Available from the Broome Library: Link\nAmazon Link"
+    "text": "Book\n\n\n\nSmall Teaching: Everyday Lessons from the Science of Learning\n2nd Edition\nJames Lang\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nPhysical Copy Available from the Broome Library: Link\nAmazon Link"
   },
   {
     "objectID": "books/03-Educated/index.html",
     "href": "books/03-Educated/index.html",
     "title": "Educated",
     "section": "",
-    "text": "Book\n\n\n\nEducated\nTara Westover\n\n\nAll I can think of is Wow! This powerful memoir that captures experience of the author being home-schooled while growing up and then trying to navigate the dynamics of Academia, your upbringings, and family. While reading the book, I was learning about key life-moments that helped explain the transformation she went through in the end.\nWhile I cannot relate to the majority of this book, as I received a grade-school education, there were times that I felt the same thing as the author in questioning my belonging in my academic career. Being a first-generation child of immigrants, I find my self doubting my own abilities constantly and wondering what it is this for. I probably can go on about this topic, but ultimately, I may be looking for something in academia that is different from the author.\nA piece advice when reading this book, read all the beginning parts of the book.\n\n\n\n\n\n\nBook Availability\n\n\n\nPhysical Book Available from the Broome Library\nAmazon Link"
+    "text": "Book\n\n\n\nEducated\nTara Westover\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nPhysical Book Available from the Broome Library\nAmazon Link"
   },
   {
     "objectID": "books/04-Black-In-A-White-Coat/index.html",
     "href": "books/04-Black-In-A-White-Coat/index.html",
     "title": "Black Man in a White Coat",
     "section": "",
-    "text": "Book\n\n\n\nBlack Man in a White Coat: A Doctor’s Reflections on Race and Medicine\nDamon Tweedy M.D.\n\n\nCurrently Reading\n\n\n\n\n\n\nBook Availability\n\n\n\nAmazon Link"
+    "text": "Book\n\n\n\nBlack Man in a White Coat: A Doctor’s Reflections on Race and Medicine\nDamon Tweedy M.D.\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nAmazon Link"
+  },
+  {
+    "objectID": "books/05-Fresh-Banana-Leaves/index.html",
+    "href": "books/05-Fresh-Banana-Leaves/index.html",
+    "title": "Fresh Banana Leaves",
+    "section": "",
+    "text": "Book\n\n\n\nFresh Banana Leaves\nJessica Hernandez PhD\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nAvailable from the Broome Library\nAmazon Link"
   },
   {
     "objectID": "courses.html",

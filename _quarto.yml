@@ -19,7 +19,6 @@ website:
       - courses.qmd
       - projects.qmd
       - presentations.qmd
-      - pubs.qmd
       - cv.qmd
       - blog.qmd
       - books.qmd
