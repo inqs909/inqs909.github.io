@@ -426,8 +426,6 @@ format:
   \vspace{3pt}
 \end{normalsize}
 ```
--   Flores A, Cappiello L, **Salinas INQ**. Challenges and Successes of Emergency Online Teaching in Statistics Courses. Journal of Statistics and Data Science Education doi:https://arxiv.org/abs/2302.01476
-
 -   Magdalen0, Francisco, **Salinas INQ**, and Rothstein, Stephen. Vocal Functional Flexibility in a Non-Primate Vocal Learning Species. Journal of Language Evolution
 
 ```{=tex}
@@ -436,6 +434,9 @@ format:
   \vspace{3pt}
 \end{normalsize}
 ```
+-   Flores A., Parker Cappiello L., **Quintanilla Salinas I**. (2023) Challenges and successes of emergency online teaching
+    in statistics courses. Journal of Statistics and Data Science Education. doi.org/10.1080/26939169.2023.2231036
+
 -   Gill AS, Perez L, **Salinas INQ**, Byers SR, Liu Y, Hickey BL, Zhong W, Hooley RJ. Selective Array-based Sensing of Anabolic Steroids in Aqueous Solution by Host:Guest Reporter Complexes. Chemistry. 2019. 25(7):1740-1745. doi: 10.1002/chem.201804854
 
 -   Bellettiere J, Chuang E, Hughes SC, **Quintanilla I**, Hofstetter CR, Hovell MF. Association Between Parental Barriers to Accessing a Usual Source of Care and Children's Receipt of Preventative Services. Public Health Reports. 2017. 132(3):316-325. doi:10.1177/0033354917699831
