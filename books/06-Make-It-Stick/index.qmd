@@ -2,7 +2,7 @@
 title: "Make It Stick"
 date: "2023-07-22"
 image: https://readingallthebooksuk.files.wordpress.com/2015/08/make-it-stick.jpg
-categories: [indigenous studies, environmental conservation]
+categories: [learning]
 ---
 
 ::: {.callout-tip icon="false"}
