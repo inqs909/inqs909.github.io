@@ -1,0 +1,26 @@
+---
+title: "Make It Stick"
+date: "2023-07-22"
+image: https://readingallthebooksuk.files.wordpress.com/2015/08/make-it-stick.jpg
+categories: [indigenous studies, environmental conservation]
+---
+
+::: {.callout-tip icon="false"}
+## Book
+
+Make It Stick: The Science of Successful Learning
+
+Peter C Brown
+
+Henry L Roediger III
+
+Mar A McDaniel
+:::
+
+::: {.callout-note icon="false"}
+## Book Availability
+
+Available from the Broome Library
+
+[Amazon Link](https://www.amazon.com/Make-It-Stick-Peter-C-Brown-audiobook/dp/B00M1Z2THY/ref=sr_1_1?hvadid=490238628433&hvdev=c&hvlocphy=9031618&hvnetw=g&hvqmt=e&hvrand=9630365996809735609&hvtargid=kwd-2281475992&hydadcr=24662_13446934&keywords=make+it+stick&qid=1690011923&sr=8-1)
+:::
