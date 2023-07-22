@@ -1,7 +1,7 @@
 ---
 title: "Teach Students How To Learn"
 date: "2023-06-26"
-image: https://www.booksb2bportal.com/covers/31/9781620363164_L.jpg
+image: https://m.media-amazon.com/images/I/71ViiQPDuRL._AC_UF1000,1000_QL80_.jpg
 categories: [learning]
 ---
 
