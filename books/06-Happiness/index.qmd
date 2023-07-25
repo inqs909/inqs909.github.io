@@ -1,0 +1,20 @@
+---
+title: "Happiness"
+date: "2023-07-22"
+image: https://www.hachettebookgroup.com/wp-content/uploads/2017/06/9780316167253.jpg
+categories: [learning]
+---
+
+::: {.callout-tip icon="false"}
+## Book
+
+Happiness: A Guide to Developing Life's Most Important Skill
+
+Matthieu Ricard
+:::
+
+::: {.callout-note icon="false"}
+## Book Availability
+
+[Amazon Link](https://www.amazon.com/Happiness-Guide-Developing-Lifes-Important/dp/0316167258)
+:::
