@@ -14,16 +14,14 @@ editor_options:
 ##### Assistant Professor of Statistics
 
 [CSU Channel Islands](https://www.csuci.edu){.btn-action-primary .btn-action .btn .btn-success role="button"}
-
-
 :::
 
 ::: {.g-col-12 .g-col-md-6}
 ### Biography
 
-Isaac Quintanilla Salinas is a recent graduate from the [Department of Statistics](https://statistics.ucr.edu/) at the [University of California, Riverside](https://www.ucr.edu) with a PhD in Applied Statistics. He is joining the [Department of Mathematics](https://math.csuci.edu/) at the California State University Channel Islands this upcoming Fall 2022. Prior to his doctoral research, Dr. Quintanilla Salinas has earned his MPH from San Diego State University and BS in Biology from the California State University Monterey Bay.
+Isaac Quintanilla Salinas is a graduate from the [Department of Statistics](https://statistics.ucr.edu/) at the [University of California, Riverside](https://www.ucr.edu) with a PhD in Applied Statistics. He joined the [Department of Mathematics](https://math.csuci.edu/) at the California State University Channel Islands in Fall 2022. Prior to his doctoral research, Dr. Quintanilla Salinas earned his MPH from San Diego State University and BS in Biology from the California State University Monterey Bay.
 
-Dr. Quintanilla Salinas research focuses on developing statistical models to understand the association between survival and longitudinal outcomes. His dissertation "Multilevel Time-Varying Joint Models for Longitudinal and Survival Outcomes" develops a novel model to address challenges of modeling dependent outcomes.
+Dr. Quintanilla Salinas research focuses on developing statistical models to understand the association between survival and longitudinal outcomes. His dissertation "Multilevel Time-Varying Joint Models for Longitudinal and Survival Outcomes" develops a novel model to address challenges of modeling dependent outcomes. Additionally, Dr. Quintanilla Salinas collaborates with several researchers at different institutions in the fields of Public Health, Psychology, Biology, Geographic Information Systems, and Education.
 :::
 :::
 :::
@@ -51,7 +49,7 @@ Dr. Quintanilla Salinas research focuses on developing statistical models to und
 
 -   Joint Longitudinal and Survival Models
 
--   Health Equity
+-   Health and Well Being
 
 -   Education
 
