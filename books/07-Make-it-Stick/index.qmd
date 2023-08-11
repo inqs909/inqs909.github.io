@@ -1,0 +1,24 @@
+---
+title: "Make it Stick"
+date: "2023-08-05"
+image: https://readingallthebooksuk.files.wordpress.com/2015/08/make-it-stick.jpg
+categories: [learning]
+---
+
+::: {.callout-tip icon="false"}
+## Book
+
+Make it Stick: The Science of Successful Learning
+
+Peter Brown
+
+Henry Roediger III
+
+Mark McDaniel
+:::
+
+::: {.callout-note icon="false"}
+## Book Availability
+
+[Amazon Link](https://www.amazon.com/Make-Stick-Science-Successful-Learning/dp/0674729013)
+:::

@@ -10,7 +10,52 @@
 <atom:link href="www.inqs.info/books.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.3.361</generator>
-<lastBuildDate>Sat, 22 Jul 2023 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 05 Aug 2023 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Make it Stick</title>
+  <link>www.inqs.info/books/07-Make-it-Stick/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Book
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make it Stick: The Science of Successful Learning</p>
+<p>Peter Brown</p>
+<p>Henry Roediger III</p>
+<p>Mark McDaniel</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Book Availability
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://www.amazon.com/Make-Stick-Science-Successful-Learning/dp/0674729013">Amazon Link</a></p>
+</div>
+</div>
+
+
+
+ ]]></description>
+  <category>learning</category>
+  <guid>www.inqs.info/books/07-Make-it-Stick/index.html</guid>
+  <pubDate>Sat, 05 Aug 2023 07:00:00 GMT</pubDate>
+  <media:content url="https://readingallthebooksuk.files.wordpress.com/2015/08/make-it-stick.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Happiness</title>
   <link>www.inqs.info/books/06-Happiness/index.html</link>
