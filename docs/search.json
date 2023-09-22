@@ -476,74 +476,172 @@
     "text": "Fitting Cox PH Model\n\nCodeOutput\n\n\n\ndf_colon %$% coxph(Surv(time, status) ~ surg)  %&gt;%\n  summary\n\n\n\n\ndf_colon %$% coxph(Surv(time, status) ~ surg)  %&gt;%\n  summary\n\n#&gt; Call:\n#&gt; coxph(formula = Surv(time, status) ~ surg)\n#&gt; \n#&gt;   n= 929, number of events= 468 \n#&gt; \n#&gt;                                   coef exp(coef) se(coef)     z Pr(&gt;|z|)  \n#&gt; surgExtended Time Since Surgery 0.2549    1.2903   0.1008 2.529   0.0114 *\n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n#&gt; \n#&gt;                                 exp(coef) exp(-coef) lower .95 upper .95\n#&gt; surgExtended Time Since Surgery      1.29      0.775     1.059     1.572\n#&gt; \n#&gt; Concordance= 0.523  (se = 0.01 )\n#&gt; Likelihood ratio test= 6.17  on 1 df,   p=0.01\n#&gt; Wald test            = 6.39  on 1 df,   p=0.01\n#&gt; Score (logrank) test = 6.43  on 1 df,   p=0.01"
   },
   {
-    "objectID": "photos/heart/index.html",
-    "href": "photos/heart/index.html",
-    "title": "Heart Rock Trail",
+    "objectID": "photos.html",
+    "href": "photos.html",
+    "title": "Photos",
     "section": "",
-    "text": "library(pixture)\n\npixgallery(\n  list.files(\"img\", \n             full.names=TRUE),\n  dim=\"350px\",\n  gap = \"10px\"\n)"
+    "text": "Big Bear Lake\n\n\n\n\n\n\n\n\n\n\n\n\n\nBluff Lake\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiamond Valley Lake\n\n\n\n\n\n\n\n\n\n\n\n\n\nHeart Rock Trail\n\n\n\n\n\n\n\n\n\n\n\n\n\nJoshua Tree\n\n\n\n\n\n\n\n\n\n\n\n\n\nLake Gregory\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "INQS",
+    "objectID": "courses.html",
+    "href": "courses.html",
+    "title": "Courses",
     "section": "",
-    "text": "Isaac Quintanilla Salinas\n\nAssistant Professor of Statistics\nCSU Channel Islands\n\n\n\n\nBiography\nIsaac Quintanilla Salinas is a graduate from the Department of Statistics at the University of California, Riverside with a PhD in Applied Statistics. He joined the Department of Mathematics at the California State University Channel Islands in Fall 2022. Prior to his doctoral research, Dr. Quintanilla Salinas earned his MPH from San Diego State University and BS in Biology from the California State University Monterey Bay.\nDr. Quintanilla Salinas research focuses on developing statistical models to understand the association between survival and longitudinal outcomes. His dissertation “Multilevel Time-Varying Joint Models for Longitudinal and Survival Outcomes” develops a novel model to address challenges of modeling dependent outcomes. Additionally, Dr. Quintanilla Salinas collaborates with several researchers at different institutions in the fields of Public Health, Psychology, Biology, Geographic Information Systems, and Education.\n\n\n\n\n\n\nEducation\n\nUC Riverside\n\nPhD in Applied Statistics\n\nSan Diego State University\n\nMaster’s in Public Health\n\nCSU Monterey Bay\n\nBS Biology\n\n\n\n\nInterests\n\nJoint Longitudinal and Survival Models\nHealth and Well Being\nEducation\nAlgorithmic Bias"
+    "text": "AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
   },
   {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "CV",
+    "objectID": "courses.html#csu-channel-islands",
+    "href": "courses.html#csu-channel-islands",
+    "title": "Courses",
     "section": "",
-    "text": "Unable to display PDF file. Download instead."
+    "text": "AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
   },
   {
-    "objectID": "books/09-Solito/index.html",
-    "href": "books/09-Solito/index.html",
-    "title": "Solito",
-    "section": "",
-    "text": "Book\n\n\n\nSolito: A Memoir\nJavier Zamora\n\n\nAmazon Link"
+    "objectID": "courses.html#uc-riverside",
+    "href": "courses.html#uc-riverside",
+    "title": "Courses",
+    "section": "UC Riverside",
+    "text": "UC Riverside\n\nAllAssociate InstructorTeaching Assistant\n\n\n\nSTAT 127: Introduction to Quality Management\nSTAT 147: Introduction to Statistical Computing\nSTAT 100: Introduction to Statistics\nSTAT 170: Regression and ANOVA\nSTAT 048: Introduction to Business Statistics\nUB: Math Courses\nUB: Public Health Courses\nUB: Research Courses\n\n\n\n\nSTAT 127: Introduction to Quality Management\nSTAT 147: Introduction to Statistical Computing\n\n\n\n\nSTAT 100: Introduction to Statistics\nSTAT 170: Regression and ANOVA\nSTAT 048: Introduction to Business Statistics"
   },
   {
-    "objectID": "books/09-Solito/index.html#book-availability",
-    "href": "books/09-Solito/index.html#book-availability",
-    "title": "Solito",
+    "objectID": "books/08-Limitless-Mind/index.html",
+    "href": "books/08-Limitless-Mind/index.html",
+    "title": "Limitless Mind",
+    "section": "",
+    "text": "Book\n\n\n\nLimitless Mind: Learn, Lead, and Live Without Borders\nJo Boaler\n\n\nAmazon Link"
+  },
+  {
+    "objectID": "books/08-Limitless-Mind/index.html#book-availability",
+    "href": "books/08-Limitless-Mind/index.html#book-availability",
+    "title": "Limitless Mind",
     "section": "",
     "text": "Amazon Link"
   },
   {
-    "objectID": "books/07-Make-it-Stick/index.html",
-    "href": "books/07-Make-it-Stick/index.html",
-    "title": "Make it Stick",
+    "objectID": "books/06-Happiness/index.html",
+    "href": "books/06-Happiness/index.html",
+    "title": "Happiness",
     "section": "",
-    "text": "Book\n\n\n\nMake it Stick: The Science of Successful Learning\nPeter Brown\nHenry Roediger III\nMark McDaniel\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nAmazon Link"
+    "text": "Book\n\n\n\nHappiness: A Guide to Developing Life’s Most Important Skill\nMatthieu Ricard\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nAmazon Link"
   },
   {
-    "objectID": "books/05-Fresh-Banana-Leaves/index.html",
-    "href": "books/05-Fresh-Banana-Leaves/index.html",
-    "title": "Fresh Banana Leaves",
+    "objectID": "books/04-Black-In-A-White-Coat/index.html",
+    "href": "books/04-Black-In-A-White-Coat/index.html",
+    "title": "Black Man in a White Coat",
     "section": "",
-    "text": "Book\n\n\n\nFresh Banana Leaves: Healing Indigenous Landscapes Through Indigenous Science\nJessica Hernandez PhD\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nAvailable from the Broome Library\nAmazon Link"
+    "text": "Book\n\n\n\nBlack Man in a White Coat: A Doctor’s Reflections on Race and Medicine\nDamon Tweedy M.D.\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nAmazon Link"
   },
   {
-    "objectID": "books/03-Educated/index.html",
-    "href": "books/03-Educated/index.html",
-    "title": "Educated",
+    "objectID": "books/02-Small-Teaching/index.html",
+    "href": "books/02-Small-Teaching/index.html",
+    "title": "Small Teaching",
     "section": "",
-    "text": "Book\n\n\n\nEducated\nTara Westover\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nPhysical Book Available from the Broome Library\nAmazon Link"
+    "text": "Book\n\n\n\nSmall Teaching: Everyday Lessons from the Science of Learning\n2nd Edition\nJames Lang\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nPhysical Copy Available from the Broome Library: Link\nAmazon Link"
   },
   {
-    "objectID": "books/01-Teach-your-students-how-to-learn/index.html",
-    "href": "books/01-Teach-your-students-how-to-learn/index.html",
-    "title": "Teach Students How To Learn",
+    "objectID": "books.html",
+    "href": "books.html",
+    "title": "Reading List",
     "section": "",
-    "text": "Book\n\n\n\nTeach Students How to Learn: Strategies You Can Incorporate Into Any Course to Improve Student Metacognition, Study Skills, and Motivation\n1st Edition\nSaundra Yancy McGuire and Stephanie McGuire\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nEbook Available from the Broome Library: Faculty | Students\nAmazon Links:\nFaculty | Students | Parents"
+    "text": "Solito\n\n\n\n\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\n\n\nAug 25, 2023\n\n\n\n\n\n\n  \n\n\n\n\nLimitless Mind\n\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\n\n\nAug 12, 2023\n\n\n\n\n\n\n  \n\n\n\n\nMake it Stick\n\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\n\n\nAug 5, 2023\n\n\n\n\n\n\n  \n\n\n\n\nHappiness\n\n\n\n\n\n\n\npsychology\n\n\nempowerment\n\n\n\n\n\n\n\n\n\n\n\nJul 22, 2023\n\n\n\n\n\n\n  \n\n\n\n\nFresh Banana Leaves\n\n\n\n\n\n\n\nindigenous studies\n\n\nenvironmental conservation\n\n\n\n\n\n\n\n\n\n\n\nJul 3, 2023\n\n\n\n\n\n\n  \n\n\n\n\nBlack Man in a White Coat\n\n\n\n\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\n\n\nJul 2, 2023\n\n\n\n\n\n\n  \n\n\n\n\nEducated\n\n\n\n\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\n\n\nJun 29, 2023\n\n\n\n\n\n\n  \n\n\n\n\nTeach Students How To Learn\n\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\n\n\nJun 26, 2023\n\n\n\n\n\n\n  \n\n\n\n\nSmall Teaching\n\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\n\n\nJun 26, 2023\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "blog/welcome/index.html",
-    "href": "blog/welcome/index.html",
-    "title": "Welcome!",
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html",
+    "title": "Wellness Plan Spring 2023",
     "section": "",
-    "text": "Welcome! I’ve decided to create this blog as a way to record my journey in Statistics. As I am working through my PhD, I’ve read numerous posts on vast topics. As I was reading about topics related to Rcpp. I noticed how difficult it was to implement Rcpp for my needs. At the same moment, it dawned on me that I am reading from individuals that at some point in time were struggling with the same issues. This inspired me to create a blog of my own with the same intentions to help other individuals. My hope is to demonstrate how I overcame the challenges I faced to others that are facing similar issues.\nI don’t know how this blog will go. It’s going to be a learning experience. I don’t even know how many blog posts I will write in a year. I don’t even know what topics I will write about. However, I hope overtime, I can create a blog that may help people."
+    "text": "Before designing a wellness plan, I need to assess all areas of my life and see what I can improve. Below is a list of areas that are important to me:\n\n\n\nMental\nEmotional\nSocial\nSpiritual\n\n\n\nPhysical\nEnvironmental\nFinancial\nCareer\n\n\n\nWhile there are many other aspects of my life that I would like to improve on, this is a good starting point for this semester."
+  },
+  {
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#areas-of-improvement",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#areas-of-improvement",
+    "title": "Wellness Plan Spring 2023",
+    "section": "",
+    "text": "Before designing a wellness plan, I need to assess all areas of my life and see what I can improve. Below is a list of areas that are important to me:\n\n\n\nMental\nEmotional\nSocial\nSpiritual\n\n\n\nPhysical\nEnvironmental\nFinancial\nCareer\n\n\n\nWhile there are many other aspects of my life that I would like to improve on, this is a good starting point for this semester."
+  },
+  {
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#goals",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#goals",
+    "title": "Wellness Plan Spring 2023",
+    "section": "Goals",
+    "text": "Goals\nLooking at the areas that I want to focus on, I want to create realistic goals. Additionally, each goal can satisfy multiple aspects of my life. I will use SMART goals to ensure SMART goals to make sure I create achievable goals. The period for all the goals is the Spring semester.\n\nGoal 1Goal 2Goal 3Goal 4Goal 5\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will spend at least 1 hour every day, Monday through Friday, working on research related to my dissertation.\n\n\nI want to increase my research productivity for my own career goals. Additionally, working on this will help me through my tenure process.\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will learn how to create a new tea-related beverage at home each month.\n\n\nThis goal has the potential to serve three aspects of my life: Physical, Environmental, and Financial. Learning how to create new tea drinks will allow me to save money instead of buying them from different coffee shops. Additionally, I will know what ingredients are used in the drinks. Therefore, I will be able to improve the physical aspect of my life. Lastly, this will help the environmental part of my life by reducing my environmental impact and using less plastic.\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will travel to a new city in Southern CA each month and buy their local newspaper.\n\n\nOne of my main goals is to travel more globally and locally. I especially want to get to know small communities located in Southern California. For that reason, I want to make an effort to explore more of Southern CA. This goal has the potential to affect four aspects of my life: mental, social, spiritual, and physical.\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will go swimming two times a week for 30 minutes.\n\n\nWhen I was planning to move to Camarillo, I wanted to start something new for my physical health. Therefore, I decided to start swimming.\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will go to the gym three times a week for 1 hour.\n\n\nSimilar to swimming, I want to develop new habits and exercise more. Developing this habit and going to the gym more will help my physical health."
+  },
+  {
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#plan",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#plan",
+    "title": "Wellness Plan Spring 2023",
+    "section": "Plan",
+    "text": "Plan\n\nGoal 1Goal 2Goal 3Goal 4Goal 5\n\n\nSince I am struggling to keep my research productivity up, I will try new strategies. To get more research done, I plan to work on research as the very first thing I do when I get into my office. If I complete this task at the beginning of my day, I will get it out of the way and focus on things that are easier for me. The idea is to do the things I struggle with at the very beginning of my day.\nAdditionally, I plan to use the Forest App to maintain my focus. I will do a 20 minute session of writing1 and then do a 10 minute break. I will repeat this process until I complete an hour of writing.\n\n\nRight now, I am working on learning how to make a chai latte at home. So far, I have learned how to make oat milk how I like it. Next, I want to make chai concentrate using raw ingredients. I have bought many of the tools and feel ready to start experimenting with making the concentrate.\nOther types of teas that I want to learn are hibiscus and Thai.\n\n\nI first plan to visit Ojai in February. Depending on the weather, I want to visit Twentynine Palms for the super bloom; otherwise, I will visit Carpinteria. Lastly, I want to visit Idyllwild. I want to visit a special event/festival for each location if possible.\n\n\nBecause I set this goal for two 30 minute sessions, I believe I can complete this task. It is easier to spend a quick 30 minute session than a full hour.\n\n\nSimilar to my research goals, I plan to go to the gym in the morning and get them done early so I can focus on other things I am interested in. I plan to go to the gym early every Monday, Wednesday, and Friday. This task will be before my writing sessions."
+  },
+  {
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#accountability",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#accountability",
+    "title": "Wellness Plan Spring 2023",
+    "section": "Accountability",
+    "text": "Accountability\nThere are two ways that I will try told hold myself accountable. First, I will share my wellness plan with friends and family members. Second, I will create an incentive plan for each goal I complete. I will reassess my goals before spring break (3/17/23) and adjust accordingly. Overall, I want to create consistency with these goals. Any positive gain will be a win. At the end of the semester, I plan to reflect on the process and see what worked and what did not."
+  },
+  {
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#footnotes",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#footnotes",
+    "title": "Wellness Plan Spring 2023",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nwriting means any task related to research↩︎"
+  },
+  {
+    "objectID": "blog/2021-04-15-rcpp-and-research/index.html",
+    "href": "blog/2021-04-15-rcpp-and-research/index.html",
+    "title": "Rcpp and Research",
+    "section": "",
+    "text": "This is the first post of my “Rcpp” collection detailing my journey with Rcpp. The “Rcpp” collection contains information about the struggles I faced while implementing Rcpp. Even though my first venture to Rcpp happened in the Summer of 2020, I realized I am learning new things every day. I thought it would be wised to write a blog of everything I have and will learn with Rcpp. I hope this collection will guide other students who have never used c++ before.\nAs I am developing my model for my PhD, a major limiting factor is that my model takes a really long time to compute the results I need. Due to the complexity of the model, I need to approximate different components using iterative algorithms. This in turn increases the computation time to obtain results. You can only imagine my frustration when I first coded my model in R and it took more than a week to obtain results!\nTherefore, I decided to focus on speeding up my code. I spent time reading Wickham’s Advanced R Book to speed up my code. There I learned how about vectorizing code, utilizing built-in optimized functions, and common practices for speed gains. All this work has made me a better R programmer. Unfortunately, when I reran my model, the speed gains was not enough to call my efforts a success.\n\nDue to the lack of improvements, and knowing I will need expand my model for larger data sets, I set on a quest to improve my model. I attacked this problem on two fronts: looking for mathematical methods to reduce my computation needs and implementing different computing techniques. While both components dramatically improved my computational time, implementing c++ via Rcpp was the biggest game changer for my model.\nAfter I implemented everything I can from Wickham’s Book. I began reading more about about c++ from the book’s c++ chapter. I will be honest, I didn’t know what I was doing. This was my first time learning how to use c++. Nevertheless, I was determined to learn more about the c++ due to the potential speed gains. During the summer of 2020, I spent all my time learning about c++ and Rcpp. By the end of my summer, a model that took 3.5 days to converge was now taking approximately 6 hours!\n\nWith this triumph, I have been able to test and diagnose any faults with my model. I can honestly say that implementing Rcpp has drastically improved my PhD experience. I no longer have the feeling of being anxious for days wondering if my model works or not. I feel more productive! With this confidence, I feel prepared to tackle new problems with my research."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Wellness Plan Spring 2023\n\n\n\n\n\n\n\nWellness\n\n\n\n\nMy wellness plan for Spring 2023.\n\n\n\n\n\n\nJan 31, 2023\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\n\n  \n\n\n\n\nSMART Program\n\n\n\n\n\nThe Statistical Mentoring in Application, Research, and/or Technology (SMART) Program is a mentoring program where undergraduate students get the opportunity to conduct a statistical project under the supervision of a graduate student. The pilot program was implemented in Spring 2021 where we determined to see the feasibility of both the undergraduate and graduate students to complete the program. For this blog post, I will talk about the inspiration, development and implementation of the SMART Program. As the main architect of the program, I will talk about my thought process and the goals for the future of the program.\n\n\n\n\n\n\nJun 10, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n  \n\n\n\n\nRcppArmadillo\n\n\n\n\n\n\n\nRCPP\n\n\n\n\nDocumenting my experience implementing RcppArmadillo to my research.\n\n\n\n\n\n\nMay 1, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n  \n\n\n\n\nRcpp and Research\n\n\n\n\n\n\n\nRCPP\n\n\n\n\nA post describing why I decided to use Rcpp for my research.\n\n\n\n\n\n\nApr 15, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n  \n\n\n\n\nWelcome!\n\n\n\n\n\nWelcome to the INQS Blog. A blog documenting my experiences through Statistics. I hope you enjoy reading my blog!\n\n\n\n\n\n\nApr 14, 2021\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html",
+    "title": "RcppArmadillo",
+    "section": "",
+    "text": "When I first started using Rcpp for my research, I had no idea what I was doing. All I knew was that you can incorporate C++1 code in your R scripts to speed up data processing. I did spend some time learning C++ through www.learningcpp.com, but I didn’t get far because my example program did not go well. Troubleshooting the problem was a nightmare. However, it did give me an idea of how C++ programming looks like.\nOnce, I decided to implement C++ for my research, I focused on how to incorporate it in R. At the time, I had a fairly strong R background, and I knew you can use C++ in R via Rcpp. Therefore, I spent some time learning more about Rcpp from their website and book. After reading everything I could, I didn’t learn much. It was really advanced and not written for a newbie. However, I did learn that you can compile a C++ function2 that can be executed in R via Rcpp. The challenge was to build a cpp file that contained functions for my analysis. I turned to Advanced R by Hadley Wickham for more help.\nWickham’s book provided the necessary information to build basic functions to use in R. I learned how to write basic functions in cpp and making them executable with cppFunction. Additionally, the book covers the basic classes, looping, and function exporting. I felt prepared to write and use functions in R! However, my research required linear algebra, and it would have been a nightmare to program matrix multiplication with the basics. These challenges led me to RcppArmadillo.\nRcppArmadillo is designed to incorporate the Armadillo library in R via Rcpp. The Armadillo library contains functions that make it easy to conduct linear algebra in cpp. Additionally, it isn’t difficult to learn the syntax. The library is implemented to closely follow Matlab3 syntax.\nAfter writing functions and troubleshooting problems, I was able to export my functions to R. Making sure everything worked, I ran the same data on both my R and cpp functions, and it worked! I was able to produce the same value for each function. It gave me the confidence that I would be able to complete my research.\nAfter successfully implementing cpp in my research, I wanted to know how much faster was my code. Going back to Wickham’s book, there was information on benchmarking different functions. Using the bench package to identify how long each function was taking to execute, I found my R function took 13 times longer than my cpp function. I was shocked! I knew cpp would make my code faster, but I didn’t expect it to be that much faster4. This convinced me that all my efforts were worth it!"
+  },
+  {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#journey",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#journey",
+    "title": "RcppArmadillo",
+    "section": "",
+    "text": "When I first started using Rcpp for my research, I had no idea what I was doing. All I knew was that you can incorporate C++1 code in your R scripts to speed up data processing. I did spend some time learning C++ through www.learningcpp.com, but I didn’t get far because my example program did not go well. Troubleshooting the problem was a nightmare. However, it did give me an idea of how C++ programming looks like.\nOnce, I decided to implement C++ for my research, I focused on how to incorporate it in R. At the time, I had a fairly strong R background, and I knew you can use C++ in R via Rcpp. Therefore, I spent some time learning more about Rcpp from their website and book. After reading everything I could, I didn’t learn much. It was really advanced and not written for a newbie. However, I did learn that you can compile a C++ function2 that can be executed in R via Rcpp. The challenge was to build a cpp file that contained functions for my analysis. I turned to Advanced R by Hadley Wickham for more help.\nWickham’s book provided the necessary information to build basic functions to use in R. I learned how to write basic functions in cpp and making them executable with cppFunction. Additionally, the book covers the basic classes, looping, and function exporting. I felt prepared to write and use functions in R! However, my research required linear algebra, and it would have been a nightmare to program matrix multiplication with the basics. These challenges led me to RcppArmadillo.\nRcppArmadillo is designed to incorporate the Armadillo library in R via Rcpp. The Armadillo library contains functions that make it easy to conduct linear algebra in cpp. Additionally, it isn’t difficult to learn the syntax. The library is implemented to closely follow Matlab3 syntax.\nAfter writing functions and troubleshooting problems, I was able to export my functions to R. Making sure everything worked, I ran the same data on both my R and cpp functions, and it worked! I was able to produce the same value for each function. It gave me the confidence that I would be able to complete my research.\nAfter successfully implementing cpp in my research, I wanted to know how much faster was my code. Going back to Wickham’s book, there was information on benchmarking different functions. Using the bench package to identify how long each function was taking to execute, I found my R function took 13 times longer than my cpp function. I was shocked! I knew cpp would make my code faster, but I didn’t expect it to be that much faster4. This convinced me that all my efforts were worth it!"
+  },
+  {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
+    "title": "RcppArmadillo",
+    "section": "Using RcppArmadillo",
+    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.01901118\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.01901118\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.25µs   3.88µs   231524.        0B        0\n2 mean_cpp(Y)   1.84µs   2.78µs   361295.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
+  },
+  {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
+    "title": "RcppArmadillo",
+    "section": "Speed Gains Explanation",
+    "text": "Speed Gains Explanation\nYou may be asking why is R much slower than cpp. From what I can gather, R is an interpreted language while cpp is a compiled language. While I don’t really know what the difference is, it makes cpp much faster.\nI like to think there is a difference of requirements. You need to be more careful with cpp because it does not convert inputs to the correct data type. R will do it automatically. Therefore, R takes more time to ensure everything is correct before computing a function. Cpp requires more thinking from the user, but will reward them with speed gains. I am sure there is way more to this simple explanation, but the end result is that cpp is much faster than R."
+  },
+  {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#next-steps",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#next-steps",
+    "title": "RcppArmadillo",
+    "section": "Next Steps …",
+    "text": "Next Steps …\nAs my research is progressing, I am noticing the need to incorporate different methods not found in the Armadillo library. For example, I want to incorporate the GNU Scientific Library. I learned there is an R package exists for the library, RcppGSL! This gives me hope that I can use it for my research. However, I want to use the Armadillo library alongside with GSL. This has a potential to bring new problems with data type incompatibilities. I have ideas for potential solutions, but I will need to test them out.\nI also want to learn more about the capabilities of Rcpp. Specifically, what other functions does it contain. I learned that Rcpp has functions for distribution functions. This can be useful for expanding my research."
+  },
+  {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#footnotes",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#footnotes",
+    "title": "RcppArmadillo",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nI may write C++ as cpp at times.↩︎\nIt may be called a function or program. Not really sure.↩︎\nI never learned Matlab.↩︎\nI will admit, I don’t know what I am doing when benchmarking these functions, but based on my experiences, this is true.↩︎\nI am still shaky on what each thing does.↩︎\nIf you don’t have the first line. R will not make it executable, but the function may be utilized by other functions within the cpp file.↩︎\nThere are occasions where it is not as straight forward.↩︎\nYou may need to install other software such as rtools40. In linux, I have r-base-dev installed which may solve some of the needed dependencies.↩︎"
   },
   {
     "objectID": "blog/2021-05-03-smart-program/index.html",
@@ -595,172 +693,256 @@
     "text": "Footnotes\n\n\nReally the myth of imposter syndrome and more how Academia is designed only for the privileged.↩︎\nThe seminar occurred at the beginning of the pandemic. My goal was to create some form of normal for the students during this time. However, other students may have found it difficult to concentrate during the quarter.↩︎\nThe discussion from the first seminar was the most important part!↩︎\nI wised to have the mentors there as well but could not schedule everyone together.↩︎"
   },
   {
-    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html",
-    "href": "blog/2021-04-20-incorporating-rcpp/index.html",
-    "title": "RcppArmadillo",
+    "objectID": "blog/welcome/index.html",
+    "href": "blog/welcome/index.html",
+    "title": "Welcome!",
     "section": "",
-    "text": "When I first started using Rcpp for my research, I had no idea what I was doing. All I knew was that you can incorporate C++1 code in your R scripts to speed up data processing. I did spend some time learning C++ through www.learningcpp.com, but I didn’t get far because my example program did not go well. Troubleshooting the problem was a nightmare. However, it did give me an idea of how C++ programming looks like.\nOnce, I decided to implement C++ for my research, I focused on how to incorporate it in R. At the time, I had a fairly strong R background, and I knew you can use C++ in R via Rcpp. Therefore, I spent some time learning more about Rcpp from their website and book. After reading everything I could, I didn’t learn much. It was really advanced and not written for a newbie. However, I did learn that you can compile a C++ function2 that can be executed in R via Rcpp. The challenge was to build a cpp file that contained functions for my analysis. I turned to Advanced R by Hadley Wickham for more help.\nWickham’s book provided the necessary information to build basic functions to use in R. I learned how to write basic functions in cpp and making them executable with cppFunction. Additionally, the book covers the basic classes, looping, and function exporting. I felt prepared to write and use functions in R! However, my research required linear algebra, and it would have been a nightmare to program matrix multiplication with the basics. These challenges led me to RcppArmadillo.\nRcppArmadillo is designed to incorporate the Armadillo library in R via Rcpp. The Armadillo library contains functions that make it easy to conduct linear algebra in cpp. Additionally, it isn’t difficult to learn the syntax. The library is implemented to closely follow Matlab3 syntax.\nAfter writing functions and troubleshooting problems, I was able to export my functions to R. Making sure everything worked, I ran the same data on both my R and cpp functions, and it worked! I was able to produce the same value for each function. It gave me the confidence that I would be able to complete my research.\nAfter successfully implementing cpp in my research, I wanted to know how much faster was my code. Going back to Wickham’s book, there was information on benchmarking different functions. Using the bench package to identify how long each function was taking to execute, I found my R function took 13 times longer than my cpp function. I was shocked! I knew cpp would make my code faster, but I didn’t expect it to be that much faster4. This convinced me that all my efforts were worth it!"
+    "text": "Welcome! I’ve decided to create this blog as a way to record my journey in Statistics. As I am working through my PhD, I’ve read numerous posts on vast topics. As I was reading about topics related to Rcpp. I noticed how difficult it was to implement Rcpp for my needs. At the same moment, it dawned on me that I am reading from individuals that at some point in time were struggling with the same issues. This inspired me to create a blog of my own with the same intentions to help other individuals. My hope is to demonstrate how I overcame the challenges I faced to others that are facing similar issues.\nI don’t know how this blog will go. It’s going to be a learning experience. I don’t even know how many blog posts I will write in a year. I don’t even know what topics I will write about. However, I hope overtime, I can create a blog that may help people."
   },
   {
-    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#journey",
-    "href": "blog/2021-04-20-incorporating-rcpp/index.html#journey",
-    "title": "RcppArmadillo",
+    "objectID": "books/01-Teach-your-students-how-to-learn/index.html",
+    "href": "books/01-Teach-your-students-how-to-learn/index.html",
+    "title": "Teach Students How To Learn",
     "section": "",
-    "text": "When I first started using Rcpp for my research, I had no idea what I was doing. All I knew was that you can incorporate C++1 code in your R scripts to speed up data processing. I did spend some time learning C++ through www.learningcpp.com, but I didn’t get far because my example program did not go well. Troubleshooting the problem was a nightmare. However, it did give me an idea of how C++ programming looks like.\nOnce, I decided to implement C++ for my research, I focused on how to incorporate it in R. At the time, I had a fairly strong R background, and I knew you can use C++ in R via Rcpp. Therefore, I spent some time learning more about Rcpp from their website and book. After reading everything I could, I didn’t learn much. It was really advanced and not written for a newbie. However, I did learn that you can compile a C++ function2 that can be executed in R via Rcpp. The challenge was to build a cpp file that contained functions for my analysis. I turned to Advanced R by Hadley Wickham for more help.\nWickham’s book provided the necessary information to build basic functions to use in R. I learned how to write basic functions in cpp and making them executable with cppFunction. Additionally, the book covers the basic classes, looping, and function exporting. I felt prepared to write and use functions in R! However, my research required linear algebra, and it would have been a nightmare to program matrix multiplication with the basics. These challenges led me to RcppArmadillo.\nRcppArmadillo is designed to incorporate the Armadillo library in R via Rcpp. The Armadillo library contains functions that make it easy to conduct linear algebra in cpp. Additionally, it isn’t difficult to learn the syntax. The library is implemented to closely follow Matlab3 syntax.\nAfter writing functions and troubleshooting problems, I was able to export my functions to R. Making sure everything worked, I ran the same data on both my R and cpp functions, and it worked! I was able to produce the same value for each function. It gave me the confidence that I would be able to complete my research.\nAfter successfully implementing cpp in my research, I wanted to know how much faster was my code. Going back to Wickham’s book, there was information on benchmarking different functions. Using the bench package to identify how long each function was taking to execute, I found my R function took 13 times longer than my cpp function. I was shocked! I knew cpp would make my code faster, but I didn’t expect it to be that much faster4. This convinced me that all my efforts were worth it!"
+    "text": "Book\n\n\n\nTeach Students How to Learn: Strategies You Can Incorporate Into Any Course to Improve Student Metacognition, Study Skills, and Motivation\n1st Edition\nSaundra Yancy McGuire and Stephanie McGuire\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nEbook Available from the Broome Library: Faculty | Students\nAmazon Links:\nFaculty | Students | Parents"
   },
   {
-    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
-    "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
-    "title": "RcppArmadillo",
-    "section": "Using RcppArmadillo",
-    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.0006422694\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.0006422694\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)        3.3µs   3.57µs   263370.        0B        0\n2 mean_cpp(Y)   1.86µs    2.8µs   354214.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
-  },
-  {
-    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
-    "href": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
-    "title": "RcppArmadillo",
-    "section": "Speed Gains Explanation",
-    "text": "Speed Gains Explanation\nYou may be asking why is R much slower than cpp. From what I can gather, R is an interpreted language while cpp is a compiled language. While I don’t really know what the difference is, it makes cpp much faster.\nI like to think there is a difference of requirements. You need to be more careful with cpp because it does not convert inputs to the correct data type. R will do it automatically. Therefore, R takes more time to ensure everything is correct before computing a function. Cpp requires more thinking from the user, but will reward them with speed gains. I am sure there is way more to this simple explanation, but the end result is that cpp is much faster than R."
-  },
-  {
-    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#next-steps",
-    "href": "blog/2021-04-20-incorporating-rcpp/index.html#next-steps",
-    "title": "RcppArmadillo",
-    "section": "Next Steps …",
-    "text": "Next Steps …\nAs my research is progressing, I am noticing the need to incorporate different methods not found in the Armadillo library. For example, I want to incorporate the GNU Scientific Library. I learned there is an R package exists for the library, RcppGSL! This gives me hope that I can use it for my research. However, I want to use the Armadillo library alongside with GSL. This has a potential to bring new problems with data type incompatibilities. I have ideas for potential solutions, but I will need to test them out.\nI also want to learn more about the capabilities of Rcpp. Specifically, what other functions does it contain. I learned that Rcpp has functions for distribution functions. This can be useful for expanding my research."
-  },
-  {
-    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#footnotes",
-    "href": "blog/2021-04-20-incorporating-rcpp/index.html#footnotes",
-    "title": "RcppArmadillo",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nI may write C++ as cpp at times.↩︎\nIt may be called a function or program. Not really sure.↩︎\nI never learned Matlab.↩︎\nI will admit, I don’t know what I am doing when benchmarking these functions, but based on my experiences, this is true.↩︎\nI am still shaky on what each thing does.↩︎\nIf you don’t have the first line. R will not make it executable, but the function may be utilized by other functions within the cpp file.↩︎\nThere are occasions where it is not as straight forward.↩︎\nYou may need to install other software such as rtools40. In linux, I have r-base-dev installed which may solve some of the needed dependencies.↩︎"
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
+    "objectID": "books/03-Educated/index.html",
+    "href": "books/03-Educated/index.html",
+    "title": "Educated",
     "section": "",
-    "text": "Wellness Plan Spring 2023\n\n\n\n\n\n\n\nWellness\n\n\n\n\nMy wellness plan for Spring 2023.\n\n\n\n\n\n\nJan 31, 2023\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\n\n  \n\n\n\n\nSMART Program\n\n\n\n\n\nThe Statistical Mentoring in Application, Research, and/or Technology (SMART) Program is a mentoring program where undergraduate students get the opportunity to conduct a statistical project under the supervision of a graduate student. The pilot program was implemented in Spring 2021 where we determined to see the feasibility of both the undergraduate and graduate students to complete the program. For this blog post, I will talk about the inspiration, development and implementation of the SMART Program. As the main architect of the program, I will talk about my thought process and the goals for the future of the program.\n\n\n\n\n\n\nJun 10, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n  \n\n\n\n\nRcppArmadillo\n\n\n\n\n\n\n\nRCPP\n\n\n\n\nDocumenting my experience implementing RcppArmadillo to my research.\n\n\n\n\n\n\nMay 1, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n  \n\n\n\n\nRcpp and Research\n\n\n\n\n\n\n\nRCPP\n\n\n\n\nA post describing why I decided to use Rcpp for my research.\n\n\n\n\n\n\nApr 15, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n  \n\n\n\n\nWelcome!\n\n\n\n\n\nWelcome to the INQS Blog. A blog documenting my experiences through Statistics. I hope you enjoy reading my blog!\n\n\n\n\n\n\nApr 14, 2021\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\n\nNo matching items"
+    "text": "Book\n\n\n\nEducated\nTara Westover\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nPhysical Book Available from the Broome Library\nAmazon Link"
   },
   {
-    "objectID": "blog/2021-04-15-rcpp-and-research/index.html",
-    "href": "blog/2021-04-15-rcpp-and-research/index.html",
-    "title": "Rcpp and Research",
+    "objectID": "books/05-Fresh-Banana-Leaves/index.html",
+    "href": "books/05-Fresh-Banana-Leaves/index.html",
+    "title": "Fresh Banana Leaves",
     "section": "",
-    "text": "This is the first post of my “Rcpp” collection detailing my journey with Rcpp. The “Rcpp” collection contains information about the struggles I faced while implementing Rcpp. Even though my first venture to Rcpp happened in the Summer of 2020, I realized I am learning new things every day. I thought it would be wised to write a blog of everything I have and will learn with Rcpp. I hope this collection will guide other students who have never used c++ before.\nAs I am developing my model for my PhD, a major limiting factor is that my model takes a really long time to compute the results I need. Due to the complexity of the model, I need to approximate different components using iterative algorithms. This in turn increases the computation time to obtain results. You can only imagine my frustration when I first coded my model in R and it took more than a week to obtain results!\nTherefore, I decided to focus on speeding up my code. I spent time reading Wickham’s Advanced R Book to speed up my code. There I learned how about vectorizing code, utilizing built-in optimized functions, and common practices for speed gains. All this work has made me a better R programmer. Unfortunately, when I reran my model, the speed gains was not enough to call my efforts a success.\n\nDue to the lack of improvements, and knowing I will need expand my model for larger data sets, I set on a quest to improve my model. I attacked this problem on two fronts: looking for mathematical methods to reduce my computation needs and implementing different computing techniques. While both components dramatically improved my computational time, implementing c++ via Rcpp was the biggest game changer for my model.\nAfter I implemented everything I can from Wickham’s Book. I began reading more about about c++ from the book’s c++ chapter. I will be honest, I didn’t know what I was doing. This was my first time learning how to use c++. Nevertheless, I was determined to learn more about the c++ due to the potential speed gains. During the summer of 2020, I spent all my time learning about c++ and Rcpp. By the end of my summer, a model that took 3.5 days to converge was now taking approximately 6 hours!\n\nWith this triumph, I have been able to test and diagnose any faults with my model. I can honestly say that implementing Rcpp has drastically improved my PhD experience. I no longer have the feeling of being anxious for days wondering if my model works or not. I feel more productive! With this confidence, I feel prepared to tackle new problems with my research."
+    "text": "Book\n\n\n\nFresh Banana Leaves: Healing Indigenous Landscapes Through Indigenous Science\nJessica Hernandez PhD\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nAvailable from the Broome Library\nAmazon Link"
   },
   {
-    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html",
-    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html",
-    "title": "Wellness Plan Spring 2023",
+    "objectID": "books/07-Make-it-Stick/index.html",
+    "href": "books/07-Make-it-Stick/index.html",
+    "title": "Make it Stick",
     "section": "",
-    "text": "Before designing a wellness plan, I need to assess all areas of my life and see what I can improve. Below is a list of areas that are important to me:\n\n\n\nMental\nEmotional\nSocial\nSpiritual\n\n\n\nPhysical\nEnvironmental\nFinancial\nCareer\n\n\n\nWhile there are many other aspects of my life that I would like to improve on, this is a good starting point for this semester."
+    "text": "Book\n\n\n\nMake it Stick: The Science of Successful Learning\nPeter Brown\nHenry Roediger III\nMark McDaniel\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nAmazon Link"
   },
   {
-    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#areas-of-improvement",
-    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#areas-of-improvement",
-    "title": "Wellness Plan Spring 2023",
+    "objectID": "books/09-Solito/index.html",
+    "href": "books/09-Solito/index.html",
+    "title": "Solito",
     "section": "",
-    "text": "Before designing a wellness plan, I need to assess all areas of my life and see what I can improve. Below is a list of areas that are important to me:\n\n\n\nMental\nEmotional\nSocial\nSpiritual\n\n\n\nPhysical\nEnvironmental\nFinancial\nCareer\n\n\n\nWhile there are many other aspects of my life that I would like to improve on, this is a good starting point for this semester."
+    "text": "Book\n\n\n\nSolito: A Memoir\nJavier Zamora\n\n\nAmazon Link"
   },
   {
-    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#goals",
-    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#goals",
-    "title": "Wellness Plan Spring 2023",
-    "section": "Goals",
-    "text": "Goals\nLooking at the areas that I want to focus on, I want to create realistic goals. Additionally, each goal can satisfy multiple aspects of my life. I will use SMART goals to ensure SMART goals to make sure I create achievable goals. The period for all the goals is the Spring semester.\n\nGoal 1Goal 2Goal 3Goal 4Goal 5\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will spend at least 1 hour every day, Monday through Friday, working on research related to my dissertation.\n\n\nI want to increase my research productivity for my own career goals. Additionally, working on this will help me through my tenure process.\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will learn how to create a new tea-related beverage at home each month.\n\n\nThis goal has the potential to serve three aspects of my life: Physical, Environmental, and Financial. Learning how to create new tea drinks will allow me to save money instead of buying them from different coffee shops. Additionally, I will know what ingredients are used in the drinks. Therefore, I will be able to improve the physical aspect of my life. Lastly, this will help the environmental part of my life by reducing my environmental impact and using less plastic.\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will travel to a new city in Southern CA each month and buy their local newspaper.\n\n\nOne of my main goals is to travel more globally and locally. I especially want to get to know small communities located in Southern California. For that reason, I want to make an effort to explore more of Southern CA. This goal has the potential to affect four aspects of my life: mental, social, spiritual, and physical.\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will go swimming two times a week for 30 minutes.\n\n\nWhen I was planning to move to Camarillo, I wanted to start something new for my physical health. Therefore, I decided to start swimming.\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will go to the gym three times a week for 1 hour.\n\n\nSimilar to swimming, I want to develop new habits and exercise more. Developing this habit and going to the gym more will help my physical health."
-  },
-  {
-    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#plan",
-    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#plan",
-    "title": "Wellness Plan Spring 2023",
-    "section": "Plan",
-    "text": "Plan\n\nGoal 1Goal 2Goal 3Goal 4Goal 5\n\n\nSince I am struggling to keep my research productivity up, I will try new strategies. To get more research done, I plan to work on research as the very first thing I do when I get into my office. If I complete this task at the beginning of my day, I will get it out of the way and focus on things that are easier for me. The idea is to do the things I struggle with at the very beginning of my day.\nAdditionally, I plan to use the Forest App to maintain my focus. I will do a 20 minute session of writing1 and then do a 10 minute break. I will repeat this process until I complete an hour of writing.\n\n\nRight now, I am working on learning how to make a chai latte at home. So far, I have learned how to make oat milk how I like it. Next, I want to make chai concentrate using raw ingredients. I have bought many of the tools and feel ready to start experimenting with making the concentrate.\nOther types of teas that I want to learn are hibiscus and Thai.\n\n\nI first plan to visit Ojai in February. Depending on the weather, I want to visit Twentynine Palms for the super bloom; otherwise, I will visit Carpinteria. Lastly, I want to visit Idyllwild. I want to visit a special event/festival for each location if possible.\n\n\nBecause I set this goal for two 30 minute sessions, I believe I can complete this task. It is easier to spend a quick 30 minute session than a full hour.\n\n\nSimilar to my research goals, I plan to go to the gym in the morning and get them done early so I can focus on other things I am interested in. I plan to go to the gym early every Monday, Wednesday, and Friday. This task will be before my writing sessions."
-  },
-  {
-    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#accountability",
-    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#accountability",
-    "title": "Wellness Plan Spring 2023",
-    "section": "Accountability",
-    "text": "Accountability\nThere are two ways that I will try told hold myself accountable. First, I will share my wellness plan with friends and family members. Second, I will create an incentive plan for each goal I complete. I will reassess my goals before spring break (3/17/23) and adjust accordingly. Overall, I want to create consistency with these goals. Any positive gain will be a win. At the end of the semester, I plan to reflect on the process and see what worked and what did not."
-  },
-  {
-    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#footnotes",
-    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#footnotes",
-    "title": "Wellness Plan Spring 2023",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nwriting means any task related to research↩︎"
-  },
-  {
-    "objectID": "books.html",
-    "href": "books.html",
-    "title": "Reading List",
-    "section": "",
-    "text": "Solito\n\n\n\n\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\n\n\nAug 25, 2023\n\n\n\n\n\n\n  \n\n\n\n\nLimitless Mind\n\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\n\n\nAug 12, 2023\n\n\n\n\n\n\n  \n\n\n\n\nMake it Stick\n\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\n\n\nAug 5, 2023\n\n\n\n\n\n\n  \n\n\n\n\nHappiness\n\n\n\n\n\n\n\npsychology\n\n\nempowerment\n\n\n\n\n\n\n\n\n\n\n\nJul 22, 2023\n\n\n\n\n\n\n  \n\n\n\n\nFresh Banana Leaves\n\n\n\n\n\n\n\nindigenous studies\n\n\nenvironmental conservation\n\n\n\n\n\n\n\n\n\n\n\nJul 3, 2023\n\n\n\n\n\n\n  \n\n\n\n\nBlack Man in a White Coat\n\n\n\n\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\n\n\nJul 2, 2023\n\n\n\n\n\n\n  \n\n\n\n\nEducated\n\n\n\n\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\n\n\nJun 29, 2023\n\n\n\n\n\n\n  \n\n\n\n\nTeach Students How To Learn\n\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\n\n\nJun 26, 2023\n\n\n\n\n\n\n  \n\n\n\n\nSmall Teaching\n\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\n\n\nJun 26, 2023\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "books/02-Small-Teaching/index.html",
-    "href": "books/02-Small-Teaching/index.html",
-    "title": "Small Teaching",
-    "section": "",
-    "text": "Book\n\n\n\nSmall Teaching: Everyday Lessons from the Science of Learning\n2nd Edition\nJames Lang\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nPhysical Copy Available from the Broome Library: Link\nAmazon Link"
-  },
-  {
-    "objectID": "books/04-Black-In-A-White-Coat/index.html",
-    "href": "books/04-Black-In-A-White-Coat/index.html",
-    "title": "Black Man in a White Coat",
-    "section": "",
-    "text": "Book\n\n\n\nBlack Man in a White Coat: A Doctor’s Reflections on Race and Medicine\nDamon Tweedy M.D.\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nAmazon Link"
-  },
-  {
-    "objectID": "books/06-Happiness/index.html",
-    "href": "books/06-Happiness/index.html",
-    "title": "Happiness",
-    "section": "",
-    "text": "Book\n\n\n\nHappiness: A Guide to Developing Life’s Most Important Skill\nMatthieu Ricard\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nAmazon Link"
-  },
-  {
-    "objectID": "books/08-Limitless-Mind/index.html",
-    "href": "books/08-Limitless-Mind/index.html",
-    "title": "Limitless Mind",
-    "section": "",
-    "text": "Book\n\n\n\nLimitless Mind: Learn, Lead, and Live Without Borders\nJo Boaler\n\n\nAmazon Link"
-  },
-  {
-    "objectID": "books/08-Limitless-Mind/index.html#book-availability",
-    "href": "books/08-Limitless-Mind/index.html#book-availability",
-    "title": "Limitless Mind",
+    "objectID": "books/09-Solito/index.html#book-availability",
+    "href": "books/09-Solito/index.html#book-availability",
+    "title": "Solito",
     "section": "",
     "text": "Amazon Link"
   },
   {
-    "objectID": "courses.html",
-    "href": "courses.html",
-    "title": "Courses",
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
     "section": "",
-    "text": "AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
+    "text": "Unable to display PDF file. Download instead."
   },
   {
-    "objectID": "courses.html#csu-channel-islands",
-    "href": "courses.html#csu-channel-islands",
-    "title": "Courses",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "INQS",
     "section": "",
-    "text": "AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
+    "text": "Isaac Quintanilla Salinas\n\nAssistant Professor of Statistics\nCSU Channel Islands\n\n\n\n\nBiography\nIsaac Quintanilla Salinas is a graduate from the Department of Statistics at the University of California, Riverside with a PhD in Applied Statistics. He joined the Department of Mathematics at the California State University Channel Islands in Fall 2022. Prior to his doctoral research, Dr. Quintanilla Salinas earned his MPH from San Diego State University and BS in Biology from the California State University Monterey Bay.\nDr. Quintanilla Salinas research focuses on developing statistical models to understand the association between survival and longitudinal outcomes. His dissertation “Multilevel Time-Varying Joint Models for Longitudinal and Survival Outcomes” develops a novel model to address challenges of modeling dependent outcomes. Additionally, Dr. Quintanilla Salinas collaborates with several researchers at different institutions in the fields of Public Health, Psychology, Biology, Geographic Information Systems, and Education.\n\n\n\n\n\n\nEducation\n\nUC Riverside\n\nPhD in Applied Statistics\n\nSan Diego State University\n\nMaster’s in Public Health\n\nCSU Monterey Bay\n\nBS Biology\n\n\n\n\nInterests\n\nJoint Longitudinal and Survival Models\nHealth and Well Being\nEducation\nAlgorithmic Bias"
   },
   {
-    "objectID": "courses.html#uc-riverside",
-    "href": "courses.html#uc-riverside",
-    "title": "Courses",
-    "section": "UC Riverside",
-    "text": "UC Riverside\n\nAllAssociate InstructorTeaching Assistant\n\n\n\nSTAT 127: Introduction to Quality Management\nSTAT 147: Introduction to Statistical Computing\nSTAT 100: Introduction to Statistics\nSTAT 170: Regression and ANOVA\nSTAT 048: Introduction to Business Statistics\nUB: Math Courses\nUB: Public Health Courses\nUB: Research Courses\n\n\n\n\nSTAT 127: Introduction to Quality Management\nSTAT 147: Introduction to Statistical Computing\n\n\n\n\nSTAT 100: Introduction to Statistics\nSTAT 170: Regression and ANOVA\nSTAT 048: Introduction to Business Statistics"
+    "objectID": "photos/heart/index.html",
+    "href": "photos/heart/index.html",
+    "title": "Heart Rock Trail",
+    "section": "",
+    "text": "library(pixture)\n\npixgallery(\n  list.files(\"img\", \n             full.names=TRUE),\n  dim=\"350px\",\n  gap = \"10px\"\n)"
   },
   {
-    "objectID": "photos.html",
-    "href": "photos.html",
-    "title": "Photos",
-    "section": "",
-    "text": "Big Bear Lake\n\n\n\n\n\n\n\n\n\n\n\n\n\nBluff Lake\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiamond Valley Lake\n\n\n\n\n\n\n\n\n\n\n\n\n\nHeart Rock Trail\n\n\n\n\n\n\n\n\n\n\n\n\n\nJoshua Tree\n\n\n\n\n\n\n\n\n\n\n\n\n\nLake Gregory\n\n\n\n\n\n\n\nNo matching items"
+    "objectID": "pres/ci_f23/9_27.html#statistics-warning",
+    "href": "pres/ci_f23/9_27.html#statistics-warning",
+    "title": "Statistics:",
+    "section": "Statistics Warning",
+    "text": "Statistics Warning"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#but",
+    "href": "pres/ci_f23/9_27.html#but",
+    "title": "Statistics:",
+    "section": "But…",
+    "text": "But…"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#menti.com-2449-3348",
+    "href": "pres/ci_f23/9_27.html#menti.com-2449-3348",
+    "title": "Statistics:",
+    "section": "menti.com 2449 3348",
+    "text": "menti.com 2449 3348"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#statistics",
+    "href": "pres/ci_f23/9_27.html#statistics",
+    "title": "Statistics:",
+    "section": "Statistics",
+    "text": "Statistics"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#what-does-google-say",
+    "href": "pres/ci_f23/9_27.html#what-does-google-say",
+    "title": "Statistics:",
+    "section": "What does Google say?",
+    "text": "What does Google say?\n\n\nUC Irvine\nStatistics is the science concerned with developing and studying methods for collecting, analyzing, interpreting and presenting empirical data.\n\nWikipedia\nStatistics is a mathematical body of science that pertains to the collection, analysis, interpretation or explanation, and presentation of data, or as a branch of mathematics."
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#what-does-ai-say",
+    "href": "pres/ci_f23/9_27.html#what-does-ai-say",
+    "title": "Statistics:",
+    "section": "What does AI say?",
+    "text": "What does AI say?\n\n\nChatGPT\nStatistics is a branch of mathematics and a field of study that deals with the collection, analysis, interpretation, presentation, and organization of data.\n\nGoogle Bard\nStatistics is the science of collecting, analyzing, interpreting, and presenting data."
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#what-do-researchers-say",
+    "href": "pres/ci_f23/9_27.html#what-do-researchers-say",
+    "title": "Statistics:",
+    "section": "What do researchers say?",
+    "text": "What do researchers say?\n\nAnthropologistMicrobiologistSociologistPolitical ScientistAstrophysicistMathematician\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStatistics is the study of data, patterns, and trends."
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#what-is-it",
+    "href": "pres/ci_f23/9_27.html#what-is-it",
+    "title": "Statistics:",
+    "section": "What is it?",
+    "text": "What is it?\n\n\nMath\n\n\n\n\n\n\nScience"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#what-does-a-statistician-say",
+    "href": "pres/ci_f23/9_27.html#what-does-a-statistician-say",
+    "title": "Statistics:",
+    "section": "What does a Statistician say?",
+    "text": "What does a Statistician say?\nIt is the study of variation and randomness!\n\nUsing mathematics, we model randomness to characterizes commonality and variation!\n\n\nUsing science, we systematically refine models to better fit randomness in data!\n\n\nUsing art, when it all eventually fails!"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#when-it-fails",
+    "href": "pres/ci_f23/9_27.html#when-it-fails",
+    "title": "Statistics:",
+    "section": "When it fails?!?!",
+    "text": "When it fails?!?!"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#statistics-mantra---george-box",
+    "href": "pres/ci_f23/9_27.html#statistics-mantra---george-box",
+    "title": "Statistics:",
+    "section": "Statistics Mantra - George Box",
+    "text": "Statistics Mantra - George Box\n\n\n\n\n\n\n\n\nAll models are wrong,\nsome are useful!"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#what-is-the-formal-definition-of-statistics",
+    "href": "pres/ci_f23/9_27.html#what-is-the-formal-definition-of-statistics",
+    "title": "Statistics:",
+    "section": "What is the formal definition of Statistics?",
+    "text": "What is the formal definition of Statistics?\nStatistics is both the development of mathematical models to be used in real-world data and the analysis of data using existing models."
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#probability-models",
+    "href": "pres/ci_f23/9_27.html#probability-models",
+    "title": "Statistics:",
+    "section": "Probability Models",
+    "text": "Probability Models\n\n\n\n\n\n\n\n\n\nModel observations that follow a new data generating process\nUnderstand its properties\nDevelop new probability distributions\nKnown as Probability Theory\nResearcher is a Probabilist"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#data-analysis",
+    "href": "pres/ci_f23/9_27.html#data-analysis",
+    "title": "Statistics:",
+    "section": "Data Analysis",
+    "text": "Data Analysis\n\n\n\nModel data with a known probability model\nAccount for sources of variation and bias\nAccount for violations of independence and randomness\nKnown as Statistician or Data Scientist"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#goal-inference",
+    "href": "pres/ci_f23/9_27.html#goal-inference",
+    "title": "Statistics:",
+    "section": "Goal: Inference",
+    "text": "Goal: Inference\nUse our sample data to understand the larger population.\n\nThe data will tell us how the population generally behaves.\n\n\nThe data will guide us in the differences in the unit.\n\n\nData will tell us if there is a signal or just noise."
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#menti.com-2449-3348-1",
+    "href": "pres/ci_f23/9_27.html#menti.com-2449-3348-1",
+    "title": "Statistics:",
+    "section": "menti.com 2449 3348",
+    "text": "menti.com 2449 3348"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#was-the-word-cloud-a-scientific-study",
+    "href": "pres/ci_f23/9_27.html#was-the-word-cloud-a-scientific-study",
+    "title": "Statistics:",
+    "section": "Was the word cloud a scientific study?",
+    "text": "Was the word cloud a scientific study?\n\nYES!\n\n\nA sample was collected!\n\n\nData was collected!\n\n\nData was summarized!"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#another-word-cloud",
+    "href": "pres/ci_f23/9_27.html#another-word-cloud",
+    "title": "Statistics:",
+    "section": "Another Word Cloud",
+    "text": "Another Word Cloud"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#whats-life-without-a-little",
+    "href": "pres/ci_f23/9_27.html#whats-life-without-a-little",
+    "title": "Statistics:",
+    "section": "What’s life without a little …",
+    "text": "What’s life without a little …"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#frequentists",
+    "href": "pres/ci_f23/9_27.html#frequentists",
+    "title": "Statistics:",
+    "section": "Frequentists",
+    "text": "Frequentists"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#frequentists-1",
+    "href": "pres/ci_f23/9_27.html#frequentists-1",
+    "title": "Statistics:",
+    "section": "Frequentists",
+    "text": "Frequentists\nA frequentist, in the context of statistics, is an individual who adheres to the frequentist interpretation of probability and statistical inference.\n\nMeaning probability is obtained by the repetition of multiple experiments."
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#bayesians",
+    "href": "pres/ci_f23/9_27.html#bayesians",
+    "title": "Statistics:",
+    "section": "Bayesians",
+    "text": "Bayesians"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#bayesians-1",
+    "href": "pres/ci_f23/9_27.html#bayesians-1",
+    "title": "Statistics:",
+    "section": "Bayesians",
+    "text": "Bayesians\nA Bayesians, in the context of statistics, is an individual who adheres to the Bayesian interpretation of probability and statistical inference.\n\nProbability is obtained by likelihood of an event to occur, given data and prior knowledge."
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#what-am-i",
+    "href": "pres/ci_f23/9_27.html#what-am-i",
+    "title": "Statistics:",
+    "section": "What am I",
+    "text": "What am I"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#when-all-else-fails",
+    "href": "pres/ci_f23/9_27.html#when-all-else-fails",
+    "title": "Statistics:",
+    "section": "When all else fails!",
+    "text": "When all else fails!"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#monte-carlo-methods",
+    "href": "pres/ci_f23/9_27.html#monte-carlo-methods",
+    "title": "Statistics:",
+    "section": "Monte Carlo Methods",
+    "text": "Monte Carlo Methods\n\nMonte Carlo Methods are used to construct a distribution function of obscure"
   },
   {
     "objectID": "pres/surf_2023/anova.html#presentation",

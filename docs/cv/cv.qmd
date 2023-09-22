@@ -426,7 +426,8 @@ format:
   \vspace{3pt}
 \end{normalsize}
 ```
--   Magdaleno, Francisco, **Salinas INQ**, and Rothstein, Stephen. Vocal Functional Flexibility in a Non-Primate Vocal Learning Species. Journal of Language Evolution
+-   Magdaleno, Francisco, **Salinas INQ**, and Rothstein, Stephen. Vocal Functional Flexibility in a Non-Primate Vocal Learning Species. Journal of Language Evolution *Conditionally Accepted*
+-   Hawkins LR, Magdaleno F, **Salinas INQ**, and Peer BD. Egg shape in an obligate brood parasite contributes to decreased temperature variation during incubation. Current Zoology
 
 ```{=tex}
 \begin{normalsize}
@@ -672,6 +673,17 @@ format:
 \vspace{7pt}
 
 ```{=tex}
+\begin{large}{\bf Committees}
+  \vspace{3pt}
+  \hrule
+\end{large}
+\vspace{-0.16cm}
+```
+-   *Co-Chair*: CSUCI Data Science Program Development Task Force
+
+\vspace{7pt}
+
+```{=tex}
 \begin{large}{\bf Grants and Awards}
   \vspace{3pt}
   \hrule
@@ -696,7 +708,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
--   **Languages:** R, Bash, Git, Markdown, SAS, SPSS, ArcGIS, LaTeX
+-   **Languages:** R, Bash, Git, C++, Markdown, SAS, SPSS, ArcGIS, LaTeX
 
 -   **Tools:** SAS, SPSS, ArcGIS, LaTeX
 

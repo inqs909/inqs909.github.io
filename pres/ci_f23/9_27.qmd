@@ -1,0 +1,264 @@
+---
+title: "Statistics:"
+subtitle: "A Math? A Science? An Art? Or Something Else?"
+author: "Isaac Quintanilla Salinas"
+format: 
+  revealjs:
+    pointer:
+      pointerSize: 32
+    incremental: false
+    scrollable: true
+knitr:
+  opts_chunk: 
+    echo: true
+    eval: true
+    message: false
+    warnings: false
+    comment: "#>" 
+revealjs-plugins:
+  - pointer
+filters: 
+  - reveal-auto-agenda
+---
+
+## Statistics Warning
+
+![](https://media.tenor.com/GexFRAjz9XcAAAAC/theres-no-guarantee-it-would-work-south-park.gif){fig-align="center"}
+
+## But...
+
+![](https://media.tenor.com/2y4TIBEXxykAAAAC/terminator-this-plan-has-a-high-probability-of-success.gif){fig-align="center"}
+
+## menti.com 2449 3348
+
+```{=html}
+<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/al4cgi23va9p7w7pq8k1xzkob3v4t617/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+```
+## Statistics 
+
+## What does Google say?
+
+::: columns
+::: {.column width="50%"}
+### UC Irvine
+
+Statistics is the science concerned with developing and studying methods for collecting, analyzing, interpreting and presenting empirical data.
+:::
+
+::: {.column width="50%"}
+### Wikipedia
+
+Statistics is a mathematical body of science that pertains to the collection, analysis, interpretation or explanation, and presentation of data, or as a branch of mathematics.
+:::
+:::
+
+## What does AI say?
+
+::: columns
+::: {.column width="50%"}
+### ChatGPT
+
+Statistics is a branch of mathematics and a field of study that deals with the collection, analysis, interpretation, presentation, and organization of data.
+:::
+
+::: {.column width="50%"}
+### Google Bard
+
+Statistics is the science of collecting, analyzing, interpreting, and presenting data.
+:::
+:::
+
+## What do researchers say?
+
+::: panel-tabset
+## Anthropologist
+
+## Microbiologist
+
+## Sociologist
+
+## Political Scientist
+
+## Astrophysicist
+
+## Mathematician
+
+Statistics is the study of data, patterns, and trends.
+:::
+
+## What is it?
+
+::: columns
+::: {.column width="50%"}
+### Math
+
+![](https://media.tenor.com/5ZfhdHdoK3UAAAAC/incredibles-the.gif){fig-align="center" width="498" height="380"}
+:::
+
+::: {.column width="50%"}
+### Science
+
+![](https://media.tenor.com/qWcKVwjtwAQAAAAC/bill-nye-mind-blown.gif){fig-align="center" width="494" height="380"}
+:::
+:::
+
+## What does a Statistician say?
+
+It is the study of variation and randomness!
+
+::: fragment
+Using mathematics, we model randomness to characterizes commonality and variation!
+:::
+
+::: fragment
+Using science, we systematically refine models to better fit randomness in data!
+:::
+
+::: fragment
+Using art, when it all eventually fails!
+:::
+
+## When it fails?!?!
+
+::: fragment
+![](https://media.tenor.com/XtqAqClw6AAAAAAC/yes-yes-professor-farnsworth.gif){fig-align="center"}
+:::
+
+## Statistics Mantra - George Box
+
+::: columns
+::: {.column width="50%"}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/GeorgeEPBox.jpg/400px-GeorgeEPBox.jpg){fig-align="center" width="333"}
+:::
+
+::: {.column width="50%"}
+**All models are wrong,**
+
+**some are useful!**
+:::
+:::
+
+## What is the formal definition of Statistics?
+
+Statistics is both the development of mathematical models to be used in real-world data and the analysis of data using existing models.
+
+## Probability Models 
+
+::: columns
+::: {.column width="50%"}
+![](https://media.tenor.com/h5dDA212OzMAAAAC/cat-catwalk.gif){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+-   Model observations that follow a new data generating process
+
+-   Understand its properties
+
+-   Develop new probability distributions
+
+-   Known as Probability Theory
+
+-   Researcher is a Probabilist
+:::
+:::
+
+## Data Analysis
+
+::: columns
+::: {.column width="50%"}
+-   Model data with a known probability model
+
+-   Account for sources of variation and bias
+
+-   Account for violations of independence and randomness
+
+-   Known as Statistician or Data Scientist
+:::
+
+::: {.column width="50%"}
+![](https://media.tenor.com/ogsH7Ailje8AAAAd/cat-funny-cat.gif){fig-align="center"}
+:::
+:::
+
+## Goal: Inference
+
+Use our sample data to understand the larger population.
+
+::: fragment
+The data will tell us how the population generally behaves.
+:::
+
+::: fragment
+The data will guide us in the differences in the unit.
+:::
+
+::: fragment
+Data will tell us if there is a signal or just noise.
+:::
+
+## menti.com 2449 3348
+
+```{=html}
+<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/al4cgi23va9p7w7pq8k1xzkob3v4t617/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+```
+## Was the word cloud a scientific study?
+
+::: fragment
+YES!
+:::
+
+::: fragment
+A sample was collected!
+:::
+
+::: fragment
+Data was collected!
+:::
+
+::: fragment
+Data was summarized!
+:::
+
+## Another Word Cloud
+
+## What's life without a little ...
+
+![](https://media.tenor.com/RhAwIEGUEd4AAAAC/drama-top.gif){fig-align="center"}
+
+## Frequentists
+
+![](https://media.tenor.com/UfP_ixn3qlwAAAAC/valor-pokemon-go.gif){fig-align="center" width="515" height="675"}
+
+## Frequentists
+
+A frequentist, in the context of statistics, is an individual who adheres to the frequentist interpretation of probability and statistical inference.
+
+::: fragment
+Meaning probability is obtained by the repetition of multiple experiments.
+:::
+
+## Bayesians
+
+![](https://media.tenor.com/ncl2k1KRsQgAAAAC/mystic-team-mystic.gif){fig-align="center"}
+
+## Bayesians
+
+A Bayesians, in the context of statistics, is an individual who adheres to the Bayesian interpretation of probability and statistical inference.
+
+::: fragment
+Probability is obtained by likelihood of an event to occur, given data and prior knowledge.
+:::
+
+## What am I
+
+![](https://media.tenor.com/O_JvW8kZEIAAAAAd/the-simpsons-playing.gif){fig-align="center"}
+
+## When all else fails!
+
+::: fragment
+![](https://media.tenor.com/x5dpKrM1U6oAAAAd/vamonos-lets-go.gif){fig-align="center" width="377"}
+:::
+
+## Monte Carlo Methods
+
+-   Monte Carlo Methods are used to construct a distribution function of obscure
