@@ -620,7 +620,7 @@
     "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
     "title": "RcppArmadillo",
     "section": "Using RcppArmadillo",
-    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.01518127\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.01518127\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.24µs   3.71µs   257565.        0B        0\n2 mean_cpp(Y)   1.83µs   2.77µs   366379.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
+    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] -0.06927209\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] -0.06927209\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.25µs   3.92µs   226331.        0B        0\n2 mean_cpp(Y)   1.82µs   3.02µs   324631.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
   },
   {
     "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
@@ -896,11 +896,11 @@
     "text": "Conducting Inference"
   },
   {
-    "objectID": "pres/ci_f23/9_27.html#are-we-seeing-something-or-is-that-just-noise",
-    "href": "pres/ci_f23/9_27.html#are-we-seeing-something-or-is-that-just-noise",
+    "objectID": "pres/ci_f23/9_27.html#are-we-seeing-something-or-is-it-just-noise",
+    "href": "pres/ci_f23/9_27.html#are-we-seeing-something-or-is-it-just-noise",
     "title": "Statistics:",
-    "section": "Are we seeing something or is that just noise???",
-    "text": "Are we seeing something or is that just noise???\nAre we seeing something different from what was expected? Or is it due to random chance?"
+    "section": "Are we seeing something or is it just noise???",
+    "text": "Are we seeing something or is it just noise???\nAre we seeing something different from what was expected? Or is it due to random chance?"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#hypothesis-testing",
@@ -973,6 +973,13 @@
     "text": "Modelling them Jointly"
   },
   {
+    "objectID": "pres/ci_f23/9_27.html#data",
+    "href": "pres/ci_f23/9_27.html#data",
+    "title": "Statistics:",
+    "section": "Data",
+    "text": "Data\nWith \\(n\\) participants, each \\(i^{th}\\) participant has:\n\n\nLongitudinal Data\n\n\\(n_i\\) repeated measurements\n\\(t_{i}=(t_{i1}, t_{i2}, \\cdots, t_{in_i})^\\mathrm T\\)\n\\(Y_i=(Y_{i1}, Y_{i2}, \\cdots, Y_{in_i})^\\mathrm T\\)\n\\(X_{ij}=(X_{ij1}, X_{ij2}, \\cdots, X_{ijk})^\\mathrm T\\)\n\n\nSurvival Data\n\n\\(T_i\\): Observed time\n\\(\\delta_i\\): Censoring status"
+  },
+  {
     "objectID": "pres/ci_f23/9_27.html#longitudinal-submodels",
     "href": "pres/ci_f23/9_27.html#longitudinal-submodels",
     "title": "Statistics:",
@@ -984,14 +991,14 @@
     "href": "pres/ci_f23/9_27.html#survival-submodels",
     "title": "Statistics:",
     "section": "Survival Submodels",
-    "text": "Survival Submodels"
+    "text": "Survival Submodels\n\\[\\large{\\lambda_i\\{t|M_i(t),X_i\\}=\\lim_{\\Delta\\rightarrow 0}\\frac{ P\\{t\\leq T_i &lt;t+\\Delta|T_i\\geq t, M_i(t),\\boldsymbol X_{i1}\\}}{\\Delta}}\\] \\[\\large{\\lambda_i\\{t|M_i(t),\\boldsymbol X_{i1}\\}=\\lambda_0(t)\\exp\\{\\boldsymbol X_{i1}^\\mathrm T\\boldsymbol \\gamma+\\alpha m_i(t)\\}}\\]\nwhere\n\n\\(\\lambda_0(t)\\): baseline hazard function\n\\(\\boldsymbol X_{i1}\\): design matrix at first time point\n\\(\\boldsymbol \\gamma\\): regression coefficients\n\\(\\alpha\\): association coefficient\n\\(M_i(t)\\): history of the longitudinal outcome"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#construction-of-the-joint-model",
     "href": "pres/ci_f23/9_27.html#construction-of-the-joint-model",
     "title": "Statistics:",
     "section": "Construction of the Joint Model",
-    "text": "Construction of the Joint Model"
+    "text": "Construction of the Joint Model\nFor an \\(i^{th}\\) individual:\n\\[P(T_i, \\delta_i, \\boldsymbol Y_i; \\boldsymbol \\theta)\\]\n\n\\[\nP(T_i, \\delta_i, \\boldsymbol Y_i; \\boldsymbol \\theta) \\neq P(T_i, \\delta_i; \\boldsymbol \\theta) P( \\boldsymbol Y_i; \\boldsymbol \\theta)\n\\]"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#whats-happening",
@@ -1005,28 +1012,49 @@
     "href": "pres/ci_f23/9_27.html#construction-of-joint-model",
     "title": "Statistics:",
     "section": "Construction of Joint Model",
-    "text": "Construction of Joint Model"
+    "text": "Construction of Joint Model\n\\[\\begin{eqnarray}\nP(T_i, \\delta_i, \\boldsymbol Y_i; \\boldsymbol \\theta) &=& \\int  P(T_{i},\\delta_{i}|b_{i};\\boldsymbol \\theta)P(\\boldsymbol Y_{i}|b_{i};\\boldsymbol \\theta)P(b_{i};\\boldsymbol \\theta) db_i\\\\\n& = & \\int  P(T_{i},\\delta_{i}|b_{i};\\boldsymbol \\theta) \\prod^{n_i}_j P(\\boldsymbol Y_{ij}|b_{i};\\boldsymbol \\theta)P(b_{i};\\boldsymbol \\theta) db_i\n\\end{eqnarray}\\]"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#estimation-of-parameters",
     "href": "pres/ci_f23/9_27.html#estimation-of-parameters",
     "title": "Statistics:",
     "section": "Estimation of parameters",
-    "text": "Estimation of parameters"
+    "text": "Estimation of parameters\n\nIn order to estimate the paramters (\\(\\theta\\)), we must predict the random effects.\n\n\nWe must take care of the integral!\n\n\nWe either treat the random effects as parameters!\n\n\nOR, we treat the random effects as missing!"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#missing",
+    "href": "pres/ci_f23/9_27.html#missing",
+    "title": "Statistics:",
+    "section": "Missing!?",
+    "text": "Missing!?"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#expectation-maximization-algorithm",
+    "href": "pres/ci_f23/9_27.html#expectation-maximization-algorithm",
+    "title": "Statistics:",
+    "section": "Expectation-Maximization Algorithm",
+    "text": "Expectation-Maximization Algorithm\n\n\nE-Step\nNumerical techniques are used to target the random effects in the joint density function\n\nGaussian Quadrature\nLaplace Approximation\nMonte Carlo Techniques\n\n\nM-Step\nA Newton-Raphson or other numerical techniques are used to maximize the expected likelihood function."
   },
   {
     "objectID": "pres/ci_f23/9_27.html#estimation-of-margin-of-error",
     "href": "pres/ci_f23/9_27.html#estimation-of-margin-of-error",
     "title": "Statistics:",
     "section": "Estimation of Margin of Error",
-    "text": "Estimation of Margin of Error"
+    "text": "Estimation of Margin of Error\nThe standard errors of the parameters can be computed either as:\n\nVariance of the estimator, following probability model\nUsing large sample theory of MLE, use the negative inverse Hessian matrix"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#estimation-of-margin-of-error-1",
+    "href": "pres/ci_f23/9_27.html#estimation-of-margin-of-error-1",
+    "title": "Statistics:",
+    "section": "Estimation of Margin of Error",
+    "text": "Estimation of Margin of Error\nThe standard errors of the parameters can be computed either as:\n\nVariance of the estimator, following probability model\nUsing large sample theory of MLE, use the negative inverse Hessian matrix\n\nThe Standard Errors are Biased due to misspecification of the random effects and baseline hazard function."
   },
   {
     "objectID": "pres/ci_f23/9_27.html#bootstrapping",
     "href": "pres/ci_f23/9_27.html#bootstrapping",
     "title": "Statistics:",
     "section": "Bootstrapping",
-    "text": "Bootstrapping"
+    "text": "Bootstrapping\n\n\nBootstrapping can nonparametrically (or parameterically) compute the unbiased standard errors.\n\n\nBootstrapping is conducted by sampling from the data set with replacement.\nThen a test statistic is constructed for each boot sample.\nThe process is repeated many times until a distribution is constructed.\nStandard Errors (or Confidence Intervals) are obtained from the distribution.\nFor joint models, the individual is sampled."
   },
   {
     "objectID": "pres/ci_f23/9_27.html#questions",
@@ -1036,11 +1064,11 @@
     "text": "Questions"
   },
   {
-    "objectID": "pres/ci_f23/9_27.html#whats-life-without-a-little",
-    "href": "pres/ci_f23/9_27.html#whats-life-without-a-little",
+    "objectID": "pres/ci_f23/9_27.html#whats-statistics-without-a-little",
+    "href": "pres/ci_f23/9_27.html#whats-statistics-without-a-little",
     "title": "Statistics:",
-    "section": "What’s life without a little …",
-    "text": "What’s life without a little …"
+    "section": "What’s Statistics without a little …",
+    "text": "What’s Statistics without a little …"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#train-of-thoughts",
@@ -1083,6 +1111,13 @@
     "title": "Statistics:",
     "section": "What am I (and people that have lives)?",
     "text": "What am I (and people that have lives)?\n\nWhatever gets the job done!"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#there-is-more-much-more-but-i-will-say-this-in-my-statistical-journey",
+    "href": "pres/ci_f23/9_27.html#there-is-more-much-more-but-i-will-say-this-in-my-statistical-journey",
+    "title": "Statistics:",
+    "section": "There is more, much more, but I will say this, in my statistical journey",
+    "text": "There is more, much more, but I will say this, in my statistical journey"
   },
   {
     "objectID": "pres/surf_2023/anova.html#presentation",

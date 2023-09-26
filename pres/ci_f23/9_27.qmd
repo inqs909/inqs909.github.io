@@ -267,7 +267,7 @@ wordcloud2(data=df, size=.7, color='random-dark')
 
 ![](https://statsandr.com/blog/what-is-the-difference-between-population-and-sample_files/population-sample.png){fig-align="center"}
 
-## Are we seeing something or is that just noise???
+## Are we seeing something or is it just noise???
 
 Are we seeing something different from what was expected? Or is it due to random chance?
 
@@ -357,7 +357,33 @@ We bring out the **Monte Carlo** methods!
 
 ## Modelling them Jointly
 
-## Longitudinal Submodels
+## Data
+
+With $n$ participants, each $i^{th}$ participant has:
+
+::: columns
+::: {.column width="50%"}
+### Longitudinal Data
+
+-   $n_i$ repeated measurements
+
+-   $t_{i}=(t_{i1}, t_{i2}, \cdots, t_{in_i})^\mathrm T$
+
+-   $Y_i=(Y_{i1}, Y_{i2}, \cdots, Y_{in_i})^\mathrm T$
+
+-   $X_{ij}=(X_{ij1}, X_{ij2}, \cdots, X_{ijk})^\mathrm T$
+:::
+
+::: {.column width="50%"}
+### Survival Data
+
+-   $T_i$: Observed time
+
+-   $\delta_i$: Censoring status
+:::
+:::
+
+## Longitudinal Submodels {.smaller}
 
 Our longitudinal outcome y can be represented in 2 components: a linear model and an error term. The linear $$\Large{Y_{ij} = m_i (t_{ij}) + \epsilon_i(t_{ij}),}$$
 
@@ -385,11 +411,31 @@ where
 :::
 :::
 
-## Survival Submodels
+## Survival Submodels {.smaller}
+
+$$\large{\lambda_i\{t|M_i(t),X_i\}=\lim_{\Delta\rightarrow 0}\frac{ P\{t\leq T_i <t+\Delta|T_i\geq t, M_i(t),\boldsymbol X_{i1}\}}{\Delta}}$$ $$\large{\lambda_i\{t|M_i(t),\boldsymbol X_{i1}\}=\lambda_0(t)\exp\{\boldsymbol X_{i1}^\mathrm T\boldsymbol \gamma+\alpha m_i(t)\}}$$
+
+where
+
+-   $\lambda_0(t)$: baseline hazard function
+-   $\boldsymbol X_{i1}$: design matrix at first time point
+-   $\boldsymbol \gamma$: regression coefficients
+-   $\alpha$: association coefficient
+-   $M_i(t)$: history of the longitudinal outcome
 
 ## Construction of the Joint Model
 
-## What's happening
+For an $i^{th}$ individual:
+
+$$P(T_i, \delta_i, \boldsymbol Y_i; \boldsymbol \theta)$$
+
+::: fragment
+$$
+P(T_i, \delta_i, \boldsymbol Y_i; \boldsymbol \theta) \neq P(T_i, \delta_i; \boldsymbol \theta) P( \boldsymbol Y_i; \boldsymbol \theta)
+$$
+:::
+
+## What's happening {.smaller}
 
 ::: columns
 ::: {.column width="50%"}
@@ -411,17 +457,98 @@ where
 
 ## Construction of Joint Model
 
+$$\begin{eqnarray}
+P(T_i, \delta_i, \boldsymbol Y_i; \boldsymbol \theta) &=& \int  P(T_{i},\delta_{i}|b_{i};\boldsymbol \theta)P(\boldsymbol Y_{i}|b_{i};\boldsymbol \theta)P(b_{i};\boldsymbol \theta) db_i\\
+& = & \int  P(T_{i},\delta_{i}|b_{i};\boldsymbol \theta) \prod^{n_i}_j P(\boldsymbol Y_{ij}|b_{i};\boldsymbol \theta)P(b_{i};\boldsymbol \theta) db_i
+\end{eqnarray}$$
+
 ## Estimation of parameters
 
-## Estimation of Margin of Error
+::: fragment
+In order to estimate the paramters ($\theta$), we must predict the random effects.
+:::
 
-## Bootstrapping
+::: fragment
+We must take care of the integral!
+:::
+
+::: fragment
+We either treat the random effects as parameters!
+:::
+
+::: fragment
+OR, we treat the random effects as missing!
+:::
+
+## Missing!?
+
+![](https://media.tenor.com/tCLtZ13HOlMAAAAC/confused-meme.gif){fig-align="center"}
+
+## Expectation-Maximization Algorithm
 
 ::: columns
 ::: {.column width="50%"}
+### E-Step
+
+Numerical techniques are used to target the random effects in the joint density function
+
+-   Gaussian Quadrature
+
+-   Laplace Approximation
+
+-   Monte Carlo Techniques
 :::
 
 ::: {.column width="50%"}
+### M-Step
+
+A Newton-Raphson or other numerical techniques are used to maximize the expected likelihood function.
+:::
+:::
+
+## Estimation of Margin of Error
+
+The standard errors of the parameters can be computed either as:
+
+-   Variance of the estimator, following probability model
+
+-   Using large sample theory of MLE, use the negative inverse Hessian matrix
+
+## 
+
+![](https://media.tenor.com/tDau9a7i5hwAAAAi/alert-siren.gif){fig-align="center"}
+
+## Estimation of Margin of Error
+
+The standard errors of the parameters can be computed either as:
+
+-   Variance of the estimator, following probability model
+
+-   Using large sample theory of MLE, use the negative inverse Hessian matrix
+
+**The Standard Errors are Biased due to misspecification of the random effects and baseline hazard function.**
+
+## 
+
+![](https://media.tenor.com/ZERoT-Xe7OEAAAAC/i-pulled-myself-up-by-my-bootstraps-my-bootstraps.gif){fig-align="center"}
+
+## Bootstrapping {.smaller}
+
+::: columns
+::: {.column width="50%"}
+Bootstrapping can nonparametrically (or parameterically) compute the unbiased standard errors.
+:::
+
+::: {.column width="50%"}
+-   Bootstrapping is conducted by sampling from the data set with replacement.
+
+-   Then a test statistic is constructed for each boot sample.
+
+-   The process is repeated many times until a distribution is constructed.
+
+-   Standard Errors (or Confidence Intervals) are obtained from the distribution.
+
+-   For joint models, the individual is sampled.
 :::
 :::
 
@@ -429,7 +556,11 @@ where
 
 ![](https://media.tenor.com/yQ8Jnm51kJYAAAAd/soooo-today.gif){fig-align="center"}
 
-## What's life without a little ...
+## 
+
+![](https://media.tenor.com/eKK8PR6m2ekAAAAd/and-now-the-end-is-near-the-end-is-in-sight.gif){fig-align="center"}
+
+## What's Statistics without a little ...
 
 ![](https://media.tenor.com/RhAwIEGUEd4AAAAC/drama-top.gif){fig-align="center"}
 
@@ -475,8 +606,14 @@ A Bayesians, in the context of statistics, is an individual who adheres to the B
 Probability is obtained by likelihood of an event to occur, given data and prior knowledge.
 :::
 
-## What am I (and people that have lives)?
+## What am I (and people that have lives)? {.smaller}
 
 ![](https://media.tenor.com/O_JvW8kZEIAAAAAd/the-simpsons-playing.gif){fig-align="center"}
 
 ### Whatever gets the job done!
+
+## There is more, much more, but I will say this, in my statistical journey
+
+::: fragment
+![](https://media.tenor.com/9O8vuQzirQMAAAAd/i-did-it-my-way-frank-sinatra.gif){fig-align="center"}
+:::

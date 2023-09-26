@@ -544,8 +544,8 @@ Isaac Quintanilla Salinas
 <h2>Conducting Inference</h2>
 
 <img data-src="https://statsandr.com/blog/what-is-the-difference-between-population-and-sample_files/population-sample.png" class="r-stretch quarto-figure-center"></section>
-<section id="are-we-seeing-something-or-is-that-just-noise" class="slide level2">
-<h2>Are we seeing something or is that just noise???</h2>
+<section id="are-we-seeing-something-or-is-it-just-noise" class="slide level2">
+<h2>Are we seeing something or is it just noise???</h2>
 <p>Are we seeing something different from what was expected? Or is it due to random chance?</p>
 </section>
 <section id="hypothesis-testing" class="slide level2">
@@ -641,7 +641,28 @@ Isaac Quintanilla Salinas
 <section id="modelling-them-jointly" class="slide level2">
 <h2>Modelling them Jointly</h2>
 </section>
-<section id="longitudinal-submodels" class="slide level2">
+<section id="data" class="slide level2">
+<h2>Data</h2>
+<p>With <span class="math inline">\(n\)</span> participants, each <span class="math inline">\(i^{th}\)</span> participant has:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="longitudinal-data">Longitudinal Data</h3>
+<ul>
+<li><p><span class="math inline">\(n_i\)</span> repeated measurements</p></li>
+<li><p><span class="math inline">\(t_{i}=(t_{i1}, t_{i2}, \cdots, t_{in_i})^\mathrm T\)</span></p></li>
+<li><p><span class="math inline">\(Y_i=(Y_{i1}, Y_{i2}, \cdots, Y_{in_i})^\mathrm T\)</span></p></li>
+<li><p><span class="math inline">\(X_{ij}=(X_{ij1}, X_{ij2}, \cdots, X_{ijk})^\mathrm T\)</span></p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="survival-data">Survival Data</h3>
+<ul>
+<li><p><span class="math inline">\(T_i\)</span>: Observed time</p></li>
+<li><p><span class="math inline">\(\delta_i\)</span>: Censoring status</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="longitudinal-submodels" class="slide level2 smaller">
 <h2>Longitudinal Submodels</h2>
 <p>Our longitudinal outcome y can be represented in 2 components: a linear model and an error term. The linear <span class="math display">\[\Large{Y_{ij} = m_i (t_{ij}) + \epsilon_i(t_{ij}),}\]</span></p>
 <p>where</p>
@@ -663,13 +684,29 @@ Isaac Quintanilla Salinas
 </div>
 </div>
 </section>
-<section id="survival-submodels" class="slide level2">
+<section id="survival-submodels" class="slide level2 smaller">
 <h2>Survival Submodels</h2>
+<p><span class="math display">\[\large{\lambda_i\{t|M_i(t),X_i\}=\lim_{\Delta\rightarrow 0}\frac{ P\{t\leq T_i &lt;t+\Delta|T_i\geq t, M_i(t),\boldsymbol X_{i1}\}}{\Delta}}\]</span> <span class="math display">\[\large{\lambda_i\{t|M_i(t),\boldsymbol X_{i1}\}=\lambda_0(t)\exp\{\boldsymbol X_{i1}^\mathrm T\boldsymbol \gamma+\alpha m_i(t)\}}\]</span></p>
+<p>where</p>
+<ul>
+<li><span class="math inline">\(\lambda_0(t)\)</span>: baseline hazard function</li>
+<li><span class="math inline">\(\boldsymbol X_{i1}\)</span>: design matrix at first time point</li>
+<li><span class="math inline">\(\boldsymbol \gamma\)</span>: regression coefficients</li>
+<li><span class="math inline">\(\alpha\)</span>: association coefficient</li>
+<li><span class="math inline">\(M_i(t)\)</span>: history of the longitudinal outcome</li>
+</ul>
 </section>
 <section id="construction-of-the-joint-model" class="slide level2">
 <h2>Construction of the Joint Model</h2>
+<p>For an <span class="math inline">\(i^{th}\)</span> individual:</p>
+<p><span class="math display">\[P(T_i, \delta_i, \boldsymbol Y_i; \boldsymbol \theta)\]</span></p>
+<div class="fragment">
+<p><span class="math display">\[
+P(T_i, \delta_i, \boldsymbol Y_i; \boldsymbol \theta) \neq P(T_i, \delta_i; \boldsymbol \theta) P( \boldsymbol Y_i; \boldsymbol \theta)
+\]</span></p>
+</div>
 </section>
-<section id="whats-happening" class="slide level2">
+<section id="whats-happening" class="slide level2 smaller">
 <h2>What’s happening</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -697,20 +734,85 @@ Isaac Quintanilla Salinas
 </section>
 <section id="construction-of-joint-model" class="slide level2">
 <h2>Construction of Joint Model</h2>
+<p><span class="math display">\[\begin{eqnarray}
+P(T_i, \delta_i, \boldsymbol Y_i; \boldsymbol \theta) &amp;=&amp; \int  P(T_{i},\delta_{i}|b_{i};\boldsymbol \theta)P(\boldsymbol Y_{i}|b_{i};\boldsymbol \theta)P(b_{i};\boldsymbol \theta) db_i\\
+&amp; = &amp; \int  P(T_{i},\delta_{i}|b_{i};\boldsymbol \theta) \prod^{n_i}_j P(\boldsymbol Y_{ij}|b_{i};\boldsymbol \theta)P(b_{i};\boldsymbol \theta) db_i
+\end{eqnarray}\]</span></p>
 </section>
 <section id="estimation-of-parameters" class="slide level2">
 <h2>Estimation of parameters</h2>
+<div class="fragment">
+<p>In order to estimate the paramters (<span class="math inline">\(\theta\)</span>), we must predict the random effects.</p>
+</div>
+<div class="fragment">
+<p>We must take care of the integral!</p>
+</div>
+<div class="fragment">
+<p>We either treat the random effects as parameters!</p>
+</div>
+<div class="fragment">
+<p>OR, we treat the random effects as missing!</p>
+</div>
+</section>
+<section id="missing" class="slide level2">
+<h2>Missing!?</h2>
+
+<img data-src="https://media.tenor.com/tCLtZ13HOlMAAAAC/confused-meme.gif" class="r-stretch quarto-figure-center"></section>
+<section id="expectation-maximization-algorithm" class="slide level2">
+<h2>Expectation-Maximization Algorithm</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="e-step">E-Step</h3>
+<p>Numerical techniques are used to target the random effects in the joint density function</p>
+<ul>
+<li><p>Gaussian Quadrature</p></li>
+<li><p>Laplace Approximation</p></li>
+<li><p>Monte Carlo Techniques</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="m-step">M-Step</h3>
+<p>A Newton-Raphson or other numerical techniques are used to maximize the expected likelihood function.</p>
+</div>
+</div>
 </section>
 <section id="estimation-of-margin-of-error" class="slide level2">
 <h2>Estimation of Margin of Error</h2>
+<p>The standard errors of the parameters can be computed either as:</p>
+<ul>
+<li><p>Variance of the estimator, following probability model</p></li>
+<li><p>Using large sample theory of MLE, use the negative inverse Hessian matrix</p></li>
+</ul>
 </section>
-<section id="bootstrapping" class="slide level2">
+<section id="section" class="slide level2">
+<h2></h2>
+
+<img data-src="https://media.tenor.com/tDau9a7i5hwAAAAi/alert-siren.gif" class="r-stretch quarto-figure-center"></section>
+<section id="estimation-of-margin-of-error-1" class="slide level2">
+<h2>Estimation of Margin of Error</h2>
+<p>The standard errors of the parameters can be computed either as:</p>
+<ul>
+<li><p>Variance of the estimator, following probability model</p></li>
+<li><p>Using large sample theory of MLE, use the negative inverse Hessian matrix</p></li>
+</ul>
+<p><strong>The Standard Errors are Biased due to misspecification of the random effects and baseline hazard function.</strong></p>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+
+<img data-src="https://media.tenor.com/ZERoT-Xe7OEAAAAC/i-pulled-myself-up-by-my-bootstraps-my-bootstraps.gif" class="r-stretch quarto-figure-center"></section>
+<section id="bootstrapping" class="slide level2 smaller">
 <h2>Bootstrapping</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-
+<p>Bootstrapping can nonparametrically (or parameterically) compute the unbiased standard errors.</p>
 </div><div class="column" style="width:50%;">
-
+<ul>
+<li><p>Bootstrapping is conducted by sampling from the data set with replacement.</p></li>
+<li><p>Then a test statistic is constructed for each boot sample.</p></li>
+<li><p>The process is repeated many times until a distribution is constructed.</p></li>
+<li><p>Standard Errors (or Confidence Intervals) are obtained from the distribution.</p></li>
+<li><p>For joint models, the individual is sampled.</p></li>
+</ul>
 </div>
 </div>
 </section>
@@ -718,8 +820,12 @@ Isaac Quintanilla Salinas
 <h2>Questions</h2>
 
 <img data-src="https://media.tenor.com/yQ8Jnm51kJYAAAAd/soooo-today.gif" class="r-stretch quarto-figure-center"></section>
-<section id="whats-life-without-a-little" class="slide level2">
-<h2>What’s life without a little …</h2>
+<section id="section-2" class="slide level2">
+<h2></h2>
+
+<img data-src="https://media.tenor.com/eKK8PR6m2ekAAAAd/and-now-the-end-is-near-the-end-is-in-sight.gif" class="r-stretch quarto-figure-center"></section>
+<section id="whats-statistics-without-a-little" class="slide level2">
+<h2>What’s Statistics without a little …</h2>
 
 <img data-src="https://media.tenor.com/RhAwIEGUEd4AAAAC/drama-top.gif" class="r-stretch quarto-figure-center"></section>
 <section id="train-of-thoughts" class="slide level2">
@@ -763,10 +869,20 @@ Isaac Quintanilla Salinas
 <p>Probability is obtained by likelihood of an event to occur, given data and prior knowledge.</p>
 </div>
 </section>
-<section id="what-am-i-and-people-that-have-lives" class="slide level2">
+<section id="what-am-i-and-people-that-have-lives" class="slide level2 smaller">
 <h2>What am I (and people that have lives)?</h2>
 
 <img data-src="https://media.tenor.com/O_JvW8kZEIAAAAAd/the-simpsons-playing.gif" class="r-stretch quarto-figure-center"><h3 id="whatever-gets-the-job-done">Whatever gets the job done!</h3>
+</section>
+<section id="there-is-more-much-more-but-i-will-say-this-in-my-statistical-journey" class="slide level2">
+<h2>There is more, much more, but I will say this, in my statistical journey</h2>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://media.tenor.com/9O8vuQzirQMAAAAd/i-did-it-my-way-frank-sinatra.gif"></p>
+</figure>
+</div>
+</div>
 
 <div class="footer footer-default">
 
