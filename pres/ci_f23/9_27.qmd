@@ -30,9 +30,9 @@ library(tidyverse)
 
 ![](https://media.tenor.com/GexFRAjz9XcAAAAC/theres-no-guarantee-it-would-work-south-park.gif){fig-align="center"}
 
-## But...
+## 
 
-![](https://media.tenor.com/2y4TIBEXxykAAAAC/terminator-this-plan-has-a-high-probability-of-success.gif){fig-align="center"}
+![](https://media.tenor.com/BCyqY6leyXcAAAAC/linkin-park-in-the-end.gif){fig-align="center"}
 
 ## menti.com 2449 3348
 
