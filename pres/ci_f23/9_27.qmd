@@ -78,7 +78,7 @@ Statistics is the science of collecting, analyzing, interpreting, and presenting
 ::: panel-tabset
 ## Anthropologist
 
-Objectively intrepreting data to make meaningful inferences about our predictions.
+Objectively interpreting data to make meaningful inferences about our predictions.
 
 ## Microbiologist
 
@@ -292,7 +292,7 @@ Are we seeing something different from what was expected? Or is it due to random
 
 ::: {.column width="50%"}
 ::: fragment
-We bring out **Monte Carlo** methods!
+We bring out the **Monte Carlo** methods!
 :::
 :::
 :::
@@ -387,9 +387,43 @@ where
 
 ## Survival Submodels
 
+## Construction of the Joint Model
+
+## What's happening
+
+::: columns
+::: {.column width="50%"}
+::: fragment
+### Survival and Longitudinal
+
+![](https://media.tenor.com/D-NIQ9WU3GQAAAAC/correndo.gif){fig-align="center"}
+:::
+:::
+
+::: {.column width="50%"}
+::: fragment
+### Random Effects
+
+![](https://media.tenor.com/Y5I9Ikv8C60AAAAC/kakashi-naruto.gif){fig-align="center"}
+:::
+:::
+:::
+
+## Construction of Joint Model
+
 ## Estimation of parameters
 
 ## Estimation of Margin of Error
+
+## Bootstrapping
+
+::: columns
+::: {.column width="50%"}
+:::
+
+::: {.column width="50%"}
+:::
+:::
 
 ## Questions
 
