@@ -34,12 +34,13 @@ library(tidyverse)
 
 ![](https://media.tenor.com/BCyqY6leyXcAAAAC/linkin-park-in-the-end.gif){fig-alt="Chester from Linkin Park in \"In the End\" video with text saying: but in the end it doesn't even matter" fig-align="center"}
 
+# Statistics
+
 ## menti.com 2449 3348
 
 ```{=html}
 <div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/al4cgi23va9p7w7pq8k1xzkob3v4t617/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
 ```
-# Statistics
 
 ## Statistics {.smaller}
 
@@ -60,7 +61,7 @@ library(tidyverse)
 
     -   Artificial Intelligence
 
--   So for today,we're asking: **what is Statistics?**
+-   So for today, we're asking: **what is Statistics?**
 :::
 :::
 :::
@@ -413,6 +414,17 @@ We bring out the **Monte Carlo** methods!
 :::
 
 ## Case Study
+
+
+A patient is diagnosed with cancer, we want to know if any biomarkers can explain the survival rate of the disease.
+
+::: fragment
+Are there biomarker levels, that can increase the probability of not surviving the next month or year?
+:::
+
+::: fragment
+If so, can we do something about it to increase their chances of survival.
+:::
 
 ## Data
 
