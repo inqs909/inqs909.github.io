@@ -620,7 +620,7 @@
     "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
     "title": "RcppArmadillo",
     "section": "Using RcppArmadillo",
-    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.07524497\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.07524497\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.26µs    3.8µs   235815.        0B        0\n2 mean_cpp(Y)   1.84µs   2.92µs   338610.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
+    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.03947764\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.03947764\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.25µs   3.46µs   271878.        0B        0\n2 mean_cpp(Y)   1.83µs   2.78µs   373362.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
   },
   {
     "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
@@ -777,11 +777,11 @@
     "text": "menti.com 2449 3348"
   },
   {
-    "objectID": "pres/ci_f23/9_27.html#statistics",
-    "href": "pres/ci_f23/9_27.html#statistics",
+    "objectID": "pres/ci_f23/9_27.html#statistics-1",
+    "href": "pres/ci_f23/9_27.html#statistics-1",
     "title": "Statistics:",
     "section": "Statistics",
-    "text": "Statistics"
+    "text": "Statistics\n\n\n\n\n\n\n\n\n\n\nWith an increasing use of data to make decisions, Statistics has been essential for processing large amounts of data to bite-size information\nStatistics is also known as\n\nData Science\nMachine Learning\nArtificial Intelligence\n\nSo for today,we’re asking: what is Statistics?"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#what-does-google-say",
@@ -802,7 +802,7 @@
     "href": "pres/ci_f23/9_27.html#what-do-researchers-say",
     "title": "Statistics:",
     "section": "What do researchers say?",
-    "text": "What do researchers say?\n\nAnthropologistMicrobiologistSociologistPolitical ScientistAstrophysicistMathematician\n\n\nObjectively interpreting data to make meaningful inferences about our predictions.\n\n\nWhatever the statistician says.\n\n\nGathering the narratives of individuals, groups, or society and telling a story about their past, present, or future. The numbers paint a picture worth many words.\n\n\nUsing numbers to try to explain behaviors and/or patterns in our world.\n\n\n\n\n\nStatistics is the study of data, patterns, and trends."
+    "text": "What do researchers say?\n\nAnthropologistMicrobiologistSociologistPolitical ScientistEcologistMathematician\n\n\nObjectively interpreting data to make meaningful inferences about our predictions.\n\n\nWhatever the statistician says.\n\n\nGathering the narratives of individuals, groups, or society and telling a story about their past, present, or future. The numbers paint a picture worth many words.\n\n\nUsing numbers to try to explain behaviors and/or patterns in our world.\n\n\n\n\n\nStatistics is the study of data, patterns, and trends."
   },
   {
     "objectID": "pres/ci_f23/9_27.html#what-is-it",
@@ -914,14 +914,14 @@
     "href": "pres/ci_f23/9_27.html#monte-carlo-methods",
     "title": "Statistics:",
     "section": "Monte Carlo Methods",
-    "text": "Monte Carlo Methods\n\nMonte Carlo Methods are used to construct a distribution function of an obscure test statistic.\nWe simulate a large number of data sets based on the null hypothesis.\nWe construct a test statistic for each fake data set and the real one.\nWe count how many data sets produce a test statistic that is more extreme than the real test statistic.\n\\(p=\\#\\ of\\ extreme\\ data\\ sets\\ /\\ all\\ data\\ sets\\)"
+    "text": "Monte Carlo Methods\n\nMonte Carlo Methods are used to construct a distribution function of an obscure test statistic\nWe simulate a large number of data sets based on the null hypothesis\nWe construct a test statistic for each fake data set and the real one\nWe count how many data sets produce a test statistic that is more extreme than the real test statistic\n\\(p=\\#\\ of\\ extreme\\ data\\ sets\\ /\\ all\\ data\\ sets\\)"
   },
   {
-    "objectID": "pres/ci_f23/9_27.html#overview-research",
-    "href": "pres/ci_f23/9_27.html#overview-research",
+    "objectID": "pres/ci_f23/9_27.html#overview-of-research",
+    "href": "pres/ci_f23/9_27.html#overview-of-research",
     "title": "Statistics:",
-    "section": "Overview Research",
-    "text": "Overview Research\n\n\nAsk a question about a population\nCollect data from a sample\nConstruct and test a hypothesis\nDraw conclusion about the population\nRefine your question and methodology"
+    "section": "Overview of Research",
+    "text": "Overview of Research\n\n\nAsk a question about a population\nCollect data from a sample\nConstruct and test a hypothesis\nDraw conclusion about the population\nRefine your question and methodology"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#so-what-is-statistics",
@@ -931,8 +931,8 @@
     "text": "So, what is Statistics?\n\n\n\n\n\n\nFor you baby, I’ll be anything"
   },
   {
-    "objectID": "pres/ci_f23/9_27.html#my-research",
-    "href": "pres/ci_f23/9_27.html#my-research",
+    "objectID": "pres/ci_f23/9_27.html#my-research-1",
+    "href": "pres/ci_f23/9_27.html#my-research-1",
     "title": "Statistics:",
     "section": "My Research",
     "text": "My Research\n\n\nGeneralized\nTime-Varying\n\nJoint Longitudinal-Survival Models"
@@ -956,14 +956,21 @@
     "href": "pres/ci_f23/9_27.html#joint-models",
     "title": "Statistics:",
     "section": "Joint Models",
-    "text": "Joint Models\n\n\nLongitudinal\n\nSurvival"
+    "text": "Joint Models\n\n\nLongitudinal\n\n\nThe analysis of repeated measurements\nAdjusting for extra correlation\nie: Following a patient and collecting data at different time points\n\n\n\nSurvival\n\n\nThe analysis of time-to-event data\n\nEvent can be anything\n\nAccounting for censoring\n\nWhen information is not complete\nDon’t know the whole time\n\nie: Following a newly diagnosed cancer patient to death"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#modelling-them-jointly",
     "href": "pres/ci_f23/9_27.html#modelling-them-jointly",
     "title": "Statistics:",
     "section": "Modelling them Jointly",
-    "text": "Modelling them Jointly"
+    "text": "Modelling them Jointly\n\n\nWe can follow a newly-diagnosed patient longitudinally until the time-to-event occurs\nWe can use the longitudinal outcome to explain the survival rate of diseases\nWe can use the survival model to account for missing not at random in patients"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#case-study",
+    "href": "pres/ci_f23/9_27.html#case-study",
+    "title": "Statistics:",
+    "section": "Case Study",
+    "text": "Case Study"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#data",
@@ -998,7 +1005,7 @@
     "href": "pres/ci_f23/9_27.html#whats-happening",
     "title": "Statistics:",
     "section": "What’s happening",
-    "text": "What’s happening\n\n\n\n\nSurvival and Longitudinal\n\n\n\n\n\n\n\n\n\nRandom Effects"
+    "text": "What’s happening\n\n\n\n\nSurvival and Longitudinal\n\n\n\n\n\n\n\n\n\nRandom Effects\n\n\n\nShows Kakashi stopping the fight between Naruto and Sasuke"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#construction-of-joint-model",

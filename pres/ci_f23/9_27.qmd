@@ -28,18 +28,42 @@ library(tidyverse)
 
 ## Statistical Warning
 
-![](https://media.tenor.com/GexFRAjz9XcAAAAC/theres-no-guarantee-it-would-work-south-park.gif){fig-align="center"}
+![](https://media.tenor.com/GexFRAjz9XcAAAAC/theres-no-guarantee-it-would-work-south-park.gif){fig-alt="south park scientist in laboratory saying: There's no  guarantee it would work" fig-align="center"}
 
 ## 
 
-![](https://media.tenor.com/BCyqY6leyXcAAAAC/linkin-park-in-the-end.gif){fig-align="center"}
+![](https://media.tenor.com/BCyqY6leyXcAAAAC/linkin-park-in-the-end.gif){fig-alt="Chester from Linkin Park in \"In the End\" video with text saying: but in the end it doesn't even matter" fig-align="center"}
 
 ## menti.com 2449 3348
 
 ```{=html}
 <div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/al4cgi23va9p7w7pq8k1xzkob3v4t617/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
 ```
-## Statistics
+# Statistics
+
+## Statistics {.smaller}
+
+::: columns
+::: {.column width="50%"}
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*VR-XNA60etBQj-r57knvKA.png){fig-alt="An image cloud of different statistical plots, the word statistics is in the middle with capital letters." fig-align="center"}
+:::
+
+::: {.column width="50%"}
+::: incremental
+-   With an increasing use of data to make decisions, Statistics has been essential for processing large amounts of data to bite-size information
+
+-   Statistics is also known as
+
+    -   Data Science
+
+    -   Machine Learning
+
+    -   Artificial Intelligence
+
+-   So for today,we're asking: **what is Statistics?**
+:::
+:::
+:::
 
 ## What does Google say?
 
@@ -92,7 +116,7 @@ Gathering the narratives of individuals, groups, or society and telling a story 
 
 Using numbers to try to explain behaviors and/or patterns in our world.
 
-## Astrophysicist
+## Ecologist
 
 ## Mathematician
 
@@ -105,13 +129,13 @@ Statistics is the study of data, patterns, and trends.
 ::: {.column width="50%"}
 ### Math
 
-![](https://media.tenor.com/5ZfhdHdoK3UAAAAC/incredibles-the.gif){fig-align="center" width="498" height="380"}
+![](https://media.tenor.com/5ZfhdHdoK3UAAAAC/incredibles-the.gif){fig-alt="Mr. Incredible yelling. Text includes: Math is Math! Math is Math!" fig-align="center" width="498" height="380"}
 :::
 
 ::: {.column width="50%"}
 ### Science
 
-![](https://media.tenor.com/qWcKVwjtwAQAAAAC/bill-nye-mind-blown.gif){fig-align="center" width="494" height="380"}
+![](https://media.tenor.com/qWcKVwjtwAQAAAAC/bill-nye-mind-blown.gif){fig-alt="Bill Nye, waving up dramatically with words Science!!! on image." fig-align="center" width="494" height="380"}
 :::
 :::
 
@@ -134,14 +158,14 @@ Using art, when it all eventually fails!
 ## When it fails?!?!
 
 ::: fragment
-![](https://media.tenor.com/XtqAqClw6AAAAAAC/yes-yes-professor-farnsworth.gif){fig-align="center"}
+![](https://media.tenor.com/XtqAqClw6AAAAAAC/yes-yes-professor-farnsworth.gif){fig-alt="Professor Farmsworth from futurama doing a 'yes yes' motion with hand and looking away. Text include Yes, Yes" fig-align="center"}
 :::
 
 ## Statistics Mantra - George Box
 
 ::: columns
 ::: {.column width="50%"}
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/GeorgeEPBox.jpg/400px-GeorgeEPBox.jpg){fig-align="center" width="333"}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/GeorgeEPBox.jpg/400px-GeorgeEPBox.jpg){fig-alt="An image of George Box" fig-align="center" width="333"}
 :::
 
 ::: {.column width="50%"}
@@ -159,7 +183,7 @@ Statistics is both the development of mathematical models to be used in real-wor
 
 ::: columns
 ::: {.column width="50%"}
-![](https://media.tenor.com/h5dDA212OzMAAAAC/cat-catwalk.gif){fig-align="center"}
+![](https://media.tenor.com/h5dDA212OzMAAAAC/cat-catwalk.gif){fig-alt="A cat walking an wearing a tutu skirt. Cat walks like a model." fig-align="center"}
 :::
 
 ::: {.column width="50%"}
@@ -189,7 +213,7 @@ Statistics is both the development of mathematical models to be used in real-wor
 :::
 
 ::: {.column width="50%"}
-![](https://media.tenor.com/ogsH7Ailje8AAAAd/cat-funny-cat.gif){fig-align="center"}
+![](https://media.tenor.com/ogsH7Ailje8AAAAd/cat-funny-cat.gif){fig-alt="A cat working on a laptop hissing angrily." fig-align="center"}
 :::
 :::
 
@@ -251,8 +275,7 @@ extra <- c("never-ending", "numbers", "probability",
            "scary", "hard", "graphs", "percentages",
            "comprehension", "difficult", "data",
            "interesting", "values", "data",
-           "collecting", "variation", "variation",
-           "variation")
+           "collecting", "variation", "variation")
 docs <- Corpus(VectorSource(extra))
 dtm <- TermDocumentMatrix(docs) 
 matrix <- as.matrix(dtm) 
@@ -261,11 +284,11 @@ df <- data.frame(word = names(words),freq=words)
 wordcloud2(data=df, size=.7, color='random-dark')
 ```
 
-![](img/wordcloud.png){fig-align="center"}
+![](img/wordcloud.png){fig-alt="A word cloud about statistics. main words are data, variation, probability, and difficult" fig-align="center"}
 
 ## Conducting Inference
 
-![](https://statsandr.com/blog/what-is-the-difference-between-population-and-sample_files/population-sample.png){fig-align="center"}
+![](https://statsandr.com/blog/what-is-the-difference-between-population-and-sample_files/population-sample.png){fig-alt="A population of people is displayed. then pointing to a sample with individuals being sampled from population. Afterwards, there is an arrow pointing back to the population with the words inference." fig-align="center"}
 
 ## Are we seeing something or is it just noise???
 
@@ -286,7 +309,7 @@ Are we seeing something different from what was expected? Or is it due to random
 ::: columns
 ::: {.column width="50%"}
 ::: fragment
-![](https://media.tenor.com/x5dpKrM1U6oAAAAd/vamonos-lets-go.gif){fig-align="center" width="377"}
+![](https://media.tenor.com/x5dpKrM1U6oAAAAd/vamonos-lets-go.gif){fig-alt="An image showing the Monte Carlo car pulling out from a garage." fig-align="center" width="377"}
 :::
 :::
 
@@ -299,13 +322,13 @@ We bring out the **Monte Carlo** methods!
 
 ## Monte Carlo Methods
 
--   Monte Carlo Methods are used to construct a distribution function of an obscure test statistic.
--   We simulate a large number of data sets based on the null hypothesis.
--   We construct a test statistic for each fake data set and the real one.
--   We count how many data sets produce a test statistic that is more extreme than the real test statistic.
+-   Monte Carlo Methods are used to construct a distribution function of an obscure test statistic
+-   We simulate a large number of data sets based on the null hypothesis
+-   We construct a test statistic for each fake data set and the real one
+-   We count how many data sets produce a test statistic that is more extreme than the real test statistic
 -   $p=\#\ of\ extreme\ data\ sets\ /\ all\ data\ sets$
 
-## Overview Research
+## Overview of Research
 
 ::: incremental
 1.  Ask a question about a population
@@ -318,10 +341,12 @@ We bring out the **Monte Carlo** methods!
 ## So, what is Statistics?
 
 ::: fragment
-![](https://media.tenor.com/P647Itj1axcAAAAC/puss-in-boots-cat.gif){fig-align="center"}
+![](https://media.tenor.com/P647Itj1axcAAAAC/puss-in-boots-cat.gif){fig-alt="Shows Puss in Boots from Shrek turning around" fig-align="center"}
 
 ### For you baby, I'll be anything
 :::
+
+# My Research
 
 ## My Research
 
@@ -343,19 +368,51 @@ We bring out the **Monte Carlo** methods!
 ```{=html}
 <div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/al4cgi23va9p7w7pq8k1xzkob3v4t617/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
 ```
-## Joint Models
+## Joint Models  {.smaller}
 
 ::: columns
 ::: {.column width="50%"}
 ### Longitudinal
+
+::: incremental
+-   The analysis of repeated measurements
+
+-   Adjusting for extra correlation
+
+-   ie: Following a patient and collecting data at different time points
+:::
 :::
 
 ::: {.column width="50%"}
 ### Survival
+
+::: incremental
+-   The analysis of time-to-event data
+
+    -   Event can be anything
+
+-   Accounting for censoring
+
+    -   When information is not complete
+
+    -   Don't know the whole time
+
+-   ie: Following a newly diagnosed cancer patient to death
+:::
 :::
 :::
 
 ## Modelling them Jointly
+
+::: incremental
+-   We can follow a newly-diagnosed patient longitudinally until the time-to-event occurs
+
+-   We can use the longitudinal outcome to explain the survival rate of diseases
+
+-   We can use the survival model to account for missing not at random in patients
+:::
+
+## Case Study
 
 ## Data
 
@@ -442,7 +499,7 @@ $$
 ::: fragment
 ### Survival and Longitudinal
 
-![](https://media.tenor.com/D-NIQ9WU3GQAAAAC/correndo.gif){fig-align="center"}
+![](https://media.tenor.com/D-NIQ9WU3GQAAAAC/correndo.gif){fig-alt="Shows Naruto and Sasuke charging at each other" fig-align="center"}
 :::
 :::
 
@@ -450,7 +507,7 @@ $$
 ::: fragment
 ### Random Effects
 
-![](https://media.tenor.com/Y5I9Ikv8C60AAAAC/kakashi-naruto.gif){fig-align="center"}
+![Shows Kakashi stopping the fight between Naruto and Sasuke](https://media.tenor.com/Y5I9Ikv8C60AAAAC/kakashi-naruto.gif){fig-align="center"}
 :::
 :::
 :::
@@ -482,7 +539,7 @@ OR, we treat the random effects as missing!
 
 ## Missing!?
 
-![](https://media.tenor.com/tCLtZ13HOlMAAAAC/confused-meme.gif){fig-align="center"}
+![](https://media.tenor.com/tCLtZ13HOlMAAAAC/confused-meme.gif){fig-alt="Shows a little girl confused with the words WTF?!" fig-align="center"}
 
 ## Expectation-Maximization Algorithm
 
@@ -516,7 +573,7 @@ The standard errors of the parameters can be computed either as:
 
 ## 
 
-![](https://media.tenor.com/tDau9a7i5hwAAAAi/alert-siren.gif){fig-align="center"}
+![](https://media.tenor.com/tDau9a7i5hwAAAAi/alert-siren.gif){fig-alt="Red Siren Light" fig-align="center"}
 
 ## Estimation of Margin of Error
 
@@ -530,7 +587,7 @@ The standard errors of the parameters can be computed either as:
 
 ## 
 
-![](https://media.tenor.com/ZERoT-Xe7OEAAAAC/i-pulled-myself-up-by-my-bootstraps-my-bootstraps.gif){fig-align="center"}
+![](https://media.tenor.com/ZERoT-Xe7OEAAAAC/i-pulled-myself-up-by-my-bootstraps-my-bootstraps.gif){fig-alt="Shows a women talking with the words: I pulled myself up by my bootstraps" fig-align="center"}
 
 ## Bootstrapping {.smaller}
 
@@ -554,15 +611,19 @@ Bootstrapping can nonparametrically (or parameterically) compute the unbiased st
 
 ## Questions
 
-![](https://media.tenor.com/yQ8Jnm51kJYAAAAd/soooo-today.gif){fig-align="center"}
+![](https://media.tenor.com/yQ8Jnm51kJYAAAAd/soooo-today.gif){fig-alt="Shows a dinosaur from Toy Story with the text: I have a question. Well, actually not just one question. I have all of them. I have all the questions." fig-align="center"}
 
 ## 
 
-![](https://media.tenor.com/eKK8PR6m2ekAAAAd/and-now-the-end-is-near-the-end-is-in-sight.gif){fig-align="center"}
+![](https://media.tenor.com/eKK8PR6m2ekAAAAd/and-now-the-end-is-near-the-end-is-in-sight.gif){fig-alt="Shows Frank Sinatra singing. Words: And now, the end is near" fig-align="center"}
+
+# But Wait! There's More!
 
 ## What's Statistics without a little ...
 
-![](https://media.tenor.com/RhAwIEGUEd4AAAAC/drama-top.gif){fig-align="center"}
+::: fragment
+![](https://media.tenor.com/RhAwIEGUEd4AAAAC/drama-top.gif){fig-alt="Shows a man in disgust with the words: DRAMA" fig-align="center"}
+:::
 
 ## Train of Thoughts
 
@@ -584,7 +645,7 @@ Both sides hate each other.
 
 ## Frequentists
 
-![](https://media.tenor.com/UfP_ixn3qlwAAAAC/valor-pokemon-go.gif){fig-align="center" width="515" height="675"}
+![](https://media.tenor.com/UfP_ixn3qlwAAAAC/valor-pokemon-go.gif){fig-alt="Symbol from Team Valor from Pokemon appearing" fig-align="center" width="515" height="675"}
 
 ## Frequentists
 
@@ -596,7 +657,7 @@ Meaning probability is obtained by the repetition of multiple experiments.
 
 ## Bayesians
 
-![](https://media.tenor.com/ncl2k1KRsQgAAAAC/mystic-team-mystic.gif){fig-align="center"}
+![](https://media.tenor.com/ncl2k1KRsQgAAAAC/mystic-team-mystic.gif){fig-alt="Symbol from Team Mystic From Pokemon appearing" fig-align="center"}
 
 ## Bayesians
 
@@ -608,12 +669,12 @@ Probability is obtained by likelihood of an event to occur, given data and prior
 
 ## What am I (and people that have lives)? {.smaller}
 
-![](https://media.tenor.com/O_JvW8kZEIAAAAAd/the-simpsons-playing.gif){fig-align="center"}
+![](https://media.tenor.com/O_JvW8kZEIAAAAAd/the-simpsons-playing.gif){fig-alt="Bart Simpson and Nelson rolling bowling balls, then ralph places a banana. Words Appear in the following order: Go Team Mystic, Go Team Valor, then Go team Instinct." fig-align="center"}
 
 ### Whatever gets the job done!
 
 ## There is more, much more, but I will say this, in my statistical journey
 
 ::: fragment
-![](https://media.tenor.com/9O8vuQzirQMAAAAd/i-did-it-my-way-frank-sinatra.gif){fig-align="center"}
+![](https://media.tenor.com/9O8vuQzirQMAAAAd/i-did-it-my-way-frank-sinatra.gif){fig-alt="Shows Frank Sinatra singing with the words: I did it my way" fig-align="center"}
 :::
