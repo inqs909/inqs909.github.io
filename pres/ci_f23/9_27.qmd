@@ -4,10 +4,12 @@ subtitle: "A Math? A Science? An Art? Or Something Else?"
 author: "Isaac Quintanilla Salinas"
 format: 
   revealjs:
+    touch: false
+    controls: true
     pointer:
       pointerSize: 32
     incremental: false
-    scrollable: true
+    slide-number: true
 knitr:
   opts_chunk: 
     echo: true
@@ -17,11 +19,14 @@ knitr:
     comment: "#>" 
 revealjs-plugins:
   - pointer
-filters: 
-  - reveal-auto-agenda
 ---
 
-## Statistics Warning
+```{r}
+#| include: false
+library(tidyverse)
+```
+
+## Statistical Warning
 
 ![](https://media.tenor.com/GexFRAjz9XcAAAAC/theres-no-guarantee-it-would-work-south-park.gif){fig-align="center"}
 
@@ -34,7 +39,7 @@ filters:
 ```{=html}
 <div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/al4cgi23va9p7w7pq8k1xzkob3v4t617/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
 ```
-## Statistics 
+## Statistics
 
 ## What does Google say?
 
@@ -73,11 +78,19 @@ Statistics is the science of collecting, analyzing, interpreting, and presenting
 ::: panel-tabset
 ## Anthropologist
 
+Objectively intrepreting data to make meaningful inferences about our predictions.
+
 ## Microbiologist
+
+Whatever the statistician says.
 
 ## Sociologist
 
+Gathering the narratives of individuals, groups, or society and telling a story about their past, present, or future. The numbers paint a picture worth many words.
+
 ## Political Scientist
+
+Using numbers to try to explain behaviors and/or patterns in our world.
 
 ## Astrophysicist
 
@@ -142,7 +155,7 @@ Using art, when it all eventually fails!
 
 Statistics is both the development of mathematical models to be used in real-world data and the analysis of data using existing models.
 
-## Probability Models 
+## Probability Models
 
 ::: columns
 ::: {.column width="50%"}
@@ -208,7 +221,7 @@ YES!
 :::
 
 ::: fragment
-A sample was collected!
+We sampled a population!
 :::
 
 ::: fragment
@@ -221,9 +234,188 @@ Data was summarized!
 
 ## Another Word Cloud
 
+```{r}
+#| echo: false
+#| fig-align: center
+#| eval: false
+library(tm)
+library(wordcloud2)
+extra <- c("never-ending", "numbers", "probability", 
+           "complicated", "data", "strategize", 
+           "generalizing", "difficult", "useful",
+           "experimental", "sample", "variation", "data",
+           "challenging", "data", "multi-faceted",
+           "theoretical", "understand", "analysis", 
+           "comfort", "probability", "data",
+           "data", "analytic", "data",
+           "scary", "hard", "graphs", "percentages",
+           "comprehension", "difficult", "data",
+           "interesting", "values", "data",
+           "collecting", "variation", "variation",
+           "variation")
+docs <- Corpus(VectorSource(extra))
+dtm <- TermDocumentMatrix(docs) 
+matrix <- as.matrix(dtm) 
+words <- sort(rowSums(matrix), decreasing=TRUE) 
+df <- data.frame(word = names(words),freq=words)
+wordcloud2(data=df, size=.7, color='random-dark')
+```
+
+![](img/wordcloud.png){fig-align="center"}
+
+## Conducting Inference
+
+![](https://statsandr.com/blog/what-is-the-difference-between-population-and-sample_files/population-sample.png){fig-align="center"}
+
+## Are we seeing something or is that just noise???
+
+Are we seeing something different from what was expected? Or is it due to random chance?
+
+## Hypothesis Testing
+
+::: incremental
+1.  Set Up the Null and Alternative Hypothesis
+2.  Construct a test statistic based on the null hypothesis
+3.  Construct a distribution of the test statistic based on probability theory
+4.  Compute the probability of observing the test statistic
+5.  Make a decision based on the probability
+:::
+
+## What if we cannot construct the distribution?!?!
+
+::: columns
+::: {.column width="50%"}
+::: fragment
+![](https://media.tenor.com/x5dpKrM1U6oAAAAd/vamonos-lets-go.gif){fig-align="center" width="377"}
+:::
+:::
+
+::: {.column width="50%"}
+::: fragment
+We bring out **Monte Carlo** methods!
+:::
+:::
+:::
+
+## Monte Carlo Methods
+
+-   Monte Carlo Methods are used to construct a distribution function of an obscure test statistic.
+-   We simulate a large number of data sets based on the null hypothesis.
+-   We construct a test statistic for each fake data set and the real one.
+-   We count how many data sets produce a test statistic that is more extreme than the real test statistic.
+-   $p=\#\ of\ extreme\ data\ sets\ /\ all\ data\ sets$
+
+## Overview Research
+
+::: incremental
+1.  Ask a question about a population
+2.  Collect data from a sample
+3.  Construct and test a hypothesis
+4.  Draw conclusion about the population
+5.  Refine your question and methodology
+:::
+
+## So, what is Statistics?
+
+::: fragment
+![](https://media.tenor.com/P647Itj1axcAAAAC/puss-in-boots-cat.gif){fig-align="center"}
+
+### For you baby, I'll be anything
+:::
+
+## My Research
+
+::: {.fragment .fade-out}
+### Generalized
+
+### Time-Varying
+:::
+
+### Joint Longitudinal-Survival Models
+
+## menti.com 2449 3348
+
+```{=html}
+<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/al4cgi23va9p7w7pq8k1xzkob3v4t617/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+```
+## menti.com 2449 3348
+
+```{=html}
+<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/al4cgi23va9p7w7pq8k1xzkob3v4t617/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+```
+## Joint Models
+
+::: columns
+::: {.column width="50%"}
+### Longitudinal
+:::
+
+::: {.column width="50%"}
+### Survival
+:::
+:::
+
+## Modelling them Jointly
+
+## Longitudinal Submodels
+
+Our longitudinal outcome y can be represented in 2 components: a linear model and an error term. The linear $$\Large{Y_{ij} = m_i (t_{ij}) + \epsilon_i(t_{ij}),}$$
+
+where
+
+::: columns
+::: {.column width="50%"}
+-   $m_i(t_{ij})=\boldsymbol{X}_{ij}^\mathrm T\boldsymbol \beta + \boldsymbol Z_{ij}^\mathrm Tb_i$
+
+-   $\boldsymbol X_{ij}$: design matrix
+
+-   $\boldsymbol \beta=(\beta_1,\cdots,\beta_p)^\mathrm T$: regression coefficients
+
+-   $b_i \sim N_q(\boldsymbol 0, \boldsymbol G)$
+:::
+
+::: {.column width="50%"}
+-   $\epsilon_i(t_{ij})$: error term at time $t_{ij}$
+
+-   $\boldsymbol Z_{ij}$: subset of $\boldsymbol X_{ij}$
+
+-   $b_i=(b_{i1},\cdots,b_{iq})^\mathrm T$: random effects
+
+-   $\epsilon_i(t_{ij}) \sim N(0, \sigma²)$
+:::
+:::
+
+## Survival Submodels
+
+## Estimation of parameters
+
+## Estimation of Margin of Error
+
+## Questions
+
+![](https://media.tenor.com/yQ8Jnm51kJYAAAAd/soooo-today.gif){fig-align="center"}
+
 ## What's life without a little ...
 
 ![](https://media.tenor.com/RhAwIEGUEd4AAAAC/drama-top.gif){fig-align="center"}
+
+## Train of Thoughts
+
+::: fragment
+There are two train of thoughts on how to interpret estimates and probability.
+:::
+
+::: fragment
+One approach is the Frequentist approach.
+:::
+
+::: fragment
+The other approach is the Bayesian approach.
+:::
+
+::: fragment
+Both sides hate each other.
+:::
 
 ## Frequentists
 
@@ -249,16 +441,8 @@ A Bayesians, in the context of statistics, is an individual who adheres to the B
 Probability is obtained by likelihood of an event to occur, given data and prior knowledge.
 :::
 
-## What am I
+## What am I (and people that have lives)?
 
 ![](https://media.tenor.com/O_JvW8kZEIAAAAAd/the-simpsons-playing.gif){fig-align="center"}
 
-## When all else fails!
-
-::: fragment
-![](https://media.tenor.com/x5dpKrM1U6oAAAAd/vamonos-lets-go.gif){fig-align="center" width="377"}
-:::
-
-## Monte Carlo Methods
-
--   Monte Carlo Methods are used to construct a distribution function of obscure
+### Whatever gets the job done!

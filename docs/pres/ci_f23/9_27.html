@@ -7,8 +7,7 @@
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-contrib/reveal-auto-agenda-0.0.1/reveal-auto-agenda.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Isaac Quintanilla Salinas">
@@ -245,7 +244,6 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
-      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -340,8 +338,8 @@ Isaac Quintanilla Salinas
 </div>
 
 </section>
-<section id="statistics-warning" class="slide level2">
-<h2>Statistics Warning</h2>
+<section id="statistical-warning" class="slide level2">
+<h2>Statistical Warning</h2>
 
 <img data-src="https://media.tenor.com/GexFRAjz9XcAAAAC/theres-no-guarantee-it-would-work-south-park.gif" class="r-stretch quarto-figure-center"></section>
 <section id="but" class="slide level2">
@@ -385,16 +383,16 @@ Isaac Quintanilla Salinas
 <ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Anthropologist</a></li><li><a href="#tabset-1-2">Microbiologist</a></li><li><a href="#tabset-1-3">Sociologist</a></li><li><a href="#tabset-1-4">Political Scientist</a></li><li><a href="#tabset-1-5">Astrophysicist</a></li><li><a href="#tabset-1-6">Mathematician</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
-
+<p>Objectively intrepreting data to make meaningful inferences about our predictions.</p>
 </div>
 <div id="tabset-1-2">
-
+<p>Whatever the statistician says.</p>
 </div>
 <div id="tabset-1-3">
-
+<p>Gathering the narratives of individuals, groups, or society and telling a story about their past, present, or future. The numbers paint a picture worth many words.</p>
 </div>
 <div id="tabset-1-4">
-
+<p>Using numbers to try to explain behaviors and/or patterns in our world.</p>
 </div>
 <div id="tabset-1-5">
 
@@ -529,7 +527,7 @@ Isaac Quintanilla Salinas
 <p>YES!</p>
 </div>
 <div class="fragment">
-<p>A sample was collected!</p>
+<p>We sampled a population!</p>
 </div>
 <div class="fragment">
 <p>Data was collected!</p>
@@ -540,11 +538,163 @@ Isaac Quintanilla Salinas
 </section>
 <section id="another-word-cloud" class="slide level2">
 <h2>Another Word Cloud</h2>
+
+<img data-src="img/wordcloud.png" class="r-stretch quarto-figure-center"></section>
+<section id="conducting-inference" class="slide level2">
+<h2>Conducting Inference</h2>
+
+<img data-src="https://statsandr.com/blog/what-is-the-difference-between-population-and-sample_files/population-sample.png" class="r-stretch quarto-figure-center"></section>
+<section id="are-we-seeing-something-or-is-that-just-noise" class="slide level2">
+<h2>Are we seeing something or is that just noise???</h2>
+<p>Are we seeing something different from what was expected? Or is it due to random chance?</p>
 </section>
+<section id="hypothesis-testing" class="slide level2">
+<h2>Hypothesis Testing</h2>
+<div>
+<ol type="1">
+<li class="fragment">Set Up the Null and Alternative Hypothesis</li>
+<li class="fragment">Construct a test statistic based on the null hypothesis</li>
+<li class="fragment">Construct a distribution of the test statistic based on probability theory</li>
+<li class="fragment">Compute the probability of observing the test statistic</li>
+<li class="fragment">Make a decision based on the probability</li>
+</ol>
+</div>
+</section>
+<section id="what-if-we-cannot-construct-the-distribution" class="slide level2">
+<h2>What if we cannot construct the distribution?!?!</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://media.tenor.com/x5dpKrM1U6oAAAAd/vamonos-lets-go.gif" width="377"></p>
+</figure>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p>We bring out <strong>Monte Carlo</strong> methods!</p>
+</div>
+</div>
+</div>
+</section>
+<section id="monte-carlo-methods" class="slide level2">
+<h2>Monte Carlo Methods</h2>
+<ul>
+<li>Monte Carlo Methods are used to construct a distribution function of an obscure test statistic.</li>
+<li>We simulate a large number of data sets based on the null hypothesis.</li>
+<li>We construct a test statistic for each fake data set and the real one.</li>
+<li>We count how many data sets produce a test statistic that is more extreme than the real test statistic.</li>
+<li><span class="math inline">\(p=\#\ of\ extreme\ data\ sets\ /\ all\ data\ sets\)</span></li>
+</ul>
+</section>
+<section id="overview-research" class="slide level2">
+<h2>Overview Research</h2>
+<div>
+<ol type="1">
+<li class="fragment">Ask a question about a population</li>
+<li class="fragment">Collect data from a sample</li>
+<li class="fragment">Construct and test a hypothesis</li>
+<li class="fragment">Draw conclusion about the population</li>
+<li class="fragment">Refine your question and methodology</li>
+</ol>
+</div>
+</section>
+<section id="so-what-is-statistics" class="slide level2">
+<h2>So, what is Statistics?</h2>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://media.tenor.com/P647Itj1axcAAAAC/puss-in-boots-cat.gif"></p>
+</figure>
+</div>
+<h3 id="for-you-baby-ill-be-anything">For you baby, I’ll be anything</h3>
+</div>
+</section>
+<section id="my-research" class="slide level2">
+<h2>My Research</h2>
+<div class="fragment fade-out">
+<!-- -->
+<h3 id="generalized">Generalized</h3>
+<h3 id="time-varying">Time-Varying</h3>
+</div>
+<h3 id="joint-longitudinal-survival-models">Joint Longitudinal-Survival Models</h3>
+</section>
+<section id="menti.com-2449-3348-2" class="slide level2">
+<h2>menti.com 2449 3348</h2>
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;"><iframe sandbox="allow-scripts allow-same-origin" allowfullscreen="true" allowtransparency="true" frameborder="0" height="315" src="https://www.mentimeter.com/app/presentation/al4cgi23va9p7w7pq8k1xzkob3v4t617/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420"></iframe></div>
+</section>
+<section id="menti.com-2449-3348-3" class="slide level2">
+<h2>menti.com 2449 3348</h2>
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;"><iframe sandbox="allow-scripts allow-same-origin" allowfullscreen="true" allowtransparency="true" frameborder="0" height="315" src="https://www.mentimeter.com/app/presentation/al4cgi23va9p7w7pq8k1xzkob3v4t617/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420"></iframe></div>
+</section>
+<section id="joint-models" class="slide level2">
+<h2>Joint Models</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="longitudinal">Longitudinal</h3>
+</div><div class="column" style="width:50%;">
+<h3 id="survival">Survival</h3>
+</div>
+</div>
+</section>
+<section id="modelling-them-jointly" class="slide level2">
+<h2>Modelling them Jointly</h2>
+</section>
+<section id="longitudinal-submodels" class="slide level2">
+<h2>Longitudinal Submodels</h2>
+<p>Our longitudinal outcome y can be represented in 2 components: a linear model and an error term. The linear <span class="math display">\[\Large{Y_{ij} = m_i (t_{ij}) + \epsilon_i(t_{ij}),}\]</span></p>
+<p>where</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p><span class="math inline">\(m_i(t_{ij})=\boldsymbol{X}_{ij}^\mathrm T\boldsymbol \beta + \boldsymbol Z_{ij}^\mathrm Tb_i\)</span></p></li>
+<li><p><span class="math inline">\(\boldsymbol X_{ij}\)</span>: design matrix</p></li>
+<li><p><span class="math inline">\(\boldsymbol \beta=(\beta_1,\cdots,\beta_p)^\mathrm T\)</span>: regression coefficients</p></li>
+<li><p><span class="math inline">\(b_i \sim N_q(\boldsymbol 0, \boldsymbol G)\)</span></p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><p><span class="math inline">\(\epsilon_i(t_{ij})\)</span>: error term at time <span class="math inline">\(t_{ij}\)</span></p></li>
+<li><p><span class="math inline">\(\boldsymbol Z_{ij}\)</span>: subset of <span class="math inline">\(\boldsymbol X_{ij}\)</span></p></li>
+<li><p><span class="math inline">\(b_i=(b_{i1},\cdots,b_{iq})^\mathrm T\)</span>: random effects</p></li>
+<li><p><span class="math inline">\(\epsilon_i(t_{ij}) \sim N(0, \sigma²)\)</span></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="survival-submodels" class="slide level2">
+<h2>Survival Submodels</h2>
+</section>
+<section id="estimation-of-parameters" class="slide level2">
+<h2>Estimation of parameters</h2>
+</section>
+<section id="estimation-of-margin-of-error" class="slide level2">
+<h2>Estimation of Margin of Error</h2>
+</section>
+<section id="questions" class="slide level2">
+<h2>Questions</h2>
+
+<img data-src="https://media.tenor.com/yQ8Jnm51kJYAAAAd/soooo-today.gif" class="r-stretch quarto-figure-center"></section>
 <section id="whats-life-without-a-little" class="slide level2">
 <h2>What’s life without a little …</h2>
 
 <img data-src="https://media.tenor.com/RhAwIEGUEd4AAAAC/drama-top.gif" class="r-stretch quarto-figure-center"></section>
+<section id="train-of-thoughts" class="slide level2">
+<h2>Train of Thoughts</h2>
+<div class="fragment">
+<p>There are two train of thoughts on how to interpret estimates and probability.</p>
+</div>
+<div class="fragment">
+<p>One approach is the Frequentist approach.</p>
+</div>
+<div class="fragment">
+<p>The other approach is the Bayesian approach.</p>
+</div>
+<div class="fragment">
+<p>Both sides hate each other.</p>
+</div>
+</section>
 <section id="frequentists" class="slide level2">
 <h2>Frequentists</h2>
 <div class="quarto-figure quarto-figure-center">
@@ -571,25 +721,10 @@ Isaac Quintanilla Salinas
 <p>Probability is obtained by likelihood of an event to occur, given data and prior knowledge.</p>
 </div>
 </section>
-<section id="what-am-i" class="slide level2">
-<h2>What am I</h2>
+<section id="what-am-i-and-people-that-have-lives" class="slide level2">
+<h2>What am I (and people that have lives)?</h2>
 
-<img data-src="https://media.tenor.com/O_JvW8kZEIAAAAAd/the-simpsons-playing.gif" class="r-stretch quarto-figure-center"></section>
-<section id="when-all-else-fails" class="slide level2">
-<h2>When all else fails!</h2>
-<div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://media.tenor.com/x5dpKrM1U6oAAAAd/vamonos-lets-go.gif" width="377"></p>
-</figure>
-</div>
-</div>
-</section>
-<section id="monte-carlo-methods" class="slide level2">
-<h2>Monte Carlo Methods</h2>
-<ul>
-<li>Monte Carlo Methods are used to construct a distribution function of obscure</li>
-</ul>
+<img data-src="https://media.tenor.com/O_JvW8kZEIAAAAAd/the-simpsons-playing.gif" class="r-stretch quarto-figure-center"><h3 id="whatever-gets-the-job-done">Whatever gets the job done!</h3>
 
 <div class="footer footer-default">
 
@@ -620,7 +755,7 @@ Isaac Quintanilla Salinas
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
+'controlsAuto': false,
 'previewLinksAuto': false,
 'smaller': false,
 'pdfSeparateFragments': false,
@@ -632,7 +767,7 @@ Isaac Quintanilla Salinas
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
@@ -649,7 +784,7 @@ Isaac Quintanilla Salinas
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -681,7 +816,7 @@ Isaac Quintanilla Salinas
         center: false,
 
         // Enables touch navigation on devices with touch input
-        touch: true,
+        touch: false,
 
         // Loop the presentation
         loop: false,

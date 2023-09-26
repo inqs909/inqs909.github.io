@@ -620,7 +620,7 @@
     "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
     "title": "RcppArmadillo",
     "section": "Using RcppArmadillo",
-    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.01901118\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.01901118\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.25µs   3.88µs   231524.        0B        0\n2 mean_cpp(Y)   1.84µs   2.78µs   361295.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
+    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] -0.03964662\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] -0.03964662\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.25µs   3.72µs   219380.        0B        0\n2 mean_cpp(Y)   1.83µs   2.87µs   296613.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
   },
   {
     "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
@@ -763,11 +763,11 @@
     "text": "library(pixture)\n\npixgallery(\n  list.files(\"img\", \n             full.names=TRUE),\n  dim=\"350px\",\n  gap = \"10px\"\n)"
   },
   {
-    "objectID": "pres/ci_f23/9_27.html#statistics-warning",
-    "href": "pres/ci_f23/9_27.html#statistics-warning",
+    "objectID": "pres/ci_f23/9_27.html#statistical-warning",
+    "href": "pres/ci_f23/9_27.html#statistical-warning",
     "title": "Statistics:",
-    "section": "Statistics Warning",
-    "text": "Statistics Warning"
+    "section": "Statistical Warning",
+    "text": "Statistical Warning"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#but",
@@ -809,7 +809,7 @@
     "href": "pres/ci_f23/9_27.html#what-do-researchers-say",
     "title": "Statistics:",
     "section": "What do researchers say?",
-    "text": "What do researchers say?\n\nAnthropologistMicrobiologistSociologistPolitical ScientistAstrophysicistMathematician\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStatistics is the study of data, patterns, and trends."
+    "text": "What do researchers say?\n\nAnthropologistMicrobiologistSociologistPolitical ScientistAstrophysicistMathematician\n\n\nObjectively intrepreting data to make meaningful inferences about our predictions.\n\n\nWhatever the statistician says.\n\n\nGathering the narratives of individuals, groups, or society and telling a story about their past, present, or future. The numbers paint a picture worth many words.\n\n\nUsing numbers to try to explain behaviors and/or patterns in our world.\n\n\n\n\n\nStatistics is the study of data, patterns, and trends."
   },
   {
     "objectID": "pres/ci_f23/9_27.html#what-is-it",
@@ -879,7 +879,7 @@
     "href": "pres/ci_f23/9_27.html#was-the-word-cloud-a-scientific-study",
     "title": "Statistics:",
     "section": "Was the word cloud a scientific study?",
-    "text": "Was the word cloud a scientific study?\n\nYES!\n\n\nA sample was collected!\n\n\nData was collected!\n\n\nData was summarized!"
+    "text": "Was the word cloud a scientific study?\n\nYES!\n\n\nWe sampled a population!\n\n\nData was collected!\n\n\nData was summarized!"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#another-word-cloud",
@@ -889,11 +889,137 @@
     "text": "Another Word Cloud"
   },
   {
+    "objectID": "pres/ci_f23/9_27.html#conducting-inference",
+    "href": "pres/ci_f23/9_27.html#conducting-inference",
+    "title": "Statistics:",
+    "section": "Conducting Inference",
+    "text": "Conducting Inference"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#are-we-seeing-something-or-is-that-just-noise",
+    "href": "pres/ci_f23/9_27.html#are-we-seeing-something-or-is-that-just-noise",
+    "title": "Statistics:",
+    "section": "Are we seeing something or is that just noise???",
+    "text": "Are we seeing something or is that just noise???\nAre we seeing something different from what was expected? Or is it due to random chance?"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#hypothesis-testing",
+    "href": "pres/ci_f23/9_27.html#hypothesis-testing",
+    "title": "Statistics:",
+    "section": "Hypothesis Testing",
+    "text": "Hypothesis Testing\n\n\nSet Up the Null and Alternative Hypothesis\nConstruct a test statistic based on the null hypothesis\nConstruct a distribution of the test statistic based on probability theory\nCompute the probability of observing the test statistic\nMake a decision based on the probability"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#what-if-we-cannot-construct-the-distribution",
+    "href": "pres/ci_f23/9_27.html#what-if-we-cannot-construct-the-distribution",
+    "title": "Statistics:",
+    "section": "What if we cannot construct the distribution?!?!",
+    "text": "What if we cannot construct the distribution?!?!\n\n\n\n\n\n\n\n\n\n\n\nWe bring out Monte Carlo methods!"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#monte-carlo-methods",
+    "href": "pres/ci_f23/9_27.html#monte-carlo-methods",
+    "title": "Statistics:",
+    "section": "Monte Carlo Methods",
+    "text": "Monte Carlo Methods\n\nMonte Carlo Methods are used to construct a distribution function of an obscure test statistic.\nWe simulate a large number of data sets based on the null hypothesis.\nWe construct a test statistic for each fake data set and the real one.\nWe count how many data sets produce a test statistic that is more extreme than the real test statistic.\n\\(p=\\#\\ of\\ extreme\\ data\\ sets\\ /\\ all\\ data\\ sets\\)"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#overview-research",
+    "href": "pres/ci_f23/9_27.html#overview-research",
+    "title": "Statistics:",
+    "section": "Overview Research",
+    "text": "Overview Research\n\n\nAsk a question about a population\nCollect data from a sample\nConstruct and test a hypothesis\nDraw conclusion about the population\nRefine your question and methodology"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#so-what-is-statistics",
+    "href": "pres/ci_f23/9_27.html#so-what-is-statistics",
+    "title": "Statistics:",
+    "section": "So, what is Statistics?",
+    "text": "So, what is Statistics?\n\n\n\n\n\n\nFor you baby, I’ll be anything"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#my-research",
+    "href": "pres/ci_f23/9_27.html#my-research",
+    "title": "Statistics:",
+    "section": "My Research",
+    "text": "My Research\n\n\nGeneralized\nTime-Varying\n\nJoint Longitudinal-Survival Models"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#menti.com-2449-3348-2",
+    "href": "pres/ci_f23/9_27.html#menti.com-2449-3348-2",
+    "title": "Statistics:",
+    "section": "menti.com 2449 3348",
+    "text": "menti.com 2449 3348"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#menti.com-2449-3348-3",
+    "href": "pres/ci_f23/9_27.html#menti.com-2449-3348-3",
+    "title": "Statistics:",
+    "section": "menti.com 2449 3348",
+    "text": "menti.com 2449 3348"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#joint-models",
+    "href": "pres/ci_f23/9_27.html#joint-models",
+    "title": "Statistics:",
+    "section": "Joint Models",
+    "text": "Joint Models\n\n\nLongitudinal\n\nSurvival"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#modelling-them-jointly",
+    "href": "pres/ci_f23/9_27.html#modelling-them-jointly",
+    "title": "Statistics:",
+    "section": "Modelling them Jointly",
+    "text": "Modelling them Jointly"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#longitudinal-submodels",
+    "href": "pres/ci_f23/9_27.html#longitudinal-submodels",
+    "title": "Statistics:",
+    "section": "Longitudinal Submodels",
+    "text": "Longitudinal Submodels\nOur longitudinal outcome y can be represented in 2 components: a linear model and an error term. The linear \\[\\Large{Y_{ij} = m_i (t_{ij}) + \\epsilon_i(t_{ij}),}\\]\nwhere\n\n\n\n\\(m_i(t_{ij})=\\boldsymbol{X}_{ij}^\\mathrm T\\boldsymbol \\beta + \\boldsymbol Z_{ij}^\\mathrm Tb_i\\)\n\\(\\boldsymbol X_{ij}\\): design matrix\n\\(\\boldsymbol \\beta=(\\beta_1,\\cdots,\\beta_p)^\\mathrm T\\): regression coefficients\n\\(b_i \\sim N_q(\\boldsymbol 0, \\boldsymbol G)\\)\n\n\n\n\\(\\epsilon_i(t_{ij})\\): error term at time \\(t_{ij}\\)\n\\(\\boldsymbol Z_{ij}\\): subset of \\(\\boldsymbol X_{ij}\\)\n\\(b_i=(b_{i1},\\cdots,b_{iq})^\\mathrm T\\): random effects\n\\(\\epsilon_i(t_{ij}) \\sim N(0, \\sigma²)\\)"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#survival-submodels",
+    "href": "pres/ci_f23/9_27.html#survival-submodels",
+    "title": "Statistics:",
+    "section": "Survival Submodels",
+    "text": "Survival Submodels"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#estimation-of-parameters",
+    "href": "pres/ci_f23/9_27.html#estimation-of-parameters",
+    "title": "Statistics:",
+    "section": "Estimation of parameters",
+    "text": "Estimation of parameters"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#estimation-of-margin-of-error",
+    "href": "pres/ci_f23/9_27.html#estimation-of-margin-of-error",
+    "title": "Statistics:",
+    "section": "Estimation of Margin of Error",
+    "text": "Estimation of Margin of Error"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#questions",
+    "href": "pres/ci_f23/9_27.html#questions",
+    "title": "Statistics:",
+    "section": "Questions",
+    "text": "Questions"
+  },
+  {
     "objectID": "pres/ci_f23/9_27.html#whats-life-without-a-little",
     "href": "pres/ci_f23/9_27.html#whats-life-without-a-little",
     "title": "Statistics:",
     "section": "What’s life without a little …",
     "text": "What’s life without a little …"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#train-of-thoughts",
+    "href": "pres/ci_f23/9_27.html#train-of-thoughts",
+    "title": "Statistics:",
+    "section": "Train of Thoughts",
+    "text": "Train of Thoughts\n\nThere are two train of thoughts on how to interpret estimates and probability.\n\n\nOne approach is the Frequentist approach.\n\n\nThe other approach is the Bayesian approach.\n\n\nBoth sides hate each other."
   },
   {
     "objectID": "pres/ci_f23/9_27.html#frequentists",
@@ -924,25 +1050,11 @@
     "text": "Bayesians\nA Bayesians, in the context of statistics, is an individual who adheres to the Bayesian interpretation of probability and statistical inference.\n\nProbability is obtained by likelihood of an event to occur, given data and prior knowledge."
   },
   {
-    "objectID": "pres/ci_f23/9_27.html#what-am-i",
-    "href": "pres/ci_f23/9_27.html#what-am-i",
+    "objectID": "pres/ci_f23/9_27.html#what-am-i-and-people-that-have-lives",
+    "href": "pres/ci_f23/9_27.html#what-am-i-and-people-that-have-lives",
     "title": "Statistics:",
-    "section": "What am I",
-    "text": "What am I"
-  },
-  {
-    "objectID": "pres/ci_f23/9_27.html#when-all-else-fails",
-    "href": "pres/ci_f23/9_27.html#when-all-else-fails",
-    "title": "Statistics:",
-    "section": "When all else fails!",
-    "text": "When all else fails!"
-  },
-  {
-    "objectID": "pres/ci_f23/9_27.html#monte-carlo-methods",
-    "href": "pres/ci_f23/9_27.html#monte-carlo-methods",
-    "title": "Statistics:",
-    "section": "Monte Carlo Methods",
-    "text": "Monte Carlo Methods\n\nMonte Carlo Methods are used to construct a distribution function of obscure"
+    "section": "What am I (and people that have lives)?",
+    "text": "What am I (and people that have lives)?\n\nWhatever gets the job done!"
   },
   {
     "objectID": "pres/surf_2023/anova.html#presentation",
