@@ -1,5 +1,5 @@
 ---
-title: "Statistics:"
+title: "Statistics"
 subtitle: "A Math? A Science? An Art? Or Something Else?"
 author: "Isaac Quintanilla Salinas"
 format: 
@@ -41,7 +41,6 @@ library(tidyverse)
 ```{=html}
 <div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/al4cgi23va9p7w7pq8k1xzkob3v4t617/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
 ```
-
 ## Statistics {.smaller}
 
 ::: columns
@@ -51,7 +50,7 @@ library(tidyverse)
 
 ::: {.column width="50%"}
 ::: incremental
--   With an increasing use of data to make decisions, Statistics has been essential for processing large amounts of data to bite-size information
+-   With an increasing use of data to make decisions, Statistics has been essential for processing large amounts of data to byte-size information
 
 -   Statistics is also known as
 
@@ -118,6 +117,8 @@ Gathering the narratives of individuals, groups, or society and telling a story 
 Using numbers to try to explain behaviors and/or patterns in our world.
 
 ## Ecologist
+
+Statistics is the way to make sense of the natural world by taking data we collect to identify patterns between variables, and applying statistical theory to make sure we are taking the right approach to data collection and analysis. Also, assess patterns to see if they are reproducible and provide a logical explanation that makes biological sense.
 
 ## Mathematician
 
@@ -298,7 +299,7 @@ Are we seeing something different from what was expected? Or is it due to random
 ## Hypothesis Testing
 
 ::: incremental
-1.  Set Up the Null and Alternative Hypothesis
+1.  Set up the Null and Alternative Hypothesis
 2.  Construct a test statistic based on the null hypothesis
 3.  Construct a distribution of the test statistic based on probability theory
 4.  Compute the probability of observing the test statistic
@@ -369,7 +370,7 @@ We bring out the **Monte Carlo** methods!
 ```{=html}
 <div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/al4cgi23va9p7w7pq8k1xzkob3v4t617/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
 ```
-## Joint Models  {.smaller}
+## Joint Models {.smaller}
 
 ::: columns
 ::: {.column width="50%"}
@@ -414,7 +415,6 @@ We bring out the **Monte Carlo** methods!
 :::
 
 ## Case Study
-
 
 A patient is diagnosed with cancer, we want to know if any biomarkers can explain the survival rate of the disease.
 

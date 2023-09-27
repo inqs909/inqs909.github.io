@@ -620,7 +620,7 @@
     "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
     "title": "RcppArmadillo",
     "section": "Using RcppArmadillo",
-    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.003564014\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.003564014\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.25µs   3.48µs   271355.        0B        0\n2 mean_cpp(Y)   1.83µs   2.76µs   369729.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
+    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] -0.0233954\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] -0.0233954\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.26µs   3.51µs   264614.        0B        0\n2 mean_cpp(Y)   1.82µs   2.79µs   375031.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
   },
   {
     "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
@@ -765,357 +765,357 @@
   {
     "objectID": "pres/ci_f23/9_27.html#statistical-warning",
     "href": "pres/ci_f23/9_27.html#statistical-warning",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Statistical Warning",
     "text": "Statistical Warning"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#menti.com-2449-3348",
     "href": "pres/ci_f23/9_27.html#menti.com-2449-3348",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "menti.com 2449 3348",
     "text": "menti.com 2449 3348"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#statistics-1",
     "href": "pres/ci_f23/9_27.html#statistics-1",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Statistics",
-    "text": "Statistics\n\n\n\n\n\n\n\n\n\n\nWith an increasing use of data to make decisions, Statistics has been essential for processing large amounts of data to bite-size information\nStatistics is also known as\n\nData Science\nMachine Learning\nArtificial Intelligence\n\nSo for today, we’re asking: what is Statistics?"
+    "text": "Statistics\n\n\n\n\n\n\n\n\n\n\nWith an increasing use of data to make decisions, Statistics has been essential for processing large amounts of data to byte-size information\nStatistics is also known as\n\nData Science\nMachine Learning\nArtificial Intelligence\n\nSo for today, we’re asking: what is Statistics?"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#what-does-google-say",
     "href": "pres/ci_f23/9_27.html#what-does-google-say",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "What does Google say?",
     "text": "What does Google say?\n\n\nUC Irvine\nStatistics is the science concerned with developing and studying methods for collecting, analyzing, interpreting and presenting empirical data.\n\nWikipedia\nStatistics is a mathematical body of science that pertains to the collection, analysis, interpretation or explanation, and presentation of data, or as a branch of mathematics."
   },
   {
     "objectID": "pres/ci_f23/9_27.html#what-does-ai-say",
     "href": "pres/ci_f23/9_27.html#what-does-ai-say",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "What does AI say?",
     "text": "What does AI say?\n\n\nChatGPT\nStatistics is a branch of mathematics and a field of study that deals with the collection, analysis, interpretation, presentation, and organization of data.\n\nGoogle Bard\nStatistics is the science of collecting, analyzing, interpreting, and presenting data."
   },
   {
     "objectID": "pres/ci_f23/9_27.html#what-do-researchers-say",
     "href": "pres/ci_f23/9_27.html#what-do-researchers-say",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "What do researchers say?",
-    "text": "What do researchers say?\n\nAnthropologistMicrobiologistSociologistPolitical ScientistEcologistMathematician\n\n\nObjectively interpreting data to make meaningful inferences about our predictions.\n\n\nWhatever the statistician says.\n\n\nGathering the narratives of individuals, groups, or society and telling a story about their past, present, or future. The numbers paint a picture worth many words.\n\n\nUsing numbers to try to explain behaviors and/or patterns in our world.\n\n\n\n\n\nStatistics is the study of data, patterns, and trends."
+    "text": "What do researchers say?\n\nAnthropologistMicrobiologistSociologistPolitical ScientistEcologistMathematician\n\n\nObjectively interpreting data to make meaningful inferences about our predictions.\n\n\nWhatever the statistician says.\n\n\nGathering the narratives of individuals, groups, or society and telling a story about their past, present, or future. The numbers paint a picture worth many words.\n\n\nUsing numbers to try to explain behaviors and/or patterns in our world.\n\n\nStatistics is the way to make sense of the natural world by taking data we collect to identify patterns between variables, and applying statistical theory to make sure we are taking the right approach to data collection and analysis. Also, assess patterns to see if they are reproducible and provide a logical explanation that makes biological sense.\n\n\nStatistics is the study of data, patterns, and trends."
   },
   {
     "objectID": "pres/ci_f23/9_27.html#what-is-it",
     "href": "pres/ci_f23/9_27.html#what-is-it",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "What is it?",
     "text": "What is it?\n\n\nMath\n\n\n\n\n\n\nScience"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#what-does-a-statistician-say",
     "href": "pres/ci_f23/9_27.html#what-does-a-statistician-say",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "What does a Statistician say?",
     "text": "What does a Statistician say?\nIt is the study of variation and randomness!\n\nUsing mathematics, we model randomness to characterizes commonality and variation!\n\n\nUsing science, we systematically refine models to better fit randomness in data!\n\n\nUsing art, when it all eventually fails!"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#when-it-fails",
     "href": "pres/ci_f23/9_27.html#when-it-fails",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "When it fails?!?!",
     "text": "When it fails?!?!"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#statistics-mantra---george-box",
     "href": "pres/ci_f23/9_27.html#statistics-mantra---george-box",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Statistics Mantra - George Box",
     "text": "Statistics Mantra - George Box\n\n\n\n\n\n\n\n\nAll models are wrong,\nsome are useful!"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#what-is-the-formal-definition-of-statistics",
     "href": "pres/ci_f23/9_27.html#what-is-the-formal-definition-of-statistics",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "What is the formal definition of Statistics?",
     "text": "What is the formal definition of Statistics?\nStatistics is both the development of mathematical models to be used in real-world data and the analysis of data using existing models."
   },
   {
     "objectID": "pres/ci_f23/9_27.html#probability-models",
     "href": "pres/ci_f23/9_27.html#probability-models",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Probability Models",
     "text": "Probability Models\n\n\n\n\n\n\n\n\n\nModel observations that follow a new data generating process\nUnderstand its properties\nDevelop new probability distributions\nKnown as Probability Theory\nResearcher is a Probabilist"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#data-analysis",
     "href": "pres/ci_f23/9_27.html#data-analysis",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Data Analysis",
     "text": "Data Analysis\n\n\n\nModel data with a known probability model\nAccount for sources of variation and bias\nAccount for violations of independence and randomness\nKnown as Statistician or Data Scientist"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#goal-inference",
     "href": "pres/ci_f23/9_27.html#goal-inference",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Goal: Inference",
     "text": "Goal: Inference\nUse our sample data to understand the larger population.\n\nThe data will tell us how the population generally behaves.\n\n\nThe data will guide us in the differences in the unit.\n\n\nData will tell us if there is a signal or just noise."
   },
   {
     "objectID": "pres/ci_f23/9_27.html#menti.com-2449-3348-1",
     "href": "pres/ci_f23/9_27.html#menti.com-2449-3348-1",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "menti.com 2449 3348",
     "text": "menti.com 2449 3348"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#was-the-word-cloud-a-scientific-study",
     "href": "pres/ci_f23/9_27.html#was-the-word-cloud-a-scientific-study",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Was the word cloud a scientific study?",
     "text": "Was the word cloud a scientific study?\n\nYES!\n\n\nWe sampled a population!\n\n\nData was collected!\n\n\nData was summarized!"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#another-word-cloud",
     "href": "pres/ci_f23/9_27.html#another-word-cloud",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Another Word Cloud",
     "text": "Another Word Cloud"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#conducting-inference",
     "href": "pres/ci_f23/9_27.html#conducting-inference",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Conducting Inference",
     "text": "Conducting Inference"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#are-we-seeing-something-or-is-it-just-noise",
     "href": "pres/ci_f23/9_27.html#are-we-seeing-something-or-is-it-just-noise",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Are we seeing something or is it just noise???",
     "text": "Are we seeing something or is it just noise???\nAre we seeing something different from what was expected? Or is it due to random chance?"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#hypothesis-testing",
     "href": "pres/ci_f23/9_27.html#hypothesis-testing",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Hypothesis Testing",
-    "text": "Hypothesis Testing\n\n\nSet Up the Null and Alternative Hypothesis\nConstruct a test statistic based on the null hypothesis\nConstruct a distribution of the test statistic based on probability theory\nCompute the probability of observing the test statistic\nMake a decision based on the probability"
+    "text": "Hypothesis Testing\n\n\nSet up the Null and Alternative Hypothesis\nConstruct a test statistic based on the null hypothesis\nConstruct a distribution of the test statistic based on probability theory\nCompute the probability of observing the test statistic\nMake a decision based on the probability"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#what-if-we-cannot-construct-the-distribution",
     "href": "pres/ci_f23/9_27.html#what-if-we-cannot-construct-the-distribution",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "What if we cannot construct the distribution?!?!",
     "text": "What if we cannot construct the distribution?!?!\n\n\n\n\n\n\n\n\n\n\n\nWe bring out the Monte Carlo methods!"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#monte-carlo-methods",
     "href": "pres/ci_f23/9_27.html#monte-carlo-methods",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Monte Carlo Methods",
     "text": "Monte Carlo Methods\n\nMonte Carlo Methods are used to construct a distribution function of an obscure test statistic\nWe simulate a large number of data sets based on the null hypothesis\nWe construct a test statistic for each fake data set and the real one\nWe count how many data sets produce a test statistic that is more extreme than the real test statistic\n\\(p=\\#\\ of\\ extreme\\ data\\ sets\\ /\\ all\\ data\\ sets\\)"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#overview-of-research",
     "href": "pres/ci_f23/9_27.html#overview-of-research",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Overview of Research",
     "text": "Overview of Research\n\n\nAsk a question about a population\nCollect data from a sample\nConstruct and test a hypothesis\nDraw conclusion about the population\nRefine your question and methodology"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#so-what-is-statistics",
     "href": "pres/ci_f23/9_27.html#so-what-is-statistics",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "So, what is Statistics?",
     "text": "So, what is Statistics?\n\n\n\n\n\n\nFor you baby, I’ll be anything"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#my-research-1",
     "href": "pres/ci_f23/9_27.html#my-research-1",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "My Research",
     "text": "My Research\n\n\nGeneralized\nTime-Varying\n\nJoint Longitudinal-Survival Models"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#menti.com-2449-3348-2",
     "href": "pres/ci_f23/9_27.html#menti.com-2449-3348-2",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "menti.com 2449 3348",
     "text": "menti.com 2449 3348"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#menti.com-2449-3348-3",
     "href": "pres/ci_f23/9_27.html#menti.com-2449-3348-3",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "menti.com 2449 3348",
     "text": "menti.com 2449 3348"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#joint-models",
     "href": "pres/ci_f23/9_27.html#joint-models",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Joint Models",
     "text": "Joint Models\n\n\nLongitudinal\n\n\nThe analysis of repeated measurements\nAdjusting for extra correlation\nie: Following a patient and collecting data at different time points\n\n\n\nSurvival\n\n\nThe analysis of time-to-event data\n\nEvent can be anything\n\nAccounting for censoring\n\nWhen information is not complete\nDon’t know the whole time\n\nie: Following a newly diagnosed cancer patient to death"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#modelling-them-jointly",
     "href": "pres/ci_f23/9_27.html#modelling-them-jointly",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Modelling them Jointly",
     "text": "Modelling them Jointly\n\n\nWe can follow a newly-diagnosed patient longitudinally until the time-to-event occurs\nWe can use the longitudinal outcome to explain the survival rate of diseases\nWe can use the survival model to account for missing not at random in patients"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#case-study",
     "href": "pres/ci_f23/9_27.html#case-study",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Case Study",
     "text": "Case Study\nA patient is diagnosed with cancer, we want to know if any biomarkers can explain the survival rate of the disease.\n\nAre there biomarker levels, that can increase the probability of not surviving the next month or year?\n\n\nIf so, can we do something about it to increase their chances of survival."
   },
   {
     "objectID": "pres/ci_f23/9_27.html#data",
     "href": "pres/ci_f23/9_27.html#data",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Data",
     "text": "Data\nWith \\(n\\) participants, each \\(i^{th}\\) participant has:\n\n\nLongitudinal Data\n\n\\(n_i\\) repeated measurements\n\\(t_{i}=(t_{i1}, t_{i2}, \\cdots, t_{in_i})^\\mathrm T\\)\n\\(Y_i=(Y_{i1}, Y_{i2}, \\cdots, Y_{in_i})^\\mathrm T\\)\n\\(X_{ij}=(X_{ij1}, X_{ij2}, \\cdots, X_{ijk})^\\mathrm T\\)\n\n\nSurvival Data\n\n\\(T_i\\): Observed time\n\\(\\delta_i\\): Censoring status"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#longitudinal-submodels",
     "href": "pres/ci_f23/9_27.html#longitudinal-submodels",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Longitudinal Submodels",
     "text": "Longitudinal Submodels\nOur longitudinal outcome y can be represented in 2 components: a linear model and an error term. The linear \\[\\Large{Y_{ij} = m_i (t_{ij}) + \\epsilon_i(t_{ij}),}\\]\nwhere\n\n\n\n\\(m_i(t_{ij})=\\boldsymbol{X}_{ij}^\\mathrm T\\boldsymbol \\beta + \\boldsymbol Z_{ij}^\\mathrm Tb_i\\)\n\\(\\boldsymbol X_{ij}\\): design matrix\n\\(\\boldsymbol \\beta=(\\beta_1,\\cdots,\\beta_p)^\\mathrm T\\): regression coefficients\n\\(b_i \\sim N_q(\\boldsymbol 0, \\boldsymbol G)\\)\n\n\n\n\\(\\epsilon_i(t_{ij})\\): error term at time \\(t_{ij}\\)\n\\(\\boldsymbol Z_{ij}\\): subset of \\(\\boldsymbol X_{ij}\\)\n\\(b_i=(b_{i1},\\cdots,b_{iq})^\\mathrm T\\): random effects\n\\(\\epsilon_i(t_{ij}) \\sim N(0, \\sigma²)\\)"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#survival-submodels",
     "href": "pres/ci_f23/9_27.html#survival-submodels",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Survival Submodels",
     "text": "Survival Submodels\n\\[\\large{\\lambda_i\\{t|M_i(t),X_i\\}=\\lim_{\\Delta\\rightarrow 0}\\frac{ P\\{t\\leq T_i &lt;t+\\Delta|T_i\\geq t, M_i(t),\\boldsymbol X_{i1}\\}}{\\Delta}}\\] \\[\\large{\\lambda_i\\{t|M_i(t),\\boldsymbol X_{i1}\\}=\\lambda_0(t)\\exp\\{\\boldsymbol X_{i1}^\\mathrm T\\boldsymbol \\gamma+\\alpha m_i(t)\\}}\\]\nwhere\n\n\\(\\lambda_0(t)\\): baseline hazard function\n\\(\\boldsymbol X_{i1}\\): design matrix at first time point\n\\(\\boldsymbol \\gamma\\): regression coefficients\n\\(\\alpha\\): association coefficient\n\\(M_i(t)\\): history of the longitudinal outcome"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#construction-of-the-joint-model",
     "href": "pres/ci_f23/9_27.html#construction-of-the-joint-model",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Construction of the Joint Model",
     "text": "Construction of the Joint Model\nFor an \\(i^{th}\\) individual:\n\\[P(T_i, \\delta_i, \\boldsymbol Y_i; \\boldsymbol \\theta)\\]\n\n\\[\nP(T_i, \\delta_i, \\boldsymbol Y_i; \\boldsymbol \\theta) \\neq P(T_i, \\delta_i; \\boldsymbol \\theta) P( \\boldsymbol Y_i; \\boldsymbol \\theta)\n\\]"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#whats-happening",
     "href": "pres/ci_f23/9_27.html#whats-happening",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "What’s happening",
     "text": "What’s happening\n\n\n\n\nSurvival and Longitudinal\n\n\n\n\n\n\n\n\n\nRandom Effects\n\n\n\nShows Kakashi stopping the fight between Naruto and Sasuke"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#construction-of-joint-model",
     "href": "pres/ci_f23/9_27.html#construction-of-joint-model",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Construction of Joint Model",
     "text": "Construction of Joint Model\n\\[\\begin{eqnarray}\nP(T_i, \\delta_i, \\boldsymbol Y_i; \\boldsymbol \\theta) &=& \\int  P(T_{i},\\delta_{i}|b_{i};\\boldsymbol \\theta)P(\\boldsymbol Y_{i}|b_{i};\\boldsymbol \\theta)P(b_{i};\\boldsymbol \\theta) db_i\\\\\n& = & \\int  P(T_{i},\\delta_{i}|b_{i};\\boldsymbol \\theta) \\prod^{n_i}_j P(\\boldsymbol Y_{ij}|b_{i};\\boldsymbol \\theta)P(b_{i};\\boldsymbol \\theta) db_i\n\\end{eqnarray}\\]"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#estimation-of-parameters",
     "href": "pres/ci_f23/9_27.html#estimation-of-parameters",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Estimation of parameters",
     "text": "Estimation of parameters\n\nIn order to estimate the paramters (\\(\\theta\\)), we must predict the random effects.\n\n\nWe must take care of the integral!\n\n\nWe either treat the random effects as parameters!\n\n\nOR, we treat the random effects as missing!"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#missing",
     "href": "pres/ci_f23/9_27.html#missing",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Missing!?",
     "text": "Missing!?"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#expectation-maximization-algorithm",
     "href": "pres/ci_f23/9_27.html#expectation-maximization-algorithm",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Expectation-Maximization Algorithm",
     "text": "Expectation-Maximization Algorithm\n\n\nE-Step\nNumerical techniques are used to target the random effects in the joint density function\n\nGaussian Quadrature\nLaplace Approximation\nMonte Carlo Techniques\n\n\nM-Step\nA Newton-Raphson or other numerical techniques are used to maximize the expected likelihood function."
   },
   {
     "objectID": "pres/ci_f23/9_27.html#estimation-of-margin-of-error",
     "href": "pres/ci_f23/9_27.html#estimation-of-margin-of-error",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Estimation of Margin of Error",
     "text": "Estimation of Margin of Error\nThe standard errors of the parameters can be computed either as:\n\nVariance of the estimator, following probability model\nUsing large sample theory of MLE, use the negative inverse Hessian matrix"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#estimation-of-margin-of-error-1",
     "href": "pres/ci_f23/9_27.html#estimation-of-margin-of-error-1",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Estimation of Margin of Error",
     "text": "Estimation of Margin of Error\nThe standard errors of the parameters can be computed either as:\n\nVariance of the estimator, following probability model\nUsing large sample theory of MLE, use the negative inverse Hessian matrix\n\nThe Standard Errors are Biased due to misspecification of the random effects and baseline hazard function."
   },
   {
     "objectID": "pres/ci_f23/9_27.html#bootstrapping",
     "href": "pres/ci_f23/9_27.html#bootstrapping",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Bootstrapping",
     "text": "Bootstrapping\n\n\nBootstrapping can nonparametrically (or parameterically) compute the unbiased standard errors.\n\n\nBootstrapping is conducted by sampling from the data set with replacement.\nThen a test statistic is constructed for each boot sample.\nThe process is repeated many times until a distribution is constructed.\nStandard Errors (or Confidence Intervals) are obtained from the distribution.\nFor joint models, the individual is sampled."
   },
   {
     "objectID": "pres/ci_f23/9_27.html#questions",
     "href": "pres/ci_f23/9_27.html#questions",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Questions",
     "text": "Questions"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#whats-statistics-without-a-little",
     "href": "pres/ci_f23/9_27.html#whats-statistics-without-a-little",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "What’s Statistics without a little …",
     "text": "What’s Statistics without a little …"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#train-of-thoughts",
     "href": "pres/ci_f23/9_27.html#train-of-thoughts",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Train of Thoughts",
     "text": "Train of Thoughts\n\nThere are two train of thoughts on how to interpret estimates and probability.\n\n\nOne approach is the Frequentist approach.\n\n\nThe other approach is the Bayesian approach.\n\n\nBoth sides hate each other."
   },
   {
     "objectID": "pres/ci_f23/9_27.html#frequentists",
     "href": "pres/ci_f23/9_27.html#frequentists",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Frequentists",
     "text": "Frequentists"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#frequentists-1",
     "href": "pres/ci_f23/9_27.html#frequentists-1",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Frequentists",
     "text": "Frequentists\nA frequentist, in the context of statistics, is an individual who adheres to the frequentist interpretation of probability and statistical inference.\n\nMeaning probability is obtained by the repetition of multiple experiments."
   },
   {
     "objectID": "pres/ci_f23/9_27.html#bayesians",
     "href": "pres/ci_f23/9_27.html#bayesians",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Bayesians",
     "text": "Bayesians"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#bayesians-1",
     "href": "pres/ci_f23/9_27.html#bayesians-1",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "Bayesians",
     "text": "Bayesians\nA Bayesians, in the context of statistics, is an individual who adheres to the Bayesian interpretation of probability and statistical inference.\n\nProbability is obtained by likelihood of an event to occur, given data and prior knowledge."
   },
   {
     "objectID": "pres/ci_f23/9_27.html#what-am-i-and-people-that-have-lives",
     "href": "pres/ci_f23/9_27.html#what-am-i-and-people-that-have-lives",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "What am I (and people that have lives)?",
     "text": "What am I (and people that have lives)?\n\nWhatever gets the job done!"
   },
   {
     "objectID": "pres/ci_f23/9_27.html#there-is-more-much-more-but-i-will-say-this-in-my-statistical-journey",
     "href": "pres/ci_f23/9_27.html#there-is-more-much-more-but-i-will-say-this-in-my-statistical-journey",
-    "title": "Statistics:",
+    "title": "Statistics",
     "section": "There is more, much more, but I will say this, in my statistical journey",
     "text": "There is more, much more, but I will say this, in my statistical journey"
   },
