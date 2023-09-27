@@ -698,5 +698,7 @@ Probability is obtained by likelihood of an event to occur, given data and prior
 :::
 
 ::: fragment
+www.inqs.info
+
 isaac.qs\@csuci.edu
 :::
