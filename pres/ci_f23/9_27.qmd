@@ -519,7 +519,7 @@ $$
 ::: fragment
 ### Random Effects
 
-![Shows Kakashi stopping the fight between Naruto and Sasuke](https://media.tenor.com/Y5I9Ikv8C60AAAAC/kakashi-naruto.gif){fig-align="center"}
+![](https://media.tenor.com/Y5I9Ikv8C60AAAAC/kakashi-naruto.gif){fig-alt="Shows Kakashi stopping the fight between Naruto and Sasuke" fig-align="center"}
 :::
 :::
 :::
