@@ -696,3 +696,7 @@ Probability is obtained by likelihood of an event to occur, given data and prior
 ::: fragment
 ![](https://media.tenor.com/9O8vuQzirQMAAAAd/i-did-it-my-way-frank-sinatra.gif){fig-alt="Shows Frank Sinatra singing with the words: I did it my way" fig-align="center"}
 :::
+
+::: fragment
+isaac.qs\@csuci.edu
+:::
