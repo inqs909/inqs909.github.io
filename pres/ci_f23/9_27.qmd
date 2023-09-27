@@ -197,7 +197,7 @@ Statistics is both the development of mathematical models to be used in real-wor
 
 -   Known as Probability Theory
 
--   Researcher is a Probabilist
+-   Researcher is a Probabilist or Mathematical Statistician
 :::
 :::
 
@@ -219,16 +219,22 @@ Statistics is both the development of mathematical models to be used in real-wor
 :::
 :::
 
-## Goal: Inference
+## What's the goal of a Statistician?
 
+::: {.fragment style="font-size: 2em; color: red;"}
+**INFERENCE**
+:::
+
+::: fragment
 Use our sample data to understand the larger population.
+:::
 
 ::: fragment
 The data will tell us how the population generally behaves.
 :::
 
 ::: fragment
-The data will guide us in the differences in the unit.
+The data will guide us in the differences in units.
 :::
 
 ::: fragment
@@ -311,7 +317,7 @@ Are we seeing something different from what was expected? Or is it due to random
 ::: columns
 ::: {.column width="50%"}
 ::: fragment
-![](https://media.tenor.com/x5dpKrM1U6oAAAAd/vamonos-lets-go.gif){fig-alt="An image showing the Monte Carlo car pulling out from a garage." fig-align="center" width="377"}
+![](https://media.tenor.com/x5dpKrM1U6oAAAAd/vamonos-lets-go.gif){fig-alt="An image showing the Monte Carlo car pulling out from a garage." fig-align="center" width="339"}
 :::
 :::
 
