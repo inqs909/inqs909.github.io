@@ -1,0 +1,184 @@
+---
+title: "Bayesian Mixed Effects Models and Cats"
+subtitle: "Analysis for Evolutionary Biology Data"
+author: "Isaac Quintanilla Salinas"
+format: 
+  revealjs:
+    touch: false
+    controls: true
+    pointer:
+      pointerSize: 32
+    incremental: false
+    slide-number: true
+knitr:
+  opts_chunk: 
+    echo: true
+    eval: true
+    message: false
+    warnings: false
+    comment: "#>" 
+revealjs-plugins:
+  - pointer
+---
+
+```{r}
+#| include: false
+library(tidyverse)
+```
+
+# Motivation (Semi-Fake)
+
+## San Bernardino Desert
+
+![](https://upload.wikimedia.org/wikipedia/commons/0/05/Sand_to_Snow_National_Monument.jpg){fig-align="center"}
+
+## Study *Felis*
+
+::: columns
+::: {.column width="30%"}
+### *F. catus*
+
+![](https://inaturalist-open-data.s3.amazonaws.com/photos/129658776/large.jpg){fig-align="left"}
+:::
+
+::: {.column width="30%"}
+### *F. silvestris*
+
+![](https://upload.wikimedia.org/wikipedia/commons/d/d0/Felis_silvestris_silvestris_Luc_Viatour.jpg){fig-align="center" width="455"}
+:::
+
+::: {.column width="30%"}
+### *F. margarita*
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Felis_margarita_10.jpg/220px-Felis_margarita_10.jpg){fig-align="right"}
+:::
+:::
+
+## Study
+
+**We are interested in seeing if wearing a flea collar will affect a cat's weight over time.**
+
+## Outcome (Y): Weight of a cat
+
+![](https://www.kentscientific.com/Customer-Content/www/products/Photos/Original/SCL-4000.jpg){fig-align="center"}
+
+## Predictors (X)
+
+-   Experimental Variable
+    -   Flea Collar
+-   Alertness
+-   Hair Coat
+-   Heart Rate
+-   Time
+
+## Model
+
+$$
+Y = \boldsymbol X^\mathrm T\boldsymbol \beta + \varepsilon
+$$
+
+-   $Y$: Outcome of Interest
+
+-   $\boldsymbol X = (1, X_1, X_2, X_3, X_4)^\mathrm T$: Predictor Variables
+
+-   $\boldsymbol \beta=(\beta_0, \beta_1, \beta_2, \beta_3, \beta_4)^\mathrm T$: Regression Coefficients
+
+::: fragment
+**Fit with Linear Regression**
+:::
+
+## Linear Regression Assumptions
+
+::: incremental
+-   Residuals follow a normal distribution
+
+-   There is a linear trend
+
+-   Constant Variance
+
+-   Observations are Independent
+:::
+
+## Our Study
+
+::: incremental
+-   Residuals follow a normal distribution ✅
+
+-   There is a linear trend ✅
+
+-   Constant Variance ✅
+
+-   Observations are Independent ❌
+:::
+
+## Species
+
+![](https://www.researchgate.net/publication/340201788/figure/fig1/AS:873450486902784@1585258232035/Maximum-Likelihood-phylogenetic-tree-constructed-using-whole-genome-SNPs-data-of-wildcat.jpg){fig-align="center"}
+
+## Main Coon
+
+![](https://www.thesprucepets.com/thmb/MzKr6fC-v8W4D4oz2p9wWCwAFms=/2119x0/filters:no_upscale():strip_icc()/GettyImages-1189893683-e0ff70596b3b4f0687ba573e5a671f74.jpg){fig-align="center"}
+
+## Environments
+
+::: columns
+::: {.column width="30%"}
+### House
+:::
+
+::: {.column width="30%"}
+### In-Between
+:::
+
+::: {.column width="30%"}
+### Feral
+:::
+:::
+
+## Longitudinal Measurements
+
+# Models
+
+## Model
+
+## Multilevel Model Approach
+
+## A Linear Model
+
+## Add Animal-Specific Random Effects
+
+## Add Environmental-Specific Random Effects
+
+## Add Species Random Effects
+
+## Final Model?
+
+## Add Correlation Matrix
+
+## Final Model (for real, for now)
+
+# Bayesian Models
+
+## Likelihood Function
+
+## Prior
+
+## Estimation
+
+# Markov Chains Monte Carlo Methods {#sec-markov-chains--monte-carlo-methods}
+
+## Markov Chain
+
+## Markov Chains Monte Carlo
+
+## Metropolis-Hastings Algorithm
+
+## Gibbs Sampling
+
+## Hamiltonian Monte Carlo
+
+# Small Simulation Study
+
+## R
+
+## Stan
