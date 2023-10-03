@@ -25,6 +25,7 @@ revealjs-plugins:
 #| include: false
 library(tidyverse)
 library(ggcats)
+library(ThemePark)
 ```
 
 # Motivation (Semi-Fake)
@@ -151,18 +152,22 @@ $$
 ## Longitudinal Measurements
 
 ```{r}
+#| echo: false
 set.seed(4)
 df <- data.frame(x = 1:4,
-                 y = 4 + rnorm(4, sd = 4),
+                 y = 4 + rnorm(4, sd = 2),
                  image = rep("lil_bub", 4))
 
                            
 ggplot(df) + geom_line(aes(x, y)) +
- geom_cat(aes(x, y, cat = image), size = 3) +
-  ylim(c(0,9)) + 
+ geom_cat(aes(x, y, cat = image), size = 5) +
+  ylim(c(1,7.5)) + 
   xlim(c(0.75, 4.25)) +
   xlab("Time") + ylab("Weight") +
-  theme_bw()
+  theme_barbie(axis.title.x = element_text(size = 48),
+               axis.title.y = element_text(size = 48),
+               axis.text.x = element_text(size = 42),
+               axis.text.y = element_text(size = 42))
   
 ```
 
