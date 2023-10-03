@@ -28,7 +28,7 @@ library(tidyverse)
 
 # Motivation (Semi-Fake)
 
-## San Bernardino Desert
+## San Bernardino Desert (Only True Part)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/0/05/Sand_to_Snow_National_Monument.jpg){fig-align="center"}
 
@@ -177,7 +177,7 @@ $$
 
 ## Hamiltonian Monte Carlo
 
-# Small Simulation Study
+# Simulation Study
 
 ## R
 
