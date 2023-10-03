@@ -24,6 +24,7 @@ revealjs-plugins:
 ```{r}
 #| include: false
 library(tidyverse)
+library(ggcats)
 ```
 
 # Motivation (Semi-Fake)
@@ -123,19 +124,47 @@ $$
 
 ::: columns
 ::: {.column width="30%"}
-### House
+::: {.fragment fragment-index="1"}
+### Indoor
+
+![](https://www.zooplus.ie/magazine/wp-content/uploads/2021/07/Indoor-Cat.jpeg){fig-align="left"}
+:::
 :::
 
 ::: {.column width="30%"}
+::: {.fragment fragment-index="3"}
 ### In-Between
+
+![](https://images.thdstatic.com/productImages/59613c83-0288-40bc-bf54-a15afca9d18f/svn/petsafe-cat-doors-hpa11-10876-31_600.jpg){fig-align="center"}
+:::
 :::
 
 ::: {.column width="30%"}
-### Feral
+::: {.fragment fragment-index="2"}
+### Outside
+
+![](https://habitathaven.com/cdn/shop/articles/cat-outside-good-for-them_f08770c8-4ed6-4b54-ac5c-7880bd1b0b35_1000x.jpg?v=1669070035){fig-align="right"}
+:::
 :::
 :::
 
 ## Longitudinal Measurements
+
+```{r}
+set.seed(4)
+df <- data.frame(x = 1:4,
+                 y = 4 + rnorm(4, sd = 4),
+                 image = rep("lil_bub", 4))
+
+                           
+ggplot(df) + geom_line(aes(x, y)) +
+ geom_cat(aes(x, y, cat = image), size = 3) +
+  ylim(c(0,9)) + 
+  xlim(c(0.75, 4.25)) +
+  xlab("Time") + ylab("Weight") +
+  theme_bw()
+  
+```
 
 # Models
 
