@@ -30,7 +30,7 @@ library(ThemePark)
 
 # Motivation (Semi-Fake)
 
-## San Bernardino Desert (Only True Part)
+## San Bernardino Desert (Only Real Part)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/0/05/Sand_to_Snow_National_Monument.jpg){fig-align="center"}
 
@@ -113,11 +113,41 @@ $$
 -   Observations are Independent ❌
 :::
 
+## Why is this a problem?
+
+::: columns
+::: {.column width="50%"}
+::: {.fragment .incremental}
+-   Cannot Construct Likelihood Function
+
+-   Biased Standard Errors
+
+-   Uncontrollable Variation
+:::
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+
+df <- tibble(group = c("Measurement",
+                       "Other"),
+             y = c(33, 77))
+ggplot(df, aes(fill=group, x = "", y = y)) + geom_bar(position = "stack", stat = "identity") + theme_void() +
+  ggtitle("Error") +
+  theme(legend.title = element_blank(),
+        legend.position = "bottom",
+        legend.text = element_text(size = 48),
+        plot.title = element_text(size = 60, hjust = 0.5))
+```
+:::
+:::
+
 ## Species
 
 ![](https://www.researchgate.net/publication/340201788/figure/fig1/AS:873450486902784@1585258232035/Maximum-Likelihood-phylogenetic-tree-constructed-using-whole-genome-SNPs-data-of-wildcat.jpg){fig-align="center"}
 
-## Main Coon
+## Maine Coon
 
 ![](https://www.thesprucepets.com/thmb/MzKr6fC-v8W4D4oz2p9wWCwAFms=/2119x0/filters:no_upscale():strip_icc()/GettyImages-1189893683-e0ff70596b3b4f0687ba573e5a671f74.jpg){fig-align="center"}
 
@@ -177,6 +207,89 @@ ggplot(df) + geom_line(aes(x, y)) +
 
 ## Multilevel Model Approach
 
+## Framework
+
+```{r}
+#| echo: false
+df1 <- data.frame(x = runif(5, 2.25, 2.75),
+                 y = runif(5, 22, 28),
+                 image = sample(c("lil_bub", "maru", "pop_close", "venus", "toast"), 5))
+
+df2 <- data.frame(x = runif(5, 3.25, 3.75),
+                 y = runif(5, 32, 38),
+                 image = sample(c("lil_bub", "maru", "pop_close", "venus", "toast"), 5))
+
+df3 <- data.frame(x = runif(5, 4.25, 4.75),
+                 y = runif(5, 42, 48),
+                 image = sample(c("lil_bub", "maru", "pop_close", "venus", "toast"), 5))
+
+df4 <- data.frame(x = runif(5, 2.25, 2.75),
+                 y = runif(5, 32, 38),
+                 image = sample(c("lil_bub", "maru", "pop_close", "venus", "toast"), 5))
+
+df5 <- data.frame(x = runif(5, 2.25, 2.75),
+                 y = runif(5, 42, 48),
+                 image = sample(c("lil_bub", "maru", "pop_close", "venus", "toast"), 5))
+df6 <- data.frame(x = runif(5, 3.25, 3.75),
+                 y = runif(5, 22, 28),
+                 image = sample(c("lil_bub", "maru", "pop_close", "venus", "toast"), 5))
+df7 <- data.frame(x = runif(5, 3.25, 3.75),
+                 y = runif(5, 42, 48),
+                 image = sample(c("lil_bub", "maru", "pop_close", "venus", "toast"), 5))
+df8 <- data.frame(x = runif(5, 4.25, 4.75),
+                 y = runif(5, 32, 38),
+                 image = sample(c("lil_bub", "maru", "pop_close", "venus", "toast"), 5))
+df9 <- data.frame(x = runif(5, 4.25, 4.75),
+                 y = runif(5, 22, 28),
+                 image = sample(c("lil_bub", "maru", "pop_close", "venus", "toast"), 5))
+
+
+a1 <- data.frame(
+   x = c(2.5,3.5,4.5),
+   y = c(52, 52, 52),
+   label = c("F. catus", "F. sylvestris", "F. margarita")
+)
+
+a2 <- data.frame(
+   x = c(1.9),
+   y = c(25, 35, 45),
+   label = c("Indoor", "In-Between", "Outdoor")
+)
+
+
+# basic graph
+p <- ggplot()  + theme_void()
+
+# Add rectangles
+p + annotate("rect", 
+             xmin=c(2,3,4), xmax=c(3,4,5), 
+             ymin=c(20,20,20), ymax=c(30,30,30), 
+             alpha=0.2, color="red", fill="red") + 
+  annotate("rect", 
+           xmin=c(2,3,4), xmax=c(3,4,5), 
+           ymin=c(30,30,30), ymax=c(40,40,40), 
+           alpha=0.2, color="blue", fill="blue") +
+  annotate("rect", 
+           xmin=c(2,3,4), xmax=c(3,4,5), 
+           ymin=c(40,40,40), ymax=c(50,50,50), 
+           alpha=0.2, color="orange", fill="orange") +
+  geom_cat(aes(x, y, cat = image), df1, size = 2) +
+  geom_cat(aes(x, y, cat = image), df2, size = 2) +
+  geom_cat(aes(x, y, cat = image), df3, size = 2) +
+  geom_cat(aes(x, y, cat = image), df4, size = 2) +
+  geom_cat(aes(x, y, cat = image), df5, size = 2) +
+  geom_cat(aes(x, y, cat = image), df6, size = 2) +
+  geom_cat(aes(x, y, cat = image), df7, size = 2) +
+  geom_cat(aes(x, y, cat = image), df8, size = 2) +
+  geom_cat(aes(x, y, cat = image), df9, size = 2) +
+  geom_text(data=a1, aes( x=x, y=y, label=label),
+           size=14 , fontface="bold.italic" ) +
+  geom_text(data=a2, aes( x=x, y=y, label=label),
+           size=12, angle = 90, fontface="bold" )
+  
+
+```
+
 ## A Linear Model
 
 ## Add Animal-Specific Random Effects
@@ -187,7 +300,49 @@ ggplot(df) + geom_line(aes(x, y)) +
 
 ## Final Model?
 
+## Me ...
+
+![](https://www.rd.com/wp-content/uploads/2022/04/GettyImages-1310147575.jpg?fit=700%2C466){fig-align="center"}
+
+## Me ...
+
+::: columns
+::: {.column width="50%"}
+::: incremental
+-   We Must Use Random Effects
+
+-   We Must Use a Bayesian Approach
+:::
+:::
+
+::: {.column width="50%"}
+![](https://www.rd.com/wp-content/uploads/2022/04/GettyImages-1310147575.jpg?fit=700%2C466){fig-align="center"}
+:::
+:::
+
+::: fragment
+**I didn't want to do the math!**
+:::
+
 ## Add Correlation Matrix
+
+## Accounted Variation
+
+```{r}
+#| echo: false
+
+df <- tibble(group = c("Measurement",
+                       "Biological",
+                       "Environmental",
+                       "Evolutionary",
+                       "Time",
+                       "Other"),
+             y = c(33, 16, 25, 5, 12, 9))
+ggplot(df, aes(fill=group, x = "", y = y)) + geom_bar(position = "stack", stat = "identity") + theme_void() +
+  theme(legend.title = element_blank(),
+        legend.position = "bottom",
+        legend.text = element_text(size = 48))
+```
 
 ## Final Model (for real, for now)
 
@@ -200,6 +355,10 @@ ggplot(df) + geom_line(aes(x, y)) +
 ## Estimation
 
 # Markov Chains Monte Carlo Methods {#sec-markov-chains--monte-carlo-methods}
+
+## MCMC Methods
+
+![](https://assets3.thrillist.com/v1/image/2624434/792x456/scale;webp=auto;jpeg_quality=60;progressive.jpg){fig-align="center"}
 
 ## Markov Chain
 

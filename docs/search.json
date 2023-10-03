@@ -476,11 +476,11 @@
     "text": "Fitting Cox PH Model\n\nCodeOutput\n\n\n\ndf_colon %$% coxph(Surv(time, status) ~ surg)  %&gt;%\n  summary\n\n\n\n\ndf_colon %$% coxph(Surv(time, status) ~ surg)  %&gt;%\n  summary\n\n#&gt; Call:\n#&gt; coxph(formula = Surv(time, status) ~ surg)\n#&gt; \n#&gt;   n= 929, number of events= 468 \n#&gt; \n#&gt;                                   coef exp(coef) se(coef)     z Pr(&gt;|z|)  \n#&gt; surgExtended Time Since Surgery 0.2549    1.2903   0.1008 2.529   0.0114 *\n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n#&gt; \n#&gt;                                 exp(coef) exp(-coef) lower .95 upper .95\n#&gt; surgExtended Time Since Surgery      1.29      0.775     1.059     1.572\n#&gt; \n#&gt; Concordance= 0.523  (se = 0.01 )\n#&gt; Likelihood ratio test= 6.17  on 1 df,   p=0.01\n#&gt; Wald test            = 6.39  on 1 df,   p=0.01\n#&gt; Score (logrank) test = 6.43  on 1 df,   p=0.01"
   },
   {
-    "objectID": "pres/ci_f23/10_09.html#san-bernardino-desert-only-true-part",
-    "href": "pres/ci_f23/10_09.html#san-bernardino-desert-only-true-part",
+    "objectID": "pres/ci_f23/10_09.html#san-bernardino-desert-only-real-part",
+    "href": "pres/ci_f23/10_09.html#san-bernardino-desert-only-real-part",
     "title": "Bayesian Mixed Effects Models and Cats",
-    "section": "San Bernardino Desert (Only True Part)",
-    "text": "San Bernardino Desert (Only True Part)"
+    "section": "San Bernardino Desert (Only Real Part)",
+    "text": "San Bernardino Desert (Only Real Part)"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#study-felis",
@@ -532,6 +532,13 @@
     "text": "Our Study\n\n\nResiduals follow a normal distribution ✅\nThere is a linear trend ✅\nConstant Variance ✅\nObservations are Independent ❌"
   },
   {
+    "objectID": "pres/ci_f23/10_09.html#why-is-this-a-problem",
+    "href": "pres/ci_f23/10_09.html#why-is-this-a-problem",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Why is this a problem?",
+    "text": "Why is this a problem?\n\n\n\n\nCannot Construct Likelihood Function\nBiased Standard Errors\nUncontrollable Variation"
+  },
+  {
     "objectID": "pres/ci_f23/10_09.html#species",
     "href": "pres/ci_f23/10_09.html#species",
     "title": "Bayesian Mixed Effects Models and Cats",
@@ -539,11 +546,11 @@
     "text": "Species"
   },
   {
-    "objectID": "pres/ci_f23/10_09.html#main-coon",
-    "href": "pres/ci_f23/10_09.html#main-coon",
+    "objectID": "pres/ci_f23/10_09.html#maine-coon",
+    "href": "pres/ci_f23/10_09.html#maine-coon",
     "title": "Bayesian Mixed Effects Models and Cats",
-    "section": "Main Coon",
-    "text": "Main Coon"
+    "section": "Maine Coon",
+    "text": "Maine Coon"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#environments",
@@ -572,6 +579,13 @@
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Multilevel Model Approach",
     "text": "Multilevel Model Approach"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#framework",
+    "href": "pres/ci_f23/10_09.html#framework",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Framework",
+    "text": "Framework"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#a-linear-model",
@@ -609,11 +623,32 @@
     "text": "Final Model?"
   },
   {
+    "objectID": "pres/ci_f23/10_09.html#me",
+    "href": "pres/ci_f23/10_09.html#me",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Me …",
+    "text": "Me …"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#me-1",
+    "href": "pres/ci_f23/10_09.html#me-1",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Me …",
+    "text": "Me …\n\n\n\n\nWe Must Use Random Effects\nWe Must Use a Bayesian Approach\n\n\n\n\n\n\n\n\n\n\n\nI didn’t want to do the math!"
+  },
+  {
     "objectID": "pres/ci_f23/10_09.html#add-correlation-matrix",
     "href": "pres/ci_f23/10_09.html#add-correlation-matrix",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Add Correlation Matrix",
     "text": "Add Correlation Matrix"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#accounted-variation",
+    "href": "pres/ci_f23/10_09.html#accounted-variation",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Accounted Variation",
+    "text": "Accounted Variation"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#final-model-for-real-for-now",
@@ -642,6 +677,13 @@
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Estimation",
     "text": "Estimation"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#mcmc-methods",
+    "href": "pres/ci_f23/10_09.html#mcmc-methods",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "MCMC Methods",
+    "text": "MCMC Methods"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#markov-chain",
@@ -830,7 +872,7 @@
     "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
     "title": "RcppArmadillo",
     "section": "Using RcppArmadillo",
-    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] -0.005396202\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] -0.005396202\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.26µs    3.5µs   269957.        0B        0\n2 mean_cpp(Y)   1.84µs    2.8µs   369827.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
+    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.01713471\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.01713471\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.31µs   3.52µs   268659.        0B        0\n2 mean_cpp(Y)   1.86µs   2.83µs   370597.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
   },
   {
     "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
