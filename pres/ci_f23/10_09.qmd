@@ -1,6 +1,6 @@
 ---
 title: "Bayesian Mixed Effects Models and Cats"
-subtitle: "Analysis for Evolutionary Biology Data"
+subtitle: "Analysis of Evolutionary Biological Data"
 author: "Isaac Quintanilla Salinas"
 format: 
   revealjs:
@@ -10,6 +10,7 @@ format:
       pointerSize: 32
     incremental: false
     slide-number: true
+    css: styles.css
 knitr:
   opts_chunk: 
     echo: true
@@ -70,7 +71,6 @@ library(ThemePark)
     -   Flea Collar
 -   Alertness
 -   Hair Coat
--   Heart Rate
 -   Time
 
 ## Model
@@ -81,9 +81,11 @@ $$
 
 -   $Y$: Outcome of Interest
 
--   $\boldsymbol X = (1, X_1, X_2, X_3, X_4)^\mathrm T$: Predictor Variables
+-   $\boldsymbol X = (1, t, X_1, X_2, X_3)^\mathrm T$: Predictor Variables
 
 -   $\boldsymbol \beta=(\beta_0, \beta_1, \beta_2, \beta_3, \beta_4)^\mathrm T$: Regression Coefficients
+
+-   $\varepsilon \sim N(0, \sigma^2)$
 
 ::: fragment
 **Fit with Linear Regression**
@@ -203,7 +205,23 @@ ggplot(df) + geom_line(aes(x, y)) +
 
 # Models
 
-## Model
+## Original Model
+
+$$
+Y_{k} = \boldsymbol X_{k}^\mathrm T\boldsymbol \beta + \varepsilon_{k}
+$$
+
+-   $k = 1, \ldots, N$
+
+-   $N$: Number of all observations
+
+-   $Y_{k}$: Outcome of Interest
+
+-   $\boldsymbol X_{k} = (1, t_{k}, X_{k1}, X_{k2}, X_{k3})^\mathrm T$: Predictor Variables
+
+-   $\boldsymbol \beta=(\beta_0, \beta_1, \beta_2, \beta_3, \beta_4)^\mathrm T$: Regression Coefficients
+
+-   $\varepsilon_{k}\sim N(0, \sigma^2)$: Error Term
 
 ## Multilevel Model Approach
 
@@ -258,7 +276,7 @@ a2 <- data.frame(
 
 
 # basic graph
-p <- ggplot()  + theme_void()
+p <- ggplot() + theme_void()
 
 # Add rectangles
 p + annotate("rect", 
@@ -290,13 +308,191 @@ p + annotate("rect",
 
 ```
 
-## A Linear Model
+## Multilevel Model
+
+## A Linear Model w/ Repeated Measurements
+
+$$
+Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + \varepsilon_{ij}
+$$
+
+-   $Y_{ij}=Y_i(t_{ij})$: Outcome of Interest
+
+-   $\boldsymbol X_{ij} = (1, t_{ij}, X_{ij1}, X_{ij2}, X_{ij3})^\mathrm T$: Predictor Variables
+
+-   $\boldsymbol \beta=(\beta_0, \beta_1, \beta_2, \beta_3, \beta_4)^\mathrm T$: Regression Coefficients
+
+-   $\varepsilon_{ij}\sim N(0, \sigma^2)$: Error Term
+
+## Animal-Specific Random Effects
+
+$$
+\boldsymbol b_i = (b_{i0}, b_{i1})^\mathrm T \sim N_2(\boldsymbol 0, \boldsymbol \Sigma_b)
+$$
+
+::: columns
+::: {.column width="50%"}
+### Mean Vector
+
+$$
+\boldsymbol 0 = \left(\begin{array}{c}
+0 \\
+0
+\end{array}
+\right)
+$$
+:::
+
+::: {.column width="50%"}
+### Covariance Matrix
+
+$$
+\boldsymbol \Sigma_b = \left(\begin{array}{cc}
+\sigma_{b0}^2 & \sigma_{b01} \\
+\sigma_{b01} & \sigma_{b1}^2 
+\end{array}
+\right)
+$$
+:::
+:::
 
 ## Add Animal-Specific Random Effects
 
+$$
+Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} + \varepsilon_{ij}
+$$
+
+::: columns
+::: {.column width="50%"}
+-   $Y_{ij}=Y_i(t_{ij})$: Outcome of Interest
+
+-   $\boldsymbol X_{ij} = (1, t_{ij}, X_{ij1}, X_{ij2}, X_{ij3})^\mathrm T$: Predictor Variables
+
+-   $\boldsymbol \beta=(\beta_0, \beta_1, \beta_2, \beta_3, \beta_4)^\mathrm T$: Regression Coefficients
+
+-   $\varepsilon_{ij}\sim N(0, \sigma^2)$: Error Term
+:::
+
+::: {.column width="50%"}
+-   $\boldsymbol b_i = (b_{i0}, b_{i1})^\mathrm T \sim N_2(\boldsymbol 0, \boldsymbol \Sigma_b)$
+:::
+:::
+
+## Environmental-Specific Random Effects
+
+$$
+\boldsymbol b_i = (b_{i0}, b_{i1})^\mathrm T \sim N_2(\boldsymbol 0, \boldsymbol \Sigma_b)
+$$
+
+::: columns
+::: {.column width="50%"}
+### Mean Vector
+
+$$
+\boldsymbol 0 = \left(\begin{array}{c}
+0 \\
+0
+\end{array}
+\right)
+$$
+:::
+
+::: {.column width="50%"}
+### Covariance Matrix
+
+$$
+\boldsymbol \Sigma_b = \left(\begin{array}{cc}
+\sigma_{b0}^2 & \sigma_{b01} \\
+\sigma_{b01} & \sigma_{b1}^2 
+\end{array}
+\right)
+$$
+:::
+:::
+
 ## Add Environmental-Specific Random Effects
 
+$$
+Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} + b_{env(i)} +  \varepsilon_{ij}
+$$
+
+::: columns
+::: {.column width="50%"}
+-   $Y_{ij}=Y_i(t_{ij})$
+
+-   $\boldsymbol X_{ij} = (1, t_{ij}, X_{ij1}, X_{ij2}, X_{ij3})^\mathrm T$
+
+-   $\boldsymbol \beta=(\beta_0, \beta_1, \beta_2, \beta_3, \beta_4)^\mathrm T$
+
+-   $\varepsilon_{ij}\sim N(0, \sigma^2)$
+:::
+
+::: {.column width="50%"}
+-   $\boldsymbol b_i = (b_{i0}, b_{i1})^\mathrm T \sim N_2(\boldsymbol 0, \boldsymbol \Sigma_b)$
+-   $b_{env(i)} \in \boldsymbol b_{env}=(b_{in}, b_{bw}, b_{out})^\mathrm T$
+-   $\boldsymbol b_{env} \sim N_3(\boldsymbol 0, \sigma^2_{env} \boldsymbol I_3)$
+:::
+:::
+
+## Species Random Effects
+
+$$
+\boldsymbol b_i = (b_{i0}, b_{i1})^\mathrm T \sim N_2(\boldsymbol 0, \boldsymbol \Sigma_b)
+$$
+
+::: columns
+::: {.column width="50%"}
+### Mean Vector
+
+$$
+\boldsymbol 0 = \left(\begin{array}{c}
+0 \\
+0 \\
+0
+\end{array}
+\right)
+$$
+:::
+
+::: {.column width="50%"}
+### Covariance Matrix
+
+$$
+\boldsymbol \Sigma_b = \left(\begin{array}{cc}
+\sigma_{c}^2 & \sigma_{cs} & \sigma_{cm}\\
+\sigma_{sc} & \sigma_{s}^2 & \sigma_{sm} \\
+\sigma_{mc} & \sigma_{ms} & \sigma_{m}^2 \\
+\end{array}
+\right)
+$$
+:::
+:::
+
 ## Add Species Random Effects
+
+$$
+Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} + b_{env(i)} + b_{evo(i)} + \varepsilon_{ij}
+$$
+
+::: columns
+::: {.column width="50%"}
+-   $Y_{ij}=Y_i(t_{ij})$
+
+-   $\boldsymbol X_{ij} = (1, t_{ij}, X_{ij1}, X_{ij2}, X_{ij3})^\mathrm T$
+
+-   $\boldsymbol \beta=(\beta_0, \beta_1, \beta_2, \beta_3, \beta_4)^\mathrm T$
+
+-   $\varepsilon_{ij}\sim N(0, \sigma^2)$
+:::
+
+::: {.column width="50%"}
+-   $\boldsymbol b_i = (b_{i0}, b_{i1})^\mathrm T \sim N_2(\boldsymbol 0, \boldsymbol \Sigma_b)$
+-   $b_{env(i)} \in \boldsymbol b_{env}=(b_{in}, b_{bw}, b_{out})^\mathrm T$
+-   $\boldsymbol b_{env} \sim N_3(\boldsymbol 0, \sigma^2_{env} \boldsymbol I_3)$
+-   $b_{evo(i)} \in \boldsymbol b_{env}=(b_{cat}, b_{sil}, b_{mar})^\mathrm T$
+-   $\boldsymbol b_{evo} \sim N_3(\boldsymbol 0, \boldsymbol \Sigma_{evo})$
+:::
+:::
 
 ## Final Model?
 
@@ -320,11 +516,47 @@ p + annotate("rect",
 :::
 :::
 
+## Add Correlation Matrix {.smaller}
+
+$$
+\widehat{\mathrm{cov}}( \boldsymbol Y_i) = \boldsymbol \Sigma_i = \sigma^2 \boldsymbol \Lambda_i
+$$
+
 ::: fragment
-**I didn't want to do the math!**
+$$
+\boldsymbol \Lambda_i  = \left(\begin{array}{cccc}
+1 & \rho^{(t_{i1}-t_{i2})^2} & \rho^{(t_{i1}-t_{i3})^2} & \rho^{(t_{i1}-t_{i4})^2}\\
+\rho^{(t_{i2}-t_{i1})^2} & 1 & \rho^{(t_{i2}-t_{i3})^2} & \rho^{(t_{i2}-t_{i4})^2}\\
+\rho^{(t_{i3}-t_{i1})^2} & \rho^{(t_{i3}-t_{i2})^2} & 1 & \rho^{(t_{i3}-t_{i4})^2}\\
+\rho^{(t_{i4}-t_{i1})^2} & \rho^{(t_{i4}-t_{i2})^2} & \rho^{(t_{i4}-t_{i3})^2} & 1\\
+\end{array}
+\right)
+$$
 :::
 
-## Add Correlation Matrix
+::: fragment
+$$
+\boldsymbol \Lambda_i  = \left(\begin{array}{cccc}
+1 & \rho^{|t_{i1}-t_{i2}|} & \rho^{|t_{i1}-t_{i3}|} & \rho^{|t_{i1}-t_{i4}|}\\
+\rho^{|t_{i2}-t_{i1}|} & 1 & \rho^{|t_{i2}-t_{i3}|} & \rho^{|t_{i2}-t_{i4}|}\\
+\rho^{|t_{i3}-t_{i1}|} & \rho^{|t_{i3}-t_{i2}|} & 1 & \rho^{|t_{i3}-t_{i4}|}\\
+\rho^{|t_{i4}-t_{i1}|} & \rho^{|t_{i4}-t_{i2}|} & \rho^{|t_{i4}-t_{i3}|} & 1\\
+\end{array}
+\right)
+$$
+:::
+
+::: fragment
+$$
+\rho \in (-1, 1)
+$$
+:::
+
+## Final Model (for real, for now)
+
+$$
+\boldsymbol Y_i \sim N_4(\boldsymbol \mu_i, \boldsymbol \Sigma)
+$$
 
 ## Accounted Variation
 
@@ -337,14 +569,12 @@ df <- tibble(group = c("Measurement",
                        "Evolutionary",
                        "Time",
                        "Other"),
-             y = c(33, 16, 25, 5, 12, 9))
+             y = c(35, 20, 26, 5, 12, 2))
 ggplot(df, aes(fill=group, x = "", y = y)) + geom_bar(position = "stack", stat = "identity") + theme_void() +
   theme(legend.title = element_blank(),
         legend.position = "bottom",
         legend.text = element_text(size = 48))
 ```
-
-## Final Model (for real, for now)
 
 # Bayesian Models
 
@@ -354,13 +584,124 @@ ggplot(df, aes(fill=group, x = "", y = y)) + geom_bar(position = "stack", stat =
 
 ## Estimation
 
-# Markov Chains Monte Carlo Methods {#sec-markov-chains--monte-carlo-methods}
+# 
+
+::: columns
+::: {.column width="50%"}
+::: {style="font-size: 60px; padding: 120px 0;"}
+**Markov Chain Monte Carlo Methods**
+:::
+:::
+
+::: {.column width="50%"}
+![](https://media.tenor.com/x5dpKrM1U6oAAAAd/vamonos-lets-go.gif)
+:::
+:::
 
 ## MCMC Methods
 
-![](https://assets3.thrillist.com/v1/image/2624434/792x456/scale;webp=auto;jpeg_quality=60;progressive.jpg){fig-align="center"}
-
 ## Markov Chain
+
+::: columns
+::: {.column width="50%"}
+:::
+
+::: {.column width="50%"}
+:::
+:::
+
+## Markov Kernel
+
+::: columns
+::: {.column width="50%"}
+::: incremental
+-   A Markov kernel provides the probability of going to another state, given the current state
+
+-   Also known a transition matrix
+:::
+:::
+
+::: {.column width="50%"}
+::: fragement
+```{r}
+#| echo: false
+
+df1 <- data.frame(x = c(0,2,4),
+                 y = c(1,3,1),
+                 image = c("lil_bub", 
+                           "maru", 
+                           "grumpy"))
+
+ggplot() + theme_void() +
+  geom_cat(aes(x, y, cat = image), df1, size = 8) +
+  ylim(c(0,4.5)) +
+  xlim(c(-1,5)) +
+  geom_curve(aes(x = -.25, y = 1.6, xend = 1, yend = 2.9),
+             arrow = arrow(length = unit(0.03, "npc"), type="closed"), 
+             colour = "#EC7014", size = 3, curvature = -0.5, angle = 90) +
+  geom_curve(aes(x = 4.5, y = 1.5, xend = 3.1, yend = 3.2),
+             arrow = arrow(length = unit(0.03, "npc"), type="closed"), 
+             colour = "#EC7014", size = 3, curvature = 0.5, angle = 90) +
+  geom_curve(aes(x = 2.8, y = 3.3, xend = 1.9, yend = 3.5),
+             arrow = arrow(length = unit(0.03, "npc"), type="closed"), 
+             colour = "#EC7014", size = 3, curvature = 2, angle = 70) +
+  geom_curve(aes(x = 2.3, y = 2.3, xend = 3.2, yend = 1.3),
+             arrow = arrow(length = unit(0.03, "npc"), type="closed"), 
+             colour = "navy", size = 3, curvature = .5, angle = 90) +
+  geom_curve(aes(x = 3.2, y = 1, xend = 0.8, yend = 1),
+             arrow = arrow(length = unit(0.03, "npc"), type="closed"), 
+             colour = "forestgreen", size = 3, curvature = .2, angle = 90) +
+  geom_curve(aes(x = 0.8, y = 0.6, xend = 3.1, yend = 0.7),
+             arrow = arrow(length = unit(0.03, "npc"), type="closed"), 
+             colour = "navy", size = 3, curvature = .2, angle = 90) +
+  geom_curve(aes(x = 1.3, y = 2.4, xend = 0.9, yend = 1.4),
+             arrow = arrow(length = unit(0.03, "npc"), type="closed"), 
+             colour = "forestgreen", size = 3, curvature = -.3, angle = 90)
+
+
+
+```
+:::
+:::
+:::
+
+## Stationary (limiting) distribution
+
+::: columns
+::: {.column width="50%"}
+### Conditions
+
+::: incremental
+-   *Irreducibility:* The kernel allows for free movement of all the state space
+
+-   *Recurrent:* The chain will return to any nonnegligible set an infinite number of times
+
+-   *Aperiodic:* The chain can return to any state immediately
+:::
+:::
+
+::: {.column width="50%"}
+### Resulting
+
+::: incremental
+-   $X^{(t)}\rightarrow X$
+
+    -   Regardless of $X^{(0)}$
+
+-   $X \sim f$
+
+    -   $f$: is a distribution function
+
+-   $\frac{1}{T}\sum_{t=1}^{T} h\{X^{(t)}\} \rightarrow E_f\{h(X)\}$
+
+    -   $h$: any integrable function
+
+    -   by Law of Large Numbers
+
+    -   known as Ergodic Theorem
+:::
+:::
+:::
 
 ## Markov Chains Monte Carlo
 

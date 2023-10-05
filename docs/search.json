@@ -508,14 +508,14 @@
     "href": "pres/ci_f23/10_09.html#predictors-x",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Predictors (X)",
-    "text": "Predictors (X)\n\nExperimental Variable\n\nFlea Collar\n\nAlertness\nHair Coat\nHeart Rate\nTime"
+    "text": "Predictors (X)\n\nExperimental Variable\n\nFlea Collar\n\nAlertness\nHair Coat\nTime"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#model",
     "href": "pres/ci_f23/10_09.html#model",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Model",
-    "text": "Model\n\\[\nY = \\boldsymbol X^\\mathrm T\\boldsymbol \\beta + \\varepsilon\n\\]\n\n\\(Y\\): Outcome of Interest\n\\(\\boldsymbol X = (1, X_1, X_2, X_3, X_4)^\\mathrm T\\): Predictor Variables\n\\(\\boldsymbol \\beta=(\\beta_0, \\beta_1, \\beta_2, \\beta_3, \\beta_4)^\\mathrm T\\): Regression Coefficients\n\n\nFit with Linear Regression"
+    "text": "Model\n\\[\nY = \\boldsymbol X^\\mathrm T\\boldsymbol \\beta + \\varepsilon\n\\]\n\n\\(Y\\): Outcome of Interest\n\\(\\boldsymbol X = (1, t, X_1, X_2, X_3)^\\mathrm T\\): Predictor Variables\n\\(\\boldsymbol \\beta=(\\beta_0, \\beta_1, \\beta_2, \\beta_3, \\beta_4)^\\mathrm T\\): Regression Coefficients\n\\(\\varepsilon \\sim N(0, \\sigma^2)\\)\n\n\nFit with Linear Regression"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#linear-regression-assumptions",
@@ -567,11 +567,11 @@
     "text": "Longitudinal Measurements"
   },
   {
-    "objectID": "pres/ci_f23/10_09.html#model-1",
-    "href": "pres/ci_f23/10_09.html#model-1",
+    "objectID": "pres/ci_f23/10_09.html#original-model",
+    "href": "pres/ci_f23/10_09.html#original-model",
     "title": "Bayesian Mixed Effects Models and Cats",
-    "section": "Model",
-    "text": "Model"
+    "section": "Original Model",
+    "text": "Original Model\n\\[\nY_{k} = \\boldsymbol X_{k}^\\mathrm T\\boldsymbol \\beta + \\varepsilon_{k}\n\\]\n\n\\(k = 1, \\ldots, N\\)\n\\(N\\): Number of all observations\n\\(Y_{k}\\): Outcome of Interest\n\\(\\boldsymbol X_{k} = (1, t_{k}, X_{k1}, X_{k2}, X_{k3})^\\mathrm T\\): Predictor Variables\n\\(\\boldsymbol \\beta=(\\beta_0, \\beta_1, \\beta_2, \\beta_3, \\beta_4)^\\mathrm T\\): Regression Coefficients\n\\(\\varepsilon_{k}\\sim N(0, \\sigma^2)\\): Error Term"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#multilevel-model-approach",
@@ -588,32 +588,60 @@
     "text": "Framework"
   },
   {
-    "objectID": "pres/ci_f23/10_09.html#a-linear-model",
-    "href": "pres/ci_f23/10_09.html#a-linear-model",
+    "objectID": "pres/ci_f23/10_09.html#multilevel-model",
+    "href": "pres/ci_f23/10_09.html#multilevel-model",
     "title": "Bayesian Mixed Effects Models and Cats",
-    "section": "A Linear Model",
-    "text": "A Linear Model"
+    "section": "Multilevel Model",
+    "text": "Multilevel Model"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#a-linear-model-w-repeated-measurements",
+    "href": "pres/ci_f23/10_09.html#a-linear-model-w-repeated-measurements",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "A Linear Model w/ Repeated Measurements",
+    "text": "A Linear Model w/ Repeated Measurements\n\\[\nY_{ij} = \\boldsymbol X_{ij}^\\mathrm T\\boldsymbol \\beta + \\varepsilon_{ij}\n\\]\n\n\\(Y_{ij}=Y_i(t_{ij})\\): Outcome of Interest\n\\(\\boldsymbol X_{ij} = (1, t_{ij}, X_{ij1}, X_{ij2}, X_{ij3})^\\mathrm T\\): Predictor Variables\n\\(\\boldsymbol \\beta=(\\beta_0, \\beta_1, \\beta_2, \\beta_3, \\beta_4)^\\mathrm T\\): Regression Coefficients\n\\(\\varepsilon_{ij}\\sim N(0, \\sigma^2)\\): Error Term"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#animal-specific-random-effects",
+    "href": "pres/ci_f23/10_09.html#animal-specific-random-effects",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Animal-Specific Random Effects",
+    "text": "Animal-Specific Random Effects\n\\[\n\\boldsymbol b_i = (b_{i0}, b_{i1})^\\mathrm T \\sim N_2(\\boldsymbol 0, \\boldsymbol \\Sigma_b)\n\\]\n\n\nMean Vector\n\\[\n\\boldsymbol 0 = \\left(\\begin{array}{c}\n0 \\\\\n0\n\\end{array}\n\\right)\n\\]\n\nCovariance Matrix\n\\[\n\\boldsymbol \\Sigma_b = \\left(\\begin{array}{cc}\n\\sigma_{b0}^2 & \\sigma_{b01} \\\\\n\\sigma_{b01} & \\sigma_{b1}^2\n\\end{array}\n\\right)\n\\]"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#add-animal-specific-random-effects",
     "href": "pres/ci_f23/10_09.html#add-animal-specific-random-effects",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Add Animal-Specific Random Effects",
-    "text": "Add Animal-Specific Random Effects"
+    "text": "Add Animal-Specific Random Effects\n\\[\nY_{ij} = \\boldsymbol X_{ij}^\\mathrm T\\boldsymbol \\beta + b_{i0} + t_{ij} b_{i1} + \\varepsilon_{ij}\n\\]\n\n\n\n\\(Y_{ij}=Y_i(t_{ij})\\): Outcome of Interest\n\\(\\boldsymbol X_{ij} = (1, t_{ij}, X_{ij1}, X_{ij2}, X_{ij3})^\\mathrm T\\): Predictor Variables\n\\(\\boldsymbol \\beta=(\\beta_0, \\beta_1, \\beta_2, \\beta_3, \\beta_4)^\\mathrm T\\): Regression Coefficients\n\\(\\varepsilon_{ij}\\sim N(0, \\sigma^2)\\): Error Term\n\n\n\n\\(\\boldsymbol b_i = (b_{i0}, b_{i1})^\\mathrm T \\sim N_2(\\boldsymbol 0, \\boldsymbol \\Sigma_b)\\)"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#environmental-specific-random-effects",
+    "href": "pres/ci_f23/10_09.html#environmental-specific-random-effects",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Environmental-Specific Random Effects",
+    "text": "Environmental-Specific Random Effects\n\\[\n\\boldsymbol b_i = (b_{i0}, b_{i1})^\\mathrm T \\sim N_2(\\boldsymbol 0, \\boldsymbol \\Sigma_b)\n\\]\n\n\nMean Vector\n\\[\n\\boldsymbol 0 = \\left(\\begin{array}{c}\n0 \\\\\n0\n\\end{array}\n\\right)\n\\]\n\nCovariance Matrix\n\\[\n\\boldsymbol \\Sigma_b = \\left(\\begin{array}{cc}\n\\sigma_{b0}^2 & \\sigma_{b01} \\\\\n\\sigma_{b01} & \\sigma_{b1}^2\n\\end{array}\n\\right)\n\\]"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#add-environmental-specific-random-effects",
     "href": "pres/ci_f23/10_09.html#add-environmental-specific-random-effects",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Add Environmental-Specific Random Effects",
-    "text": "Add Environmental-Specific Random Effects"
+    "text": "Add Environmental-Specific Random Effects\n\\[\nY_{ij} = \\boldsymbol X_{ij}^\\mathrm T\\boldsymbol \\beta + b_{i0} + t_{ij} b_{i1} + b_{env(i)} +  \\varepsilon_{ij}\n\\]\n\n\n\n\\(Y_{ij}=Y_i(t_{ij})\\)\n\\(\\boldsymbol X_{ij} = (1, t_{ij}, X_{ij1}, X_{ij2}, X_{ij3})^\\mathrm T\\)\n\\(\\boldsymbol \\beta=(\\beta_0, \\beta_1, \\beta_2, \\beta_3, \\beta_4)^\\mathrm T\\)\n\\(\\varepsilon_{ij}\\sim N(0, \\sigma^2)\\)\n\n\n\n\\(\\boldsymbol b_i = (b_{i0}, b_{i1})^\\mathrm T \\sim N_2(\\boldsymbol 0, \\boldsymbol \\Sigma_b)\\)\n\\(b_{env(i)} \\in \\boldsymbol b_{env}=(b_{in}, b_{bw}, b_{out})^\\mathrm T\\)\n\\(\\boldsymbol b_{env} \\sim N_3(\\boldsymbol 0, \\sigma^2_{env} \\boldsymbol I_3)\\)"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#species-random-effects",
+    "href": "pres/ci_f23/10_09.html#species-random-effects",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Species Random Effects",
+    "text": "Species Random Effects\n\\[\n\\boldsymbol b_i = (b_{i0}, b_{i1})^\\mathrm T \\sim N_2(\\boldsymbol 0, \\boldsymbol \\Sigma_b)\n\\]\n\n\nMean Vector\n\\[\n\\boldsymbol 0 = \\left(\\begin{array}{c}\n0 \\\\\n0 \\\\\n0\n\\end{array}\n\\right)\n\\]\n\nCovariance Matrix\n\\[\n\\boldsymbol \\Sigma_b = \\left(\\begin{array}{cc}\n\\sigma_{c}^2 & \\sigma_{cs} & \\sigma_{cm}\\\\\n\\sigma_{sc} & \\sigma_{s}^2 & \\sigma_{sm} \\\\\n\\sigma_{mc} & \\sigma_{ms} & \\sigma_{m}^2 \\\\\n\\end{array}\n\\right)\n\\]"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#add-species-random-effects",
     "href": "pres/ci_f23/10_09.html#add-species-random-effects",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Add Species Random Effects",
-    "text": "Add Species Random Effects"
+    "text": "Add Species Random Effects\n\\[\nY_{ij} = \\boldsymbol X_{ij}^\\mathrm T\\boldsymbol \\beta + b_{i0} + t_{ij} b_{i1} + b_{env(i)} + b_{evo(i)} + \\varepsilon_{ij}\n\\]\n\n\n\n\\(Y_{ij}=Y_i(t_{ij})\\)\n\\(\\boldsymbol X_{ij} = (1, t_{ij}, X_{ij1}, X_{ij2}, X_{ij3})^\\mathrm T\\)\n\\(\\boldsymbol \\beta=(\\beta_0, \\beta_1, \\beta_2, \\beta_3, \\beta_4)^\\mathrm T\\)\n\\(\\varepsilon_{ij}\\sim N(0, \\sigma^2)\\)\n\n\n\n\\(\\boldsymbol b_i = (b_{i0}, b_{i1})^\\mathrm T \\sim N_2(\\boldsymbol 0, \\boldsymbol \\Sigma_b)\\)\n\\(b_{env(i)} \\in \\boldsymbol b_{env}=(b_{in}, b_{bw}, b_{out})^\\mathrm T\\)\n\\(\\boldsymbol b_{env} \\sim N_3(\\boldsymbol 0, \\sigma^2_{env} \\boldsymbol I_3)\\)\n\\(b_{evo(i)} \\in \\boldsymbol b_{env}=(b_{cat}, b_{sil}, b_{mar})^\\mathrm T\\)\n\\(\\boldsymbol b_{evo} \\sim N_3(\\boldsymbol 0, \\boldsymbol \\Sigma_{evo})\\)"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#final-model",
@@ -634,14 +662,21 @@
     "href": "pres/ci_f23/10_09.html#me-1",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Me …",
-    "text": "Me …\n\n\n\n\nWe Must Use Random Effects\nWe Must Use a Bayesian Approach\n\n\n\n\n\n\n\n\n\n\n\nI didn’t want to do the math!"
+    "text": "Me …\n\n\n\n\nWe Must Use Random Effects\nWe Must Use a Bayesian Approach"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#add-correlation-matrix",
     "href": "pres/ci_f23/10_09.html#add-correlation-matrix",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Add Correlation Matrix",
-    "text": "Add Correlation Matrix"
+    "text": "Add Correlation Matrix\n\\[\n\\widehat{\\mathrm{cov}}( \\boldsymbol Y_i) = \\boldsymbol \\Sigma_i = \\sigma^2 \\boldsymbol \\Lambda_i\n\\]\n\n\\[\n\\boldsymbol \\Lambda_i  = \\left(\\begin{array}{cccc}\n1 & \\rho^{(t_{i1}-t_{i2})^2} & \\rho^{(t_{i1}-t_{i3})^2} & \\rho^{(t_{i1}-t_{i4})^2}\\\\\n\\rho^{(t_{i2}-t_{i1})^2} & 1 & \\rho^{(t_{i2}-t_{i3})^2} & \\rho^{(t_{i2}-t_{i4})^2}\\\\\n\\rho^{(t_{i3}-t_{i1})^2} & \\rho^{(t_{i3}-t_{i2})^2} & 1 & \\rho^{(t_{i3}-t_{i4})^2}\\\\\n\\rho^{(t_{i4}-t_{i1})^2} & \\rho^{(t_{i4}-t_{i2})^2} & \\rho^{(t_{i4}-t_{i3})^2} & 1\\\\\n\\end{array}\n\\right)\n\\]\n\n\n\\[\n\\boldsymbol \\Lambda_i  = \\left(\\begin{array}{cccc}\n1 & \\rho^{|t_{i1}-t_{i2}|} & \\rho^{|t_{i1}-t_{i3}|} & \\rho^{|t_{i1}-t_{i4}|}\\\\\n\\rho^{|t_{i2}-t_{i1}|} & 1 & \\rho^{|t_{i2}-t_{i3}|} & \\rho^{|t_{i2}-t_{i4}|}\\\\\n\\rho^{|t_{i3}-t_{i1}|} & \\rho^{|t_{i3}-t_{i2}|} & 1 & \\rho^{|t_{i3}-t_{i4}|}\\\\\n\\rho^{|t_{i4}-t_{i1}|} & \\rho^{|t_{i4}-t_{i2}|} & \\rho^{|t_{i4}-t_{i3}|} & 1\\\\\n\\end{array}\n\\right)\n\\]\n\n\n\\[\n\\rho \\in (-1, 1)\n\\]"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#final-model-for-real-for-now",
+    "href": "pres/ci_f23/10_09.html#final-model-for-real-for-now",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Final Model (for real, for now)",
+    "text": "Final Model (for real, for now)\n\\[\n\\boldsymbol Y_i \\sim N_4(\\boldsymbol \\mu_i, \\boldsymbol \\Sigma)\n\\]"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#accounted-variation",
@@ -649,13 +684,6 @@
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Accounted Variation",
     "text": "Accounted Variation"
-  },
-  {
-    "objectID": "pres/ci_f23/10_09.html#final-model-for-real-for-now",
-    "href": "pres/ci_f23/10_09.html#final-model-for-real-for-now",
-    "title": "Bayesian Mixed Effects Models and Cats",
-    "section": "Final Model (for real, for now)",
-    "text": "Final Model (for real, for now)"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#likelihood-function",
@@ -691,6 +719,20 @@
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Markov Chain",
     "text": "Markov Chain"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#markov-kernel",
+    "href": "pres/ci_f23/10_09.html#markov-kernel",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Markov Kernel",
+    "text": "Markov Kernel\n\n\n\n\nA Markov kernel provides the probability of going to another state, given the current state\nAlso known a transition matrix"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#stationary-limiting-distribution",
+    "href": "pres/ci_f23/10_09.html#stationary-limiting-distribution",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Stationary (limiting) distribution",
+    "text": "Stationary (limiting) distribution\n\n\nConditions\n\n\nIrreducibility: The kernel allows for free movement of all the state space\nRecurrent: The chain will return to any nonnegligible set an infinite number of times\nAperiodic: The chain can return to any state immediately\n\n\n\nResulting\n\n\n\\(X^{(t)}\\rightarrow X\\)\n\nRegardless of \\(X^{(0)}\\)\n\n\\(X \\sim f\\)\n\n\\(f\\): is a distribution function\n\n\\(\\frac{1}{T}\\sum_{t=1}^{T} h\\{X^{(t)}\\} \\rightarrow E_f\\{h(X)\\}\\)\n\n\\(h\\): any integrable function\nby Law of Large Numbers\nknown as Ergodic Theorem"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#markov-chains-monte-carlo",
@@ -872,7 +914,7 @@
     "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
     "title": "RcppArmadillo",
     "section": "Using RcppArmadillo",
-    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.01713471\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.01713471\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.31µs   3.52µs   268659.        0B        0\n2 mean_cpp(Y)   1.86µs   2.83µs   370597.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
+    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] -0.03535993\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] -0.03535993\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.26µs   3.47µs   268781.        0B        0\n2 mean_cpp(Y)   1.83µs   2.79µs   367456.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
   },
   {
     "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",

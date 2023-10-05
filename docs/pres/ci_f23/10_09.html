@@ -31,6 +31,7 @@
     }
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="styles.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -327,7 +328,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Bayesian Mixed Effects Models and Cats</h1>
-  <p class="subtitle">Analysis for Evolutionary Biology Data</p>
+  <p class="subtitle">Analysis of Evolutionary Biological Data</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -391,7 +392,6 @@ Isaac Quintanilla Salinas
 </ul></li>
 <li>Alertness</li>
 <li>Hair Coat</li>
-<li>Heart Rate</li>
 <li>Time</li>
 </ul>
 </section>
@@ -402,8 +402,9 @@ Y = \boldsymbol X^\mathrm T\boldsymbol \beta + \varepsilon
 \]</span></p>
 <ul>
 <li><p><span class="math inline">\(Y\)</span>: Outcome of Interest</p></li>
-<li><p><span class="math inline">\(\boldsymbol X = (1, X_1, X_2, X_3, X_4)^\mathrm T\)</span>: Predictor Variables</p></li>
+<li><p><span class="math inline">\(\boldsymbol X = (1, t, X_1, X_2, X_3)^\mathrm T\)</span>: Predictor Variables</p></li>
 <li><p><span class="math inline">\(\boldsymbol \beta=(\beta_0, \beta_1, \beta_2, \beta_3, \beta_4)^\mathrm T\)</span>: Regression Coefficients</p></li>
+<li><p><span class="math inline">\(\varepsilon \sim N(0, \sigma^2)\)</span></p></li>
 </ul>
 <div class="fragment">
 <p><strong>Fit with Linear Regression</strong></p>
@@ -504,8 +505,19 @@ Y = \boldsymbol X^\mathrm T\boldsymbol \beta + \varepsilon
 <h1>Models</h1>
 
 </section>
-<section id="model-1" class="slide level2">
-<h2>Model</h2>
+<section id="original-model" class="slide level2">
+<h2>Original Model</h2>
+<p><span class="math display">\[
+Y_{k} = \boldsymbol X_{k}^\mathrm T\boldsymbol \beta + \varepsilon_{k}
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(k = 1, \ldots, N\)</span></p></li>
+<li><p><span class="math inline">\(N\)</span>: Number of all observations</p></li>
+<li><p><span class="math inline">\(Y_{k}\)</span>: Outcome of Interest</p></li>
+<li><p><span class="math inline">\(\boldsymbol X_{k} = (1, t_{k}, X_{k1}, X_{k2}, X_{k3})^\mathrm T\)</span>: Predictor Variables</p></li>
+<li><p><span class="math inline">\(\boldsymbol \beta=(\beta_0, \beta_1, \beta_2, \beta_3, \beta_4)^\mathrm T\)</span>: Regression Coefficients</p></li>
+<li><p><span class="math inline">\(\varepsilon_{k}\sim N(0, \sigma^2)\)</span>: Error Term</p></li>
+</ul>
 </section>
 <section id="multilevel-model-approach" class="slide level2">
 <h2>Multilevel Model Approach</h2>
@@ -514,17 +526,169 @@ Y = \boldsymbol X^\mathrm T\boldsymbol \beta + \varepsilon
 <h2>Framework</h2>
 
 <img data-src="10_09_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
-<section id="a-linear-model" class="slide level2">
-<h2>A Linear Model</h2>
+<section id="multilevel-model" class="slide level2">
+<h2>Multilevel Model</h2>
+</section>
+<section id="a-linear-model-w-repeated-measurements" class="slide level2">
+<h2>A Linear Model w/ Repeated Measurements</h2>
+<p><span class="math display">\[
+Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + \varepsilon_{ij}
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(Y_{ij}=Y_i(t_{ij})\)</span>: Outcome of Interest</p></li>
+<li><p><span class="math inline">\(\boldsymbol X_{ij} = (1, t_{ij}, X_{ij1}, X_{ij2}, X_{ij3})^\mathrm T\)</span>: Predictor Variables</p></li>
+<li><p><span class="math inline">\(\boldsymbol \beta=(\beta_0, \beta_1, \beta_2, \beta_3, \beta_4)^\mathrm T\)</span>: Regression Coefficients</p></li>
+<li><p><span class="math inline">\(\varepsilon_{ij}\sim N(0, \sigma^2)\)</span>: Error Term</p></li>
+</ul>
+</section>
+<section id="animal-specific-random-effects" class="slide level2">
+<h2>Animal-Specific Random Effects</h2>
+<p><span class="math display">\[
+\boldsymbol b_i = (b_{i0}, b_{i1})^\mathrm T \sim N_2(\boldsymbol 0, \boldsymbol \Sigma_b)
+\]</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="mean-vector">Mean Vector</h3>
+<p><span class="math display">\[
+\boldsymbol 0 = \left(\begin{array}{c}
+0 \\
+0
+\end{array}
+\right)
+\]</span></p>
+</div><div class="column" style="width:50%;">
+<h3 id="covariance-matrix">Covariance Matrix</h3>
+<p><span class="math display">\[
+\boldsymbol \Sigma_b = \left(\begin{array}{cc}
+\sigma_{b0}^2 &amp; \sigma_{b01} \\
+\sigma_{b01} &amp; \sigma_{b1}^2
+\end{array}
+\right)
+\]</span></p>
+</div>
+</div>
 </section>
 <section id="add-animal-specific-random-effects" class="slide level2">
 <h2>Add Animal-Specific Random Effects</h2>
+<p><span class="math display">\[
+Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} + \varepsilon_{ij}
+\]</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p><span class="math inline">\(Y_{ij}=Y_i(t_{ij})\)</span>: Outcome of Interest</p></li>
+<li><p><span class="math inline">\(\boldsymbol X_{ij} = (1, t_{ij}, X_{ij1}, X_{ij2}, X_{ij3})^\mathrm T\)</span>: Predictor Variables</p></li>
+<li><p><span class="math inline">\(\boldsymbol \beta=(\beta_0, \beta_1, \beta_2, \beta_3, \beta_4)^\mathrm T\)</span>: Regression Coefficients</p></li>
+<li><p><span class="math inline">\(\varepsilon_{ij}\sim N(0, \sigma^2)\)</span>: Error Term</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><span class="math inline">\(\boldsymbol b_i = (b_{i0}, b_{i1})^\mathrm T \sim N_2(\boldsymbol 0, \boldsymbol \Sigma_b)\)</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="environmental-specific-random-effects" class="slide level2">
+<h2>Environmental-Specific Random Effects</h2>
+<p><span class="math display">\[
+\boldsymbol b_i = (b_{i0}, b_{i1})^\mathrm T \sim N_2(\boldsymbol 0, \boldsymbol \Sigma_b)
+\]</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="mean-vector-1">Mean Vector</h3>
+<p><span class="math display">\[
+\boldsymbol 0 = \left(\begin{array}{c}
+0 \\
+0
+\end{array}
+\right)
+\]</span></p>
+</div><div class="column" style="width:50%;">
+<h3 id="covariance-matrix-1">Covariance Matrix</h3>
+<p><span class="math display">\[
+\boldsymbol \Sigma_b = \left(\begin{array}{cc}
+\sigma_{b0}^2 &amp; \sigma_{b01} \\
+\sigma_{b01} &amp; \sigma_{b1}^2
+\end{array}
+\right)
+\]</span></p>
+</div>
+</div>
 </section>
 <section id="add-environmental-specific-random-effects" class="slide level2">
 <h2>Add Environmental-Specific Random Effects</h2>
+<p><span class="math display">\[
+Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} + b_{env(i)} +  \varepsilon_{ij}
+\]</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p><span class="math inline">\(Y_{ij}=Y_i(t_{ij})\)</span></p></li>
+<li><p><span class="math inline">\(\boldsymbol X_{ij} = (1, t_{ij}, X_{ij1}, X_{ij2}, X_{ij3})^\mathrm T\)</span></p></li>
+<li><p><span class="math inline">\(\boldsymbol \beta=(\beta_0, \beta_1, \beta_2, \beta_3, \beta_4)^\mathrm T\)</span></p></li>
+<li><p><span class="math inline">\(\varepsilon_{ij}\sim N(0, \sigma^2)\)</span></p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><span class="math inline">\(\boldsymbol b_i = (b_{i0}, b_{i1})^\mathrm T \sim N_2(\boldsymbol 0, \boldsymbol \Sigma_b)\)</span></li>
+<li><span class="math inline">\(b_{env(i)} \in \boldsymbol b_{env}=(b_{in}, b_{bw}, b_{out})^\mathrm T\)</span></li>
+<li><span class="math inline">\(\boldsymbol b_{env} \sim N_3(\boldsymbol 0, \sigma^2_{env} \boldsymbol I_3)\)</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="species-random-effects" class="slide level2">
+<h2>Species Random Effects</h2>
+<p><span class="math display">\[
+\boldsymbol b_i = (b_{i0}, b_{i1})^\mathrm T \sim N_2(\boldsymbol 0, \boldsymbol \Sigma_b)
+\]</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="mean-vector-2">Mean Vector</h3>
+<p><span class="math display">\[
+\boldsymbol 0 = \left(\begin{array}{c}
+0 \\
+0 \\
+0
+\end{array}
+\right)
+\]</span></p>
+</div><div class="column" style="width:50%;">
+<h3 id="covariance-matrix-2">Covariance Matrix</h3>
+<p><span class="math display">\[
+\boldsymbol \Sigma_b = \left(\begin{array}{cc}
+\sigma_{c}^2 &amp; \sigma_{cs} &amp; \sigma_{cm}\\
+\sigma_{sc} &amp; \sigma_{s}^2 &amp; \sigma_{sm} \\
+\sigma_{mc} &amp; \sigma_{ms} &amp; \sigma_{m}^2 \\
+\end{array}
+\right)
+\]</span></p>
+</div>
+</div>
 </section>
 <section id="add-species-random-effects" class="slide level2">
 <h2>Add Species Random Effects</h2>
+<p><span class="math display">\[
+Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} + b_{env(i)} + b_{evo(i)} + \varepsilon_{ij}
+\]</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p><span class="math inline">\(Y_{ij}=Y_i(t_{ij})\)</span></p></li>
+<li><p><span class="math inline">\(\boldsymbol X_{ij} = (1, t_{ij}, X_{ij1}, X_{ij2}, X_{ij3})^\mathrm T\)</span></p></li>
+<li><p><span class="math inline">\(\boldsymbol \beta=(\beta_0, \beta_1, \beta_2, \beta_3, \beta_4)^\mathrm T\)</span></p></li>
+<li><p><span class="math inline">\(\varepsilon_{ij}\sim N(0, \sigma^2)\)</span></p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><span class="math inline">\(\boldsymbol b_i = (b_{i0}, b_{i1})^\mathrm T \sim N_2(\boldsymbol 0, \boldsymbol \Sigma_b)\)</span></li>
+<li><span class="math inline">\(b_{env(i)} \in \boldsymbol b_{env}=(b_{in}, b_{bw}, b_{out})^\mathrm T\)</span></li>
+<li><span class="math inline">\(\boldsymbol b_{env} \sim N_3(\boldsymbol 0, \sigma^2_{env} \boldsymbol I_3)\)</span></li>
+<li><span class="math inline">\(b_{evo(i)} \in \boldsymbol b_{env}=(b_{cat}, b_{sil}, b_{mar})^\mathrm T\)</span></li>
+<li><span class="math inline">\(\boldsymbol b_{evo} \sim N_3(\boldsymbol 0, \boldsymbol \Sigma_{evo})\)</span></li>
+</ul>
+</div>
+</div>
 </section>
 <section id="final-model" class="slide level2">
 <h2>Final Model?</h2>
@@ -551,20 +715,50 @@ Y = \boldsymbol X^\mathrm T\boldsymbol \beta + \varepsilon
 </div>
 </div>
 </div>
+</section>
+<section id="add-correlation-matrix" class="slide level2 smaller">
+<h2>Add Correlation Matrix</h2>
+<p><span class="math display">\[
+\widehat{\mathrm{cov}}( \boldsymbol Y_i) = \boldsymbol \Sigma_i = \sigma^2 \boldsymbol \Lambda_i
+\]</span></p>
 <div class="fragment">
-<p><strong>I didn’t want to do the math!</strong></p>
+<p><span class="math display">\[
+\boldsymbol \Lambda_i  = \left(\begin{array}{cccc}
+1 &amp; \rho^{(t_{i1}-t_{i2})^2} &amp; \rho^{(t_{i1}-t_{i3})^2} &amp; \rho^{(t_{i1}-t_{i4})^2}\\
+\rho^{(t_{i2}-t_{i1})^2} &amp; 1 &amp; \rho^{(t_{i2}-t_{i3})^2} &amp; \rho^{(t_{i2}-t_{i4})^2}\\
+\rho^{(t_{i3}-t_{i1})^2} &amp; \rho^{(t_{i3}-t_{i2})^2} &amp; 1 &amp; \rho^{(t_{i3}-t_{i4})^2}\\
+\rho^{(t_{i4}-t_{i1})^2} &amp; \rho^{(t_{i4}-t_{i2})^2} &amp; \rho^{(t_{i4}-t_{i3})^2} &amp; 1\\
+\end{array}
+\right)
+\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\boldsymbol \Lambda_i  = \left(\begin{array}{cccc}
+1 &amp; \rho^{|t_{i1}-t_{i2}|} &amp; \rho^{|t_{i1}-t_{i3}|} &amp; \rho^{|t_{i1}-t_{i4}|}\\
+\rho^{|t_{i2}-t_{i1}|} &amp; 1 &amp; \rho^{|t_{i2}-t_{i3}|} &amp; \rho^{|t_{i2}-t_{i4}|}\\
+\rho^{|t_{i3}-t_{i1}|} &amp; \rho^{|t_{i3}-t_{i2}|} &amp; 1 &amp; \rho^{|t_{i3}-t_{i4}|}\\
+\rho^{|t_{i4}-t_{i1}|} &amp; \rho^{|t_{i4}-t_{i2}|} &amp; \rho^{|t_{i4}-t_{i3}|} &amp; 1\\
+\end{array}
+\right)
+\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\rho \in (-1, 1)
+\]</span></p>
 </div>
 </section>
-<section id="add-correlation-matrix" class="slide level2">
-<h2>Add Correlation Matrix</h2>
+<section id="final-model-for-real-for-now" class="slide level2">
+<h2>Final Model (for real, for now)</h2>
+<p><span class="math display">\[
+\boldsymbol Y_i \sim N_4(\boldsymbol \mu_i, \boldsymbol \Sigma)
+\]</span></p>
 </section>
 <section id="accounted-variation" class="slide level2">
 <h2>Accounted Variation</h2>
 
-<img data-src="10_09_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
-<section id="final-model-for-real-for-now" class="slide level2">
-<h2>Final Model (for real, for now)</h2>
-</section></section>
+<img data-src="10_09_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section></section>
 <section>
 <section id="bayesian-models" class="title-slide slide level1 center">
 <h1>Bayesian Models</h1>
@@ -580,16 +774,86 @@ Y = \boldsymbol X^\mathrm T\boldsymbol \beta + \varepsilon
 <h2>Estimation</h2>
 </section></section>
 <section>
-<section id="sec-markov-chains--monte-carlo-methods" class="title-slide slide level1 center">
-<h1>Markov Chains Monte Carlo Methods</h1>
-
+<section id="section" class="title-slide slide level1 center">
+<h1></h1>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 60px; padding: 120px 0;">
+<p><strong>Markov Chain Monte Carlo Methods</strong></p>
+</div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="https://media.tenor.com/x5dpKrM1U6oAAAAd/vamonos-lets-go.gif"></p>
+</div>
+</div>
 </section>
 <section id="mcmc-methods" class="slide level2">
 <h2>MCMC Methods</h2>
-
-<img data-src="https://assets3.thrillist.com/v1/image/2624434/792x456/scale;webp=auto;jpeg_quality=60;progressive.jpg" class="r-stretch quarto-figure-center"></section>
+</section>
 <section id="markov-chain" class="slide level2">
 <h2>Markov Chain</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+
+</div><div class="column" style="width:50%;">
+
+</div>
+</div>
+</section>
+<section id="markov-kernel" class="slide level2">
+<h2>Markov Kernel</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div>
+<ul>
+<li class="fragment"><p>A Markov kernel provides the probability of going to another state, given the current state</p></li>
+<li class="fragment"><p>Also known a transition matrix</p></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragement">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="10_09_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="stationary-limiting-distribution" class="slide level2">
+<h2>Stationary (limiting) distribution</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="conditions">Conditions</h3>
+<div>
+<ul>
+<li class="fragment"><p><em>Irreducibility:</em> The kernel allows for free movement of all the state space</p></li>
+<li class="fragment"><p><em>Recurrent:</em> The chain will return to any nonnegligible set an infinite number of times</p></li>
+<li class="fragment"><p><em>Aperiodic:</em> The chain can return to any state immediately</p></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<h3 id="resulting">Resulting</h3>
+<div>
+<ul>
+<li class="fragment"><p><span class="math inline">\(X^{(t)}\rightarrow X\)</span></p>
+<ul>
+<li class="fragment">Regardless of <span class="math inline">\(X^{(0)}\)</span></li>
+</ul></li>
+<li class="fragment"><p><span class="math inline">\(X \sim f\)</span></p>
+<ul>
+<li class="fragment"><span class="math inline">\(f\)</span>: is a distribution function</li>
+</ul></li>
+<li class="fragment"><p><span class="math inline">\(\frac{1}{T}\sum_{t=1}^{T} h\{X^{(t)}\} \rightarrow E_f\{h(X)\}\)</span></p>
+<ul>
+<li class="fragment"><p><span class="math inline">\(h\)</span>: any integrable function</p></li>
+<li class="fragment"><p>by Law of Large Numbers</p></li>
+<li class="fragment"><p>known as Ergodic Theorem</p></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="markov-chains-monte-carlo" class="slide level2">
 <h2>Markov Chains Monte Carlo</h2>
