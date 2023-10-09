@@ -1249,3 +1249,7 @@ kubrick()
 save(res, "~/Dropbox/Machine/res/save.RData")
 
 ```
+
+## Thank You
+
+![](https://media.tenor.com/WjoUFaID8ScAAAAC/cat-cute.gif){fig-align="center"}
