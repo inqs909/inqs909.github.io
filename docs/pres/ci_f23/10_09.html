@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
   <link rel="stylesheet" href="styles.css">
@@ -340,9 +405,17 @@ Isaac Quintanilla Salinas
 
 </section>
 <section>
-<section id="motivation-semi-fake" class="title-slide slide level1 center">
-<h1>Motivation (Semi-Fake)</h1>
-
+<section id="section" class="title-slide slide level1 center">
+<h1></h1>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 60px; padding: 120px 0;">
+<p><strong>Motivation</strong></p>
+</div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="https://media.tenor.com/L8bcFLYjPhUAAAAd/parkour-cat.gif"></p>
+</div>
+</div>
 </section>
 <section id="san-bernardino-desert-only-real-part" class="slide level2">
 <h2>San Bernardino Desert (Only Real Part)</h2>
@@ -501,9 +574,17 @@ Y = \boldsymbol X^\mathrm T\boldsymbol \beta + \varepsilon
 
 <img data-src="10_09_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section></section>
 <section>
-<section id="models" class="title-slide slide level1 center">
-<h1>Models</h1>
-
+<section id="section-1" class="title-slide slide level1 center">
+<h1></h1>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 60px; padding: 120px 0;">
+<p><strong>Models</strong></p>
+</div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="https://media.tenor.com/ITQdqRCN-WQAAAAd/cat-cat-walk.gif"></p>
+</div>
+</div>
 </section>
 <section id="original-model" class="slide level2">
 <h2>Original Model</h2>
@@ -521,6 +602,13 @@ Y_{k} = \boldsymbol X_{k}^\mathrm T\boldsymbol \beta + \varepsilon_{k}
 </section>
 <section id="multilevel-model-approach" class="slide level2">
 <h2>Multilevel Model Approach</h2>
+<div>
+<ul>
+<li class="fragment">Different cats share characteristics that may introduce correlation</li>
+<li class="fragment">To account for the correlation, we will group cats based on the characteristics</li>
+<li class="fragment">Each group will get a set of random effects to induce the correlation</li>
+</ul>
+</div>
 </section>
 <section id="framework" class="slide level2">
 <h2>Framework</h2>
@@ -528,6 +616,14 @@ Y_{k} = \boldsymbol X_{k}^\mathrm T\boldsymbol \beta + \varepsilon_{k}
 <img data-src="10_09_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
 <section id="multilevel-model" class="slide level2">
 <h2>Multilevel Model</h2>
+<p><span class="math display">\[
+Y = \boldsymbol X^\mathrm T\boldsymbol \beta + b_i + b_j + b_k +\varepsilon
+\]</span></p>
+<ul>
+<li><p>Random Effects (RE) induce the correlation in the model</p></li>
+<li><p>Different RE can be used based on the grouping mechanism</p></li>
+<li><p>We assume RE groups are independent of each other</p></li>
+</ul>
 </section>
 <section id="a-linear-model-w-repeated-measurements" class="slide level2">
 <h2>A Linear Model w/ Repeated Measurements</h2>
@@ -754,27 +850,66 @@ Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} 
 <p><span class="math display">\[
 \boldsymbol Y_i \sim N_4(\boldsymbol \mu_i, \boldsymbol \Sigma)
 \]</span></p>
+<p><span class="math display">\[
+\mu_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + b_{env(i)} + b_{evo(i)} + \varepsilon_{ij}
+\]</span></p>
 </section>
 <section id="accounted-variation" class="slide level2">
 <h2>Accounted Variation</h2>
 
 <img data-src="10_09_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section></section>
 <section>
-<section id="bayesian-models" class="title-slide slide level1 center">
-<h1>Bayesian Models</h1>
-
+<section id="section-2" class="title-slide slide level1 center">
+<h1></h1>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 60px; padding: 120px 0;">
+<p><strong>Bayesian Models</strong></p>
+</div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="https://media.tenor.com/7lzxyYB36cIAAAAC/kittens-cute-kittens.gif"></p>
+</div>
+</div>
 </section>
 <section id="likelihood-function" class="slide level2">
 <h2>Likelihood Function</h2>
+<p><span class="math display">\[
+L(\boldsymbol \theta) \propto \prod_{i}f(\boldsymbol y_i|b_i,b_{evo(i)},b_{env(i)};\boldsymbol \theta)f(b_i;\boldsymbol \theta)f(\boldsymbol b_{evo};\boldsymbol \theta) f(\boldsymbol b_{env};\boldsymbol \theta)
+\]</span></p>
+<p><span class="math inline">\(\boldsymbol \theta:\)</span> all parameters involved in the model</p>
 </section>
 <section id="prior" class="slide level2">
 <h2>Prior</h2>
+<ul>
+<li><p><span class="math inline">\(\sigma^2\sim Gamma(\alpha_1, \beta_1)\)</span></p></li>
+<li><p><span class="math inline">\(\sigma^2_{env}\sim Gamma(\alpha_2, \beta_2)\)</span></p></li>
+<li><p><span class="math inline">\(\boldsymbol \beta \sim N_p(\boldsymbol 0, 10\boldsymbol I)\)</span></p></li>
+<li><p><span class="math inline">\(\rho \sim Unif(-1,1)\)</span></p></li>
+<li><p><span class="math inline">\(\Sigma_{evo}:\)</span> Obtained from evolutionary biology databases OR Wishart Distribution</p></li>
+<li><p><span class="math inline">\(f(\boldsymbol \theta) = f(\sigma^2)f(\sigma_{env}^2)f(\rho)f(\boldsymbol \beta)\)</span></p></li>
+</ul>
+</section>
+<section id="likelihood-x-prior" class="slide level2">
+<h2>Likelihood X Prior</h2>
+<p><span class="math display">\[
+L(\boldsymbol \theta) \times f(\boldsymbol \theta)
+\]</span></p>
+</section>
+<section id="posterior-distribution" class="slide level2">
+<h2>Posterior Distribution</h2>
+<p><span class="math display">\[
+f(\boldsymbol  \theta|\boldsymbol Y) \propto L(\boldsymbol\theta)f(\boldsymbol \theta)
+\]</span></p>
 </section>
 <section id="estimation" class="slide level2">
 <h2>Estimation</h2>
+<p>Estimating the parameter require us to obtain the joint posterior distribution.</p>
+<div class="fragment">
+<p>This is challenging since we do not know the normalizing constant</p>
+</div>
 </section></section>
 <section>
-<section id="section" class="title-slide slide level1 center">
+<section id="section-3" class="title-slide slide level1 center">
 <h1></h1>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -786,19 +921,25 @@ Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} 
 </div>
 </div>
 </section>
-<section id="mcmc-methods" class="slide level2">
-<h2>MCMC Methods</h2>
-</section>
-<section id="markov-chain" class="slide level2">
+<section id="markov-chain" class="slide level2 smaller">
 <h2>Markov Chain</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-
-</div><div class="column" style="width:50%;">
-
-</div>
+<div>
+<ul>
+<li class="fragment"><p>A Markov chain is a collection states of a certain phenomenom</p>
+<ul>
+<li class="fragment"><span class="math inline">\(X^{(0)},X^{(1)},X^{(2)},X^{(3)},X^{(4)},X^{(5)},X^{(6)},X^{(7)}, \cdots, X^{(k)}\)</span></li>
+</ul></li>
+<li class="fragment"><p>The changing of the state is only dependent on the current state, not the previous states</p>
+<ul>
+<li class="fragment"><span class="math inline">\(P\left\{X^{(k+1)}\boldsymbol{\Big|}X^{(k)},X^{(k-1)},X^{(k-2)},\ldots,X^{(1)},X^{(0)}\right\}=P\left\{X^{(k+1)}\boldsymbol{\Big |}X^{(k)}\right\}\)</span></li>
+</ul></li>
+</ul>
 </div>
 </section>
+<section id="cat-markov-chains" class="slide level2">
+<h2>Cat Markov Chains</h2>
+
+<img data-src="10_09_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
 <section id="markov-kernel" class="slide level2">
 <h2>Markov Kernel</h2>
 <div class="columns">
@@ -813,7 +954,7 @@ Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} 
 <div class="fragement">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="10_09_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+<p><img data-src="10_09_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -848,7 +989,6 @@ Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} 
 <ul>
 <li class="fragment"><p><span class="math inline">\(h\)</span>: any integrable function</p></li>
 <li class="fragment"><p>by Law of Large Numbers</p></li>
-<li class="fragment"><p>known as Ergodic Theorem</p></li>
 </ul></li>
 </ul>
 </div>
@@ -857,26 +997,356 @@ Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} 
 </section>
 <section id="markov-chains-monte-carlo" class="slide level2">
 <h2>Markov Chains Monte Carlo</h2>
+<div>
+<ul>
+<li class="fragment"><p>MCMC Methods are used to a distribution function that is not easily obtained.</p></li>
+<li class="fragment"><p>A Markov chain is contructed by simulating Monte Carlo Samples and accepted based on a certain criteria</p></li>
+<li class="fragment"><p>Based on the MCMC Central Limit Theorem, the Markov chain will construct a limiting distribution that is desired.</p></li>
+</ul>
+</div>
 </section>
 <section id="metropolis-hastings-algorithm" class="slide level2">
 <h2>Metropolis-Hastings Algorithm</h2>
+<ul>
+<li><p>The MH algorithm will generate target the distribution function <span class="math inline">\(f\)</span> a random variable</p></li>
+<li><p>The MH will generate a candidate from an easier distribution function <span class="math inline">\(g\)</span> for a Markov chain and accept it based on the Metropolis-Hastings Kernel</p></li>
+<li><p>With a large enough simulation, the resulting chain will have a limiting distribution of <span class="math inline">\(f\)</span></p></li>
+</ul>
 </section>
-<section id="gibbs-sampling" class="slide level2">
-<h2>Gibbs Sampling</h2>
+<section id="mh-algorithm" class="slide level2">
+<h2>MH Algorithm</h2>
+<p>Given <span class="math inline">\(x^{(t)}\)</span> and targeting <span class="math inline">\(f(x)\)</span></p>
+<ol type="1">
+<li>Generate <span class="math inline">\(y\sim g(y|x^{(t)})\)</span></li>
+<li><span class="math display">\[
+x^{(t+1)} =\left\{\begin{array}{cc}
+y &amp;\ \mathrm{with\ probability\ } q(x^{(t)}, y)\\
+x^{(t)} &amp; \mathrm{with\ probability\ } 1-q(x^{(t)}, y)
+\end{array}\right.
+\]</span></li>
+</ol>
+<p><span class="math display">\[
+q(x,y) = \min\left\{\frac{f(y)q(x|y)}{f(x)q(y|x)}\right\}
+\]</span></p>
+</section>
+<section id="gibbs-sampler" class="slide level2">
+<h2>Gibbs Sampler</h2>
+<ul>
+<li><p>A Gibbs sampler is an extension of many univariate MCMC techniques to multivariate analysis</p></li>
+<li><p>The goal of the sampler is to generate a Markov chain that targets a joint distribution function</p></li>
+<li><p>The Gibbs Sampler achieves this by sampling from the conditional densities of the joint distribution function</p></li>
+</ul>
+</section>
+<section id="gibbs-sampler-algorithm-for-trivariate-rv" class="slide level2">
+<h2>Gibbs Sampler Algorithm for Trivariate RV</h2>
+<p>Given <span class="math inline">\(x^{(t)}\)</span>, <span class="math inline">\(y^{(t)}\)</span>, and <span class="math inline">\(z^{(t)}\)</span>, we are targeting <span class="math inline">\(f(x,y,z)\)</span></p>
+<ol type="1">
+<li>Generate <span class="math inline">\(x^{(t+1)}\sim f(x|y^{(t)}, z^{(t)})\)</span></li>
+<li>Generate <span class="math inline">\(y^{(t+1)}\sim f(y|x^{(t+1)}, z^{(t)})\)</span></li>
+<li>Generate <span class="math inline">\(z^{(t+1)}\sim f(z|x^{(t+1)}, y^{(t+1)})\)</span></li>
+<li>Repeat previous until long enough chain is generated</li>
+</ol>
 </section>
 <section id="hamiltonian-monte-carlo" class="slide level2">
 <h2>Hamiltonian Monte Carlo</h2>
+<ul>
+<li><p>Hamiltonian Monte Carlo is a relatively new MCMC technique used to construct the target distribution</p></li>
+<li><p>It utilizes Hamiltonian dynamics to simulate the next random variable</p></li>
+<li><p>The random variable is the accepted based the MH probability</p></li>
+<li><p>Using Hamiltonian dyanmics improves the mixing properties of the chain and draws are more targeted to the desired distribution</p></li>
+</ul>
 </section></section>
 <section>
-<section id="simulation-study" class="title-slide slide level1 center">
-<h1>Simulation Study</h1>
-
+<section id="section-4" class="title-slide slide level1 center">
+<h1></h1>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 60px; padding: 120px 0;">
+<p><strong>Simulation Study</strong></p>
+</div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="https://media.tenor.com/NwY5ppxLs_oAAAAd/kitten-keybo.gif"></p>
+</div>
+</div>
+</section>
+<section id="simulation-parameters" class="slide level2">
+<h2>Simulation Parameters</h2>
+<ul>
+<li><p>300 Cats</p></li>
+<li><p>5 Environments</p></li>
+<li><p>3 Species</p></li>
+<li><p>4 Repeated Measurements</p></li>
+<li><p>6000 Data Points</p></li>
+</ul>
+</section>
+<section id="model-parameters" class="slide level2">
+<h2>Model Parameters</h2>
+<ul>
+<li><p><span class="math inline">\(b_i \sim N( 0, 0.8)\)</span></p></li>
+<li><p><span class="math inline">\(\boldsymbol b_{env} \sim N_5(\boldsymbol 0, 1.5 \boldsymbol I_5)\)</span></p></li>
+<li><p><span class="math inline">\(\boldsymbol b_{evo} \sim N_3(\boldsymbol 0, \boldsymbol \Sigma_{evo})\)</span></p></li>
+</ul>
+<p><span class="math display">\[
+\boldsymbol \Sigma_{evo} = \left(
+\begin{array}{ccc}
+1 &amp; 0.8 &amp; 0.1\\
+0.8 &amp; 1.3 &amp; 0.43 \\
+0.1 &amp; 0.43 &amp; 1.9
+\end{array}
+\right)
+\]</span></p>
+</section>
+<section id="simulation-model" class="slide level2">
+<h2>Simulation Model</h2>
+<p><span class="math display">\[
+\boldsymbol Y_i \sim N_4(\boldsymbol \mu_i, 1.5 \boldsymbol \Lambda_i)
+\]</span></p>
+<p><span class="math display">\[
+\boldsymbol \mu_i = b_{evo(i)} + b_{env(i)} + b_{i} + 3 + 1.1 \boldsymbol t + 2.1 X_{i1} - 1.7 X_{i2}
+\]</span></p>
+<p><span class="math display">\[
+\rho = 0.2,\ X_{i1} \sim Bin(1, 0.5),\ X_{i2} \sim Bin(1, 0.5),\ \boldsymbol t \sim U_4(0,1)  
+\]</span></p>
+<p><span class="math display">\[
+\boldsymbol \Lambda_i  = \left(\begin{array}{cccc}
+1 &amp; \rho^{|t_{i1}-t_{i2}|} &amp; \rho^{|t_{i1}-t_{i3}|} &amp; \rho^{|t_{i1}-t_{i4}|}\\
+\rho^{|t_{i2}-t_{i1}|} &amp; 1 &amp; \rho^{|t_{i2}-t_{i3}|} &amp; \rho^{|t_{i2}-t_{i4}|}\\
+\rho^{|t_{i3}-t_{i1}|} &amp; \rho^{|t_{i3}-t_{i2}|} &amp; 1 &amp; \rho^{|t_{i3}-t_{i4}|}\\
+\rho^{|t_{i4}-t_{i1}|} &amp; \rho^{|t_{i4}-t_{i2}|} &amp; \rho^{|t_{i4}-t_{i3}|} &amp; 1\\
+\end{array}
+\right)
+\]</span></p>
 </section>
 <section id="r" class="slide level2">
 <h2>R</h2>
+<div>
+<ul>
+<li class="fragment"><p>R is commonly used statistical programming language</p></li>
+<li class="fragment"><p>It has capabilities of simulating several probability models</p></li>
+<li class="fragment"><p>Certain R packages extends its capabilities to implement Bayesian models and MCMC techniques</p></li>
+<li class="fragment"><p>The brms, rstan, and cmdstanr are packages that allow to implement Bayesian models in Stan</p></li>
+</ul>
+</div>
 </section>
 <section id="stan" class="slide level2">
 <h2>Stan</h2>
+<div>
+<ul>
+<li class="fragment"><p>Stan is newest MCMC program</p></li>
+<li class="fragment"><p>It utilizes the Hamiltonian Monte Carlo approach</p></li>
+<li class="fragment"><p>It uses BUGS programming</p></li>
+<li class="fragment"><p>The model is compiled and becomes executable in R or python</p></li>
+</ul>
+</div>
+</section>
+<section id="stan-code" class="slide level2">
+<h2>Stan Code</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1"></a>data {</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  int N;</span>
+<span id="cb1-3"><a href="#cb1-3"></a>  int D;</span>
+<span id="cb1-4"><a href="#cb1-4"></a>  int S;</span>
+<span id="cb1-5"><a href="#cb1-5"></a>  int H;</span>
+<span id="cb1-6"><a href="#cb1-6"></a>  vector[N] X1;</span>
+<span id="cb1-7"><a href="#cb1-7"></a>  vector[N] X2;</span>
+<span id="cb1-8"><a href="#cb1-8"></a>  matrix[S,S] evo; </span>
+<span id="cb1-9"><a href="#cb1-9"></a>  array[N] int&lt;lower=1, upper=N&gt; evo_id;</span>
+<span id="cb1-10"><a href="#cb1-10"></a>  array[N] int&lt;lower=1, upper=N&gt; env_id;</span>
+<span id="cb1-11"><a href="#cb1-11"></a>  array[N] vector[D] time;</span>
+<span id="cb1-12"><a href="#cb1-12"></a>  array[N] matrix[D, D] time_diff;</span>
+<span id="cb1-13"><a href="#cb1-13"></a>  array[N] vector[D] Y;</span>
+<span id="cb1-14"><a href="#cb1-14"></a>}</span>
+<span id="cb1-15"><a href="#cb1-15"></a></span>
+<span id="cb1-16"><a href="#cb1-16"></a>transformed data {</span>
+<span id="cb1-17"><a href="#cb1-17"></a>  vector[S] zero;</span>
+<span id="cb1-18"><a href="#cb1-18"></a>  vector[D] ones;</span>
+<span id="cb1-19"><a href="#cb1-19"></a>  zero = rep_vector(0, S);</span>
+<span id="cb1-20"><a href="#cb1-20"></a>  ones = rep_vector(1, D);</span>
+<span id="cb1-21"><a href="#cb1-21"></a>}</span>
+<span id="cb1-22"><a href="#cb1-22"></a></span>
+<span id="cb1-23"><a href="#cb1-23"></a></span>
+<span id="cb1-24"><a href="#cb1-24"></a></span>
+<span id="cb1-25"><a href="#cb1-25"></a>parameters {</span>
+<span id="cb1-26"><a href="#cb1-26"></a>  real&lt;lower=0&gt; sig_b;</span>
+<span id="cb1-27"><a href="#cb1-27"></a>  real&lt;lower=0&gt; sig_h;</span>
+<span id="cb1-28"><a href="#cb1-28"></a>  real&lt;lower=0&gt; sig_e;</span>
+<span id="cb1-29"><a href="#cb1-29"></a>  real&lt;lower=-1, upper=1&gt; rho;</span>
+<span id="cb1-30"><a href="#cb1-30"></a>  real b0;</span>
+<span id="cb1-31"><a href="#cb1-31"></a>  real b1;</span>
+<span id="cb1-32"><a href="#cb1-32"></a>  real b2;</span>
+<span id="cb1-33"><a href="#cb1-33"></a>  real b3;</span>
+<span id="cb1-34"><a href="#cb1-34"></a>  vector[S] evo_re;</span>
+<span id="cb1-35"><a href="#cb1-35"></a>  vector[N] bb_re;</span>
+<span id="cb1-36"><a href="#cb1-36"></a>  vector[H] hh_re;</span>
+<span id="cb1-37"><a href="#cb1-37"></a>}</span>
+<span id="cb1-38"><a href="#cb1-38"></a></span>
+<span id="cb1-39"><a href="#cb1-39"></a></span>
+<span id="cb1-40"><a href="#cb1-40"></a>transformed parameters {</span>
+<span id="cb1-41"><a href="#cb1-41"></a>  array[N] matrix[D,D] cov_1;</span>
+<span id="cb1-42"><a href="#cb1-42"></a>  array[N] matrix[D,D] cov;</span>
+<span id="cb1-43"><a href="#cb1-43"></a>  array[N] vector[D] yhat;</span>
+<span id="cb1-44"><a href="#cb1-44"></a>  </span>
+<span id="cb1-45"><a href="#cb1-45"></a>  for (n in 1:N){</span>
+<span id="cb1-46"><a href="#cb1-46"></a>     yhat[n] = b0 * ones + </span>
+<span id="cb1-47"><a href="#cb1-47"></a>                  b1 * time[n] + </span>
+<span id="cb1-48"><a href="#cb1-48"></a>                  b2 * X1[n] * ones + </span>
+<span id="cb1-49"><a href="#cb1-49"></a>                  b3 * X2[n] * ones + </span>
+<span id="cb1-50"><a href="#cb1-50"></a>                  bb_re[n] * ones + </span>
+<span id="cb1-51"><a href="#cb1-51"></a>                  evo_re[evo_id[n]] * ones +</span>
+<span id="cb1-52"><a href="#cb1-52"></a>                  hh_re[env_id[n]] * ones;</span>
+<span id="cb1-53"><a href="#cb1-53"></a>     cov_1[n] = pow(rho, time_diff[n]);</span>
+<span id="cb1-54"><a href="#cb1-54"></a>     cov[n] = sig_e * cov_1[n];</span>
+<span id="cb1-55"><a href="#cb1-55"></a>  } </span>
+<span id="cb1-56"><a href="#cb1-56"></a>}</span>
+<span id="cb1-57"><a href="#cb1-57"></a></span>
+<span id="cb1-58"><a href="#cb1-58"></a>model {</span>
+<span id="cb1-59"><a href="#cb1-59"></a>  for (n in 1:N) {</span>
+<span id="cb1-60"><a href="#cb1-60"></a>    Y[n] ~ multi_normal(yhat[n], cov[n]);</span>
+<span id="cb1-61"><a href="#cb1-61"></a>  }</span>
+<span id="cb1-62"><a href="#cb1-62"></a>  bb_re ~ normal(0, sig_b);</span>
+<span id="cb1-63"><a href="#cb1-63"></a>  hh_re ~ normal(0, sig_h);</span>
+<span id="cb1-64"><a href="#cb1-64"></a>  b0 ~ normal(0, 5);</span>
+<span id="cb1-65"><a href="#cb1-65"></a>  b1 ~ normal(0, 5);</span>
+<span id="cb1-66"><a href="#cb1-66"></a>  b2 ~ normal(0, 5);</span>
+<span id="cb1-67"><a href="#cb1-67"></a>  evo_re ~ multi_normal(zero, evo);</span>
+<span id="cb1-68"><a href="#cb1-68"></a>  sig_b ~ gamma(3, 2);</span>
+<span id="cb1-69"><a href="#cb1-69"></a>  sig_e ~ gamma(1, 1);</span>
+<span id="cb1-70"><a href="#cb1-70"></a>  sig_h ~ gamma(3, 2);</span>
+<span id="cb1-71"><a href="#cb1-71"></a>  rho ~ uniform(-1, 1);</span>
+<span id="cb1-72"><a href="#cb1-72"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="r-code" class="slide level2">
+<h2>R Code</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Loading R Packages</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(mvtnorm)</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="fu">library</span>(lme4)</span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="fu">library</span>(cmdstanr)</span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="fu">library</span>(bayesplot)</span>
+<span id="cb2-7"><a href="#cb2-7"></a></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="do">## Compiling Stan Model to make executable</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>model <span class="ot">&lt;-</span> <span class="fu">cmdstan_model</span>(<span class="at">stan_file=</span><span class="st">'~/Dropbox/Machine/new.stan'</span>)</span>
+<span id="cb2-10"><a href="#cb2-10"></a></span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="co"># Creating function</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a>kubrick <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">k=</span><span class="cn">NULL</span>){</span>
+<span id="cb2-13"><a href="#cb2-13"></a>  </span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="co"># Creating covariance matrix</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a>x1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.00</span>, <span class="fl">0.80</span>, <span class="fl">0.10</span>)</span>
+<span id="cb2-16"><a href="#cb2-16"></a>x2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.80</span>, <span class="fl">1.30</span>, <span class="fl">0.43</span>)</span>
+<span id="cb2-17"><a href="#cb2-17"></a>x3 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.10</span>, <span class="fl">0.43</span>, <span class="fl">1.90</span>)</span>
+<span id="cb2-18"><a href="#cb2-18"></a>cov_x <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(<span class="fu">rbind</span>(x1, x2, x3))</span>
+<span id="cb2-19"><a href="#cb2-19"></a><span class="co"># Simulating species RE</span></span>
+<span id="cb2-20"><a href="#cb2-20"></a>species_re <span class="ot">&lt;-</span> <span class="fu">rmvnorm</span>(<span class="dv">1</span>, <span class="at">sigma =</span> cov_x)</span>
+<span id="cb2-21"><a href="#cb2-21"></a><span class="co"># Simulating env RE</span></span>
+<span id="cb2-22"><a href="#cb2-22"></a>env_re <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">5</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="fl">1.5</span>))</span>
+<span id="cb2-23"><a href="#cb2-23"></a></span>
+<span id="cb2-24"><a href="#cb2-24"></a><span class="co"># Setting Parameters</span></span>
+<span id="cb2-25"><a href="#cb2-25"></a>sig <span class="ot">&lt;-</span> <span class="fl">1.5</span></span>
+<span id="cb2-26"><a href="#cb2-26"></a>rho <span class="ot">&lt;-</span> <span class="fl">0.2</span></span>
+<span id="cb2-27"><a href="#cb2-27"></a>b0 <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb2-28"><a href="#cb2-28"></a>b1 <span class="ot">&lt;-</span> <span class="fl">1.1</span></span>
+<span id="cb2-29"><a href="#cb2-29"></a>b2 <span class="ot">&lt;-</span> <span class="fl">2.1</span></span>
+<span id="cb2-30"><a href="#cb2-30"></a>b3 <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fl">1.7</span></span>
+<span id="cb2-31"><a href="#cb2-31"></a></span>
+<span id="cb2-32"><a href="#cb2-32"></a><span class="co"># Constructing Fake Data Set</span></span>
+<span id="cb2-33"><a href="#cb2-33"></a>iv <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb2-34"><a href="#cb2-34"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>()</span>
+<span id="cb2-35"><a href="#cb2-35"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>){</span>
+<span id="cb2-36"><a href="#cb2-36"></a>  <span class="cf">for</span> (ii <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>){</span>
+<span id="cb2-37"><a href="#cb2-37"></a>    <span class="cf">for</span> (iii <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>){</span>
+<span id="cb2-38"><a href="#cb2-38"></a>      bb <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="fl">0.8</span>))</span>
+<span id="cb2-39"><a href="#cb2-39"></a>      time_shift <span class="ot">&lt;-</span> <span class="fu">rmvnorm</span>(<span class="dv">1</span>, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">3</span>), <span class="fu">diag</span>(<span class="fu">rep</span>(<span class="fl">0.00001</span>,<span class="dv">3</span>)))</span>
+<span id="cb2-40"><a href="#cb2-40"></a>      time <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out =</span> <span class="dv">4</span>) <span class="sc">+</span> <span class="fu">c</span>(<span class="dv">0</span>, time_shift)</span>
+<span id="cb2-41"><a href="#cb2-41"></a>      sigs <span class="ot">&lt;-</span> (rho<span class="sc">**</span><span class="fu">as.matrix</span>(<span class="fu">dist</span>(time, <span class="at">diag =</span> T, <span class="at">upper =</span> T)))<span class="sc">*</span>sig</span>
+<span id="cb2-42"><a href="#cb2-42"></a>      x1 <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="fl">0.5</span>)</span>
+<span id="cb2-43"><a href="#cb2-43"></a>      x2 <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="fl">0.5</span>)</span>
+<span id="cb2-44"><a href="#cb2-44"></a>      mu <span class="ot">&lt;-</span> species_re[i] <span class="sc">+</span> env_re[ii] <span class="sc">+</span> b0 <span class="sc">+</span> b1 <span class="sc">*</span> time <span class="sc">+</span>  b2 <span class="sc">*</span> x1 <span class="sc">+</span> b3 <span class="sc">*</span> x2 <span class="sc">+</span> bb</span>
+<span id="cb2-45"><a href="#cb2-45"></a>      y <span class="ot">&lt;-</span> <span class="fu">rmvnorm</span>(<span class="dv">1</span>, mu, sigs)</span>
+<span id="cb2-46"><a href="#cb2-46"></a>      df <span class="ot">&lt;-</span> <span class="fu">rbind.data.frame</span>(df, </span>
+<span id="cb2-47"><a href="#cb2-47"></a>                             <span class="fu">data.frame</span>(<span class="fu">t</span>(<span class="fu">rbind</span>(<span class="at">y=</span>y, </span>
+<span id="cb2-48"><a href="#cb2-48"></a>                                                <span class="at">x1=</span>x1,</span>
+<span id="cb2-49"><a href="#cb2-49"></a>                                                <span class="at">x2=</span>x2,</span>
+<span id="cb2-50"><a href="#cb2-50"></a>                                                <span class="at">time=</span>time, </span>
+<span id="cb2-51"><a href="#cb2-51"></a>                                                <span class="at">bb=</span>bb, </span>
+<span id="cb2-52"><a href="#cb2-52"></a>                                                <span class="at">mu =</span> mu,</span>
+<span id="cb2-53"><a href="#cb2-53"></a>                                                <span class="at">time_id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,</span>
+<span id="cb2-54"><a href="#cb2-54"></a>                                                <span class="at">i =</span> i,</span>
+<span id="cb2-55"><a href="#cb2-55"></a>                                                <span class="at">ii =</span> ii,</span>
+<span id="cb2-56"><a href="#cb2-56"></a>                                                <span class="at">iii =</span> iii,</span>
+<span id="cb2-57"><a href="#cb2-57"></a>                                                <span class="at">id =</span> iv))))</span>
+<span id="cb2-58"><a href="#cb2-58"></a>      iv <span class="ot">&lt;-</span> iv <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb2-59"><a href="#cb2-59"></a>    }</span>
+<span id="cb2-60"><a href="#cb2-60"></a>  }</span>
+<span id="cb2-61"><a href="#cb2-61"></a>}</span>
+<span id="cb2-62"><a href="#cb2-62"></a></span>
+<span id="cb2-63"><a href="#cb2-63"></a><span class="co">#df |&gt; head()</span></span>
+<span id="cb2-64"><a href="#cb2-64"></a><span class="co">#df |&gt; dim()</span></span>
+<span id="cb2-65"><a href="#cb2-65"></a><span class="co">#df |&gt; select(id) |&gt; table()</span></span>
+<span id="cb2-66"><a href="#cb2-66"></a><span class="co"># Data Editing and extracting variables for stan</span></span>
+<span id="cb2-67"><a href="#cb2-67"></a>times <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> </span>
+<span id="cb2-68"><a href="#cb2-68"></a>  <span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> id, <span class="at">names_from =</span> time_id, <span class="at">values_from =</span> time)  <span class="sc">|&gt;</span> </span>
+<span id="cb2-69"><a href="#cb2-69"></a>  <span class="fu">select</span>(<span class="sc">-</span>id) <span class="sc">|&gt;</span> </span>
+<span id="cb2-70"><a href="#cb2-70"></a>  <span class="fu">as.matrix</span>()</span>
+<span id="cb2-71"><a href="#cb2-71"></a></span>
+<span id="cb2-72"><a href="#cb2-72"></a>Y <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> </span>
+<span id="cb2-73"><a href="#cb2-73"></a>  <span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> id, <span class="at">names_from =</span> time_id, <span class="at">values_from =</span> V1)  <span class="sc">|&gt;</span> </span>
+<span id="cb2-74"><a href="#cb2-74"></a>  <span class="fu">select</span>(<span class="sc">-</span>id) <span class="sc">|&gt;</span> </span>
+<span id="cb2-75"><a href="#cb2-75"></a>  <span class="fu">as.matrix</span>()</span>
+<span id="cb2-76"><a href="#cb2-76"></a></span>
+<span id="cb2-77"><a href="#cb2-77"></a>time_diff <span class="ot">&lt;-</span> <span class="fu">array</span>(<span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">300</span>, <span class="dv">4</span>, <span class="dv">4</span>))</span>
+<span id="cb2-78"><a href="#cb2-78"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">300</span>){</span>
+<span id="cb2-79"><a href="#cb2-79"></a>  time_diff[i,,] <span class="ot">&lt;-</span> times[i,] <span class="sc">|&gt;</span> <span class="fu">dist</span>(<span class="at">diag =</span> T, <span class="at">upper =</span> T) <span class="sc">|&gt;</span> <span class="fu">as.matrix</span>()</span>
+<span id="cb2-80"><a href="#cb2-80"></a>}</span>
+<span id="cb2-81"><a href="#cb2-81"></a></span>
+<span id="cb2-82"><a href="#cb2-82"></a>evo_id <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> <span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> id, <span class="at">names_from =</span> time_id, <span class="at">values_from =</span> i) <span class="sc">|&gt;</span> </span>
+<span id="cb2-83"><a href="#cb2-83"></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">1</span><span class="st">`</span>) <span class="sc">|&gt;</span> <span class="fu">as.vector</span>() <span class="sc">|&gt;</span> <span class="fu">unlist</span>() <span class="sc">|&gt;</span> <span class="fu">as.numeric</span>()</span>
+<span id="cb2-84"><a href="#cb2-84"></a>env_id <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> <span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> id, <span class="at">names_from =</span> time_id, <span class="at">values_from =</span> ii) <span class="sc">|&gt;</span> </span>
+<span id="cb2-85"><a href="#cb2-85"></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">1</span><span class="st">`</span>) <span class="sc">|&gt;</span> <span class="fu">as.vector</span>() <span class="sc">|&gt;</span> <span class="fu">unlist</span>() <span class="sc">|&gt;</span> <span class="fu">as.numeric</span>()</span>
+<span id="cb2-86"><a href="#cb2-86"></a></span>
+<span id="cb2-87"><a href="#cb2-87"></a></span>
+<span id="cb2-88"><a href="#cb2-88"></a>X1 <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> <span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> id, <span class="at">names_from =</span> time_id, <span class="at">values_from =</span> x1) <span class="sc">|&gt;</span> </span>
+<span id="cb2-89"><a href="#cb2-89"></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">1</span><span class="st">`</span>) <span class="sc">|&gt;</span> <span class="fu">as.vector</span>() <span class="sc">|&gt;</span> <span class="fu">unlist</span>() <span class="sc">|&gt;</span> <span class="fu">as.numeric</span>()</span>
+<span id="cb2-90"><a href="#cb2-90"></a></span>
+<span id="cb2-91"><a href="#cb2-91"></a>X2 <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> <span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> id, <span class="at">names_from =</span> time_id, <span class="at">values_from =</span> x2) <span class="sc">|&gt;</span> </span>
+<span id="cb2-92"><a href="#cb2-92"></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">1</span><span class="st">`</span>) <span class="sc">|&gt;</span> <span class="fu">as.vector</span>() <span class="sc">|&gt;</span> <span class="fu">unlist</span>() <span class="sc">|&gt;</span> <span class="fu">as.numeric</span>()</span>
+<span id="cb2-93"><a href="#cb2-93"></a></span>
+<span id="cb2-94"><a href="#cb2-94"></a><span class="co"># Contruct Data list for stan</span></span>
+<span id="cb2-95"><a href="#cb2-95"></a>data <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb2-96"><a href="#cb2-96"></a>  <span class="at">N =</span> <span class="dv">300</span>,</span>
+<span id="cb2-97"><a href="#cb2-97"></a>  <span class="at">D =</span> <span class="dv">4</span>,</span>
+<span id="cb2-98"><a href="#cb2-98"></a>  <span class="at">S =</span> <span class="dv">3</span>,</span>
+<span id="cb2-99"><a href="#cb2-99"></a>  <span class="at">H =</span> <span class="dv">5</span>,</span>
+<span id="cb2-100"><a href="#cb2-100"></a>  <span class="at">X1 =</span> X1,</span>
+<span id="cb2-101"><a href="#cb2-101"></a>  <span class="at">X2 =</span> X2,</span>
+<span id="cb2-102"><a href="#cb2-102"></a>  <span class="at">evo =</span> cov_x,</span>
+<span id="cb2-103"><a href="#cb2-103"></a>  <span class="at">evo_id =</span> evo_id,</span>
+<span id="cb2-104"><a href="#cb2-104"></a>  <span class="at">env_id =</span> env_id,</span>
+<span id="cb2-105"><a href="#cb2-105"></a>  <span class="at">time =</span> times,</span>
+<span id="cb2-106"><a href="#cb2-106"></a>  <span class="at">time_diff =</span> time_diff,</span>
+<span id="cb2-107"><a href="#cb2-107"></a>  <span class="at">Y =</span> Y</span>
+<span id="cb2-108"><a href="#cb2-108"></a>)</span>
+<span id="cb2-109"><a href="#cb2-109"></a></span>
+<span id="cb2-110"><a href="#cb2-110"></a></span>
+<span id="cb2-111"><a href="#cb2-111"></a><span class="co"># Fit Model with MCMC</span></span>
+<span id="cb2-112"><a href="#cb2-112"></a>fit <span class="ot">&lt;-</span> model<span class="sc">$</span><span class="fu">sample</span>(<span class="at">data=</span>data,</span>
+<span id="cb2-113"><a href="#cb2-113"></a>                    <span class="at">iter_warmup =</span> <span class="dv">10000</span>,</span>
+<span id="cb2-114"><a href="#cb2-114"></a>                    <span class="at">iter_sampling =</span> <span class="dv">15000</span>,</span>
+<span id="cb2-115"><a href="#cb2-115"></a>                    <span class="at">thin =</span> <span class="dv">5</span>,</span>
+<span id="cb2-116"><a href="#cb2-116"></a>                    <span class="at">adapt_delta =</span> <span class="fl">0.9</span>)</span>
+<span id="cb2-117"><a href="#cb2-117"></a>results <span class="ot">&lt;-</span> fit<span class="sc">$</span><span class="fu">summary</span>()</span>
+<span id="cb2-118"><a href="#cb2-118"></a><span class="co"># Return data set and MCMC</span></span>
+<span id="cb2-119"><a href="#cb2-119"></a><span class="fu">return</span>(<span class="fu">list</span>(<span class="at">data =</span> data, <span class="at">fit =</span> fit))</span>
+<span id="cb2-120"><a href="#cb2-120"></a></span>
+<span id="cb2-121"><a href="#cb2-121"></a>}</span>
+<span id="cb2-122"><a href="#cb2-122"></a></span>
+<span id="cb2-123"><a href="#cb2-123"></a><span class="do">## Execute Function in Parallel</span></span>
+<span id="cb2-124"><a href="#cb2-124"></a><span class="fu">kubrick</span>()</span>
+<span id="cb2-125"><a href="#cb2-125"></a></span>
+<span id="cb2-126"><a href="#cb2-126"></a><span class="do">## Save the </span></span>
+<span id="cb2-127"><a href="#cb2-127"></a><span class="fu">save</span>(res, <span class="st">"~/Dropbox/Machine/res/save.RData"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 <div class="footer footer-default">
 

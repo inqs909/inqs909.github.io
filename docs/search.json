@@ -578,7 +578,7 @@
     "href": "pres/ci_f23/10_09.html#multilevel-model-approach",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Multilevel Model Approach",
-    "text": "Multilevel Model Approach"
+    "text": "Multilevel Model Approach\n\n\nDifferent cats share characteristics that may introduce correlation\nTo account for the correlation, we will group cats based on the characteristics\nEach group will get a set of random effects to induce the correlation"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#framework",
@@ -592,7 +592,7 @@
     "href": "pres/ci_f23/10_09.html#multilevel-model",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Multilevel Model",
-    "text": "Multilevel Model"
+    "text": "Multilevel Model\n\\[\nY = \\boldsymbol X^\\mathrm T\\boldsymbol \\beta + b_i + b_j + b_k +\\varepsilon\n\\]\n\nRandom Effects (RE) induce the correlation in the model\nDifferent RE can be used based on the grouping mechanism\nWe assume RE groups are independent of each other"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#a-linear-model-w-repeated-measurements",
@@ -676,7 +676,7 @@
     "href": "pres/ci_f23/10_09.html#final-model-for-real-for-now",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Final Model (for real, for now)",
-    "text": "Final Model (for real, for now)\n\\[\n\\boldsymbol Y_i \\sim N_4(\\boldsymbol \\mu_i, \\boldsymbol \\Sigma)\n\\]"
+    "text": "Final Model (for real, for now)\n\\[\n\\boldsymbol Y_i \\sim N_4(\\boldsymbol \\mu_i, \\boldsymbol \\Sigma)\n\\]\n\\[\n\\mu_{ij} = \\boldsymbol X_{ij}^\\mathrm T\\boldsymbol \\beta + b_{i0} + b_{env(i)} + b_{evo(i)} + \\varepsilon_{ij}\n\\]"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#accounted-variation",
@@ -690,35 +690,49 @@
     "href": "pres/ci_f23/10_09.html#likelihood-function",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Likelihood Function",
-    "text": "Likelihood Function"
+    "text": "Likelihood Function\n\\[\nL(\\boldsymbol \\theta) \\propto \\prod_{i}f(\\boldsymbol y_i|b_i,b_{evo(i)},b_{env(i)};\\boldsymbol \\theta)f(b_i;\\boldsymbol \\theta)f(\\boldsymbol b_{evo};\\boldsymbol \\theta) f(\\boldsymbol b_{env};\\boldsymbol \\theta)\n\\]\n\\(\\boldsymbol \\theta:\\) all parameters involved in the model"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#prior",
     "href": "pres/ci_f23/10_09.html#prior",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Prior",
-    "text": "Prior"
+    "text": "Prior\n\n\\(\\sigma^2\\sim Gamma(\\alpha_1, \\beta_1)\\)\n\\(\\sigma^2_{env}\\sim Gamma(\\alpha_2, \\beta_2)\\)\n\\(\\boldsymbol \\beta \\sim N_p(\\boldsymbol 0, 10\\boldsymbol I)\\)\n\\(\\rho \\sim Unif(-1,1)\\)\n\\(\\Sigma_{evo}:\\) Obtained from evolutionary biology databases OR Wishart Distribution\n\\(f(\\boldsymbol \\theta) = f(\\sigma^2)f(\\sigma_{env}^2)f(\\rho)f(\\boldsymbol \\beta)\\)"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#likelihood-x-prior",
+    "href": "pres/ci_f23/10_09.html#likelihood-x-prior",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Likelihood X Prior",
+    "text": "Likelihood X Prior\n\\[\nL(\\boldsymbol \\theta) \\times f(\\boldsymbol \\theta)\n\\]"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#posterior-distribution",
+    "href": "pres/ci_f23/10_09.html#posterior-distribution",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Posterior Distribution",
+    "text": "Posterior Distribution\n\\[\nf(\\boldsymbol  \\theta|\\boldsymbol Y) \\propto L(\\boldsymbol\\theta)f(\\boldsymbol \\theta)\n\\]"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#estimation",
     "href": "pres/ci_f23/10_09.html#estimation",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Estimation",
-    "text": "Estimation"
-  },
-  {
-    "objectID": "pres/ci_f23/10_09.html#mcmc-methods",
-    "href": "pres/ci_f23/10_09.html#mcmc-methods",
-    "title": "Bayesian Mixed Effects Models and Cats",
-    "section": "MCMC Methods",
-    "text": "MCMC Methods"
+    "text": "Estimation\nEstimating the parameter require us to obtain the joint posterior distribution.\n\nThis is challenging since we do not know the normalizing constant"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#markov-chain",
     "href": "pres/ci_f23/10_09.html#markov-chain",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Markov Chain",
-    "text": "Markov Chain"
+    "text": "Markov Chain\n\n\nA Markov chain is a collection states of a certain phenomenom\n\n\\(X^{(0)},X^{(1)},X^{(2)},X^{(3)},X^{(4)},X^{(5)},X^{(6)},X^{(7)}, \\cdots, X^{(k)}\\)\n\nThe changing of the state is only dependent on the current state, not the previous states\n\n\\(P\\left\\{X^{(k+1)}\\boldsymbol{\\Big|}X^{(k)},X^{(k-1)},X^{(k-2)},\\ldots,X^{(1)},X^{(0)}\\right\\}=P\\left\\{X^{(k+1)}\\boldsymbol{\\Big |}X^{(k)}\\right\\}\\)"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#cat-markov-chains",
+    "href": "pres/ci_f23/10_09.html#cat-markov-chains",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Cat Markov Chains",
+    "text": "Cat Markov Chains"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#markov-kernel",
@@ -732,49 +746,98 @@
     "href": "pres/ci_f23/10_09.html#stationary-limiting-distribution",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Stationary (limiting) distribution",
-    "text": "Stationary (limiting) distribution\n\n\nConditions\n\n\nIrreducibility: The kernel allows for free movement of all the state space\nRecurrent: The chain will return to any nonnegligible set an infinite number of times\nAperiodic: The chain can return to any state immediately\n\n\n\nResulting\n\n\n\\(X^{(t)}\\rightarrow X\\)\n\nRegardless of \\(X^{(0)}\\)\n\n\\(X \\sim f\\)\n\n\\(f\\): is a distribution function\n\n\\(\\frac{1}{T}\\sum_{t=1}^{T} h\\{X^{(t)}\\} \\rightarrow E_f\\{h(X)\\}\\)\n\n\\(h\\): any integrable function\nby Law of Large Numbers\nknown as Ergodic Theorem"
+    "text": "Stationary (limiting) distribution\n\n\nConditions\n\n\nIrreducibility: The kernel allows for free movement of all the state space\nRecurrent: The chain will return to any nonnegligible set an infinite number of times\nAperiodic: The chain can return to any state immediately\n\n\n\nResulting\n\n\n\\(X^{(t)}\\rightarrow X\\)\n\nRegardless of \\(X^{(0)}\\)\n\n\\(X \\sim f\\)\n\n\\(f\\): is a distribution function\n\n\\(\\frac{1}{T}\\sum_{t=1}^{T} h\\{X^{(t)}\\} \\rightarrow E_f\\{h(X)\\}\\)\n\n\\(h\\): any integrable function\nby Law of Large Numbers"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#markov-chains-monte-carlo",
     "href": "pres/ci_f23/10_09.html#markov-chains-monte-carlo",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Markov Chains Monte Carlo",
-    "text": "Markov Chains Monte Carlo"
+    "text": "Markov Chains Monte Carlo\n\n\nMCMC Methods are used to a distribution function that is not easily obtained.\nA Markov chain is contructed by simulating Monte Carlo Samples and accepted based on a certain criteria\nBased on the MCMC Central Limit Theorem, the Markov chain will construct a limiting distribution that is desired."
   },
   {
     "objectID": "pres/ci_f23/10_09.html#metropolis-hastings-algorithm",
     "href": "pres/ci_f23/10_09.html#metropolis-hastings-algorithm",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Metropolis-Hastings Algorithm",
-    "text": "Metropolis-Hastings Algorithm"
+    "text": "Metropolis-Hastings Algorithm\n\nThe MH algorithm will generate target the distribution function \\(f\\) a random variable\nThe MH will generate a candidate from an easier distribution function \\(g\\) for a Markov chain and accept it based on the Metropolis-Hastings Kernel\nWith a large enough simulation, the resulting chain will have a limiting distribution of \\(f\\)"
   },
   {
-    "objectID": "pres/ci_f23/10_09.html#gibbs-sampling",
-    "href": "pres/ci_f23/10_09.html#gibbs-sampling",
+    "objectID": "pres/ci_f23/10_09.html#mh-algorithm",
+    "href": "pres/ci_f23/10_09.html#mh-algorithm",
     "title": "Bayesian Mixed Effects Models and Cats",
-    "section": "Gibbs Sampling",
-    "text": "Gibbs Sampling"
+    "section": "MH Algorithm",
+    "text": "MH Algorithm\nGiven \\(x^{(t)}\\) and targeting \\(f(x)\\)\n\nGenerate \\(y\\sim g(y|x^{(t)})\\)\n\\[\nx^{(t+1)} =\\left\\{\\begin{array}{cc}\ny &\\ \\mathrm{with\\ probability\\ } q(x^{(t)}, y)\\\\\nx^{(t)} & \\mathrm{with\\ probability\\ } 1-q(x^{(t)}, y)\n\\end{array}\\right.\n\\]\n\n\\[\nq(x,y) = \\min\\left\\{\\frac{f(y)q(x|y)}{f(x)q(y|x)}\\right\\}\n\\]"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#gibbs-sampler",
+    "href": "pres/ci_f23/10_09.html#gibbs-sampler",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Gibbs Sampler",
+    "text": "Gibbs Sampler\n\nA Gibbs sampler is an extension of many univariate MCMC techniques to multivariate analysis\nThe goal of the sampler is to generate a Markov chain that targets a joint distribution function\nThe Gibbs Sampler achieves this by sampling from the conditional densities of the joint distribution function"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#gibbs-sampler-algorithm-for-trivariate-rv",
+    "href": "pres/ci_f23/10_09.html#gibbs-sampler-algorithm-for-trivariate-rv",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Gibbs Sampler Algorithm for Trivariate RV",
+    "text": "Gibbs Sampler Algorithm for Trivariate RV\nGiven \\(x^{(t)}\\), \\(y^{(t)}\\), and \\(z^{(t)}\\), we are targeting \\(f(x,y,z)\\)\n\nGenerate \\(x^{(t+1)}\\sim f(x|y^{(t)}, z^{(t)})\\)\nGenerate \\(y^{(t+1)}\\sim f(y|x^{(t+1)}, z^{(t)})\\)\nGenerate \\(z^{(t+1)}\\sim f(z|x^{(t+1)}, y^{(t+1)})\\)\nRepeat previous until long enough chain is generated"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#hamiltonian-monte-carlo",
     "href": "pres/ci_f23/10_09.html#hamiltonian-monte-carlo",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Hamiltonian Monte Carlo",
-    "text": "Hamiltonian Monte Carlo"
+    "text": "Hamiltonian Monte Carlo\n\nHamiltonian Monte Carlo is a relatively new MCMC technique used to construct the target distribution\nIt utilizes Hamiltonian dynamics to simulate the next random variable\nThe random variable is the accepted based the MH probability\nUsing Hamiltonian dyanmics improves the mixing properties of the chain and draws are more targeted to the desired distribution"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#simulation-parameters",
+    "href": "pres/ci_f23/10_09.html#simulation-parameters",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Simulation Parameters",
+    "text": "Simulation Parameters\n\n300 Cats\n5 Environments\n3 Species\n4 Repeated Measurements\n6000 Data Points"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#model-parameters",
+    "href": "pres/ci_f23/10_09.html#model-parameters",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Model Parameters",
+    "text": "Model Parameters\n\n\\(b_i \\sim N( 0, 0.8)\\)\n\\(\\boldsymbol b_{env} \\sim N_5(\\boldsymbol 0, 1.5 \\boldsymbol I_5)\\)\n\\(\\boldsymbol b_{evo} \\sim N_3(\\boldsymbol 0, \\boldsymbol \\Sigma_{evo})\\)\n\n\\[\n\\boldsymbol \\Sigma_{evo} = \\left(\n\\begin{array}{ccc}\n1 & 0.8 & 0.1\\\\\n0.8 & 1.3 & 0.43 \\\\\n0.1 & 0.43 & 1.9\n\\end{array}\n\\right)\n\\]"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#simulation-model",
+    "href": "pres/ci_f23/10_09.html#simulation-model",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Simulation Model",
+    "text": "Simulation Model\n\\[\n\\boldsymbol Y_i \\sim N_4(\\boldsymbol \\mu_i, 1.5 \\boldsymbol \\Lambda_i)\n\\]\n\\[\n\\boldsymbol \\mu_i = b_{evo(i)} + b_{env(i)} + b_{i} + 3 + 1.1 \\boldsymbol t + 2.1 X_{i1} - 1.7 X_{i2}\n\\]\n\\[\n\\rho = 0.2,\\ X_{i1} \\sim Bin(1, 0.5),\\ X_{i2} \\sim Bin(1, 0.5),\\ \\boldsymbol t \\sim U_4(0,1)  \n\\]\n\\[\n\\boldsymbol \\Lambda_i  = \\left(\\begin{array}{cccc}\n1 & \\rho^{|t_{i1}-t_{i2}|} & \\rho^{|t_{i1}-t_{i3}|} & \\rho^{|t_{i1}-t_{i4}|}\\\\\n\\rho^{|t_{i2}-t_{i1}|} & 1 & \\rho^{|t_{i2}-t_{i3}|} & \\rho^{|t_{i2}-t_{i4}|}\\\\\n\\rho^{|t_{i3}-t_{i1}|} & \\rho^{|t_{i3}-t_{i2}|} & 1 & \\rho^{|t_{i3}-t_{i4}|}\\\\\n\\rho^{|t_{i4}-t_{i1}|} & \\rho^{|t_{i4}-t_{i2}|} & \\rho^{|t_{i4}-t_{i3}|} & 1\\\\\n\\end{array}\n\\right)\n\\]"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#r",
     "href": "pres/ci_f23/10_09.html#r",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "R",
-    "text": "R"
+    "text": "R\n\n\nR is commonly used statistical programming language\nIt has capabilities of simulating several probability models\nCertain R packages extends its capabilities to implement Bayesian models and MCMC techniques\nThe brms, rstan, and cmdstanr are packages that allow to implement Bayesian models in Stan"
   },
   {
     "objectID": "pres/ci_f23/10_09.html#stan",
     "href": "pres/ci_f23/10_09.html#stan",
     "title": "Bayesian Mixed Effects Models and Cats",
     "section": "Stan",
-    "text": "Stan"
+    "text": "Stan\n\n\nStan is newest MCMC program\nIt utilizes the Hamiltonian Monte Carlo approach\nIt uses BUGS programming\nThe model is compiled and becomes executable in R or python"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#stan-code",
+    "href": "pres/ci_f23/10_09.html#stan-code",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Stan Code",
+    "text": "Stan Code\n\ndata {\n  int N;\n  int D;\n  int S;\n  int H;\n  vector[N] X1;\n  vector[N] X2;\n  matrix[S,S] evo; \n  array[N] int&lt;lower=1, upper=N&gt; evo_id;\n  array[N] int&lt;lower=1, upper=N&gt; env_id;\n  array[N] vector[D] time;\n  array[N] matrix[D, D] time_diff;\n  array[N] vector[D] Y;\n}\n\ntransformed data {\n  vector[S] zero;\n  vector[D] ones;\n  zero = rep_vector(0, S);\n  ones = rep_vector(1, D);\n}\n\n\n\nparameters {\n  real&lt;lower=0&gt; sig_b;\n  real&lt;lower=0&gt; sig_h;\n  real&lt;lower=0&gt; sig_e;\n  real&lt;lower=-1, upper=1&gt; rho;\n  real b0;\n  real b1;\n  real b2;\n  real b3;\n  vector[S] evo_re;\n  vector[N] bb_re;\n  vector[H] hh_re;\n}\n\n\ntransformed parameters {\n  array[N] matrix[D,D] cov_1;\n  array[N] matrix[D,D] cov;\n  array[N] vector[D] yhat;\n  \n  for (n in 1:N){\n     yhat[n] = b0 * ones + \n                  b1 * time[n] + \n                  b2 * X1[n] * ones + \n                  b3 * X2[n] * ones + \n                  bb_re[n] * ones + \n                  evo_re[evo_id[n]] * ones +\n                  hh_re[env_id[n]] * ones;\n     cov_1[n] = pow(rho, time_diff[n]);\n     cov[n] = sig_e * cov_1[n];\n  } \n}\n\nmodel {\n  for (n in 1:N) {\n    Y[n] ~ multi_normal(yhat[n], cov[n]);\n  }\n  bb_re ~ normal(0, sig_b);\n  hh_re ~ normal(0, sig_h);\n  b0 ~ normal(0, 5);\n  b1 ~ normal(0, 5);\n  b2 ~ normal(0, 5);\n  evo_re ~ multi_normal(zero, evo);\n  sig_b ~ gamma(3, 2);\n  sig_e ~ gamma(1, 1);\n  sig_h ~ gamma(3, 2);\n  rho ~ uniform(-1, 1);\n}"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#r-code",
+    "href": "pres/ci_f23/10_09.html#r-code",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "R Code",
+    "text": "R Code\n\n# Loading R Packages\nlibrary(mvtnorm)\nlibrary(tidyverse)\nlibrary(lme4)\nlibrary(cmdstanr)\nlibrary(bayesplot)\n\n## Compiling Stan Model to make executable\nmodel &lt;- cmdstan_model(stan_file='~/Dropbox/Machine/new.stan')\n\n# Creating function\nkubrick &lt;- function(k=NULL){\n  \n# Creating covariance matrix\nx1 &lt;- c(1.00, 0.80, 0.10)\nx2 &lt;- c(0.80, 1.30, 0.43)\nx3 &lt;- c(0.10, 0.43, 1.90)\ncov_x &lt;- as.matrix(rbind(x1, x2, x3))\n# Simulating species RE\nspecies_re &lt;- rmvnorm(1, sigma = cov_x)\n# Simulating env RE\nenv_re &lt;- rnorm(5, sd = sqrt(1.5))\n\n# Setting Parameters\nsig &lt;- 1.5\nrho &lt;- 0.2\nb0 &lt;- 3\nb1 &lt;- 1.1\nb2 &lt;- 2.1\nb3 &lt;- -1.7\n\n# Constructing Fake Data Set\niv &lt;- 1\ndf &lt;- data.frame()\nfor (i in 1:3){\n  for (ii in 1:5){\n    for (iii in 1:20){\n      bb &lt;- rnorm(1, sd = sqrt(0.8))\n      time_shift &lt;- rmvnorm(1, rep(0, 3), diag(rep(0.00001,3)))\n      time &lt;- seq(0, 1, length.out = 4) + c(0, time_shift)\n      sigs &lt;- (rho**as.matrix(dist(time, diag = T, upper = T)))*sig\n      x1 &lt;- rbinom(1, 1, 0.5)\n      x2 &lt;- rbinom(1, 1, 0.5)\n      mu &lt;- species_re[i] + env_re[ii] + b0 + b1 * time +  b2 * x1 + b3 * x2 + bb\n      y &lt;- rmvnorm(1, mu, sigs)\n      df &lt;- rbind.data.frame(df, \n                             data.frame(t(rbind(y=y, \n                                                x1=x1,\n                                                x2=x2,\n                                                time=time, \n                                                bb=bb, \n                                                mu = mu,\n                                                time_id = 1:4,\n                                                i = i,\n                                                ii = ii,\n                                                iii = iii,\n                                                id = iv))))\n      iv &lt;- iv + 1\n    }\n  }\n}\n\n#df |&gt; head()\n#df |&gt; dim()\n#df |&gt; select(id) |&gt; table()\n# Data Editing and extracting variables for stan\ntimes &lt;- df |&gt; \n  pivot_wider(id_cols = id, names_from = time_id, values_from = time)  |&gt; \n  select(-id) |&gt; \n  as.matrix()\n\nY &lt;- df |&gt; \n  pivot_wider(id_cols = id, names_from = time_id, values_from = V1)  |&gt; \n  select(-id) |&gt; \n  as.matrix()\n\ntime_diff &lt;- array(dim = c(300, 4, 4))\nfor (i in 1:300){\n  time_diff[i,,] &lt;- times[i,] |&gt; dist(diag = T, upper = T) |&gt; as.matrix()\n}\n\nevo_id &lt;- df |&gt; pivot_wider(id_cols = id, names_from = time_id, values_from = i) |&gt; \n  select(`1`) |&gt; as.vector() |&gt; unlist() |&gt; as.numeric()\nenv_id &lt;- df |&gt; pivot_wider(id_cols = id, names_from = time_id, values_from = ii) |&gt; \n  select(`1`) |&gt; as.vector() |&gt; unlist() |&gt; as.numeric()\n\n\nX1 &lt;- df |&gt; pivot_wider(id_cols = id, names_from = time_id, values_from = x1) |&gt; \n  select(`1`) |&gt; as.vector() |&gt; unlist() |&gt; as.numeric()\n\nX2 &lt;- df |&gt; pivot_wider(id_cols = id, names_from = time_id, values_from = x2) |&gt; \n  select(`1`) |&gt; as.vector() |&gt; unlist() |&gt; as.numeric()\n\n# Contruct Data list for stan\ndata &lt;- list(\n  N = 300,\n  D = 4,\n  S = 3,\n  H = 5,\n  X1 = X1,\n  X2 = X2,\n  evo = cov_x,\n  evo_id = evo_id,\n  env_id = env_id,\n  time = times,\n  time_diff = time_diff,\n  Y = Y\n)\n\n\n# Fit Model with MCMC\nfit &lt;- model$sample(data=data,\n                    iter_warmup = 10000,\n                    iter_sampling = 15000,\n                    thin = 5,\n                    adapt_delta = 0.9)\nresults &lt;- fit$summary()\n# Return data set and MCMC\nreturn(list(data = data, fit = fit))\n\n}\n\n## Execute Function in Parallel\nkubrick()\n\n## Save the \nsave(res, \"~/Dropbox/Machine/res/save.RData\")"
   },
   {
     "objectID": "photos/heart/index.html",
@@ -914,7 +977,7 @@
     "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
     "title": "RcppArmadillo",
     "section": "Using RcppArmadillo",
-    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] -0.03535993\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] -0.03535993\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.26µs   3.47µs   268781.        0B        0\n2 mean_cpp(Y)   1.83µs   2.79µs   367456.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
+    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] 0.01574385\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] 0.01574385\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.26µs   3.49µs   267915.        0B        0\n2 mean_cpp(Y)   1.84µs   2.79µs   367417.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
   },
   {
     "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",

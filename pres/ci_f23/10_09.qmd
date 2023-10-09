@@ -29,7 +29,19 @@ library(ggcats)
 library(ThemePark)
 ```
 
-# Motivation (Semi-Fake)
+# 
+
+::: columns
+::: {.column width="50%"}
+::: {style="font-size: 60px; padding: 120px 0;"}
+**Motivation**
+:::
+:::
+
+::: {.column width="50%"}
+![](https://media.tenor.com/L8bcFLYjPhUAAAAd/parkour-cat.gif)
+:::
+:::
 
 ## San Bernardino Desert (Only Real Part)
 
@@ -203,7 +215,19 @@ ggplot(df) + geom_line(aes(x, y)) +
   
 ```
 
-# Models
+# 
+
+::: columns
+::: {.column width="50%"}
+::: {style="font-size: 60px; padding: 120px 0;"}
+**Models**
+:::
+:::
+
+::: {.column width="50%"}
+![](https://media.tenor.com/ITQdqRCN-WQAAAAd/cat-cat-walk.gif)
+:::
+:::
 
 ## Original Model
 
@@ -224,6 +248,12 @@ $$
 -   $\varepsilon_{k}\sim N(0, \sigma^2)$: Error Term
 
 ## Multilevel Model Approach
+
+::: incremental
+-   Different cats share characteristics that may introduce correlation
+-   To account for the correlation, we will group cats based on the characteristics
+-   Each group will get a set of random effects to induce the correlation
+:::
 
 ## Framework
 
@@ -309,6 +339,16 @@ p + annotate("rect",
 ```
 
 ## Multilevel Model
+
+$$
+Y = \boldsymbol X^\mathrm T\boldsymbol \beta + b_i + b_j + b_k +\varepsilon
+$$
+
+-   Random Effects (RE) induce the correlation in the model
+
+-   Different RE can be used based on the grouping mechanism
+
+-   We assume RE groups are independent of each other
 
 ## A Linear Model w/ Repeated Measurements
 
@@ -558,6 +598,10 @@ $$
 \boldsymbol Y_i \sim N_4(\boldsymbol \mu_i, \boldsymbol \Sigma)
 $$
 
+$$
+\mu_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + b_{env(i)} + b_{evo(i)} + \varepsilon_{ij}
+$$
+
 ## Accounted Variation
 
 ```{r}
@@ -576,13 +620,61 @@ ggplot(df, aes(fill=group, x = "", y = y)) + geom_bar(position = "stack", stat =
         legend.text = element_text(size = 48))
 ```
 
-# Bayesian Models
+# 
+
+::: columns
+::: {.column width="50%"}
+::: {style="font-size: 60px; padding: 120px 0;"}
+**Bayesian Models**
+:::
+:::
+
+::: {.column width="50%"}
+![](https://media.tenor.com/7lzxyYB36cIAAAAC/kittens-cute-kittens.gif)
+:::
+:::
 
 ## Likelihood Function
 
+$$
+L(\boldsymbol \theta) \propto \prod_{i}f(\boldsymbol y_i|b_i,b_{evo(i)},b_{env(i)};\boldsymbol \theta)f(b_i;\boldsymbol \theta)f(\boldsymbol b_{evo};\boldsymbol \theta) f(\boldsymbol b_{env};\boldsymbol \theta)
+$$
+
+$\boldsymbol \theta:$ all parameters involved in the model
+
 ## Prior
 
+-   $\sigma^2\sim Gamma(\alpha_1, \beta_1)$
+
+-   $\sigma^2_{env}\sim Gamma(\alpha_2, \beta_2)$
+
+-   $\boldsymbol \beta \sim N_p(\boldsymbol 0, 10\boldsymbol I)$
+
+-   $\rho \sim Unif(-1,1)$
+
+-   $\Sigma_{evo}:$ Obtained from evolutionary biology databases OR Wishart Distribution
+
+-   $f(\boldsymbol \theta) = f(\sigma^2)f(\sigma_{env}^2)f(\rho)f(\boldsymbol \beta)$
+
+## Likelihood X Prior
+
+$$
+L(\boldsymbol \theta) \times f(\boldsymbol \theta)
+$$
+
+## Posterior Distribution
+
+$$
+f(\boldsymbol  \theta|\boldsymbol Y) \propto L(\boldsymbol\theta)f(\boldsymbol \theta)
+$$
+
 ## Estimation
+
+Estimating the parameter require us to obtain the joint posterior distribution.
+
+::: fragment
+This is challenging since we do not know the normalizing constant
+:::
 
 # 
 
@@ -598,17 +690,63 @@ ggplot(df, aes(fill=group, x = "", y = y)) + geom_bar(position = "stack", stat =
 :::
 :::
 
-## MCMC Methods
+## Markov Chain {.smaller}
 
-## Markov Chain
+::: incremental
+-   A Markov chain is a collection states of a certain phenomenom
 
-::: columns
-::: {.column width="50%"}
+    -   $X^{(0)},X^{(1)},X^{(2)},X^{(3)},X^{(4)},X^{(5)},X^{(6)},X^{(7)}, \cdots, X^{(k)}$
+
+-   The changing of the state is only dependent on the current state, not the previous states
+
+    -   $P\left\{X^{(k+1)}\boldsymbol{\Big|}X^{(k)},X^{(k-1)},X^{(k-2)},\ldots,X^{(1)},X^{(0)}\right\}=P\left\{X^{(k+1)}\boldsymbol{\Big |}X^{(k)}\right\}$
 :::
 
-::: {.column width="50%"}
-:::
-:::
+## Cat Markov Chains
+
+```{r}
+#| echo: false
+grid <- expand.grid(1:3, 3:1)
+
+df <- data.frame(x = grid[, 1],
+                 y = grid[, 2],
+                 image = sample(c("grumpy", "lil_bub", "maru"), 
+                                9, replace = T))
+                           
+library(ggplot2)
+ggplot(df) + theme_void() +
+ geom_cat(aes(x, y, cat = image), size = 5) +
+    xlim(c(0.25, 3.5)) + 
+    ylim(c(-0.5, 3.5)) +
+  geom_curve(aes(x = 1.35, y = 3, xend = 1.65, yend = 3),
+             arrow = arrow(length = unit(0.03, "npc"), type="closed"),
+             colour = "red", size = 3, curvature = 0, angle = 90) +
+  geom_curve(aes(x = 2.35, y = 3, xend = 2.65, yend = 3),
+             arrow = arrow(length = unit(0.03, "npc"), type="closed"),
+             colour = "red", size = 3, curvature = 0, angle = 90) +
+  geom_curve(aes(x = 3, y = 2.65, xend = 3, yend = 2.35),
+             arrow = arrow(length = unit(0.03, "npc"), type="closed"),
+             colour = "red", size = 3, curvature = 0, angle = 90) +
+  geom_curve(aes(x = 2.65, y = 2, xend = 2.35, yend = 2),
+             arrow = arrow(length = unit(0.03, "npc"), type="closed"),
+             colour = "red", size = 3, curvature = 0, angle = 90) +
+  geom_curve(aes(x = 1.65, y = 2, xend = 1.35, yend = 2),
+             arrow = arrow(length = unit(0.03, "npc"), type="closed"),
+             colour = "red", size = 3, curvature = 0, angle = 90) +
+  geom_curve(aes(x = 1, y = 1.65, xend = 1, yend = 1.35),
+             arrow = arrow(length = unit(0.03, "npc"), type="closed"),
+             colour = "red", size = 3, curvature = 0, angle = 90) +     geom_curve(aes(x = 1.35, y = 1, xend = 1.65, yend = 1),
+             arrow = arrow(length = unit(0.03, "npc"), type="closed"),
+             colour = "red", size = 3, curvature = 0, angle = 90) +
+  geom_curve(aes(x = 2.35, y = 1, xend = 2.65, yend = 1),
+             arrow = arrow(length = unit(0.03, "npc"), type="closed"),
+             colour = "red", size = 3, curvature = 0, angle = 90) +
+  geom_curve(aes(x = 3, y = 0.55, xend = 3, yend = 0.35),
+             arrow = arrow(length = unit(0.03, "npc"), type="closed"),
+             colour = "red", size = 3, curvature = 0, angle = 90) +
+  annotate("text", x=3, y=-0.25, label= "???", size = 48)
+  
+```
 
 ## Markov Kernel
 
@@ -625,6 +763,7 @@ ggplot(df, aes(fill=group, x = "", y = y)) + geom_bar(position = "stack", stat =
 ::: fragement
 ```{r}
 #| echo: false
+#| fig-height: 10
 
 df1 <- data.frame(x = c(0,2,4),
                  y = c(1,3,1),
@@ -634,29 +773,71 @@ df1 <- data.frame(x = c(0,2,4),
 
 ggplot() + theme_void() +
   geom_cat(aes(x, y, cat = image), df1, size = 8) +
-  ylim(c(0,4.5)) +
+  ylim(c(-1,4.75)) +
   xlim(c(-1,5)) +
   geom_curve(aes(x = -.25, y = 1.6, xend = 1, yend = 2.9),
-             arrow = arrow(length = unit(0.03, "npc"), type="closed"), 
-             colour = "#EC7014", size = 3, curvature = -0.5, angle = 90) +
+             arrow = arrow(length = unit(0.03, "npc"), 
+                           type="closed"), 
+             colour = "#EC7014", size = 3, 
+             curvature = -0.5, angle = 90) +
   geom_curve(aes(x = 4.5, y = 1.5, xend = 3.1, yend = 3.2),
-             arrow = arrow(length = unit(0.03, "npc"), type="closed"), 
-             colour = "#EC7014", size = 3, curvature = 0.5, angle = 90) +
+             arrow = arrow(length = unit(0.03, "npc"), 
+                           type="closed"), 
+             colour = "#EC7014", size = 3, 
+             curvature = 0.5, angle = 90) +
   geom_curve(aes(x = 2.8, y = 3.3, xend = 1.9, yend = 3.5),
-             arrow = arrow(length = unit(0.03, "npc"), type="closed"), 
-             colour = "#EC7014", size = 3, curvature = 2, angle = 70) +
+             arrow = arrow(length = unit(0.03, "npc"), 
+                           type="closed"), 
+             colour = "#EC7014", size = 2, 
+             curvature = 2, angle = 70) +
   geom_curve(aes(x = 2.3, y = 2.3, xend = 3.2, yend = 1.3),
-             arrow = arrow(length = unit(0.03, "npc"), type="closed"), 
-             colour = "navy", size = 3, curvature = .5, angle = 90) +
+             arrow = arrow(length = unit(0.03, "npc"), 
+                           type="closed"), 
+             colour = "navy", size = 3, 
+             curvature = .5, angle = 90) +
   geom_curve(aes(x = 3.2, y = 1, xend = 0.8, yend = 1),
-             arrow = arrow(length = unit(0.03, "npc"), type="closed"), 
-             colour = "forestgreen", size = 3, curvature = .2, angle = 90) +
+             arrow = arrow(length = unit(0.03, "npc"), 
+                           type="closed"), 
+             colour = "forestgreen", size = 3, 
+             curvature = .1, angle = 90) +
   geom_curve(aes(x = 0.8, y = 0.6, xend = 3.1, yend = 0.7),
-             arrow = arrow(length = unit(0.03, "npc"), type="closed"), 
-             colour = "navy", size = 3, curvature = .2, angle = 90) +
+             arrow = arrow(length = unit(0.03, "npc"), 
+                           type="closed"), 
+             colour = "navy", size = 3, 
+             curvature = .2, angle = 90) +
   geom_curve(aes(x = 1.3, y = 2.4, xend = 0.9, yend = 1.4),
-             arrow = arrow(length = unit(0.03, "npc"), type="closed"), 
-             colour = "forestgreen", size = 3, curvature = -.3, angle = 90)
+             arrow = arrow(length = unit(0.03, "npc"), 
+                           type="closed"), 
+             colour = "forestgreen", size = 3, 
+             curvature = -.1, angle = 90) +
+  geom_curve(aes(x = - 0, y = 0.1, xend = - 0.5, yend = 0.1),
+             arrow = arrow(length = unit(0.03, "npc"), 
+                           type="closed"), 
+             colour = "forestgreen", size = 3, 
+             curvature = -3, angle = 90)+
+  geom_curve(aes(x = 3.6, y = 0.11, xend = 4.5, yend = 0.1),
+             arrow = arrow(length = unit(0.03, "npc"), 
+                           type="closed"), 
+             colour = "navy", size = 3, 
+             curvature = 1.5, angle = 90) +
+  annotate("text", x=4, y=-0.25, label= "0.4", size = 24,
+           color = "navy") +
+  annotate("text", x=0.5, y=-0.25, label= "0.3", size = 24,
+           color = "forestgreen") +
+  annotate("text", x=2, y=.25, label= "0.35", size = 24,
+           color = "navy") +
+  annotate("text", x=2, y=.75, label= "0.25", size = 24,
+           color = "forestgreen") +
+  annotate("text", x=2.8, y=1.85, label= "0.35", size = 24,
+           color = "navy") +
+  annotate("text", x=3.8, y=2.5, label= "0.35", size = 24,
+           color = "#EC7014") +
+  annotate("text", x=2.6, y=4.25, label= "0.45", size = 24,
+           color = "#EC7014") +
+  annotate("text", x=.3, y=2.25, label= "0.35", size = 24,
+           color = "#EC7014") +
+  annotate("text", x=1.6, y=1.8, label= "0.20", size = 24,
+           color = "forestgreen")
 
 
 
@@ -697,22 +878,374 @@ ggplot() + theme_void() +
     -   $h$: any integrable function
 
     -   by Law of Large Numbers
-
-    -   known as Ergodic Theorem
 :::
 :::
 :::
 
 ## Markov Chains Monte Carlo
 
+::: incremental
+-   MCMC Methods are used to a distribution function that is not easily obtained.
+
+-   A Markov chain is contructed by simulating Monte Carlo Samples and accepted based on a certain criteria
+
+-   Based on the MCMC Central Limit Theorem, the Markov chain will construct a limiting distribution that is desired.
+:::
+
 ## Metropolis-Hastings Algorithm
 
-## Gibbs Sampling
+-   The MH algorithm will generate target the distribution function $f$ a random variable
+
+-   The MH will generate a candidate from an easier distribution function $g$ for a Markov chain and accept it based on the Metropolis-Hastings Kernel
+
+-   With a large enough simulation, the resulting chain will have a limiting distribution of $f$
+
+## MH Algorithm
+
+Given $x^{(t)}$ and targeting $f(x)$
+
+1.  Generate $y\sim g(y|x^{(t)})$
+2.  $$
+    x^{(t+1)} =\left\{\begin{array}{cc}
+    y &\ \mathrm{with\ probability\ } q(x^{(t)}, y)\\
+    x^{(t)} & \mathrm{with\ probability\ } 1-q(x^{(t)}, y) 
+    \end{array}\right. 
+    $$
+
+$$
+q(x,y) = \min\left\{\frac{f(y)q(x|y)}{f(x)q(y|x)}\right\}
+$$
+
+## Gibbs Sampler
+
+-   A Gibbs sampler is an extension of many univariate MCMC techniques to multivariate analysis
+
+-   The goal of the sampler is to generate a Markov chain that targets a joint distribution function
+
+-   The Gibbs Sampler achieves this by sampling from the conditional densities of the joint distribution function
+
+## Gibbs Sampler Algorithm for Trivariate RV
+
+Given $x^{(t)}$, $y^{(t)}$, and $z^{(t)}$, we are targeting $f(x,y,z)$
+
+1.  Generate $x^{(t+1)}\sim f(x|y^{(t)}, z^{(t)})$
+2.  Generate $y^{(t+1)}\sim f(y|x^{(t+1)}, z^{(t)})$
+3.  Generate $z^{(t+1)}\sim f(z|x^{(t+1)}, y^{(t+1)})$
+4.  Repeat previous until long enough chain is generated
 
 ## Hamiltonian Monte Carlo
 
-# Simulation Study
+-   Hamiltonian Monte Carlo is a relatively new MCMC technique used to construct the target distribution
+
+-   It utilizes Hamiltonian dynamics to simulate the next random variable
+
+-   The random variable is the accepted based the MH probability
+
+-   Using Hamiltonian dyanmics improves the mixing properties of the chain and draws are more targeted to the desired distribution
+
+# 
+
+::: columns
+::: {.column width="50%"}
+::: {style="font-size: 60px; padding: 120px 0;"}
+**Simulation Study**
+:::
+:::
+
+::: {.column width="50%"}
+![](https://media.tenor.com/NwY5ppxLs_oAAAAd/kitten-keybo.gif)
+:::
+:::
+
+## Simulation Parameters
+
+-   300 Cats
+
+-   5 Environments
+
+-   3 Species
+
+-   4 Repeated Measurements
+
+-   6000 Data Points
+
+## Model Parameters
+
+-   $b_i \sim N( 0, 0.8)$
+
+-   $\boldsymbol b_{env} \sim N_5(\boldsymbol 0, 1.5 \boldsymbol I_5)$
+
+-   $\boldsymbol b_{evo} \sim N_3(\boldsymbol 0, \boldsymbol \Sigma_{evo})$
+
+$$
+\boldsymbol \Sigma_{evo} = \left(
+\begin{array}{ccc}
+1 & 0.8 & 0.1\\
+0.8 & 1.3 & 0.43 \\
+0.1 & 0.43 & 1.9
+\end{array}
+\right)
+$$
+
+## Simulation Model
+
+$$
+\boldsymbol Y_i \sim N_4(\boldsymbol \mu_i, 1.5 \boldsymbol \Lambda_i) 
+$$
+
+$$
+\boldsymbol \mu_i = b_{evo(i)} + b_{env(i)} + b_{i} + 3 + 1.1 \boldsymbol t + 2.1 X_{i1} - 1.7 X_{i2} 
+$$
+
+$$
+\rho = 0.2,\ X_{i1} \sim Bin(1, 0.5),\ X_{i2} \sim Bin(1, 0.5),\ \boldsymbol t \sim U_4(0,1)  
+$$
+
+$$
+\boldsymbol \Lambda_i  = \left(\begin{array}{cccc}
+1 & \rho^{|t_{i1}-t_{i2}|} & \rho^{|t_{i1}-t_{i3}|} & \rho^{|t_{i1}-t_{i4}|}\\
+\rho^{|t_{i2}-t_{i1}|} & 1 & \rho^{|t_{i2}-t_{i3}|} & \rho^{|t_{i2}-t_{i4}|}\\
+\rho^{|t_{i3}-t_{i1}|} & \rho^{|t_{i3}-t_{i2}|} & 1 & \rho^{|t_{i3}-t_{i4}|}\\
+\rho^{|t_{i4}-t_{i1}|} & \rho^{|t_{i4}-t_{i2}|} & \rho^{|t_{i4}-t_{i3}|} & 1\\
+\end{array}
+\right)
+$$
 
 ## R
 
+::: incremental
+-   R is commonly used statistical programming language
+
+-   It has capabilities of simulating several probability models
+
+-   Certain R packages extends its capabilities to implement Bayesian models and MCMC techniques
+
+-   The brms, rstan, and cmdstanr are packages that allow to implement Bayesian models in Stan
+:::
+
 ## Stan
+
+::: incremental
+-   Stan is newest MCMC program
+
+-   It utilizes the Hamiltonian Monte Carlo approach
+
+-   It uses BUGS programming
+
+-   The model is compiled and becomes executable in R or python
+:::
+
+## Stan Code
+
+```{default}
+data {
+  int N;
+  int D;
+  int S;
+  int H;
+  vector[N] X1;
+  vector[N] X2;
+  matrix[S,S] evo; 
+  array[N] int<lower=1, upper=N> evo_id;
+  array[N] int<lower=1, upper=N> env_id;
+  array[N] vector[D] time;
+  array[N] matrix[D, D] time_diff;
+  array[N] vector[D] Y;
+}
+
+transformed data {
+  vector[S] zero;
+  vector[D] ones;
+  zero = rep_vector(0, S);
+  ones = rep_vector(1, D);
+}
+
+
+
+parameters {
+  real<lower=0> sig_b;
+  real<lower=0> sig_h;
+  real<lower=0> sig_e;
+  real<lower=-1, upper=1> rho;
+  real b0;
+  real b1;
+  real b2;
+  real b3;
+  vector[S] evo_re;
+  vector[N] bb_re;
+  vector[H] hh_re;
+}
+
+
+transformed parameters {
+  array[N] matrix[D,D] cov_1;
+  array[N] matrix[D,D] cov;
+  array[N] vector[D] yhat;
+  
+  for (n in 1:N){
+     yhat[n] = b0 * ones + 
+                  b1 * time[n] + 
+                  b2 * X1[n] * ones + 
+                  b3 * X2[n] * ones + 
+                  bb_re[n] * ones + 
+                  evo_re[evo_id[n]] * ones +
+                  hh_re[env_id[n]] * ones;
+     cov_1[n] = pow(rho, time_diff[n]);
+     cov[n] = sig_e * cov_1[n];
+  } 
+}
+
+model {
+  for (n in 1:N) {
+    Y[n] ~ multi_normal(yhat[n], cov[n]);
+  }
+  bb_re ~ normal(0, sig_b);
+  hh_re ~ normal(0, sig_h);
+  b0 ~ normal(0, 5);
+  b1 ~ normal(0, 5);
+  b2 ~ normal(0, 5);
+  evo_re ~ multi_normal(zero, evo);
+  sig_b ~ gamma(3, 2);
+  sig_e ~ gamma(1, 1);
+  sig_h ~ gamma(3, 2);
+  rho ~ uniform(-1, 1);
+}
+
+```
+
+## R Code
+
+```{r}
+#| eval: false
+#| echo: true
+
+
+# Loading R Packages
+library(mvtnorm)
+library(tidyverse)
+library(lme4)
+library(cmdstanr)
+library(bayesplot)
+
+## Compiling Stan Model to make executable
+model <- cmdstan_model(stan_file='~/Dropbox/Machine/new.stan')
+
+# Creating function
+kubrick <- function(k=NULL){
+  
+# Creating covariance matrix
+x1 <- c(1.00, 0.80, 0.10)
+x2 <- c(0.80, 1.30, 0.43)
+x3 <- c(0.10, 0.43, 1.90)
+cov_x <- as.matrix(rbind(x1, x2, x3))
+# Simulating species RE
+species_re <- rmvnorm(1, sigma = cov_x)
+# Simulating env RE
+env_re <- rnorm(5, sd = sqrt(1.5))
+
+# Setting Parameters
+sig <- 1.5
+rho <- 0.2
+b0 <- 3
+b1 <- 1.1
+b2 <- 2.1
+b3 <- -1.7
+
+# Constructing Fake Data Set
+iv <- 1
+df <- data.frame()
+for (i in 1:3){
+  for (ii in 1:5){
+    for (iii in 1:20){
+      bb <- rnorm(1, sd = sqrt(0.8))
+      time_shift <- rmvnorm(1, rep(0, 3), diag(rep(0.00001,3)))
+      time <- seq(0, 1, length.out = 4) + c(0, time_shift)
+      sigs <- (rho**as.matrix(dist(time, diag = T, upper = T)))*sig
+      x1 <- rbinom(1, 1, 0.5)
+      x2 <- rbinom(1, 1, 0.5)
+      mu <- species_re[i] + env_re[ii] + b0 + b1 * time +  b2 * x1 + b3 * x2 + bb
+      y <- rmvnorm(1, mu, sigs)
+      df <- rbind.data.frame(df, 
+                             data.frame(t(rbind(y=y, 
+                                                x1=x1,
+                                                x2=x2,
+                                                time=time, 
+                                                bb=bb, 
+                                                mu = mu,
+                                                time_id = 1:4,
+                                                i = i,
+                                                ii = ii,
+                                                iii = iii,
+                                                id = iv))))
+      iv <- iv + 1
+    }
+  }
+}
+
+#df |> head()
+#df |> dim()
+#df |> select(id) |> table()
+# Data Editing and extracting variables for stan
+times <- df |> 
+  pivot_wider(id_cols = id, names_from = time_id, values_from = time)  |> 
+  select(-id) |> 
+  as.matrix()
+
+Y <- df |> 
+  pivot_wider(id_cols = id, names_from = time_id, values_from = V1)  |> 
+  select(-id) |> 
+  as.matrix()
+
+time_diff <- array(dim = c(300, 4, 4))
+for (i in 1:300){
+  time_diff[i,,] <- times[i,] |> dist(diag = T, upper = T) |> as.matrix()
+}
+
+evo_id <- df |> pivot_wider(id_cols = id, names_from = time_id, values_from = i) |> 
+  select(`1`) |> as.vector() |> unlist() |> as.numeric()
+env_id <- df |> pivot_wider(id_cols = id, names_from = time_id, values_from = ii) |> 
+  select(`1`) |> as.vector() |> unlist() |> as.numeric()
+
+
+X1 <- df |> pivot_wider(id_cols = id, names_from = time_id, values_from = x1) |> 
+  select(`1`) |> as.vector() |> unlist() |> as.numeric()
+
+X2 <- df |> pivot_wider(id_cols = id, names_from = time_id, values_from = x2) |> 
+  select(`1`) |> as.vector() |> unlist() |> as.numeric()
+
+# Contruct Data list for stan
+data <- list(
+  N = 300,
+  D = 4,
+  S = 3,
+  H = 5,
+  X1 = X1,
+  X2 = X2,
+  evo = cov_x,
+  evo_id = evo_id,
+  env_id = env_id,
+  time = times,
+  time_diff = time_diff,
+  Y = Y
+)
+
+
+# Fit Model with MCMC
+fit <- model$sample(data=data,
+                    iter_warmup = 10000,
+                    iter_sampling = 15000,
+                    thin = 5,
+                    adapt_delta = 0.9)
+results <- fit$summary()
+# Return data set and MCMC
+return(list(data = data, fit = fit))
+
+}
+
+## Execute Function in Parallel
+kubrick()
+
+## Save the 
+save(res, "~/Dropbox/Machine/res/save.RData")
+
+```
