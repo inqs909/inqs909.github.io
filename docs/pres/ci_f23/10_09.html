@@ -687,13 +687,14 @@ Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} 
 <section id="environmental-specific-random-effects" class="slide level2">
 <h2>Environmental-Specific Random Effects</h2>
 <p><span class="math display">\[
-\boldsymbol b_i = (b_{i0}, b_{i1})^\mathrm T \sim N_2(\boldsymbol 0, \boldsymbol \Sigma_b)
+\boldsymbol b_{env} = (b_{in}, b_{bw}, b_{out})^\mathrm T \sim N_3(\boldsymbol 0, \sigma^2_b\boldsymbol I_3)
 \]</span></p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3 id="mean-vector-1">Mean Vector</h3>
 <p><span class="math display">\[
 \boldsymbol 0 = \left(\begin{array}{c}
+0 \\
 0 \\
 0
 \end{array}
@@ -703,8 +704,9 @@ Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} 
 <h3 id="covariance-matrix-1">Covariance Matrix</h3>
 <p><span class="math display">\[
 \boldsymbol \Sigma_b = \left(\begin{array}{cc}
-\sigma_{b0}^2 &amp; \sigma_{b01} \\
-\sigma_{b01} &amp; \sigma_{b1}^2
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1  
 \end{array}
 \right)
 \]</span></p>
@@ -736,7 +738,7 @@ Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} 
 <section id="species-random-effects" class="slide level2">
 <h2>Species Random Effects</h2>
 <p><span class="math display">\[
-\boldsymbol b_i = (b_{i0}, b_{i1})^\mathrm T \sim N_2(\boldsymbol 0, \boldsymbol \Sigma_b)
+\boldsymbol b_evo = (b_{cat}, b_{sil}, b_{mar})^\mathrm T \sim N_3(\boldsymbol 0, \boldsymbol \Sigma_{evo})
 \]</span></p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -1026,7 +1028,7 @@ x^{(t)} &amp; \mathrm{with\ probability\ } 1-q(x^{(t)}, y)
 \]</span></li>
 </ol>
 <p><span class="math display">\[
-q(x,y) = \min\left\{\frac{f(y)q(x|y)}{f(x)q(y|x)}\right\}
+q(x,y) = \min\left\{\frac{f(y)q(x|y)}{f(x)q(y|x)},1\right\}
 \]</span></p>
 </section>
 <section id="gibbs-sampler" class="slide level2">
@@ -1344,7 +1346,7 @@ q(x,y) = \min\left\{\frac{f(y)q(x|y)}{f(x)q(y|x)}\right\}
 <span id="cb2-123"><a href="#cb2-123"></a><span class="do">## Execute Function in Parallel</span></span>
 <span id="cb2-124"><a href="#cb2-124"></a><span class="fu">kubrick</span>()</span>
 <span id="cb2-125"><a href="#cb2-125"></a></span>
-<span id="cb2-126"><a href="#cb2-126"></a><span class="do">## Save the </span></span>
+<span id="cb2-126"><a href="#cb2-126"></a><span class="do">## Save the results</span></span>
 <span id="cb2-127"><a href="#cb2-127"></a><span class="fu">save</span>(res, <span class="st">"~/Dropbox/Machine/res/save.RData"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>

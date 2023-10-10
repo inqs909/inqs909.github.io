@@ -421,7 +421,7 @@ $$
 ## Environmental-Specific Random Effects
 
 $$
-\boldsymbol b_i = (b_{i0}, b_{i1})^\mathrm T \sim N_2(\boldsymbol 0, \boldsymbol \Sigma_b)
+\boldsymbol b_{env} = (b_{in}, b_{bw}, b_{out})^\mathrm T \sim N_3(\boldsymbol 0, \sigma^2_b\boldsymbol I_3)
 $$
 
 ::: columns
@@ -430,6 +430,7 @@ $$
 
 $$
 \boldsymbol 0 = \left(\begin{array}{c}
+0 \\
 0 \\
 0
 \end{array}
@@ -442,8 +443,9 @@ $$
 
 $$
 \boldsymbol \Sigma_b = \left(\begin{array}{cc}
-\sigma_{b0}^2 & \sigma_{b01} \\
-\sigma_{b01} & \sigma_{b1}^2 
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1  
 \end{array}
 \right)
 $$
@@ -477,7 +479,7 @@ $$
 ## Species Random Effects
 
 $$
-\boldsymbol b_i = (b_{i0}, b_{i1})^\mathrm T \sim N_2(\boldsymbol 0, \boldsymbol \Sigma_b)
+\boldsymbol b_evo = (b_{cat}, b_{sil}, b_{mar})^\mathrm T \sim N_3(\boldsymbol 0, \boldsymbol \Sigma_{evo})
 $$
 
 ::: columns
@@ -913,7 +915,7 @@ Given $x^{(t)}$ and targeting $f(x)$
     $$
 
 $$
-q(x,y) = \min\left\{\frac{f(y)q(x|y)}{f(x)q(y|x)}\right\}
+q(x,y) = \min\left\{\frac{f(y)q(x|y)}{f(x)q(y|x)},1\right\}
 $$
 
 ## Gibbs Sampler
@@ -1245,7 +1247,7 @@ return(list(data = data, fit = fit))
 ## Execute Function in Parallel
 kubrick()
 
-## Save the 
+## Save the results
 save(res, "~/Dropbox/Machine/res/save.RData")
 
 ```
