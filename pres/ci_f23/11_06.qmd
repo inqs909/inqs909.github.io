@@ -1,0 +1,22 @@
+---
+title: "Bootstrapping and Unicorns"
+author: "Isaac Quintanilla Salinas"
+format: 
+  revealjs:
+    touch: false
+    controls: true
+    pointer:
+      pointerSize: 32
+    incremental: false
+    slide-number: true
+    css: styles.css
+knitr:
+  opts_chunk: 
+    echo: true
+    eval: true
+    message: false
+    warnings: false
+    comment: "#>" 
+revealjs-plugins:
+  - pointer
+---
