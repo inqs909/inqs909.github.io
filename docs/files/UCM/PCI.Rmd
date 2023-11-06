@@ -57,7 +57,7 @@ RBib<-ReadBib("RBIB.bib",check = F)
 
 This presentation is available at:
 
-[gitlab.com/inqs909/vcm](https://gitlab.com/inqs909/vcm)
+[https://www.inqs.info/files/UCM/PCI.html](https://www.inqs.info/files/UCM/PCI.html)
 
 ---
 ## Table of Contents
@@ -300,7 +300,7 @@ bias\left\lbrace\hat{\boldsymbol a}(t_0)\right\rbrace=2^{-1}h^2\mu_2\boldsymbol 
 --
 
 \begin{equation}
-cov\{\hat{\boldsymbol a}(t_0)\}=\lbrace nh f(_0)E(XX^\mathrm T|T=t_0)\rbrace^{-1}\nu_0\sigma^2(t_0)
+cov\{\hat{\boldsymbol a}(t_0)\}=\lbrace nh f(t_0)E(XX^\mathrm T|T=t_0)\rbrace^{-1}\nu_0\sigma^2(t_0)
 \end{equation}
 
 --
