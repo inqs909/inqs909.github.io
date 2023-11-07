@@ -9,6 +9,7 @@ project:
     - "photos/"
     - "resources/"
     - "cv/"
+    - "p/"
 
   
 website:
