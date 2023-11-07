@@ -13,7 +13,7 @@ format:
 knitr:
   opts_chunk: 
     echo: true
-    eval: true
+    eval: false
     message: false
     warnings: false
     comment: "#>" 
@@ -114,4 +114,25 @@ R Projects are designed to contain all your data, scripts, and output in one loc
 
 # Loading Data
 
+## Downloading Data Data
+
+```{r}
+#| echo: true
+#| eval: false
+u <- "https://www.inqs.info/p/plotathon/owenWilsonWows.csv"
+basename(u)
+download.file(u,
+              file.path(getwd(), "data", basename(u)))
+
+```
+
 ## Loading Data
+
+```{r}
+#| eval: false
+mds <- read_csv("data/oewnWilsonWows.csv")
+```
+
+# Plotting
+
+# Esquisse
