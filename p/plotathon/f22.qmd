@@ -130,11 +130,94 @@ download.file(u,
 
 ```{r}
 #| eval: false
-mds <- read_csv("data/oewnWilsonWows.csv")
+mds <- read_csv("data/owenWilsonWows.csv")
 ```
 
 # Plotting
 
-## Plotting
+## Base Plot
+
+```{r}
+mds |> ggplot(aes(x = total_wows_in_movie)) 
+```
+
+## Histogram
+
+```{r}
+mds |> ggplot(aes(x = total_wows_in_movie)) +
+  geom_histogram()
+```
+
+## Box Plot
+
+```{r}
+mds |> ggplot(aes(x = total_wows_in_movie)) +
+  geom_boxplot()
+```
+
+## Density Plot
+
+```{r}
+mds |> ggplot(aes(x = total_wows_in_movie)) +
+  geom_density()
+```
+
+## Box Plot By Category
+
+```{r}
+mds |> ggplot(aes(x = total_wows_in_movie, y = era)) +
+  geom_boxplot()
+```
+
+## Density Plot By Category
+
+```{r}
+mds |> ggplot(aes(x = total_wows_in_movie, color = era)) +
+  geom_density()
+```
+
+## Scatter Plot
+
+```{r}
+mds |> ggplot(aes(x = durationInSeconds, 
+                  y = total_wows_in_movie)) +
+  geom_point()
+```
+
+## Scatter Plot by Group
+
+```{r}
+mds |> ggplot(aes(x = durationInSeconds, 
+                  y = total_wows_in_movie, color = era)) +
+  geom_point()
+```
+
+## Add Regression Line
+
+```{r}
+mds |> ggplot(aes(x = durationInSeconds, 
+                  y = total_wows_in_movie)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = F)
+```
+
+## Smooth Line
+
+```{r}
+mds |> ggplot(aes(x = durationInSeconds, 
+                  y = total_wows_in_movie)) +
+  geom_point() +
+  geom_smooth(se = F)
+```
+
+## Regression Lines by Group
+
+```{r}
+mds |> ggplot(aes(x = durationInSeconds, 
+                  y = total_wows_in_movie,
+                  color = era)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = F)
+```
 
 # Esquisse

@@ -613,7 +613,7 @@
     "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
     "title": "RcppArmadillo",
     "section": "Using RcppArmadillo",
-    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] -0.001324045\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] -0.001324045\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.26µs   3.53µs   267862.        0B        0\n2 mean_cpp(Y)   1.83µs   2.79µs   372474.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
+    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] -0.0715284\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] -0.0715284\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.26µs   3.58µs   261676.        0B        0\n2 mean_cpp(Y)   1.84µs   2.81µs   330474.    7.67KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
   },
   {
     "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
@@ -858,14 +858,84 @@
     "href": "p/plotathon/f22.html#loading-data-1",
     "title": "Plotathon",
     "section": "Loading Data",
-    "text": "Loading Data\n\nmds &lt;- read_csv(\"data/oewnWilsonWows.csv\")"
+    "text": "Loading Data\n\nmds &lt;- read_csv(\"data/owenWilsonWows.csv\")"
   },
   {
-    "objectID": "p/plotathon/f22.html#plotting-1",
-    "href": "p/plotathon/f22.html#plotting-1",
+    "objectID": "p/plotathon/f22.html#base-plot",
+    "href": "p/plotathon/f22.html#base-plot",
     "title": "Plotathon",
-    "section": "Plotting",
-    "text": "Plotting"
+    "section": "Base Plot",
+    "text": "Base Plot\n\nmds |&gt; ggplot(aes(x = total_wows_in_movie))"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#histogram",
+    "href": "p/plotathon/f22.html#histogram",
+    "title": "Plotathon",
+    "section": "Histogram",
+    "text": "Histogram\n\nmds |&gt; ggplot(aes(x = total_wows_in_movie)) +\n  geom_histogram()"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#box-plot",
+    "href": "p/plotathon/f22.html#box-plot",
+    "title": "Plotathon",
+    "section": "Box Plot",
+    "text": "Box Plot\n\nmds |&gt; ggplot(aes(x = total_wows_in_movie)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#density-plot",
+    "href": "p/plotathon/f22.html#density-plot",
+    "title": "Plotathon",
+    "section": "Density Plot",
+    "text": "Density Plot\n\nmds |&gt; ggplot(aes(x = total_wows_in_movie)) +\n  geom_density()"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#box-plot-by-category",
+    "href": "p/plotathon/f22.html#box-plot-by-category",
+    "title": "Plotathon",
+    "section": "Box Plot By Category",
+    "text": "Box Plot By Category\n\nmds |&gt; ggplot(aes(x = total_wows_in_movie, y = era)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#density-plot-by-category",
+    "href": "p/plotathon/f22.html#density-plot-by-category",
+    "title": "Plotathon",
+    "section": "Density Plot By Category",
+    "text": "Density Plot By Category\n\nmds |&gt; ggplot(aes(x = total_wows_in_movie, color = era)) +\n  geom_density()"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#scatter-plot",
+    "href": "p/plotathon/f22.html#scatter-plot",
+    "title": "Plotathon",
+    "section": "Scatter Plot",
+    "text": "Scatter Plot\n\nmds |&gt; ggplot(aes(x = durationInSeconds, \n                  y = total_wows_in_movie)) +\n  geom_point()"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#scatter-plot-by-group",
+    "href": "p/plotathon/f22.html#scatter-plot-by-group",
+    "title": "Plotathon",
+    "section": "Scatter Plot by Group",
+    "text": "Scatter Plot by Group\n\nmds |&gt; ggplot(aes(x = durationInSeconds, \n                  y = total_wows_in_movie, color = era)) +\n  geom_point()"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#add-regression-line",
+    "href": "p/plotathon/f22.html#add-regression-line",
+    "title": "Plotathon",
+    "section": "Add Regression Line",
+    "text": "Add Regression Line\n\nmds |&gt; ggplot(aes(x = durationInSeconds, \n                  y = total_wows_in_movie)) +\n  geom_point() +\n  geom_smooth(method = \"lm\", se = F)"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#smooth-line",
+    "href": "p/plotathon/f22.html#smooth-line",
+    "title": "Plotathon",
+    "section": "Smooth Line",
+    "text": "Smooth Line\n\nmds |&gt; ggplot(aes(x = durationInSeconds, \n                  y = total_wows_in_movie)) +\n  geom_point() +\n  geom_smooth(se = F)"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#regression-lines-by-group",
+    "href": "p/plotathon/f22.html#regression-lines-by-group",
+    "title": "Plotathon",
+    "section": "Regression Lines by Group",
+    "text": "Regression Lines by Group\n\nmds |&gt; ggplot(aes(x = durationInSeconds, \n                  y = total_wows_in_movie,\n                  color = era)) +\n  geom_point() +\n  geom_smooth(method = \"lm\", se = F)"
   },
   {
     "objectID": "photos/heart/index.html",
