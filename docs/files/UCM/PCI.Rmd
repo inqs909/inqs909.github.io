@@ -221,9 +221,14 @@ gg.curve + transition_reveal(x)
 Bandwidth and Kernel Function
 
 ```{r,echo=FALSE,fig.align='center',fig.width=12,message=FALSE,warning=FALSE}
+xxx <- runif(100, 0, 1)
 gg.curve <- ggplot(data=data.frame(x=seq(0,1,length.out = 100),y=sin(pi*seq(0,1,length.out=100))))+geom_line(aes(x=x,y=y),col="red")+geom_line(data=data.frame(x=seq(0,0.5,length.out=50),y=sin(pi*seq(0,0.5,length.out=50))+rnorm(50,0,0.01)),aes(x=x,y=y),col="blue")+theme_bw()+
   geom_rect(aes(xmin=.4,xmax=.6,ymin=0,ymax=Inf,fill="gray87"),alpha=0.002)+
-  geom_polygon(data = data.frame(x=seq(0.4,0.6,length.out = 50),y=Kh.vec.t(seq(0.4,0.6,length.out = 50),0.5,0.1)/20),aes(x=x,y=y))+guides(fill=FALSE)
+  geom_polygon(data = data.frame(x=seq(0.4,0.6,length.out = 50),
+                                 y=Kh.vec.t(seq(0.4,0.6,length.out = 50),0.5,0.1)/20),
+               aes(x=x,y=y))+
+  guides(fill=FALSE) + 
+  geom_point(data.frame(x= xxx , y = sin(pi*xxx) + rnorm(100, sd = 0.1)), mapping=aes(x=x, y=y), size = 3, col = "brown")
 
   
 gg.curve
@@ -367,6 +372,17 @@ Longitudinal data have correlated repeated measurements; therefore, the correlat
 
 Due to mispecification of the correlation matrix, the standard errors may be biased. An alternative method is to estimate the standard errors via bootstrap. 
 
+- Draw a bootstrap sample by sampling $n$ participants from the data with replacement
+- Apply the algorithm
+- Repeat Steps 1 and 2 for $B$ bootstrap samples
+- Compute $\hat f_b(t)$, and obtain the standard error of $\hat f(t)$:
+
+$$
+    SE\{\hat f(t)\} = \sqrt{\frac{1}{B}\sum^B_{b=1}\{\hat f_b(t)-\bar f(t)\}^2},
+$$
+
+- with $\bar f(t)=\frac{1}{B}\sum^B_{b=1}\hat f_b(t)$.
+
 
 ---
 layout: false
@@ -443,12 +459,13 @@ ggplot(data=gg.df.norm)+
       xlab("Time")+ylab("Measurement")+theme_bw()+labs(color="")+
       scale_linetype_manual("",values=c("solid","solid","dashed", "dashed","dotted","dotted"),limits = c("Truth", "Estimated", "2.5th Percentile","97.5th Percentile","95% CI Lower Limit","95% CI Upper Limit"))+
       scale_color_manual(values=c('blue','green1',"blue",'blue','green1','green1'),limits = c("Truth", "Estimated", "2.5th Percentile","97.5th Percentile","95% CI Lower Limit","95% CI Upper Limit"))
+
 ```
 ---
 ## Normal Data Results
 ```{r,echo=FALSE,fig.align='center',fig.width=12}
 ggplot(data=gg.df.norm)+
-      geom_line(aes(x=t,y=X2,group=ind,color=ind,linetype=ind))+
+      geom_line(aes(x=t,y=X1,group=ind,color=ind,linetype=ind))+
       xlab("Time")+ylab("Measurement")+theme_bw()+labs(color="")+
       scale_linetype_manual("",values=c("solid","solid","dashed", "dashed","dotted","dotted"),limits = c("Truth", "Estimated", "2.5th Percentile","97.5th Percentile","95% CI Lower Limit","95% CI Upper Limit"))+
       scale_color_manual(values=c('blue','green1',"blue",'blue','green1','green1'),limits = c("Truth", "Estimated", "2.5th Percentile","97.5th Percentile","95% CI Lower Limit","95% CI Upper Limit"))
