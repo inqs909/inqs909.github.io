@@ -16,7 +16,7 @@
 <script src="../../site_libs/quarto-contrib/sc-sb-title-1.0.0/sc_sb_title.js" defer="true"></script>
 <link href="../../site_libs/quarto-contrib/grid-htext-1.0.0/grid_htext.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/reveal-auto-agenda-0.0.1/reveal-auto-agenda.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.506">
 
   <title>INQS - One- &amp; Two-Way ANOVA</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -38,7 +38,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -231,7 +231,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -496,7 +497,7 @@
 <section id="rejection-region-1" class="slide level2">
 <h2>Rejection Region</h2>
 
-<img data-src="https://www.researchgate.net/publication/333914148/figure/fig1/AS:772049484128256@1561082349475/Rejection-and-non-rejection-regions-of-the-null-hypothesis.png" class="r-stretch quarto-figure-center"></section>
+<img data-src="https://www.researchgate.net/publication/333914148/figure/fig1/AS:772049484128256@1561082349475/Rejection-and-non-rejection-regions-of-the-null-hypothesis.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="rejecting-the-null-hypothesis" class="slide level2">
 <h2>Rejecting the Null Hypothesis</h2>
 <p>The p-value approach is one of the most common methods to report significant results. It is easier to interpret the p-value because it provides the probability of observing our test statistics, or something more extreme, given that the null hypothesis is true. Depending on the type of test, your p-value may be constructed as:</p>
@@ -941,7 +942,11 @@
 <div id="tabset-2-3">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="anova_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -973,7 +978,11 @@
 <div id="tabset-3-3">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="anova_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1110,7 +1119,11 @@
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">plot</span>(two_aov, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="anova_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1130,7 +1143,11 @@
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">plot</span>(two_aov, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="anova_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1197,7 +1214,11 @@
 <div id="tabset-8-2">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="anova_files/figure-revealjs/unnamed-chunk-19-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1250,7 +1271,6 @@
       Reveal.initialize({
 'controlsAuto': false,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1551,10 +1571,9 @@
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1564,8 +1583,17 @@
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

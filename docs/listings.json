@@ -11,18 +11,10 @@
     ]
   },
   {
-    "listing": "/blog.html",
-    "items": [
-      "/blog/2023-01-27-wellness-plan-spring-2023/index.html",
-      "/blog/2021-05-03-smart-program/index.html",
-      "/blog/2021-04-20-incorporating-rcpp/index.html",
-      "/blog/2021-04-15-rcpp-and-research/index.html",
-      "/blog/welcome/index.html"
-    ]
-  },
-  {
     "listing": "/books.html",
     "items": [
+      "/books/11-Inclusive-Teaching/index.html",
+      "/books/10-Thrivers/index.html",
       "/books/09-Solito/index.html",
       "/books/08-Limitless-Mind/index.html",
       "/books/07-Make-it-Stick/index.html",
@@ -31,7 +23,18 @@
       "/books/04-Black-In-A-White-Coat/index.html",
       "/books/03-Educated/index.html",
       "/books/01-Teach-your-students-how-to-learn/index.html",
-      "/books/02-Small-Teaching/index.html"
+      "/books/02-Small-Teaching/index.html",
+      "/books/12-Why-Dont-Like-School/index.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/blog/2023-01-27-wellness-plan-spring-2023/index.html",
+      "/blog/2021-05-03-smart-program/index.html",
+      "/blog/2021-04-20-incorporating-rcpp/index.html",
+      "/blog/2021-04-15-rcpp-and-research/index.html",
+      "/blog/welcome/index.html"
     ]
   }
 ]
