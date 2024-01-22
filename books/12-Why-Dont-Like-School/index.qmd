@@ -1,6 +1,6 @@
 ---
 title: "Why Don't Students Like School?"
-date: "2023-01-10"
+date: "2024-01-10"
 image: https://pbs.twimg.com/media/Eb2NhLhXQAA8rCZ.jpg
 categories: [learning]
 ---

@@ -10,7 +10,42 @@
 <atom:link href="www.inqs.info/books.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.4.506</generator>
-<lastBuildDate>Thu, 28 Dec 2023 08:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 10 Jan 2024 08:00:00 GMT</lastBuildDate>
+<item>
+  <title>Why Don’t Students Like School?</title>
+  <link>www.inqs.info/books/12-Why-Dont-Like-School/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Book
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Why Don’t Students Like School?: A Cognitive Scientist Answers Questions About How the Mind Works and What It Means for the Classroom</p>
+<p>Daniel Willingham</p>
+<section id="book-availability" class="level2">
+<h2 class="anchored" data-anchor-id="book-availability">Book Availability</h2>
+<p><a href="https://www.amazon.com/Why-Dont-Students-Like-School/dp/1119715660/ref=sr_1_1?crid=TE7L6FNMKP20&amp;dib=eyJ2IjoiMSJ9.sr4CrVEO7XhsEOYELyFBV0qKTpgCKx1xwKvAccRnQX5OsgiXOY_QUVowaYEWUsLcLiCPZpkb2eJweNk7b6AVTTHTkJnvcKOc96Em8o-dlXSgzg2fMYlxZeyqed_4atmggiZGZASR3qPoG5CtDxNoSxDEGSOIHbIkjXd9NYXNq96JL87vAOSjyLz6jzuszTlI1oSt2jP7ID3PCx_6x5kAEVb39Nmf8I42LtiRsi277no.yyO0MtrbirfWHcxi3elf_qpxlyJ6VGtash0R98qtbvA&amp;dib_tag=se&amp;keywords=why+students+don%27t+like+school&amp;qid=1705913176&amp;s=books&amp;sprefix=Why+Students%2Cstripbooks%2C143&amp;sr=1-1">Amazon Link</a></p>
+</section>
+</div>
+</div>
+
+
+
+ ]]></description>
+  <category>learning</category>
+  <guid>www.inqs.info/books/12-Why-Dont-Like-School/</guid>
+  <pubDate>Wed, 10 Jan 2024 08:00:00 GMT</pubDate>
+  <media:content url="https://pbs.twimg.com/media/Eb2NhLhXQAA8rCZ.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Inclusive teaching</title>
   <link>www.inqs.info/books/11-Inclusive-Teaching/</link>
@@ -469,41 +504,6 @@ Book Availability
   <guid>www.inqs.info/books/02-Small-Teaching/</guid>
   <pubDate>Mon, 26 Jun 2023 07:00:00 GMT</pubDate>
   <media:content url="https://images.squarespace-cdn.com/content/v1/5e9b1f63b456412b3606fdb7/e07bfdd5-0c15-4ba2-a26a-26169ed9d4f5/SmallTeaching2ndEd%28Green%29Standup.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Why Don’t Students Like School?</title>
-  <link>www.inqs.info/books/12-Why-Dont-Like-School/</link>
-  <description><![CDATA[ 
-
-
-
-
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Book
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Why Don’t Students Like School?: A Cognitive Scientist Answers Questions About How the Mind Works and What It Means for the Classroom</p>
-<p>Daniel Willingham</p>
-<section id="book-availability" class="level2">
-<h2 class="anchored" data-anchor-id="book-availability">Book Availability</h2>
-<p><a href="https://www.amazon.com/Why-Dont-Students-Like-School/dp/1119715660/ref=sr_1_1?crid=TE7L6FNMKP20&amp;dib=eyJ2IjoiMSJ9.sr4CrVEO7XhsEOYELyFBV0qKTpgCKx1xwKvAccRnQX5OsgiXOY_QUVowaYEWUsLcLiCPZpkb2eJweNk7b6AVTTHTkJnvcKOc96Em8o-dlXSgzg2fMYlxZeyqed_4atmggiZGZASR3qPoG5CtDxNoSxDEGSOIHbIkjXd9NYXNq96JL87vAOSjyLz6jzuszTlI1oSt2jP7ID3PCx_6x5kAEVb39Nmf8I42LtiRsi277no.yyO0MtrbirfWHcxi3elf_qpxlyJ6VGtash0R98qtbvA&amp;dib_tag=se&amp;keywords=why+students+don%27t+like+school&amp;qid=1705913176&amp;s=books&amp;sprefix=Why+Students%2Cstripbooks%2C143&amp;sr=1-1">Amazon Link</a></p>
-</section>
-</div>
-</div>
-
-
-
- ]]></description>
-  <category>learning</category>
-  <guid>www.inqs.info/books/12-Why-Dont-Like-School/</guid>
-  <pubDate>Tue, 10 Jan 2023 08:00:00 GMT</pubDate>
-  <media:content url="https://pbs.twimg.com/media/Eb2NhLhXQAA8rCZ.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
