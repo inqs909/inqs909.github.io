@@ -1,0 +1,220 @@
+---
+format: 
+  pdf: 
+    documentclass: article
+    geometry:
+      - top=1in
+      - left=0.75in
+      - right=0.75in
+      - bottom=1in
+      - heightrounded
+    fontfamily: libertinus
+    colorlinks: true
+    fontsize: '16'
+    include-in-header: 
+      text: |
+        \usepackage{multicol}
+        \usepackage{lipsum}
+        \usepackage{hyperref}
+        \pagestyle{empty}
+        \setlength{\multicolsep}{2pt plus 1.0pt minus 0.75pt}% 50% of original values
+        \setlength{\columnsep}{3em}
+---
+
+<!-- TITLE -->
+
+```{=tex}
+\begin{huge}\begin{center}{\bf Isaac Noe Quintanilla Salinas}\end{center}\end{huge}
+```
+<!-- CONTACT INFO -->
+
+```{=tex}
+\begin{center}isaac.qs@csuci.edu ∙ \href{https://www.inqs.info}{www.inqs.info} 
+\end{center}
+\vspace{15pt}
+```
+<!-- EDUCATION: 1ST BULLET -->
+
+```{=tex}
+\begin{large}
+  {\bf Education}
+  \vspace{3pt}
+  \hrule
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf University of California, Riverside}\end{flushleft}
+    \begin{flushright}Riverside, CA\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}PhD: Applied Statistics\end{flushleft}
+    \begin{flushright}2022\end{flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+\end{large}
+```
+-   Dissertation: Multilevel Time-Varying Joint Models for Longitudinal and Survival Outcomes
+-   Advisor: Dr. Esra Kürüm
+
+<!-- EDUCATION: 2ND BULLET -->
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf San Diego State University}\end{flushleft}
+    \begin{flushright}San Diego, CA\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}MPH: Biometry\end{flushleft}
+    \begin{flushright}2015\end{flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+\end{large}
+```
+-   Capstone: Patient-Physician Communication and Infleunza Vaccine Uptake
+
+<!-- EDUCATION: 3rd Bullet -->
+
+```{=tex}
+\begin{large}
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf California State University Monterey Bay}\end{flushleft}
+    \begin{flushright}Seaside, CA\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+  \begin{multicols}{2}
+    \begin{flushleft}BS: Biology\end{flushleft}
+    \begin{flushright}2013\end{flushright}
+  \end{multicols}
+  \vspace{-0.25cm}
+  \textit{Minor in Mathematics}
+  \vspace{-0.25cm}
+\end{large}
+```
+-   Capstone: Phylogenic and Biochemical Analysis of novel *Acidovorax* Species isolated using Diazinon enrichment culture.
+
+<!-- Professional Appointments -->
+
+```{=tex}
+\begin{large}{\bf Professional Appointments}
+  \vspace{3pt}
+  \hrule
+  \begin{multicols}{2}
+    \begin{flushleft}{\bf Assisstant Professor}\end{flushleft}
+    \begin{flushright}Camarillo, CA\end{flushright}
+  \end{multicols}
+  \vspace{-0.17cm}
+    \begin{multicols}{2}
+    \begin{flushleft}California State University Channel Islands\end{flushleft}
+  \end{multicols}
+  \vspace{-0.25cm}
+  \begin{multicols}{2}
+    \begin{flushleft}Department of Mathematics\end{flushleft}
+  \end{multicols}
+  \vspace{-0.25cm}
+\end{large}
+\vspace{3pt}
+```
+
+
+\vspace{6pt}
+
+<!-- Publications -->
+
+```{=tex}
+\begin{large}
+  {\bf Publications}
+  \vspace{3pt}
+  \hrule
+\end{large}
+
+\begin{normalsize}
+  {\bf In-Review}
+  \vspace{3pt}
+\end{normalsize}
+```
+-   Magdaleno, Francisco, **Salinas INQ**, and Rothstein, Stephen. Vocal Functional Flexibility in a Non-Primate Vocal Learning Species. Journal of Language Evolution
+-   Hawkins LR, Magdaleno F, **Salinas INQ**, and Peer BD. Egg shape in an obligate brood parasite contributes to decreased temperature variation during incubation. Current Zoology
+
+```{=tex}
+\begin{normalsize}
+  {\bf Peer-Reviewed Journals}
+  \vspace{3pt}
+\end{normalsize}
+```
+-   Flores A., Parker Cappiello L., **Quintanilla Salinas I**. (2023) Challenges and successes of emergency online teaching in statistics courses. Journal of Statistics and Data Science Education. doi.org/10.1080/26939169.2023.2231036
+
+-   Gill AS, Perez L, **Salinas INQ**, Byers SR, Liu Y, Hickey BL, Zhong W, Hooley RJ. Selective Array-based Sensing of Anabolic Steroids in Aqueous Solution by Host:Guest Reporter Complexes. Chemistry. 2019. 25(7):1740-1745. doi: 10.1002/chem.201804854
+
+-   Bellettiere J, Chuang E, Hughes SC, **Quintanilla I**, Hofstetter CR, Hovell MF. Association Between Parental Barriers to Accessing a Usual Source of Care and Children's Receipt of Preventative Services. Public Health Reports. 2017. 132(3):316-325. doi:10.1177/0033354917699831
+
+-   Pretanvil JA, **Salinas IQ**, Piccioni DE. Glioblastoma in elderly: treatment patterns and survival. CNS Oncology. 2016. 6(1):19-28. doi: 10.2217/cns-2016-0023.
+
+-   Baldwin MR, Peterson E, Easthausen I, **Quintanilla I**, Colago E, Sonett JR, D'Ovidio F, Bacchetta M, Costa J, Diamond J, Christie JD, Arcasoy SM, Lederer DJ. Donor age and early graft failure after lung transplantation: a cohort study. Am J Transplant. 2013. 13(10):2685-95. Epub 2013/08/26. DOI: 10.1111/ajt.12428.
+
+```{=tex}
+\begin{normalsize}
+  {\bf Reports}
+  \vspace{3pt}
+\end{normalsize}
+```
+-   Santibáñez M, Yoon S, Britton J, **Quintanilla I**, Dowling SH, Noregia A, Fernandez A. Border Health Epidemiology Report 2015. California Department of Public Health Office of Binational and Border Health. 2016.
+
+-   Santibáñez M, Yoon S, **Quintanilla I**, Ta T, Fernandez A. Border Health Status Report 2012-2014. California Department of Public Health Office of Binational and Border Health. 2015.
+
+```{=tex}
+\begin{normalsize}
+  {\bf Posters}
+  \vspace{3pt}
+\end{normalsize}
+```
+-   **Quintanilla, I**. (2016). Geographic Distribution of Vaccine Personal Belief Exemptions in San Diego County. Poster presented at San Diego County Epidemiology Exchange. San Diego, CA.
+
+-   Reuter C., **Quintanilla I**., Bellettiere J., Berardi V., Robusto K., Hughes S., Hovell M. (2015). The Effect of Prompts to Increase Stair Use Among Escalator Users. Poster presented at SDSU Student Research Symposium. San Diego, CA.
+
+-   **Quintanilla Salinas I**, Munoz Brittany, Anastasia Steph, Haffa A. (2013). Phylogenetic and Biochemical Analysis of novel Acidovorax Species isolated using Diazinon enrichment culture. Poster presented at CSUMB Capstone Festival. Seaside, CA.
+
+
+
+
+```{=tex}
+\begin{large}{\bf Committees}
+  \vspace{3pt}
+  \hrule
+\end{large}
+\vspace{-0.16cm}
+```
+-   *Co-Chair*: CSUCI Data Science Program Development Task Force
+
+\vspace{6pt}
+
+```{=tex}
+\begin{large}{\bf Grants and Awards}
+  \vspace{3pt}
+  \hrule
+\end{large}
+\vspace{-0.16cm}
+```
+-   2023-2027: California Educational Learning Lab Grant - Building a Critical Mass for Data Science
+-   2023-2024: CSUCI Research, Scholarly, and Creative Activities Grant
+-   2021: CNAS DEI Scholarship
+-   2021: UCR Statistics Department Outstanding TA Award
+-   2020-2021: Graduate Research Mentorship Fellowship
+-   2016-2019: Eugene Cota-Robles Fellowship
+-   2013: SDSU Graduate Equity Fellowship
+-   2013: CSUMB Capstone Grant
+
+<!-- SKILLS -->
+
+```{=tex}
+\begin{large}{\bf SKILLS}
+  \vspace{3pt}
+  \hrule
+\end{large}
+\vspace{-0.16cm}
+```
+-   **Languages:** R, Bash, Git, C++, Markdown, SAS, SPSS, ArcGIS, LaTeX
+
+-   **Tools:** SAS, SPSS, ArcGIS, LaTeX
+
+-   **OS:** Windows and Linux\

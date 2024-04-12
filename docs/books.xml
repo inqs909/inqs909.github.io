@@ -10,7 +10,42 @@
 <atom:link href="www.inqs.info/books.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.4.506</generator>
-<lastBuildDate>Wed, 10 Jan 2024 08:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 01 Apr 2024 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>A People’s History of Science</title>
+  <link>www.inqs.info/books/13-Peoples-History-Science/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Book
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A People’s History of Science: Miners, Midwives, and Low Mechanicks</p>
+<p>Clifford Conner</p>
+<section id="book-availability" class="level2">
+<h2 class="anchored" data-anchor-id="book-availability">Book Availability</h2>
+<p><a href="https://www.amazon.com/Peoples-History-Science-Clifford-Conner/dp/1560257482">Amazon Link</a></p>
+</section>
+</div>
+</div>
+
+
+
+ ]]></description>
+  <category>learning</category>
+  <guid>www.inqs.info/books/13-Peoples-History-Science/</guid>
+  <pubDate>Mon, 01 Apr 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://pbs.twimg.com/media/Eb2NhLhXQAA8rCZ.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Why Don’t Students Like School?</title>
   <link>www.inqs.info/books/12-Why-Dont-Like-School/</link>

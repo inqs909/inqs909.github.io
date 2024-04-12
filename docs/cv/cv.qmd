@@ -29,7 +29,7 @@ format:
 <!-- CONTACT INFO -->
 
 ```{=tex}
-\begin{center}isaac.qs@csuci.edu ∙ \href{https://www.inqs.info}{www.inqs.info} ∙ \href{https://github.com/inqs909}{Github} 
+\begin{center}isaac.qs@csuci.edu ∙ \href{https://www.inqs.info}{www.inqs.info} 
 \end{center}
 \vspace{15pt}
 ```
@@ -53,8 +53,7 @@ format:
 \end{large}
 ```
 -   Dissertation: Multilevel Time-Varying Joint Models for Longitudinal and Survival Outcomes
-
-\vspace{0.2cm}
+-   Advisor: Dr. Esra Kürüm
 
 <!-- EDUCATION: 2ND BULLET -->
 
@@ -141,7 +140,7 @@ format:
 ```
 -   Developed a novel statistical model to capture the time-dynamic association between longitudinal and survival outcomes.
 
-\vspace{7pt}
+\vspace{6pt}
 
 <!-- EXPERIENCE : 2ND BULLET -->
 
@@ -163,7 +162,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
--   Evaluating the relationship between religiosity and participation barriers and benefits to cancer clinical trials among Hispanic Americans. We used different psychometrics to measure religiosity and participation in cancer clinical trials. We used basic correlation to measure the association. \vspace{7pt}
+-   Evaluating the relationship between religiosity and participation barriers and benefits to cancer clinical trials among Hispanic Americans. We used different psychometrics to measure religiosity and participation in cancer clinical trials. We used basic correlation to measure the association. \vspace{6pt}
 
 <!-- EXPERIENCE : 2ND BULLET -->
 
@@ -185,7 +184,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
--   Evaluating the relationship between certain demographics and antibiotic usage behaviors among shigellosis cases in the California-Mexico Border Regions. I created basic descriptive statistics and bivariate statistics to test the association between characteristics. I created a visual graphs to guide the analysis such as displaying the antibiotic duration by patient. \vspace{7pt}
+-   Evaluating the relationship between certain demographics and antibiotic usage behaviors among shigellosis cases in the California-Mexico Border Regions. I created basic descriptive statistics and bivariate statistics to test the association between characteristics. I created a visual graphs to guide the analysis such as displaying the antibiotic duration by patient. \vspace{6pt}
 
 <!-- EXPERIENCE : 2ND BULLET -->
 
@@ -209,7 +208,7 @@ format:
 ```
 -   Performed a spatial analysis on the geographic distribution on vaccine exemption rates among kindergarten students in Los Angeles County. Conducted a literature review to learn more about different spatial statistics, vaccine-preventable-diseases, and personal belief exemptions.
 
-\vspace{7pt}
+\vspace{6pt}
 
 <!-- EXPERIENCE : 2ND BULLET -->
 
@@ -233,7 +232,7 @@ format:
 ```
 -   Project Fresh Air is an intervention study to see how the behaviors of participants change once knowing the air quality in their homes. I helped with day to day tasks from collecting both biological samples to creating visual charts in R while learning about intervention studies.
 
-\vspace{7pt}
+\vspace{6pt}
 
 <!-- EXPERIENCE : 3RD BULLET -->
 
@@ -276,11 +275,13 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
+-   MATH 201: Elementary Statistics
 -   MATH 352: Probability and Statistics
+-   MATH 398: Advance Research Investigation
 -   MATH 408: Advance Data Analysis
 -   MATH 453: Mathematical Statistics
 
-\vspace{7pt}
+\vspace{6pt}
 
 ```{=tex}
 \begin{large}
@@ -300,7 +301,7 @@ format:
 -   STAT 127: Introduction to Quality Management
 -   STAT 147: Introduction to Statistical Computing
 
-\vspace{7pt}
+\vspace{6pt}
 
 ```{=tex}
 \begin{large}
@@ -321,7 +322,7 @@ format:
 -   STAT 100: Introduction to Statistics
 -   STAT 170: Regression and ANOVA
 
-\vspace{7pt}
+\vspace{6pt}
 
 ```{=tex}
 \begin{large}
@@ -342,7 +343,7 @@ format:
 ```
 -   Developed, coordinated and mentored for the Statistical Mentoring in Applied, Research, and Technology (SMART) Program. Developed a mentoring program for undergraduate students to be mentored by graduate students for a quarter. Coordinated the pilot program in Spring 2021. Mentored an undergraduate student in developing an R package to teach advanced statistical techniques.
 
-\vspace{7pt}
+\vspace{6pt}
 
 ```{=tex}
 \begin{large}
@@ -369,7 +370,7 @@ format:
 
 -   Summer 2017: Taught Epidemiology, Math Research, and Math/Science (Pre-Calculus and Calculus Levels) to underserved High School students from UC Riverside's Upward Bound Program. I was responsible in developing the Epidemiology to help High School students develop there critical thinking skills and raise awareness of the different career options they could pursue.
 
-\vspace{7pt}
+\vspace{6pt}
 
 ```{=tex}
 \begin{large}
@@ -390,7 +391,7 @@ format:
 ```
 -   Mentored students to conduct literature reviews, write manuscripts, and analyze data. In addition, I worked with my colleagues to develop a course in statistics. The course focused on teaching the basics of statistics which included descriptive statistics, statistical tests, and regression.
 
-\vspace{7pt}
+\vspace{6pt}
 
 ```{=tex}
 \begin{large}
@@ -410,7 +411,7 @@ format:
 -   Department of Mathematics and Statistics: Math Tutor
 -   Academic Skills Achievement Program: Science (Chemistry) Tutor
 
-\vspace{7pt}
+\vspace{6pt}
 
 <!-- Publications -->
 
@@ -481,7 +482,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
-\vspace{7pt}
+\vspace{6pt}
 
 ```{=tex}
 \begin{large}
@@ -490,7 +491,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
-\vspace{7pt}
+\vspace{6pt}
 
 ```{=tex}
 \begin{large}
@@ -499,7 +500,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
-\vspace{7pt}
+\vspace{6pt}
 
 ```{=tex}
 \begin{large}
@@ -508,7 +509,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
-\vspace{7pt}
+\vspace{6pt}
 
 ```{=tex}
 \begin{large}
@@ -517,7 +518,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
-\vspace{7pt}
+\vspace{6pt}
 
 ```{=tex}
 \begin{large}
@@ -526,7 +527,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
-\vspace{7pt}
+\vspace{6pt}
 
 \newpage
 
@@ -556,7 +557,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
-\vspace{7pt}
+\vspace{6pt}
 
 ```{=tex}
 \begin{large}
@@ -575,7 +576,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
-\vspace{7pt}
+\vspace{6pt}
 
 ```{=tex}
 \begin{large}
@@ -594,7 +595,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
-\vspace{7pt}
+\vspace{6pt}
 
 ```{=tex}
 \begin{large}
@@ -613,7 +614,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
-\vspace{7pt}
+\vspace{6pt}
 
 ```{=tex}
 \begin{large}
@@ -632,7 +633,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
-\vspace{7pt}
+\vspace{6pt}
 
 ```{=tex}
 \begin{large}
@@ -651,7 +652,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
-\vspace{7pt}
+\vspace{6pt}
 
 ```{=tex}
 \begin{large}
@@ -670,7 +671,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
-\vspace{7pt}
+\vspace{6pt}
 
 ```{=tex}
 \begin{large}{\bf Committees}
@@ -681,7 +682,7 @@ format:
 ```
 -   *Co-Chair*: CSUCI Data Science Program Development Task Force
 
-\vspace{7pt}
+\vspace{6pt}
 
 ```{=tex}
 \begin{large}{\bf Grants and Awards}

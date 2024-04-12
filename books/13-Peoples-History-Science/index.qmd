@@ -1,0 +1,18 @@
+---
+title: "A People's History of Science"
+date: "2024-04-01"
+image: https://pbs.twimg.com/media/Eb2NhLhXQAA8rCZ.jpg
+categories: [learning]
+---
+
+::: {.callout-tip icon="false"}
+## Book
+
+A People's History of Science: Miners, Midwives, and Low Mechanicks
+
+Clifford Conner
+
+## Book Availability
+
+[Amazon Link](https://www.amazon.com/Peoples-History-Science-Clifford-Conner/dp/1560257482)
+:::
