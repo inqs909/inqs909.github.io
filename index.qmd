@@ -13,7 +13,8 @@ editor_options:
 
 ##### Assistant Professor of Statistics
 
-[CSU Channel Islands](https://www.csuci.edu){.btn-action-primary .btn-action .btn .btn-success role="button"}
+[CSU Channel Islands](https://math.csuci.edu){.btn-action-primary .btn-action .btn .btn-success role="button"}  [Orcid](https://orcid.org/0000-0002-1137-4310){.btn-action-primary .btn-action .btn .btn-success role="button"}
+
 :::
 
 ::: {.g-col-12 .g-col-md-6}

@@ -1,7 +1,7 @@
 ---
 title: "A People's History of Science"
 date: "2024-04-01"
-image: https://pbs.twimg.com/media/Eb2NhLhXQAA8rCZ.jpg
+image: https://m.media-amazon.com/images/I/71KeVWr7QrL._AC_UF1000,1000_QL80_.jpg
 categories: [learning]
 ---
 
