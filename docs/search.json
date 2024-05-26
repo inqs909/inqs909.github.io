@@ -1,0 +1,1976 @@
+[
+  {
+    "objectID": "pubs.html",
+    "href": "pubs.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Association Between Parental Barriers to Accessing a Usual Source of Care and Children’s Receipt of Preventative Services.\nJohn Bellettiere, Emmeline Chuang, Suzanne C Hughes, Isaac Quintanilla, C Richard Hofstetter, and Melbourne F Hovell\n\nLearn more »\n\n\n\nSelective Array‐based Sensing of Anabolic Steroids in Aqueous Solution by Host:Guest Reporter Complexes.\nAdam D Gill, Lizeth Perez, Isaac Quintanilla Salinas, Samantha R Byers, Yang Liu, Briana L Hickey, Wenwan Zhong, and Richard J Hooley\n\nLearn more »\n\n\n\nGlioblastoma in elderly: treatment patterns and survival. CNS Oncology.\nJean-Aine Pretanvil, Isaac Quintanilla Salinas, and David E Piccioni\n\nLearn more »\n\n\n\nDonor age and early graft failure after lung transplantation: a cohort study.\nMR Baldwin, ER Peterson, I Easthausen, I Quintanilla, E Colago, JR Sonnett, F D’Ovidio, J Costa, JM Diamond, JD Christie, SM Arcasoy, and DJ Lederer\n\nLearn more »"
+  },
+  {
+    "objectID": "presentations.html",
+    "href": "presentations.html",
+    "title": "Presentations",
+    "section": "",
+    "text": "Not Dead … Yet!: An Introduction to Survival Analysis\nApril 10, 2021\nSlides\n\n\nSurvival Analysis: The Life and Death of Statistics\nApril 10, 2021\nSlides\n\n\nUCR High-Performance Computing Center\nMay 20, 2022\nSlides\n\n\nData Processing\nApril 21, 2022\nSlides\n\n\nOverview of Joint Longitudinal-Survival Models: Modeling the Association Between Dependent Outcomes\nJune 12, 2021\nSlides\n\n\nParallel Processing for Statistics\nDecember 18, 2020\n\n\nTime-Varying Coefficient Models for Longitudinal Data\nOctober 16, 2020\nSlides\n\n\nTime-Varying Coefficient Models\nApril 21, 2020\nSlides\n\n\nData Manipulation\nOctober 21, 2019\nSlides"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#access-presentation",
+    "href": "pres/long_beach/pres_4_22.html#access-presentation",
+    "title": "Not Dead… Yet!",
+    "section": "Access Presentation",
+    "text": "Access Presentation\nhttps://www.inqs.info/pres/long_beach/pres_4_22.html\nEmail: isaac.qs@csuci.edu"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#survival-analysis",
+    "href": "pres/long_beach/pres_4_22.html#survival-analysis",
+    "title": "Not Dead… Yet!",
+    "section": "Survival Analysis",
+    "text": "Survival Analysis\nSurvival Analysis is a set of tools to analyze time-to-event data. This leads to the survival rate which models the time to percentage of data to observe the event.\n\n\nTo determine the time until a percentile of the data achieves an event\nDetermine which factors may affect the survival rate"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#colon-study",
+    "href": "pres/long_beach/pres_4_22.html#colon-study",
+    "title": "Not Dead… Yet!",
+    "section": "Colon Study",
+    "text": "Colon Study\n\n\nColon cancer is a type of cancer found in the large intestine\nSeveral risk factors affect the survival rate\nWe will look at how different medications affect the survival rate"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#channel-island-birds",
+    "href": "pres/long_beach/pres_4_22.html#channel-island-birds",
+    "title": "Not Dead… Yet!",
+    "section": "Channel Island Birds",
+    "text": "Channel Island Birds"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#channel-island-birds-1",
+    "href": "pres/long_beach/pres_4_22.html#channel-island-birds-1",
+    "title": "Not Dead… Yet!",
+    "section": "Channel Island Birds",
+    "text": "Channel Island Birds\n\n\nWe are interested in how long do bird eggs hatch since being laid\nDetermine the hatch rate for each species\nWhat happens when there is missing data?"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#how-do-we-determine-the-survival-rate",
+    "href": "pres/long_beach/pres_4_22.html#how-do-we-determine-the-survival-rate",
+    "title": "Not Dead… Yet!",
+    "section": "How do we determine the survival rate?",
+    "text": "How do we determine the survival rate?\n\n\nMeasure from first recording to event of interest\nConstruct a probability of surviving up to a certain time point"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#data-type",
+    "href": "pres/long_beach/pres_4_22.html#data-type",
+    "title": "Not Dead… Yet!",
+    "section": "Data Type",
+    "text": "Data Type\n\n\nData is typically recorded as time-to-event data\nFor biomedical studies, researchers are interested in time from diagnosis to death, known as time-to-death"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#censoring-1",
+    "href": "pres/long_beach/pres_4_22.html#censoring-1",
+    "title": "Not Dead… Yet!",
+    "section": "Censoring",
+    "text": "Censoring\n\n\nCensoring is a mechanism where we do not observe the true time-to-event\nNot all the time is observed\nThree common types of censoring mechanisms: Right, Left, and Interval"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#ci-birds-example",
+    "href": "pres/long_beach/pres_4_22.html#ci-birds-example",
+    "title": "Not Dead… Yet!",
+    "section": "CI Birds Example",
+    "text": "CI Birds Example\nYou design a study where you want to record the time it takes for an egg to hatch for different species of birds.\nYou spend a week monitoring different bird nests and record times when eggs are laid."
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#ci-birds-left-censoring",
+    "href": "pres/long_beach/pres_4_22.html#ci-birds-left-censoring",
+    "title": "Not Dead… Yet!",
+    "section": "CI Birds Left Censoring",
+    "text": "CI Birds Left Censoring\nThe day before the eggs hatched, your boat broke down and were not able to go to the islands for a week due to repairs.\n\nDuring this time, 5 eggs hatched!"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#left-censoring",
+    "href": "pres/long_beach/pres_4_22.html#left-censoring",
+    "title": "Not Dead… Yet!",
+    "section": "Left Censoring",
+    "text": "Left Censoring\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(ggplot2)\ndat &lt;- data.frame(ID = 1:10, \n                  t1 = c(7, 9, 10, 5, 5, 10, 5, 6, 6, 7) , \n                  censored = c(1, 1, 1, 0, 0, 1, 0, 1, 1, 1))\nggplot(dat, aes(x = ID, y = t1, shape = ifelse(censored, \"Death\", \"Censored\"))) + geom_point(size = 4) + \n    geom_linerange(aes(ymin = 0, ymax = t1)) +\n    geom_hline(yintercept = 5, lty = 2) +\n    coord_flip() + \n    scale_shape_manual(name = \"Event\", values = c(19, 15)) +\n    # ggtitle(\"Left Censoring\") + \n    xlab(\"Patient ID\") +  ylab(\"Months\") + \n    theme_bw()"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#ci-birds-interval-censoring",
+    "href": "pres/long_beach/pres_4_22.html#ci-birds-interval-censoring",
+    "title": "Not Dead… Yet!",
+    "section": "CI Birds Interval Censoring",
+    "text": "CI Birds Interval Censoring\nAs you been going out to the islands each day to record whether eggs have hatched or not, you can’t travel to the islands for the next few days due to stormy weather.\n\nDuring this time, 8 eggs hatched!"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#interval-censoring",
+    "href": "pres/long_beach/pres_4_22.html#interval-censoring",
+    "title": "Not Dead… Yet!",
+    "section": "Interval Censoring",
+    "text": "Interval Censoring\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(ggplot2)\ndat &lt;- structure(list(ID = 1:6, \n                      eventA = c(0L, 1L, 1L, 0L, 1L, 0L),\n                      eventB = c(1L, 0L, 0L, 1L, 0L, 1L), \n                      t1 = c(7, 4, 9, 4.5, 4, 8), \n                      t2 = c(7, 6, 10, 4.5, 7, 8),\n                      censored = c(0, 1, 1, 0, 1, 0)), \n                 .Names = c(\"ID\", \"eventA\", \"eventB\", \"t1\", \"t2\", \"censored\"), \n                 class = \"data.frame\", row.names = c(NA, -6L))\n\ndat$event &lt;- with(dat, ifelse(eventA, \"Censored\", \"Death\"))\n\ndat$id.ordered &lt;- factor(x = dat$ID, levels = order(dat$t2, decreasing = T))\n\nggplot(dat, aes(x = id.ordered)) + \n    geom_linerange(aes(ymin = 0, ymax = t1)) + \n    geom_linerange(aes(ymin = t1, ymax = t2, \n                       linetype = as.factor(censored))) +  \n    geom_point(aes(y = ifelse(censored, \n                              t1 + (t2 - t1) / 2, t2), \n                   shape = event), size = 4) +\n    coord_flip() + \n    scale_linetype_manual(name = \"Censoring\", values = c(1, 2), \n        labels = c(\"Not censored\", \"Interval censored\")) +\n    scale_shape_manual(name = \"Event\", values = c(19, 15)) +\n    # ggtitle(\"Interval Censoring\") + \n    xlab(\"Eggs\") +  ylab(\"Weeks\") + \n    theme_bw()"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#ci-birds-right-censoring",
+    "href": "pres/long_beach/pres_4_22.html#ci-birds-right-censoring",
+    "title": "Not Dead… Yet!",
+    "section": "CI Birds Right Censoring",
+    "text": "CI Birds Right Censoring\nIt is the end of the study, and their are 5 more eggs that have not hatched yet!\n\nAdditionally, a colleague has informed you that some eggs were eaten by reptiles through out the study. They obtained the day they were eaten or lost."
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#right-censoring",
+    "href": "pres/long_beach/pres_4_22.html#right-censoring",
+    "title": "Not Dead… Yet!",
+    "section": "Right Censoring",
+    "text": "Right Censoring\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(ggplot2)\ndat &lt;- data.frame(ID = 1:10, \n                  t1 = c(7, 9, 10, 4, 2, 10, 8, 5, 6, 7) , \n                  censored = c(0, 1, 0, 0, 1, 0, 0, 1, 0, 1))\nggplot(dat, aes(x = ID, y = t1, \n                shape = ifelse(censored, \"Death\", \"Censored\"))) +\n    geom_point(size = 4) + \n    geom_linerange(aes(ymin = 0, ymax = t1)) +\n    geom_hline(yintercept = 10, lty = 2) +\n    coord_flip() + \n    scale_shape_manual(name = \"Event\", values = c(19, 15)) +\n    # ggtitle(\"Right Censoring\") + \n    xlab(\"Patient ID\") +  ylab(\"Months\") + \n    theme_bw()"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#censoring-2",
+    "href": "pres/long_beach/pres_4_22.html#censoring-2",
+    "title": "Not Dead… Yet!",
+    "section": "Censoring",
+    "text": "Censoring\n\n\nCensoring affects the time-to-event information\nHowever, we obtain some information when data is censored\nIncorporate methods to utilize partial information\nCensoring is independent of time-to-event generation"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#survival-curve",
+    "href": "pres/long_beach/pres_4_22.html#survival-curve",
+    "title": "Not Dead… Yet!",
+    "section": "Survival Curve",
+    "text": "Survival Curve\n\n\nThe survival curve will determine what is the probability of surviving up to a certain time\nA survival curve accounts for both censored and uncensored data\nA survival curve can be used to determine the median survival time of a disease\n\nOr the time for at least half of the eggs to hatch"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#data-notation",
+    "href": "pres/long_beach/pres_4_22.html#data-notation",
+    "title": "Not Dead… Yet!",
+    "section": "Data Notation",
+    "text": "Data Notation\nLet \\(\\{t_j,d_j,R_j\\}^D_{j=1}\\) denote the survival data, where \\(t_1&lt;t_2&lt;\\cdots&lt;t_D\\) are the ordered distinct observed event times, \\(d_j\\) represents the number of events at time point \\(t_j\\), and \\(R_j\\) denotes the number of subjects still at risk of experiencing the event at \\(t_j\\)."
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#kaplan-meier-estimator",
+    "href": "pres/long_beach/pres_4_22.html#kaplan-meier-estimator",
+    "title": "Not Dead… Yet!",
+    "section": "Kaplan-Meier Estimator",
+    "text": "Kaplan-Meier Estimator\n\\[\n\\hat{S}(t) =\\left\\{\\begin{array}{cc}\n1 & t=0 \\\\\n\\prod_{i:t_j \\le t} \\left( 1 - \\frac{d_j}{R_j} \\right) & t_j &lt; t\n\\end{array}\\right.\n\\]"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#standard-error",
+    "href": "pres/long_beach/pres_4_22.html#standard-error",
+    "title": "Not Dead… Yet!",
+    "section": "Standard Error",
+    "text": "Standard Error\n\\[\n\\widehat{SE}\\{\\hat S(t)\\}=\\sqrt{\\hat S^2(t)\\sum_{t_j\\leq t}\\frac{d_j}{R_j(R_j-d_j)}}.\n\\]"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#survival-curve-1",
+    "href": "pres/long_beach/pres_4_22.html#survival-curve-1",
+    "title": "Not Dead… Yet!",
+    "section": "Survival Curve",
+    "text": "Survival Curve\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(survival)\nlibrary(ggsurvfit)\nlibrary(magrittr)\naml %$% survfit(Surv(time, status) ~ 1)  %&gt;% \n      ggsurvfit(linewidth = 1) +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#data",
+    "href": "pres/long_beach/pres_4_22.html#data",
+    "title": "Not Dead… Yet!",
+    "section": "Data",
+    "text": "Data\n\nDescriptionTableCode\n\n\nWe will be looking at the df_colon data set from the ggsurvfit R package.\n\n\n\n\n\n\n\n\n\n\n\nlibrary(tidyverse)\nlibrary(ggsurvfit)\nlibrary(DT)\nadj_df &lt;- df_colon %&gt;% select(id, rx, time, status)\ndatatable(adj_df, options = list(pageLength = 5, dom = 'i'))"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#fitting-curve",
+    "href": "pres/long_beach/pres_4_22.html#fitting-curve",
+    "title": "Not Dead… Yet!",
+    "section": "Fitting Curve",
+    "text": "Fitting Curve\n\nDescriptionR Code\n\n\nThe survival package contains the necessary functions to fit a model:\n\n\nSurv: Creates an outcome variable\nsurvfit: Fits the survival function\n\n\n\n\n\n1library(survival)\n2outcome &lt;- Surv(data$time, data$censor)\n3model &lt;- survfit(outcome ~ 1)\n\n\n1\n\nLoads the survival package\n\n2\n\nCreate survival outcome object\n\n3\n\nFits Survival Model"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#plotting-the-survival-function",
+    "href": "pres/long_beach/pres_4_22.html#plotting-the-survival-function",
+    "title": "Not Dead… Yet!",
+    "section": "Plotting the Survival Function",
+    "text": "Plotting the Survival Function\n\nDescriptionR Code\n\n\nThe ggsurvfit package provides a set of tools to plot the survival function in a ggplot format. The primary functions are:\n\nggsurvfit: Plots Survival Function\nadd_quantile: Adds line on the percentile\nadd_confidence_interval: Adds pointwise error bars to the plot.\n\n\n\n\nggsurvfit(model) + \n  add_quantile(y_value = 0.5) +\n  add_confidence_interval()"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#fitting-curve-by-groups",
+    "href": "pres/long_beach/pres_4_22.html#fitting-curve-by-groups",
+    "title": "Not Dead… Yet!",
+    "section": "Fitting Curve By Groups",
+    "text": "Fitting Curve By Groups\n\nDescriptionR CodePlotting\n\n\nIf we are interested in fitting survival curves by groups, we can specify the variable that we want to adjust by.\n\n\n\nsurvfit(Surv(time, censor) ~ group, data)\n\n\n\nOnce the model is fitted, feed it to ggsurvfit and the function will do the rest."
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#colon-survival-curve",
+    "href": "pres/long_beach/pres_4_22.html#colon-survival-curve",
+    "title": "Not Dead… Yet!",
+    "section": "Colon Survival Curve",
+    "text": "Colon Survival Curve\n\nTaskPlotR Code\n\n\n\nFit a survival curve using df_colon from the ggsurvfit package.\ntime: time-to-death\nstatus: censoring status\nPlot the survival curve and add a line indicating the 50th percentile\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(survival)\nlibrary(ggsurvfit)\nlibrary(magrittr)\nlibrary(tidyverse)\ndf_colon %$% survfit(Surv(time, status) ~ 1)  %&gt;% \n      ggsurvfit() +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#colon-survival-curve-1",
+    "href": "pres/long_beach/pres_4_22.html#colon-survival-curve-1",
+    "title": "Not Dead… Yet!",
+    "section": "Colon Survival Curve",
+    "text": "Colon Survival Curve\n\nTaskPlotR Code\n\n\n\nFit a survival curve using df_colon, stratified by treatment regimen\ntime: time-to-death\nstatus: censoring status\nrx: treatment regimen\nPlot the curvival curve and add a line indicating the 50th percentile\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndf_colon %$% survfit(Surv(time, status) ~ rx)  %&gt;% \n      ggsurvfit() +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#hypothesis-testing",
+    "href": "pres/long_beach/pres_4_22.html#hypothesis-testing",
+    "title": "Not Dead… Yet!",
+    "section": "Hypothesis Testing",
+    "text": "Hypothesis Testing\n\n\nWhen stratifying the data, Levamisole+5 FU performed better than the other regimens\nIs this a significant improvement? Or due to random chance?\nAdd Confidence Intervals to see if there is a difference"
+  },
+  {
+    "objectID": "pres/long_beach/pres_4_22.html#colon-survival-curve-2",
+    "href": "pres/long_beach/pres_4_22.html#colon-survival-curve-2",
+    "title": "Not Dead… Yet!",
+    "section": "Colon Survival Curve",
+    "text": "Colon Survival Curve\n\nTaskPlotR Code\n\n\nAdd confidence intervals to the previous plot.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndf_colon %$% survfit(Surv(time, status) ~ rx)  %&gt;% \n      ggsurvfit() +\n      add_confidence_interval() +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#study-example",
+    "href": "pres/ci_spring_2023/pres_4_23.html#study-example",
+    "title": "Survival Analysis:",
+    "section": "Study Example",
+    "text": "Study Example\n\n\nAcute Myelogenous Leukemia (AML) is a blood and bone marrow cancer that makes abnormal blood cells. This is the most common Leukemia found in adults.\nThere are several factors that affect the prognosis (survival rate) of those with AML.\nHow do we determine the survival rate of AML patients?"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#how-do-determine-the-survival-rate",
+    "href": "pres/ci_spring_2023/pres_4_23.html#how-do-determine-the-survival-rate",
+    "title": "Survival Analysis:",
+    "section": "How do determine the survival rate?",
+    "text": "How do determine the survival rate?\n\n\nMeasure from diagnosis to event of interest\nConstruct a probability of surviving up to a certain time point"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#data-type",
+    "href": "pres/ci_spring_2023/pres_4_23.html#data-type",
+    "title": "Survival Analysis:",
+    "section": "Data Type",
+    "text": "Data Type\n\n\nData is typically recorded as time-to-event data.\nFor biomedical studies, researchers are interested in time from diagnosis to death, known as time-to-death."
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#censoring-1",
+    "href": "pres/ci_spring_2023/pres_4_23.html#censoring-1",
+    "title": "Survival Analysis:",
+    "section": "Censoring",
+    "text": "Censoring\n\n\nCensoring is a mechanism in biomedical studies where we do not observe the true time-to-death.\nNot all the time is observed.\nThree common types of censoring mechanisms: Right, Left, and Interval."
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#left-censoring",
+    "href": "pres/ci_spring_2023/pres_4_23.html#left-censoring",
+    "title": "Survival Analysis:",
+    "section": "Left Censoring",
+    "text": "Left Censoring\n\nlibrary(ggplot2)\ndat &lt;- data.frame(ID = 1:10, \n                  t1 = c(7, 9, 10, 5, 5, 10, 5, 6, 6, 7) , \n                  censored = c(1, 1, 1, 0, 0, 1, 0, 1, 1, 1))\nggplot(dat, aes(x = ID, y = t1, shape = ifelse(censored, \"Death\", \"Censored\"))) + geom_point(size = 4) + \n    geom_linerange(aes(ymin = 0, ymax = t1)) +\n    geom_hline(yintercept = 5, lty = 2) +\n    coord_flip() + \n    scale_shape_manual(name = \"Event\", values = c(19, 15)) +\n    ggtitle(\"Left Censoring\") + \n    xlab(\"Patient ID\") +  ylab(\"Days\") + \n    theme_bw()"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#interval-censoring",
+    "href": "pres/ci_spring_2023/pres_4_23.html#interval-censoring",
+    "title": "Survival Analysis:",
+    "section": "Interval Censoring",
+    "text": "Interval Censoring\n\nlibrary(ggplot2)\ndat &lt;- structure(list(ID = 1:5, eventA = c(0L, 1L, 1L, 0L, 1L), \n    eventB = c(1L, 0L, 0L, 1L, 0L), t1 = c(7, 5, 10, 4.5, 2), t2 = c(7, 5, 10, 4.5, \n    8), censored = c(0, 0, 0, 0, 1)), .Names = c(\"ID\", \"eventA\", \n    \"eventB\", \"t1\", \"t2\", \"censored\"), class = \"data.frame\", row.names = c(NA, -5L))\n\ndat$event &lt;- with(dat, ifelse(eventA, \"Censored\", \"Death\"))\n\ndat$id.ordered &lt;- factor(x = dat$ID, levels = order(dat$t2, decreasing = T))\n\nggplot(dat, aes(x = id.ordered)) + \n    geom_linerange(aes(ymin = 0, ymax = t1)) + \n    geom_linerange(aes(ymin = t1, ymax = t2, \n                       linetype = as.factor(censored))) +  \n    geom_point(aes(y = ifelse(censored, \n                              t1 + (t2 - t1) / 2, t2), \n                   shape = event), size = 4) +\n    coord_flip() + \n    scale_linetype_manual(name = \"Censoring\", values = c(1, 2), \n        labels = c(\"Not censored\", \"Interval censored\")) +\n    scale_shape_manual(name = \"Event\", values = c(19, 15)) +\n    ggtitle(\"Interval Censoring\") + \n    xlab(\"Patient ID\") +  ylab(\"Days\") + \n    theme_bw()"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#right-censoring",
+    "href": "pres/ci_spring_2023/pres_4_23.html#right-censoring",
+    "title": "Survival Analysis:",
+    "section": "Right Censoring",
+    "text": "Right Censoring\n\nlibrary(ggplot2)\ndat &lt;- data.frame(ID = 1:10, \n                  t1 = c(7, 9, 10, 4, 2, 10, 8, 5, 6, 7) , \n                  censored = c(0, 1, 0, 0, 1, 0, 0, 1, 0, 1))\nggplot(dat, aes(x = ID, y = t1, \n                shape = ifelse(censored, \"Death\", \"Censored\"))) +\n    geom_point(size = 4) + \n    geom_linerange(aes(ymin = 0, ymax = t1)) +\n    geom_hline(yintercept = 10, lty = 2) +\n    coord_flip() + \n    scale_shape_manual(name = \"Event\", values = c(19, 15)) +\n    ggtitle(\"Right Censoring\") + \n    xlab(\"Patient ID\") +  ylab(\"Days\") + \n    theme_bw()"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#censoring-2",
+    "href": "pres/ci_spring_2023/pres_4_23.html#censoring-2",
+    "title": "Survival Analysis:",
+    "section": "Censoring",
+    "text": "Censoring\n\n\nCensoring affects the time-to-death information\nHowever, we obtain some information when data is censored\nIncorporate methods to utilize partial information\nCensoring is independent of time-to-death generation\nRight Censoring"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#data-construction",
+    "href": "pres/ci_spring_2023/pres_4_23.html#data-construction",
+    "title": "Survival Analysis:",
+    "section": "Data Construction",
+    "text": "Data Construction\n\n\n\\(T_i^*\\): True time-to-event\n\\(C_i\\): Censoring Time\n\\(T_i=\\min(T_i^*,C_i)\\): Observed time-to-event\n\\(\\delta_i = I(T_i^*&lt;C_i)\\): Event indicator"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#survivial-analysis-functions",
+    "href": "pres/ci_spring_2023/pres_4_23.html#survivial-analysis-functions",
+    "title": "Survival Analysis:",
+    "section": "Survivial Analysis Functions",
+    "text": "Survivial Analysis Functions\nDescribe the Probability Model\n\nHazard Function\nSurvival Function\nCumulative Hazard Function"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#hazard-function",
+    "href": "pres/ci_spring_2023/pres_4_23.html#hazard-function",
+    "title": "Survival Analysis:",
+    "section": "Hazard Function",
+    "text": "Hazard Function\n\\[\nh(t) = \\lim_{\\Delta t \\rightarrow 0} \\frac{P(t \\le T^* &lt; t + \\Delta t \\mid T^* \\ge t)}{\\Delta t}\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#survival-function",
+    "href": "pres/ci_spring_2023/pres_4_23.html#survival-function",
+    "title": "Survival Analysis:",
+    "section": "Survival Function",
+    "text": "Survival Function\n\\[\nS(t) = P(T^* &gt; t)\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#cumulative-hazard-function",
+    "href": "pres/ci_spring_2023/pres_4_23.html#cumulative-hazard-function",
+    "title": "Survival Analysis:",
+    "section": "Cumulative Hazard Function",
+    "text": "Cumulative Hazard Function\n\\[\nH(t) = \\int_0^t h(u) du\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#survival-and-hazard-function-relationship",
+    "href": "pres/ci_spring_2023/pres_4_23.html#survival-and-hazard-function-relationship",
+    "title": "Survival Analysis:",
+    "section": "Survival and Hazard Function Relationship",
+    "text": "Survival and Hazard Function Relationship\n\\[\nS(t) = e^{-H(t)}\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#probability-density-function",
+    "href": "pres/ci_spring_2023/pres_4_23.html#probability-density-function",
+    "title": "Survival Analysis:",
+    "section": "Probability Density Function",
+    "text": "Probability Density Function\n\\[\nf(t) = h(t)S(t)\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#survival-curve",
+    "href": "pres/ci_spring_2023/pres_4_23.html#survival-curve",
+    "title": "Survival Analysis:",
+    "section": "Survival Curve",
+    "text": "Survival Curve\n\n\nThe survival curve will determine what is the probability of suriving up to a certain time.\nA survival curve uses both censored and uncensored data\nA survival curve can be used to determine the median survival time of a disease"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#data",
+    "href": "pres/ci_spring_2023/pres_4_23.html#data",
+    "title": "Survival Analysis:",
+    "section": "Data",
+    "text": "Data\nLet \\(\\{t_j,d_j,R_j\\}^D_{j=1}\\) denote the survival data, where \\(t_1&lt;t_2&lt;\\cdots&lt;t_D\\) are the ordered distinct observed event times, \\(d_j\\) represents the number of events at time point \\(t_j\\), and \\(R_j\\) denotes the number of subjects still at risk of experiencing the event at \\(t_j\\)."
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#kaplan-meier-estimator",
+    "href": "pres/ci_spring_2023/pres_4_23.html#kaplan-meier-estimator",
+    "title": "Survival Analysis:",
+    "section": "Kaplan-Meier Estimator",
+    "text": "Kaplan-Meier Estimator\n\\[\n\\hat{S}(t) =\\left\\{\\begin{array}{cc}\n1 & t=0 \\\\\n\\prod_{i:t_j \\le t} \\left( 1 - \\frac{d_j}{R_j} \\right) & t_j &lt; t\n\\end{array}\\right.\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#standard-error",
+    "href": "pres/ci_spring_2023/pres_4_23.html#standard-error",
+    "title": "Survival Analysis:",
+    "section": "Standard Error",
+    "text": "Standard Error\n\\[\n\\widehat{SE}\\{\\hat S(t)\\}=\\sqrt{\\hat S^2(t)\\sum_{t_j\\leq t}\\frac{d_j}{R_j(R_j-d_j)}}.\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#survival-curve-1",
+    "href": "pres/ci_spring_2023/pres_4_23.html#survival-curve-1",
+    "title": "Survival Analysis:",
+    "section": "Survival Curve",
+    "text": "Survival Curve\n\nlibrary(survival)\nlibrary(ggsurvfit)\nlibrary(magrittr)\naml %$% survfit2(Surv(time, status) ~ 1)  %&gt;% \n      ggsurvfit(linewidth = 1) +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#data-1",
+    "href": "pres/ci_spring_2023/pres_4_23.html#data-1",
+    "title": "Survival Analysis:",
+    "section": "Data",
+    "text": "Data\nLet \\(\\{T_i,\\delta_i,\\boldsymbol X_i\\}^n_{i=1}\\) denote the survival data, where \\(T_i\\) is observed event times, \\(\\delta_i\\) is the survival indicator, and \\(\\boldsymbol X_i\\) denotes the a vector of predictor variables."
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#proportional-hazard-model",
+    "href": "pres/ci_spring_2023/pres_4_23.html#proportional-hazard-model",
+    "title": "Survival Analysis:",
+    "section": "Proportional Hazard Model",
+    "text": "Proportional Hazard Model\n\\[\nh(t \\mid \\boldsymbol X) = h_0(t) \\exp(\\boldsymbol\\beta^\\mathrm T\\boldsymbol X)\n\\]\n\n\\(h_0(t)\\): baseline hazard function\n\\(\\boldsymbol\\beta\\): regression coefficients\n\\(\\boldsymbol X\\): predictor variables"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#how-do-we-estimate-parameters-boldsymbol-beta",
+    "href": "pres/ci_spring_2023/pres_4_23.html#how-do-we-estimate-parameters-boldsymbol-beta",
+    "title": "Survival Analysis:",
+    "section": "How do we estimate parameters \\(\\boldsymbol \\beta\\)",
+    "text": "How do we estimate parameters \\(\\boldsymbol \\beta\\)\nWe use a maximum likelihood approach where we search for the values of \\(\\boldsymbol \\beta\\) the maximizes the likelihood function.\nThe Likelihood function measures the probability of observing the data given the parameters \\(\\boldsymbol \\beta\\)."
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#construction-of-the-likelihood-function",
+    "href": "pres/ci_spring_2023/pres_4_23.html#construction-of-the-likelihood-function",
+    "title": "Survival Analysis:",
+    "section": "Construction of the Likelihood Function",
+    "text": "Construction of the Likelihood Function\nDue to right censoring, likelihood needs careful construction\n\n\nDeath is observed\n\\[\nf(t|\\boldsymbol X,\\boldsymbol \\beta) = h(t)S(t)\n\\]\n\nCensored\n\\[\nS(t)\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#likelihood-function",
+    "href": "pres/ci_spring_2023/pres_4_23.html#likelihood-function",
+    "title": "Survival Analysis:",
+    "section": "Likelihood Function",
+    "text": "Likelihood Function\n\\[\nL(\\boldsymbol \\beta) = \\prod_{i=1}^n [h(T_i \\mid \\boldsymbol X_i, \\boldsymbol\\beta)]^{\\delta_i} [S(T_i \\mid \\boldsymbol X_i, \\boldsymbol \\beta)]\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#likelihood-function-1",
+    "href": "pres/ci_spring_2023/pres_4_23.html#likelihood-function-1",
+    "title": "Survival Analysis:",
+    "section": "Likelihood Function",
+    "text": "Likelihood Function\n\\[\nL(\\boldsymbol \\beta) = \\prod_{i=1}^n \\{h_0(t) \\exp(\\boldsymbol\\beta^\\mathrm T\\boldsymbol x_i)\\}^{\\delta_i} \\exp\\left\\{-\\int^{T_i}_0 h_0(s) \\exp(\\boldsymbol\\beta^\\mathrm T\\boldsymbol x_i)ds\\right\\}\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#estimating-the-baseline-hazard-function",
+    "href": "pres/ci_spring_2023/pres_4_23.html#estimating-the-baseline-hazard-function",
+    "title": "Survival Analysis:",
+    "section": "Estimating the Baseline Hazard Function",
+    "text": "Estimating the Baseline Hazard Function\n\\[\nh_0(t)\n\\]\n\n\n\nParameterically\n\nWeibull\nlog-Normal\nGompetz\n\n\nNonparametrically\n\nProfile MLE\nSpline Models"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#partial-likelihood",
+    "href": "pres/ci_spring_2023/pres_4_23.html#partial-likelihood",
+    "title": "Survival Analysis:",
+    "section": "Partial Likelihood",
+    "text": "Partial Likelihood\n\\[\nL_P(\\boldsymbol\\beta) = \\prod_{i=1}^D \\frac{\\exp(\\boldsymbol\\beta^T \\boldsymbol X_i)}{\\sum_{j \\in R(t_i)} \\exp(\\boldsymbol\\beta^T \\boldsymbol X_j)}\n\\]\n\n\\(R(t_i)\\): the patients at risk prior to time \\(t_i\\)\n\\(D\\): Number of individuals experiencing the event"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#estimation",
+    "href": "pres/ci_spring_2023/pres_4_23.html#estimation",
+    "title": "Survival Analysis:",
+    "section": "Estimation",
+    "text": "Estimation\nThe estimates of \\(\\boldsymbol \\beta\\) can be obtained finding the Maximum Partial Likelihood Estimate (MPLE)"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#sampling-distribution",
+    "href": "pres/ci_spring_2023/pres_4_23.html#sampling-distribution",
+    "title": "Survival Analysis:",
+    "section": "Sampling Distribution",
+    "text": "Sampling Distribution\n\\[\n\\hat{\\boldsymbol \\beta} \\overset{\\circ}{\\sim} N\\left\\{\\boldsymbol \\beta, - I^{-1}(\\boldsymbol \\beta)\\right\\}\n\\]"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#colon-example",
+    "href": "pres/ci_spring_2023/pres_4_23.html#colon-example",
+    "title": "Survival Analysis:",
+    "section": "Colon Example",
+    "text": "Colon Example\n\nColon cancer is a type of cancer found in the large intestine\nWe will be looking whether different treatment types will have an affect on the survival rate"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#colon-survival-curve",
+    "href": "pres/ci_spring_2023/pres_4_23.html#colon-survival-curve",
+    "title": "Survival Analysis:",
+    "section": "Colon Survival Curve",
+    "text": "Colon Survival Curve\n\nlibrary(survival)\nlibrary(ggsurvfit)\nlibrary(magrittr)\nlibrary(tidyverse)\ndf_colon %$% survfit2(Surv(time, status) ~ 1)  %&gt;% \n      ggsurvfit(linewidth = 1) +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#colon-survival-curve-1",
+    "href": "pres/ci_spring_2023/pres_4_23.html#colon-survival-curve-1",
+    "title": "Survival Analysis:",
+    "section": "Colon Survival Curve",
+    "text": "Colon Survival Curve\n\ndf_colon %$% survfit2(Surv(time, status) ~ rx)  %&gt;% \n      ggsurvfit(linewidth = 1) +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#colon-survival-curve-2",
+    "href": "pres/ci_spring_2023/pres_4_23.html#colon-survival-curve-2",
+    "title": "Survival Analysis:",
+    "section": "Colon Survival Curve",
+    "text": "Colon Survival Curve\n\ndf_colon %$% survfit2(Surv(time, status) ~ rx)  %&gt;% \n      ggsurvfit(linewidth = 1) +\n      add_confidence_interval() +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#cox-ph-model",
+    "href": "pres/ci_spring_2023/pres_4_23.html#cox-ph-model",
+    "title": "Survival Analysis:",
+    "section": "Cox PH Model",
+    "text": "Cox PH Model\n\ndf_colon %$% coxph(Surv(time, status) ~ rx) %&gt;% \n  broom::tidy(exponentiate = T) %&gt;% \n  mutate_if(is.numeric,\n            round,\n            digits = 2) %&gt;% \n  DT::datatable(options = list(dom = 't'))"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#fitting-a-survival-curve",
+    "href": "pres/ci_spring_2023/pres_4_23.html#fitting-a-survival-curve",
+    "title": "Survival Analysis:",
+    "section": "Fitting a Survival Curve",
+    "text": "Fitting a Survival Curve\n\nCodeOutput\n\n\n\n1library(magrittr)\n2library(survival)\n3library(ggsurvfit)\n4df_colon %$% survfit(Surv(time, status) ~ surg)  %&gt;%\n5      ggsurvfit(linewidth = 1) +\n6      add_confidence_interval() +\n7      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)\n\n\n1\n\nPipe package\n\n2\n\nSurvival functions package\n\n3\n\nPlots survival curves package\n\n4\n\nApplies the Kaplan-Meier Function\n\n5\n\nPlots Survival Curve\n\n6\n\nAdds Confidence Intervals\n\n7\n\nDetermines Median Survival Time\n\n\n\n\n\n\n\ndf_colon %$% survfit(Surv(time, status) ~ surg)  %&gt;% \n      ggsurvfit(linewidth = 1) + \n      add_confidence_interval() +\n      add_quantile(y_value = 0.5, color = \"gray50\", linewidth = 0.75)"
+  },
+  {
+    "objectID": "pres/ci_spring_2023/pres_4_23.html#fitting-cox-ph-model",
+    "href": "pres/ci_spring_2023/pres_4_23.html#fitting-cox-ph-model",
+    "title": "Survival Analysis:",
+    "section": "Fitting Cox PH Model",
+    "text": "Fitting Cox PH Model\n\nCodeOutput\n\n\n\ndf_colon %$% coxph(Surv(time, status) ~ surg)  %&gt;%\n  summary\n\n\n\n\ndf_colon %$% coxph(Surv(time, status) ~ surg)  %&gt;%\n  summary\n\n#&gt; Call:\n#&gt; coxph(formula = Surv(time, status) ~ surg)\n#&gt; \n#&gt;   n= 929, number of events= 468 \n#&gt; \n#&gt;                                   coef exp(coef) se(coef)     z Pr(&gt;|z|)  \n#&gt; surgExtended Time Since Surgery 0.2549    1.2903   0.1008 2.529   0.0114 *\n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n#&gt; \n#&gt;                                 exp(coef) exp(-coef) lower .95 upper .95\n#&gt; surgExtended Time Since Surgery      1.29      0.775     1.059     1.572\n#&gt; \n#&gt; Concordance= 0.523  (se = 0.01 )\n#&gt; Likelihood ratio test= 6.17  on 1 df,   p=0.01\n#&gt; Wald test            = 6.39  on 1 df,   p=0.01\n#&gt; Score (logrank) test = 6.43  on 1 df,   p=0.01"
+  },
+  {
+    "objectID": "photos.html",
+    "href": "photos.html",
+    "title": "Photos",
+    "section": "",
+    "text": "Big Bear Lake\n\n\n\n\n\n\n\n\n\n\n\n\n\nBluff Lake\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiamond Valley Lake\n\n\n\n\n\n\n\n\n\n\n\n\n\nHeart Rock Trail\n\n\n\n\n\n\n\n\n\n\n\n\n\nJoshua Tree\n\n\n\n\n\n\n\n\n\n\n\n\n\nLake Gregory\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "INQS",
+    "section": "",
+    "text": "Isaac Quintanilla Salinas\n\nAssistant Professor of Statistics\nCSU Channel Islands Orcid\n\n\n\n\nBiography\nIsaac Quintanilla Salinas is a graduate from the Department of Statistics at the University of California, Riverside with a PhD in Applied Statistics. He joined the Department of Mathematics at the California State University Channel Islands in Fall 2022. Prior to his doctoral research, Dr. Quintanilla Salinas earned his MPH from San Diego State University and BS in Biology from the California State University Monterey Bay.\nDr. Quintanilla Salinas research focuses on developing statistical models to understand the association between survival and longitudinal outcomes. His dissertation “Multilevel Time-Varying Joint Models for Longitudinal and Survival Outcomes” develops a novel model to address challenges of modeling dependent outcomes. Additionally, Dr. Quintanilla Salinas collaborates with several researchers at different institutions in the fields of Public Health, Psychology, Biology, Geographic Information Systems, and Education.\n\n\n\n\n\n\nEducation\n\nUC Riverside\n\nPhD in Applied Statistics\n\nSan Diego State University\n\nMaster’s in Public Health\n\nCSU Monterey Bay\n\nBS Biology\n\n\n\n\nInterests\n\nJoint Longitudinal and Survival Models\nHealth and Well Being\nEducation\nAlgorithmic Bias"
+  },
+  {
+    "objectID": "courses.html",
+    "href": "courses.html",
+    "title": "Courses",
+    "section": "",
+    "text": "AY 24-25AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 453: Mathematical Statistics\nMath 497: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
+  },
+  {
+    "objectID": "courses.html#csu-channel-islands",
+    "href": "courses.html#csu-channel-islands",
+    "title": "Courses",
+    "section": "",
+    "text": "AY 24-25AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 453: Mathematical Statistics\nMath 497: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
+  },
+  {
+    "objectID": "courses.html#uc-riverside",
+    "href": "courses.html#uc-riverside",
+    "title": "Courses",
+    "section": "UC Riverside",
+    "text": "UC Riverside\n\nAllAssociate InstructorTeaching Assistant\n\n\n\nSTAT 127: Introduction to Quality Management\nSTAT 147: Introduction to Statistical Computing\nSTAT 100: Introduction to Statistics\nSTAT 170: Regression and ANOVA\nSTAT 048: Introduction to Business Statistics\nUB: Math Courses\nUB: Public Health Courses\nUB: Research Courses\n\n\n\n\nSTAT 127: Introduction to Quality Management\nSTAT 147: Introduction to Statistical Computing\n\n\n\n\nSTAT 100: Introduction to Statistics\nSTAT 170: Regression and ANOVA\nSTAT 048: Introduction to Business Statistics"
+  },
+  {
+    "objectID": "books/12-Why-Dont-Like-School/index.html",
+    "href": "books/12-Why-Dont-Like-School/index.html",
+    "title": "Why Don’t Students Like School?",
+    "section": "",
+    "text": "Book\n\n\n\nWhy Don’t Students Like School?: A Cognitive Scientist Answers Questions About How the Mind Works and What It Means for the Classroom\nDaniel Willingham\n\n\nAmazon Link"
+  },
+  {
+    "objectID": "books/12-Why-Dont-Like-School/index.html#book-availability",
+    "href": "books/12-Why-Dont-Like-School/index.html#book-availability",
+    "title": "Why Don’t Students Like School?",
+    "section": "",
+    "text": "Amazon Link"
+  },
+  {
+    "objectID": "books/10-Thrivers/index.html",
+    "href": "books/10-Thrivers/index.html",
+    "title": "Thrivers",
+    "section": "",
+    "text": "Book\n\n\n\nThrivers: The Surprising Reasons Why Some Kids Struggle and Others Shine\nMichele Borba\n\n\nAmazon Link"
+  },
+  {
+    "objectID": "books/10-Thrivers/index.html#book-availability",
+    "href": "books/10-Thrivers/index.html#book-availability",
+    "title": "Thrivers",
+    "section": "",
+    "text": "Amazon Link"
+  },
+  {
+    "objectID": "books/08-Limitless-Mind/index.html",
+    "href": "books/08-Limitless-Mind/index.html",
+    "title": "Limitless Mind",
+    "section": "",
+    "text": "Book\n\n\n\nLimitless Mind: Learn, Lead, and Live Without Borders\nJo Boaler\n\n\nAmazon Link"
+  },
+  {
+    "objectID": "books/08-Limitless-Mind/index.html#book-availability",
+    "href": "books/08-Limitless-Mind/index.html#book-availability",
+    "title": "Limitless Mind",
+    "section": "",
+    "text": "Amazon Link"
+  },
+  {
+    "objectID": "books/06-Happiness/index.html",
+    "href": "books/06-Happiness/index.html",
+    "title": "Happiness",
+    "section": "",
+    "text": "Book\n\n\n\nHappiness: A Guide to Developing Life’s Most Important Skill\nMatthieu Ricard\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nAmazon Link"
+  },
+  {
+    "objectID": "books/04-Black-In-A-White-Coat/index.html",
+    "href": "books/04-Black-In-A-White-Coat/index.html",
+    "title": "Black Man in a White Coat",
+    "section": "",
+    "text": "Book\n\n\n\nBlack Man in a White Coat: A Doctor’s Reflections on Race and Medicine\nDamon Tweedy M.D.\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nAmazon Link"
+  },
+  {
+    "objectID": "books/02-Small-Teaching/index.html",
+    "href": "books/02-Small-Teaching/index.html",
+    "title": "Small Teaching",
+    "section": "",
+    "text": "Book\n\n\n\nSmall Teaching: Everyday Lessons from the Science of Learning\n2nd Edition\nJames Lang\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nPhysical Copy Available from the Broome Library: Link\nAmazon Link"
+  },
+  {
+    "objectID": "books.html",
+    "href": "books.html",
+    "title": "Reading List",
+    "section": "",
+    "text": "A People’s History of Science\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nApr 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nWhy Don’t Students Like School?\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nJan 10, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nInclusive teaching\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nDec 28, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nThrivers\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nDec 20, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSolito\n\n\n\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\nAug 25, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nLimitless Mind\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nAug 12, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nMake it Stick\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nAug 5, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nHappiness\n\n\n\n\n\n\npsychology\n\n\nempowerment\n\n\n\n\n\n\n\n\n\nJul 22, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nFresh Banana Leaves\n\n\n\n\n\n\nindigenous studies\n\n\nenvironmental conservation\n\n\n\n\n\n\n\n\n\nJul 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nBlack Man in a White Coat\n\n\n\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\nJul 2, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nEducated\n\n\n\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\nJun 29, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nTeach Students How To Learn\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nJun 26, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSmall Teaching\n\n\n\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nJun 26, 2023\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/2024-04-11-zero-trick/index.html",
+    "href": "blog/2024-04-11-zero-trick/index.html",
+    "title": "The ‘Zero-Trick’ in Bayesian Survival Analysis",
+    "section": "",
+    "text": "My dissertation at UC Riverside focused on modeling joint longitudinal-survival models from a frequentist approach. While there were some benefit estimating the parameters using the EM Algorithm, there were several challenges that I wanted to overcome. And Bayesian approach had better capabilities at solving those problems.\nNow that I am working on expanding my skills as a statistician, I can’t help but wanting to estimate my model using a Bayesian approach. So I set off to read every paper that implemented the joint longitudinal-survival model in a Bayesian framework. And while I was reading other statisticians code to implement their models on github, I always encountered the ‘Zero-Trick’ to model the survival component."
+  },
+  {
+    "objectID": "blog/2024-04-11-zero-trick/index.html#introduction",
+    "href": "blog/2024-04-11-zero-trick/index.html#introduction",
+    "title": "The ‘Zero-Trick’ in Bayesian Survival Analysis",
+    "section": "",
+    "text": "My dissertation at UC Riverside focused on modeling joint longitudinal-survival models from a frequentist approach. While there were some benefit estimating the parameters using the EM Algorithm, there were several challenges that I wanted to overcome. And Bayesian approach had better capabilities at solving those problems.\nNow that I am working on expanding my skills as a statistician, I can’t help but wanting to estimate my model using a Bayesian approach. So I set off to read every paper that implemented the joint longitudinal-survival model in a Bayesian framework. And while I was reading other statisticians code to implement their models on github, I always encountered the ‘Zero-Trick’ to model the survival component."
+  },
+  {
+    "objectID": "blog/2024-04-11-zero-trick/index.html#bayesian-survival-model",
+    "href": "blog/2024-04-11-zero-trick/index.html#bayesian-survival-model",
+    "title": "The ‘Zero-Trick’ in Bayesian Survival Analysis",
+    "section": "Bayesian Survival Model",
+    "text": "Bayesian Survival Model"
+  },
+  {
+    "objectID": "blog/2021-05-03-smart-program/index.html",
+    "href": "blog/2021-05-03-smart-program/index.html",
+    "title": "SMART Program",
+    "section": "",
+    "text": "At the beginning 2020, I learned that there were several undergraduate students interested in attending graduate school. However, many of them had the idea that they weren’t capable of succeeding in graduate school. This was nonsense! I TA’ed them through Regression and ANOVA courses and got to see first hand their capabilities. It was shocking to hear that they think like this. While I can go into details of my ideas why they think like this (possibly imposter syndrome1), this isn’t the post for it. I was set out to convince and prepare these students to apply to graduate school.\nIn the Spring Quarter of 2020, I decided to hold a virtual seminar in applying to graduate school2. The seminar focused on the application process and choosing the correct degree program. At the end of the seminar, approximately 15 undergraduate students attended, and we had a lively discussion between undergraduate students, graduate students, and faculty. It showed that undergraduate students were interested in pursuing graduate degrees. This motivated me to hold more events similar to this seminar.\nIn the Fall Quarter of 2020, I decided to hold a similar seminar for undergraduate students. However, I focused more on writing different statements as well as holding discussion at the end3. At the same time, my colleague sent me a tweet about a program from the University of Washington, the Statistics and Probability Association Direct Reading Program. It is an excellent program, and I decided to implement a similar program. Thus, the beginnings of the SMART Program was born!"
+  },
+  {
+    "objectID": "blog/2021-05-03-smart-program/index.html#introduction",
+    "href": "blog/2021-05-03-smart-program/index.html#introduction",
+    "title": "SMART Program",
+    "section": "",
+    "text": "At the beginning 2020, I learned that there were several undergraduate students interested in attending graduate school. However, many of them had the idea that they weren’t capable of succeeding in graduate school. This was nonsense! I TA’ed them through Regression and ANOVA courses and got to see first hand their capabilities. It was shocking to hear that they think like this. While I can go into details of my ideas why they think like this (possibly imposter syndrome1), this isn’t the post for it. I was set out to convince and prepare these students to apply to graduate school.\nIn the Spring Quarter of 2020, I decided to hold a virtual seminar in applying to graduate school2. The seminar focused on the application process and choosing the correct degree program. At the end of the seminar, approximately 15 undergraduate students attended, and we had a lively discussion between undergraduate students, graduate students, and faculty. It showed that undergraduate students were interested in pursuing graduate degrees. This motivated me to hold more events similar to this seminar.\nIn the Fall Quarter of 2020, I decided to hold a similar seminar for undergraduate students. However, I focused more on writing different statements as well as holding discussion at the end3. At the same time, my colleague sent me a tweet about a program from the University of Washington, the Statistics and Probability Association Direct Reading Program. It is an excellent program, and I decided to implement a similar program. Thus, the beginnings of the SMART Program was born!"
+  },
+  {
+    "objectID": "blog/2021-05-03-smart-program/index.html#development",
+    "href": "blog/2021-05-03-smart-program/index.html#development",
+    "title": "SMART Program",
+    "section": "Development",
+    "text": "Development\nFor the remainder of the Fall quarter, I began talking to other graduate students about creating a mentoring program within the department. I pitched them that they will mentor an undergraduate student for a statistical project. Many students seemed on board to participate in the program. Afterwards, I started asking Teaching Faculty to support the program. By the end of the quarter, I had an idea of the support I will get from the department.\nTowards the end of the year, almost everyone had a rough winter due to the pandemic. Fatigued had set in to many students, and they needed time to rest. I myself struggled through the winter. It was challenging to rest during my break due to competing pressures. While I did manage to get through the winter, I did not want to add any extra pressure to the remaining graduate students that expressed interest in mentoring in the program. I decided to wait until half way through the quarter to begin asking graduate students for their commitment to the program. Fortunately, everyone was excited to be a mentor in the program.\nAt the same time, I was worried about having graduate students coming up with a project. I was afraid that students could not come up with an idea that was feasible for an undergraduate student to complete, so I decided to come up with a project that anyone can easily do. Thus the ucrstats package was born. The idea was for a mentor teach an undergrad about a topic, then the mentee can create a learnr tutorial to teach other students. The only thing the mentor needed to do was gather materials and R code for the student to learn about the topic. The tutorials can easily be created using an RMarkdown file. At the end, the mentee will have a product that they can show off and put on their CV. It was a different type of project that focused on programming than the traditional form of research. Fortunately, all other graduate students had project ideas; however, this can be a good back up for those who do not have a project idea. Additionally, the package can be utilized from other graduate students in different departments who want to learn more about statistics."
+  },
+  {
+    "objectID": "blog/2021-05-03-smart-program/index.html#recruitment",
+    "href": "blog/2021-05-03-smart-program/index.html#recruitment",
+    "title": "SMART Program",
+    "section": "Recruitment",
+    "text": "Recruitment\nWe recruited undergraduate students for the program with an application using Google Forms. We asked for basic things such as what classes you took, write a couple of essays, and your interests in the projects.\nUsing all the information we gathered, we began the selection process. We ranked each student based on their interests, the classes they have completed, and how well they met the admission criteria. From their, we selected students based on their rankings.\nLooking back at the application process, there are couple of things I wish we could have done a bit differently. First, I think we should ask for CVs or resumes. This way we can better learn about the student. Second, the application process should begin at least a month before the start of the quarter. We had to operate with some tight deadlines and I did not enjoy the pressure. Other than that I will need to consult with the current cohort for more recommendations."
+  },
+  {
+    "objectID": "blog/2021-05-03-smart-program/index.html#reflection",
+    "href": "blog/2021-05-03-smart-program/index.html#reflection",
+    "title": "SMART Program",
+    "section": "Reflection",
+    "text": "Reflection\nThe SMART Pilot Program was launched in Spring 2021 with our first cohort of mentors and mentees. We held a small orientation with the mentees to set the expectations4. The remainder of the quarter went smoothly. There were a few bumps in the roads here and there, but most of it was providing guidance to the mentors. At the end of the quarter, we held a symposium where all groups presented their work.\nStarting a program is tough! I worried about so many things. Mostly making sure both the mentors and mentees were progressing with their projects and gaining something the other time. However, I just needed to have faith that everything will go well. Fortunately, the pilot was a success! I was so impressed by everyone’s presentation, and I think we showed the department how capable both the graduate and undergraduate students are in completing a project. This was certainly a long process, but overall I am glad I started the program and excited to see where it goes from here."
+  },
+  {
+    "objectID": "blog/2021-05-03-smart-program/index.html#future",
+    "href": "blog/2021-05-03-smart-program/index.html#future",
+    "title": "SMART Program",
+    "section": "Future",
+    "text": "Future\nAs I am writing this post, I am moving on to my sixth year of my graduate program, and I have my eyes on graduating and moving on the next phase of my career. That being said, I don’t really know if I will be involved for the second year of the program. I hope I inspired other graduate students to take on the mantle and continue the program. I truly believe the program is a great asset for the department. If I am around for the second year of the program, I will most likely take a consulting position to ensure that other graduate students can continue the program without relying on me. Otherwise, I will prefer to only coordinate for the second year.\nAs for the program itself, I hope the program will serve students from marginalized communities. Particularly communities where Statistics has be utilized against them. We need better statisticians who constantly thinking about how their work can harm the most vulnerable. Those who will advocate for these groups and change the Statistics community for the better. My hope is that the program will train individuals who will advocate for a better future."
+  },
+  {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html",
+    "title": "RcppArmadillo",
+    "section": "",
+    "text": "When I first started using Rcpp for my research, I had no idea what I was doing. All I knew was that you can incorporate C++1 code in your R scripts to speed up data processing. I did spend some time learning C++ through www.learningcpp.com, but I didn’t get far because my example program did not go well. Troubleshooting the problem was a nightmare. However, it did give me an idea of how C++ programming looks like.\nOnce, I decided to implement C++ for my research, I focused on how to incorporate it in R. At the time, I had a fairly strong R background, and I knew you can use C++ in R via Rcpp. Therefore, I spent some time learning more about Rcpp from their website and book. After reading everything I could, I didn’t learn much. It was really advanced and not written for a newbie. However, I did learn that you can compile a C++ function2 that can be executed in R via Rcpp. The challenge was to build a cpp file that contained functions for my analysis. I turned to Advanced R by Hadley Wickham for more help.\nWickham’s book provided the necessary information to build basic functions to use in R. I learned how to write basic functions in cpp and making them executable with cppFunction. Additionally, the book covers the basic classes, looping, and function exporting. I felt prepared to write and use functions in R! However, my research required linear algebra, and it would have been a nightmare to program matrix multiplication with the basics. These challenges led me to RcppArmadillo.\nRcppArmadillo is designed to incorporate the Armadillo library in R via Rcpp. The Armadillo library contains functions that make it easy to conduct linear algebra in cpp. Additionally, it isn’t difficult to learn the syntax. The library is implemented to closely follow Matlab3 syntax.\nAfter writing functions and troubleshooting problems, I was able to export my functions to R. Making sure everything worked, I ran the same data on both my R and cpp functions, and it worked! I was able to produce the same value for each function. It gave me the confidence that I would be able to complete my research.\nAfter successfully implementing cpp in my research, I wanted to know how much faster was my code. Going back to Wickham’s book, there was information on benchmarking different functions. Using the bench package to identify how long each function was taking to execute, I found my R function took 13 times longer than my cpp function. I was shocked! I knew cpp would make my code faster, but I didn’t expect it to be that much faster4. This convinced me that all my efforts were worth it!"
+  },
+  {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#journey",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#journey",
+    "title": "RcppArmadillo",
+    "section": "",
+    "text": "When I first started using Rcpp for my research, I had no idea what I was doing. All I knew was that you can incorporate C++1 code in your R scripts to speed up data processing. I did spend some time learning C++ through www.learningcpp.com, but I didn’t get far because my example program did not go well. Troubleshooting the problem was a nightmare. However, it did give me an idea of how C++ programming looks like.\nOnce, I decided to implement C++ for my research, I focused on how to incorporate it in R. At the time, I had a fairly strong R background, and I knew you can use C++ in R via Rcpp. Therefore, I spent some time learning more about Rcpp from their website and book. After reading everything I could, I didn’t learn much. It was really advanced and not written for a newbie. However, I did learn that you can compile a C++ function2 that can be executed in R via Rcpp. The challenge was to build a cpp file that contained functions for my analysis. I turned to Advanced R by Hadley Wickham for more help.\nWickham’s book provided the necessary information to build basic functions to use in R. I learned how to write basic functions in cpp and making them executable with cppFunction. Additionally, the book covers the basic classes, looping, and function exporting. I felt prepared to write and use functions in R! However, my research required linear algebra, and it would have been a nightmare to program matrix multiplication with the basics. These challenges led me to RcppArmadillo.\nRcppArmadillo is designed to incorporate the Armadillo library in R via Rcpp. The Armadillo library contains functions that make it easy to conduct linear algebra in cpp. Additionally, it isn’t difficult to learn the syntax. The library is implemented to closely follow Matlab3 syntax.\nAfter writing functions and troubleshooting problems, I was able to export my functions to R. Making sure everything worked, I ran the same data on both my R and cpp functions, and it worked! I was able to produce the same value for each function. It gave me the confidence that I would be able to complete my research.\nAfter successfully implementing cpp in my research, I wanted to know how much faster was my code. Going back to Wickham’s book, there was information on benchmarking different functions. Using the bench package to identify how long each function was taking to execute, I found my R function took 13 times longer than my cpp function. I was shocked! I knew cpp would make my code faster, but I didn’t expect it to be that much faster4. This convinced me that all my efforts were worth it!"
+  },
+  {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
+    "title": "RcppArmadillo",
+    "section": "Using RcppArmadillo",
+    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] -0.01769923\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] -0.01769923\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.23µs   3.44µs   273397.        0B     27.3\n2 mean_cpp(Y)   1.33µs   1.38µs   689744.    5.17KB      0  \n\n\nYou can see that the cpp function is much faster than the R built-in function."
+  },
+  {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
+    "title": "RcppArmadillo",
+    "section": "Speed Gains Explanation",
+    "text": "Speed Gains Explanation\nYou may be asking why is R much slower than cpp. From what I can gather, R is an interpreted language while cpp is a compiled language. While I don’t really know what the difference is, it makes cpp much faster.\nI like to think there is a difference of requirements. You need to be more careful with cpp because it does not convert inputs to the correct data type. R will do it automatically. Therefore, R takes more time to ensure everything is correct before computing a function. Cpp requires more thinking from the user, but will reward them with speed gains. I am sure there is way more to this simple explanation, but the end result is that cpp is much faster than R."
+  },
+  {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#next-steps",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#next-steps",
+    "title": "RcppArmadillo",
+    "section": "Next Steps …",
+    "text": "Next Steps …\nAs my research is progressing, I am noticing the need to incorporate different methods not found in the Armadillo library. For example, I want to incorporate the GNU Scientific Library. I learned there is an R package exists for the library, RcppGSL! This gives me hope that I can use it for my research. However, I want to use the Armadillo library alongside with GSL. This has a potential to bring new problems with data type incompatibilities. I have ideas for potential solutions, but I will need to test them out.\nI also want to learn more about the capabilities of Rcpp. Specifically, what other functions does it contain. I learned that Rcpp has functions for distribution functions. This can be useful for expanding my research."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Wellness Plan Spring 2023\n\n\n\n\n\n\nWellness\n\n\n\nMy wellness plan for Spring 2023.\n\n\n\n\n\nJan 31, 2023\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\n\n\n\n\n\n\n\nThe ‘Zero-Trick’ in Bayesian Survival Analysis\n\n\n\n\n\n\nWellness\n\n\n\nMy wellness plan for Spring 2023.\n\n\n\n\n\nJan 31, 2023\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\n\n\n\n\n\n\n\nSMART Program\n\n\n\n\n\nThe Statistical Mentoring in Application, Research, and/or Technology (SMART) Program is a mentoring program where undergraduate students get the opportunity to conduct a statistical project under the supervision of a graduate student. The pilot program was implemented in Spring 2021 where we determined to see the feasibility of both the undergraduate and graduate students to complete the program. For this blog post, I will talk about the inspiration, development and implementation of the SMART Program. As the main architect of the program, I will talk about my thought process and the goals for the future of the program.\n\n\n\n\n\nJun 10, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n\n\n\n\n\n\nRcppArmadillo\n\n\n\n\n\n\nRCPP\n\n\n\nDocumenting my experience implementing RcppArmadillo to my research.\n\n\n\n\n\nMay 1, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n\n\n\n\n\n\nRcpp and Research\n\n\n\n\n\n\nRCPP\n\n\n\nA post describing why I decided to use Rcpp for my research.\n\n\n\n\n\nApr 15, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome!\n\n\n\n\n\nWelcome to the INQS Blog. A blog documenting my experiences through Statistics. I hope you enjoy reading my blog!\n\n\n\n\n\nApr 14, 2021\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/2021-04-15-rcpp-and-research/index.html",
+    "href": "blog/2021-04-15-rcpp-and-research/index.html",
+    "title": "Rcpp and Research",
+    "section": "",
+    "text": "This is the first post of my “Rcpp” collection detailing my journey with Rcpp. The “Rcpp” collection contains information about the struggles I faced while implementing Rcpp. Even though my first venture to Rcpp happened in the Summer of 2020, I realized I am learning new things every day. I thought it would be wised to write a blog of everything I have and will learn with Rcpp. I hope this collection will guide other students who have never used c++ before.\nAs I am developing my model for my PhD, a major limiting factor is that my model takes a really long time to compute the results I need. Due to the complexity of the model, I need to approximate different components using iterative algorithms. This in turn increases the computation time to obtain results. You can only imagine my frustration when I first coded my model in R and it took more than a week to obtain results!\nTherefore, I decided to focus on speeding up my code. I spent time reading Wickham’s Advanced R Book to speed up my code. There I learned how about vectorizing code, utilizing built-in optimized functions, and common practices for speed gains. All this work has made me a better R programmer. Unfortunately, when I reran my model, the speed gains was not enough to call my efforts a success.\n\nDue to the lack of improvements, and knowing I will need expand my model for larger data sets, I set on a quest to improve my model. I attacked this problem on two fronts: looking for mathematical methods to reduce my computation needs and implementing different computing techniques. While both components dramatically improved my computational time, implementing c++ via Rcpp was the biggest game changer for my model.\nAfter I implemented everything I can from Wickham’s Book. I began reading more about about c++ from the book’s c++ chapter. I will be honest, I didn’t know what I was doing. This was my first time learning how to use c++. Nevertheless, I was determined to learn more about the c++ due to the potential speed gains. During the summer of 2020, I spent all my time learning about c++ and Rcpp. By the end of my summer, a model that took 3.5 days to converge was now taking approximately 6 hours!\n\nWith this triumph, I have been able to test and diagnose any faults with my model. I can honestly say that implementing Rcpp has drastically improved my PhD experience. I no longer have the feeling of being anxious for days wondering if my model works or not. I feel more productive! With this confidence, I feel prepared to tackle new problems with my research."
+  },
+  {
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html",
+    "title": "Wellness Plan Spring 2023",
+    "section": "",
+    "text": "Before designing a wellness plan, I need to assess all areas of my life and see what I can improve. Below is a list of areas that are important to me:\n\n\n\nMental\nEmotional\nSocial\nSpiritual\n\n\n\nPhysical\nEnvironmental\nFinancial\nCareer\n\n\n\nWhile there are many other aspects of my life that I would like to improve on, this is a good starting point for this semester."
+  },
+  {
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#areas-of-improvement",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#areas-of-improvement",
+    "title": "Wellness Plan Spring 2023",
+    "section": "",
+    "text": "Before designing a wellness plan, I need to assess all areas of my life and see what I can improve. Below is a list of areas that are important to me:\n\n\n\nMental\nEmotional\nSocial\nSpiritual\n\n\n\nPhysical\nEnvironmental\nFinancial\nCareer\n\n\n\nWhile there are many other aspects of my life that I would like to improve on, this is a good starting point for this semester."
+  },
+  {
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#goals",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#goals",
+    "title": "Wellness Plan Spring 2023",
+    "section": "Goals",
+    "text": "Goals\nLooking at the areas that I want to focus on, I want to create realistic goals. Additionally, each goal can satisfy multiple aspects of my life. I will use SMART goals to ensure SMART goals to make sure I create achievable goals. The period for all the goals is the Spring semester.\n\nGoal 1Goal 2Goal 3Goal 4Goal 5\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will spend at least 1 hour every day, Monday through Friday, working on research related to my dissertation.\n\n\nI want to increase my research productivity for my own career goals. Additionally, working on this will help me through my tenure process.\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will learn how to create a new tea-related beverage at home each month.\n\n\nThis goal has the potential to serve three aspects of my life: Physical, Environmental, and Financial. Learning how to create new tea drinks will allow me to save money instead of buying them from different coffee shops. Additionally, I will know what ingredients are used in the drinks. Therefore, I will be able to improve the physical aspect of my life. Lastly, this will help the environmental part of my life by reducing my environmental impact and using less plastic.\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will travel to a new city in Southern CA each month and buy their local newspaper.\n\n\nOne of my main goals is to travel more globally and locally. I especially want to get to know small communities located in Southern California. For that reason, I want to make an effort to explore more of Southern CA. This goal has the potential to affect four aspects of my life: mental, social, spiritual, and physical.\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will go swimming two times a week for 30 minutes.\n\n\nWhen I was planning to move to Camarillo, I wanted to start something new for my physical health. Therefore, I decided to start swimming.\n\n\n\n\n\n\n\n\nGoal\n\n\n\nI will go to the gym three times a week for 1 hour.\n\n\nSimilar to swimming, I want to develop new habits and exercise more. Developing this habit and going to the gym more will help my physical health."
+  },
+  {
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#plan",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#plan",
+    "title": "Wellness Plan Spring 2023",
+    "section": "Plan",
+    "text": "Plan\n\nGoal 1Goal 2Goal 3Goal 4Goal 5\n\n\nSince I am struggling to keep my research productivity up, I will try new strategies. To get more research done, I plan to work on research as the very first thing I do when I get into my office. If I complete this task at the beginning of my day, I will get it out of the way and focus on things that are easier for me. The idea is to do the things I struggle with at the very beginning of my day.\nAdditionally, I plan to use the Forest App to maintain my focus. I will do a 20 minute session of writing1 and then do a 10 minute break. I will repeat this process until I complete an hour of writing.\n\n\nRight now, I am working on learning how to make a chai latte at home. So far, I have learned how to make oat milk how I like it. Next, I want to make chai concentrate using raw ingredients. I have bought many of the tools and feel ready to start experimenting with making the concentrate.\nOther types of teas that I want to learn are hibiscus and Thai.\n\n\nI first plan to visit Ojai in February. Depending on the weather, I want to visit Twentynine Palms for the super bloom; otherwise, I will visit Carpinteria. Lastly, I want to visit Idyllwild. I want to visit a special event/festival for each location if possible.\n\n\nBecause I set this goal for two 30 minute sessions, I believe I can complete this task. It is easier to spend a quick 30 minute session than a full hour.\n\n\nSimilar to my research goals, I plan to go to the gym in the morning and get them done early so I can focus on other things I am interested in. I plan to go to the gym early every Monday, Wednesday, and Friday. This task will be before my writing sessions."
+  },
+  {
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#accountability",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#accountability",
+    "title": "Wellness Plan Spring 2023",
+    "section": "Accountability",
+    "text": "Accountability\nThere are two ways that I will try told hold myself accountable. First, I will share my wellness plan with friends and family members. Second, I will create an incentive plan for each goal I complete. I will reassess my goals before spring break (3/17/23) and adjust accordingly. Overall, I want to create consistency with these goals. Any positive gain will be a win. At the end of the semester, I plan to reflect on the process and see what worked and what did not."
+  },
+  {
+    "objectID": "blog/welcome/index.html",
+    "href": "blog/welcome/index.html",
+    "title": "Welcome!",
+    "section": "",
+    "text": "Welcome! I’ve decided to create this blog as a way to record my journey in Statistics. As I am working through my PhD, I’ve read numerous posts on vast topics. As I was reading about topics related to Rcpp. I noticed how difficult it was to implement Rcpp for my needs. At the same moment, it dawned on me that I am reading from individuals that at some point in time were struggling with the same issues. This inspired me to create a blog of my own with the same intentions to help other individuals. My hope is to demonstrate how I overcame the challenges I faced to others that are facing similar issues.\nI don’t know how this blog will go. It’s going to be a learning experience. I don’t even know how many blog posts I will write in a year. I don’t even know what topics I will write about. However, I hope overtime, I can create a blog that may help people."
+  },
+  {
+    "objectID": "books/01-Teach-your-students-how-to-learn/index.html",
+    "href": "books/01-Teach-your-students-how-to-learn/index.html",
+    "title": "Teach Students How To Learn",
+    "section": "",
+    "text": "Book\n\n\n\nTeach Students How to Learn: Strategies You Can Incorporate Into Any Course to Improve Student Metacognition, Study Skills, and Motivation\n1st Edition\nSaundra Yancy McGuire and Stephanie McGuire\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nEbook Available from the Broome Library: Faculty | Students\nAmazon Links:\nFaculty | Students | Parents"
+  },
+  {
+    "objectID": "books/03-Educated/index.html",
+    "href": "books/03-Educated/index.html",
+    "title": "Educated",
+    "section": "",
+    "text": "Book\n\n\n\nEducated\nTara Westover\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nPhysical Book Available from the Broome Library\nAmazon Link"
+  },
+  {
+    "objectID": "books/05-Fresh-Banana-Leaves/index.html",
+    "href": "books/05-Fresh-Banana-Leaves/index.html",
+    "title": "Fresh Banana Leaves",
+    "section": "",
+    "text": "Book\n\n\n\nFresh Banana Leaves: Healing Indigenous Landscapes Through Indigenous Science\nJessica Hernandez PhD\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nAvailable from the Broome Library\nAmazon Link"
+  },
+  {
+    "objectID": "books/07-Make-it-Stick/index.html",
+    "href": "books/07-Make-it-Stick/index.html",
+    "title": "Make it Stick",
+    "section": "",
+    "text": "Book\n\n\n\nMake it Stick: The Science of Successful Learning\nPeter Brown\nHenry Roediger III\nMark McDaniel\n\n\n\n\n\n\n\n\nBook Availability\n\n\n\nAmazon Link"
+  },
+  {
+    "objectID": "books/09-Solito/index.html",
+    "href": "books/09-Solito/index.html",
+    "title": "Solito",
+    "section": "",
+    "text": "Book\n\n\n\nSolito: A Memoir\nJavier Zamora\n\n\nAmazon Link"
+  },
+  {
+    "objectID": "books/09-Solito/index.html#book-availability",
+    "href": "books/09-Solito/index.html#book-availability",
+    "title": "Solito",
+    "section": "",
+    "text": "Amazon Link"
+  },
+  {
+    "objectID": "books/11-Inclusive-Teaching/index.html",
+    "href": "books/11-Inclusive-Teaching/index.html",
+    "title": "Inclusive teaching",
+    "section": "",
+    "text": "Book\n\n\n\nInclusive Teaching: Strategies for Promoting Equity in the College Classroom\nKelly Hogan and Viji Sathy\n\n\nAmazon Link"
+  },
+  {
+    "objectID": "books/11-Inclusive-Teaching/index.html#book-availability",
+    "href": "books/11-Inclusive-Teaching/index.html#book-availability",
+    "title": "Inclusive teaching",
+    "section": "",
+    "text": "Amazon Link"
+  },
+  {
+    "objectID": "books/13-Peoples-History-Science/index.html",
+    "href": "books/13-Peoples-History-Science/index.html",
+    "title": "A People’s History of Science",
+    "section": "",
+    "text": "Book\n\n\n\nA People’s History of Science: Miners, Midwives, and Low Mechanicks\nClifford Conner\n\n\nAmazon Link"
+  },
+  {
+    "objectID": "books/13-Peoples-History-Science/index.html#book-availability",
+    "href": "books/13-Peoples-History-Science/index.html#book-availability",
+    "title": "A People’s History of Science",
+    "section": "",
+    "text": "Amazon Link"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Unable to display PDF file. Download instead."
+  },
+  {
+    "objectID": "p/plotathon/f22.html#website",
+    "href": "p/plotathon/f22.html#website",
+    "title": "Plotathon",
+    "section": "Website",
+    "text": "Website\nhttps://www.inqs.info/p/plotathon/f22.html"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#installing-r",
+    "href": "p/plotathon/f22.html#installing-r",
+    "title": "Plotathon",
+    "section": "Installing R",
+    "text": "Installing R\nhttps://cloud.r-project.org/"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#installing-rstudio",
+    "href": "p/plotathon/f22.html#installing-rstudio",
+    "title": "Plotathon",
+    "section": "Installing RStudio",
+    "text": "Installing RStudio\nhttps://posit.co/download/rstudio-desktop/"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#installing-rtools-windows",
+    "href": "p/plotathon/f22.html#installing-rtools-windows",
+    "title": "Plotathon",
+    "section": "Installing RTools (Windows)",
+    "text": "Installing RTools (Windows)\nhttps://cran.r-project.org/bin/windows/Rtools/"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#posit-cloud",
+    "href": "p/plotathon/f22.html#posit-cloud",
+    "title": "Plotathon",
+    "section": "Posit Cloud",
+    "text": "Posit Cloud\nhttps://posit.cloud/"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#tidyverse",
+    "href": "p/plotathon/f22.html#tidyverse",
+    "title": "Plotathon",
+    "section": "Tidyverse",
+    "text": "Tidyverse\n\ninstall.packages(\"tidyverse\")"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#plotly",
+    "href": "p/plotathon/f22.html#plotly",
+    "title": "Plotathon",
+    "section": "Plotly",
+    "text": "Plotly\n\ninstall.packages(\"plotly\")"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#ggthemes",
+    "href": "p/plotathon/f22.html#ggthemes",
+    "title": "Plotathon",
+    "section": "ggthemes",
+    "text": "ggthemes\n\ninstall.packages(\"ggthemes\")"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#esquisse",
+    "href": "p/plotathon/f22.html#esquisse",
+    "title": "Plotathon",
+    "section": "Esquisse",
+    "text": "Esquisse\n\ninstall.packages(\"esquisse\")"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#load-packages",
+    "href": "p/plotathon/f22.html#load-packages",
+    "title": "Plotathon",
+    "section": "Load Packages",
+    "text": "Load Packages\n\nlibrary(tidyverse)\nlibrary(plotly)\nlibrary(ggthemes)\nlibrary(esquisse)"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#r-projects-1",
+    "href": "p/plotathon/f22.html#r-projects-1",
+    "title": "Plotathon",
+    "section": "R Projects",
+    "text": "R Projects\nR Projects are designed to contain all your data, scripts, and output in one location. This ensures that things are compatible on other computers."
+  },
+  {
+    "objectID": "p/plotathon/f22.html#directories-folders",
+    "href": "p/plotathon/f22.html#directories-folders",
+    "title": "Plotathon",
+    "section": "Directories (Folders)",
+    "text": "Directories (Folders)\n\ndata\noutput\nscripts"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#rstudio-layout-1",
+    "href": "p/plotathon/f22.html#rstudio-layout-1",
+    "title": "Plotathon",
+    "section": "RStudio Layout",
+    "text": "RStudio Layout\n\nScripts\nConsole\nEnvironment\nFiles\nEverything else"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#adding-script",
+    "href": "p/plotathon/f22.html#adding-script",
+    "title": "Plotathon",
+    "section": "Adding Script",
+    "text": "Adding Script\n\nUse the top right corner"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#downloading-data-data",
+    "href": "p/plotathon/f22.html#downloading-data-data",
+    "title": "Plotathon",
+    "section": "Downloading Data Data",
+    "text": "Downloading Data Data\n\nu &lt;- \"https://www.inqs.info/p/plotathon/owenWilsonWows.csv\"\nbasename(u)\ndownload.file(u,\n              file.path(getwd(), \"data\", basename(u)))"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#loading-data-1",
+    "href": "p/plotathon/f22.html#loading-data-1",
+    "title": "Plotathon",
+    "section": "Loading Data",
+    "text": "Loading Data\n\nmds &lt;- read_csv(\"data/owenWilsonWows.csv\")"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#base-plot",
+    "href": "p/plotathon/f22.html#base-plot",
+    "title": "Plotathon",
+    "section": "Base Plot",
+    "text": "Base Plot\n\nmds |&gt; ggplot(aes(x = total_wows_in_movie))"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#histogram",
+    "href": "p/plotathon/f22.html#histogram",
+    "title": "Plotathon",
+    "section": "Histogram",
+    "text": "Histogram\n\nmds |&gt; ggplot(aes(x = total_wows_in_movie)) +\n  geom_histogram()"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#box-plot",
+    "href": "p/plotathon/f22.html#box-plot",
+    "title": "Plotathon",
+    "section": "Box Plot",
+    "text": "Box Plot\n\nmds |&gt; ggplot(aes(x = total_wows_in_movie)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#density-plot",
+    "href": "p/plotathon/f22.html#density-plot",
+    "title": "Plotathon",
+    "section": "Density Plot",
+    "text": "Density Plot\n\nmds |&gt; ggplot(aes(x = total_wows_in_movie)) +\n  geom_density()"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#box-plot-by-category",
+    "href": "p/plotathon/f22.html#box-plot-by-category",
+    "title": "Plotathon",
+    "section": "Box Plot By Category",
+    "text": "Box Plot By Category\n\nmds |&gt; ggplot(aes(x = total_wows_in_movie, y = era)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#density-plot-by-category",
+    "href": "p/plotathon/f22.html#density-plot-by-category",
+    "title": "Plotathon",
+    "section": "Density Plot By Category",
+    "text": "Density Plot By Category\n\nmds |&gt; ggplot(aes(x = total_wows_in_movie, color = era)) +\n  geom_density()"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#scatter-plot",
+    "href": "p/plotathon/f22.html#scatter-plot",
+    "title": "Plotathon",
+    "section": "Scatter Plot",
+    "text": "Scatter Plot\n\nmds |&gt; ggplot(aes(x = durationInSeconds, \n                  y = total_wows_in_movie)) +\n  geom_point()"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#scatter-plot-by-group",
+    "href": "p/plotathon/f22.html#scatter-plot-by-group",
+    "title": "Plotathon",
+    "section": "Scatter Plot by Group",
+    "text": "Scatter Plot by Group\n\nmds |&gt; ggplot(aes(x = durationInSeconds, \n                  y = total_wows_in_movie, color = era)) +\n  geom_point()"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#add-regression-line",
+    "href": "p/plotathon/f22.html#add-regression-line",
+    "title": "Plotathon",
+    "section": "Add Regression Line",
+    "text": "Add Regression Line\n\nmds |&gt; ggplot(aes(x = durationInSeconds, \n                  y = total_wows_in_movie)) +\n  geom_point() +\n  geom_smooth(method = \"lm\", se = F)"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#smooth-line",
+    "href": "p/plotathon/f22.html#smooth-line",
+    "title": "Plotathon",
+    "section": "Smooth Line",
+    "text": "Smooth Line\n\nmds |&gt; ggplot(aes(x = durationInSeconds, \n                  y = total_wows_in_movie)) +\n  geom_point() +\n  geom_smooth(se = F)"
+  },
+  {
+    "objectID": "p/plotathon/f22.html#regression-lines-by-group",
+    "href": "p/plotathon/f22.html#regression-lines-by-group",
+    "title": "Plotathon",
+    "section": "Regression Lines by Group",
+    "text": "Regression Lines by Group\n\nmds |&gt; ggplot(aes(x = durationInSeconds, \n                  y = total_wows_in_movie,\n                  color = era)) +\n  geom_point() +\n  geom_smooth(method = \"lm\", se = F)"
+  },
+  {
+    "objectID": "photos/heart/index.html",
+    "href": "photos/heart/index.html",
+    "title": "Heart Rock Trail",
+    "section": "",
+    "text": "library(pixture)\n\npixgallery(\n  list.files(\"img\", \n             full.names=TRUE),\n  dim=\"350px\",\n  gap = \"10px\"\n)"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#san-bernardino-desert-only-real-part",
+    "href": "pres/ci_f23/10_09.html#san-bernardino-desert-only-real-part",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "San Bernardino Desert (Only Real Part)",
+    "text": "San Bernardino Desert (Only Real Part)"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#study-felis",
+    "href": "pres/ci_f23/10_09.html#study-felis",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Study Felis",
+    "text": "Study Felis\n\n\nF. catus\n\n\n\n\n\n\nF. silvestris\n\n\n\n\n\n\nF. margarita"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#study",
+    "href": "pres/ci_f23/10_09.html#study",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Study",
+    "text": "Study\nWe are interested in seeing if wearing a flea collar will affect a cat’s weight over time."
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#outcome-y-weight-of-a-cat",
+    "href": "pres/ci_f23/10_09.html#outcome-y-weight-of-a-cat",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Outcome (Y): Weight of a cat",
+    "text": "Outcome (Y): Weight of a cat"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#predictors-x",
+    "href": "pres/ci_f23/10_09.html#predictors-x",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Predictors (X)",
+    "text": "Predictors (X)\n\nExperimental Variable\n\nFlea Collar\n\nAlertness\nHair Coat\nTime"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#model",
+    "href": "pres/ci_f23/10_09.html#model",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Model",
+    "text": "Model\n\\[\nY = \\boldsymbol X^\\mathrm T\\boldsymbol \\beta + \\varepsilon\n\\]\n\n\\(Y\\): Outcome of Interest\n\\(\\boldsymbol X = (1, t, X_1, X_2, X_3)^\\mathrm T\\): Predictor Variables\n\\(\\boldsymbol \\beta=(\\beta_0, \\beta_1, \\beta_2, \\beta_3, \\beta_4)^\\mathrm T\\): Regression Coefficients\n\\(\\varepsilon \\sim N(0, \\sigma^2)\\)\n\n\nFit with Linear Regression"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#linear-regression-assumptions",
+    "href": "pres/ci_f23/10_09.html#linear-regression-assumptions",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Linear Regression Assumptions",
+    "text": "Linear Regression Assumptions\n\n\nResiduals follow a normal distribution\nThere is a linear trend\nConstant Variance\nObservations are Independent"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#our-study",
+    "href": "pres/ci_f23/10_09.html#our-study",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Our Study",
+    "text": "Our Study\n\n\nResiduals follow a normal distribution ✅\nThere is a linear trend ✅\nConstant Variance ✅\nObservations are Independent ❌"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#why-is-this-a-problem",
+    "href": "pres/ci_f23/10_09.html#why-is-this-a-problem",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Why is this a problem?",
+    "text": "Why is this a problem?\n\n\n\n\nCannot Construct Likelihood Function\nBiased Standard Errors\nUncontrollable Variation"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#species",
+    "href": "pres/ci_f23/10_09.html#species",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Species",
+    "text": "Species"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#maine-coon",
+    "href": "pres/ci_f23/10_09.html#maine-coon",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Maine Coon",
+    "text": "Maine Coon"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#environments",
+    "href": "pres/ci_f23/10_09.html#environments",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Environments",
+    "text": "Environments\n\n\n\n\nIndoor\n\n\n\n\n\n\n\n\n\nIn-Between\n\n\n\n\n\n\n\n\n\nOutside"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#longitudinal-measurements",
+    "href": "pres/ci_f23/10_09.html#longitudinal-measurements",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Longitudinal Measurements",
+    "text": "Longitudinal Measurements"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#original-model",
+    "href": "pres/ci_f23/10_09.html#original-model",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Original Model",
+    "text": "Original Model\n\\[\nY_{k} = \\boldsymbol X_{k}^\\mathrm T\\boldsymbol \\beta + \\varepsilon_{k}\n\\]\n\n\\(k = 1, \\ldots, N\\)\n\\(N\\): Number of all observations\n\\(Y_{k}\\): Outcome of Interest\n\\(\\boldsymbol X_{k} = (1, t_{k}, X_{k1}, X_{k2}, X_{k3})^\\mathrm T\\): Predictor Variables\n\\(\\boldsymbol \\beta=(\\beta_0, \\beta_1, \\beta_2, \\beta_3, \\beta_4)^\\mathrm T\\): Regression Coefficients\n\\(\\varepsilon_{k}\\sim N(0, \\sigma^2)\\): Error Term"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#multilevel-model-approach",
+    "href": "pres/ci_f23/10_09.html#multilevel-model-approach",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Multilevel Model Approach",
+    "text": "Multilevel Model Approach\n\n\nDifferent cats share characteristics that may introduce correlation\nTo account for the correlation, we will group cats based on the characteristics\nEach group will get a set of random effects to induce the correlation"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#framework",
+    "href": "pres/ci_f23/10_09.html#framework",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Framework",
+    "text": "Framework"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#multilevel-model",
+    "href": "pres/ci_f23/10_09.html#multilevel-model",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Multilevel Model",
+    "text": "Multilevel Model\n\\[\nY = \\boldsymbol X^\\mathrm T\\boldsymbol \\beta + b_i + b_j + b_k +\\varepsilon\n\\]\n\nRandom Effects (RE) induce the correlation in the model\nDifferent RE can be used based on the grouping mechanism\nWe assume RE groups are independent of each other"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#a-linear-model-w-repeated-measurements",
+    "href": "pres/ci_f23/10_09.html#a-linear-model-w-repeated-measurements",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "A Linear Model w/ Repeated Measurements",
+    "text": "A Linear Model w/ Repeated Measurements\n\\[\nY_{ij} = \\boldsymbol X_{ij}^\\mathrm T\\boldsymbol \\beta + \\varepsilon_{ij}\n\\]\n\n\\(Y_{ij}=Y_i(t_{ij})\\): Outcome of Interest\n\\(\\boldsymbol X_{ij} = (1, t_{ij}, X_{ij1}, X_{ij2}, X_{ij3})^\\mathrm T\\): Predictor Variables\n\\(\\boldsymbol \\beta=(\\beta_0, \\beta_1, \\beta_2, \\beta_3, \\beta_4)^\\mathrm T\\): Regression Coefficients\n\\(\\varepsilon_{ij}\\sim N(0, \\sigma^2)\\): Error Term"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#animal-specific-random-effects",
+    "href": "pres/ci_f23/10_09.html#animal-specific-random-effects",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Animal-Specific Random Effects",
+    "text": "Animal-Specific Random Effects\n\\[\n\\boldsymbol b_i = (b_{i0}, b_{i1})^\\mathrm T \\sim N_2(\\boldsymbol 0, \\boldsymbol \\Sigma_b)\n\\]\n\n\nMean Vector\n\\[\n\\boldsymbol 0 = \\left(\\begin{array}{c}\n0 \\\\\n0\n\\end{array}\n\\right)\n\\]\n\nCovariance Matrix\n\\[\n\\boldsymbol \\Sigma_b = \\left(\\begin{array}{cc}\n\\sigma_{b0}^2 & \\sigma_{b01} \\\\\n\\sigma_{b01} & \\sigma_{b1}^2\n\\end{array}\n\\right)\n\\]"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#add-animal-specific-random-effects",
+    "href": "pres/ci_f23/10_09.html#add-animal-specific-random-effects",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Add Animal-Specific Random Effects",
+    "text": "Add Animal-Specific Random Effects\n\\[\nY_{ij} = \\boldsymbol X_{ij}^\\mathrm T\\boldsymbol \\beta + b_{i0} + t_{ij} b_{i1} + \\varepsilon_{ij}\n\\]\n\n\n\n\\(Y_{ij}=Y_i(t_{ij})\\): Outcome of Interest\n\\(\\boldsymbol X_{ij} = (1, t_{ij}, X_{ij1}, X_{ij2}, X_{ij3})^\\mathrm T\\): Predictor Variables\n\\(\\boldsymbol \\beta=(\\beta_0, \\beta_1, \\beta_2, \\beta_3, \\beta_4)^\\mathrm T\\): Regression Coefficients\n\\(\\varepsilon_{ij}\\sim N(0, \\sigma^2)\\): Error Term\n\n\n\n\\(\\boldsymbol b_i = (b_{i0}, b_{i1})^\\mathrm T \\sim N_2(\\boldsymbol 0, \\boldsymbol \\Sigma_b)\\)"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#environmental-specific-random-effects",
+    "href": "pres/ci_f23/10_09.html#environmental-specific-random-effects",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Environmental-Specific Random Effects",
+    "text": "Environmental-Specific Random Effects\n\\[\n\\boldsymbol b_{env} = (b_{in}, b_{bw}, b_{out})^\\mathrm T \\sim N_3(\\boldsymbol 0, \\sigma^2_b\\boldsymbol I_3)\n\\]\n\n\nMean Vector\n\\[\n\\boldsymbol 0 = \\left(\\begin{array}{c}\n0 \\\\\n0 \\\\\n0\n\\end{array}\n\\right)\n\\]\n\nCovariance Matrix\n\\[\n\\boldsymbol \\Sigma_b = \\left(\\begin{array}{cc}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1  \n\\end{array}\n\\right)\n\\]"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#add-environmental-specific-random-effects",
+    "href": "pres/ci_f23/10_09.html#add-environmental-specific-random-effects",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Add Environmental-Specific Random Effects",
+    "text": "Add Environmental-Specific Random Effects\n\\[\nY_{ij} = \\boldsymbol X_{ij}^\\mathrm T\\boldsymbol \\beta + b_{i0} + t_{ij} b_{i1} + b_{env(i)} +  \\varepsilon_{ij}\n\\]\n\n\n\n\\(Y_{ij}=Y_i(t_{ij})\\)\n\\(\\boldsymbol X_{ij} = (1, t_{ij}, X_{ij1}, X_{ij2}, X_{ij3})^\\mathrm T\\)\n\\(\\boldsymbol \\beta=(\\beta_0, \\beta_1, \\beta_2, \\beta_3, \\beta_4)^\\mathrm T\\)\n\\(\\varepsilon_{ij}\\sim N(0, \\sigma^2)\\)\n\n\n\n\\(\\boldsymbol b_i = (b_{i0}, b_{i1})^\\mathrm T \\sim N_2(\\boldsymbol 0, \\boldsymbol \\Sigma_b)\\)\n\\(b_{env(i)} \\in \\boldsymbol b_{env}=(b_{in}, b_{bw}, b_{out})^\\mathrm T\\)\n\\(\\boldsymbol b_{env} \\sim N_3(\\boldsymbol 0, \\sigma^2_{env} \\boldsymbol I_3)\\)"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#species-random-effects",
+    "href": "pres/ci_f23/10_09.html#species-random-effects",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Species Random Effects",
+    "text": "Species Random Effects\n\\[\n\\boldsymbol b_evo = (b_{cat}, b_{sil}, b_{mar})^\\mathrm T \\sim N_3(\\boldsymbol 0, \\boldsymbol \\Sigma_{evo})\n\\]\n\n\nMean Vector\n\\[\n\\boldsymbol 0 = \\left(\\begin{array}{c}\n0 \\\\\n0 \\\\\n0\n\\end{array}\n\\right)\n\\]\n\nCovariance Matrix\n\\[\n\\boldsymbol \\Sigma_b = \\left(\\begin{array}{cc}\n\\sigma_{c}^2 & \\sigma_{cs} & \\sigma_{cm}\\\\\n\\sigma_{sc} & \\sigma_{s}^2 & \\sigma_{sm} \\\\\n\\sigma_{mc} & \\sigma_{ms} & \\sigma_{m}^2 \\\\\n\\end{array}\n\\right)\n\\]"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#add-species-random-effects",
+    "href": "pres/ci_f23/10_09.html#add-species-random-effects",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Add Species Random Effects",
+    "text": "Add Species Random Effects\n\\[\nY_{ij} = \\boldsymbol X_{ij}^\\mathrm T\\boldsymbol \\beta + b_{i0} + t_{ij} b_{i1} + b_{env(i)} + b_{evo(i)} + \\varepsilon_{ij}\n\\]\n\n\n\n\\(Y_{ij}=Y_i(t_{ij})\\)\n\\(\\boldsymbol X_{ij} = (1, t_{ij}, X_{ij1}, X_{ij2}, X_{ij3})^\\mathrm T\\)\n\\(\\boldsymbol \\beta=(\\beta_0, \\beta_1, \\beta_2, \\beta_3, \\beta_4)^\\mathrm T\\)\n\\(\\varepsilon_{ij}\\sim N(0, \\sigma^2)\\)\n\n\n\n\\(\\boldsymbol b_i = (b_{i0}, b_{i1})^\\mathrm T \\sim N_2(\\boldsymbol 0, \\boldsymbol \\Sigma_b)\\)\n\\(b_{env(i)} \\in \\boldsymbol b_{env}=(b_{in}, b_{bw}, b_{out})^\\mathrm T\\)\n\\(\\boldsymbol b_{env} \\sim N_3(\\boldsymbol 0, \\sigma^2_{env} \\boldsymbol I_3)\\)\n\\(b_{evo(i)} \\in \\boldsymbol b_{env}=(b_{cat}, b_{sil}, b_{mar})^\\mathrm T\\)\n\\(\\boldsymbol b_{evo} \\sim N_3(\\boldsymbol 0, \\boldsymbol \\Sigma_{evo})\\)"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#final-model",
+    "href": "pres/ci_f23/10_09.html#final-model",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Final Model?",
+    "text": "Final Model?"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#me",
+    "href": "pres/ci_f23/10_09.html#me",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Me …",
+    "text": "Me …"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#me-1",
+    "href": "pres/ci_f23/10_09.html#me-1",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Me …",
+    "text": "Me …\n\n\n\n\nWe Must Use Random Effects\nWe Must Use a Bayesian Approach"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#add-correlation-matrix",
+    "href": "pres/ci_f23/10_09.html#add-correlation-matrix",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Add Correlation Matrix",
+    "text": "Add Correlation Matrix\n\\[\n\\widehat{\\mathrm{cov}}( \\boldsymbol Y_i) = \\boldsymbol \\Sigma_i = \\sigma^2 \\boldsymbol \\Lambda_i\n\\]\n\n\\[\n\\boldsymbol \\Lambda_i  = \\left(\\begin{array}{cccc}\n1 & \\rho^{(t_{i1}-t_{i2})^2} & \\rho^{(t_{i1}-t_{i3})^2} & \\rho^{(t_{i1}-t_{i4})^2}\\\\\n\\rho^{(t_{i2}-t_{i1})^2} & 1 & \\rho^{(t_{i2}-t_{i3})^2} & \\rho^{(t_{i2}-t_{i4})^2}\\\\\n\\rho^{(t_{i3}-t_{i1})^2} & \\rho^{(t_{i3}-t_{i2})^2} & 1 & \\rho^{(t_{i3}-t_{i4})^2}\\\\\n\\rho^{(t_{i4}-t_{i1})^2} & \\rho^{(t_{i4}-t_{i2})^2} & \\rho^{(t_{i4}-t_{i3})^2} & 1\\\\\n\\end{array}\n\\right)\n\\]\n\n\n\\[\n\\boldsymbol \\Lambda_i  = \\left(\\begin{array}{cccc}\n1 & \\rho^{|t_{i1}-t_{i2}|} & \\rho^{|t_{i1}-t_{i3}|} & \\rho^{|t_{i1}-t_{i4}|}\\\\\n\\rho^{|t_{i2}-t_{i1}|} & 1 & \\rho^{|t_{i2}-t_{i3}|} & \\rho^{|t_{i2}-t_{i4}|}\\\\\n\\rho^{|t_{i3}-t_{i1}|} & \\rho^{|t_{i3}-t_{i2}|} & 1 & \\rho^{|t_{i3}-t_{i4}|}\\\\\n\\rho^{|t_{i4}-t_{i1}|} & \\rho^{|t_{i4}-t_{i2}|} & \\rho^{|t_{i4}-t_{i3}|} & 1\\\\\n\\end{array}\n\\right)\n\\]\n\n\n\\[\n\\rho \\in (-1, 1)\n\\]"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#final-model-for-real-for-now",
+    "href": "pres/ci_f23/10_09.html#final-model-for-real-for-now",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Final Model (for real, for now)",
+    "text": "Final Model (for real, for now)\n\\[\n\\boldsymbol Y_i \\sim N_4(\\boldsymbol \\mu_i, \\boldsymbol \\Sigma)\n\\]\n\\[\n\\mu_{ij} = \\boldsymbol X_{ij}^\\mathrm T\\boldsymbol \\beta + b_{i0} + b_{env(i)} + b_{evo(i)} + \\varepsilon_{ij}\n\\]"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#accounted-variation",
+    "href": "pres/ci_f23/10_09.html#accounted-variation",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Accounted Variation",
+    "text": "Accounted Variation"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#likelihood-function",
+    "href": "pres/ci_f23/10_09.html#likelihood-function",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Likelihood Function",
+    "text": "Likelihood Function\n\\[\nL(\\boldsymbol \\theta) \\propto \\prod_{i}f(\\boldsymbol y_i|b_i,b_{evo(i)},b_{env(i)};\\boldsymbol \\theta)f(b_i;\\boldsymbol \\theta)f(\\boldsymbol b_{evo};\\boldsymbol \\theta) f(\\boldsymbol b_{env};\\boldsymbol \\theta)\n\\]\n\\(\\boldsymbol \\theta:\\) all parameters involved in the model"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#prior",
+    "href": "pres/ci_f23/10_09.html#prior",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Prior",
+    "text": "Prior\n\n\\(\\sigma^2\\sim Gamma(\\alpha_1, \\beta_1)\\)\n\\(\\sigma^2_{env}\\sim Gamma(\\alpha_2, \\beta_2)\\)\n\\(\\boldsymbol \\beta \\sim N_p(\\boldsymbol 0, 10\\boldsymbol I)\\)\n\\(\\rho \\sim Unif(-1,1)\\)\n\\(\\Sigma_{evo}:\\) Obtained from evolutionary biology databases OR Wishart Distribution\n\\(f(\\boldsymbol \\theta) = f(\\sigma^2)f(\\sigma_{env}^2)f(\\rho)f(\\boldsymbol \\beta)\\)"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#likelihood-x-prior",
+    "href": "pres/ci_f23/10_09.html#likelihood-x-prior",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Likelihood X Prior",
+    "text": "Likelihood X Prior\n\\[\nL(\\boldsymbol \\theta) \\times f(\\boldsymbol \\theta)\n\\]"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#posterior-distribution",
+    "href": "pres/ci_f23/10_09.html#posterior-distribution",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Posterior Distribution",
+    "text": "Posterior Distribution\n\\[\nf(\\boldsymbol  \\theta|\\boldsymbol Y) \\propto L(\\boldsymbol\\theta)f(\\boldsymbol \\theta)\n\\]"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#estimation",
+    "href": "pres/ci_f23/10_09.html#estimation",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Estimation",
+    "text": "Estimation\nEstimating the parameter require us to obtain the joint posterior distribution.\n\nThis is challenging since we do not know the normalizing constant"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#markov-chain",
+    "href": "pres/ci_f23/10_09.html#markov-chain",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Markov Chain",
+    "text": "Markov Chain\n\n\nA Markov chain is a collection states of a certain phenomenom\n\n\\(X^{(0)},X^{(1)},X^{(2)},X^{(3)},X^{(4)},X^{(5)},X^{(6)},X^{(7)}, \\cdots, X^{(k)}\\)\n\nThe changing of the state is only dependent on the current state, not the previous states\n\n\\(P\\left\\{X^{(k+1)}\\boldsymbol{\\Big|}X^{(k)},X^{(k-1)},X^{(k-2)},\\ldots,X^{(1)},X^{(0)}\\right\\}=P\\left\\{X^{(k+1)}\\boldsymbol{\\Big |}X^{(k)}\\right\\}\\)"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#cat-markov-chains",
+    "href": "pres/ci_f23/10_09.html#cat-markov-chains",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Cat Markov Chains",
+    "text": "Cat Markov Chains"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#markov-kernel",
+    "href": "pres/ci_f23/10_09.html#markov-kernel",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Markov Kernel",
+    "text": "Markov Kernel\n\n\n\n\nA Markov kernel provides the probability of going to another state, given the current state\nAlso known a transition matrix"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#stationary-limiting-distribution",
+    "href": "pres/ci_f23/10_09.html#stationary-limiting-distribution",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Stationary (limiting) distribution",
+    "text": "Stationary (limiting) distribution\n\n\nConditions\n\n\nIrreducibility: The kernel allows for free movement of all the state space\nRecurrent: The chain will return to any nonnegligible set an infinite number of times\nAperiodic: The chain can return to any state immediately\n\n\n\nResulting\n\n\n\\(X^{(t)}\\rightarrow X\\)\n\nRegardless of \\(X^{(0)}\\)\n\n\\(X \\sim f\\)\n\n\\(f\\): is a distribution function\n\n\\(\\frac{1}{T}\\sum_{t=1}^{T} h\\{X^{(t)}\\} \\rightarrow E_f\\{h(X)\\}\\)\n\n\\(h\\): any integrable function\nby Law of Large Numbers"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#markov-chains-monte-carlo",
+    "href": "pres/ci_f23/10_09.html#markov-chains-monte-carlo",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Markov Chains Monte Carlo",
+    "text": "Markov Chains Monte Carlo\n\n\nMCMC Methods are used to a distribution function that is not easily obtained.\nA Markov chain is contructed by simulating Monte Carlo Samples and accepted based on a certain criteria\nBased on the MCMC Central Limit Theorem, the Markov chain will construct a limiting distribution that is desired."
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#metropolis-hastings-algorithm",
+    "href": "pres/ci_f23/10_09.html#metropolis-hastings-algorithm",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Metropolis-Hastings Algorithm",
+    "text": "Metropolis-Hastings Algorithm\n\nThe MH algorithm will generate target the distribution function \\(f\\) a random variable\nThe MH will generate a candidate from an easier distribution function \\(g\\) for a Markov chain and accept it based on the Metropolis-Hastings Kernel\nWith a large enough simulation, the resulting chain will have a limiting distribution of \\(f\\)"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#mh-algorithm",
+    "href": "pres/ci_f23/10_09.html#mh-algorithm",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "MH Algorithm",
+    "text": "MH Algorithm\nGiven \\(x^{(t)}\\) and targeting \\(f(x)\\)\n\nGenerate \\(y\\sim g(y|x^{(t)})\\)\n\\[\nx^{(t+1)} =\\left\\{\\begin{array}{cc}\ny &\\ \\mathrm{with\\ probability\\ } q(x^{(t)}, y)\\\\\nx^{(t)} & \\mathrm{with\\ probability\\ } 1-q(x^{(t)}, y)\n\\end{array}\\right.\n\\]\n\n\\[\nq(x,y) = \\min\\left\\{\\frac{f(y)q(x|y)}{f(x)q(y|x)},1\\right\\}\n\\]"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#gibbs-sampler",
+    "href": "pres/ci_f23/10_09.html#gibbs-sampler",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Gibbs Sampler",
+    "text": "Gibbs Sampler\n\nA Gibbs sampler is an extension of many univariate MCMC techniques to multivariate analysis\nThe goal of the sampler is to generate a Markov chain that targets a joint distribution function\nThe Gibbs Sampler achieves this by sampling from the conditional densities of the joint distribution function"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#gibbs-sampler-algorithm-for-trivariate-rv",
+    "href": "pres/ci_f23/10_09.html#gibbs-sampler-algorithm-for-trivariate-rv",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Gibbs Sampler Algorithm for Trivariate RV",
+    "text": "Gibbs Sampler Algorithm for Trivariate RV\nGiven \\(x^{(t)}\\), \\(y^{(t)}\\), and \\(z^{(t)}\\), we are targeting \\(f(x,y,z)\\)\n\nGenerate \\(x^{(t+1)}\\sim f(x|y^{(t)}, z^{(t)})\\)\nGenerate \\(y^{(t+1)}\\sim f(y|x^{(t+1)}, z^{(t)})\\)\nGenerate \\(z^{(t+1)}\\sim f(z|x^{(t+1)}, y^{(t+1)})\\)\nRepeat previous until long enough chain is generated"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#hamiltonian-monte-carlo",
+    "href": "pres/ci_f23/10_09.html#hamiltonian-monte-carlo",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Hamiltonian Monte Carlo",
+    "text": "Hamiltonian Monte Carlo\n\nHamiltonian Monte Carlo is a relatively new MCMC technique used to construct the target distribution\nIt utilizes Hamiltonian dynamics to simulate the next random variable\nThe random variable is the accepted based the MH probability\nUsing Hamiltonian dyanmics improves the mixing properties of the chain and draws are more targeted to the desired distribution"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#simulation-parameters",
+    "href": "pres/ci_f23/10_09.html#simulation-parameters",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Simulation Parameters",
+    "text": "Simulation Parameters\n\n300 Cats\n5 Environments\n3 Species\n4 Repeated Measurements\n6000 Data Points"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#model-parameters",
+    "href": "pres/ci_f23/10_09.html#model-parameters",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Model Parameters",
+    "text": "Model Parameters\n\n\\(b_i \\sim N( 0, 0.8)\\)\n\\(\\boldsymbol b_{env} \\sim N_5(\\boldsymbol 0, 1.5 \\boldsymbol I_5)\\)\n\\(\\boldsymbol b_{evo} \\sim N_3(\\boldsymbol 0, \\boldsymbol \\Sigma_{evo})\\)\n\n\\[\n\\boldsymbol \\Sigma_{evo} = \\left(\n\\begin{array}{ccc}\n1 & 0.8 & 0.1\\\\\n0.8 & 1.3 & 0.43 \\\\\n0.1 & 0.43 & 1.9\n\\end{array}\n\\right)\n\\]"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#simulation-model",
+    "href": "pres/ci_f23/10_09.html#simulation-model",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Simulation Model",
+    "text": "Simulation Model\n\\[\n\\boldsymbol Y_i \\sim N_4(\\boldsymbol \\mu_i, 1.5 \\boldsymbol \\Lambda_i)\n\\]\n\\[\n\\boldsymbol \\mu_i = b_{evo(i)} + b_{env(i)} + b_{i} + 3 + 1.1 \\boldsymbol t + 2.1 X_{i1} - 1.7 X_{i2}\n\\]\n\\[\n\\rho = 0.2,\\ X_{i1} \\sim Bin(1, 0.5),\\ X_{i2} \\sim Bin(1, 0.5),\\ \\boldsymbol t \\sim U_4(0,1)  \n\\]\n\\[\n\\boldsymbol \\Lambda_i  = \\left(\\begin{array}{cccc}\n1 & \\rho^{|t_{i1}-t_{i2}|} & \\rho^{|t_{i1}-t_{i3}|} & \\rho^{|t_{i1}-t_{i4}|}\\\\\n\\rho^{|t_{i2}-t_{i1}|} & 1 & \\rho^{|t_{i2}-t_{i3}|} & \\rho^{|t_{i2}-t_{i4}|}\\\\\n\\rho^{|t_{i3}-t_{i1}|} & \\rho^{|t_{i3}-t_{i2}|} & 1 & \\rho^{|t_{i3}-t_{i4}|}\\\\\n\\rho^{|t_{i4}-t_{i1}|} & \\rho^{|t_{i4}-t_{i2}|} & \\rho^{|t_{i4}-t_{i3}|} & 1\\\\\n\\end{array}\n\\right)\n\\]"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#r",
+    "href": "pres/ci_f23/10_09.html#r",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "R",
+    "text": "R\n\n\nR is commonly used statistical programming language\nIt has capabilities of simulating several probability models\nCertain R packages extends its capabilities to implement Bayesian models and MCMC techniques\nThe brms, rstan, and cmdstanr are packages that allow to implement Bayesian models in Stan"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#stan",
+    "href": "pres/ci_f23/10_09.html#stan",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Stan",
+    "text": "Stan\n\n\nStan is newest MCMC program\nIt utilizes the Hamiltonian Monte Carlo approach\nIt uses BUGS programming\nThe model is compiled and becomes executable in R or python"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#stan-code",
+    "href": "pres/ci_f23/10_09.html#stan-code",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Stan Code",
+    "text": "Stan Code\n\ndata {\n  int N;\n  int D;\n  int S;\n  int H;\n  vector[N] X1;\n  vector[N] X2;\n  matrix[S,S] evo; \n  array[N] int&lt;lower=1, upper=N&gt; evo_id;\n  array[N] int&lt;lower=1, upper=N&gt; env_id;\n  array[N] vector[D] time;\n  array[N] matrix[D, D] time_diff;\n  array[N] vector[D] Y;\n}\n\ntransformed data {\n  vector[S] zero;\n  vector[D] ones;\n  zero = rep_vector(0, S);\n  ones = rep_vector(1, D);\n}\n\n\n\nparameters {\n  real&lt;lower=0&gt; sig_b;\n  real&lt;lower=0&gt; sig_h;\n  real&lt;lower=0&gt; sig_e;\n  real&lt;lower=-1, upper=1&gt; rho;\n  real b0;\n  real b1;\n  real b2;\n  real b3;\n  vector[S] evo_re;\n  vector[N] bb_re;\n  vector[H] hh_re;\n}\n\n\ntransformed parameters {\n  array[N] matrix[D,D] cov_1;\n  array[N] matrix[D,D] cov;\n  array[N] vector[D] yhat;\n  \n  for (n in 1:N){\n     yhat[n] = b0 * ones + \n                  b1 * time[n] + \n                  b2 * X1[n] * ones + \n                  b3 * X2[n] * ones + \n                  bb_re[n] * ones + \n                  evo_re[evo_id[n]] * ones +\n                  hh_re[env_id[n]] * ones;\n     cov_1[n] = pow(rho, time_diff[n]);\n     cov[n] = sig_e * cov_1[n];\n  } \n}\n\nmodel {\n  for (n in 1:N) {\n    Y[n] ~ multi_normal(yhat[n], cov[n]);\n  }\n  bb_re ~ normal(0, sig_b);\n  hh_re ~ normal(0, sig_h);\n  b0 ~ normal(0, 5);\n  b1 ~ normal(0, 5);\n  b2 ~ normal(0, 5);\n  evo_re ~ multi_normal(zero, evo);\n  sig_b ~ gamma(3, 2);\n  sig_e ~ gamma(1, 1);\n  sig_h ~ gamma(3, 2);\n  rho ~ uniform(-1, 1);\n}"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#r-code",
+    "href": "pres/ci_f23/10_09.html#r-code",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "R Code",
+    "text": "R Code\n\n# Loading R Packages\nlibrary(mvtnorm)\nlibrary(tidyverse)\nlibrary(lme4)\nlibrary(cmdstanr)\nlibrary(bayesplot)\n\n## Compiling Stan Model to make executable\nmodel &lt;- cmdstan_model(stan_file='~/Dropbox/Machine/new.stan')\n\n# Creating function\nkubrick &lt;- function(k=NULL){\n  \n# Creating covariance matrix\nx1 &lt;- c(1.00, 0.80, 0.10)\nx2 &lt;- c(0.80, 1.30, 0.43)\nx3 &lt;- c(0.10, 0.43, 1.90)\ncov_x &lt;- as.matrix(rbind(x1, x2, x3))\n# Simulating species RE\nspecies_re &lt;- rmvnorm(1, sigma = cov_x)\n# Simulating env RE\nenv_re &lt;- rnorm(5, sd = sqrt(1.5))\n\n# Setting Parameters\nsig &lt;- 1.5\nrho &lt;- 0.2\nb0 &lt;- 3\nb1 &lt;- 1.1\nb2 &lt;- 2.1\nb3 &lt;- -1.7\n\n# Constructing Fake Data Set\niv &lt;- 1\ndf &lt;- data.frame()\nfor (i in 1:3){\n  for (ii in 1:5){\n    for (iii in 1:20){\n      bb &lt;- rnorm(1, sd = sqrt(0.8))\n      time_shift &lt;- rmvnorm(1, rep(0, 3), diag(rep(0.00001,3)))\n      time &lt;- seq(0, 1, length.out = 4) + c(0, time_shift)\n      sigs &lt;- (rho**as.matrix(dist(time, diag = T, upper = T)))*sig\n      x1 &lt;- rbinom(1, 1, 0.5)\n      x2 &lt;- rbinom(1, 1, 0.5)\n      mu &lt;- species_re[i] + env_re[ii] + b0 + b1 * time +  b2 * x1 + b3 * x2 + bb\n      y &lt;- rmvnorm(1, mu, sigs)\n      df &lt;- rbind.data.frame(df, \n                             data.frame(t(rbind(y=y, \n                                                x1=x1,\n                                                x2=x2,\n                                                time=time, \n                                                bb=bb, \n                                                mu = mu,\n                                                time_id = 1:4,\n                                                i = i,\n                                                ii = ii,\n                                                iii = iii,\n                                                id = iv))))\n      iv &lt;- iv + 1\n    }\n  }\n}\n\n#df |&gt; head()\n#df |&gt; dim()\n#df |&gt; select(id) |&gt; table()\n# Data Editing and extracting variables for stan\ntimes &lt;- df |&gt; \n  pivot_wider(id_cols = id, names_from = time_id, values_from = time)  |&gt; \n  select(-id) |&gt; \n  as.matrix()\n\nY &lt;- df |&gt; \n  pivot_wider(id_cols = id, names_from = time_id, values_from = V1)  |&gt; \n  select(-id) |&gt; \n  as.matrix()\n\ntime_diff &lt;- array(dim = c(300, 4, 4))\nfor (i in 1:300){\n  time_diff[i,,] &lt;- times[i,] |&gt; dist(diag = T, upper = T) |&gt; as.matrix()\n}\n\nevo_id &lt;- df |&gt; pivot_wider(id_cols = id, names_from = time_id, values_from = i) |&gt; \n  select(`1`) |&gt; as.vector() |&gt; unlist() |&gt; as.numeric()\nenv_id &lt;- df |&gt; pivot_wider(id_cols = id, names_from = time_id, values_from = ii) |&gt; \n  select(`1`) |&gt; as.vector() |&gt; unlist() |&gt; as.numeric()\n\n\nX1 &lt;- df |&gt; pivot_wider(id_cols = id, names_from = time_id, values_from = x1) |&gt; \n  select(`1`) |&gt; as.vector() |&gt; unlist() |&gt; as.numeric()\n\nX2 &lt;- df |&gt; pivot_wider(id_cols = id, names_from = time_id, values_from = x2) |&gt; \n  select(`1`) |&gt; as.vector() |&gt; unlist() |&gt; as.numeric()\n\n# Contruct Data list for stan\ndata &lt;- list(\n  N = 300,\n  D = 4,\n  S = 3,\n  H = 5,\n  X1 = X1,\n  X2 = X2,\n  evo = cov_x,\n  evo_id = evo_id,\n  env_id = env_id,\n  time = times,\n  time_diff = time_diff,\n  Y = Y\n)\n\n\n# Fit Model with MCMC\nfit &lt;- model$sample(data=data,\n                    iter_warmup = 10000,\n                    iter_sampling = 15000,\n                    thin = 5,\n                    adapt_delta = 0.9)\nresults &lt;- fit$summary()\n# Return data set and MCMC\nreturn(list(data = data, fit = fit))\n\n}\n\n## Execute Function in Parallel\nkubrick()\n\n## Save the results\nsave(res, \"~/Dropbox/Machine/res/save.RData\")"
+  },
+  {
+    "objectID": "pres/ci_f23/10_09.html#thank-you",
+    "href": "pres/ci_f23/10_09.html#thank-you",
+    "title": "Bayesian Mixed Effects Models and Cats",
+    "section": "Thank You",
+    "text": "Thank You"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#statistical-warning",
+    "href": "pres/ci_f23/9_27.html#statistical-warning",
+    "title": "Statistics",
+    "section": "Statistical Warning",
+    "text": "Statistical Warning"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#menti.com-2449-3348",
+    "href": "pres/ci_f23/9_27.html#menti.com-2449-3348",
+    "title": "Statistics",
+    "section": "menti.com 2449 3348",
+    "text": "menti.com 2449 3348"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#statistics-1",
+    "href": "pres/ci_f23/9_27.html#statistics-1",
+    "title": "Statistics",
+    "section": "Statistics",
+    "text": "Statistics\n\n\n\n\n\n\n\n\n\n\nWith an increasing use of data to make decisions, Statistics has been essential for processing large amounts of data to byte-size information\nStatistics is also known as\n\nData Science\nMachine Learning\nArtificial Intelligence\n\nSo for today, we’re asking: what is Statistics?"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#what-does-google-say",
+    "href": "pres/ci_f23/9_27.html#what-does-google-say",
+    "title": "Statistics",
+    "section": "What does Google say?",
+    "text": "What does Google say?\n\n\nUC Irvine\nStatistics is the science concerned with developing and studying methods for collecting, analyzing, interpreting and presenting empirical data.\n\nWikipedia\nStatistics is a mathematical body of science that pertains to the collection, analysis, interpretation or explanation, and presentation of data, or as a branch of mathematics."
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#what-does-ai-say",
+    "href": "pres/ci_f23/9_27.html#what-does-ai-say",
+    "title": "Statistics",
+    "section": "What does AI say?",
+    "text": "What does AI say?\n\n\nChatGPT\nStatistics is a branch of mathematics and a field of study that deals with the collection, analysis, interpretation, presentation, and organization of data.\n\nGoogle Bard\nStatistics is the science of collecting, analyzing, interpreting, and presenting data."
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#what-do-researchers-say",
+    "href": "pres/ci_f23/9_27.html#what-do-researchers-say",
+    "title": "Statistics",
+    "section": "What do researchers say?",
+    "text": "What do researchers say?\n\nAnthropologistMicrobiologistSociologistPolitical ScientistEcologistMathematician\n\n\nObjectively interpreting data to make meaningful inferences about our predictions.\n\n\nWhatever the statistician says.\n\n\nGathering the narratives of individuals, groups, or society and telling a story about their past, present, or future. The numbers paint a picture worth many words.\n\n\nUsing numbers to try to explain behaviors and/or patterns in our world.\n\n\nStatistics is the way to make sense of the natural world by taking data we collect to identify patterns between variables, and applying statistical theory to make sure we are taking the right approach to data collection and analysis. Also, assess patterns to see if they are reproducible and provide a logical explanation that makes biological sense.\n\n\nStatistics is the study of data, patterns, and trends."
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#what-is-it",
+    "href": "pres/ci_f23/9_27.html#what-is-it",
+    "title": "Statistics",
+    "section": "What is it?",
+    "text": "What is it?\n\n\nMath\n\n\n\n\n\n\nScience"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#what-does-a-statistician-say",
+    "href": "pres/ci_f23/9_27.html#what-does-a-statistician-say",
+    "title": "Statistics",
+    "section": "What does a Statistician say?",
+    "text": "What does a Statistician say?\nIt is the study of variation and randomness!\n\nUsing mathematics, we model randomness to characterizes commonality and variation!\n\n\nUsing science, we systematically refine models to better fit randomness in data!\n\n\nUsing art, when it all eventually fails!"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#when-it-fails",
+    "href": "pres/ci_f23/9_27.html#when-it-fails",
+    "title": "Statistics",
+    "section": "When it fails?!?!",
+    "text": "When it fails?!?!"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#statistics-mantra---george-box",
+    "href": "pres/ci_f23/9_27.html#statistics-mantra---george-box",
+    "title": "Statistics",
+    "section": "Statistics Mantra - George Box",
+    "text": "Statistics Mantra - George Box\n\n\n\n\n\n\n\n\nAll models are wrong,\nsome are useful!"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#what-is-the-formal-definition-of-statistics",
+    "href": "pres/ci_f23/9_27.html#what-is-the-formal-definition-of-statistics",
+    "title": "Statistics",
+    "section": "What is the formal definition of Statistics?",
+    "text": "What is the formal definition of Statistics?\nStatistics is both the development of mathematical models to be used in real-world data and the analysis of data using existing models."
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#probability-models",
+    "href": "pres/ci_f23/9_27.html#probability-models",
+    "title": "Statistics",
+    "section": "Probability Models",
+    "text": "Probability Models\n\n\n\n\n\n\n\n\n\nModel observations that follow a new data generating process\nUnderstand its properties\nDevelop new probability distributions\nKnown as Probability Theory\nResearcher is a Probabilist or Mathematical Statistician"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#data-analysis",
+    "href": "pres/ci_f23/9_27.html#data-analysis",
+    "title": "Statistics",
+    "section": "Data Analysis",
+    "text": "Data Analysis\n\n\n\nModel data with a known probability model\nAccount for sources of variation and bias\nAccount for violations of independence and randomness\nKnown as Statistician or Data Scientist"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#whats-the-goal-of-a-statistician",
+    "href": "pres/ci_f23/9_27.html#whats-the-goal-of-a-statistician",
+    "title": "Statistics",
+    "section": "What’s the goal of a Statistician?",
+    "text": "What’s the goal of a Statistician?\n\nINFERENCE\n\n\nUse our sample data to understand the larger population.\n\n\nThe data will tell us how the population generally behaves.\n\n\nThe data will guide us in the differences in units.\n\n\nData will tell us if there is a signal or just noise."
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#menti.com-2449-3348-1",
+    "href": "pres/ci_f23/9_27.html#menti.com-2449-3348-1",
+    "title": "Statistics",
+    "section": "menti.com 2449 3348",
+    "text": "menti.com 2449 3348"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#was-the-word-cloud-a-scientific-study",
+    "href": "pres/ci_f23/9_27.html#was-the-word-cloud-a-scientific-study",
+    "title": "Statistics",
+    "section": "Was the word cloud a scientific study?",
+    "text": "Was the word cloud a scientific study?\n\nYES!\n\n\nWe sampled a population!\n\n\nData was collected!\n\n\nData was summarized!"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#another-word-cloud",
+    "href": "pres/ci_f23/9_27.html#another-word-cloud",
+    "title": "Statistics",
+    "section": "Another Word Cloud",
+    "text": "Another Word Cloud"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#conducting-inference",
+    "href": "pres/ci_f23/9_27.html#conducting-inference",
+    "title": "Statistics",
+    "section": "Conducting Inference",
+    "text": "Conducting Inference"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#are-we-seeing-something-or-is-it-just-noise",
+    "href": "pres/ci_f23/9_27.html#are-we-seeing-something-or-is-it-just-noise",
+    "title": "Statistics",
+    "section": "Are we seeing something or is it just noise???",
+    "text": "Are we seeing something or is it just noise???\nAre we seeing something different from what was expected? Or is it due to random chance?"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#hypothesis-testing",
+    "href": "pres/ci_f23/9_27.html#hypothesis-testing",
+    "title": "Statistics",
+    "section": "Hypothesis Testing",
+    "text": "Hypothesis Testing\n\n\nSet up the Null and Alternative Hypothesis\nConstruct a test statistic based on the null hypothesis\nConstruct a distribution of the test statistic based on probability theory\nCompute the probability of observing the test statistic\nMake a decision based on the probability"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#what-if-we-cannot-construct-the-distribution",
+    "href": "pres/ci_f23/9_27.html#what-if-we-cannot-construct-the-distribution",
+    "title": "Statistics",
+    "section": "What if we cannot construct the distribution?!?!",
+    "text": "What if we cannot construct the distribution?!?!\n\n\n\n\n\n\n\n\n\n\n\nWe bring out the Monte Carlo methods!"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#monte-carlo-methods",
+    "href": "pres/ci_f23/9_27.html#monte-carlo-methods",
+    "title": "Statistics",
+    "section": "Monte Carlo Methods",
+    "text": "Monte Carlo Methods\n\nMonte Carlo Methods are used to construct a distribution function of an obscure test statistic\nWe simulate a large number of data sets based on the null hypothesis\nWe construct a test statistic for each fake data set and the real one\nWe count how many data sets produce a test statistic that is more extreme than the real test statistic\n\\(p=\\#\\ of\\ extreme\\ data\\ sets\\ /\\ all\\ data\\ sets\\)"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#overview-of-research",
+    "href": "pres/ci_f23/9_27.html#overview-of-research",
+    "title": "Statistics",
+    "section": "Overview of Research",
+    "text": "Overview of Research\n\n\nAsk a question about a population\nCollect data from a sample\nConstruct and test a hypothesis\nDraw conclusion about the population\nRefine your question and methodology"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#so-what-is-statistics",
+    "href": "pres/ci_f23/9_27.html#so-what-is-statistics",
+    "title": "Statistics",
+    "section": "So, what is Statistics?",
+    "text": "So, what is Statistics?\n\n\n\n\n\n\nFor you baby, I’ll be anything"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#my-research-1",
+    "href": "pres/ci_f23/9_27.html#my-research-1",
+    "title": "Statistics",
+    "section": "My Research",
+    "text": "My Research\n\n\nGeneralized\nTime-Varying\n\nJoint Longitudinal-Survival Models"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#menti.com-2449-3348-2",
+    "href": "pres/ci_f23/9_27.html#menti.com-2449-3348-2",
+    "title": "Statistics",
+    "section": "menti.com 2449 3348",
+    "text": "menti.com 2449 3348"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#menti.com-2449-3348-3",
+    "href": "pres/ci_f23/9_27.html#menti.com-2449-3348-3",
+    "title": "Statistics",
+    "section": "menti.com 2449 3348",
+    "text": "menti.com 2449 3348"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#joint-models",
+    "href": "pres/ci_f23/9_27.html#joint-models",
+    "title": "Statistics",
+    "section": "Joint Models",
+    "text": "Joint Models\n\n\nLongitudinal\n\n\nThe analysis of repeated measurements\nAdjusting for extra correlation\nie: Following a patient and collecting data at different time points\n\n\n\nSurvival\n\n\nThe analysis of time-to-event data\n\nEvent can be anything\n\nAccounting for censoring\n\nWhen information is not complete\nDon’t know the whole time\n\nie: Following a newly diagnosed cancer patient to death"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#modelling-them-jointly",
+    "href": "pres/ci_f23/9_27.html#modelling-them-jointly",
+    "title": "Statistics",
+    "section": "Modelling them Jointly",
+    "text": "Modelling them Jointly\n\n\nWe can follow a newly-diagnosed patient longitudinally until the time-to-event occurs\nWe can use the longitudinal outcome to explain the survival rate of diseases\nWe can use the survival model to account for missing not at random in patients"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#case-study",
+    "href": "pres/ci_f23/9_27.html#case-study",
+    "title": "Statistics",
+    "section": "Case Study",
+    "text": "Case Study\nA patient is diagnosed with cancer, we want to know if any biomarkers can explain the survival rate of the disease.\n\nAre there biomarker levels, that can increase the probability of not surviving the next month or year?\n\n\nIf so, can we do something about it to increase their chances of survival."
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#data",
+    "href": "pres/ci_f23/9_27.html#data",
+    "title": "Statistics",
+    "section": "Data",
+    "text": "Data\nWith \\(n\\) participants, each \\(i^{th}\\) participant has:\n\n\nLongitudinal Data\n\n\\(n_i\\) repeated measurements\n\\(t_{i}=(t_{i1}, t_{i2}, \\cdots, t_{in_i})^\\mathrm T\\)\n\\(Y_i=(Y_{i1}, Y_{i2}, \\cdots, Y_{in_i})^\\mathrm T\\)\n\\(X_{ij}=(X_{ij1}, X_{ij2}, \\cdots, X_{ijk})^\\mathrm T\\)\n\n\nSurvival Data\n\n\\(T_i\\): Observed time\n\\(\\delta_i\\): Censoring status"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#longitudinal-submodels",
+    "href": "pres/ci_f23/9_27.html#longitudinal-submodels",
+    "title": "Statistics",
+    "section": "Longitudinal Submodels",
+    "text": "Longitudinal Submodels\nOur longitudinal outcome y can be represented in 2 components: a linear model and an error term. The linear \\[\\Large{Y_{ij} = m_i (t_{ij}) + \\epsilon_i(t_{ij}),}\\]\nwhere\n\n\n\n\\(m_i(t_{ij})=\\boldsymbol{X}_{ij}^\\mathrm T\\boldsymbol \\beta + \\boldsymbol Z_{ij}^\\mathrm Tb_i\\)\n\\(\\boldsymbol X_{ij}\\): design matrix\n\\(\\boldsymbol \\beta=(\\beta_1,\\cdots,\\beta_p)^\\mathrm T\\): regression coefficients\n\\(b_i \\sim N_q(\\boldsymbol 0, \\boldsymbol G)\\)\n\n\n\n\\(\\epsilon_i(t_{ij})\\): error term at time \\(t_{ij}\\)\n\\(\\boldsymbol Z_{ij}\\): subset of \\(\\boldsymbol X_{ij}\\)\n\\(b_i=(b_{i1},\\cdots,b_{iq})^\\mathrm T\\): random effects\n\\(\\epsilon_i(t_{ij}) \\sim N(0, \\sigma²)\\)"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#survival-submodels",
+    "href": "pres/ci_f23/9_27.html#survival-submodels",
+    "title": "Statistics",
+    "section": "Survival Submodels",
+    "text": "Survival Submodels\n\\[\\large{\\lambda_i\\{t|M_i(t),X_i\\}=\\lim_{\\Delta\\rightarrow 0}\\frac{ P\\{t\\leq T_i &lt;t+\\Delta|T_i\\geq t, M_i(t),\\boldsymbol X_{i1}\\}}{\\Delta}}\\] \\[\\large{\\lambda_i\\{t|M_i(t),\\boldsymbol X_{i1}\\}=\\lambda_0(t)\\exp\\{\\boldsymbol X_{i1}^\\mathrm T\\boldsymbol \\gamma+\\alpha m_i(t)\\}}\\]\nwhere\n\n\\(\\lambda_0(t)\\): baseline hazard function\n\\(\\boldsymbol X_{i1}\\): design matrix at first time point\n\\(\\boldsymbol \\gamma\\): regression coefficients\n\\(\\alpha\\): association coefficient\n\\(M_i(t)\\): history of the longitudinal outcome"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#construction-of-the-joint-model",
+    "href": "pres/ci_f23/9_27.html#construction-of-the-joint-model",
+    "title": "Statistics",
+    "section": "Construction of the Joint Model",
+    "text": "Construction of the Joint Model\nFor an \\(i^{th}\\) individual:\n\\[P(T_i, \\delta_i, \\boldsymbol Y_i; \\boldsymbol \\theta)\\]\n\n\\[\nP(T_i, \\delta_i, \\boldsymbol Y_i; \\boldsymbol \\theta) \\neq P(T_i, \\delta_i; \\boldsymbol \\theta) P( \\boldsymbol Y_i; \\boldsymbol \\theta)\n\\]"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#whats-happening",
+    "href": "pres/ci_f23/9_27.html#whats-happening",
+    "title": "Statistics",
+    "section": "What’s happening",
+    "text": "What’s happening\n\n\n\n\nSurvival and Longitudinal\n\n\n\n\n\n\n\n\n\nRandom Effects"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#construction-of-joint-model",
+    "href": "pres/ci_f23/9_27.html#construction-of-joint-model",
+    "title": "Statistics",
+    "section": "Construction of Joint Model",
+    "text": "Construction of Joint Model\n\\[\\begin{eqnarray}\nP(T_i, \\delta_i, \\boldsymbol Y_i; \\boldsymbol \\theta) &=& \\int  P(T_{i},\\delta_{i}|b_{i};\\boldsymbol \\theta)P(\\boldsymbol Y_{i}|b_{i};\\boldsymbol \\theta)P(b_{i};\\boldsymbol \\theta) db_i\\\\\n& = & \\int  P(T_{i},\\delta_{i}|b_{i};\\boldsymbol \\theta) \\prod^{n_i}_j P(\\boldsymbol Y_{ij}|b_{i};\\boldsymbol \\theta)P(b_{i};\\boldsymbol \\theta) db_i\n\\end{eqnarray}\\]"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#estimation-of-parameters",
+    "href": "pres/ci_f23/9_27.html#estimation-of-parameters",
+    "title": "Statistics",
+    "section": "Estimation of parameters",
+    "text": "Estimation of parameters\n\nIn order to estimate the paramters (\\(\\theta\\)), we must predict the random effects.\n\n\nWe must take care of the integral!\n\n\nWe either treat the random effects as parameters!\n\n\nOR, we treat the random effects as missing!"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#missing",
+    "href": "pres/ci_f23/9_27.html#missing",
+    "title": "Statistics",
+    "section": "Missing!?",
+    "text": "Missing!?"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#expectation-maximization-algorithm",
+    "href": "pres/ci_f23/9_27.html#expectation-maximization-algorithm",
+    "title": "Statistics",
+    "section": "Expectation-Maximization Algorithm",
+    "text": "Expectation-Maximization Algorithm\n\n\nE-Step\nNumerical techniques are used to target the random effects in the joint density function\n\nGaussian Quadrature\nLaplace Approximation\nMonte Carlo Techniques\n\n\nM-Step\nA Newton-Raphson or other numerical techniques are used to maximize the expected likelihood function."
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#estimation-of-margin-of-error",
+    "href": "pres/ci_f23/9_27.html#estimation-of-margin-of-error",
+    "title": "Statistics",
+    "section": "Estimation of Margin of Error",
+    "text": "Estimation of Margin of Error\nThe standard errors of the parameters can be computed either as:\n\nVariance of the estimator, following probability model\nUsing large sample theory of MLE, use the negative inverse Hessian matrix"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#estimation-of-margin-of-error-1",
+    "href": "pres/ci_f23/9_27.html#estimation-of-margin-of-error-1",
+    "title": "Statistics",
+    "section": "Estimation of Margin of Error",
+    "text": "Estimation of Margin of Error\nThe standard errors of the parameters can be computed either as:\n\nVariance of the estimator, following probability model\nUsing large sample theory of MLE, use the negative inverse Hessian matrix\n\nThe Standard Errors are Biased due to misspecification of the random effects and baseline hazard function."
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#bootstrapping",
+    "href": "pres/ci_f23/9_27.html#bootstrapping",
+    "title": "Statistics",
+    "section": "Bootstrapping",
+    "text": "Bootstrapping\n\n\nBootstrapping can nonparametrically (or parameterically) compute the unbiased standard errors.\n\n\nBootstrapping is conducted by sampling from the data set with replacement.\nThen a test statistic is constructed for each boot sample.\nThe process is repeated many times until a distribution is constructed.\nStandard Errors (or Confidence Intervals) are obtained from the distribution.\nFor joint models, the individual is sampled."
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#questions",
+    "href": "pres/ci_f23/9_27.html#questions",
+    "title": "Statistics",
+    "section": "Questions",
+    "text": "Questions"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#whats-statistics-without-a-little",
+    "href": "pres/ci_f23/9_27.html#whats-statistics-without-a-little",
+    "title": "Statistics",
+    "section": "What’s Statistics without a little …",
+    "text": "What’s Statistics without a little …"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#train-of-thoughts",
+    "href": "pres/ci_f23/9_27.html#train-of-thoughts",
+    "title": "Statistics",
+    "section": "Train of Thoughts",
+    "text": "Train of Thoughts\n\nThere are two train of thoughts on how to interpret estimates and probability.\n\n\nOne approach is the Frequentist approach.\n\n\nThe other approach is the Bayesian approach.\n\n\nBoth sides hate each other."
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#frequentists",
+    "href": "pres/ci_f23/9_27.html#frequentists",
+    "title": "Statistics",
+    "section": "Frequentists",
+    "text": "Frequentists"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#frequentists-1",
+    "href": "pres/ci_f23/9_27.html#frequentists-1",
+    "title": "Statistics",
+    "section": "Frequentists",
+    "text": "Frequentists\nA frequentist, in the context of statistics, is an individual who adheres to the frequentist interpretation of probability and statistical inference.\n\nMeaning probability is obtained by the repetition of multiple experiments."
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#bayesians",
+    "href": "pres/ci_f23/9_27.html#bayesians",
+    "title": "Statistics",
+    "section": "Bayesians",
+    "text": "Bayesians"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#bayesians-1",
+    "href": "pres/ci_f23/9_27.html#bayesians-1",
+    "title": "Statistics",
+    "section": "Bayesians",
+    "text": "Bayesians\nA Bayesians, in the context of statistics, is an individual who adheres to the Bayesian interpretation of probability and statistical inference.\n\nProbability is obtained by likelihood of an event to occur, given data and prior knowledge."
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#what-am-i-and-people-that-have-lives",
+    "href": "pres/ci_f23/9_27.html#what-am-i-and-people-that-have-lives",
+    "title": "Statistics",
+    "section": "What am I (and people that have lives)?",
+    "text": "What am I (and people that have lives)?\n\nWhatever gets the job done!"
+  },
+  {
+    "objectID": "pres/ci_f23/9_27.html#there-is-more-much-more-but-i-will-say-this-in-my-statistical-journey",
+    "href": "pres/ci_f23/9_27.html#there-is-more-much-more-but-i-will-say-this-in-my-statistical-journey",
+    "title": "Statistics",
+    "section": "There is more, much more, but I will say this, in my statistical journey",
+    "text": "There is more, much more, but I will say this, in my statistical journey\n\n\n\n\n\n\n\n\nwww.inqs.info\nisaac.qs@csuci.edu"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#presentation",
+    "href": "pres/surf_2023/anova.html#presentation",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Presentation",
+    "text": "Presentation\nThe presentation can be found here: www.inqs.info/pres/surf_2023/anova.html"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#hypothesis-testing-1",
+    "href": "pres/surf_2023/anova.html#hypothesis-testing-1",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Hypothesis Testing",
+    "text": "Hypothesis Testing\nA hypothesis test is a statistical procedure to determine whether the null hypothesis is true or not. If we find that the null hypothesis is true, we claim: Fail to reject the null hypothesis. If we find the the null hypothesis to be false, we claim : Reject the null hypothesis."
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#null-hypothesis-h_0",
+    "href": "pres/surf_2023/anova.html#null-hypothesis-h_0",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Null Hypothesis (\\(H_0\\))",
+    "text": "Null Hypothesis (\\(H_0\\))\nThe null hypothesis is the claim that is initially believed to be true. For the most part, it is always equal to the hypothesized value."
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#alternative-hypothesis-h_a",
+    "href": "pres/surf_2023/anova.html#alternative-hypothesis-h_a",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Alternative Hypothesis (\\(H_a\\))",
+    "text": "Alternative Hypothesis (\\(H_a\\))\nThe alternative hypothesis contradicts the null hypothesis."
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#test-statistic-and-distribution",
+    "href": "pres/surf_2023/anova.html#test-statistic-and-distribution",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Test Statistic and Distribution",
+    "text": "Test Statistic and Distribution\nTo conduct a hypothesis test, we compute a test statistic based on the distribution of the null hypothesis. Then we determine if the test statistic is in the rejection region of the distribution of the null hypothesis. If it is in the rejection region, we reject the null hypothesis. Otherwise we fail to reject the null hypothesis."
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#test-statistic",
+    "href": "pres/surf_2023/anova.html#test-statistic",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Test Statistic",
+    "text": "Test Statistic\nA test statistic quantifies the distance of the observed \\(\\hat\\mu\\) with the hypothesized mean \\(\\mu_0\\), assuming null hypothesis is true."
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#rejection-region",
+    "href": "pres/surf_2023/anova.html#rejection-region",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Rejection Region",
+    "text": "Rejection Region\nThe rejection region is determined by our \\(\\alpha\\) value.\n\\(\\alpha\\) determines the probability you are willing to be wrong if you reject the null hypothesis.\nThis probability is something you want to set yourself at the beginning of a study. In general, the majority of researchers set it to be \\(\\alpha=0.05\\)."
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#side-vs-2-side-tests",
+    "href": "pres/surf_2023/anova.html#side-vs-2-side-tests",
+    "title": "One- & Two-Way ANOVA",
+    "section": "1-Side vs 2-Side Tests",
+    "text": "1-Side vs 2-Side Tests\nThere are 3 types of null and alternative hypothesis, The first type of hypothesis (\\(H_a:\\mu\\ne\\mu_0\\)) is considered a 2-sided hypothesis because the rejection region is located in 2 regions. The remaining two hypotheses are considered 1-sided because the rejection region is located on one side of the distribution.\n\n\n\nNull Hypothesis\nAlternative Hypothesis\nSide\n\n\n\n\n\\(H_0: \\mu=\\mu_0\\)\n\\(H_a: \\mu\\ne\\mu_0\\)\n2-sided\n\n\n\\(H_0: \\mu\\le\\mu_0\\)\n\\(H_a: \\mu&gt;\\mu_0\\)\n1-sided\n\n\n\\(H_0: \\mu\\ge\\mu_0\\)\n\\(H_0: \\mu&lt;\\mu_0\\)\n1-sided"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#rejection-region-1",
+    "href": "pres/surf_2023/anova.html#rejection-region-1",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Rejection Region",
+    "text": "Rejection Region"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#rejecting-the-null-hypothesis",
+    "href": "pres/surf_2023/anova.html#rejecting-the-null-hypothesis",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Rejecting the Null Hypothesis",
+    "text": "Rejecting the Null Hypothesis\nThe p-value approach is one of the most common methods to report significant results. It is easier to interpret the p-value because it provides the probability of observing our test statistics, or something more extreme, given that the null hypothesis is true. Depending on the type of test, your p-value may be constructed as:\n\n\n\nAlternative Hypothesis\np-value\n\n\n\n\n\\(\\mu&gt;\\mu_0\\)\n\\(P(Y&gt;T(x))=p\\)\n\n\n\\(\\mu&lt;\\mu_0\\)\n\\(P(Y&lt;T(x))=p\\)\n\n\n\\(\\mu\\ne\\mu_0\\)\n\\(2\\times P(Y&gt;|T(x)|)=p\\)\n\n\n\nIf \\(p &lt; \\alpha\\), then you reject \\(H_0\\); otherwise, you will fail to reject \\(H_0\\)."
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#analysis-of-variance",
+    "href": "pres/surf_2023/anova.html#analysis-of-variance",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Analysis of Variance",
+    "text": "Analysis of Variance\nAnalysis of variance (ANOVA) tests to whether there is a difference between a collection of means (experimental variable) while we control the family-wise error rate."
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#hypothesis",
+    "href": "pres/surf_2023/anova.html#hypothesis",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Hypothesis",
+    "text": "Hypothesis\n\\(H_0:\\ \\mu_1=\\mu_2=\\cdots=\\mu_k\\)\n\\(H_a:\\) At least one mean pair is different"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#anova-table",
+    "href": "pres/surf_2023/anova.html#anova-table",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Anova Table",
+    "text": "Anova Table\n\n\n\n\n\n\n\n\n\n\nSource\nDF\nSS\nMS\nF\n\n\n\n\nGroup\n\\(DFG=k-1\\)\n\\(SSG\\)\n\\(MSG=\\frac{SSG}{DFG}\\)\n\\(F=\\frac{MSG}{MSE}\\)\n\n\nError\n\\(DFE=N-k\\)\n\\(SSE\\)\n\\(MSE=\\frac{SSE}{DFE}\\)\n\n\n\nTotal\n\\(TDF=N-1\\)\n\\(TSS=SSG+SSE\\)\n\n\n\n\n\n\n\\(N:\\) Total Sample size\n\\(k:\\) number of groups"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#test-statistics",
+    "href": "pres/surf_2023/anova.html#test-statistics",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Test Statistics",
+    "text": "Test Statistics\n\n\n\\(SSG = \\sum_{i=1}^kn_i(\\bar y_{i.}-\\bar y_{..})^2\\)\n\n\\(SSE = \\sum^k_{i=1}\\sum^{n_i}_{j=1}(y_{ij}-\\bar y_{i.})^2\\)\n\n\n\n\\(i:\\) indexes the group\n\\(j:\\) indexes the observation in group\n\\(y_{ij}:\\) \\(j\\)th observation in \\(i\\)th group\n\\(\\bar y_{i.}:\\) mean in \\(i\\)th group\n\\(\\bar y_{..}:\\) overall mean of entire data set\n\\(n_i:\\) sample size of \\(i\\)th group"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#assumptions",
+    "href": "pres/surf_2023/anova.html#assumptions",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Assumptions",
+    "text": "Assumptions\n\nIndependence\n\nWere observations collected randomly?\n\nNormality\n\nQQ Plot\nShapiro-Wilks Test\n\nEqual Variance\n\nBartlett’s Test\nLevene’s Test"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#multiple-comparison-tests-1",
+    "href": "pres/surf_2023/anova.html#multiple-comparison-tests-1",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Multiple Comparison Tests",
+    "text": "Multiple Comparison Tests\n\nFisher’s Least Significance Difference\nBonferroni’s Test\nScheffe’s Test\nTukey’s Honest Significant Difference"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#bonferronis-tests",
+    "href": "pres/surf_2023/anova.html#bonferronis-tests",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Bonferroni’s Tests",
+    "text": "Bonferroni’s Tests\n\nBonferroni’s Test conducts a set of \\(k\\) t-tests to each mean pair\nControls family-wise error rate by dividing \\(\\alpha/k\\)"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#scheffes-test",
+    "href": "pres/surf_2023/anova.html#scheffes-test",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Scheffe’s Test",
+    "text": "Scheffe’s Test\n\nScheffe’s method compares mean square difference between full and reduced models.\nIt ensures control of the family-wise error rate by testing the largest and smallest model.\nScheffe’s tests the following hypothesis: \\(H_0: \\sum_i\\lambda_i\\mu_i=0\\)"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#tukeys-honest-significant-difference-tests",
+    "href": "pres/surf_2023/anova.html#tukeys-honest-significant-difference-tests",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Tukey’s Honest Significant Difference Tests",
+    "text": "Tukey’s Honest Significant Difference Tests\n\nTukey’s test will look for the pairs that are greater than the HSD value. HSD value is the minimum absolute difference needed for a pair of means to be considered different.\nThis method requires a balanced design (\\(n_1=n_2=\\ldots=n_k=n\\))"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#comparison-of-methods",
+    "href": "pres/surf_2023/anova.html#comparison-of-methods",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Comparison of Methods",
+    "text": "Comparison of Methods\n\nBonferroni’s Method\n\nUse Bonferroni’s method if you were interested in testing different mean pairs before you started to collect data.\nGood for balanced and unbalanced designs\nConsidered the least conservative method (most likely to reject \\(H_0\\))\n\nScheffe’s Method\n\nUse Scheffe’s method if you are interested data-driven differences.\nCan test linear combinations\nGood for unbalanced designs\nConsidereded more conservative method (least likely to reject \\(H_0\\))\n\nTukey’s HSD\n\nUse Tukey’s HSD when you are interested in testing difference of all mean pairs.\nGood for balanced designs.\nConsidered more conservative method (least likely to reject \\(H_0\\))"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#way-anova",
+    "href": "pres/surf_2023/anova.html#way-anova",
+    "title": "One- & Two-Way ANOVA",
+    "section": "2-way ANOVA",
+    "text": "2-way ANOVA\nTwo-way ANOVA is a one-way ANOVA that was adjusted by a grouping variable.\nA two-way ANOVA will test whether the if interaction between the experimental and control variable affects mean of outcomes, if the experimental variable affects the means of outcomes, and the control variables affects the means of outcomes."
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#anova-table-1",
+    "href": "pres/surf_2023/anova.html#anova-table-1",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Anova Table",
+    "text": "Anova Table\n\n\n\n\n\n\n\n\n\n\nSource\nDF\nSS\nMS\nF\n\n\n\n\nGrp\n\\(DFG=G-1\\)\n\\(SSG\\)\n\\(MSG=\\frac{SSG}{DFG}\\)\n\\(F_G=\\frac{MSG}{MSE}\\)\n\n\nAdj\n\\(DFA=A-1\\)\n\\(SSA\\)\n\\(MSA=\\frac{SSA}{DFA}\\)\n\\(F_A=\\frac{MSA}{MSE}\\)\n\n\nInt\n\\(DFI=(G-1)(A-1)\\)\n\\(SSI\\)\n\\(MSI=\\frac{SSI}{DFI}\\)\n\\(F_I=\\frac{MSI}{MSE}\\)\n\n\nError\n\\(DFE=AGK-AG\\)\n\\(SSE\\)\n\\(MSE=\\frac{SSE}{DFE}\\)\n\n\n\nTotal\n\\(TDF=AGK-1\\)\n\\(TSS=SSG+SSA+SSE\\)\n\n\n\n\n\n\n\\(A:\\) Number of Adjusted groups\n\\(G:\\) Number of Experimental groups\n\\(k:\\) Number of Replicates"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#order-of-analysis",
+    "href": "pres/surf_2023/anova.html#order-of-analysis",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Order of Analysis",
+    "text": "Order of Analysis\n\n\\(H_0:\\) No interaction Effect\n\nReject \\(H_0:\\) Conduct multiple comparisons tests\nOtherwise: Remove interaction from the model and move on to next step\n\n\\(H_0:\\) No Control Effect\n\nReject \\(H_0:\\) Keep in model, move on to next step\nOtherwise: Remove control variable from model, move one to next step\n\n\\(H_0\\): No Experimental Group Effect\n\nReject \\(H_0:\\) Conduct multiple comparison tests\nOtherwise: Check if control variable makes experimental variable significant. If so, use model with both experimental and control variable and run multiple comparison tests."
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#data-and-packages",
+    "href": "pres/surf_2023/anova.html#data-and-packages",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Data and Packages",
+    "text": "Data and Packages\n\nlibrary(tidyverse)\nlibrary(car)\ndf &lt;- ToothGrowth %&gt;% mutate(dose = as.character(dose))\ndf %&gt;% summary()\n\n#&gt;       len        supp        dose          \n#&gt;  Min.   : 4.20   OJ:30   Length:60         \n#&gt;  1st Qu.:13.07   VC:30   Class :character  \n#&gt;  Median :19.25           Mode  :character  \n#&gt;  Mean   :18.81                             \n#&gt;  3rd Qu.:25.27                             \n#&gt;  Max.   :33.90"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#toothgrowth-data",
+    "href": "pres/surf_2023/anova.html#toothgrowth-data",
+    "title": "One- & Two-Way ANOVA",
+    "section": "ToothGrowth Data",
+    "text": "ToothGrowth Data\nThe ToothGrowth data is built in R for further analysis. It provides the length (len) tooth cells in 60 guinea pigs. It measures whether dosage (dose: 0.5, 1, 2), and/or supplement (supp: OJ or VC) has an affect on tooth cells. Researchers are also interested if there is an interaction between supplement and dose."
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#grouped-statistics",
+    "href": "pres/surf_2023/anova.html#grouped-statistics",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Grouped Statistics",
+    "text": "Grouped Statistics\n\nDescriptionR CodeOutput\n\n\nWe will need to obtain basic descriptive statistics on cell length for each group (dosage and supplement).\n\n\n\nsummary_df &lt;- df %&gt;% group_by(supp, dose) %&gt;% \n                  summarize(mean = mean(len), \n                            sd = sd(len)) \nsummary_df %&gt;% print\n\n\n\n\n\n#&gt; # A tibble: 6 × 4\n#&gt; # Groups:   supp [2]\n#&gt;   supp  dose   mean    sd\n#&gt;   &lt;fct&gt; &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt;\n#&gt; 1 OJ    0.5   13.2   4.46\n#&gt; 2 OJ    1     22.7   3.91\n#&gt; 3 OJ    2     26.1   2.66\n#&gt; 4 VC    0.5    7.98  2.75\n#&gt; 5 VC    1     16.8   2.52\n#&gt; 6 VC    2     26.1   4.80"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#graphical-visualization",
+    "href": "pres/surf_2023/anova.html#graphical-visualization",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Graphical Visualization",
+    "text": "Graphical Visualization\n\nDescriptionCodeOutput\n\n\nCreate Boxplots to show the relationship of length data with respect to dosage and supplement.\n\n\n\ndf %&gt;% ggplot(aes(x=supp, \n                  y = len, \n                  color = dose)) + geom_boxplot() +\n        theme_bw()"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#graphical-output",
+    "href": "pres/surf_2023/anova.html#graphical-output",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Graphical Output",
+    "text": "Graphical Output\n\nDescriptionCodeOutput\n\n\nCreate a scatter and line plot to display relationship with dosage and supplement by length.\n\n\n\ndf %&gt;% ggplot(aes(x = as.numeric(dose), \n                  y = len,\n                  color = supp)) + \n        geom_point() +\n        geom_line(aes(x = as.numeric(dose),\n                      y = mean,\n                      color = supp),\n                  summary_df) +\n        xlab(\"Dosage\") +\n        theme_bw()"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#way-anova-1",
+    "href": "pres/surf_2023/anova.html#way-anova-1",
+    "title": "One- & Two-Way ANOVA",
+    "section": "1-Way ANOVA",
+    "text": "1-Way ANOVA\n\nDescriptionCodeOutput\n\n\nConduct a 1-way anova using the aov() function and obtain the ANOVA table using the anova() function. Testing whether dosage has an effect on tooth length. Note, keep dosage as a character variable in R because it is numeric.\n\n\n\none_aov &lt;- aov(len ~ dose, df)\nanova(one_aov)\n\n\n\n\n\n#&gt; Analysis of Variance Table\n#&gt; \n#&gt; Response: len\n#&gt;           Df Sum Sq Mean Sq F value    Pr(&gt;F)    \n#&gt; dose       2 2426.4  1213.2  67.416 9.533e-16 ***\n#&gt; Residuals 57 1025.8    18.0                      \n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#way-anova-interaction-included",
+    "href": "pres/surf_2023/anova.html#way-anova-interaction-included",
+    "title": "One- & Two-Way ANOVA",
+    "section": "2-Way ANOVA: Interaction Included",
+    "text": "2-Way ANOVA: Interaction Included\n\nDescriptionCodeOutput\n\n\nConduct a 2-way ANOVA using the aov() function and obtain the ANOVA table using the anova() function. Testing whether dosage has an effect on tooth length. We are also incorporating an interaction term.\n\n\n\ntwo_aov &lt;- aov(len ~ dose * supp, df)\nanova(two_aov)\n\n\n\n\n\n#&gt; Analysis of Variance Table\n#&gt; \n#&gt; Response: len\n#&gt;           Df  Sum Sq Mean Sq F value    Pr(&gt;F)    \n#&gt; dose       2 2426.43 1213.22  92.000 &lt; 2.2e-16 ***\n#&gt; supp       1  205.35  205.35  15.572 0.0002312 ***\n#&gt; dose:supp  2  108.32   54.16   4.107 0.0218603 *  \n#&gt; Residuals 54  712.11   13.19                      \n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n#&gt; Anova Table (Type II tests)\n#&gt; \n#&gt; Response: len\n#&gt;            Sum Sq Df F value    Pr(&gt;F)    \n#&gt; dose      2426.43  2  92.000 &lt; 2.2e-16 ***\n#&gt; supp       205.35  1  15.572 0.0002312 ***\n#&gt; dose:supp  108.32  2   4.107 0.0218603 *  \n#&gt; Residuals  712.11 54                      \n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n#&gt; Anova Table (Type III tests)\n#&gt; \n#&gt; Response: len\n#&gt;              Sum Sq Df F value    Pr(&gt;F)    \n#&gt; (Intercept) 1750.33  1 132.730 3.603e-16 ***\n#&gt; dose         885.26  2  33.565 3.363e-10 ***\n#&gt; supp         137.81  1  10.450  0.002092 ** \n#&gt; dose:supp    108.32  2   4.107  0.021860 *  \n#&gt; Residuals    712.11 54                      \n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#way-anova-no-interaction",
+    "href": "pres/surf_2023/anova.html#way-anova-no-interaction",
+    "title": "One- & Two-Way ANOVA",
+    "section": "2-way ANOVA: No Interaction",
+    "text": "2-way ANOVA: No Interaction\n\nDescriptionCodeOutput\n\n\nConduct a 2-way ANOVA using the aov() function and obtain the ANOVA table using the Anova() function. Testing whether dosage has an effect on tooth length. We are also excluding an interaction term.\n\n\n\ntwo_aov_add &lt;- aov(len ~ dose + supp, df)\nanova(two_aov_add)\n\n\n\n\n\n#&gt; Analysis of Variance Table\n#&gt; \n#&gt; Response: len\n#&gt;           Df  Sum Sq Mean Sq F value    Pr(&gt;F)    \n#&gt; dose       2 2426.43 1213.22  82.811 &lt; 2.2e-16 ***\n#&gt; supp       1  205.35  205.35  14.017 0.0004293 ***\n#&gt; Residuals 56  820.43   14.65                      \n#&gt; ---\n#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#diagnostics",
+    "href": "pres/surf_2023/anova.html#diagnostics",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Diagnostics",
+    "text": "Diagnostics\n\nLinearityConstant VariancesNormalityNormality\n\n\n\nplot(two_aov, 1)\n\n\n\n\n\n\n\n\n\n\n\nleveneTest(two_aov)\n\n#&gt; Levene's Test for Homogeneity of Variance (center = median)\n#&gt;       Df F value Pr(&gt;F)\n#&gt; group  5  1.7086 0.1484\n#&gt;       54\n\n\nFail to Reject \\(H_0\\) is good here!\n\n\n\nplot(two_aov, 2)\n\n\n\n\n\n\n\n\n\n\n\nshapiro.test(resid(two_aov))\n\n#&gt; \n#&gt;  Shapiro-Wilk normality test\n#&gt; \n#&gt; data:  resid(two_aov)\n#&gt; W = 0.98499, p-value = 0.6694\n\n\nFail to Reject \\(H_0\\) is good here!"
+  },
+  {
+    "objectID": "pres/surf_2023/anova.html#tukey-hsd",
+    "href": "pres/surf_2023/anova.html#tukey-hsd",
+    "title": "One- & Two-Way ANOVA",
+    "section": "Tukey HSD",
+    "text": "Tukey HSD\n\nTukey HSDComparison Plot\n\n\n\nTukeyHSD(two_aov)\n\n#&gt;   Tukey multiple comparisons of means\n#&gt;     95% family-wise confidence level\n#&gt; \n#&gt; Fit: aov(formula = len ~ dose * supp, data = .)\n#&gt; \n#&gt; $dose\n#&gt;         diff       lwr       upr   p adj\n#&gt; 1-0.5  9.130  6.362488 11.897512 0.0e+00\n#&gt; 2-0.5 15.495 12.727488 18.262512 0.0e+00\n#&gt; 2-1    6.365  3.597488  9.132512 2.7e-06\n#&gt; \n#&gt; $supp\n#&gt;       diff       lwr       upr     p adj\n#&gt; VC-OJ -3.7 -5.579828 -1.820172 0.0002312\n#&gt; \n#&gt; $`dose:supp`\n#&gt;                 diff        lwr         upr     p adj\n#&gt; 1:OJ-0.5:OJ     9.47   4.671876  14.2681238 0.0000046\n#&gt; 2:OJ-0.5:OJ    12.83   8.031876  17.6281238 0.0000000\n#&gt; 0.5:VC-0.5:OJ  -5.25 -10.048124  -0.4518762 0.0242521\n#&gt; 1:VC-0.5:OJ     3.54  -1.258124   8.3381238 0.2640208\n#&gt; 2:VC-0.5:OJ    12.91   8.111876  17.7081238 0.0000000\n#&gt; 2:OJ-1:OJ       3.36  -1.438124   8.1581238 0.3187361\n#&gt; 0.5:VC-1:OJ   -14.72 -19.518124  -9.9218762 0.0000000\n#&gt; 1:VC-1:OJ      -5.93 -10.728124  -1.1318762 0.0073930\n#&gt; 2:VC-1:OJ       3.44  -1.358124   8.2381238 0.2936430\n#&gt; 0.5:VC-2:OJ   -18.08 -22.878124 -13.2818762 0.0000000\n#&gt; 1:VC-2:OJ      -9.29 -14.088124  -4.4918762 0.0000069\n#&gt; 2:VC-2:OJ       0.08  -4.718124   4.8781238 1.0000000\n#&gt; 1:VC-0.5:VC     8.79   3.991876  13.5881238 0.0000210\n#&gt; 2:VC-0.5:VC    18.16  13.361876  22.9581238 0.0000000\n#&gt; 2:VC-1:VC       9.37   4.571876  14.1681238 0.0000058\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://www.inqs.info/pres/surf_2023/anova.html\n\n\n\n\n\n\n \n\n\nAnalysis of Variance"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "The csustats package\nAn R package designed to teach statistical methods in R.\n\nLearn more »\n\n\n\nThe SMART Program\nA mentoring program for undergraduate students to completer statistical projects at UC Riverside.\n\nLearn more »\n\n\n\nThe tvcm Package\nThe tvcm package allows you to fit time-varying coefficient models in R\n\nLearn more »"
+  }
+]
