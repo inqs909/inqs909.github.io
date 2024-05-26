@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Isaac Quintanilla">
-<meta name="dcterms.date" content="2021-05-01">
-<meta name="description" content="I describe some of the functions available in Rcpp. If you want to get straight to the material, go to Rcpp Functions.">
 
-<title>INQS - Rcpp Functions</title>
+<title>INQS - Bluff Lake</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -104,9 +67,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="../../site_libs/simplelightbox-0/css/simplelightbox.css" rel="stylesheet">
+<script src="../../site_libs/simplelightbox-0/js/simplelightbox.js"></script>
+<link href="../../site_libs/pixgallery-0/css/pixgallery.css" rel="stylesheet">
+<script src="../../site_libs/pixgallery-binding-0.0.2.3000/pixgallery.js"></script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -178,34 +144,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Rcpp Functions</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">RCPP</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    I describe some of the functions available in Rcpp. If you want to get straight to the material, go to Rcpp Functions.
-  </div>
+<h1 class="title">Bluff Lake</h1>
 </div>
+
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Isaac Quintanilla </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May 1, 2021</p>
-    </div>
-  </div>
   
     
   </div>
@@ -215,397 +161,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="journey" class="level2">
-<h2 class="anchored" data-anchor-id="journey">Journey</h2>
-<p>When I was implementing <a href="http://dirk.eddelbuettel.com/code/rcpp.armadillo.html">RcppArmadillo</a>, there were a couple scenarios where I couldn’t find an easy function for a certain result. This is partly due to strictly sticking with the <a href="http://arma.sourceforge.net/">Armadillo</a> library for all my needs. I built functions to resolve these issues. However, I got to the point where I couldn’t rely on the armadillo library to compute the needed value. I needed to compute the value from the inverse cumulative distribution function (iCDF) of a standard normal distribution. The armadillo library is only for linear algebra and scientific computing. It did not have any distribution functions<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Therefore, I needed to find a solution to my problem.</p>
-<p>Hadley Wickham’s <a href="https://adv-r.hadley.nz/">book</a> describes how to use R functions in cpp code. However, I worried that this may computationally taxing by switching from one language to another. Therefore, I searched for potential solutions to compute the iCDF of a normal distribution. This has brought me to this incredible website: <a href="https://teuder.github.io/rcpp4everyone_en/">Rcpp for everyone</a>.</p>
-<p>Rcpp for everyone is an excellent website that provides the complete basics of using cpp in R. It is comprehensive that can answer the majority<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> of your questions when implementing Rcpp. Highly recommend reading it before you implement Rcpp in your code.</p>
-<p>To obtain the iCDF, I needed to use the <a href="https://teuder.github.io/rcpp4everyone_en/310_Rmath.html">R Math Library</a><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. This library seems to be loaded when you included in the <code>Rcpp.h</code> file. However, you will need to include the line <code>using namespace R</code> or <code>R::</code> in your cpp code. Below is an example of making <code>qnorm</code> executable in R:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>double qnorm_cpp(double p, double mean, double sd, int lower, int log){</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  double val = R::qnorm(p, mean, sd, lower, log);</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  return val;</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Now it can be used to obtain the iCDF of a standard normal distribution:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm_cpp</span>(<span class="fl">0.5</span>, <span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.5</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0</code></pre>
+<div class="cell-output-display">
+<div id="htmlwidget-fddd770d2de6c10858fb" style="width:100%;height:100%;" class="pixgallery html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fddd770d2de6c10858fb">{"x":{"path":["img/BL1.jpg","img/BL2.jpg","img/BL3.jpg","img/BL5.jpg"],"caption":[],"dim":"350px","gap":"10px","shuffle":false,"type":"grid"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
-<p>For my research, I didn’t need create an executable function for R. However, I did worry about compatibility issues with the Armadillo library. Fortunately, the function returns a double value making it easy to work with.</p>
-<p>Once I learned about these different functions, I decided to clean my cpp code with a couple of other functions. For example, I needed to take the factorial of a number. The Armadillo library does not provide a useful function. Therefore, I wrote a function:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>double fact (int x){</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  if (x == 0){</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    return 1;</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  } else if (x == 1){</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    return 1;</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  } else {</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    int ide = x - 1;</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    arma::vec ff = linspace(1, x, x);</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    arma::vec ccpp = cumprod(ff);</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    double post = ccpp[ide];</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    return post;</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>As you can see, it isn’t a pretty function. However the Rcpp provides the following function: <code>factorial</code><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. Below is the implementation of the function to obtain a double value:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>double fact_cpp(double x){</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  NumericVector y = NumericVector::create(x);</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  double val = Rcpp::factorial(y)[0];</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  return val;</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Below is code to benchmark the 2 functions:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>bench<span class="sc">::</span><span class="fu">mark</span>(</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">fact</span>(<span class="dv">5</span>),</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">fact_cpp</span>(<span class="dv">5</span>)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 6
-  expression       min   median `itr/sec` mem_alloc `gc/sec`
-  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;
-1 fact(5)        453ns    463ns  1716526.        0B        0
-2 fact_cpp(5)    466ns    504ns  1645702.        0B        0</code></pre>
-</div>
-</div>
-<p>Notice the Rcpp function is slightly faster than my Armadillo implementation.</p>
-</section>
-<section id="rcpp-functions" class="level2">
-<h2 class="anchored" data-anchor-id="rcpp-functions">Rcpp Functions</h2>
-<p>For more accurate information, I highly recommend looking Rcpp for everyone’s <a href="https://teuder.github.io/rcpp4everyone_en/230_R_function.html">Chapter 23</a> and <a href="https://teuder.github.io/rcpp4everyone_en/310_Rmath.html">Chapter 31</a>. I will talk about certain functions I think are important to know.</p>
-<section id="distributions" class="level3">
-<h3 class="anchored" data-anchor-id="distributions">Distributions</h3>
-<p>As the same with R, the R Math library and Rcpp contain four different functions for each distribution. The letter at the beginning of the distribution indicates the functions capabilities.</p>
-<table class="table">
-<colgroup>
-<col style="width: 11%">
-<col style="width: 88%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Letter</th>
-<th style="text-align: left;">Functionality</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><code>dXXX</code></td>
-<td style="text-align: left;">returns the height of the probability density function</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>pXXX</code></td>
-<td style="text-align: left;">returns the cumulative density function value</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>qXXX</code></td>
-<td style="text-align: left;">returns the inverse cumulative density function (percentiles)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>rXXX</code></td>
-<td style="text-align: left;">returns a randomly generated number</td>
-</tr>
-</tbody>
-</table>
-<section id="rcpp" class="level4">
-<h4 class="anchored" data-anchor-id="rcpp">Rcpp</h4>
-<p>The Rcpp distribution functions are vectorized to accept and return vector. The tables below provide more details about each function.</p>
-<p><em>dXXX</em></p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Argument</th>
-<th style="text-align: left;">Data Type</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><code>x</code></td>
-<td style="text-align: left;">NumericVector</td>
-<td style="text-align: left;">random variable</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>par</code></td>
-<td style="text-align: left;">double</td>
-<td style="text-align: left;">parameters</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>log</code></td>
-<td style="text-align: left;">bool</td>
-<td style="text-align: left;">return log value</td>
-</tr>
-</tbody>
-</table>
-<p><em>pXXX</em></p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Argument</th>
-<th style="text-align: left;">Data Type</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><code>q</code></td>
-<td style="text-align: left;">NumericVector</td>
-<td style="text-align: left;">random variable</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>par</code></td>
-<td style="text-align: left;">double</td>
-<td style="text-align: left;">parameters</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>lower</code></td>
-<td style="text-align: left;">bool</td>
-<td style="text-align: left;">return lower value</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>log</code></td>
-<td style="text-align: left;">bool</td>
-<td style="text-align: left;">return log value</td>
-</tr>
-</tbody>
-</table>
-<p><em>qXXX</em></p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Argument</th>
-<th style="text-align: left;">Data Type</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><code>p</code></td>
-<td style="text-align: left;">NumericVector</td>
-<td style="text-align: left;">probability</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>par</code></td>
-<td style="text-align: left;">double</td>
-<td style="text-align: left;">parameters</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>lower</code></td>
-<td style="text-align: left;">bool</td>
-<td style="text-align: left;">return lower value</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>log</code></td>
-<td style="text-align: left;">bool</td>
-<td style="text-align: left;">return log value</td>
-</tr>
-</tbody>
-</table>
-<p><em>rXXX</em></p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Argument</th>
-<th style="text-align: left;">Data Type</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><code>n</code></td>
-<td style="text-align: left;">int</td>
-<td style="text-align: left;">number of random variables</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>par</code></td>
-<td style="text-align: left;">double</td>
-<td style="text-align: left;">parameters</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="r" class="level4">
-<h4 class="anchored" data-anchor-id="r">R</h4>
-<p>The R Math library distribution functions return scalar values. The tables below describe the functions in more detail.</p>
-<p><em>dXXX</em></p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Argument</th>
-<th style="text-align: left;">Data Type</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><code>x</code></td>
-<td style="text-align: left;">double</td>
-<td style="text-align: left;">random variable</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>par</code></td>
-<td style="text-align: left;">double</td>
-<td style="text-align: left;">parameters</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>log</code></td>
-<td style="text-align: left;">int</td>
-<td style="text-align: left;">return log value</td>
-</tr>
-</tbody>
-</table>
-<p><em>pXXX</em></p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Argument</th>
-<th style="text-align: left;">Data Type</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><code>q</code></td>
-<td style="text-align: left;">double</td>
-<td style="text-align: left;">random variable</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>par</code></td>
-<td style="text-align: left;">double</td>
-<td style="text-align: left;">parameters</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>lower</code></td>
-<td style="text-align: left;">int</td>
-<td style="text-align: left;">return lower value</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>log</code></td>
-<td style="text-align: left;">int</td>
-<td style="text-align: left;">return log value</td>
-</tr>
-</tbody>
-</table>
-<p><em>qXXX</em></p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Argument</th>
-<th style="text-align: left;">Data Type</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><code>p</code></td>
-<td style="text-align: left;">NumericVector</td>
-<td style="text-align: left;">probability</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>par</code></td>
-<td style="text-align: left;">double</td>
-<td style="text-align: left;">parameters</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>lower</code></td>
-<td style="text-align: left;">int</td>
-<td style="text-align: left;">return lower value</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>log</code></td>
-<td style="text-align: left;">int</td>
-<td style="text-align: left;">return log value</td>
-</tr>
-</tbody>
-</table>
-<p><em>rXXX</em></p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Argument</th>
-<th style="text-align: left;">Data Type</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><code>par</code></td>
-<td style="text-align: left;">double</td>
-<td style="text-align: left;">parameters</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="available-distributions" class="level4">
-<h4 class="anchored" data-anchor-id="available-distributions">Available Distributions</h4>
-<p>The table below describe a select number of distribution functions available in R and Rcpp.</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">code</th>
-<th style="text-align: left;">Distributions</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">unif</td>
-<td style="text-align: left;">Uniform Distribution</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">norm</td>
-<td style="text-align: left;">Normal Distribution</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">chisq</td>
-<td style="text-align: left;"><span class="math inline">\(\chi²\)</span> Distribution</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">t</td>
-<td style="text-align: left;">t Distribution</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">f</td>
-<td style="text-align: left;">F Distribution</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">exp</td>
-<td style="text-align: left;">Exponential Distribution</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">binom</td>
-<td style="text-align: left;">Binomial Distribution</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">pois</td>
-<td style="text-align: left;">Poisson Distribution</td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="apply-functions" class="level3">
-<h3 class="anchored" data-anchor-id="apply-functions">apply functions</h3>
-</section>
-</section>
-<section id="next-steps-.." class="level2">
-<h2 class="anchored" data-anchor-id="next-steps-..">Next steps ..</h2>
-<p>I don’t know</p>
 
 
-</section>
 
-
-<div id="quarto-appendix" class="default"><aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>I didn’t find any in its documentation.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>If not all.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>For more information about the R Math Library, click <a href="https://cran.r-project.org/doc/manuals/r-release/R-admin.html#The-standalone-Rmath-library">here</a>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>Note that this is misspelled in Rcpp for everyone.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</aside></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
