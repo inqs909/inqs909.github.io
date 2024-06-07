@@ -6,10 +6,28 @@ editor: source
 
 ::: content-block
 ::: features
+
+::: {.feature .box}
+#### Bayesian Mixed Effects Models and Cats Analysis: of Evolutionary Biological Data
+
+October 9, 2024
+
+[Slides](pres/ci_f23/10_209.html){.btn-action-primary .btn-action .btn .btn-success role="button"}
+:::
+
+
+::: {.feature .box}
+#### Statistics: A Math? A Science? An Art? Or Something Else?
+
+September 27, 2024
+
+[Slides](pres/ci_f23/9_27.html){.btn-action-primary .btn-action .btn .btn-success role="button"}
+:::
+
 ::: {.feature .box}
 #### Not Dead ... Yet!: An Introduction to Survival Analysis
 
-April 10, 2021
+April 10, 2023
 
 [Slides](pres/long_beach/pres_4_22.html){.btn-action-primary .btn-action .btn .btn-success role="button"}
 :::
@@ -17,7 +35,7 @@ April 10, 2021
 ::: {.feature .box}
 #### Survival Analysis: The Life and Death of Statistics
 
-April 10, 2021
+April 10, 2023
 
 [Slides](pres/ci_spring_2023/pres_4_23.html){.btn-action-primary .btn-action .btn .btn-success role="button"}
 :::

@@ -8,7 +8,7 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.506">
+  <meta name="generator" content="quarto-1.4.554">
 
   <meta name="author" content="Isaac Quintanilla Salinas">
   <title>INQS - Bayesian Mixed Effects Models and Cats</title>
@@ -1153,218 +1153,220 @@ q(x,y) = \min\left\{\frac{f(y)q(x|y)}{f(x)q(y|x)},1\right\}
 <section id="stan-code" class="slide level2">
 <h2>Stan Code</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1"></a>data {</span>
-<span id="cb1-2"><a href="#cb1-2"></a>  int N;</span>
-<span id="cb1-3"><a href="#cb1-3"></a>  int D;</span>
-<span id="cb1-4"><a href="#cb1-4"></a>  int S;</span>
-<span id="cb1-5"><a href="#cb1-5"></a>  int H;</span>
-<span id="cb1-6"><a href="#cb1-6"></a>  vector[N] X1;</span>
-<span id="cb1-7"><a href="#cb1-7"></a>  vector[N] X2;</span>
-<span id="cb1-8"><a href="#cb1-8"></a>  matrix[S,S] evo; </span>
-<span id="cb1-9"><a href="#cb1-9"></a>  array[N] int&lt;lower=1, upper=N&gt; evo_id;</span>
-<span id="cb1-10"><a href="#cb1-10"></a>  array[N] int&lt;lower=1, upper=N&gt; env_id;</span>
-<span id="cb1-11"><a href="#cb1-11"></a>  array[N] vector[D] time;</span>
-<span id="cb1-12"><a href="#cb1-12"></a>  array[N] matrix[D, D] time_diff;</span>
-<span id="cb1-13"><a href="#cb1-13"></a>  array[N] vector[D] Y;</span>
-<span id="cb1-14"><a href="#cb1-14"></a>}</span>
-<span id="cb1-15"><a href="#cb1-15"></a></span>
-<span id="cb1-16"><a href="#cb1-16"></a>transformed data {</span>
-<span id="cb1-17"><a href="#cb1-17"></a>  vector[S] zero;</span>
-<span id="cb1-18"><a href="#cb1-18"></a>  vector[D] ones;</span>
-<span id="cb1-19"><a href="#cb1-19"></a>  zero = rep_vector(0, S);</span>
-<span id="cb1-20"><a href="#cb1-20"></a>  ones = rep_vector(1, D);</span>
-<span id="cb1-21"><a href="#cb1-21"></a>}</span>
-<span id="cb1-22"><a href="#cb1-22"></a></span>
-<span id="cb1-23"><a href="#cb1-23"></a></span>
-<span id="cb1-24"><a href="#cb1-24"></a></span>
-<span id="cb1-25"><a href="#cb1-25"></a>parameters {</span>
-<span id="cb1-26"><a href="#cb1-26"></a>  real&lt;lower=0&gt; sig_b;</span>
-<span id="cb1-27"><a href="#cb1-27"></a>  real&lt;lower=0&gt; sig_h;</span>
-<span id="cb1-28"><a href="#cb1-28"></a>  real&lt;lower=0&gt; sig_e;</span>
-<span id="cb1-29"><a href="#cb1-29"></a>  real&lt;lower=-1, upper=1&gt; rho;</span>
-<span id="cb1-30"><a href="#cb1-30"></a>  real b0;</span>
-<span id="cb1-31"><a href="#cb1-31"></a>  real b1;</span>
-<span id="cb1-32"><a href="#cb1-32"></a>  real b2;</span>
-<span id="cb1-33"><a href="#cb1-33"></a>  real b3;</span>
-<span id="cb1-34"><a href="#cb1-34"></a>  vector[S] evo_re;</span>
-<span id="cb1-35"><a href="#cb1-35"></a>  vector[N] bb_re;</span>
-<span id="cb1-36"><a href="#cb1-36"></a>  vector[H] hh_re;</span>
-<span id="cb1-37"><a href="#cb1-37"></a>}</span>
-<span id="cb1-38"><a href="#cb1-38"></a></span>
-<span id="cb1-39"><a href="#cb1-39"></a></span>
-<span id="cb1-40"><a href="#cb1-40"></a>transformed parameters {</span>
-<span id="cb1-41"><a href="#cb1-41"></a>  array[N] matrix[D,D] cov_1;</span>
-<span id="cb1-42"><a href="#cb1-42"></a>  array[N] matrix[D,D] cov;</span>
-<span id="cb1-43"><a href="#cb1-43"></a>  array[N] vector[D] yhat;</span>
-<span id="cb1-44"><a href="#cb1-44"></a>  </span>
-<span id="cb1-45"><a href="#cb1-45"></a>  for (n in 1:N){</span>
-<span id="cb1-46"><a href="#cb1-46"></a>     yhat[n] = b0 * ones + </span>
-<span id="cb1-47"><a href="#cb1-47"></a>                  b1 * time[n] + </span>
-<span id="cb1-48"><a href="#cb1-48"></a>                  b2 * X1[n] * ones + </span>
-<span id="cb1-49"><a href="#cb1-49"></a>                  b3 * X2[n] * ones + </span>
-<span id="cb1-50"><a href="#cb1-50"></a>                  bb_re[n] * ones + </span>
-<span id="cb1-51"><a href="#cb1-51"></a>                  evo_re[evo_id[n]] * ones +</span>
-<span id="cb1-52"><a href="#cb1-52"></a>                  hh_re[env_id[n]] * ones;</span>
-<span id="cb1-53"><a href="#cb1-53"></a>     cov_1[n] = pow(rho, time_diff[n]);</span>
-<span id="cb1-54"><a href="#cb1-54"></a>     cov[n] = sig_e * cov_1[n];</span>
-<span id="cb1-55"><a href="#cb1-55"></a>  } </span>
-<span id="cb1-56"><a href="#cb1-56"></a>}</span>
-<span id="cb1-57"><a href="#cb1-57"></a></span>
-<span id="cb1-58"><a href="#cb1-58"></a>model {</span>
-<span id="cb1-59"><a href="#cb1-59"></a>  for (n in 1:N) {</span>
-<span id="cb1-60"><a href="#cb1-60"></a>    Y[n] ~ multi_normal(yhat[n], cov[n]);</span>
-<span id="cb1-61"><a href="#cb1-61"></a>  }</span>
-<span id="cb1-62"><a href="#cb1-62"></a>  bb_re ~ normal(0, sig_b);</span>
-<span id="cb1-63"><a href="#cb1-63"></a>  hh_re ~ normal(0, sig_h);</span>
-<span id="cb1-64"><a href="#cb1-64"></a>  b0 ~ normal(0, 5);</span>
-<span id="cb1-65"><a href="#cb1-65"></a>  b1 ~ normal(0, 5);</span>
-<span id="cb1-66"><a href="#cb1-66"></a>  b2 ~ normal(0, 5);</span>
-<span id="cb1-67"><a href="#cb1-67"></a>  evo_re ~ multi_normal(zero, evo);</span>
-<span id="cb1-68"><a href="#cb1-68"></a>  sig_b ~ gamma(3, 2);</span>
-<span id="cb1-69"><a href="#cb1-69"></a>  sig_e ~ gamma(1, 1);</span>
-<span id="cb1-70"><a href="#cb1-70"></a>  sig_h ~ gamma(3, 2);</span>
-<span id="cb1-71"><a href="#cb1-71"></a>  rho ~ uniform(-1, 1);</span>
-<span id="cb1-72"><a href="#cb1-72"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a></a>data {</span>
+<span id="cb1-2"><a></a>  int N;</span>
+<span id="cb1-3"><a></a>  int D;</span>
+<span id="cb1-4"><a></a>  int S;</span>
+<span id="cb1-5"><a></a>  int H;</span>
+<span id="cb1-6"><a></a>  vector[N] X1;</span>
+<span id="cb1-7"><a></a>  vector[N] X2;</span>
+<span id="cb1-8"><a></a>  matrix[S,S] evo; </span>
+<span id="cb1-9"><a></a>  array[N] int&lt;lower=1, upper=N&gt; evo_id;</span>
+<span id="cb1-10"><a></a>  array[N] int&lt;lower=1, upper=N&gt; env_id;</span>
+<span id="cb1-11"><a></a>  array[N] vector[D] time;</span>
+<span id="cb1-12"><a></a>  array[N] matrix[D, D] time_diff;</span>
+<span id="cb1-13"><a></a>  array[N] vector[D] Y;</span>
+<span id="cb1-14"><a></a>}</span>
+<span id="cb1-15"><a></a></span>
+<span id="cb1-16"><a></a>transformed data {</span>
+<span id="cb1-17"><a></a>  vector[S] zero;</span>
+<span id="cb1-18"><a></a>  vector[D] ones;</span>
+<span id="cb1-19"><a></a>  zero = rep_vector(0, S);</span>
+<span id="cb1-20"><a></a>  ones = rep_vector(1, D);</span>
+<span id="cb1-21"><a></a>}</span>
+<span id="cb1-22"><a></a></span>
+<span id="cb1-23"><a></a></span>
+<span id="cb1-24"><a></a></span>
+<span id="cb1-25"><a></a>parameters {</span>
+<span id="cb1-26"><a></a>  real&lt;lower=0&gt; sig_b;</span>
+<span id="cb1-27"><a></a>  real&lt;lower=0&gt; sig_h;</span>
+<span id="cb1-28"><a></a>  real&lt;lower=0&gt; sig_e;</span>
+<span id="cb1-29"><a></a>  real&lt;lower=-1, upper=1&gt; rho;</span>
+<span id="cb1-30"><a></a>  real b0;</span>
+<span id="cb1-31"><a></a>  real b1;</span>
+<span id="cb1-32"><a></a>  real b2;</span>
+<span id="cb1-33"><a></a>  real b3;</span>
+<span id="cb1-34"><a></a>  vector[S] evo_re;</span>
+<span id="cb1-35"><a></a>  vector[N] bb_re;</span>
+<span id="cb1-36"><a></a>  vector[H] hh_re;</span>
+<span id="cb1-37"><a></a>}</span>
+<span id="cb1-38"><a></a></span>
+<span id="cb1-39"><a></a></span>
+<span id="cb1-40"><a></a>transformed parameters {</span>
+<span id="cb1-41"><a></a>  array[N] matrix[D,D] cov_1;</span>
+<span id="cb1-42"><a></a>  array[N] matrix[D,D] cov;</span>
+<span id="cb1-43"><a></a>  array[N] vector[D] yhat;</span>
+<span id="cb1-44"><a></a>  </span>
+<span id="cb1-45"><a></a>  for (n in 1:N){</span>
+<span id="cb1-46"><a></a>     yhat[n] = b0 * ones + </span>
+<span id="cb1-47"><a></a>                  b1 * time[n] + </span>
+<span id="cb1-48"><a></a>                  b2 * X1[n] * ones + </span>
+<span id="cb1-49"><a></a>                  b3 * X2[n] * ones + </span>
+<span id="cb1-50"><a></a>                  bb_re[n] * ones + </span>
+<span id="cb1-51"><a></a>                  evo_re[evo_id[n]] * ones +</span>
+<span id="cb1-52"><a></a>                  hh_re[env_id[n]] * ones;</span>
+<span id="cb1-53"><a></a>     cov_1[n] = pow(rho, time_diff[n]);</span>
+<span id="cb1-54"><a></a>     cov[n] = sig_e * cov_1[n];</span>
+<span id="cb1-55"><a></a>  } </span>
+<span id="cb1-56"><a></a>}</span>
+<span id="cb1-57"><a></a></span>
+<span id="cb1-58"><a></a>model {</span>
+<span id="cb1-59"><a></a>  for (n in 1:N) {</span>
+<span id="cb1-60"><a></a>    Y[n] ~ multi_normal(yhat[n], cov[n]);</span>
+<span id="cb1-61"><a></a>  }</span>
+<span id="cb1-62"><a></a>  bb_re ~ normal(0, sig_b);</span>
+<span id="cb1-63"><a></a>  hh_re ~ normal(0, sig_h);</span>
+<span id="cb1-64"><a></a>  b0 ~ normal(0, 5);</span>
+<span id="cb1-65"><a></a>  b1 ~ normal(0, 5);</span>
+<span id="cb1-66"><a></a>  b2 ~ normal(0, 5);</span>
+<span id="cb1-67"><a></a>  evo_re ~ multi_normal(zero, evo);</span>
+<span id="cb1-68"><a></a>  sig_b ~ gamma(3, 2);</span>
+<span id="cb1-69"><a></a>  sig_e ~ gamma(1, 1);</span>
+<span id="cb1-70"><a></a>  sig_h ~ gamma(3, 2);</span>
+<span id="cb1-71"><a></a>  rho ~ uniform(-1, 1);</span>
+<span id="cb1-72"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="r-code" class="slide level2">
 <h2>R Code</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Loading R Packages</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(mvtnorm)</span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="fu">library</span>(lme4)</span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="fu">library</span>(cmdstanr)</span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="fu">library</span>(bayesplot)</span>
-<span id="cb2-7"><a href="#cb2-7"></a></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="do">## Compiling Stan Model to make executable</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a>model <span class="ot">&lt;-</span> <span class="fu">cmdstan_model</span>(<span class="at">stan_file=</span><span class="st">'~/Dropbox/Machine/new.stan'</span>)</span>
-<span id="cb2-10"><a href="#cb2-10"></a></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="co"># Creating function</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a>kubrick <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">k=</span><span class="cn">NULL</span>){</span>
-<span id="cb2-13"><a href="#cb2-13"></a>  </span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="co"># Creating covariance matrix</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a>x1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.00</span>, <span class="fl">0.80</span>, <span class="fl">0.10</span>)</span>
-<span id="cb2-16"><a href="#cb2-16"></a>x2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.80</span>, <span class="fl">1.30</span>, <span class="fl">0.43</span>)</span>
-<span id="cb2-17"><a href="#cb2-17"></a>x3 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.10</span>, <span class="fl">0.43</span>, <span class="fl">1.90</span>)</span>
-<span id="cb2-18"><a href="#cb2-18"></a>cov_x <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(<span class="fu">rbind</span>(x1, x2, x3))</span>
-<span id="cb2-19"><a href="#cb2-19"></a><span class="co"># Simulating species RE</span></span>
-<span id="cb2-20"><a href="#cb2-20"></a>species_re <span class="ot">&lt;-</span> <span class="fu">rmvnorm</span>(<span class="dv">1</span>, <span class="at">sigma =</span> cov_x)</span>
-<span id="cb2-21"><a href="#cb2-21"></a><span class="co"># Simulating env RE</span></span>
-<span id="cb2-22"><a href="#cb2-22"></a>env_re <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">5</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="fl">1.5</span>))</span>
-<span id="cb2-23"><a href="#cb2-23"></a></span>
-<span id="cb2-24"><a href="#cb2-24"></a><span class="co"># Setting Parameters</span></span>
-<span id="cb2-25"><a href="#cb2-25"></a>sig <span class="ot">&lt;-</span> <span class="fl">1.5</span></span>
-<span id="cb2-26"><a href="#cb2-26"></a>rho <span class="ot">&lt;-</span> <span class="fl">0.2</span></span>
-<span id="cb2-27"><a href="#cb2-27"></a>b0 <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb2-28"><a href="#cb2-28"></a>b1 <span class="ot">&lt;-</span> <span class="fl">1.1</span></span>
-<span id="cb2-29"><a href="#cb2-29"></a>b2 <span class="ot">&lt;-</span> <span class="fl">2.1</span></span>
-<span id="cb2-30"><a href="#cb2-30"></a>b3 <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fl">1.7</span></span>
-<span id="cb2-31"><a href="#cb2-31"></a></span>
-<span id="cb2-32"><a href="#cb2-32"></a><span class="co"># Constructing Fake Data Set</span></span>
-<span id="cb2-33"><a href="#cb2-33"></a>iv <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb2-34"><a href="#cb2-34"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>()</span>
-<span id="cb2-35"><a href="#cb2-35"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>){</span>
-<span id="cb2-36"><a href="#cb2-36"></a>  <span class="cf">for</span> (ii <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>){</span>
-<span id="cb2-37"><a href="#cb2-37"></a>    <span class="cf">for</span> (iii <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>){</span>
-<span id="cb2-38"><a href="#cb2-38"></a>      bb <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="fl">0.8</span>))</span>
-<span id="cb2-39"><a href="#cb2-39"></a>      time_shift <span class="ot">&lt;-</span> <span class="fu">rmvnorm</span>(<span class="dv">1</span>, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">3</span>), <span class="fu">diag</span>(<span class="fu">rep</span>(<span class="fl">0.00001</span>,<span class="dv">3</span>)))</span>
-<span id="cb2-40"><a href="#cb2-40"></a>      time <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out =</span> <span class="dv">4</span>) <span class="sc">+</span> <span class="fu">c</span>(<span class="dv">0</span>, time_shift)</span>
-<span id="cb2-41"><a href="#cb2-41"></a>      sigs <span class="ot">&lt;-</span> (rho<span class="sc">**</span><span class="fu">as.matrix</span>(<span class="fu">dist</span>(time, <span class="at">diag =</span> T, <span class="at">upper =</span> T)))<span class="sc">*</span>sig</span>
-<span id="cb2-42"><a href="#cb2-42"></a>      x1 <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="fl">0.5</span>)</span>
-<span id="cb2-43"><a href="#cb2-43"></a>      x2 <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="fl">0.5</span>)</span>
-<span id="cb2-44"><a href="#cb2-44"></a>      mu <span class="ot">&lt;-</span> species_re[i] <span class="sc">+</span> env_re[ii] <span class="sc">+</span> b0 <span class="sc">+</span> b1 <span class="sc">*</span> time <span class="sc">+</span>  b2 <span class="sc">*</span> x1 <span class="sc">+</span> b3 <span class="sc">*</span> x2 <span class="sc">+</span> bb</span>
-<span id="cb2-45"><a href="#cb2-45"></a>      y <span class="ot">&lt;-</span> <span class="fu">rmvnorm</span>(<span class="dv">1</span>, mu, sigs)</span>
-<span id="cb2-46"><a href="#cb2-46"></a>      df <span class="ot">&lt;-</span> <span class="fu">rbind.data.frame</span>(df, </span>
-<span id="cb2-47"><a href="#cb2-47"></a>                             <span class="fu">data.frame</span>(<span class="fu">t</span>(<span class="fu">rbind</span>(<span class="at">y=</span>y, </span>
-<span id="cb2-48"><a href="#cb2-48"></a>                                                <span class="at">x1=</span>x1,</span>
-<span id="cb2-49"><a href="#cb2-49"></a>                                                <span class="at">x2=</span>x2,</span>
-<span id="cb2-50"><a href="#cb2-50"></a>                                                <span class="at">time=</span>time, </span>
-<span id="cb2-51"><a href="#cb2-51"></a>                                                <span class="at">bb=</span>bb, </span>
-<span id="cb2-52"><a href="#cb2-52"></a>                                                <span class="at">mu =</span> mu,</span>
-<span id="cb2-53"><a href="#cb2-53"></a>                                                <span class="at">time_id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,</span>
-<span id="cb2-54"><a href="#cb2-54"></a>                                                <span class="at">i =</span> i,</span>
-<span id="cb2-55"><a href="#cb2-55"></a>                                                <span class="at">ii =</span> ii,</span>
-<span id="cb2-56"><a href="#cb2-56"></a>                                                <span class="at">iii =</span> iii,</span>
-<span id="cb2-57"><a href="#cb2-57"></a>                                                <span class="at">id =</span> iv))))</span>
-<span id="cb2-58"><a href="#cb2-58"></a>      iv <span class="ot">&lt;-</span> iv <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb2-59"><a href="#cb2-59"></a>    }</span>
-<span id="cb2-60"><a href="#cb2-60"></a>  }</span>
-<span id="cb2-61"><a href="#cb2-61"></a>}</span>
-<span id="cb2-62"><a href="#cb2-62"></a></span>
-<span id="cb2-63"><a href="#cb2-63"></a><span class="co">#df |&gt; head()</span></span>
-<span id="cb2-64"><a href="#cb2-64"></a><span class="co">#df |&gt; dim()</span></span>
-<span id="cb2-65"><a href="#cb2-65"></a><span class="co">#df |&gt; select(id) |&gt; table()</span></span>
-<span id="cb2-66"><a href="#cb2-66"></a><span class="co"># Data Editing and extracting variables for stan</span></span>
-<span id="cb2-67"><a href="#cb2-67"></a>times <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> </span>
-<span id="cb2-68"><a href="#cb2-68"></a>  <span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> id, <span class="at">names_from =</span> time_id, <span class="at">values_from =</span> time)  <span class="sc">|&gt;</span> </span>
-<span id="cb2-69"><a href="#cb2-69"></a>  <span class="fu">select</span>(<span class="sc">-</span>id) <span class="sc">|&gt;</span> </span>
-<span id="cb2-70"><a href="#cb2-70"></a>  <span class="fu">as.matrix</span>()</span>
-<span id="cb2-71"><a href="#cb2-71"></a></span>
-<span id="cb2-72"><a href="#cb2-72"></a>Y <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> </span>
-<span id="cb2-73"><a href="#cb2-73"></a>  <span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> id, <span class="at">names_from =</span> time_id, <span class="at">values_from =</span> V1)  <span class="sc">|&gt;</span> </span>
-<span id="cb2-74"><a href="#cb2-74"></a>  <span class="fu">select</span>(<span class="sc">-</span>id) <span class="sc">|&gt;</span> </span>
-<span id="cb2-75"><a href="#cb2-75"></a>  <span class="fu">as.matrix</span>()</span>
-<span id="cb2-76"><a href="#cb2-76"></a></span>
-<span id="cb2-77"><a href="#cb2-77"></a>time_diff <span class="ot">&lt;-</span> <span class="fu">array</span>(<span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">300</span>, <span class="dv">4</span>, <span class="dv">4</span>))</span>
-<span id="cb2-78"><a href="#cb2-78"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">300</span>){</span>
-<span id="cb2-79"><a href="#cb2-79"></a>  time_diff[i,,] <span class="ot">&lt;-</span> times[i,] <span class="sc">|&gt;</span> <span class="fu">dist</span>(<span class="at">diag =</span> T, <span class="at">upper =</span> T) <span class="sc">|&gt;</span> <span class="fu">as.matrix</span>()</span>
-<span id="cb2-80"><a href="#cb2-80"></a>}</span>
-<span id="cb2-81"><a href="#cb2-81"></a></span>
-<span id="cb2-82"><a href="#cb2-82"></a>evo_id <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> <span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> id, <span class="at">names_from =</span> time_id, <span class="at">values_from =</span> i) <span class="sc">|&gt;</span> </span>
-<span id="cb2-83"><a href="#cb2-83"></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">1</span><span class="st">`</span>) <span class="sc">|&gt;</span> <span class="fu">as.vector</span>() <span class="sc">|&gt;</span> <span class="fu">unlist</span>() <span class="sc">|&gt;</span> <span class="fu">as.numeric</span>()</span>
-<span id="cb2-84"><a href="#cb2-84"></a>env_id <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> <span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> id, <span class="at">names_from =</span> time_id, <span class="at">values_from =</span> ii) <span class="sc">|&gt;</span> </span>
-<span id="cb2-85"><a href="#cb2-85"></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">1</span><span class="st">`</span>) <span class="sc">|&gt;</span> <span class="fu">as.vector</span>() <span class="sc">|&gt;</span> <span class="fu">unlist</span>() <span class="sc">|&gt;</span> <span class="fu">as.numeric</span>()</span>
-<span id="cb2-86"><a href="#cb2-86"></a></span>
-<span id="cb2-87"><a href="#cb2-87"></a></span>
-<span id="cb2-88"><a href="#cb2-88"></a>X1 <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> <span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> id, <span class="at">names_from =</span> time_id, <span class="at">values_from =</span> x1) <span class="sc">|&gt;</span> </span>
-<span id="cb2-89"><a href="#cb2-89"></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">1</span><span class="st">`</span>) <span class="sc">|&gt;</span> <span class="fu">as.vector</span>() <span class="sc">|&gt;</span> <span class="fu">unlist</span>() <span class="sc">|&gt;</span> <span class="fu">as.numeric</span>()</span>
-<span id="cb2-90"><a href="#cb2-90"></a></span>
-<span id="cb2-91"><a href="#cb2-91"></a>X2 <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> <span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> id, <span class="at">names_from =</span> time_id, <span class="at">values_from =</span> x2) <span class="sc">|&gt;</span> </span>
-<span id="cb2-92"><a href="#cb2-92"></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">1</span><span class="st">`</span>) <span class="sc">|&gt;</span> <span class="fu">as.vector</span>() <span class="sc">|&gt;</span> <span class="fu">unlist</span>() <span class="sc">|&gt;</span> <span class="fu">as.numeric</span>()</span>
-<span id="cb2-93"><a href="#cb2-93"></a></span>
-<span id="cb2-94"><a href="#cb2-94"></a><span class="co"># Contruct Data list for stan</span></span>
-<span id="cb2-95"><a href="#cb2-95"></a>data <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb2-96"><a href="#cb2-96"></a>  <span class="at">N =</span> <span class="dv">300</span>,</span>
-<span id="cb2-97"><a href="#cb2-97"></a>  <span class="at">D =</span> <span class="dv">4</span>,</span>
-<span id="cb2-98"><a href="#cb2-98"></a>  <span class="at">S =</span> <span class="dv">3</span>,</span>
-<span id="cb2-99"><a href="#cb2-99"></a>  <span class="at">H =</span> <span class="dv">5</span>,</span>
-<span id="cb2-100"><a href="#cb2-100"></a>  <span class="at">X1 =</span> X1,</span>
-<span id="cb2-101"><a href="#cb2-101"></a>  <span class="at">X2 =</span> X2,</span>
-<span id="cb2-102"><a href="#cb2-102"></a>  <span class="at">evo =</span> cov_x,</span>
-<span id="cb2-103"><a href="#cb2-103"></a>  <span class="at">evo_id =</span> evo_id,</span>
-<span id="cb2-104"><a href="#cb2-104"></a>  <span class="at">env_id =</span> env_id,</span>
-<span id="cb2-105"><a href="#cb2-105"></a>  <span class="at">time =</span> times,</span>
-<span id="cb2-106"><a href="#cb2-106"></a>  <span class="at">time_diff =</span> time_diff,</span>
-<span id="cb2-107"><a href="#cb2-107"></a>  <span class="at">Y =</span> Y</span>
-<span id="cb2-108"><a href="#cb2-108"></a>)</span>
-<span id="cb2-109"><a href="#cb2-109"></a></span>
-<span id="cb2-110"><a href="#cb2-110"></a></span>
-<span id="cb2-111"><a href="#cb2-111"></a><span class="co"># Fit Model with MCMC</span></span>
-<span id="cb2-112"><a href="#cb2-112"></a>fit <span class="ot">&lt;-</span> model<span class="sc">$</span><span class="fu">sample</span>(<span class="at">data=</span>data,</span>
-<span id="cb2-113"><a href="#cb2-113"></a>                    <span class="at">iter_warmup =</span> <span class="dv">10000</span>,</span>
-<span id="cb2-114"><a href="#cb2-114"></a>                    <span class="at">iter_sampling =</span> <span class="dv">15000</span>,</span>
-<span id="cb2-115"><a href="#cb2-115"></a>                    <span class="at">thin =</span> <span class="dv">5</span>,</span>
-<span id="cb2-116"><a href="#cb2-116"></a>                    <span class="at">adapt_delta =</span> <span class="fl">0.9</span>)</span>
-<span id="cb2-117"><a href="#cb2-117"></a>results <span class="ot">&lt;-</span> fit<span class="sc">$</span><span class="fu">summary</span>()</span>
-<span id="cb2-118"><a href="#cb2-118"></a><span class="co"># Return data set and MCMC</span></span>
-<span id="cb2-119"><a href="#cb2-119"></a><span class="fu">return</span>(<span class="fu">list</span>(<span class="at">data =</span> data, <span class="at">fit =</span> fit))</span>
-<span id="cb2-120"><a href="#cb2-120"></a></span>
-<span id="cb2-121"><a href="#cb2-121"></a>}</span>
-<span id="cb2-122"><a href="#cb2-122"></a></span>
-<span id="cb2-123"><a href="#cb2-123"></a><span class="do">## Execute Function in Parallel</span></span>
-<span id="cb2-124"><a href="#cb2-124"></a><span class="fu">kubrick</span>()</span>
-<span id="cb2-125"><a href="#cb2-125"></a></span>
-<span id="cb2-126"><a href="#cb2-126"></a><span class="do">## Save the results</span></span>
-<span id="cb2-127"><a href="#cb2-127"></a><span class="fu">save</span>(res, <span class="st">"~/Dropbox/Machine/res/save.RData"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># Loading R Packages</span></span>
+<span id="cb2-2"><a></a><span class="fu">library</span>(mvtnorm)</span>
+<span id="cb2-3"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-4"><a></a><span class="fu">library</span>(lme4)</span>
+<span id="cb2-5"><a></a><span class="fu">library</span>(cmdstanr)</span>
+<span id="cb2-6"><a></a><span class="fu">library</span>(bayesplot)</span>
+<span id="cb2-7"><a></a></span>
+<span id="cb2-8"><a></a><span class="do">## Compiling Stan Model to make executable</span></span>
+<span id="cb2-9"><a></a>model <span class="ot">&lt;-</span> <span class="fu">cmdstan_model</span>(<span class="at">stan_file=</span><span class="st">'~/Dropbox/Machine/new.stan'</span>)</span>
+<span id="cb2-10"><a></a></span>
+<span id="cb2-11"><a></a><span class="co"># Creating function</span></span>
+<span id="cb2-12"><a></a>kubrick <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">k=</span><span class="cn">NULL</span>){</span>
+<span id="cb2-13"><a></a>  </span>
+<span id="cb2-14"><a></a><span class="co"># Creating covariance matrix</span></span>
+<span id="cb2-15"><a></a>x1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.00</span>, <span class="fl">0.80</span>, <span class="fl">0.10</span>)</span>
+<span id="cb2-16"><a></a>x2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.80</span>, <span class="fl">1.30</span>, <span class="fl">0.43</span>)</span>
+<span id="cb2-17"><a></a>x3 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.10</span>, <span class="fl">0.43</span>, <span class="fl">1.90</span>)</span>
+<span id="cb2-18"><a></a>cov_x <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(<span class="fu">rbind</span>(x1, x2, x3))</span>
+<span id="cb2-19"><a></a><span class="co"># Simulating species RE</span></span>
+<span id="cb2-20"><a></a>species_re <span class="ot">&lt;-</span> <span class="fu">rmvnorm</span>(<span class="dv">1</span>, <span class="at">sigma =</span> cov_x)</span>
+<span id="cb2-21"><a></a><span class="co"># Simulating env RE</span></span>
+<span id="cb2-22"><a></a>env_re <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">5</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="fl">1.5</span>))</span>
+<span id="cb2-23"><a></a></span>
+<span id="cb2-24"><a></a><span class="co"># Setting Parameters</span></span>
+<span id="cb2-25"><a></a>sig <span class="ot">&lt;-</span> <span class="fl">1.5</span></span>
+<span id="cb2-26"><a></a>rho <span class="ot">&lt;-</span> <span class="fl">0.2</span></span>
+<span id="cb2-27"><a></a>b0 <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb2-28"><a></a>b1 <span class="ot">&lt;-</span> <span class="fl">1.1</span></span>
+<span id="cb2-29"><a></a>b2 <span class="ot">&lt;-</span> <span class="fl">2.1</span></span>
+<span id="cb2-30"><a></a>b3 <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fl">1.7</span></span>
+<span id="cb2-31"><a></a></span>
+<span id="cb2-32"><a></a><span class="co"># Constructing Fake Data Set</span></span>
+<span id="cb2-33"><a></a>iv <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb2-34"><a></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>()</span>
+<span id="cb2-35"><a></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>){</span>
+<span id="cb2-36"><a></a>  <span class="cf">for</span> (ii <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>){</span>
+<span id="cb2-37"><a></a>    <span class="cf">for</span> (iii <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>){</span>
+<span id="cb2-38"><a></a>      bb <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="fl">0.8</span>))</span>
+<span id="cb2-39"><a></a>      time_shift <span class="ot">&lt;-</span> <span class="fu">rmvnorm</span>(<span class="dv">1</span>, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">3</span>), <span class="fu">diag</span>(<span class="fu">rep</span>(<span class="fl">0.00001</span>,<span class="dv">3</span>)))</span>
+<span id="cb2-40"><a></a>      time <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out =</span> <span class="dv">4</span>) <span class="sc">+</span> <span class="fu">c</span>(<span class="dv">0</span>, time_shift)</span>
+<span id="cb2-41"><a></a>      sigs <span class="ot">&lt;-</span> (rho<span class="sc">**</span><span class="fu">as.matrix</span>(<span class="fu">dist</span>(time, <span class="at">diag =</span> T, <span class="at">upper =</span> T)))<span class="sc">*</span>sig</span>
+<span id="cb2-42"><a></a>      x1 <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="fl">0.5</span>)</span>
+<span id="cb2-43"><a></a>      x2 <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="fl">0.5</span>)</span>
+<span id="cb2-44"><a></a>      mu <span class="ot">&lt;-</span> species_re[i] <span class="sc">+</span> env_re[ii] <span class="sc">+</span> b0 <span class="sc">+</span> b1 <span class="sc">*</span> time <span class="sc">+</span>  b2 <span class="sc">*</span> x1 <span class="sc">+</span> b3 <span class="sc">*</span> x2 <span class="sc">+</span> bb</span>
+<span id="cb2-45"><a></a>      y <span class="ot">&lt;-</span> <span class="fu">rmvnorm</span>(<span class="dv">1</span>, mu, sigs)</span>
+<span id="cb2-46"><a></a>      df <span class="ot">&lt;-</span> <span class="fu">rbind.data.frame</span>(df, </span>
+<span id="cb2-47"><a></a>                             <span class="fu">data.frame</span>(<span class="fu">t</span>(<span class="fu">rbind</span>(<span class="at">y=</span>y, </span>
+<span id="cb2-48"><a></a>                                                <span class="at">x1=</span>x1,</span>
+<span id="cb2-49"><a></a>                                                <span class="at">x2=</span>x2,</span>
+<span id="cb2-50"><a></a>                                                <span class="at">time=</span>time, </span>
+<span id="cb2-51"><a></a>                                                <span class="at">bb=</span>bb, </span>
+<span id="cb2-52"><a></a>                                                <span class="at">mu =</span> mu,</span>
+<span id="cb2-53"><a></a>                                                <span class="at">time_id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,</span>
+<span id="cb2-54"><a></a>                                                <span class="at">i =</span> i,</span>
+<span id="cb2-55"><a></a>                                                <span class="at">ii =</span> ii,</span>
+<span id="cb2-56"><a></a>                                                <span class="at">iii =</span> iii,</span>
+<span id="cb2-57"><a></a>                                                <span class="at">id =</span> iv))))</span>
+<span id="cb2-58"><a></a>      iv <span class="ot">&lt;-</span> iv <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb2-59"><a></a>    }</span>
+<span id="cb2-60"><a></a>  }</span>
+<span id="cb2-61"><a></a>}</span>
+<span id="cb2-62"><a></a></span>
+<span id="cb2-63"><a></a><span class="co">#df |&gt; head()</span></span>
+<span id="cb2-64"><a></a><span class="co">#df |&gt; dim()</span></span>
+<span id="cb2-65"><a></a><span class="co">#df |&gt; select(id) |&gt; table()</span></span>
+<span id="cb2-66"><a></a><span class="co"># Data Editing and extracting variables for stan</span></span>
+<span id="cb2-67"><a></a>times <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> </span>
+<span id="cb2-68"><a></a>  <span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> id, <span class="at">names_from =</span> time_id, <span class="at">values_from =</span> time)  <span class="sc">|&gt;</span> </span>
+<span id="cb2-69"><a></a>  <span class="fu">select</span>(<span class="sc">-</span>id) <span class="sc">|&gt;</span> </span>
+<span id="cb2-70"><a></a>  <span class="fu">as.matrix</span>()</span>
+<span id="cb2-71"><a></a></span>
+<span id="cb2-72"><a></a>Y <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> </span>
+<span id="cb2-73"><a></a>  <span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> id, <span class="at">names_from =</span> time_id, <span class="at">values_from =</span> V1)  <span class="sc">|&gt;</span> </span>
+<span id="cb2-74"><a></a>  <span class="fu">select</span>(<span class="sc">-</span>id) <span class="sc">|&gt;</span> </span>
+<span id="cb2-75"><a></a>  <span class="fu">as.matrix</span>()</span>
+<span id="cb2-76"><a></a></span>
+<span id="cb2-77"><a></a>time_diff <span class="ot">&lt;-</span> <span class="fu">array</span>(<span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">300</span>, <span class="dv">4</span>, <span class="dv">4</span>))</span>
+<span id="cb2-78"><a></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">300</span>){</span>
+<span id="cb2-79"><a></a>  time_diff[i,,] <span class="ot">&lt;-</span> times[i,] <span class="sc">|&gt;</span> <span class="fu">dist</span>(<span class="at">diag =</span> T, <span class="at">upper =</span> T) <span class="sc">|&gt;</span> <span class="fu">as.matrix</span>()</span>
+<span id="cb2-80"><a></a>}</span>
+<span id="cb2-81"><a></a></span>
+<span id="cb2-82"><a></a>evo_id <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> <span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> id, <span class="at">names_from =</span> time_id, <span class="at">values_from =</span> i) <span class="sc">|&gt;</span> </span>
+<span id="cb2-83"><a></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">1</span><span class="st">`</span>) <span class="sc">|&gt;</span> <span class="fu">as.vector</span>() <span class="sc">|&gt;</span> <span class="fu">unlist</span>() <span class="sc">|&gt;</span> <span class="fu">as.numeric</span>()</span>
+<span id="cb2-84"><a></a>env_id <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> <span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> id, <span class="at">names_from =</span> time_id, <span class="at">values_from =</span> ii) <span class="sc">|&gt;</span> </span>
+<span id="cb2-85"><a></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">1</span><span class="st">`</span>) <span class="sc">|&gt;</span> <span class="fu">as.vector</span>() <span class="sc">|&gt;</span> <span class="fu">unlist</span>() <span class="sc">|&gt;</span> <span class="fu">as.numeric</span>()</span>
+<span id="cb2-86"><a></a></span>
+<span id="cb2-87"><a></a></span>
+<span id="cb2-88"><a></a>X1 <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> <span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> id, <span class="at">names_from =</span> time_id, <span class="at">values_from =</span> x1) <span class="sc">|&gt;</span> </span>
+<span id="cb2-89"><a></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">1</span><span class="st">`</span>) <span class="sc">|&gt;</span> <span class="fu">as.vector</span>() <span class="sc">|&gt;</span> <span class="fu">unlist</span>() <span class="sc">|&gt;</span> <span class="fu">as.numeric</span>()</span>
+<span id="cb2-90"><a></a></span>
+<span id="cb2-91"><a></a>X2 <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> <span class="fu">pivot_wider</span>(<span class="at">id_cols =</span> id, <span class="at">names_from =</span> time_id, <span class="at">values_from =</span> x2) <span class="sc">|&gt;</span> </span>
+<span id="cb2-92"><a></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">1</span><span class="st">`</span>) <span class="sc">|&gt;</span> <span class="fu">as.vector</span>() <span class="sc">|&gt;</span> <span class="fu">unlist</span>() <span class="sc">|&gt;</span> <span class="fu">as.numeric</span>()</span>
+<span id="cb2-93"><a></a></span>
+<span id="cb2-94"><a></a><span class="co"># Contruct Data list for stan</span></span>
+<span id="cb2-95"><a></a>data <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb2-96"><a></a>  <span class="at">N =</span> <span class="dv">300</span>,</span>
+<span id="cb2-97"><a></a>  <span class="at">D =</span> <span class="dv">4</span>,</span>
+<span id="cb2-98"><a></a>  <span class="at">S =</span> <span class="dv">3</span>,</span>
+<span id="cb2-99"><a></a>  <span class="at">H =</span> <span class="dv">5</span>,</span>
+<span id="cb2-100"><a></a>  <span class="at">X1 =</span> X1,</span>
+<span id="cb2-101"><a></a>  <span class="at">X2 =</span> X2,</span>
+<span id="cb2-102"><a></a>  <span class="at">evo =</span> cov_x,</span>
+<span id="cb2-103"><a></a>  <span class="at">evo_id =</span> evo_id,</span>
+<span id="cb2-104"><a></a>  <span class="at">env_id =</span> env_id,</span>
+<span id="cb2-105"><a></a>  <span class="at">time =</span> times,</span>
+<span id="cb2-106"><a></a>  <span class="at">time_diff =</span> time_diff,</span>
+<span id="cb2-107"><a></a>  <span class="at">Y =</span> Y</span>
+<span id="cb2-108"><a></a>)</span>
+<span id="cb2-109"><a></a></span>
+<span id="cb2-110"><a></a></span>
+<span id="cb2-111"><a></a><span class="co"># Fit Model with MCMC</span></span>
+<span id="cb2-112"><a></a>fit <span class="ot">&lt;-</span> model<span class="sc">$</span><span class="fu">sample</span>(<span class="at">data=</span>data,</span>
+<span id="cb2-113"><a></a>                    <span class="at">iter_warmup =</span> <span class="dv">10000</span>,</span>
+<span id="cb2-114"><a></a>                    <span class="at">iter_sampling =</span> <span class="dv">15000</span>,</span>
+<span id="cb2-115"><a></a>                    <span class="at">thin =</span> <span class="dv">5</span>,</span>
+<span id="cb2-116"><a></a>                    <span class="at">adapt_delta =</span> <span class="fl">0.9</span>)</span>
+<span id="cb2-117"><a></a>results <span class="ot">&lt;-</span> fit<span class="sc">$</span><span class="fu">summary</span>()</span>
+<span id="cb2-118"><a></a><span class="co"># Return data set and MCMC</span></span>
+<span id="cb2-119"><a></a><span class="fu">return</span>(<span class="fu">list</span>(<span class="at">data =</span> data, <span class="at">fit =</span> fit))</span>
+<span id="cb2-120"><a></a></span>
+<span id="cb2-121"><a></a>}</span>
+<span id="cb2-122"><a></a></span>
+<span id="cb2-123"><a></a><span class="do">## Execute Function in Parallel</span></span>
+<span id="cb2-124"><a></a><span class="fu">kubrick</span>()</span>
+<span id="cb2-125"><a></a></span>
+<span id="cb2-126"><a></a><span class="do">## Save the results</span></span>
+<span id="cb2-127"><a></a><span class="fu">save</span>(res, <span class="st">"~/Dropbox/Machine/res/save.RData"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="thank-you" class="slide level2">
 <h2>Thank You</h2>
 
 
-<img data-src="https://media.tenor.com/WjoUFaID8ScAAAAC/cat-cute.gif" class="quarto-figure quarto-figure-center r-stretch"><div class="footer footer-default">
+<img data-src="https://media.tenor.com/WjoUFaID8ScAAAAC/cat-cute.gif" class="quarto-figure quarto-figure-center r-stretch"><div class="quarto-auto-generated-content">
+<div class="footer footer-default">
 
+</div>
 </div>
 </section></section>
     </div>
@@ -1693,6 +1695,24 @@ q(x,y) = \min\left\{\frac{f(y)q(x|y)}{f(x)q(y|x)},1\right\}
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("www\.inqs\.info");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1729,7 +1749,11 @@ q(x,y) = \min\left\{\frac{f(y)q(x|y)}{f(x)q(y|x)},1\right\}
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

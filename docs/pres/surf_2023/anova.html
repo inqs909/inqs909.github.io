@@ -16,7 +16,7 @@
 <script src="../../site_libs/quarto-contrib/sc-sb-title-1.0.0/sc_sb_title.js" defer="true"></script>
 <link href="../../site_libs/quarto-contrib/grid-htext-1.0.0/grid_htext.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/reveal-auto-agenda-0.0.1/reveal-auto-agenda.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.506">
+  <meta name="generator" content="quarto-1.4.554">
 
   <title>INQS - One- &amp; Two-Way ANOVA</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -869,10 +869,10 @@
 <section id="data-and-packages" class="slide level2">
 <h2>Data and Packages</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(car)</span>
-<span id="cb1-3"><a href="#cb1-3"></a>df <span class="ot">&lt;-</span> ToothGrowth <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">dose =</span> <span class="fu">as.character</span>(dose))</span>
-<span id="cb1-4"><a href="#cb1-4"></a>df <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a></a><span class="fu">library</span>(car)</span>
+<span id="cb1-3"><a></a>df <span class="ot">&lt;-</span> ToothGrowth <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">dose =</span> <span class="fu">as.character</span>(dose))</span>
+<span id="cb1-4"><a></a>df <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;       len        supp        dose          
 #&gt;  Min.   : 4.20   OJ:30   Length:60         
@@ -898,10 +898,10 @@
 </div>
 <div id="tabset-1-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>summary_df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(supp, dose) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-2"><a href="#cb3-2"></a>                  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(len), </span>
-<span id="cb3-3"><a href="#cb3-3"></a>                            <span class="at">sd =</span> <span class="fu">sd</span>(len)) </span>
-<span id="cb3-4"><a href="#cb3-4"></a>summary_df <span class="sc">%&gt;%</span> print</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>summary_df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(supp, dose) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a></a>                  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(len), </span>
+<span id="cb3-3"><a></a>                            <span class="at">sd =</span> <span class="fu">sd</span>(len)) </span>
+<span id="cb3-4"><a></a>summary_df <span class="sc">%&gt;%</span> print</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-1-3">
@@ -933,10 +933,10 @@
 </div>
 <div id="tabset-2-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>supp, </span>
-<span id="cb5-2"><a href="#cb5-2"></a>                  <span class="at">y =</span> len, </span>
-<span id="cb5-3"><a href="#cb5-3"></a>                  <span class="at">color =</span> dose)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a>        <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>df <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>supp, </span>
+<span id="cb5-2"><a></a>                  <span class="at">y =</span> len, </span>
+<span id="cb5-3"><a></a>                  <span class="at">color =</span> dose)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb5-4"><a></a>        <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-2-3">
@@ -963,16 +963,16 @@
 </div>
 <div id="tabset-3-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.numeric</span>(dose), </span>
-<span id="cb6-2"><a href="#cb6-2"></a>                  <span class="at">y =</span> len,</span>
-<span id="cb6-3"><a href="#cb6-3"></a>                  <span class="at">color =</span> supp)) <span class="sc">+</span> </span>
-<span id="cb6-4"><a href="#cb6-4"></a>        <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>        <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.numeric</span>(dose),</span>
-<span id="cb6-6"><a href="#cb6-6"></a>                      <span class="at">y =</span> mean,</span>
-<span id="cb6-7"><a href="#cb6-7"></a>                      <span class="at">color =</span> supp),</span>
-<span id="cb6-8"><a href="#cb6-8"></a>                  summary_df) <span class="sc">+</span></span>
-<span id="cb6-9"><a href="#cb6-9"></a>        <span class="fu">xlab</span>(<span class="st">"Dosage"</span>) <span class="sc">+</span></span>
-<span id="cb6-10"><a href="#cb6-10"></a>        <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>df <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.numeric</span>(dose), </span>
+<span id="cb6-2"><a></a>                  <span class="at">y =</span> len,</span>
+<span id="cb6-3"><a></a>                  <span class="at">color =</span> supp)) <span class="sc">+</span> </span>
+<span id="cb6-4"><a></a>        <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb6-5"><a></a>        <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.numeric</span>(dose),</span>
+<span id="cb6-6"><a></a>                      <span class="at">y =</span> mean,</span>
+<span id="cb6-7"><a></a>                      <span class="at">color =</span> supp),</span>
+<span id="cb6-8"><a></a>                  summary_df) <span class="sc">+</span></span>
+<span id="cb6-9"><a></a>        <span class="fu">xlab</span>(<span class="st">"Dosage"</span>) <span class="sc">+</span></span>
+<span id="cb6-10"><a></a>        <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-3-3">
@@ -999,8 +999,8 @@
 </div>
 <div id="tabset-4-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>one_aov <span class="ot">&lt;-</span> <span class="fu">aov</span>(len <span class="sc">~</span> dose, df)</span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">anova</span>(one_aov)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>one_aov <span class="ot">&lt;-</span> <span class="fu">aov</span>(len <span class="sc">~</span> dose, df)</span>
+<span id="cb7-2"><a></a><span class="fu">anova</span>(one_aov)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-4-3">
@@ -1030,8 +1030,8 @@
 </div>
 <div id="tabset-5-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>two_aov <span class="ot">&lt;-</span> <span class="fu">aov</span>(len <span class="sc">~</span> dose <span class="sc">*</span> supp, df)</span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">anova</span>(two_aov)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>two_aov <span class="ot">&lt;-</span> <span class="fu">aov</span>(len <span class="sc">~</span> dose <span class="sc">*</span> supp, df)</span>
+<span id="cb9-2"><a></a><span class="fu">anova</span>(two_aov)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-5-3">
@@ -1088,8 +1088,8 @@
 </div>
 <div id="tabset-6-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>two_aov_add <span class="ot">&lt;-</span> <span class="fu">aov</span>(len <span class="sc">~</span> dose <span class="sc">+</span> supp, df)</span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">anova</span>(two_aov_add)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>two_aov_add <span class="ot">&lt;-</span> <span class="fu">aov</span>(len <span class="sc">~</span> dose <span class="sc">+</span> supp, df)</span>
+<span id="cb13-2"><a></a><span class="fu">anova</span>(two_aov_add)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-6-3">
@@ -1117,7 +1117,7 @@
 <div class="tab-content">
 <div id="tabset-7-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">plot</span>(two_aov, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">plot</span>(two_aov, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1129,7 +1129,7 @@
 </div>
 <div id="tabset-7-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">leveneTest</span>(two_aov)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">leveneTest</span>(two_aov)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; Levene's Test for Homogeneity of Variance (center = median)
 #&gt;       Df F value Pr(&gt;F)
@@ -1141,7 +1141,7 @@
 </div>
 <div id="tabset-7-3">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">plot</span>(two_aov, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">plot</span>(two_aov, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1153,7 +1153,7 @@
 </div>
 <div id="tabset-7-4">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">shapiro.test</span>(<span class="fu">resid</span>(two_aov))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">shapiro.test</span>(<span class="fu">resid</span>(two_aov))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; 
 #&gt;  Shapiro-Wilk normality test
@@ -1174,7 +1174,7 @@
 <div class="tab-content">
 <div id="tabset-8-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">TukeyHSD</span>(two_aov)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">TukeyHSD</span>(two_aov)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;   Tukey multiple comparisons of means
 #&gt;     95% family-wise confidence level
@@ -1225,8 +1225,10 @@
 </div>
 </div>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://www.inqs.info/pres/surf_2023/anova.html" class="uri">https://www.inqs.info/pres/surf_2023/anova.html</a></p>
+</div>
 </div>
 <div class="reveal-header">
 <div class="header-logo">
@@ -1571,6 +1573,24 @@
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("www\.inqs\.info");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1607,7 +1627,11 @@
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
