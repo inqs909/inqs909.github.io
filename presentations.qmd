@@ -12,7 +12,7 @@ editor: source
 
 October 9, 2024
 
-[Slides](pres/ci_f23/10_209.html){.btn-action-primary .btn-action .btn .btn-success role="button"}
+[Slides](pres/ci_f23/10_09.html){.btn-action-primary .btn-action .btn .btn-success role="button"}
 :::
 
 
