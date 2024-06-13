@@ -8,13 +8,13 @@ editor: visual
 ## CSU Channel Islands
 
 ::: {.panel-tabset .nav-pills}
-## AY 24-25 
+## AY 24-25
 
--   [Math 201: Elementary Statistics](www.inqs.info/m201_f24)
+-   [Math 201: Elementary Statistics](https://www.inqs.info/m201_f24)
 
--   [Math 453: Mathematical Statistics](www.inqs.info/m453_f24)
+-   [Math 453: Mathematical Statistics](https://www.inqs.info/m453_f24)
 
--   [Math 497: Introduction to Monte Carlo Methods](www.inqs.info/m497_su24)
+-   [Math 497: Introduction to Monte Carlo Methods](https://www.inqs.info/m497_su24)
 
 ## AY 23-24
 
