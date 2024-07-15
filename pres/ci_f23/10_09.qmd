@@ -915,7 +915,7 @@ Given $x^{(t)}$ and targeting $f(x)$
     $$
 
 $$
-q(x,y) = \min\left\{\frac{f(y)q(x|y)}{f(x)q(y|x)},1\right\}
+q(x,y) = \min\left\{\frac{f(y)g(x|y)}{f(x)g(y|x)},1\right\}
 $$
 
 ## Gibbs Sampler
