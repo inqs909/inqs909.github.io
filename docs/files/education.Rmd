@@ -1,8 +1,0 @@
----
-title: "Education"
-output: html_document
----
-
-
-## University of California, Riverside
-

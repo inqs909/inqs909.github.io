@@ -29,7 +29,7 @@ format:
 <!-- CONTACT INFO -->
 
 ```{=tex}
-\begin{center}isaac.qs@csuci.edu ∙ \href{https://www.inqs.info}{www.inqs.info} 
+\begin{center}isaac.qs@csuci.edu ∙ \href{https://www.inqs.info}{inqs.info} 
 \end{center}
 \vspace{15pt}
 ```
@@ -534,8 +534,6 @@ format:
 ```
 \vspace{6pt}
 
-\newpage
-
 <!-- Educational Programs -->
 
 ```{=tex}
@@ -696,6 +694,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
+-   2024-2025: CSUCI Research, Scholarly, and Creative Activities Grant
 -   2023-2027: California Educational Learning Lab Grant - Building a Critical Mass for Data Science
 -   2023-2024: CSUCI Research, Scholarly, and Creative Activities Grant
 -   2021: CNAS DEI Scholarship
@@ -714,8 +713,8 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
--   **Languages:** R, Bash, Git, C++, Markdown, SAS, SPSS, ArcGIS, LaTeX
+-   **Languages:** R, Stan, Markdown, SAS, LaTeX, and C++
 
--   **Tools:** SAS, SPSS, ArcGIS, LaTeX
+-   **Tools:** Bash, Git, SPSS, and ArcGIS
 
 -   **OS:** Windows and Linux\
