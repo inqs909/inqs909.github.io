@@ -176,32 +176,6 @@ Goal
   <media:content url="www.inqs.info/blog/2023-01-27-wellness-plan-spring-2023/CI.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>The ‘Zero-Trick’ in Bayesian Survival Analysis</title>
-  <dc:creator>Isaac Quintanilla Salinas</dc:creator>
-  <link>www.inqs.info/blog/2024-04-11-zero-trick/</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>My dissertation at UC Riverside focused on modeling joint longitudinal-survival models from a frequentist approach. While there were some benefit estimating the parameters using the <a href="https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm">EM Algorithm</a>, there were several challenges that I wanted to overcome. And Bayesian approach had better capabilities at solving those problems.</p>
-<p>Now that I am working on expanding my skills as a statistician, I can’t help but wanting to estimate my model using a Bayesian approach. So I set off to read every paper that implemented the joint longitudinal-survival model in a Bayesian framework. And while I was reading other statisticians code to implement their models on github, I always encountered the ‘Zero-Trick’ to model the survival component.</p>
-</section>
-<section id="bayesian-survival-model" class="level2">
-<h2 class="anchored" data-anchor-id="bayesian-survival-model">Bayesian Survival Model</h2>
-
-
-</section>
-
- ]]></description>
-  <category>Statistics</category>
-  <guid>www.inqs.info/blog/2024-04-11-zero-trick/</guid>
-  <pubDate>Tue, 31 Jan 2023 08:00:00 GMT</pubDate>
-  <media:content url="www.inqs.info/blog/2024-04-11-zero-trick/CI.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
   <title>SMART Program</title>
   <dc:creator>Isaac Quintanilla</dc:creator>
   <link>www.inqs.info/blog/2021-05-03-smart-program/</link>
@@ -349,7 +323,7 @@ font-style: italic;">## Using mean_cpp</span></span>
 background-color: null;
 font-style: inherit;">mean_cpp</span>(Y)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.02456021</code></pre>
+<pre><code>[1] 0.03659174</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
@@ -358,7 +332,7 @@ font-style: italic;">## Using Built-in mean functions</span></span>
 background-color: null;
 font-style: inherit;">mean</span>(Y)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.02456021</code></pre>
+<pre><code>[1] 0.03659174</code></pre>
 </div>
 </div>
 <p>To see the speed gains, we can use the <code>mark()</code> function from the <code>bench</code> package.</p>
@@ -379,8 +353,8 @@ font-style: inherit;">mean_cpp</span>(Y)</span>
 <pre><code># A tibble: 2 × 6
   expression       min   median `itr/sec` mem_alloc `gc/sec`
   &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;
-1 mean(Y)       3.22µs   3.45µs   273027.        0B     27.3
-2 mean_cpp(Y)   1.37µs   1.53µs   655515.    5.17KB      0  </code></pre>
+1 mean(Y)       3.22µs   3.43µs   275117.        0B     27.5
+2 mean_cpp(Y)   1.34µs   1.39µs   697162.    5.17KB      0  </code></pre>
 </div>
 </div>
 <p>You can see that the cpp function is much faster than the R built-in function.</p>
