@@ -1,12 +1,12 @@
 ---
 title: "The 'Zero-Trick' in Bayesian Survival Analysis"
 author: "Isaac Quintanilla Salinas"
-description: "My wellness plan for Spring 2023."
+description: "The zero-trick explained in bayesian survival analysis."
 draft: false
 date: 2023-01-31
 image: "CI.jpg"
 categories: 
-  - Wellness
+  - Statistics
 knitr:
   opts_chunk: 
     echo: true

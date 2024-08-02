@@ -1,0 +1,18 @@
+---
+title: "The Fantasy Economy"
+date: "2024-08-01"
+image: fantasy.jpeg
+categories: [economics, education]
+---
+
+::: {.callout-tip icon="false"}
+## Book
+
+The Fantasy Economy: Neoliberalism, Inequality, and the Education Reform Movement
+
+Neil Kraus
+
+#### Book Availability
+
+[Amazon Link](https://www.amazon.com/Fantasy-Economy-Neoliberalism-Inequality-Education/dp/143992371X)
+:::

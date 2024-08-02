@@ -1,7 +1,7 @@
 ---
 title: "Inclusive teaching"
 date: "2023-12-28"
-image: https://www.science.org/cms/10.1126/science.abq5892/asset/bd946b04-1258-4b61-bf64-95385b6358fa/assets/images/large/science.abq5892-f1.jpg
+image: inclusive.jpeg
 categories: [learning]
 ---
 
@@ -12,7 +12,7 @@ Inclusive Teaching: Strategies for Promoting Equity in the College Classroom
 
 Kelly Hogan and Viji Sathy
 
-## Book Availability
+#### Book Availability
 
 [Amazon Link](https://www.amazon.com/Inclusive-Teaching-Strategies-Promoting-Classroom/dp/1952271630/ref=sr_1_1?crid=16U5KL1JNK560&dib=eyJ2IjoiMSJ9.F5-xwVnxzVJAmaH_O3FkzObfrq-yXLBYKddSN6zPXM0CHjl9Sjr_mg6WeUpT5TrA8M75uCW6eNdEbC8tMXyxw0AJfzwzc_J2b4nMLLgQTUqmxt8ZC_v4BTPlS1wxqWGDAbkAse3cmlVPX_r9Yl8GZGUIM1VuDIWKJhnOpU4REqYPniRK5esEtFnNdnUPwa-60XFnzYfpeB4UEJ0CjsmS6qsuSIKcRBOcu-IrUnqMuK4.lCiLAwyqpIlLxoGvl9o55Ff7LAUN-_Sx6ugEQ9AvTT0&dib_tag=se&keywords=Inclusive+Teaching&qid=1705913136&s=books&sprefix=inclusive+teaching%2Cstripbooks%2C154&sr=1-1)
 :::

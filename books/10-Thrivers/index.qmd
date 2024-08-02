@@ -1,7 +1,7 @@
 ---
 title: "Thrivers"
 date: "2023-12-20"
-image: https://micheleborba.com/wp-content/uploads/2020/12/thrivers.png
+image: thrivers.jpeg
 categories: [learning]
 ---
 
@@ -12,7 +12,7 @@ Thrivers: The Surprising Reasons Why Some Kids Struggle and Others Shine
 
 Michele Borba
 
-## Book Availability
+#### Book Availability
 
 [Amazon Link](https://www.amazon.com/Thrivers-Surprising-Reasons-Struggle-Others/dp/0593085299/ref=asc_df_0593085299/?tag=hyprod-20&linkCode=df0&hvadid=564641475597&hvpos=&hvnetw=g&hvrand=3667005375200864919&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9031618&hvtargid=pla-1596298109994&psc=1&mcid=e97e449ddcc430c4b7e5d2d96c7a628c&gclid=EAIaIQobChMIzPbF0MzwgwMVKQGtBh0v7QovEAQYASABEgJQDvD_BwE)
 :::

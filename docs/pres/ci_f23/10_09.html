@@ -8,10 +8,10 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.554">
+  <meta name="generator" content="quarto-1.5.54">
 
   <meta name="author" content="Isaac Quintanilla Salinas">
-  <title>INQS - Bayesian Mixed Effects Models and Cats</title>
+  <title>INQS – Bayesian Mixed Effects Models and Cats</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -42,7 +42,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -70,7 +70,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -84,7 +84,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -415,8 +415,7 @@ Isaac Quintanilla Salinas
 </div>
 </div><div class="column" style="width:50%;">
 <p><img data-src="https://media.tenor.com/L8bcFLYjPhUAAAAd/parkour-cat.gif"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="san-bernardino-desert-only-real-part" class="slide level2">
 <h2>San Bernardino Desert (Only Real Part)</h2>
@@ -446,8 +445,7 @@ Isaac Quintanilla Salinas
 <p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Felis_margarita_10.jpg/220px-Felis_margarita_10.jpg" class="quarto-figure quarto-figure-right"></p>
 </figure>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="study" class="slide level2">
 <h2>Study</h2>
@@ -527,8 +525,7 @@ Y = \boldsymbol X^\mathrm T\boldsymbol \beta + \varepsilon
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="species" class="slide level2">
 <h2>Species</h2>
@@ -571,8 +568,7 @@ Y = \boldsymbol X^\mathrm T\boldsymbol \beta + \varepsilon
 </figure>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="longitudinal-measurements" class="slide level2">
 <h2>Longitudinal Measurements</h2>
@@ -588,8 +584,7 @@ Y = \boldsymbol X^\mathrm T\boldsymbol \beta + \varepsilon
 </div>
 </div><div class="column" style="width:50%;">
 <p><img data-src="https://media.tenor.com/ITQdqRCN-WQAAAAd/cat-cat-walk.gif"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="original-model" class="slide level2">
 <h2>Original Model</h2>
@@ -666,8 +661,7 @@ Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + \varepsilon_{ij}
 \end{array}
 \right)
 \]</span></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="add-animal-specific-random-effects" class="slide level2">
 <h2>Add Animal-Specific Random Effects</h2>
@@ -686,8 +680,7 @@ Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} 
 <ul>
 <li><span class="math inline">\(\boldsymbol b_i = (b_{i0}, b_{i1})^\mathrm T \sim N_2(\boldsymbol 0, \boldsymbol \Sigma_b)\)</span></li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section id="environmental-specific-random-effects" class="slide level2">
 <h2>Environmental-Specific Random Effects</h2>
@@ -715,8 +708,7 @@ Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} 
 \end{array}
 \right)
 \]</span></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="add-environmental-specific-random-effects" class="slide level2">
 <h2>Add Environmental-Specific Random Effects</h2>
@@ -737,8 +729,7 @@ Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} 
 <li><span class="math inline">\(b_{env(i)} \in \boldsymbol b_{env}=(b_{in}, b_{bw}, b_{out})^\mathrm T\)</span></li>
 <li><span class="math inline">\(\boldsymbol b_{env} \sim N_3(\boldsymbol 0, \sigma^2_{env} \boldsymbol I_3)\)</span></li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section id="species-random-effects" class="slide level2">
 <h2>Species Random Effects</h2>
@@ -766,8 +757,7 @@ Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} 
 \end{array}
 \right)
 \]</span></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="add-species-random-effects" class="slide level2">
 <h2>Add Species Random Effects</h2>
@@ -790,8 +780,7 @@ Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} 
 <li><span class="math inline">\(b_{evo(i)} \in \boldsymbol b_{env}=(b_{cat}, b_{sil}, b_{mar})^\mathrm T\)</span></li>
 <li><span class="math inline">\(\boldsymbol b_{evo} \sim N_3(\boldsymbol 0, \boldsymbol \Sigma_{evo})\)</span></li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section id="final-model" class="slide level2">
 <h2>Final Model?</h2>
@@ -816,8 +805,7 @@ Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} 
 <p><img data-src="https://www.rd.com/wp-content/uploads/2022/04/GettyImages-1310147575.jpg?fit=700%2C466" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="add-correlation-matrix" class="slide level2 smaller">
 <h2>Add Correlation Matrix</h2>
@@ -875,8 +863,7 @@ Y_{ij} = \boldsymbol X_{ij}^\mathrm T\boldsymbol \beta + b_{i0} + t_{ij} b_{i1} 
 </div>
 </div><div class="column" style="width:50%;">
 <p><img data-src="https://media.tenor.com/7lzxyYB36cIAAAAC/kittens-cute-kittens.gif"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="likelihood-function" class="slide level2">
 <h2>Likelihood Function</h2>
@@ -925,8 +912,7 @@ f(\boldsymbol  \theta|\boldsymbol Y) \propto L(\boldsymbol\theta)f(\boldsymbol \
 </div>
 </div><div class="column" style="width:50%;">
 <p><img data-src="https://media.tenor.com/x5dpKrM1U6oAAAAd/vamonos-lets-go.gif"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="markov-chain" class="slide level2 smaller">
 <h2>Markov Chain</h2>
@@ -969,8 +955,7 @@ f(\boldsymbol  \theta|\boldsymbol Y) \propto L(\boldsymbol\theta)f(\boldsymbol \
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="stationary-limiting-distribution" class="slide level2">
 <h2>Stationary (limiting) distribution</h2>
@@ -1003,8 +988,7 @@ f(\boldsymbol  \theta|\boldsymbol Y) \propto L(\boldsymbol\theta)f(\boldsymbol \
 </ul></li>
 </ul>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="markov-chains-monte-carlo" class="slide level2">
 <h2>Markov Chains Monte Carlo</h2>
@@ -1077,8 +1061,7 @@ q(x,y) = \min\left\{\frac{f(y)g(x|y)}{f(x)g(y|x)},1\right\}
 </div>
 </div><div class="column" style="width:50%;">
 <p><img data-src="https://media.tenor.com/NwY5ppxLs_oAAAAd/kitten-keybo.gif"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="simulation-parameters" class="slide level2">
 <h2>Simulation Parameters</h2>
@@ -1651,18 +1634,7 @@ q(x,y) = \min\left\{\frac{f(y)g(x|y)}{f(x)g(y|x)},1\right\}
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1694,7 +1666,29 @@ q(x,y) = \min\left\{\frac{f(y)g(x|y)}{f(x)g(y|x)},1\right\}
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("www\.inqs\.info");
@@ -1702,7 +1696,7 @@ q(x,y) = \min\left\{\frac{f(y)g(x|y)}{f(x)g(y|x)},1\right\}
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
