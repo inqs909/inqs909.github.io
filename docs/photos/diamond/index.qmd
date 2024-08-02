@@ -1,0 +1,24 @@
+---
+title: "Diamond Valley Lake"
+editor: source
+format: html
+image: "img/DV1.jpg"
+knitr: 
+  opts_chunk: 
+    echo: false
+    eval: true
+    message: false
+    
+---
+
+```{r}
+library(pixture)
+
+pixgallery(
+  list.files("img", 
+             full.names=TRUE),
+  dim="350px",
+  gap = "10px"
+)
+```
+

@@ -1,0 +1,227 @@
+---
+title: "Plotathon"
+author: "Isaac Quintanilla Salinas"
+format: 
+  revealjs:
+    touch: false
+    controls: true
+    pointer:
+      pointerSize: 32
+    incremental: false
+    slide-number: true
+    css: styles.css
+knitr:
+  opts_chunk: 
+    echo: true
+    eval: false
+    message: false
+    warnings: false
+    comment: "#>" 
+revealjs-plugins:
+  - pointer
+filters: 
+  - reveal-header
+  - code-fullscreen
+  - reveal-auto-agenda
+---
+
+## Website
+
+[https://www.inqs.info/p/plotathon/f22.html](https://www.inqs.info/p/plotathon/f22.html#/title-slide)
+
+# Installation
+
+## Installing R
+
+<https://cloud.r-project.org/>
+
+## Installing RStudio
+
+<https://posit.co/download/rstudio-desktop/>
+
+## Installing RTools (Windows)
+
+<https://cran.r-project.org/bin/windows/Rtools/>
+
+## Posit Cloud
+
+<https://posit.cloud/>
+
+# R Packages
+
+## Tidyverse
+
+```{r}
+install.packages("tidyverse")
+```
+
+## Plotly
+
+```{r}
+install.packages("plotly")
+```
+
+## ggthemes
+
+```{r}
+install.packages("ggthemes")
+```
+
+## Esquisse
+
+```{r}
+install.packages("esquisse")
+```
+
+## Load Packages
+
+```{r}
+library(tidyverse)
+library(plotly)
+library(ggthemes)
+library(esquisse)
+```
+
+# R Projects
+
+## R Projects
+
+R Projects are designed to contain all your data, scripts, and output in one location. This ensures that things are compatible on other computers.
+
+## Directories (Folders)
+
+-   data
+
+-   output
+
+-   scripts
+
+# RStudio Layout
+
+## RStudio Layout
+
+-   Scripts
+
+-   Console
+
+-   Environment
+
+-   Files
+
+-   Everything else
+
+# Scripts
+
+## Adding Script
+
+-   Use the top right corner
+
+# Loading Data
+
+## Downloading Data Data
+
+```{r}
+#| echo: true
+#| eval: false
+u <- "https://www.inqs.info/p/plotathon/owenWilsonWows.csv"
+basename(u)
+download.file(u,
+              file.path(getwd(), "data", basename(u)))
+
+```
+
+## Loading Data
+
+```{r}
+#| eval: false
+mds <- read_csv("data/owenWilsonWows.csv")
+```
+
+# Plotting
+
+## Base Plot
+
+```{r}
+mds |> ggplot(aes(x = total_wows_in_movie)) 
+```
+
+## Histogram
+
+```{r}
+mds |> ggplot(aes(x = total_wows_in_movie)) +
+  geom_histogram()
+```
+
+## Box Plot
+
+```{r}
+mds |> ggplot(aes(x = total_wows_in_movie)) +
+  geom_boxplot()
+```
+
+## Density Plot
+
+```{r}
+mds |> ggplot(aes(x = total_wows_in_movie)) +
+  geom_density()
+```
+
+## Box Plot By Category
+
+```{r}
+mds |> ggplot(aes(x = total_wows_in_movie, y = era)) +
+  geom_boxplot()
+```
+
+## Density Plot By Category
+
+```{r}
+mds |> ggplot(aes(x = total_wows_in_movie, color = era)) +
+  geom_density()
+```
+
+## Scatter Plot
+
+```{r}
+mds |> ggplot(aes(x = durationInSeconds, 
+                  y = total_wows_in_movie)) +
+  geom_point()
+```
+
+## Scatter Plot by Group
+
+```{r}
+mds |> ggplot(aes(x = durationInSeconds, 
+                  y = total_wows_in_movie, color = era)) +
+  geom_point()
+```
+
+## Add Regression Line
+
+```{r}
+mds |> ggplot(aes(x = durationInSeconds, 
+                  y = total_wows_in_movie)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = F)
+```
+
+## Smooth Line
+
+```{r}
+mds |> ggplot(aes(x = durationInSeconds, 
+                  y = total_wows_in_movie)) +
+  geom_point() +
+  geom_smooth(se = F)
+```
+
+## Regression Lines by Group
+
+```{r}
+mds |> ggplot(aes(x = durationInSeconds, 
+                  y = total_wows_in_movie,
+                  color = era)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = F)
+```
+
+# Esquisse

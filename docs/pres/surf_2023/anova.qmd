@@ -1,0 +1,499 @@
+---
+title: "One- & Two-Way ANOVA"
+format:
+  revealjs:
+    slide-number: true
+    footer: <https://www.inqs.info/pres/surf_2023/anova.html>
+    header: Analysis of Variance
+    sc-sb-title: true
+    scrollable: true
+    controls: true
+    incremental: false 
+    chalkboard:
+      src: chalkboard.json
+      storage: chalkboard_pres
+      theme: whiteboard
+      chalk-width: 4
+    
+knitr:
+  opts_chunk: 
+    echo: true
+    eval: true
+    message: false
+    warnings: false
+    comment: "#>" 
+    
+revealjs-plugins:
+  - pointer
+  
+filters: 
+  - reveal-header
+  - code-fullscreen
+  - reveal-auto-agenda
+
+auto-agenda:
+  heading: Agenda
+
+editor: visual
+---
+
+## Presentation
+
+The presentation can be found here: [www.inqs.info/pres/surf_2023/anova.html](https://www.inqs.info/pres/surf_2023/anova.html)
+
+# Hypothesis Testing
+
+## Hypothesis Testing
+
+A hypothesis test is a statistical procedure to determine whether the null hypothesis is true or not. If we find that the null hypothesis is true, we claim: **Fail to reject the null hypothesis**. If we find the the null hypothesis to be false, we claim : **Reject the null hypothesis.**
+
+## Null Hypothesis ($H_0$)
+
+The null hypothesis is the claim that is initially believed to be true. For the most part, it is always equal to the hypothesized value.
+
+## Alternative Hypothesis ($H_a$)
+
+The alternative hypothesis contradicts the null hypothesis.
+
+## Test Statistic and Distribution
+
+To conduct a hypothesis test, we compute a test statistic based on the distribution of the null hypothesis. Then we determine if the test statistic is in the rejection region of the distribution of the null hypothesis. If it is in the rejection region, we reject the null hypothesis. Otherwise we fail to reject the null hypothesis.
+
+## Test Statistic
+
+A test statistic quantifies the distance of the observed $\hat\mu$ with the hypothesized mean $\mu_0$, assuming null hypothesis is true.
+
+## Rejection Region
+
+The rejection region is determined by our $\alpha$ value.
+
+$\alpha$ determines the probability you are willing to be wrong if you reject the null hypothesis.
+
+This probability is something you want to set yourself at the beginning of a study. In general, the majority of researchers set it to be $\alpha=0.05$.
+
+## 1-Side vs 2-Side Tests
+
+There are 3 types of null and alternative hypothesis, The first type of hypothesis ($H_a:\mu\ne\mu_0$) is considered a 2-sided hypothesis because the rejection region is located in 2 regions. The remaining two hypotheses are considered 1-sided because the rejection region is located on one side of the distribution.
+
+| Null Hypothesis    | Alternative Hypothesis | Side    |
+|--------------------|------------------------|---------|
+| $H_0: \mu=\mu_0$   | $H_a: \mu\ne\mu_0$     | 2-sided |
+| $H_0: \mu\le\mu_0$ | $H_a: \mu>\mu_0$       | 1-sided |
+| $H_0: \mu\ge\mu_0$ | $H_0: \mu<\mu_0$       | 1-sided |
+
+## Rejection Region
+
+![](https://www.researchgate.net/publication/333914148/figure/fig1/AS:772049484128256@1561082349475/Rejection-and-non-rejection-regions-of-the-null-hypothesis.png){fig-align="center"}
+
+## Rejecting the Null Hypothesis
+
+The p-value approach is one of the most common methods to report significant results. It is easier to interpret the p-value because it provides the probability of observing our test statistics, or something more extreme, given that the null hypothesis is true. Depending on the type of test, your p-value may be constructed as:
+
+| Alternative Hypothesis | p-value                 |
+|------------------------|-------------------------|
+| $\mu>\mu_0$            | $P(Y>T(x))=p$           |
+| $\mu<\mu_0$            | $P(Y<T(x))=p$           |
+| $\mu\ne\mu_0$          | $2\times P(Y>|T(x)|)=p$ |
+
+If $p < \alpha$, then you reject $H_0$; otherwise, you will fail to reject $H_0$.
+
+# One-way ANOVA
+
+## Analysis of Variance
+
+Analysis of variance (ANOVA) tests to whether there is a difference between a collection of means (experimental variable) while we control the family-wise error rate.
+
+## Hypothesis
+
+$H_0:\ \mu_1=\mu_2=\cdots=\mu_k$
+
+$H_a:$ At least one mean pair is different
+
+## Anova Table
+
+| Source | DF        | SS            | MS                    | F                   |
+|---------------|---------------|---------------|---------------|---------------|
+| Group  | $DFG=k-1$ | $SSG$         | $MSG=\frac{SSG}{DFG}$ | $F=\frac{MSG}{MSE}$ |
+| Error  | $DFE=N-k$ | $SSE$         | $MSE=\frac{SSE}{DFE}$ |                     |
+| Total  | $TDF=N-1$ | $TSS=SSG+SSE$ |                       |                     |
+
+-   $N:$ Total Sample size
+
+-   $k:$ number of groups
+
+## Test Statistics
+
+::: columns
+::: {.column width="40%"}
+$SSG = \sum_{i=1}^kn_i(\bar y_{i.}-\bar y_{..})^2$
+:::
+
+::: {.column width="60%"}
+$SSE = \sum^k_{i=1}\sum^{n_i}_{j=1}(y_{ij}-\bar y_{i.})^2$
+:::
+:::
+
+-   $i:$ indexes the group
+
+-   $j:$ indexes the observation in group
+
+-   $y_{ij}:$ $j$th observation in $i$th group
+
+-   $\bar y_{i.}:$ mean in $i$th group
+
+-   $\bar y_{..}:$ overall mean of entire data set
+
+-   $n_i:$ sample size of $i$th group
+
+## Assumptions
+
+-   Independence
+
+    -   Were observations collected randomly?
+
+-   Normality
+
+    -   QQ Plot
+
+    -   Shapiro-Wilks Test
+
+-   Equal Variance
+
+    -   Bartlett's Test
+
+    -   Levene's Test
+
+# Multiple Comparison Tests
+
+## Multiple Comparison Tests
+
+-   Fisher's Least Significance Difference
+
+-   Bonferroni's Test
+
+-   Scheffe's Test
+
+-   Tukey's Honest Significant Difference
+
+## Bonferroni's Tests
+
+-   Bonferroni's Test conducts a set of $k$ t-tests to each mean pair
+
+-   Controls family-wise error rate by dividing $\alpha/k$
+
+## Scheffe's Test
+
+-   Scheffe's method compares mean square difference between full and reduced models.
+
+-   It ensures control of the family-wise error rate by testing the largest and smallest model.
+
+-   Scheffe's tests the following hypothesis: $H_0: \sum_i\lambda_i\mu_i=0$
+
+## Tukey's Honest Significant Difference Tests
+
+-   Tukey's test will look for the pairs that are greater than the HSD value. HSD value is the minimum absolute difference needed for a pair of means to be considered different.
+
+-   This method requires a balanced design ($n_1=n_2=\ldots=n_k=n$)
+
+## Comparison of Methods
+
+-   Bonferroni's Method
+    -   Use Bonferroni's method if you were interested in testing different mean pairs before you started to collect data.
+    -   Good for balanced and unbalanced designs
+    -   Considered the least conservative method (most likely to reject $H_0$)
+-   Scheffe's Method
+    -   Use Scheffe's method if you are interested data-driven differences.
+    -   Can test linear combinations
+    -   Good for unbalanced designs
+    -   Considereded more conservative method (least likely to reject $H_0$)
+-   Tukey's HSD
+    -   Use Tukey's HSD when you are interested in testing difference of all mean pairs.
+    -   Good for balanced designs.
+    -   Considered more conservative method (least likely to reject $H_0$)
+
+# Two-way ANOVA
+
+## 2-way ANOVA
+
+Two-way ANOVA is a one-way ANOVA that was adjusted by a grouping variable.
+
+A two-way ANOVA will test whether the if interaction between the experimental and control variable affects mean of outcomes, if the experimental variable affects the means of outcomes, and the control variables affects the means of outcomes.
+
+## Anova Table
+
+| Source | DF               | SS                | MS                    | F                     |
+|---------------|---------------|---------------|---------------|---------------|
+| Grp    | $DFG=G-1$        | $SSG$             | $MSG=\frac{SSG}{DFG}$ | $F_G=\frac{MSG}{MSE}$ |
+| Adj    | $DFA=A-1$        | $SSA$             | $MSA=\frac{SSA}{DFA}$ | $F_A=\frac{MSA}{MSE}$ |
+| Int    | $DFI=(G-1)(A-1)$ | $SSI$             | $MSI=\frac{SSI}{DFI}$ | $F_I=\frac{MSI}{MSE}$ |
+| Error  | $DFE=AGK-AG$     | $SSE$             | $MSE=\frac{SSE}{DFE}$ |                       |
+| Total  | $TDF=AGK-1$      | $TSS=SSG+SSA+SSE$ |                       |                       |
+
+-   $A:$ Number of Adjusted groups
+
+-   $G:$ Number of Experimental groups
+
+-   $k:$ Number of Replicates
+
+## Order of Analysis
+
+-   $H_0:$ No interaction Effect
+
+    -   Reject $H_0:$ Conduct multiple comparisons tests
+    -   Otherwise: Remove interaction from the model and move on to next step
+
+-   $H_0:$ No Control Effect
+
+    -   Reject $H_0:$ Keep in model, move on to next step
+    -   Otherwise: Remove control variable from model, move one to next step
+
+-   $H_0$: No Experimental Group Effect
+
+    -   Reject $H_0:$ Conduct multiple comparison tests
+    -   Otherwise: Check if control variable makes experimental variable significant. If so, use model with both experimental and control variable and run multiple comparison tests.
+
+# R Code
+
+## Data and Packages
+
+```{r}
+library(tidyverse)
+library(car)
+df <- ToothGrowth %>% mutate(dose = as.character(dose))
+df %>% summary()
+```
+
+## ToothGrowth Data
+
+The `ToothGrowth` data is built in R for further analysis. It provides the length (`len`) tooth cells in 60 guinea pigs. It measures whether dosage (`dose`: 0.5, 1, 2), and/or supplement (`supp`: OJ or VC) has an affect on tooth cells. Researchers are also interested if there is an interaction between supplement and dose.
+
+## Grouped Statistics
+
+::: panel-tabset
+### Description
+
+We will need to obtain basic descriptive statistics on cell length for each group (dosage and supplement).
+
+### R Code
+
+```{r}
+#| eval: false
+
+summary_df <- df %>% group_by(supp, dose) %>% 
+                  summarize(mean = mean(len), 
+                            sd = sd(len)) 
+summary_df %>% print
+```
+
+### Output
+
+```{r}
+#| echo: false
+summary_df <- df %>% group_by(supp, dose) %>% summarize(mean = mean(len), 
+                                       sd = sd(len)) 
+summary_df %>% print
+```
+:::
+
+## Graphical Visualization
+
+::: panel-tabset
+### Description
+
+Create Boxplots to show the relationship of length data with respect to dosage and supplement.
+
+### Code
+
+```{r}
+#| eval: false
+
+df %>% ggplot(aes(x=supp, 
+                  y = len, 
+                  color = dose)) + geom_boxplot() +
+        theme_bw()
+```
+
+### Output
+
+```{r}
+#| echo: false
+
+df %>% ggplot(aes(x=supp, 
+                  y = len, 
+                  color = dose)) + geom_boxplot() +
+        theme_bw()
+```
+:::
+
+## Graphical Output
+
+::: panel-tabset
+### Description
+
+Create a scatter and line plot to display relationship with dosage and supplement by length.
+
+### Code
+
+```{r}
+#| eval: false
+df %>% ggplot(aes(x = as.numeric(dose), 
+                  y = len,
+                  color = supp)) + 
+        geom_point() +
+        geom_line(aes(x = as.numeric(dose),
+                      y = mean,
+                      color = supp),
+                  summary_df) +
+        xlab("Dosage") +
+        theme_bw()
+```
+
+### Output
+
+```{r}
+#| echo: false
+df %>% ggplot(aes(x = as.numeric(dose), 
+                  y = len,
+                  color = supp)) + 
+        geom_point() +
+        geom_line(aes(x = as.numeric(dose),
+                      y = mean,
+                      color = supp),
+                  summary_df) +
+        xlab("Dosage") +
+        theme_bw()
+```
+:::
+
+## 1-Way ANOVA
+
+::: panel-tabset
+### Description
+
+Conduct a 1-way anova using the `aov()` function and obtain the ANOVA table using the `anova()` function. Testing whether dosage has an effect on tooth length. Note, keep dosage as a character variable in R because it is numeric.
+
+### Code
+
+```{r}
+#| eval: false
+one_aov <- aov(len ~ dose, df)
+anova(one_aov)
+```
+
+### Output
+
+```{r}
+#| echo: false
+one_aov <- df %>% aov(len ~ dose, .)
+anova(one_aov)
+```
+:::
+
+## 2-Way ANOVA: Interaction Included
+
+::: panel-tabset
+### Description
+
+Conduct a 2-way ANOVA using the `aov()` function and obtain the ANOVA table using the `anova()` function. Testing whether dosage has an effect on tooth length. We are also incorporating an interaction term.
+
+### Code
+
+```{r}
+#| eval: false
+two_aov <- aov(len ~ dose * supp, df)
+anova(two_aov)
+```
+
+### Output
+
+```{r}
+#| echo: false
+two_aov <- df %>% aov(len ~ dose*supp, .)
+anova(two_aov)
+Anova(two_aov)
+Anova(two_aov, type = 3)
+```
+:::
+
+## 2-way ANOVA: No Interaction
+
+::: panel-tabset
+### Description
+
+Conduct a 2-way ANOVA using the `aov()` function and obtain the ANOVA table using the `Anova()` function. Testing whether dosage has an effect on tooth length. We are also excluding an interaction term.
+
+### Code
+
+```{r}
+#| eval: false
+two_aov_add <- aov(len ~ dose + supp, df)
+anova(two_aov_add)
+```
+
+### Output
+
+```{r}
+#| echo: false
+two_aov_add <- df %>% aov(len ~ dose + supp, .)
+anova(two_aov_add)
+```
+:::
+
+## Diagnostics
+
+::: panel-tabset
+### Linearity
+
+```{r}
+plot(two_aov, 1)
+```
+
+### Constant Variances
+
+```{r}
+leveneTest(two_aov)
+```
+
+Fail to Reject $H_0$ is good here!
+
+### Normality
+
+```{r}
+plot(two_aov, 2)
+```
+
+### Normality
+
+```{r}
+shapiro.test(resid(two_aov))
+```
+
+Fail to Reject $H_0$ is good here!
+:::
+
+## Tukey HSD
+
+::: panel-tabset
+### Tukey HSD
+
+```{r}
+TukeyHSD(two_aov)
+```
+
+### Comparison Plot
+
+```{r}
+#| echo: false
+df %>% ggplot(aes(x = as.numeric(dose), 
+                  y = len,
+                  color = supp)) + 
+        geom_point() +
+        geom_line(aes(x = as.numeric(dose),
+                      y = mean,
+                      color = supp),
+                  summary_df) +
+        xlab("Dosage") +
+        theme_bw()
+
+```
+:::

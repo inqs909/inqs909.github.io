@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Time-Varying Coefficient Models for Longitudinal data</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Isaac Quintanilla" />
+    <meta name="date" content="2023-11-06" />
+    <script src="libs/header-attrs-2.23/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Time-Varying Coefficient Models for Longitudinal data
+]
+.author[
+### Isaac Quintanilla
+]
+.date[
+### 2023-11-06
+]
+
+---
+
+
+
+
+
+
+## Presentation Access
+
+This presentation is available at:
+
+[https://www.inqs.info/files/UCM/PCI.html](https://www.inqs.info/files/UCM/PCI.html)
+
+---
+## Table of Contents
+
+--
+
+* Longitudinal Data
+
+--
+
+* Time-Varying Coefficient Models
+
+--
+
+* Standard Error Estimation
+
+--
+
+* Bandwidth and Kernel Function
+
+--
+
+* Simulation Study
+
+---
+layout: false
+class: inverse, middle, center
+
+# Longitudinal Data
+
+---
+
+## Longitudinal Data
+
+Longitudinal Data are repeated measurements for a subject collected at different time points.
+
+- Measurements can be collected at equally or irregular time points
+
+- Each subject may contain different measurements
+
+- Each measurement is correlated with one another
+
+---
+layout: false
+class: inverse, middle, center
+
+# Time-Varying Coefficient Models
+---
+## Model
+Parametric Model:
+.size130[
+$$
+Y=\boldsymbol X^\mathrm T\boldsymbol\beta+\epsilon
+$$
+]
+
+--
+
+- `\(\boldsymbol \beta=(\beta_1,\beta_2,...,\beta_p)^T\)`
+- `\(\boldsymbol X=(X_1,X_2,...,X_p)^T\)`
+- `\(Y\)` response variable
+- `\(\epsilon\)` error term
+
+
+---
+## Model
+
+Time-Varying Coefficient Model:
+
+.size130[
+$$
+Y=\boldsymbol X^\mathrm T\boldsymbol\beta(t)+\epsilon
+$$
+]
+
+--
+
+- `\(\boldsymbol \beta(t)=\{\beta_1(t),\beta_2(t),....\beta_p(t)\}^T\)`
+- `\(\boldsymbol X=(X_1,X_2,...,X_p)^T\)`
+- `\(Y\)` response variable
+- `\(\epsilon\)` error term
+
+???
+- `\(\boldsymbol \beta\)` vector of coefficients
+- `\(\boldsymbol X\)` vector of predictors
+- `\(Y\)` response variable
+- `\(\epsilon\)` error term
+- `\(\boldsymbol \beta(t)\)` varying coefficient
+
+
+---
+
+## Estimation
+
+- `\(\boldsymbol \beta (t)\)` is unknown
+
+--
+
+### Approximation techniques
+
+- Polynomial Splines
+
+- Smoothing Splines
+
+- Local Polynomials
+
+???
+
+We will focus on local polynomials
+
+- directly estimate the function at a grid point
+
+- The function is described by a set of gridpoints
+
+- Use Local Linear models
+
+---
+
+## Local Linear Model
+
+For a set of grid points, the varying coefficient is approximated around `\(t_0\)` with a Taylor's Expansion
+.size130[
+$$
+\boldsymbol \beta(t)\approx \boldsymbol \beta(t_0)+\boldsymbol \beta^\prime(t_0)(t-t_0)
+$$
+]
+
+--
+
+The model can be rewritten as
+.size130[
+$$
+\boldsymbol \beta(t)\approx \boldsymbol a+\boldsymbol b (t-t_0)
+$$
+]
+
+
+???
+
+* `\(\boldsymbol \beta(t_0)\)` is the function
+* `\(\boldsymbol \beta(t_0)^\prime\)` is the first derivative with respect to t
+* As long as we are in the neighborhood of `\(t_0\)` this approximation is correct.
+* No higher order polynomial are necessary
+* Lessens the chances to be affected by the curse of dimensionality
+* You need to choose a bandwidth and kernel function
+
+---
+
+### Estimation Procedure
+
+
+&lt;img src="PCI_files/figure-html/unnamed-chunk-1-1.gif" style="display: block; margin: auto;" /&gt;
+
+---
+
+### Estimating value `\(t_0=0.5\)`
+
+Bandwidth and Kernel Function
+
+&lt;img src="PCI_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" /&gt;
+
+
+---
+## Local Least Squares
+To find the estimates of the varying coefficient, we minimize the local least squares function. 
+For `\(n\)` subjects, each subject containing `\(n_i\)` measurements, the local least squares is formulated as
+
+`\begin{equation}
+L(\boldsymbol a,\boldsymbol b)=\sum^n_{i=1}\sum^{n_i}_{j=1}\left[Y_{ij}-\boldsymbol X_i^\mathrm T \{\boldsymbol a+\boldsymbol b(t_{ij}-t_0)\} \right]^2K_h(t_{ij},t_0)
+\end{equation}`
+
+--
+- `\(t_{ij}\)`: time point
+
+--
+- `\(Y_{ij}\)`: outcome 
+
+--
+- `\(\boldsymbol X_{i}\)`: time-invariant predictors
+
+--
+- `\(K_h(\cdot)\)`: kernel function with associated bandwidth `\(h\)`
+
+---
+## Weighted Least Squares Estimator
+
+The estimates for `\(\boldsymbol a (t_0)\)` are found with with least squares estimator:
+
+`\begin{equation}
+\hat {\boldsymbol a} (t_0)=(\boldsymbol I_p, \boldsymbol 0_p)\left(\sum_{i=1}^n\mathcal X_i^\mathrm T \mathcal K_i \mathcal X_i\right)^{-1}\left(\sum_{i=1}^n\mathcal X_i^\mathrm T \mathcal K_i \mathcal Y_i\right)
+\end{equation}`
+
+
+--
+- `\(\mathcal Y_i\)`: vector of repeated measurements for `\(i^{th}\)` subject
+
+--
+
+- `\(\mathcal K_i\)`: `\(n_i \times n_i\)` diagonal matrix accounting for the weights
+
+--
+
+- `\(\mathcal X_i\)`: `\(n_i \times 2p\)` design matrix of local linear model
+
+--
+
+- `\(p\)`: number of predictors
+
+???
+
+Since we only care about the function, we do not need to know how the first derivative looks like.
+
+Next slide is messy
+
+---
+## Asymptotic Theory
+
+According to Zhang and Lee (2000), the asymptotic distribution is
+
+`\begin{equation}
+cov^{-1/2}\{\hat{\boldsymbol a}(t_0)\}[\hat{\boldsymbol a}(t_0)-\boldsymbol a (t_0)-bias\{\hat{\boldsymbol a}(t_0)\}]\xrightarrow{D} N(\boldsymbol 0,\boldsymbol I_{p})
+\end{equation}`
+
+--
+
+`\begin{equation}
+bias\left\lbrace\hat{\boldsymbol a}(t_0)\right\rbrace=2^{-1}h^2\mu_2\boldsymbol a^{\prime\prime}(t_0)
+\end{equation}`
+
+--
+
+`\begin{equation}
+cov\{\hat{\boldsymbol a}(t_0)\}=\lbrace nh f(t_0)E(XX^\mathrm T|T=t_0)\rbrace^{-1}\nu_0\sigma^2(t_0)
+\end{equation}`
+
+--
+--
+
+- `\(\nu_i=\int t^i K^2(t)dt\)`
+
+--
+
+- `\(\mu_i=\int t^iK(t)dt\)`
+
+--
+
+- `\(f(t_0)\)`: Density function of `\(T\)`
+
+
+???
+
+The main thing to take away is that the estimators are asymptotically normal
+
+---
+
+## Asymptotic Covariance
+
+.size60[
+`\begin{eqnarray*}
+&amp; \widehat{cov} \{\hat {\boldsymbol a}(t_0) \} \approx \\
+&amp; (\boldsymbol I_p, \boldsymbol 0_p)\left(\sum_{i=1}^n\mathcal X_i^\mathrm T \mathcal K_i \mathcal X_i\right)^{-1}\left(\sum_{i=1}^n\mathcal X_i^\mathrm T \mathcal K_i \mathcal Q_i \mathcal K_i \mathcal X_i\right)\left(\sum_{i=1}^n\mathcal X_i^\mathrm T \mathcal K_i \mathcal X_i\right)^{-1}(\boldsymbol I_p, \boldsymbol 0_p)^\mathrm T
+\end{eqnarray*}`
+]
+
+--
+
+- `\(\mathcal Q_i\)`: a diagonal matrix of the squared residuals
+
+- The sandwich estimator is used
+
+???
+
+The sandwich estimator has shown to provide consistent results.
+
+---
+layout: false
+class: inverse, middle, center
+
+# Standard Error Estimation for Longitudinal Data
+
+---
+
+## Standard Errors
+
+Longitudinal data have correlated repeated measurements; therefore, the correlation must be taken into account to accurately estimate the standard errors. The following papers provide methods to estimate the standard error with correlated data.
+
+- Wu and Chiang (2000)
+
+- Fan and Huang (2005)
+
+- Fan, Huang, and Li (2007)
+
+
+---
+
+## Bootstrap Standard Errors
+
+Due to mispecification of the correlation matrix, the standard errors may be biased. An alternative method is to estimate the standard errors via bootstrap. 
+
+- Draw a bootstrap sample by sampling `\(n\)` participants from the data with replacement
+- Apply the algorithm
+- Repeat Steps 1 and 2 for `\(B\)` bootstrap samples
+- Compute `\(\hat f_b(t)\)`, and obtain the standard error of `\(\hat f(t)\)`:
+
+$$
+    SE\lbrace\hat f(t)\rbrace = \sqrt{\frac{1}{B}\sum^B_{b=1}\lbrace\hat f_b(t)-\bar f(t)\rbrace^2},
+$$
+
+- with `\(\bar f(t)=\frac{1}{B}\sum^B_{b=1}\hat f_b(t)\)`.
+
+
+---
+layout: false
+class: inverse, middle, center
+
+# Bandwidth and Kernel Function
+
+---
+
+## Bandwidth
+
+The choice of bandwidth has an effect on the bias-variance trade-off
+
+--
+
+- Smaller `\(h\)`, smaller bias, larger variance
+
+--
+
+- Larger `\(h\)`, larger bias, smaller variance
+
+--
+
+- Need to find ideal bandwidth to minimize both
+
+--
+
+- The ideal bandwidth can be found via a cross-validation approach
+
+---
+
+## Kernel Function
+
+Use the Epanechnikov Kernel Function:
+
+`\(K(z) = \frac{3}{4}(1-z^2)_+\)`
+
+---
+layout: false
+class: inverse, middle, center
+
+# Simulation Study
+---
+## Normal Simulation Parameters
+
+- 250 Monte Carlo Datasets
+
+- 250 participants
+
+- 25 equally-space time points from 0 to 1
+
+- 1 predictor from `\(N(-2,1)\)`
+
+- `\(\beta_0(t)=\sqrt t\)`
+
+- `\(\beta_1(t)=-\sin(t)\)`
+
+- Outcome was generated from a normal distribution
+
+---
+## Normal Estimation VCM
+
+- WLS estimator was used to obtain vcm estimates at 100 grid points equally spaced from 0 to 1
+
+- `\(h=0.1\)`
+
+- Epanechnikov Kernel Function was used
+
+---
+## Normal Data Results
+&lt;img src="PCI_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /&gt;
+---
+## Normal Data Results
+&lt;img src="PCI_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Thank You!
+
+---
+layout: false
+class: inverse, middle, center
+
+# Appendix
+
+
+---
+layout: false
+class: inverse, middle, center
+
+# Useful References
+
+
+---
+## Varying-Coefficient Models
+
+- Fan and Zhang (2008)
+- Hastie and Tibshirani (1993)
+- Hoover, Rice, Wu, and Yang (1998)
+- Cai, Fan, and Li (2000)
+- Zhang and Lee (2000)
+- Kürüm, Li, Wang, and Şentürk (2014)
+- Kürüm, Li, Shiffman, and Yao (2016)
+
+---
+
+## VCM for Longitudinal Data
+
+- Hoover, Rice, Wu et al. (1998)
+
+- Wu and Chiang (2000)
+
+- Fan and Huang (2005)
+
+- Fan, Huang, and Li (2007)
+
+- Xue and Zhu (2007)
+
+- Fan and Wu (2008)
+
+---
+layout: false
+class: inverse, middle, center
+
+# Generalized Time-Varying Coefficient Models
+---
+## Model
+
+`\begin{equation}
+g\lbrace m(t,\boldsymbol X)\rbrace= E(Y|\boldsymbol X,t)=\boldsymbol X^\mathrm T\boldsymbol{\beta}(t)
+\end{equation}`
+
+--
+
+- `\(\boldsymbol X\)`: vector of predictors
+
+--
+
+- `\(Y\)`: outcome
+
+--
+
+- `\(t\)`: time point
+
+--
+
+- `\(g(\cdot)\)`: canonical link-function
+
+???
+
+g is a canonical link function
+
+---
+## Local Linear Model
+
+For a set of grid points, the varying coefficient is approximates around `\(t_0\)` with a Taylor's Expansion
+.size130[
+$$
+\boldsymbol \beta(t)\approx \boldsymbol \beta(t_0)+\boldsymbol \beta^\prime(t_0)(t-t_0)
+$$
+]
+
+--
+
+The model can be rewritten as
+.size130[
+$$
+\boldsymbol \beta(t)\approx \boldsymbol a+\boldsymbol b (t-t_0)
+$$
+]
+
+
+???
+
+* `\(\boldsymbol \beta(t_0)\)` is the function
+* `\(\boldsymbol \beta(t_0)^\prime\)` is the first derivative with respect to t
+* As long as we are in the neighborhood of `\(t_0\)` this approximation is correct.
+* No higher order polynomial are necessary
+* Lessens the chances to be affected by the curse of dimensionality
+* You need to choose a bandwidth and kernel function
+
+
+---
+## Local Log-Likelihood Function
+
+For `\(n\)` subjects, each subject containing `\(n_i\)` measurements, the local log-likelihood function is constructed as 
+
+.size90[
+`\begin{equation}
+\mathcal{L} (\boldsymbol a,\boldsymbol b)=\sum^n_{i=1}\sum^{n_i}_{j=1}\ell (g^{-1}[ \boldsymbol X_i^\mathrm T\lbrace \boldsymbol a+\boldsymbol b(t_{ij}-t_0)\rbrace],Y_{ij})K_h(t_{ij}-t_0)
+\end{equation}`
+]
+
+--
+
+- `\(\ell(\cdot,\cdot)\)`: log-likelihood function
+
+--
+- `\(t_{ij}\)`: time point
+
+--
+- `\(Y_{ij}\)`: outcome 
+
+--
+- `\(\boldsymbol X_{i}\)`: time-invariant predictors
+
+--
+- `\(K_h(\cdot)\)`: kernel function with associated bandwidth `\(h\)`
+
+
+---
+## Estimator
+
+The estimator that minimizes `\(-\mathcal L(\boldsymbol a,\boldsymbol b)\)` is found via a Newton-Raphson algorithm with its update
+
+`\begin{equation}
+\boldsymbol c^{(it+1)}=\boldsymbol c^{(it)}-\{\mathcal H^{(it)}\}^{-1}\mathcal G^{(it)} 
+\end{equation}`
+
+--
+
+- `\(\boldsymbol c = (\boldsymbol a^\mathrm T,\boldsymbol b^\mathrm T)^\mathrm T\)`
+
+--
+
+- `\(\boldsymbol c^{(it)}\)`: current iteration of `\(\boldsymbol c\)`
+
+--
+
+- `\(\mathcal H^{(it)}=-\mathcal L^{\prime\prime}(\boldsymbol a,\boldsymbol b)\)`
+
+--
+
+- `\(\mathcal G^{(it)}=-\mathcal L^{\prime}(\boldsymbol a,\boldsymbol b)\)`
+
+--
+
+???
+
+Initial estimates can be obtained from glmmm
+
+---
+## Asymptotic Theory
+
+Based on the regulatory conditions provided by Cai, Fan, and Li (2000) and Kürüm, Li, Shiffman et al. (2016), the asymptotic distribution for `\(\boldsymbol c_{ML}\)` is given as
+
+`\begin{equation}
+\sqrt{nh}\left\{\boldsymbol H\left( \boldsymbol c_{ML}-\boldsymbol c\right)-\mathrm{bias}(\boldsymbol c)+o_P(h^2) \right\}\sim N(0,\boldsymbol \Sigma)
+\end{equation}`
+
+
+--
+
+- `\(\boldsymbol H=diag(1,h)\otimes\boldsymbol I_{p}\)`
+
+- `\(\boldsymbol \Sigma\)`: covariance of `\(\boldsymbol c\)`
+
+---
+## One-Step Estimator
+
+To reduce computational burden, Cai, Fan, and Li (2000) propose the one-step estimator
+
+
+`\begin{equation}
+\boldsymbol c_{OS}=\boldsymbol c^{(0)}-\{\mathcal H^{(0)}\}^{-1}\mathcal G^{(0)} 
+\end{equation}`
+
+--
+
+- `\(\boldsymbol c^{(0)}\)`: initial value of `\(\boldsymbol c\)`
+
+--
+
+- `\(\mathcal H^{(0)}=-\mathcal L^{\prime\prime}(\boldsymbol a,\boldsymbol b)\)`
+
+--
+
+- `\(\mathcal G^{(0)}=-\mathcal L^{\prime}(\boldsymbol a,\boldsymbol b)\)`
+
+--
+
+---
+
+## One-Step Theorem
+
+Cai, Fan, and Li (2000) provides this theorem
+
+`\begin{equation}
+diag(1,h)\otimes \boldsymbol I_{p}\{ \boldsymbol c^{(0)}-\boldsymbol c\}=O_p\{h^2+(nh)^{-1/2}\}.
+\end{equation}`
+
+--
+
+This means as long as your initial estimate is close to the truth, `\(\boldsymbol c_{OS}\)` has the same asymptotic distribution of `\(\boldsymbol c_{ML}\)`
+
+---
+
+## Using OS Estimator
+
+--
+
+- Find the estimates for the first grid point using a Newton-Raphson algorithm
+
+--
+
+- Use the estimates of the first grid point as the initial values for the next grid point's estimates
+
+--
+
+- Repeat until all grid points' estimates are found
+
+---
+## Standard Error
+
+
+`\begin{equation}
+\widehat{cov}\{\hat{\boldsymbol a}(t_0)\}=
+ (\boldsymbol I_{p},\boldsymbol 0_{p})
+\hat{\boldsymbol \Gamma}_1^{-1}\hat{\boldsymbol \Gamma}_2^{-1}\hat{\boldsymbol \Gamma}_1^{-1}
+(\boldsymbol I_{p},\boldsymbol 0_{p})^\mathrm T,  
+\end{equation}`
+where
+
+.size60[
+`\begin{equation}
+\hat{\boldsymbol \Gamma}_1=\sum_{i=1}^n \sum_{j=1}^{n_i} z_2\left[\boldsymbol X_i^\mathrm T\left\lbrace\hat{\boldsymbol a}(t_0)+\hat{\boldsymbol b}(t_0)(t_{ij}-t_0)\right\rbrace,Y_{ij}\right]\boldsymbol T_{ij} \otimes(\boldsymbol X_i^\mathrm T\boldsymbol X_i)K_h(t_{ij}-t_0),
+\end{equation}`
+]
+
+.size60[
+`\begin{equation}
+\hat{\boldsymbol \Gamma}_1=\sum_{i=1}^n \sum_{j=1}^{n_i} z_1^2\left[\boldsymbol X_i^\mathrm T\left\lbrace\hat{\boldsymbol a}(t_0)+\hat{\boldsymbol b}(t_0)(t_{ij}-t_0)\right\rbrace,Y_{ij}\right]\boldsymbol T_{ij} \otimes(\boldsymbol X_i^\mathrm T\boldsymbol X_i)K_h(t_{ij}-t_0),
+\end{equation}`
+]
+
+--
+
+- `\(z_j=\frac{\partial^j}{\partial s^j}\ell\{g^{-1}(s),y\}\)`
+
+--
+
+- `\(\boldsymbol T_{ij}=(1, t_{ij}-t_0)^\mathrm T(1, t_{ij}-t_0)\)` for `\(j=1,...,n_i\)`.
+
+---
+## Binary Simulation Parameters
+
+- 250 Monte Carlo Datasets
+
+- 250 participants
+
+- 25 equally-space time points from 0 to 1
+
+- 2 predictor from `\(N\{(-1,1)^\mathrm T,diag(1.5^2,.5^2)\}\)`
+
+- `\(\beta_0(t)=\sin (t)\)`
+
+- `\(\beta_1(t)=\sqrt t\)`
+
+- `\(\beta_2(t)=-\cos(t)\)`
+
+- Outcome was generated from a latent normal distribution
+
+---
+## Binary Estimation VCM
+
+- Initial values obtained from GLMM
+
+- OS estimator was used to obtain vcm estimates at 100 grid points equally spaced from 0 to 1
+
+- `\(h=0.1\)`
+
+- Epanechnikov Kernel Function was used
+
+---
+## Binary Data Results
+
+&lt;img src="PCI_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+## Binary Data Results
+
+&lt;img src="PCI_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Binary Data Results
+
+
+&lt;img src="PCI_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" /&gt;
+
+
+---
+layout: false
+class: inverse, middle, center
+
+# Bandwidth Selection
+
+---
+
+## Bandwidth Selection
+
+Choosing the correct bandwidth is important for the bias-variance trade-off.
+
+
+---
+
+## Reference
+.scrollable[
+Cai, Z., J. Fan, and R. Li (2000). "Efficient Estimation and Inferences
+for Varying-Coefficient Models". In: _Journal of the American
+Statistical Association_ 95.451, pp. 888-902. ISSN: 0162-1459. DOI:
+[10.2307/2669472](https://doi.org/10.2307%2F2669472).
+
+Fan, J. and T. Huang (2005). "Profile Likelihood Inferences on
+Semiparametric Varying-Coefficient Partially Linear Models". In:
+_Bernoulli_ 11.6, pp. 1031-1057. ISSN: 1350-7265.
+
+Fan, J., T. Huang, and R. Li (2007). "Analysis of Longitudinal Data
+With Semiparametric Estimation of Covariance Function". In: _Journal of
+the American Statistical Association_ 102.478, pp. 632-641. ISSN:
+0162-1459. DOI:
+[10.1198/016214507000000095](https://doi.org/10.1198%2F016214507000000095).
+
+Fan, J. and Y. Wu (2008). "Semiparametric Estimation of Covariance
+Matrixes for Longitudinal Data". In: _Journal of the American
+Statistical Association_ 103.484, pp. 1520-1533. ISSN: 0162-1459. DOI:
+[10.1198/016214508000000742](https://doi.org/10.1198%2F016214508000000742).
+
+Fan, J. and W. Zhang (2008). "Statistical Methods with Varying
+Coefficient Models". In: _Statistics and its interface_ 1.1, pp.
+179-195. ISSN: 1938-7989.
+
+Hastie, T. and R. Tibshirani (1993). "Varying-Coefficient Models". En.
+In: _Journal of the Royal Statistical Society: Series B
+(Methodological)_ 55.4, pp. 757-779. ISSN: 2517-6161. DOI:
+[10.1111/j.2517-6161.1993.tb01939.x](https://doi.org/10.1111%2Fj.2517-6161.1993.tb01939.x).
+
+Hoover, D. R., J. A. Rice, C. O. Wu, et al. (1998). "Nonparametric
+Smoothing Estimates of Time-Varying Coefficient Models with
+Longitudinal Data". En. In: _Biometrika_ 85.4, pp. 809-822. ISSN:
+0006-3444. DOI:
+[10.1093/biomet/85.4.809](https://doi.org/10.1093%2Fbiomet%2F85.4.809).
+
+Kürüm, E., R. Li, S. Shiffman, et al. (2016). "Time-Varying Coefficient
+Models for Joint Modeling Binary and Continuous Outcomes in
+Longitudinal Data". In: _Statistica Sinica_ 26.3, pp. 979-1000. ISSN:
+1017-0405.
+
+Kürüm, E., R. Li, Y. Wang, et al. (2014). "Nonlinear
+Varying-Coefficient Models with Applications to a Photosynthesis
+Study". En. In: _Journal of Agricultural, Biological, and Environmental
+Statistics_ 19.1, pp. 57-81. ISSN: 1537-2693. DOI:
+[10.1007/s13253-013-0157-7](https://doi.org/10.1007%2Fs13253-013-0157-7).
+
+Wu, C. O. and C. Chiang (2000). "KERNEL SMOOTHING ON VARYING
+COEFFICIENT MODELS WITH LONGITUDINAL DEPENDENT VARIABLE". In:
+_Statistica Sinica_ 10.2, pp. 433-456. ISSN: 1017-0405.
+
+Xue, L. and L. Zhu (2007). "Empirical Likelihood for a Varying
+Coefficient Model With Longitudinal Data". In: _Journal of the American
+Statistical Association_ 102.478, pp. 642-654. ISSN: 0162-1459. DOI:
+[10.1198/016214507000000293](https://doi.org/10.1198%2F016214507000000293).
+
+Zhang, W. and S. Lee (2000). "Variable Bandwidth Selection in
+Varying-Coefficient Models". In: _Journal of Multivariate Analysis_
+74.1, pp. 116-134. ISSN: 0047-259X. DOI:
+[10.1006/jmva.1999.1883](https://doi.org/10.1006%2Fjmva.1999.1883).
+
+Aden-Buie, G. (2020). _xaringanthemer: Custom 'Xaringan' CSS Themes_.
+https://pkg.garrickadenbuie.com/xaringanthemer,
+https://github.com/gadenbuie/xaringanthemer.
+
+Bates, D., M. Maechler, B. Bolker, et al. (2019). _lme4: Linear
+Mixed-Effects Models using 'Eigen' and S4_. R package version 1.1-21.
+URL:
+[https://CRAN.R-project.org/package=lme4](https://CRAN.R-project.org/package=lme4).
+
+Genz, A., F. Bretz, T. Miwa, et al. (2020). _mvtnorm: Multivariate
+Normal and t Distributions_. R package version 1.1-0. URL:
+[https://CRAN.R-project.org/package=mvtnorm](https://CRAN.R-project.org/package=mvtnorm).
+
+McLean, M. W. (2019). _RefManageR: Straightforward 'BibTeX' and
+'BibLaTeX' Bibliography Management_. R package version 1.2.12. URL:
+[https://CRAN.R-project.org/package=RefManageR](https://CRAN.R-project.org/package=RefManageR).
+
+R Core Team (2020). _R: A Language and Environment for Statistical
+Computing_. R Foundation for Statistical Computing. Vienna, Austria.
+URL: [https://www.R-project.org/](https://www.R-project.org/).
+
+Wickham, H. (2019). _tidyverse: Easily Install and Load the
+'Tidyverse'_. R package version 1.3.0. URL:
+[https://CRAN.R-project.org/package=tidyverse](https://CRAN.R-project.org/package=tidyverse).
+
+Xie, Y. (2020). _xaringan: Presentation Ninja_. R package version 0.15.
+URL:
+[https://CRAN.R-project.org/package=xaringan](https://CRAN.R-project.org/package=xaringan).
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

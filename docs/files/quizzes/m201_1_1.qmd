@@ -1,0 +1,19 @@
+---
+title: ""
+format: html
+engine: knitr
+filters:
+  - webr
+webr:
+  packages: ['ggplot2', 'dplyr', 'tibble', 'broom', 'billboard']
+---
+
+```{=html}
+<style>
+.qwebr-console-area {font-size: 30px;}
+</style>
+```
+
+```{webr-r}
+
+```
