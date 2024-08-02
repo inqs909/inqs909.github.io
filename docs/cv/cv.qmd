@@ -431,7 +431,9 @@ format:
 
 -   Hawkins LR, Magdaleno F, **Salinas INQ**, and Peer BD. Egg shape in an obligate brood parasite contributes to decreased temperature variation during incubation. Current Zoology
 
--   Krisha Algoso, Selene Lopez, Barbara Reque, Leniha Lagarde, Natalie Leon, Gabriella Amador, **Isaac Quintanilla Salinas,** Ashley McCarley, and Caryl Ann Becerra. Antibacterial Potential of Native Medicinal Chumash Plants on *Bacillus subtilis*, *Escherichia coli*, and *Pseudomonas fluorescens*. Microorganisims
+-   Krisha Algoso, Selene Lopez, Barbara Reque, Leniha Lagarde, Natalie Leon, Gabriella Amador, **Isaac Quintanilla Salinas,** Ashley McCarley, and Caryl Ann Becerra. Antibacterial Potential of Native Medicinal Chumash Plants on *Bacillus subtilis*, *Escherichia coli*, and *Pseudomonas fluorescens*. Microorganisms
+
+-   Azer, Lilian; **Salinas, Isaac**; Kürüm, Esra; Ferguson, Leah; Davis, Elizabeth; Zhang, Weiwei; Strickland-Hughes, Carla; Wu, Rachel. Subjective Executive Functioning and Skill Learning during the COVID-19 Pandemic Associated with Perceived Loneliness, Depressive Symptoms, and Well-being. *The International Journal of Aging and Human Development.*
 
 ```{=tex}
 \begin{normalsize}
