@@ -69,6 +69,7 @@ $nav-link-padding-x:                2rem !default;
 $nav-link-disabled-color:           $gray-600 !default !default;
 $nav-tabs-border-color:             $gray-200 !default;
 
+
 // Navbar
 
 $navbar-padding-y:                  1rem !default;
@@ -158,7 +159,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0
   .nav-link.active,
   .nav-link.active:focus,
   .nav-link.active:hover{
-    color: $primary;
+    color: $white;
   }
 }
 
