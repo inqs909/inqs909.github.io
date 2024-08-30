@@ -427,11 +427,11 @@ format:
   \vspace{3pt}
 \end{normalsize}
 ```
--   Magdaleno, Francisco, **Salinas INQ**, and Rothstein, Stephen. Vocal Functional Flexibility in a Non-Primate Vocal Learning Species. Journal of Language Evolution
+-   Magdaleno, Francisco, **Salinas INQ**, and Rothstein, Stephen. Vocal Functional Flexibility in a Non-Primate Vocal Learning Species. *Journal of Language Evolution.* **In Press.**
 
--   Hawkins LR, Magdaleno F, **Salinas INQ**, and Peer BD. Egg shape in an obligate brood parasite contributes to decreased temperature variation during incubation. Current Zoology
+-   Hawkins LR, Magdaleno F, **Salinas INQ**, and Peer BD. Egg shape in an obligate brood parasite contributes to decreased temperature variation during incubation. *Current Zoology.*
 
--   Krisha Algoso, Selene Lopez, Barbara Reque, Leniha Lagarde, Natalie Leon, Gabriella Amador, **Isaac Quintanilla Salinas,** Ashley McCarley, and Caryl Ann Becerra. Antibacterial Potential of Native Medicinal Chumash Plants on *Bacillus subtilis*, *Escherichia coli*, and *Pseudomonas fluorescens*. Microorganisms
+<!-- -   Krisha Algoso, Selene Lopez, Barbara Reque, Leniha Lagarde, Natalie Leon, Gabriella Amador, **Isaac Quintanilla Salinas,** Ashley McCarley, and Caryl Ann Becerra. Antibacterial Potential of Native Medicinal Chumash Plants on *Bacillus subtilis*, *Escherichia coli*, and *Pseudomonas fluorescens*. Microorganisms -->
 
 -   Azer, Lilian; **Salinas, Isaac**; Kürüm, Esra; Ferguson, Leah; Davis, Elizabeth; Zhang, Weiwei; Strickland-Hughes, Carla; Wu, Rachel. Subjective Executive Functioning and Skill Learning during the COVID-19 Pandemic Associated with Perceived Loneliness, Depressive Symptoms, and Well-being. *The International Journal of Aging and Human Development.*
 
@@ -452,6 +452,8 @@ format:
 -   Pretanvil JA, **Salinas IQ**, Piccioni DE. Glioblastoma in elderly: treatment patterns and survival. *CNS Oncology*. 2016. 6(1):19-28. doi: 10.2217/cns-2016-0023.
 
 -   Baldwin MR, Peterson E, Easthausen I, **Quintanilla I**, Colago E, Sonett JR, D'Ovidio F, Bacchetta M, Costa J, Diamond J, Christie JD, Arcasoy SM, Lederer DJ. Donor age and early graft failure after lung transplantation: a cohort study. *Am J Transplant*. 2013. 13(10):2685-95. Epub 2013/08/26. DOI: 10.1111/ajt.12428.
+
+\newpage
 
 ```{=tex}
 \begin{normalsize}
@@ -498,7 +500,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
-\vspace{4pt}
+\vspace{3pt}
 
 ```{=tex}
 \begin{large}
@@ -507,7 +509,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
-\vspace{4pt}
+\vspace{3pt}
 
 ```{=tex}
 \begin{large}
@@ -516,7 +518,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
-\vspace{4pt}
+\vspace{3pt}
 
 ```{=tex}
 \begin{large}
@@ -525,7 +527,8 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
-\vspace{4pt}
+\vspace{3pt}
+
 
 ```{=tex}
 \begin{large}
@@ -534,7 +537,6 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
-\newpage
 
 <!-- Educational Programs -->
 
@@ -685,7 +687,10 @@ format:
 \end{large}
 \vspace{-0.16cm}
 ```
+-   *Faculty at Large*: Chicana/o and Latina/o Faculty and Staff Association
+  -   2024-2025
 -   *Co-Chair*: CSUCI Data Science Program Development Task Force
+  -   2023-2025
 
 \vspace{4pt}
 
