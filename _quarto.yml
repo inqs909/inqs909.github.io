@@ -24,11 +24,12 @@ website:
       - blog.qmd
       - books.qmd
       - photos.qmd
+      - text: "R-Universe"
+        href: https://inqs909.r-universe.dev
       - icon: github
         href: https://github.com/inqs909/
         aria-label: GitHub repo
-      - aria-label: R-Universe
-        href: https://inqs909.r-universe.dev
+
 
 
 
