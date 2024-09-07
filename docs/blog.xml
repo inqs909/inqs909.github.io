@@ -323,7 +323,7 @@ font-style: italic;">## Using mean_cpp</span></span>
 background-color: null;
 font-style: inherit;">mean_cpp</span>(Y)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.0183463</code></pre>
+<pre><code>[1] -0.01932048</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
@@ -332,7 +332,7 @@ font-style: italic;">## Using Built-in mean functions</span></span>
 background-color: null;
 font-style: inherit;">mean</span>(Y)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.0183463</code></pre>
+<pre><code>[1] -0.01932048</code></pre>
 </div>
 </div>
 <p>To see the speed gains, we can use the <code>mark()</code> function from the <code>bench</code> package.</p>
@@ -353,8 +353,8 @@ font-style: inherit;">mean_cpp</span>(Y)</span>
 <pre><code># A tibble: 2 × 6
   expression       min   median `itr/sec` mem_alloc `gc/sec`
   &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;
-1 mean(Y)       3.22µs   3.46µs   271172.        0B     27.1
-2 mean_cpp(Y)   1.32µs   1.38µs   673466.    5.17KB      0  </code></pre>
+1 mean(Y)       3.23µs   3.72µs   237524.        0B     23.8
+2 mean_cpp(Y)   1.34µs    1.4µs   648389.    5.17KB      0  </code></pre>
 </div>
 </div>
 <p>You can see that the cpp function is much faster than the R built-in function.</p>
