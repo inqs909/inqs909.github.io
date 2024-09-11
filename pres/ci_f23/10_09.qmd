@@ -1,6 +1,6 @@
 ---
 title: "Bayesian Mixed Effects Models and Cats"
-subtitle: "Analysis of Evolutionary Biological Data"
+subtitle: "inqs.info/pres/ci_f23/10_09"
 author: "Isaac Quintanilla Salinas"
 format: 
   revealjs:
@@ -188,7 +188,7 @@ ggplot(df, aes(fill=group, x = "", y = y)) + geom_bar(position = "stack", stat =
 ::: {.fragment fragment-index="2"}
 ### Outside
 
-![](https://habitathaven.com/cdn/shop/articles/cat-outside-good-for-them_f08770c8-4ed6-4b54-ac5c-7880bd1b0b35_1000x.jpg?v=1669070035){fig-align="right"}
+![](https://www.humanesociety.org/sites/default/files/2018/10/feral-cat-353896.jpg){fig-align="right"}
 :::
 :::
 :::
@@ -1252,6 +1252,58 @@ save(res, "~/Dropbox/Machine/res/save.RData")
 
 ```
 
+## Frog Paper
+
+::: columns
+::: {.column width="50%"}
+![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia1.giphy.com%2Fmedia%2FVGgzGCGmM3KYhMnKNY%2Fgiphy.gif&f=1&nofb=1&ipt=b7b2a9066f64385765a116bf63431bc3159ecb9dab59fc99d83611f57c173362&ipo=images)
+:::
+
+::: {.column width="50%"}
+[Paper](https://academic.oup.com/icb/advance-article/doi/10.1093/icb/icae057/7688460)
+
+[Data](https://datadryad.org/stash/dataset/doi:10.5061/dryad.mw6m90650)
+:::
+:::
+
 ## Thank You
 
 ![](https://media.tenor.com/WjoUFaID8ScAAAAC/cat-cute.gif){fig-align="center"}
+
+## Careers in Statistics
+
+::: columns
+::: {.column width="50%"}
+### Careers
+
+-   Data Scientist
+
+-   Data Analyst
+
+-   Business Analyst
+
+-   Data Engineer
+
+-   Statistician
+
+-   Research Scientist
+:::
+
+::: {.column width="50%"}
+### Industry
+
+-   Academia
+
+-   Pharmaceutical
+
+-   Government
+
+-   Tech
+
+-   Business/Finance
+
+-   Nonprofit
+
+-   Agriculture
+:::
+:::
