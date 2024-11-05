@@ -8,11 +8,17 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/reveal-header-1.0.0/add_header.js" defer="true"></script>
+<link href="../../site_libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/jquery-3.6.3/jquery-3.6.3.min.js"></script>
+<script src="../../site_libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.js" defer="true"></script>
+<link href="../../site_libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/reveal-auto-agenda-0.0.1/reveal-auto-agenda.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.56">
 
   <meta name="author" content="Isaac Quintanilla Salinas">
-  <title>INQS – Survival Analysis:</title>
+  <title>INQS – Plotathon</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -97,6 +103,7 @@
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="styles.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -311,7 +318,6 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
-      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -388,24 +394,13 @@
       margin-right: 0; 
     }
   </style>
-  <link href="../../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
-  <script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-  <link href="../../site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
-  <script src="../../site_libs/datatables-binding-0.33/datatables.js"></script>
-  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <link href="../../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
-  <link href="../../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
-  <script src="../../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
-  <link href="../../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
-  <script src="../../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Survival Analysis:</h1>
-  <p class="subtitle">The Life and Death of Statistics</p>
+  <h1 class="title">Plotathon</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -416,671 +411,533 @@ Isaac Quintanilla Salinas
 </div>
 
 </section>
+<section id="website" class="slide level2">
+<h2>Website</h2>
+<p><a href="https://www.inqs.info/p/plotathon/f24">https://www.inqs.info/p/plotathon/f22.html</a></p>
+</section>
 <section>
 <section class="title-slide slide level1 agenda-slide center">
-<h1>Background Information</h1>
+<h1>Installation</h1>
 <div class="agenda">
 <ul>
 <li><div class="agenda-active">
-<p>Background Information</p>
+<p>Installation</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Censoring</p>
+<p>R Packages</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Survival Analysis Functions</p>
+<p>R Projects</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Survival Rate</p>
+<p>RStudio Layout</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Cox Proportional Hazard Model</p>
+<p>Scripts</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Example</p>
+<p>Loading Data</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>R Code</p>
+<p>Plotting</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Esquisse</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Resources</p>
 </div></li>
 </ul>
 </div>
 </section>
-<section id="study-example" class="slide level2">
-<h2>Study Example</h2>
-<div>
+<section id="installing-r" class="slide level2">
+<h2>Installing R</h2>
+<p><a href="https://cloud.r-project.org/" class="uri">https://cloud.r-project.org/</a></p>
+</section>
+<section id="installing-rstudio" class="slide level2">
+<h2>Installing RStudio</h2>
+<p><a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a></p>
+</section>
+<section id="installing-rtools-windows" class="slide level2">
+<h2>Installing RTools (Windows)</h2>
+<p><a href="https://cran.r-project.org/bin/windows/Rtools/" class="uri">https://cran.r-project.org/bin/windows/Rtools/</a></p>
+</section>
+<section id="posit-cloud" class="slide level2">
+<h2>Posit Cloud</h2>
+<p><a href="https://posit.cloud/" class="uri">https://posit.cloud/</a></p>
+</section></section>
+<section>
+<section class="title-slide slide level1 agenda-slide center">
+<h1>R Packages</h1>
+<div class="agenda">
 <ul>
-<li class="fragment"><p>Acute Myelogenous Leukemia (AML) is a blood and bone marrow cancer that makes abnormal blood cells. This is the most common Leukemia found in adults.</p></li>
-<li class="fragment"><p>There are several factors that affect the prognosis (survival rate) of those with AML.</p></li>
-<li class="fragment"><p><strong>How do we determine the survival rate of AML patients?</strong></p></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Installation</p>
+</div></li>
+<li><div class="agenda-active">
+<p>R Packages</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>R Projects</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>RStudio Layout</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Scripts</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Loading Data</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Plotting</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Esquisse</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Resources</p>
+</div></li>
 </ul>
 </div>
 </section>
-<section id="how-do-determine-the-survival-rate" class="slide level2">
-<h2>How do determine the survival rate?</h2>
-<div>
-<ul>
-<li class="fragment"><p>Measure from diagnosis to event of interest</p></li>
-<li class="fragment"><p>Construct a probability of surviving up to a certain time point</p></li>
-</ul>
+<section id="tidyverse" class="slide level2">
+<h2>Tidyverse</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="data-type" class="slide level2">
-<h2>Data Type</h2>
-<div>
-<ul>
-<li class="fragment"><p>Data is typically recorded as time-to-event data.</p></li>
-<li class="fragment"><p>For biomedical studies, researchers are interested in time from diagnosis to death, known as time-to-death.</p></li>
-</ul>
+<section id="plotly" class="slide level2">
+<h2>Plotly</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">install.packages</span>(<span class="st">"plotly"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="ggthemes" class="slide level2">
+<h2>ggthemes</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">install.packages</span>(<span class="st">"ggthemes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="esquisse" class="slide level2">
+<h2>Esquisse</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">install.packages</span>(<span class="st">"esquisse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="load-packages" class="slide level2">
+<h2>Load Packages</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb5-2"><a></a><span class="fu">library</span>(plotly)</span>
+<span id="cb5-3"><a></a><span class="fu">library</span>(ggthemes)</span>
+<span id="cb5-4"><a></a><span class="fu">library</span>(esquisse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section>
 <section class="title-slide slide level1 agenda-slide center">
-<h1>Censoring</h1>
+<h1>R Projects</h1>
 <div class="agenda">
 <ul>
 <li><div class="agenda-inactive agenda-pre-active">
-<p>Background Information</p>
+<p>Installation</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>R Packages</p>
 </div></li>
 <li><div class="agenda-active">
-<p>Censoring</p>
+<p>R Projects</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Survival Analysis Functions</p>
+<p>RStudio Layout</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Survival Rate</p>
+<p>Scripts</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Cox Proportional Hazard Model</p>
+<p>Loading Data</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Example</p>
+<p>Plotting</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>R Code</p>
+<p>Esquisse</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Resources</p>
 </div></li>
 </ul>
 </div>
 </section>
-<section id="censoring-1" class="slide level2">
-<h2>Censoring</h2>
-<div>
+<section id="r-projects-1" class="slide level2">
+<h2>R Projects</h2>
+<p>R Projects are designed to contain all your data, scripts, and output in one location. This ensures that things are compatible on other computers.</p>
+</section>
+<section id="directories-folders" class="slide level2">
+<h2>Directories (Folders)</h2>
 <ul>
-<li class="fragment"><p>Censoring is a mechanism in biomedical studies where we do not observe the true time-to-death.</p></li>
-<li class="fragment"><p>Not all the time is observed.</p></li>
-<li class="fragment"><p>Three common types of censoring mechanisms: <em>Right, Left,</em> and <em>Interval.</em></p></li>
+<li><p>data</p></li>
+<li><p>output</p></li>
+<li><p>scripts</p></li>
+</ul>
+</section></section>
+<section>
+<section class="title-slide slide level1 agenda-slide center">
+<h1>RStudio Layout</h1>
+<div class="agenda">
+<ul>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Installation</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>R Packages</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>R Projects</p>
+</div></li>
+<li><div class="agenda-active">
+<p>RStudio Layout</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Scripts</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Loading Data</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Plotting</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Esquisse</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Resources</p>
+</div></li>
 </ul>
 </div>
 </section>
-<section id="left-censoring" class="slide level2">
-<h2>Left Censoring</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-2"><a></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">ID =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, </span>
-<span id="cb1-3"><a></a>                  <span class="at">t1 =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">6</span>, <span class="dv">7</span>) , </span>
-<span id="cb1-4"><a></a>                  <span class="at">censored =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>))</span>
-<span id="cb1-5"><a></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x =</span> ID, <span class="at">y =</span> t1, <span class="at">shape =</span> <span class="fu">ifelse</span>(censored, <span class="st">"Death"</span>, <span class="st">"Censored"</span>))) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span> </span>
-<span id="cb1-6"><a></a>    <span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> t1)) <span class="sc">+</span></span>
-<span id="cb1-7"><a></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">5</span>, <span class="at">lty =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb1-8"><a></a>    <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
-<span id="cb1-9"><a></a>    <span class="fu">scale_shape_manual</span>(<span class="at">name =</span> <span class="st">"Event"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="dv">19</span>, <span class="dv">15</span>)) <span class="sc">+</span></span>
-<span id="cb1-10"><a></a>    <span class="fu">ggtitle</span>(<span class="st">"Left Censoring"</span>) <span class="sc">+</span> </span>
-<span id="cb1-11"><a></a>    <span class="fu">xlab</span>(<span class="st">"Patient ID"</span>) <span class="sc">+</span>  <span class="fu">ylab</span>(<span class="st">"Days"</span>) <span class="sc">+</span> </span>
-<span id="cb1-12"><a></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
-<section id="interval-censoring" class="slide level2">
-<h2>Interval Censoring</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb2-2"><a></a>dat <span class="ot">&lt;-</span> <span class="fu">structure</span>(<span class="fu">list</span>(<span class="at">ID =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">eventA =</span> <span class="fu">c</span>(<span class="dv">0</span>L, <span class="dv">1</span>L, <span class="dv">1</span>L, <span class="dv">0</span>L, <span class="dv">1</span>L), </span>
-<span id="cb2-3"><a></a>    <span class="at">eventB =</span> <span class="fu">c</span>(<span class="dv">1</span>L, <span class="dv">0</span>L, <span class="dv">0</span>L, <span class="dv">1</span>L, <span class="dv">0</span>L), <span class="at">t1 =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">10</span>, <span class="fl">4.5</span>, <span class="dv">2</span>), <span class="at">t2 =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">10</span>, <span class="fl">4.5</span>, </span>
-<span id="cb2-4"><a></a>    <span class="dv">8</span>), <span class="at">censored =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>)), <span class="at">.Names =</span> <span class="fu">c</span>(<span class="st">"ID"</span>, <span class="st">"eventA"</span>, </span>
-<span id="cb2-5"><a></a>    <span class="st">"eventB"</span>, <span class="st">"t1"</span>, <span class="st">"t2"</span>, <span class="st">"censored"</span>), <span class="at">class =</span> <span class="st">"data.frame"</span>, <span class="at">row.names =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="sc">-</span><span class="dv">5</span>L))</span>
-<span id="cb2-6"><a></a></span>
-<span id="cb2-7"><a></a>dat<span class="sc">$</span>event <span class="ot">&lt;-</span> <span class="fu">with</span>(dat, <span class="fu">ifelse</span>(eventA, <span class="st">"Censored"</span>, <span class="st">"Death"</span>))</span>
-<span id="cb2-8"><a></a></span>
-<span id="cb2-9"><a></a>dat<span class="sc">$</span>id.ordered <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="at">x =</span> dat<span class="sc">$</span>ID, <span class="at">levels =</span> <span class="fu">order</span>(dat<span class="sc">$</span>t2, <span class="at">decreasing =</span> T))</span>
-<span id="cb2-10"><a></a></span>
-<span id="cb2-11"><a></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x =</span> id.ordered)) <span class="sc">+</span> </span>
-<span id="cb2-12"><a></a>    <span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> t1)) <span class="sc">+</span> </span>
-<span id="cb2-13"><a></a>    <span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> t1, <span class="at">ymax =</span> t2, </span>
-<span id="cb2-14"><a></a>                       <span class="at">linetype =</span> <span class="fu">as.factor</span>(censored))) <span class="sc">+</span>  </span>
-<span id="cb2-15"><a></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">ifelse</span>(censored, </span>
-<span id="cb2-16"><a></a>                              t1 <span class="sc">+</span> (t2 <span class="sc">-</span> t1) <span class="sc">/</span> <span class="dv">2</span>, t2), </span>
-<span id="cb2-17"><a></a>                   <span class="at">shape =</span> event), <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
-<span id="cb2-18"><a></a>    <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
-<span id="cb2-19"><a></a>    <span class="fu">scale_linetype_manual</span>(<span class="at">name =</span> <span class="st">"Censoring"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>), </span>
-<span id="cb2-20"><a></a>        <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Not censored"</span>, <span class="st">"Interval censored"</span>)) <span class="sc">+</span></span>
-<span id="cb2-21"><a></a>    <span class="fu">scale_shape_manual</span>(<span class="at">name =</span> <span class="st">"Event"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="dv">19</span>, <span class="dv">15</span>)) <span class="sc">+</span></span>
-<span id="cb2-22"><a></a>    <span class="fu">ggtitle</span>(<span class="st">"Interval Censoring"</span>) <span class="sc">+</span> </span>
-<span id="cb2-23"><a></a>    <span class="fu">xlab</span>(<span class="st">"Patient ID"</span>) <span class="sc">+</span>  <span class="fu">ylab</span>(<span class="st">"Days"</span>) <span class="sc">+</span> </span>
-<span id="cb2-24"><a></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
-<section id="right-censoring" class="slide level2">
-<h2>Right Censoring</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb3-2"><a></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">ID =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, </span>
-<span id="cb3-3"><a></a>                  <span class="at">t1 =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>) , </span>
-<span id="cb3-4"><a></a>                  <span class="at">censored =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>))</span>
-<span id="cb3-5"><a></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x =</span> ID, <span class="at">y =</span> t1, </span>
-<span id="cb3-6"><a></a>                <span class="at">shape =</span> <span class="fu">ifelse</span>(censored, <span class="st">"Death"</span>, <span class="st">"Censored"</span>))) <span class="sc">+</span></span>
-<span id="cb3-7"><a></a>    <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span> </span>
-<span id="cb3-8"><a></a>    <span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> t1)) <span class="sc">+</span></span>
-<span id="cb3-9"><a></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">10</span>, <span class="at">lty =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb3-10"><a></a>    <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
-<span id="cb3-11"><a></a>    <span class="fu">scale_shape_manual</span>(<span class="at">name =</span> <span class="st">"Event"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="dv">19</span>, <span class="dv">15</span>)) <span class="sc">+</span></span>
-<span id="cb3-12"><a></a>    <span class="fu">ggtitle</span>(<span class="st">"Right Censoring"</span>) <span class="sc">+</span> </span>
-<span id="cb3-13"><a></a>    <span class="fu">xlab</span>(<span class="st">"Patient ID"</span>) <span class="sc">+</span>  <span class="fu">ylab</span>(<span class="st">"Days"</span>) <span class="sc">+</span> </span>
-<span id="cb3-14"><a></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
-<section id="censoring-2" class="slide level2">
-<h2>Censoring</h2>
-<div>
+<section id="rstudio-layout-1" class="slide level2">
+<h2>RStudio Layout</h2>
 <ul>
-<li class="fragment"><p>Censoring affects the time-to-death information</p></li>
-<li class="fragment"><p>However, we obtain some information when data is censored</p></li>
-<li class="fragment"><p>Incorporate methods to utilize partial information</p></li>
-<li class="fragment"><p>Censoring is independent of time-to-death generation</p></li>
-<li class="fragment"><p>Right Censoring</p></li>
+<li><p>Scripts</p></li>
+<li><p>Console</p></li>
+<li><p>Environment</p></li>
+<li><p>Files</p></li>
+<li><p>Everything else</p></li>
+</ul>
+</section></section>
+<section>
+<section class="title-slide slide level1 agenda-slide center">
+<h1>Scripts</h1>
+<div class="agenda">
+<ul>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Installation</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>R Packages</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>R Projects</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>RStudio Layout</p>
+</div></li>
+<li><div class="agenda-active">
+<p>Scripts</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Loading Data</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Plotting</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Esquisse</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Resources</p>
+</div></li>
 </ul>
 </div>
 </section>
-<section id="data-construction" class="slide level2">
-<h2>Data Construction</h2>
-<div>
+<section id="adding-script" class="slide level2">
+<h2>Adding Script</h2>
 <ul>
-<li class="fragment"><p><span class="math inline">\(T_i^*\)</span>: True time-to-event</p></li>
-<li class="fragment"><p><span class="math inline">\(C_i\)</span>: Censoring Time</p></li>
-<li class="fragment"><p><span class="math inline">\(T_i=\min(T_i^*,C_i)\)</span>: Observed time-to-event</p></li>
-<li class="fragment"><p><span class="math inline">\(\delta_i = I(T_i^*&lt;C_i)\)</span>: Event indicator</p></li>
+<li>Use the top right corner</li>
 </ul>
+</section></section>
+<section>
+<section class="title-slide slide level1 agenda-slide center">
+<h1>Loading Data</h1>
+<div class="agenda">
+<ul>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Installation</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>R Packages</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>R Projects</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>RStudio Layout</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Scripts</p>
+</div></li>
+<li><div class="agenda-active">
+<p>Loading Data</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Plotting</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Esquisse</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Resources</p>
+</div></li>
+</ul>
+</div>
+</section>
+<section id="downloading-data-data" class="slide level2">
+<h2>Downloading Data Data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>u <span class="ot">&lt;-</span> <span class="st">"https://www.inqs.info/p/plotathon/owenWilsonWows.csv"</span></span>
+<span id="cb6-2"><a></a><span class="fu">basename</span>(u)</span>
+<span id="cb6-3"><a></a><span class="fu">download.file</span>(u,</span>
+<span id="cb6-4"><a></a>              <span class="fu">file.path</span>(<span class="fu">getwd</span>(), <span class="st">"data"</span>, <span class="fu">basename</span>(u)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="loading-data-1" class="slide level2">
+<h2>Loading Data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>mds <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/owenWilsonWows.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section>
 <section class="title-slide slide level1 agenda-slide center">
-<h1>Survival Analysis Functions</h1>
+<h1>Plotting</h1>
 <div class="agenda">
 <ul>
 <li><div class="agenda-inactive agenda-pre-active">
-<p>Background Information</p>
+<p>Installation</p>
 </div></li>
 <li><div class="agenda-inactive agenda-pre-active">
-<p>Censoring</p>
+<p>R Packages</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>R Projects</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>RStudio Layout</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Scripts</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Loading Data</p>
 </div></li>
 <li><div class="agenda-active">
-<p>Survival Analysis Functions</p>
+<p>Plotting</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Survival Rate</p>
+<p>Esquisse</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Cox Proportional Hazard Model</p>
-</div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>Example</p>
-</div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>R Code</p>
+<p>Resources</p>
 </div></li>
 </ul>
 </div>
 </section>
-<section id="survivial-analysis-functions" class="slide level2">
-<h2>Survivial Analysis Functions</h2>
-<p>Describe the Probability Model</p>
-<ul>
-<li>Hazard Function</li>
-<li>Survival Function</li>
-<li>Cumulative Hazard Function</li>
-</ul>
-</section>
-<section id="hazard-function" class="slide level2">
-<h2>Hazard Function</h2>
-<p><span class="math display">\[
-h(t) = \lim_{\Delta t \rightarrow 0} \frac{P(t \le T^* &lt; t + \Delta t \mid T^* \ge t)}{\Delta t}
-\]</span></p>
-</section>
-<section id="survival-function" class="slide level2">
-<h2>Survival Function</h2>
-<p><span class="math display">\[
-S(t) = P(T^* &gt; t)
-\]</span></p>
-</section>
-<section id="cumulative-hazard-function" class="slide level2">
-<h2>Cumulative Hazard Function</h2>
-<p><span class="math display">\[
-H(t) = \int_0^t h(u) du
-\]</span></p>
-</section>
-<section id="survival-and-hazard-function-relationship" class="slide level2">
-<h2>Survival and Hazard Function Relationship</h2>
-<p><span class="math display">\[
-S(t) = e^{-H(t)}
-\]</span></p>
-</section>
-<section id="probability-density-function" class="slide level2">
-<h2>Probability Density Function</h2>
-<p><span class="math display">\[
-f(t) = h(t)S(t)
-\]</span></p>
-</section></section>
-<section>
-<section class="title-slide slide level1 agenda-slide center">
-<h1>Survival Rate</h1>
-<div class="agenda">
-<ul>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Background Information</p>
-</div></li>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Censoring</p>
-</div></li>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Survival Analysis Functions</p>
-</div></li>
-<li><div class="agenda-active">
-<p>Survival Rate</p>
-</div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>Cox Proportional Hazard Model</p>
-</div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>Example</p>
-</div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>R Code</p>
-</div></li>
-</ul>
-</div>
-</section>
-<section id="survival-curve" class="slide level2">
-<h2>Survival Curve</h2>
-<div>
-<ul>
-<li class="fragment"><p>The survival curve will determine what is the probability of suriving up to a certain time.</p></li>
-<li class="fragment"><p>A survival curve uses both censored and uncensored data</p></li>
-<li class="fragment"><p>A survival curve can be used to determine the median survival time of a disease</p></li>
-</ul>
-</div>
-</section>
-<section id="data" class="slide level2">
-<h2>Data</h2>
-<p>Let <span class="math inline">\(\{t_j,d_j,R_j\}^D_{j=1}\)</span> denote the survival data, where <span class="math inline">\(t_1&lt;t_2&lt;\cdots&lt;t_D\)</span> are the ordered distinct observed event times, <span class="math inline">\(d_j\)</span> represents the number of events at time point <span class="math inline">\(t_j\)</span>, and <span class="math inline">\(R_j\)</span> denotes the number of subjects still at risk of experiencing the event at <span class="math inline">\(t_j\)</span>.</p>
-</section>
-<section id="kaplan-meier-estimator" class="slide level2">
-<h2>Kaplan-Meier Estimator</h2>
-<p><span class="math display">\[
-\hat{S}(t) =\left\{\begin{array}{cc}
-1 &amp; t=0 \\
-\prod_{i:t_j \le t} \left( 1 - \frac{d_j}{R_j} \right) &amp; t_j &lt; t
-\end{array}\right.
-\]</span></p>
-</section>
-<section id="standard-error" class="slide level2">
-<h2>Standard Error</h2>
-<p><span class="math display">\[
-\widehat{SE}\{\hat S(t)\}=\sqrt{\hat S^2(t)\sum_{t_j\leq t}\frac{d_j}{R_j(R_j-d_j)}}.
-\]</span></p>
-</section>
-<section id="survival-curve-1" class="slide level2">
-<h2>Survival Curve</h2>
+<section id="base-plot" class="slide level2">
+<h2>Base Plot</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">library</span>(survival)</span>
-<span id="cb4-2"><a></a><span class="fu">library</span>(ggsurvfit)</span>
-<span id="cb4-3"><a></a><span class="fu">library</span>(magrittr)</span>
-<span id="cb4-4"><a></a>aml <span class="sc">%$%</span> <span class="fu">survfit2</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>)  <span class="sc">%&gt;%</span> </span>
-<span id="cb4-5"><a></a>      <span class="fu">ggsurvfit</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb4-6"><a></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section></section>
-<section>
-<section class="title-slide slide level1 agenda-slide center">
-<h1>Cox Proportional Hazard Model</h1>
-<div class="agenda">
-<ul>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Background Information</p>
-</div></li>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Censoring</p>
-</div></li>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Survival Analysis Functions</p>
-</div></li>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Survival Rate</p>
-</div></li>
-<li><div class="agenda-active">
-<p>Cox Proportional Hazard Model</p>
-</div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>Example</p>
-</div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>R Code</p>
-</div></li>
-</ul>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>mds <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> total_wows_in_movie)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="data-1" class="slide level2">
-<h2>Data</h2>
-<p>Let <span class="math inline">\(\{T_i,\delta_i,\boldsymbol X_i\}^n_{i=1}\)</span> denote the survival data, where <span class="math inline">\(T_i\)</span> is observed event times, <span class="math inline">\(\delta_i\)</span> is the survival indicator, and <span class="math inline">\(\boldsymbol X_i\)</span> denotes the a vector of predictor variables.</p>
-</section>
-<section id="proportional-hazard-model" class="slide level2">
-<h2>Proportional Hazard Model</h2>
-<p><span class="math display">\[
-h(t \mid \boldsymbol X) = h_0(t) \exp(\boldsymbol\beta^\mathrm T\boldsymbol X)
-\]</span></p>
-<ul>
-<li><p><span class="math inline">\(h_0(t)\)</span>: baseline hazard function</p></li>
-<li><p><span class="math inline">\(\boldsymbol\beta\)</span>: regression coefficients</p></li>
-<li><p><span class="math inline">\(\boldsymbol X\)</span>: predictor variables</p></li>
-</ul>
-</section>
-<section id="how-do-we-estimate-parameters-boldsymbol-beta" class="slide level2">
-<h2>How do we estimate parameters <span class="math inline">\(\boldsymbol \beta\)</span></h2>
-<p>We use a maximum likelihood approach where we search for the values of <span class="math inline">\(\boldsymbol \beta\)</span> the maximizes the likelihood function.</p>
-<p>The Likelihood function measures the probability of observing the data given the parameters <span class="math inline">\(\boldsymbol \beta\)</span>.</p>
-</section>
-<section id="construction-of-the-likelihood-function" class="slide level2">
-<h2>Construction of the Likelihood Function</h2>
-<p>Due to right censoring, likelihood needs careful construction</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h4 id="death-is-observed">Death is observed</h4>
-<p><span class="math display">\[
-f(t|\boldsymbol X,\boldsymbol \beta) = h(t)S(t)
-\]</span></p>
-</div><div class="column" style="width:50%;">
-<h4 id="censored">Censored</h4>
-<p><span class="math display">\[
-S(t)
-\]</span></p>
-</div></div>
-</section>
-<section id="likelihood-function" class="slide level2">
-<h2>Likelihood Function</h2>
-<p><span class="math display">\[
-L(\boldsymbol \beta) = \prod_{i=1}^n [h(T_i \mid \boldsymbol X_i, \boldsymbol\beta)]^{\delta_i} [S(T_i \mid \boldsymbol X_i, \boldsymbol \beta)]
-\]</span></p>
-</section>
-<section id="likelihood-function-1" class="slide level2">
-<h2>Likelihood Function</h2>
-<p><span class="math display">\[
-L(\boldsymbol \beta) = \prod_{i=1}^n \{h_0(t) \exp(\boldsymbol\beta^\mathrm T\boldsymbol x_i)\}^{\delta_i} \exp\left\{-\int^{T_i}_0 h_0(s) \exp(\boldsymbol\beta^\mathrm T\boldsymbol x_i)ds\right\}
-\]</span></p>
-</section>
-<section id="estimating-the-baseline-hazard-function" class="slide level2">
-<h2>Estimating the Baseline Hazard Function</h2>
-<p><span class="math display">\[
-h_0(t)
-\]</span></p>
-<div class="fragment">
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="parameterically">Parameterically</h3>
-<ul>
-<li><p>Weibull</p></li>
-<li><p>log-Normal</p></li>
-<li><p>Gompetz</p></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<h3 id="nonparametrically">Nonparametrically</h3>
-<ul>
-<li><p>Profile MLE</p></li>
-<li><p>Spline Models</p></li>
-</ul>
-</div></div>
-</div>
-</section>
-<section id="partial-likelihood" class="slide level2">
-<h2>Partial Likelihood</h2>
-<p><span class="math display">\[
-L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol X_i)}{\sum_{j \in R(t_i)} \exp(\boldsymbol\beta^T \boldsymbol X_j)}
-\]</span></p>
-<ul>
-<li><span class="math inline">\(R(t_i)\)</span>: the patients at risk prior to time <span class="math inline">\(t_i\)</span></li>
-<li><span class="math inline">\(D\)</span>: Number of individuals experiencing the event</li>
-</ul>
-</section>
-<section id="estimation" class="slide level2">
-<h2>Estimation</h2>
-<p>The estimates of <span class="math inline">\(\boldsymbol \beta\)</span> can be obtained finding the Maximum Partial Likelihood Estimate (MPLE)</p>
-</section>
-<section id="sampling-distribution" class="slide level2">
-<h2>Sampling Distribution</h2>
-<p><span class="math display">\[
-\hat{\boldsymbol \beta} \overset{\circ}{\sim} N\left\{\boldsymbol \beta, - I^{-1}(\boldsymbol \beta)\right\}
-\]</span></p>
-</section></section>
-<section>
-<section class="title-slide slide level1 agenda-slide center">
-<h1>Example</h1>
-<div class="agenda">
-<ul>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Background Information</p>
-</div></li>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Censoring</p>
-</div></li>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Survival Analysis Functions</p>
-</div></li>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Survival Rate</p>
-</div></li>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Cox Proportional Hazard Model</p>
-</div></li>
-<li><div class="agenda-active">
-<p>Example</p>
-</div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>R Code</p>
-</div></li>
-</ul>
-</div>
-</section>
-<section id="colon-example" class="slide level2">
-<h2>Colon Example</h2>
-<ul>
-<li>Colon cancer is a type of cancer found in the large intestine</li>
-<li>We will be looking whether different treatment types will have an affect on the survival rate</li>
-</ul>
-</section>
-<section id="colon-survival-curve" class="slide level2">
-<h2>Colon Survival Curve</h2>
+<section id="histogram" class="slide level2">
+<h2>Histogram</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">library</span>(survival)</span>
-<span id="cb5-2"><a></a><span class="fu">library</span>(ggsurvfit)</span>
-<span id="cb5-3"><a></a><span class="fu">library</span>(magrittr)</span>
-<span id="cb5-4"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb5-5"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">survfit2</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>)  <span class="sc">%&gt;%</span> </span>
-<span id="cb5-6"><a></a>      <span class="fu">ggsurvfit</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb5-7"><a></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>mds <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> total_wows_in_movie)) <span class="sc">+</span></span>
+<span id="cb9-2"><a></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
-<section id="colon-survival-curve-1" class="slide level2">
-<h2>Colon Survival Curve</h2>
+</section>
+<section id="box-plot" class="slide level2">
+<h2>Box Plot</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">survfit2</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> rx)  <span class="sc">%&gt;%</span> </span>
-<span id="cb6-2"><a></a>      <span class="fu">ggsurvfit</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb6-3"><a></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>mds <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> total_wows_in_movie)) <span class="sc">+</span></span>
+<span id="cb10-2"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
-<section id="colon-survival-curve-2" class="slide level2">
-<h2>Colon Survival Curve</h2>
+</section>
+<section id="density-plot" class="slide level2">
+<h2>Density Plot</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">survfit2</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> rx)  <span class="sc">%&gt;%</span> </span>
-<span id="cb7-2"><a></a>      <span class="fu">ggsurvfit</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb7-3"><a></a>      <span class="fu">add_confidence_interval</span>() <span class="sc">+</span></span>
-<span id="cb7-4"><a></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>mds <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> total_wows_in_movie)) <span class="sc">+</span></span>
+<span id="cb11-2"><a></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
-<section id="cox-ph-model" class="slide level2">
-<h2>Cox PH Model</h2>
+</section>
+<section id="box-plot-by-category" class="slide level2">
+<h2>Box Plot By Category</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> rx) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-2"><a></a>  broom<span class="sc">::</span><span class="fu">tidy</span>(<span class="at">exponentiate =</span> T) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-3"><a></a>  <span class="fu">mutate_if</span>(is.numeric,</span>
-<span id="cb8-4"><a></a>            round,</span>
-<span id="cb8-5"><a></a>            <span class="at">digits =</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-6"><a></a>  DT<span class="sc">::</span><span class="fu">datatable</span>(<span class="at">options =</span> <span class="fu">list</span>(<span class="at">dom =</span> <span class="st">'t'</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-43baa42f368aedfc6191" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-43baa42f368aedfc6191">{"x":{"filter":"none","vertical":false,"data":[["1","2"],["rxLevamisole","rxLevamisole+5-FU"],[0.98,0.6],[0.11,0.12],[-0.14,-4.32],[0.89,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>term<\/th>\n      <th>estimate<\/th>\n      <th>std.error<\/th>\n      <th>statistic<\/th>\n      <th>p.value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"term","targets":1},{"name":"estimate","targets":2},{"name":"std.error","targets":3},{"name":"statistic","targets":4},{"name":"p.value","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>mds <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> total_wows_in_movie, <span class="at">y =</span> era)) <span class="sc">+</span></span>
+<span id="cb12-2"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="density-plot-by-category" class="slide level2">
+<h2>Density Plot By Category</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>mds <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> total_wows_in_movie, <span class="at">color =</span> era)) <span class="sc">+</span></span>
+<span id="cb13-2"><a></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="scatter-plot" class="slide level2">
+<h2>Scatter Plot</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>mds <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> durationInSeconds, </span>
+<span id="cb14-2"><a></a>                  <span class="at">y =</span> total_wows_in_movie)) <span class="sc">+</span></span>
+<span id="cb14-3"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="scatter-plot-by-group" class="slide level2">
+<h2>Scatter Plot by Group</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>mds <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> durationInSeconds, </span>
+<span id="cb15-2"><a></a>                  <span class="at">y =</span> total_wows_in_movie, <span class="at">color =</span> era)) <span class="sc">+</span></span>
+<span id="cb15-3"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="add-regression-line" class="slide level2">
+<h2>Add Regression Line</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>mds <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> durationInSeconds, </span>
+<span id="cb16-2"><a></a>                  <span class="at">y =</span> total_wows_in_movie)) <span class="sc">+</span></span>
+<span id="cb16-3"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb16-4"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="smooth-line" class="slide level2">
+<h2>Smooth Line</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>mds <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> durationInSeconds, </span>
+<span id="cb17-2"><a></a>                  <span class="at">y =</span> total_wows_in_movie)) <span class="sc">+</span></span>
+<span id="cb17-3"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb17-4"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="regression-lines-by-group" class="slide level2">
+<h2>Regression Lines by Group</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>mds <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> durationInSeconds, </span>
+<span id="cb18-2"><a></a>                  <span class="at">y =</span> total_wows_in_movie,</span>
+<span id="cb18-3"><a></a>                  <span class="at">color =</span> era)) <span class="sc">+</span></span>
+<span id="cb18-4"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb18-5"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
-<section>
 <section class="title-slide slide level1 agenda-slide center">
-<h1>R Code</h1>
+<h1>Esquisse</h1>
 <div class="agenda">
 <ul>
 <li><div class="agenda-inactive agenda-pre-active">
-<p>Background Information</p>
+<p>Installation</p>
 </div></li>
 <li><div class="agenda-inactive agenda-pre-active">
-<p>Censoring</p>
+<p>R Packages</p>
 </div></li>
 <li><div class="agenda-inactive agenda-pre-active">
-<p>Survival Analysis Functions</p>
+<p>R Projects</p>
 </div></li>
 <li><div class="agenda-inactive agenda-pre-active">
-<p>Survival Rate</p>
+<p>RStudio Layout</p>
 </div></li>
 <li><div class="agenda-inactive agenda-pre-active">
-<p>Cox Proportional Hazard Model</p>
+<p>Scripts</p>
 </div></li>
 <li><div class="agenda-inactive agenda-pre-active">
-<p>Example</p>
+<p>Loading Data</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Plotting</p>
 </div></li>
 <li><div class="agenda-active">
-<p>R Code</p>
+<p>Esquisse</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Resources</p>
 </div></li>
 </ul>
 </div>
 </section>
-<section id="fitting-a-survival-curve" class="slide level2">
-<h2>Fitting a Survival Curve</h2>
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Code</a></li><li><a href="#tabset-1-2">Output</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1">
-<div class="cell">
-<div class="sourceCode cell-code" id="annotated-cell-9"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-9" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-9-1" class="code-annotation-target"><a href="#annotated-cell-9-1"></a><span class="fu">library</span>(magrittr)</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-9" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-9-2" class="code-annotation-target"><a href="#annotated-cell-9-2"></a><span class="fu">library</span>(survival)</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-9" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-9-3" class="code-annotation-target"><a href="#annotated-cell-9-3"></a><span class="fu">library</span>(ggsurvfit)</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-9" data-target-annotation="4" onclick="event.preventDefault();">4</a><span id="annotated-cell-9-4" class="code-annotation-target"><a href="#annotated-cell-9-4"></a>df_colon <span class="sc">%$%</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> surg)  <span class="sc">%&gt;%</span></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-9" data-target-annotation="5" onclick="event.preventDefault();">5</a><span id="annotated-cell-9-5" class="code-annotation-target"><a href="#annotated-cell-9-5"></a>      <span class="fu">ggsurvfit</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-9" data-target-annotation="6" onclick="event.preventDefault();">6</a><span id="annotated-cell-9-6" class="code-annotation-target"><a href="#annotated-cell-9-6"></a>      <span class="fu">add_confidence_interval</span>() <span class="sc">+</span></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-9" data-target-annotation="7" onclick="event.preventDefault();">7</a><span id="annotated-cell-9-7" class="code-annotation-target"><a href="#annotated-cell-9-7"></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-annotation">
-<dl class="code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-9" data-target-annotation="1">1</dt>
-<dd>
-<span data-code-cell="annotated-cell-9" data-code-lines="1" data-code-annotation="1">Pipe package</span>
-</dd>
-<dt data-target-cell="annotated-cell-9" data-target-annotation="2">2</dt>
-<dd>
-<span data-code-cell="annotated-cell-9" data-code-lines="2" data-code-annotation="2">Survival functions package</span>
-</dd>
-<dt data-target-cell="annotated-cell-9" data-target-annotation="3">3</dt>
-<dd>
-<span data-code-cell="annotated-cell-9" data-code-lines="3" data-code-annotation="3">Plots survival curves package</span>
-</dd>
-<dt data-target-cell="annotated-cell-9" data-target-annotation="4">4</dt>
-<dd>
-<span data-code-cell="annotated-cell-9" data-code-lines="4" data-code-annotation="4">Applies the Kaplan-Meier Function</span>
-</dd>
-<dt data-target-cell="annotated-cell-9" data-target-annotation="5">5</dt>
-<dd>
-<span data-code-cell="annotated-cell-9" data-code-lines="5" data-code-annotation="5">Plots Survival Curve</span>
-</dd>
-<dt data-target-cell="annotated-cell-9" data-target-annotation="6">6</dt>
-<dd>
-<span data-code-cell="annotated-cell-9" data-code-lines="6" data-code-annotation="6">Adds Confidence Intervals</span>
-</dd>
-<dt data-target-cell="annotated-cell-9" data-target-annotation="7">7</dt>
-<dd>
-<span data-code-cell="annotated-cell-9" data-code-lines="7" data-code-annotation="7">Determines Median Survival Time</span>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div id="tabset-1-2">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> surg)  <span class="sc">%&gt;%</span> </span>
-<span id="cb9-2"><a></a>      <span class="fu">ggsurvfit</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
-<span id="cb9-3"><a></a>      <span class="fu">add_confidence_interval</span>() <span class="sc">+</span></span>
-<span id="cb9-4"><a></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
+
+<section>
+<section class="title-slide slide level1 agenda-slide center">
+<h1>Resources</h1>
+<div class="agenda">
+<ul>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Installation</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>R Packages</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>R Projects</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>RStudio Layout</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Scripts</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Loading Data</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Plotting</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Esquisse</p>
+</div></li>
+<li><div class="agenda-active">
+<p>Resources</p>
+</div></li>
+</ul>
 </div>
 </section>
-<section id="fitting-cox-ph-model" class="slide level2">
-<h2>Fitting Cox PH Model</h2>
-<div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Code</a></li><li><a href="#tabset-2-2">Output</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> surg)  <span class="sc">%&gt;%</span></span>
-<span id="cb10-2"><a></a>  summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div id="tabset-2-2">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> surg)  <span class="sc">%&gt;%</span></span>
-<span id="cb11-2"><a></a>  summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>#&gt; Call:
-#&gt; coxph(formula = Surv(time, status) ~ surg)
-#&gt; 
-#&gt;   n= 929, number of events= 468 
-#&gt; 
-#&gt;                                   coef exp(coef) se(coef)     z Pr(&gt;|z|)  
-#&gt; surgExtended Time Since Surgery 0.2549    1.2903   0.1008 2.529   0.0114 *
-#&gt; ---
-#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-#&gt; 
-#&gt;                                 exp(coef) exp(-coef) lower .95 upper .95
-#&gt; surgExtended Time Since Surgery      1.29      0.775     1.059     1.572
-#&gt; 
-#&gt; Concordance= 0.523  (se = 0.01 )
-#&gt; Likelihood ratio test= 6.17  on 1 df,   p=0.01
-#&gt; Wald test            = 6.39  on 1 df,   p=0.01
-#&gt; Score (logrank) test = 6.43  on 1 df,   p=0.01</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
+<section id="resources-1" class="slide level2">
+<h2>Resources</h2>
+<p><a href="https://r-graphics.org/">R Graphics Cookbook</a></p>
+<p><a href="https://r-graph-gallery.com/">R Graph Gallery</a></p>
+<p><a href="https://r-charts.com/">R Charts</a></p>
+<p><a href="https://ggplot2.tidyverse.org/">ggplot2</a></p>
+<p><a href="http://www.gradaanwr.net/">Graphical Data Analysis in R</a></p>
+<p><a href="https://rkabacoff.github.io/datavis/">Modern Data Visualization</a></p>
+</section>
+<section id="tidy-tuesday" class="slide level2">
+<h2>Tidy Tuesday</h2>
+<p>Tidy Tuesday is a weekly data visualization challenge from the <a href="https://github.com/rfordatascience/tidytuesday">Data Science Learning Community</a>.</p>
+<p>Also check out my attempts at tidy tuesday: <a href="https://www.inqs.info/ttw" class="uri">https://www.inqs.info/ttw</a></p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
+</div>
+<div class="reveal-header">
+<div class="header-logo">
+<img data-src="">
+</div>
+<div class="sc-title">
+<p> </p>
+</div>
+<div class="header-text">
+<p> </p>
+</div>
+<div class="sb-title">
+<p> </p>
 </div>
 </div>
 </section></section>
@@ -1109,7 +966,7 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
+'controlsAuto': false,
 'previewLinksAuto': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
@@ -1120,7 +977,7 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
@@ -1137,7 +994,7 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -1169,7 +1026,7 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
         center: false,
 
         // Enables touch navigation on devices with touch input
-        touch: true,
+        touch: false,
 
         // Loop the presentation
         loop: false,
