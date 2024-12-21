@@ -9,8 +9,62 @@
 <link>www.inqs.info/blog.html</link>
 <atom:link href="www.inqs.info/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.5.56</generator>
-<lastBuildDate>Tue, 31 Jan 2023 08:00:00 GMT</lastBuildDate>
+<generator>quarto-1.6.39</generator>
+<lastBuildDate>Sat, 21 Dec 2024 08:00:00 GMT</lastBuildDate>
+<item>
+  <title>R 2 Python</title>
+  <dc:creator>Isaac Quintanilla Salinas</dc:creator>
+  <link>www.inqs.info/blog/2024-12-21-r2py/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="my-programming-journey" class="level2">
+<h2 class="anchored" data-anchor-id="my-programming-journey">My Programming Journey</h2>
+<p>I first learned about programming, when I did a Biostatistics internship where we analyzed data using SAS<sup>1</sup>. This was the first time where I sent commands to a computer to conduct a task, and I thoroughly enjoyed doing this. However, when my internship was over, I no longer had access to SAS at my own institution and could not learn more about Statistics or programming because of a huge financial barrier. This is where I learned about R and it being free and open-source software. This was a game changer! I was able to learn more about statistics and programming because the ultimate barrier was removed. Yes, it was completely different from SAS, but I can learn, and no one can stop me.</p>
+<p>After <a href="https://csumb.edu/">CSUMB</a>, I went on to get my Master’s in Public Health<sup>2</sup> at <a href="https://publichealth.sdsu.edu/">San Diego State University</a> where I expanded my R skills and really got to learn how to use <a href="https://posit.co/products/open-source/rstudio/">RStudio</a>. Afterwards, I started my PhD in Applied Statistics at <a href="https://statistics.ucr.edu/">UC Riverside</a> where I refined my programming skills even further. Additionally, I learned how to program in c++, well at least via Rcpp, to efficiently complete my dissertation. As you can see, my programming journey primarily focused on langauges that helped my Statistics journey, it being R.</p>
+<p>As an Assistant Professor of Statistics at <a href="https:\www.csuci.edu">CSUCI</a> where we are planning to <a href="https://www.csuci.edu/news/releases/2024-new-bachelors-degree-data-science.htm">launch</a> a new BS in Data Science program this upcoming Fall 2025. As part of the program, we are planning to teach an Introduction to Data Science course with python, in addition to several other courses that will be taught in R or SQL. Therefore, there is a need for me to learn python and SQL to properly train my students.</p>
+<p>As I am learning python, I am not really planning to switch to it. I will still use R for all my work. In honesty, I would rather get better at c++ via rcpp, learn <a href="https://www.rust-lang.org/">rust</a>, learn <a href="https://julialang.org/">julia</a>, or truthfully get better at <a href="https://www.vim.org/">vim</a> via <a href="https://neovim.io/">neovim</a>. However, I understand that python is a popular language for data scientist, and it would be a disservice to my students if I do not learn and properly train them.</p>
+</section>
+<section id="how-will-i-learn" class="level2">
+<h2 class="anchored" data-anchor-id="how-will-i-learn">How will I learn?</h2>
+<p>Every time I began to work with python, I always dreaded it. I think because I was coming from R as a Statistician, I was always so upset on how difficult it is to begin working in python. In R, getting started is super easy: install R from <a href="https://cran.r-project.org/">CRAN</a>, install RStudio form <a href="https://posit.co/">Posit</a>, and then install R packages and there we go!. In python, it is install <a href="https://www.anaconda.com/">Anacanda</a>, use jupyter or spyder, and try to do data analysis. And so I do it for a few days, then I need to run another program, most likely R, and learn that it will no longer run due to changes in R. I later learned that Anaconda changed my system, and I would have to delete it get back to my work. I do not know what is going on with Anaconda, but changing R in my system without telling me is unacceptable<sup>3</sup>. This leads me back to the R community for solutions.</p>
+<section id="learning-python-the-r-way" class="level3">
+<h3 class="anchored" data-anchor-id="learning-python-the-r-way">Learning python, the R way!</h3>
+<p>Reading a few blog posts online, many R users learning python recommended to just simply install python, install VS Code, and have VS code point to the python version you would like to work with. Afterwards install the python libraries<sup>4</sup>, the same way as you would install R packages. Fortunately, Posit is developing their next generation Data Science IDE, called <a href="https://positron.posit.co/">Positron</a>, designed for both R and python users. What I appreciate the most is that they have <a href="https://positron.posit.co/start.html">instructions</a> to install python via <a href="https://github.com/pyenv/pyenv">pyenv</a>. As of right now, it has allowed me to learn python without changing my system. Additionally, I am able to learn positron, which is not bad at all. My only gripe is that I can not move the console to the top-right as I have it in my RStudio.</p>
+</section>
+<section id="intro-to-data-science" class="level3">
+<h3 class="anchored" data-anchor-id="intro-to-data-science">Intro to Data Science</h3>
+<p>The main mechanism I am using to learn python is by converting <a href="https://datasciencebox.org/">Data Science in a Box</a> to a python-based course instead of an R-based course. There are several reasons to do it this way. First, I understand what is going on in the course and can read the R code, so I can translate to python and know when I am making a mistake. Second, I have not found python versions of this course<sup>5</sup>; therefore, it will force me to really learn python. Third, the course is very user-friendly for our students. The topics they provide are fascinating, and I believe it is more suitable to my students. Fourth, there license is very permissable, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> for the win! Fifth, other faculty members in my department have expressed interest in teaching a Data Science course with this material. Therefore, for all these reasons, and many more, I will be learning python, well the basics at least, by converting Data Science in a Box from R to python.</p>
+<p>While I am translating/designing this course, there will be some deviations from the standard data science course. Most of decisions I will make is based on what is pedagogically more feasible for my students. For example, I will be using <a href="https://plotnine.org/">plotnine</a>, the <code>ggplot2</code> of python, to create graphics since the syntax is exactly the same as in R. Another one is using the <a href="https://pola.rs/">polars</a> library, an alternate version of <a href="https://pandas.pydata.org/">pandas</a>, for data frames due to the simple nature data manipulation<sup>6</sup>. These design changes are meant to show students what is possible without scarying them away from the field. I do not know what other changes I will make, but I am positive there will be more.</p>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>As I continue with building this Data Science Course, I will try to write blog posts writing my experiences, giving out tips, and possibly tutorials. I will also be writing about my experience with positron and a few other tools, possibly quarto<sup>7</sup>, and much more.</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Yes, I know SAS and R are not considered programming languages, but I honestly do not care. It is gate-keepery language designed to make people feel bad.↩︎</p></li>
+<li id="fn2"><p>In hindsight, this is probably my most important education. It taught me how to work with communities and to be willing to break norms when they are not working.↩︎</p></li>
+<li id="fn3"><p>On a side note: I learned that there may be licensing issues for Anaconda for Universities. So it is an out for me.↩︎</p></li>
+<li id="fn4"><p>I am not sure what packages are called in python.↩︎</p></li>
+<li id="fn5"><p>I will admit, I have not tried that hard to look for a python version of the course material↩︎</p></li>
+<li id="fn6"><p>Also, it is much faster than pandas and have and R version as well.↩︎</p></li>
+<li id="fn7"><p>I am pretty good at this.↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>r2py</category>
+  <guid>www.inqs.info/blog/2024-12-21-r2py/</guid>
+  <pubDate>Sat, 21 Dec 2024 08:00:00 GMT</pubDate>
+  <media:content url="www.inqs.info/blog/2024-12-21-r2py/test.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Wellness Plan Spring 2023</title>
   <dc:creator>Isaac Quintanilla Salinas</dc:creator>
@@ -323,7 +377,7 @@ font-style: italic;">## Using mean_cpp</span></span>
 background-color: null;
 font-style: inherit;">mean_cpp</span>(Y)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.06630559</code></pre>
+<pre><code>[1] -0.02584726</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
@@ -332,7 +386,7 @@ font-style: italic;">## Using Built-in mean functions</span></span>
 background-color: null;
 font-style: inherit;">mean</span>(Y)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.06630559</code></pre>
+<pre><code>[1] -0.02584726</code></pre>
 </div>
 </div>
 <p>To see the speed gains, we can use the <code>mark()</code> function from the <code>bench</code> package.</p>
@@ -353,8 +407,8 @@ font-style: inherit;">mean_cpp</span>(Y)</span>
 <pre><code># A tibble: 2 × 6
   expression       min   median `itr/sec` mem_alloc `gc/sec`
   &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;
-1 mean(Y)       3.23µs   3.47µs   270847.        0B     27.1
-2 mean_cpp(Y)   1.35µs    1.4µs   694640.    5.17KB      0  </code></pre>
+1 mean(Y)       3.32µs   3.79µs   231640.        0B        0
+2 mean_cpp(Y)   1.35µs   1.56µs   615851.    5.17KB        0</code></pre>
 </div>
 </div>
 <p>You can see that the cpp function is much faster than the R built-in function.</p>
@@ -390,6 +444,440 @@ font-style: inherit;">mean_cpp</span>(Y)</span>
   <guid>www.inqs.info/blog/2021-04-20-incorporating-rcpp/</guid>
   <pubDate>Sat, 01 May 2021 07:00:00 GMT</pubDate>
   <media:content url="www.inqs.info/blog/2021-04-20-incorporating-rcpp/BB2.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Rcpp Functions</title>
+  <dc:creator>Isaac Quintanilla</dc:creator>
+  <link>www.inqs.info/blog/2021-05-01-rcpp-functions/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="journey" class="level2">
+<h2 class="anchored" data-anchor-id="journey">Journey</h2>
+<p>When I was implementing <a href="http://dirk.eddelbuettel.com/code/rcpp.armadillo.html">RcppArmadillo</a>, there were a couple scenarios where I couldn’t find an easy function for a certain result. This is partly due to strictly sticking with the <a href="http://arma.sourceforge.net/">Armadillo</a> library for all my needs. I built functions to resolve these issues. However, I got to the point where I couldn’t rely on the armadillo library to compute the needed value. I needed to compute the value from the inverse cumulative distribution function (iCDF) of a standard normal distribution. The armadillo library is only for linear algebra and scientific computing. It did not have any distribution functions<sup>1</sup>. Therefore, I needed to find a solution to my problem.</p>
+<p>Hadley Wickham’s <a href="https://adv-r.hadley.nz/">book</a> describes how to use R functions in cpp code. However, I worried that this may computationally taxing by switching from one language to another. Therefore, I searched for potential solutions to compute the iCDF of a normal distribution. This has brought me to this incredible website: <a href="https://teuder.github.io/rcpp4everyone_en/">Rcpp for everyone</a>.</p>
+<p>Rcpp for everyone is an excellent website that provides the complete basics of using cpp in R. It is comprehensive that can answer the majority<sup>2</sup> of your questions when implementing Rcpp. Highly recommend reading it before you implement Rcpp in your code.</p>
+<p>To obtain the iCDF, I needed to use the <a href="https://teuder.github.io/rcpp4everyone_en/310_Rmath.html">R Math Library</a><sup>3</sup>. This library seems to be loaded when you included in the <code>Rcpp.h</code> file. However, you will need to include the line <code>using namespace R</code> or <code>R::</code> in your cpp code. Below is an example of making <code>qnorm</code> executable in R:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1">double qnorm_cpp(double p, double mean, double sd, int lower, int log){</span>
+<span id="cb1-2">  double val = R::qnorm(p, mean, sd, lower, log);</span>
+<span id="cb1-3">  return val;</span>
+<span id="cb1-4">}</span></code></pre></div>
+<p>Now it can be used to obtain the iCDF of a standard normal distribution:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">qnorm_cpp</span>(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">qnorm</span>(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0</code></pre>
+</div>
+</div>
+<p>For my research, I didn’t need create an executable function for R. However, I did worry about compatibility issues with the Armadillo library. Fortunately, the function returns a double value making it easy to work with.</p>
+<p>Once I learned about these different functions, I decided to clean my cpp code with a couple of other functions. For example, I needed to take the factorial of a number. The Armadillo library does not provide a useful function. Therefore, I wrote a function:</p>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1">double fact (int x){</span>
+<span id="cb6-2">  if (x == 0){</span>
+<span id="cb6-3">    return 1;</span>
+<span id="cb6-4">  } else if (x == 1){</span>
+<span id="cb6-5">    return 1;</span>
+<span id="cb6-6">  } else {</span>
+<span id="cb6-7">    int ide = x - 1;</span>
+<span id="cb6-8">    arma::vec ff = linspace(1, x, x);</span>
+<span id="cb6-9">    arma::vec ccpp = cumprod(ff);</span>
+<span id="cb6-10">    double post = ccpp[ide];</span>
+<span id="cb6-11">    return post;</span>
+<span id="cb6-12">  }</span>
+<span id="cb6-13">}</span></code></pre></div>
+<p>As you can see, it isn’t a pretty function. However the Rcpp provides the following function: <code>factorial</code><sup>4</sup>. Below is the implementation of the function to obtain a double value:</p>
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1">double fact_cpp(double x){</span>
+<span id="cb7-2">  NumericVector y = NumericVector::create(x);</span>
+<span id="cb7-3">  double val = Rcpp::factorial(y)[0];</span>
+<span id="cb7-4">  return val;</span>
+<span id="cb7-5">}</span></code></pre></div>
+<p>Below is code to benchmark the 2 functions:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">bench<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mark</span>(</span>
+<span id="cb8-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fact</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>),</span>
+<span id="cb8-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fact_cpp</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>)</span>
+<span id="cb8-4">)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 6
+  expression       min   median `itr/sec` mem_alloc `gc/sec`
+  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;
+1 fact(5)        476ns    541ns  1330868.        0B     133.
+2 fact_cpp(5)    543ns    608ns  1364437.        0B       0 </code></pre>
+</div>
+</div>
+<p>Notice the Rcpp function is slightly faster than my Armadillo implementation.</p>
+</section>
+<section id="rcpp-functions" class="level2">
+<h2 class="anchored" data-anchor-id="rcpp-functions">Rcpp Functions</h2>
+<p>For more accurate information, I highly recommend looking Rcpp for everyone’s <a href="https://teuder.github.io/rcpp4everyone_en/230_R_function.html">Chapter 23</a> and <a href="https://teuder.github.io/rcpp4everyone_en/310_Rmath.html">Chapter 31</a>. I will talk about certain functions I think are important to know.</p>
+<section id="distributions" class="level3">
+<h3 class="anchored" data-anchor-id="distributions">Distributions</h3>
+<p>As the same with R, the R Math library and Rcpp contain four different functions for each distribution. The letter at the beginning of the distribution indicates the functions capabilities.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 88%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Letter</th>
+<th style="text-align: left;">Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>dXXX</code></td>
+<td style="text-align: left;">returns the height of the probability density function</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>pXXX</code></td>
+<td style="text-align: left;">returns the cumulative density function value</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>qXXX</code></td>
+<td style="text-align: left;">returns the inverse cumulative density function (percentiles)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>rXXX</code></td>
+<td style="text-align: left;">returns a randomly generated number</td>
+</tr>
+</tbody>
+</table>
+<section id="rcpp" class="level4">
+<h4 class="anchored" data-anchor-id="rcpp">Rcpp</h4>
+<p>The Rcpp distribution functions are vectorized to accept and return vector. The tables below provide more details about each function.</p>
+<p><em>dXXX</em></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Argument</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>x</code></td>
+<td style="text-align: left;">NumericVector</td>
+<td style="text-align: left;">random variable</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>par</code></td>
+<td style="text-align: left;">double</td>
+<td style="text-align: left;">parameters</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>log</code></td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">return log value</td>
+</tr>
+</tbody>
+</table>
+<p><em>pXXX</em></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Argument</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>q</code></td>
+<td style="text-align: left;">NumericVector</td>
+<td style="text-align: left;">random variable</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>par</code></td>
+<td style="text-align: left;">double</td>
+<td style="text-align: left;">parameters</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>lower</code></td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">return lower value</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>log</code></td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">return log value</td>
+</tr>
+</tbody>
+</table>
+<p><em>qXXX</em></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Argument</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>p</code></td>
+<td style="text-align: left;">NumericVector</td>
+<td style="text-align: left;">probability</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>par</code></td>
+<td style="text-align: left;">double</td>
+<td style="text-align: left;">parameters</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>lower</code></td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">return lower value</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>log</code></td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">return log value</td>
+</tr>
+</tbody>
+</table>
+<p><em>rXXX</em></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Argument</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>n</code></td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">number of random variables</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>par</code></td>
+<td style="text-align: left;">double</td>
+<td style="text-align: left;">parameters</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="r" class="level4">
+<h4 class="anchored" data-anchor-id="r">R</h4>
+<p>The R Math library distribution functions return scalar values. The tables below describe the functions in more detail.</p>
+<p><em>dXXX</em></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Argument</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>x</code></td>
+<td style="text-align: left;">double</td>
+<td style="text-align: left;">random variable</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>par</code></td>
+<td style="text-align: left;">double</td>
+<td style="text-align: left;">parameters</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>log</code></td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">return log value</td>
+</tr>
+</tbody>
+</table>
+<p><em>pXXX</em></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Argument</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>q</code></td>
+<td style="text-align: left;">double</td>
+<td style="text-align: left;">random variable</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>par</code></td>
+<td style="text-align: left;">double</td>
+<td style="text-align: left;">parameters</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>lower</code></td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">return lower value</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>log</code></td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">return log value</td>
+</tr>
+</tbody>
+</table>
+<p><em>qXXX</em></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Argument</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>p</code></td>
+<td style="text-align: left;">NumericVector</td>
+<td style="text-align: left;">probability</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>par</code></td>
+<td style="text-align: left;">double</td>
+<td style="text-align: left;">parameters</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>lower</code></td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">return lower value</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>log</code></td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">return log value</td>
+</tr>
+</tbody>
+</table>
+<p><em>rXXX</em></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Argument</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>par</code></td>
+<td style="text-align: left;">double</td>
+<td style="text-align: left;">parameters</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="available-distributions" class="level4">
+<h4 class="anchored" data-anchor-id="available-distributions">Available Distributions</h4>
+<p>The table below describe a select number of distribution functions available in R and Rcpp.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">code</th>
+<th style="text-align: left;">Distributions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">unif</td>
+<td style="text-align: left;">Uniform Distribution</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">norm</td>
+<td style="text-align: left;">Normal Distribution</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">chisq</td>
+<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?%5Cchi%C2%B2"> Distribution</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t</td>
+<td style="text-align: left;">t Distribution</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">f</td>
+<td style="text-align: left;">F Distribution</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">exp</td>
+<td style="text-align: left;">Exponential Distribution</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">binom</td>
+<td style="text-align: left;">Binomial Distribution</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pois</td>
+<td style="text-align: left;">Poisson Distribution</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<section id="next-steps-.." class="level2">
+<h2 class="anchored" data-anchor-id="next-steps-..">Next steps ..</h2>
+<p>I don’t know</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>I didn’t find any in its documentation.↩︎</p></li>
+<li id="fn2"><p>If not all.↩︎</p></li>
+<li id="fn3"><p>For more information about the R Math Library, click <a href="https://cran.r-project.org/doc/manuals/r-release/R-admin.html#The-standalone-Rmath-library">here</a>.↩︎</p></li>
+<li id="fn4"><p>Note that this is misspelled in Rcpp for everyone.↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>RCPP</category>
+  <guid>www.inqs.info/blog/2021-05-01-rcpp-functions/</guid>
+  <pubDate>Sat, 01 May 2021 07:00:00 GMT</pubDate>
+  <media:content url="www.inqs.info/blog/2021-05-01-rcpp-functions/JT7.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Rcpp and Research</title>

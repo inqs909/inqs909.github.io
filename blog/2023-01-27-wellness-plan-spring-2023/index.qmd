@@ -18,7 +18,7 @@ knitr:
 
 Before designing a wellness plan, I need to assess all areas of my life and see what I can improve. Below is a list of areas that are important to me:
 
-::: columns
+::::: columns
 ::: {.column width="40%"}
 -   Mental
 
@@ -38,7 +38,7 @@ Before designing a wellness plan, I need to assess all areas of my life and see 
 
 -   Career
 :::
-:::
+:::::
 
 While there are many other aspects of my life that I would like to improve on, this is a good starting point for this semester.
 
@@ -46,7 +46,7 @@ While there are many other aspects of my life that I would like to improve on, t
 
 Looking at the areas that I want to focus on, I want to create realistic goals. Additionally, each goal can satisfy multiple aspects of my life. I will use SMART goals to ensure [SMART](https://www.ucop.edu/local-human-resources/_files/performance-appraisal/How%20to%20write%20SMART%20Goals%20v2.pdf) goals to make sure I create achievable goals. The period for all the goals is the Spring semester.
 
-::: panel-tabset
+:::::::: panel-tabset
 ## Goal 1
 
 ::: {.callout-note icon="false"}
@@ -96,7 +96,7 @@ I will go to the gym three times a week for 1 hour.
 :::
 
 Similar to swimming, I want to develop new habits and exercise more. Developing this habit and going to the gym more will help my physical health.
-:::
+::::::::
 
 ## Plan
 

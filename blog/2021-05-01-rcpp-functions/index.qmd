@@ -3,7 +3,7 @@ title: "Rcpp Functions"
 description: "I describe some of the functions available in Rcpp. If you want to get straight to the material, go to Rcpp Functions."
 author: "Isaac Quintanilla"
 date: 2021-05-01
-draft: true
+draft: false
 categories: 
   - RCPP
 image: "JT7.jpg"
@@ -13,7 +13,6 @@ knitr:
     message: false
     warning: false
 ---
-
 
 ```{Rcpp}
 #| eval: true
@@ -247,8 +246,6 @@ The table below describe a select number of distribution functions available in 
 | exp   | Exponential Distribution |
 | binom | Binomial Distribution    |
 | pois  | Poisson Distribution     |
-
-### apply functions
 
 ## Next steps ..
 

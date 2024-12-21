@@ -8,6 +8,7 @@ description: "A post describing why I decided to use Rcpp for my research."
 summary: "A post describing why I decided to use Rcpp for my research."
 draft: false
 image: "BL3.jpg"
+freeze: true
 ---
 
 This is the first post of my "Rcpp" collection detailing my journey with Rcpp. The "Rcpp" collection contains information about the struggles I faced while implementing Rcpp. Even though my first venture to Rcpp happened in the Summer of 2020, I realized I am learning new things every day. I thought it would be wised to write a blog of everything I have and will learn with Rcpp. I hope this collection will guide other students who have never used c++ before.

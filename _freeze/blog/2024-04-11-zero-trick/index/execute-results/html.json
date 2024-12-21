@@ -1,0 +1,15 @@
+{
+  "hash": "e05d05738bb8f6f2b44f3a722bcbb52b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"The 'Zero-Trick' in Bayesian Survival Analysis\"\nauthor: \"Isaac Quintanilla Salinas\"\ndescription: \"The zero-trick explained in bayesian survival analysis.\"\ndraft: true\ndate: 2024-01-31\nimage: ci.jpg\ncategories: \n  - Statistics\nknitr:\n  opts_chunk: \n    echo: true\n    message: false\n    warning: false\n---\n\n\n\n## Introduction\n\nMy dissertation at UC Riverside focused on modeling joint longitudinal-survival models from a frequentist approach. While there were some benefit estimating the parameters using the [EM Algorithm](https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm), there were several challenges that I wanted to overcome. And Bayesian approach had better capabilities at solving those problems.\n\nNow that I am working on expanding my skills as a statistician, I can't help but wanting to estimate my model using a Bayesian approach. So I set off to read every paper that implemented the joint longitudinal-survival model in a Bayesian framework. And while I was reading other statisticians code to implement their models on github, I always encountered the 'Zero-Trick' to model the survival component.\n\n## Bayesian Survival Model",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
