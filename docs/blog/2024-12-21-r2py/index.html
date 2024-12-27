@@ -92,34 +92,48 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../../courses.html"> 
-<span class="menu-text">Courses</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academic" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Academic</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-academic">    
+        <li>
+    <a class="dropdown-item" href="../../courses.html">
+ <span class="dropdown-text">Courses</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../projects.html"> 
-<span class="menu-text">Projects</span></a>
+        <li>
+    <a class="dropdown-item" href="../../projects.html">
+ <span class="dropdown-text">Projects</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../presentations.html"> 
-<span class="menu-text">Presentations</span></a>
+        <li>
+    <a class="dropdown-item" href="../../presentations.html">
+ <span class="dropdown-text">Presentations</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../cv.html"> 
-<span class="menu-text">Curriculum Vitae</span></a>
+        <li>
+    <a class="dropdown-item" href="../../cv.html">
+ <span class="dropdown-text">Curriculum Vitae</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../blog.html"> 
-<span class="menu-text">Blog</span></a>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-other" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Other</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-other">    
+        <li>
+    <a class="dropdown-item" href="../../blog.html">
+ <span class="dropdown-text">Blog</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../books.html"> 
-<span class="menu-text">Reading List</span></a>
+        <li>
+    <a class="dropdown-item" href="../../books.html">
+ <span class="dropdown-text">Reading List</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../photos.html"> 
-<span class="menu-text">Photos</span></a>
+        <li>
+    <a class="dropdown-item" href="../../photos.html">
+ <span class="dropdown-text">Photos</span></a>
   </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="https://inqs909.r-universe.dev"> 
 <span class="menu-text">R-Universe</span></a>
@@ -153,6 +167,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#intro-to-data-science" id="toc-intro-to-data-science" class="nav-link" data-scroll-target="#intro-to-data-science">Intro to Data Science</a></li>
   </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#disclaimer" id="toc-disclaimer" class="nav-link" data-scroll-target="#disclaimer">Disclaimer</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul>
 </nav>
     </div>
@@ -203,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
 <p>I first learned about programming, when I did a Biostatistics internship where we analyzed data using SAS<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. This was the first time where I sent commands to a computer to conduct a task, and I thoroughly enjoyed doing this. However, when my internship was over, I no longer had access to SAS at my own institution and could not learn more about Statistics or programming because of a huge financial barrier. This is where I learned about R and it being free and open-source software. This was a game changer! I was able to learn more about statistics and programming because the ultimate barrier was removed. Yes, it was completely different from SAS, but I can learn, and no one can stop me.</p>
 <p>After <a href="https://csumb.edu/">CSUMB</a>, I went on to get my Master’s in Public Health<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> at <a href="https://publichealth.sdsu.edu/">San Diego State University</a> where I expanded my R skills and really got to learn how to use <a href="https://posit.co/products/open-source/rstudio/">RStudio</a>. Afterwards, I started my PhD in Applied Statistics at <a href="https://statistics.ucr.edu/">UC Riverside</a> where I refined my programming skills even further. Additionally, I learned how to program in c++, well at least via Rcpp, to efficiently complete my dissertation. As you can see, my programming journey primarily focused on langauges that helped my Statistics journey, it being R.</p>
 <p>As an Assistant Professor of Statistics at <a href="https:\www.csuci.edu">CSUCI</a> where we are planning to <a href="https://www.csuci.edu/news/releases/2024-new-bachelors-degree-data-science.htm">launch</a> a new BS in Data Science program this upcoming Fall 2025. As part of the program, we are planning to teach an Introduction to Data Science course with python, in addition to several other courses that will be taught in R or SQL. Therefore, there is a need for me to learn python and SQL to properly train my students.</p>
-<p>As I am learning python, I am not really planning to switch to it. I will still use R for all my work. In honesty, I would rather get better at c++ via rcpp, learn <a href="https://www.rust-lang.org/">rust</a>, learn <a href="https://julialang.org/">julia</a>, or truthfully get better at <a href="https://www.vim.org/">vim</a> via <a href="https://neovim.io/">neovim</a>. However, I understand that python is a popular language for data scientist, and it would be a disservice to my students if I do not learn and properly train them.</p>
+<p>As I am learning python, I am not really planning to switch to it. I will still use R for all my work. In honesty, I would rather get better at c++ via rcpp, learn <a href="https://www.rust-lang.org/">rust</a>, learn <a href="https://julialang.org/">julia</a>, or truthfully get better at <a href="https://www.vim.org/">vim</a> via <a href="https://neovim.io/">neovim</a>. However, I understand that python is a popular language for data scientists, and it would be a disservice to my students if I do not learn and properly train them.</p>
 </section>
 <section id="how-will-i-learn" class="level2">
 <h2 class="anchored" data-anchor-id="how-will-i-learn">How will I learn?</h2>
@@ -216,11 +232,32 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="intro-to-data-science">Intro to Data Science</h3>
 <p>The main mechanism I am using to learn python is by converting <a href="https://datasciencebox.org/">Data Science in a Box</a> to a python-based course instead of an R-based course. There are several reasons to do it this way. First, I understand what is going on in the course and can read the R code, so I can translate to python and know when I am making a mistake. Second, I have not found python versions of this course<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>; therefore, it will force me to really learn python. Third, the course is very user-friendly for our students. The topics they provide are fascinating, and I believe it is more suitable to my students. Fourth, there license is very permissable, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> for the win! Fifth, other faculty members in my department have expressed interest in teaching a Data Science course with this material. Therefore, for all these reasons, and many more, I will be learning python, well the basics at least, by converting Data Science in a Box from R to python.</p>
 <p>While I am translating/designing this course, there will be some deviations from the standard data science course. Most of decisions I will make is based on what is pedagogically more feasible for my students. For example, I will be using <a href="https://plotnine.org/">plotnine</a>, the <code>ggplot2</code> of python, to create graphics since the syntax is exactly the same as in R. Another one is using the <a href="https://pola.rs/">polars</a> library, an alternate version of <a href="https://pandas.pydata.org/">pandas</a>, for data frames due to the simple nature data manipulation<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. These design changes are meant to show students what is possible without scarying them away from the field. I do not know what other changes I will make, but I am positive there will be more.</p>
+<p>Lastly, as I am part of the <a href="https://sites.google.com/view/socaldatasci/home">Southern California Consortium for Data Science</a>, I will try to incorporate their recommendations in the course.</p>
 </section>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>As I continue with building this Data Science Course, I will try to write blog posts writing my experiences, giving out tips, and possibly tutorials. I will also be writing about my experience with positron and a few other tools, possibly quarto<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>, and much more.</p>
+</section>
+<section id="disclaimer" class="level2">
+<h2 class="anchored" data-anchor-id="disclaimer">Disclaimer</h2>
+<p>While I do want these posts to highlight my raw experiences, they will be edited from time to time to ensure that R programmers will properly learn how to use python from a statisticians perspective. However, at the end of each post, there will be a reflection that will not change from the original post.</p>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<p>Here are some resources that I found useful. I will be updating it as I learn more about python and positron.</p>
+<ul>
+<li>Positron
+<ul>
+<li><a href="https://blog.stephenturner.us/p/r-package-development-in-positron">R Package Development</a></li>
+</ul></li>
+<li>Conversion Guides
+<ul>
+<li><a href="https://www.mit.edu/~amidi/teaching/data-science-tools/conversion-guide/r-python-data-manipulation/">Conversion R and Python</a></li>
+<li><a href="https://blog.tidy-intelligence.com/posts/dplyr-vs-polars/#work-with-groups-of-rows">dplyr vs polars</a></li>
+<li><a href="https://blog.tidy-intelligence.com/posts/dplyr-vs-pandas/">dplyr vs pandas</a></li>
+</ul></li>
+</ul>
 
 
 </section>

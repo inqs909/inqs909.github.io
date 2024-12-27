@@ -4,8 +4,8 @@ editor_options:
   chunk_output_type: console
 ---
 
-::: container
-::: grid
+:::::: container
+::::: grid
 ::: {.g-col-12 .g-col-md-6}
 ![](img/avatar.jpg){.rounded-circle fig-align="center" width="60%"}
 
@@ -23,11 +23,11 @@ Isaac Quintanilla Salinas is a graduate from the [Department of Statistics](http
 
 Dr. Quintanilla Salinas research focuses on developing statistical models to understand the association between survival and longitudinal outcomes. His dissertation "Multilevel Time-Varying Joint Models for Longitudinal and Survival Outcomes" develops a novel model to address challenges of modeling dependent outcomes. Additionally, Dr. Quintanilla Salinas collaborates with several researchers at different institutions in the fields of Public Health, Psychology, Biology, Geographic Information Systems, and Education.
 :::
-:::
-:::
+:::::
+::::::
 
-::: content-block
-::: features
+:::::: content-block
+::::: features
 ::: {.feature .box}
 ### Education
 
@@ -55,5 +55,5 @@ Dr. Quintanilla Salinas research focuses on developing statistical models to und
 
 -   Algorithmic Bias
 :::
-:::
-:::
+:::::
+::::::

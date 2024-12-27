@@ -1,0 +1,354 @@
+---
+title: "Basic Python Programming"
+date: 2024-12-26
+description: "Basics of Python Programming."
+author: "Isaac Quintanilla Salinas"
+draft: false
+editor: source
+categories: 
+  - r2py
+image: "test.jpg"
+knitr:
+  opts_chunk: 
+    echo: true
+    message: false
+    warning: false
+---
+
+## Introduction
+
+When writing this post, I realize how difficult it will be for me to create a comprehensive tutorial about Python. There are things I learned along the way that makes it easier for me to pick up Python from programming in R, and most importantly c++. For example, Python's indexing begins with 0 instead of 1, python does not uses braces for code blocks, or how functions can be applied to objects. This makes it easier for me to learn programming in python. However, I certainly struggled with these topics when first learning about it, but I managed to learn it. And I believe anyone can as well.
+
+
+Most of the material I talk about can be found in Wes McKinney's [Python for Data Analysis](https://wesmckinney.com/book/); specifically, in Chapter 2, 3, and 4.
+
+
+### Loaded Modules
+
+```{python}
+import math
+import numpy as np
+```
+
+## Python as a calculator
+
+This is almost a direct copy of my own tutorial written in R. Notice how several of the commands you learned in R also work in Python, with some slight deviations.
+
+
+### Calculator
+
+This section focuses on the basic calculation that can be done in R. This is done by using different operators in Python. The table below provides some of the basic operators Python can use:
+
+| Operator    | Description        |
+|:------------|:-------------------|
+| `+`         | Addition           |
+| `-`         | Subtraction        |
+| `*`         | Multiplication     |
+| `/`         | Divides            |
+| `**`        | Exponentiate       |
+| `?`         | Help Documentation |
+
+
+#### Addition
+
+To add numbers in R, all you need to use the `+` operator. For example $2 + 2 = 4$. When you type it in R you have:
+
+```{python}
+2 + 2
+```
+
+When you ask R to perform a task, it prints out the result of the task. As we can see above, R prints out the number 4.
+
+To add more than 2 numbers, you can simply just type it in.
+
+```{python}
+2 + 2 + 2
+```
+
+This provides the number 6.
+
+#### Subtraction
+
+To subtract numbers, you need to use the `-` operator. Try `4 - 2`:
+
+```{python}
+4 - 2
+```
+
+Try `4 - 6 - 4`
+
+```{python}
+4 - 6 - 4
+```
+
+Notice that you get a negative number.
+
+Now try `4 + 4 - 2 + 8`:
+
+```{python}
+4 + 4 - 2 + 8
+```
+
+#### Multiplication
+
+To multiply numbers, you will need to use the `*` operator. Try `4 * 4`:
+
+```{python}
+4 * 4
+```
+
+#### Division
+
+To divide numbers, you can use the `/` operator. Try `9 / 3`:
+
+```{python}
+9 / 3
+```
+
+#### Exponents
+
+To exponentiate a number to the power of another number, you can use the `**` operator. Try `2**5`:
+
+```{python}
+2**5
+```
+
+
+#### Roots
+
+To take the n-th root of a value, use the `**` operator with the `/` operator to take the n-th root. For example, to take $\sqrt[5]{35}$, type `32**(1/5)`:
+
+```{python}
+32**(1/5)
+```
+
+#### Logarithms
+
+We will use the `math` module for mathematical functions:
+
+```{python}
+#| eval: false
+
+import math
+```
+
+To take the natural logarithm of a value, you will use the `math.log()` function. Try `math.log(5)`:
+
+```{python}
+math.log(5, 10)
+```
+
+If you want to take the logarithm of a different base, you will use the `math.log(X, Y)`, where `X` is the number you wish to take the logarithm and `Y` is the base of the log^[I tried to type the argument `Base=` but did not work].
+
+
+If you want to find $e^5$, you will use the `math.exp()` function. Try `math.exp(2)`:
+
+```{python}
+math.exp(2)
+```
+
+
+### Comparing Numbers {#sec-comparing-numbers}
+
+Another important part of R is comparing numbers. When you compare two numbers, R will tell if the statement is `True` or `False`. Below are the different comparisons you can make:
+
+| Operator | Description           |
+|----------|-----------------------|
+| `>`      | Greater Than          |
+| `<`      | Less Than             |
+| `>=`     | Greater than or equal |
+| `<=`     | Less than or equal    |
+| `==`     | Equals                |
+| `!=`     | Not Equals            |
+
+#### Less than/Greater than
+
+To check if one number is less than or greater than another number, you will use the `>` or `<` operators. Try `5 > 4`:
+
+```{python}
+5 > 4
+```
+
+Notice that R states it's true. It evaluates the expression and tells you if it's true or not. Try `5 < 4`:
+
+```{python}
+5 < 4
+```
+
+Notice that R tells you it is false.
+
+#### Less than or equal to/Greater than or equal to
+
+To check if one number is less than or equal to/greater than or equal to another number, you will use the `>=` or `<=` operators. Try `5 >= 5`:
+
+```{python}
+5 >= 5
+```
+
+Try `5 >= 4`:
+
+```{python}
+5 >= 4
+```
+
+Try `5 <= 4`
+
+```{python}
+5 <= 4
+```
+
+#### Equals and Not Equals
+
+To check if 2 numbers are equal to each other, you can use the `==` operator. Try `3 == 3`:
+
+```{python}
+3 == 3
+```
+
+Try `4 == 3`
+
+```{python}
+3 == 4
+```
+
+Another way to see if 2 numbers are not equal to each other, you can use the `!=`. Try `3 != 4`:
+
+```{python}
+3 != 4
+```
+
+Try `3 != 3`:
+
+```{python}
+3 != 3
+```
+
+You may be asking why use `!=` instead of `==`. They both provides similar results. Well the reason is that you may need the `True` output for analysis. One is only true when they are equal, while the other is true when they are not equal.
+
+In general, the `!` operator means not or opposite. It can be used to change an `True` to a `False` and vice-versa.
+
+## Modules and Functions
+
+As I am learning Python, I am noticing the importance of modules since it extends the functionality of Python, the same way as R packages do. Base Python, is very bare-bones. I think the reason being is that R loads several packages up for your own use, I assumed Python would load a bit more. Anyways, we need to load modules for more functionality.
+
+### Load a Module
+
+The `import` command will load up a module. The 
+
+```{python}
+#| eval: false
+
+import math
+import numpy as np
+```
+
+## Tuples and Lists
+
+After getting a handle of python with basic computations and basic modules, my next urging was to create a vector in the same way that I do it in R. After researching around, I noticed that Python had these vector-like objects called Tuple and Lists. The main differenece is that Tuples are immutable (cannot alter) and Lists are mutable (can alter). 
+
+To create a Tuple, we name an object, use the `=` sign, list a set of values (seperated by commas), and surround the lists by paranthesis `()`.
+
+```{python}
+a = (1, 2, 3, 4, 5)
+```
+
+To create a List, we follow the same format as a Tuple, but change the paranthesis to square brackets:
+
+```{python}
+b = [1, 2, 3, 4, 5]
+```
+
+
+Now if you try to perform an operation to a Tuple or List, you will get an error:
+
+```{python}
+#| error: true
+a+5
+b+8
+```
+
+Other operations may lead to other things:
+
+```{python}
+a*5
+b*5
+```
+
+As you can see, you cannot treat this as the traditional vector from R, this has lead me to look at arrays from Numpy.
+
+## Numpy
+
+Numpy, or Numerical Python, is a Python module used for scientific computing. From what I can tell, you conduct computational tasks on a Numpy array. This makes me think that Numpy is closest to vector a matrix operations from R.
+
+### Create a Numpy Array
+
+To create a numpy array, we will input a list into the function `np.array`:
+
+```{python}
+c = np.array([1,2,3,4,5])
+```
+
+Printing out `c` will display the array:
+
+```{python}
+c
+```
+
+We can do some basic operations on the array:
+
+```{python}
+c + 2
+c/2
+c*2
+```
+
+
+Additionally, we can apply basic functions to the object `c`:
+
+```{python}
+c.shape
+c.mean()
+c.sum()
+np.median(c)
+```
+
+Notice how some functions, like `shape`, and be provided after the object (seperated by a period) without paranthesis. Other objects need the paranthesis to be executed. You can also type the name of the function first, and put the object in the paranthesis.
+
+### Indexing a Numpy Array
+
+We can index the array `c` using the square brackets on the object:
+
+
+```{python}
+c[0]
+c[2]
+c[0:2]
+c[0:3]
+```
+
+For the code block above, we notice a few things. First is that indexing stats with 0. Second, when we are indexing sequential values using the `:` operator^[The same as R.], it does not return the last element indicated on the right of the colon.
+
+Now, let's create a new array called `d` which is a subset of `c[0:3]`:
+
+```{python}
+d = c[0:3]
+d
+```
+
+We have a new array with the first 3 elements. Now let's change the second value of `d` to 909.
+
+```{python}
+d[1] = 909
+d
+```
+
+It goes as expected. Let's print out `c`:
+
+
+```{python}
+c
+```
+
+Notice how `c` now contains the value 909, even though that `d` was the only one changed. This is because Python creates the object, and the names of those objects (`c` and `d`) point and/or transform that object as necessary. Any changes to one named object will change the overall object. It does not create a new object like in R.
+
+After I learned this, I did not know how I feel about this. I personally liked the R's way to copy and paste objects, which allowed me to manipulate something without having to worry about changing the original. After some thinking, I don't think I liked it, but that could be because I am stuck in my ways. There may be some advantages on how Python treats objects, but as of right now, I do not know.

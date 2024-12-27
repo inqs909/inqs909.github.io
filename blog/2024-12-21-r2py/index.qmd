@@ -23,7 +23,7 @@ After [CSUMB](https://csumb.edu/), I went on to get my Master's in Public Health
 
 As an Assistant Professor of Statistics at [CSUCI](https:\\www.csuci.edu) where we are planning to [launch](https://www.csuci.edu/news/releases/2024-new-bachelors-degree-data-science.htm) a new BS in Data Science program this upcoming Fall 2025. As part of the program, we are planning to teach an Introduction to Data Science course with python, in addition to several other courses that will be taught in R or SQL. Therefore, there is a need for me to learn python and SQL to properly train my students.
 
-As I am learning python, I am not really planning to switch to it. I will still use R for all my work. In honesty, I would rather get better at c++ via rcpp, learn [rust](https://www.rust-lang.org/), learn [julia](https://julialang.org/), or truthfully get better at [vim](https://www.vim.org/) via [neovim](https://neovim.io/). However, I understand that python is a popular language for data scientist, and it would be a disservice to my students if I do not learn and properly train them.
+As I am learning python, I am not really planning to switch to it. I will still use R for all my work. In honesty, I would rather get better at c++ via rcpp, learn [rust](https://www.rust-lang.org/), learn [julia](https://julialang.org/), or truthfully get better at [vim](https://www.vim.org/) via [neovim](https://neovim.io/). However, I understand that python is a popular language for data scientists, and it would be a disservice to my students if I do not learn and properly train them.
 
 
 ## How will I learn?
@@ -40,6 +40,27 @@ The main mechanism I am using to learn python is by converting [Data Science in 
 
 While I am translating/designing this course, there will be some deviations from the standard data science course. Most of decisions I will make is based on what is pedagogically more feasible for my students. For example, I will be using [plotnine](https://plotnine.org/), the `ggplot2` of python, to create graphics since the syntax is exactly the same as in R. Another one is using the [polars](https://pola.rs/) library, an alternate version of [pandas](https://pandas.pydata.org/), for data frames due to the simple nature data manipulation^[Also, it is much faster than pandas and have and R version as well.]. These design changes are meant to show students what is possible without scarying them away from the field. I do not know what other changes I will make, but I am positive there will be more.
 
+Lastly, as I am part of the [Southern California Consortium for Data Science](https://sites.google.com/view/socaldatasci/home), I will try to incorporate their recommendations in the course.
+
 ## Conclusion
 
 As I continue with building this Data Science Course, I will try to write blog posts writing my experiences, giving out tips, and possibly tutorials. I will also be writing about my experience with positron and a few other tools, possibly quarto^[I am pretty good at this.], and much more.
+
+## Updates
+
+While I do want these posts to highlight my raw experiences, they will be edited from time to time to ensure that R programmers will properly learn how to use python from a statisticians perspective. However, at the end of each post, there will be a reflection that will not change from the original post.
+
+## Resources
+
+Here are some resources that I found useful. I will be updating it as I learn more about python and positron.
+
+- Positron
+  - [R Package Development](https://blog.stephenturner.us/p/r-package-development-in-positron)
+  - [GitHub Discussions](https://github.com/posit-dev/positron/discussions)
+  - [VS Code Help](https://code.visualstudio.com/docs/introvideos/basics)
+  - [VS Code Basics Videos](https://code.visualstudio.com/docs/getstarted/introvideos)
+
+- Conversion Guides
+    - [Conversion R and Python](https://www.mit.edu/~amidi/teaching/data-science-tools/conversion-guide/r-python-data-manipulation/)
+    - [dplyr vs polars](https://blog.tidy-intelligence.com/posts/dplyr-vs-polars/#work-with-groups-of-rows)
+    - [dplyr vs pandas](https://blog.tidy-intelligence.com/posts/dplyr-vs-pandas/)

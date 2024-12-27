@@ -17,13 +17,17 @@ website:
   site-url: www.inqs.info
   navbar:
     right:
-      - courses.qmd
-      - projects.qmd
-      - presentations.qmd
-      - cv.qmd
-      - blog.qmd
-      - books.qmd
-      - photos.qmd
+      - text: "Academic"
+        menu:
+          - courses.qmd
+          - projects.qmd
+          - presentations.qmd
+          - cv.qmd
+      - text: "Other"
+        menu:
+          - blog.qmd
+          - books.qmd
+          - photos.qmd
       - text: "R-Universe"
         href: https://inqs909.r-universe.dev
       - icon: github

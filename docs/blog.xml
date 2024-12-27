@@ -10,7 +10,765 @@
 <atom:link href="www.inqs.info/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Sat, 21 Dec 2024 08:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 26 Dec 2024 08:00:00 GMT</lastBuildDate>
+<item>
+  <title>Basic Python Programming</title>
+  <dc:creator>Isaac Quintanilla Salinas</dc:creator>
+  <link>www.inqs.info/blog/2024-12-26-python-programming/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>When writing this post, I realize how difficult it will be for me to create a comprehensive tutorial about Python. There are things I learned along the way that makes it easier for me to pick up Python from programming in R, and most importantly c++. For example, Python’s indexing begins with 0 instead of 1, python does not uses braces for code blocks, or how functions can be applied to objects. This makes it easier for me to learn programming in python. However, I certainly struggled with these topics when first learning about it, but I managed to learn it. And I believe anyone can as well.</p>
+<p>Most of the material I talk about can be found in Wes McKinney’s <a href="https://wesmckinney.com/book/">Python for Data Analysis</a>; specifically, in Chapter 2, 3, and 4.</p>
+<section id="loaded-modules" class="level3">
+<h3 class="anchored" data-anchor-id="loaded-modules">Loaded Modules</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> math</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span></code></pre></div>
+</div>
+</section>
+</section>
+<section id="python-as-a-calculator" class="level2">
+<h2 class="anchored" data-anchor-id="python-as-a-calculator">Python as a calculator</h2>
+<p>This is almost a direct copy of my own tutorial written in R. Notice how several of the commands you learned in R also work in Python, with some slight deviations.</p>
+<section id="calculator" class="level3">
+<h3 class="anchored" data-anchor-id="calculator">Calculator</h3>
+<p>This section focuses on the basic calculation that can be done in R. This is done by using different operators in Python. The table below provides some of the basic operators Python can use:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Operator</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>+</code></td>
+<td style="text-align: left;">Addition</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>-</code></td>
+<td style="text-align: left;">Subtraction</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>*</code></td>
+<td style="text-align: left;">Multiplication</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>/</code></td>
+<td style="text-align: left;">Divides</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>**</code></td>
+<td style="text-align: left;">Exponentiate</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>?</code></td>
+<td style="text-align: left;">Help Documentation</td>
+</tr>
+</tbody>
+</table>
+<section id="addition" class="level4">
+<h4 class="anchored" data-anchor-id="addition">Addition</h4>
+<p>To add numbers in R, all you need to use the <code>+</code> operator. For example <img src="https://latex.codecogs.com/png.latex?2%20+%202%20=%204">. When you type it in R you have:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>4</code></pre>
+</div>
+</div>
+<p>When you ask R to perform a task, it prints out the result of the task. As we can see above, R prints out the number 4.</p>
+<p>To add more than 2 numbers, you can simply just type it in.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>6</code></pre>
+</div>
+</div>
+<p>This provides the number 6.</p>
+</section>
+<section id="subtraction" class="level4">
+<h4 class="anchored" data-anchor-id="subtraction">Subtraction</h4>
+<p>To subtract numbers, you need to use the <code>-</code> operator. Try <code>4 - 2</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>2</code></pre>
+</div>
+</div>
+<p>Try <code>4 - 6 - 4</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>-6</code></pre>
+</div>
+</div>
+<p>Notice that you get a negative number.</p>
+<p>Now try <code>4 + 4 - 2 + 8</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>14</code></pre>
+</div>
+</div>
+</section>
+<section id="multiplication" class="level4">
+<h4 class="anchored" data-anchor-id="multiplication">Multiplication</h4>
+<p>To multiply numbers, you will need to use the <code>*</code> operator. Try <code>4 * 4</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>16</code></pre>
+</div>
+</div>
+</section>
+<section id="division" class="level4">
+<h4 class="anchored" data-anchor-id="division">Division</h4>
+<p>To divide numbers, you can use the <code>/</code> operator. Try <code>9 / 3</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">9</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>3.0</code></pre>
+</div>
+</div>
+</section>
+<section id="exponents" class="level4">
+<h4 class="anchored" data-anchor-id="exponents">Exponents</h4>
+<p>To exponentiate a number to the power of another number, you can use the <code>**</code> operator. Try <code>2**5</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>32</code></pre>
+</div>
+</div>
+</section>
+<section id="roots" class="level4">
+<h4 class="anchored" data-anchor-id="roots">Roots</h4>
+<p>To take the n-th root of a value, use the <code>**</code> operator with the <code>/</code> operator to take the n-th root. For example, to take <img src="https://latex.codecogs.com/png.latex?%5Csqrt%5B5%5D%7B35%7D">, type <code>32**(1/5)</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">32</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>2.0</code></pre>
+</div>
+</div>
+</section>
+<section id="logarithms" class="level4">
+<h4 class="anchored" data-anchor-id="logarithms">Logarithms</h4>
+<p>We will use the <code>math</code> module for mathematical functions:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> math</span></code></pre></div>
+</div>
+<p>To take the natural logarithm of a value, you will use the <code>math.log()</code> function. Try <code>math.log(5)</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1">math.log(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.6989700043360187</code></pre>
+</div>
+</div>
+<p>If you want to take the logarithm of a different base, you will use the <code>math.log(X, Y)</code>, where <code>X</code> is the number you wish to take the logarithm and <code>Y</code> is the base of the log<sup>1</sup>.</p>
+<p>If you want to find <img src="https://latex.codecogs.com/png.latex?e%5E5">, you will use the <code>math.exp()</code> function. Try <code>math.exp(2)</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1">math.exp(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>7.38905609893065</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-comparing-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="sec-comparing-numbers">Comparing Numbers</h3>
+<p>Another important part of R is comparing numbers. When you compare two numbers, R will tell if the statement is <code>True</code> or <code>False</code>. Below are the different comparisons you can make:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>&gt;</code></td>
+<td>Greater Than</td>
+</tr>
+<tr class="even">
+<td><code>&lt;</code></td>
+<td>Less Than</td>
+</tr>
+<tr class="odd">
+<td><code>&gt;=</code></td>
+<td>Greater than or equal</td>
+</tr>
+<tr class="even">
+<td><code>&lt;=</code></td>
+<td>Less than or equal</td>
+</tr>
+<tr class="odd">
+<td><code>==</code></td>
+<td>Equals</td>
+</tr>
+<tr class="even">
+<td><code>!=</code></td>
+<td>Not Equals</td>
+</tr>
+</tbody>
+</table>
+<section id="less-thangreater-than" class="level4">
+<h4 class="anchored" data-anchor-id="less-thangreater-than">Less than/Greater than</h4>
+<p>To check if one number is less than or greater than another number, you will use the <code>&gt;</code> or <code>&lt;</code> operators. Try <code>5 &gt; 4</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>True</code></pre>
+</div>
+</div>
+<p>Notice that R states it’s true. It evaluates the expression and tells you if it’s true or not. Try <code>5 &lt; 4</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>False</code></pre>
+</div>
+</div>
+<p>Notice that R tells you it is false.</p>
+</section>
+<section id="less-than-or-equal-togreater-than-or-equal-to" class="level4">
+<h4 class="anchored" data-anchor-id="less-than-or-equal-togreater-than-or-equal-to">Less than or equal to/Greater than or equal to</h4>
+<p>To check if one number is less than or equal to/greater than or equal to another number, you will use the <code>&gt;=</code> or <code>&lt;=</code> operators. Try <code>5 &gt;= 5</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>True</code></pre>
+</div>
+</div>
+<p>Try <code>5 &gt;= 4</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>True</code></pre>
+</div>
+</div>
+<p>Try <code>5 &lt;= 4</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>False</code></pre>
+</div>
+</div>
+</section>
+<section id="equals-and-not-equals" class="level4">
+<h4 class="anchored" data-anchor-id="equals-and-not-equals">Equals and Not Equals</h4>
+<p>To check if 2 numbers are equal to each other, you can use the <code>==</code> operator. Try <code>3 == 3</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>True</code></pre>
+</div>
+</div>
+<p>Try <code>4 == 3</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>False</code></pre>
+</div>
+</div>
+<p>Another way to see if 2 numbers are not equal to each other, you can use the <code>!=</code>. Try <code>3 != 4</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>True</code></pre>
+</div>
+</div>
+<p>Try <code>3 != 3</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>False</code></pre>
+</div>
+</div>
+<p>You may be asking why use <code>!=</code> instead of <code>==</code>. They both provides similar results. Well the reason is that you may need the <code>True</code> output for analysis. One is only true when they are equal, while the other is true when they are not equal.</p>
+<p>In general, the <code>!</code> operator means not or opposite. It can be used to change an <code>True</code> to a <code>False</code> and vice-versa.</p>
+</section>
+</section>
+</section>
+<section id="modules-and-functions" class="level2">
+<h2 class="anchored" data-anchor-id="modules-and-functions">Modules and Functions</h2>
+<p>As I am learning</p>
+</section>
+<section id="tuples-and-lists" class="level2">
+<h2 class="anchored" data-anchor-id="tuples-and-lists">Tuples and Lists</h2>
+<p>After getting a handle of python with basic computations and basic modules, my next urging was to create a vector in the same way that I do it in R. After researching around, I noticed that Python had these vector-like objects called Tuple and Lists. The main differenece is that Tuples are immutable (cannot alter) and Lists are mutable (can alter).</p>
+<p>To create a Tuple, we name an object, use the <code>=</code> sign, list a set of values (seperated by commas), and surround the lists by paranthesis <code>()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1">a <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>)</span></code></pre></div>
+</div>
+<p>To create a List, we follow the same format as a Tuple, but change the paranthesis to square brackets:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1">b <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>]</span></code></pre></div>
+</div>
+<p>Now if you try to perform an operation to a Tuple or List, you will get an error:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1">a<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>TypeError: can only concatenate tuple (not "int") to tuple</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb47" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1">b<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>TypeError: can only concatenate list (not "int") to list</code></pre>
+</div>
+</div>
+<p>Other operations may lead to other things:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1">a<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5)</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb51" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1">b<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]</code></pre>
+</div>
+</div>
+<p>As you can see, you cannot treat this as the traditional vector from R, this has lead me to look at arrays from Numpy.</p>
+</section>
+<section id="numpy" class="level2">
+<h2 class="anchored" data-anchor-id="numpy">Numpy</h2>
+<p>Numpy, or Numerical Python, is a Python module used for scientific computing. From what I can tell, you conduct computational tasks on a Numpy array. This makes me think that Numpy is closest to vector a matrix operations from R.</p>
+<section id="create-a-numpy-array" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-numpy-array">Create a Numpy Array</h3>
+<p>To create a numpy array, we will input a list into the function <code>np.array</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1">c <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>])</span></code></pre></div>
+</div>
+<p>Printing out <code>c</code> will display the array:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1">c</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([1, 2, 3, 4, 5])</code></pre>
+</div>
+</div>
+<p>We can do some basic operations on the array:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1">c <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([3, 4, 5, 6, 7])</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb58" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1">c<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([0.5, 1. , 1.5, 2. , 2.5])</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb60" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1">c<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([ 2,  4,  6,  8, 10])</code></pre>
+</div>
+</div>
+<p>Additionally, we can apply basic functions to the object <code>c</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb62" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1">c.shape</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(5,)</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb64" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1">c.mean()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>np.float64(3.0)</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb66" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1">c.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">sum</span>()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>np.int64(15)</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb68" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1">np.median(c)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>np.float64(3.0)</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb70" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb70-1">c.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">sum</span>() <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>np.int64(23)</code></pre>
+</div>
+</div>
+<p>Notice how some functions, like <code>shape</code>, and be provided after the object (seperated by a period) without paranthesis. Other objects need the paranthesis to be executed.</p>
+</section>
+<section id="indexing-a-numpy-array" class="level3">
+<h3 class="anchored" data-anchor-id="indexing-a-numpy-array">Indexing a Numpy Array</h3>
+<p>We can index the array <code>c</code> using the square brackets on the object:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb72" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1">c[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>]</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>np.int64(1)</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb74" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1">c[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>]</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>np.int64(3)</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb76" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb76-1">c[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>:<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>]</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([1, 2])</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb78" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb78-1">c[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>:<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>]</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([1, 2, 3])</code></pre>
+</div>
+</div>
+<p>For the code block above, we notice a few things. First is that indexing stats with 0. Second, when we are indexing sequential values using the <code>:</code> operator<sup>2</sup>, it does not return the last element indicated on the right of the colon.</p>
+<p>Now, let’s create a new array called <code>d</code> which is a subset of <code>c[0:3]</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb80" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb80-1">d <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> c[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>:<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>]</span>
+<span id="cb80-2">d</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([1, 2, 3])</code></pre>
+</div>
+</div>
+<p>We have a new array with the first 3 elements. Now let’s change the second value of <code>d</code> to 909.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb82" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb82-1">d[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">909</span></span>
+<span id="cb82-2">d</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([  1, 909,   3])</code></pre>
+</div>
+</div>
+<p>It goes as expected. Let’s print out <code>c</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb84" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb84-1">c</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([  1, 909,   3,   4,   5])</code></pre>
+</div>
+</div>
+<p>Notice how <code>c</code> now contains the value 909, even though that <code>d</code> was the only one changed. This is because Python creates the object, and the names of those objects (<code>c</code> and <code>d</code>) point and/or transform that object as necessary. Any changes to one named object will change the overall object. It does not create a new object like in R.</p>
+<p>After I learned this, I did not know how I feel about this. I personally liked the R’s way to copy and paste objects, which allowed me to manipulate something without having to worry about changing the original. After some thinking, I don’t think I liked it, but that could be because I am stuck in my ways. There may be some advantages on how Python treats objects, but as of right now, I do not know.</p>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>I tried to type the argument <code>Base=</code> but did not work↩︎</p></li>
+<li id="fn2"><p>The same as R.↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>r2py</category>
+  <guid>www.inqs.info/blog/2024-12-26-python-programming/</guid>
+  <pubDate>Thu, 26 Dec 2024 08:00:00 GMT</pubDate>
+  <media:content url="www.inqs.info/blog/2024-12-26-python-programming/test.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Positron and Python</title>
+  <dc:creator>Isaac Quintanilla Salinas</dc:creator>
+  <link>www.inqs.info/blog/2024-12-22-positron/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Positron and Python are both new to me, but as always, the first step is installing the software on your computer. In this post, I will highlight my adventures installing both of these softwares on to my computer. I will layout what is working and what is not working.</p>
+<p><strong>Disclaimer: I daily drive Linux, currently using Fedora, so my experiences will be different.</strong></p>
+<section id="positron" class="level2">
+<h2 class="anchored" data-anchor-id="positron">Positron</h2>
+<p>Since I had R installed, my first intuition was to install Positron becuase I learned that was the new ide, <em>still in beta</em>, from Posit that will allow users to work in both R and in Python. Therefore, I can learn how to use python without having to worried about choosing a proper IDE.</p>
+<p>To install Positron, go to their <a href="https://positron.posit.co">website</a> and click on <a href="https://positron.posit.co/start.html">get started</a>. Afterwards, follow the instructions to prepare your computer to use positron. This involves either installing R from <a href="https://cloud.r-project.org/">CRAN</a> or Python via <a href="https://github.com/pyenv/pyenv">pyenv</a> (<a href="https://github.com/pyenv-win/pyenv-win">Windows</a>). Once that is done, you can navigate to their download <a href="https://positron.posit.co/download.html">page</a>, where you download the appropriate file<sup>1</sup>. Afterwards, run the installer and follow the prompts. And there you go, Positron should be ready for use.</p>
+<p>After you install Positron, it should look like this:</p>
+<p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-26 14-35-49.png" class="img-fluid">{An image displaying the Positron IDE, the interpreter is R.}</p>
+<p>Note that I changed the appearance of Positron to dark theme. Here is Positron when Python is being utilized:</p>
+<p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-26 14-36-00.png" class="img-fluid" alt="An image displaying the Positron IDE, the interpreter is Python."></p>
+<section id="vs-code" class="level3">
+<h3 class="anchored" data-anchor-id="vs-code">VS Code</h3>
+<p>Positron is based on Microsoft’s <a href="https://github.com/microsoft/vscode">Code OSS</a> platform, which makes it look very similar to <a href="https://code.visualstudio.com/">visual Studio Code</a>. It is an <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a> similar to RStudio, but it is program agnostic. Additionally, it is capable to be more customizable with the use of extensions provided by <a href="https://open-vsx.org/">Open VSX</a>; however, you may install extensions from <a href="https://marketplace.visualstudio.com/vscode">VS Code</a> as well.</p>
+<p>To learn more about Positron and VS Code, visit the following pages:</p>
+<ul>
+<li><a href="https://youtu.be/8uRcB34Hhsw?si=ZbycZdtjZ_cvnOJv">Positron Introduction</a></li>
+<li><a href="https://positron.posit.co/add-to-path.html">Positron Guides</a></li>
+<li><a href="https://blog.stephenturner.us/p/r-package-development-in-positron">R Package Development</a></li>
+<li><a href="https://github.com/posit-dev/positron/discussions">GitHub Discussions</a></li>
+<li><a href="https://code.visualstudio.com/docs/introvideos/basics">VS Code Help</a></li>
+<li><a href="https://code.visualstudio.com/docs/getstarted/introvideos">VS Code Basics Videos</a></li>
+</ul>
+</section>
+</section>
+<section id="python" class="level2">
+<h2 class="anchored" data-anchor-id="python">Python</h2>
+<p>As you are installing Positron, you should notice that there are instructions to installing python on to your system. If you have python already installed on your computer, Positron should allow you to point to it. However, Posit has recommended to use <a href="https://github.com/pyenv/pyenv">pyenv</a>. After playing around with it, I also recommend it for now.</p>
+<p>Why pyenv? First, it looks like Positron works better with pyenv installed. Therefore, I decided to stick with posit’s recommendation and utilize it. Afterwards, I played around with it and installed the latest version of python and some modules/libraries/packages. It worked, and it seemed like it did not change anything in my systen for now. I think what I liked the most about it was the minimalist nature of the program. I feel a little more confident that it only install this piece of software and nothing more.</p>
+<section id="virtual-environments-and-pyenv" class="level3">
+<h3 class="anchored" data-anchor-id="virtual-environments-and-pyenv">Virtual Environments and pyenv</h3>
+<p>I recently learned that the best way to use python is by creating virtual environments and installing everything you need for python in that environment. This is a completely new idea for me since R never required me to use it. I have heard of <a href="https://rstudio.github.io/renv/articles/renv.html">renv</a> designed to create a reproducible environment, but I never utilized. In hindsight, if I learned more about it, python may have been easier to start off.</p>
+</section>
+</section>
+<section id="data-science-projects" class="level2">
+<h2 class="anchored" data-anchor-id="data-science-projects">Data Science Projects</h2>
+<p>In Positron, and VS Code, projects are created as workspaces by associating folders as specialized place called workspaces. These workspaces allow you to organize your projects as necessary, such as creating folders for you scripts, data, source files, and much more. Additionally, you can initialize a git repository for the work space</p>
+<p>It is highly recommended to creat a workspace for any project you work on.</p>
+<section id="python-1" class="level3">
+<h3 class="anchored" data-anchor-id="python-1">Python</h3>
+<p>To create a Python-based workspace, you will go to the top right corner and click on the folder icon:</p>
+<p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-25 14-36-21.png" class="img-fluid"></p>
+<p>This will open a new drop-down menu:</p>
+<p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-26 14-38-04.png" class="img-fluid"></p>
+<p>Click on the “New Project…” to begin creating a workspace. This will then create a new window:</p>
+<p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-26 14-38-21.png" class="img-fluid"></p>
+<p>Now select the “Python Project” and click “Next”. Afterwards, a new window will popup asking you to create a new folder and where to store it:</p>
+<p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-26 14-38-57.png" class="img-fluid"></p>
+<p>Notice that I have the “Initialize project at Git repository”, if you have <a href="https://git-scm.com/">git</a> installed and plan to use it, it would be a good idea to initialize it. Then, a new window will popup asking you to create a new Python environment:</p>
+<p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-26 14-39-29.png" class="img-fluid"></p>
+<p>I recommend doing so. This will create a new environment that I believe will only be used for the project. Note, you will need to install the python modules again for this new environment. A final window will popup:</p>
+<p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-26 14-39-50.png" class="img-fluid"></p>
+<p>You should click “New Window” for now. This will open a new session of Positron. It may take a few minutes to create the python environment, but it will work after.</p>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Lucked out they had Fedora.↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>r2py</category>
+  <guid>www.inqs.info/blog/2024-12-22-positron/</guid>
+  <pubDate>Sun, 22 Dec 2024 08:00:00 GMT</pubDate>
+  <media:content url="www.inqs.info/blog/2024-12-22-positron/test.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>R 2 Python</title>
   <dc:creator>Isaac Quintanilla Salinas</dc:creator>
@@ -25,7 +783,7 @@
 <p>I first learned about programming, when I did a Biostatistics internship where we analyzed data using SAS<sup>1</sup>. This was the first time where I sent commands to a computer to conduct a task, and I thoroughly enjoyed doing this. However, when my internship was over, I no longer had access to SAS at my own institution and could not learn more about Statistics or programming because of a huge financial barrier. This is where I learned about R and it being free and open-source software. This was a game changer! I was able to learn more about statistics and programming because the ultimate barrier was removed. Yes, it was completely different from SAS, but I can learn, and no one can stop me.</p>
 <p>After <a href="https://csumb.edu/">CSUMB</a>, I went on to get my Master’s in Public Health<sup>2</sup> at <a href="https://publichealth.sdsu.edu/">San Diego State University</a> where I expanded my R skills and really got to learn how to use <a href="https://posit.co/products/open-source/rstudio/">RStudio</a>. Afterwards, I started my PhD in Applied Statistics at <a href="https://statistics.ucr.edu/">UC Riverside</a> where I refined my programming skills even further. Additionally, I learned how to program in c++, well at least via Rcpp, to efficiently complete my dissertation. As you can see, my programming journey primarily focused on langauges that helped my Statistics journey, it being R.</p>
 <p>As an Assistant Professor of Statistics at <a href="https:\www.csuci.edu">CSUCI</a> where we are planning to <a href="https://www.csuci.edu/news/releases/2024-new-bachelors-degree-data-science.htm">launch</a> a new BS in Data Science program this upcoming Fall 2025. As part of the program, we are planning to teach an Introduction to Data Science course with python, in addition to several other courses that will be taught in R or SQL. Therefore, there is a need for me to learn python and SQL to properly train my students.</p>
-<p>As I am learning python, I am not really planning to switch to it. I will still use R for all my work. In honesty, I would rather get better at c++ via rcpp, learn <a href="https://www.rust-lang.org/">rust</a>, learn <a href="https://julialang.org/">julia</a>, or truthfully get better at <a href="https://www.vim.org/">vim</a> via <a href="https://neovim.io/">neovim</a>. However, I understand that python is a popular language for data scientist, and it would be a disservice to my students if I do not learn and properly train them.</p>
+<p>As I am learning python, I am not really planning to switch to it. I will still use R for all my work. In honesty, I would rather get better at c++ via rcpp, learn <a href="https://www.rust-lang.org/">rust</a>, learn <a href="https://julialang.org/">julia</a>, or truthfully get better at <a href="https://www.vim.org/">vim</a> via <a href="https://neovim.io/">neovim</a>. However, I understand that python is a popular language for data scientists, and it would be a disservice to my students if I do not learn and properly train them.</p>
 </section>
 <section id="how-will-i-learn" class="level2">
 <h2 class="anchored" data-anchor-id="how-will-i-learn">How will I learn?</h2>
@@ -38,11 +796,32 @@
 <h3 class="anchored" data-anchor-id="intro-to-data-science">Intro to Data Science</h3>
 <p>The main mechanism I am using to learn python is by converting <a href="https://datasciencebox.org/">Data Science in a Box</a> to a python-based course instead of an R-based course. There are several reasons to do it this way. First, I understand what is going on in the course and can read the R code, so I can translate to python and know when I am making a mistake. Second, I have not found python versions of this course<sup>5</sup>; therefore, it will force me to really learn python. Third, the course is very user-friendly for our students. The topics they provide are fascinating, and I believe it is more suitable to my students. Fourth, there license is very permissable, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> for the win! Fifth, other faculty members in my department have expressed interest in teaching a Data Science course with this material. Therefore, for all these reasons, and many more, I will be learning python, well the basics at least, by converting Data Science in a Box from R to python.</p>
 <p>While I am translating/designing this course, there will be some deviations from the standard data science course. Most of decisions I will make is based on what is pedagogically more feasible for my students. For example, I will be using <a href="https://plotnine.org/">plotnine</a>, the <code>ggplot2</code> of python, to create graphics since the syntax is exactly the same as in R. Another one is using the <a href="https://pola.rs/">polars</a> library, an alternate version of <a href="https://pandas.pydata.org/">pandas</a>, for data frames due to the simple nature data manipulation<sup>6</sup>. These design changes are meant to show students what is possible without scarying them away from the field. I do not know what other changes I will make, but I am positive there will be more.</p>
+<p>Lastly, as I am part of the <a href="https://sites.google.com/view/socaldatasci/home">Southern California Consortium for Data Science</a>, I will try to incorporate their recommendations in the course.</p>
 </section>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>As I continue with building this Data Science Course, I will try to write blog posts writing my experiences, giving out tips, and possibly tutorials. I will also be writing about my experience with positron and a few other tools, possibly quarto<sup>7</sup>, and much more.</p>
+</section>
+<section id="disclaimer" class="level2">
+<h2 class="anchored" data-anchor-id="disclaimer">Disclaimer</h2>
+<p>While I do want these posts to highlight my raw experiences, they will be edited from time to time to ensure that R programmers will properly learn how to use python from a statisticians perspective. However, at the end of each post, there will be a reflection that will not change from the original post.</p>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<p>Here are some resources that I found useful. I will be updating it as I learn more about python and positron.</p>
+<ul>
+<li>Positron
+<ul>
+<li><a href="https://blog.stephenturner.us/p/r-package-development-in-positron">R Package Development</a></li>
+</ul></li>
+<li>Conversion Guides
+<ul>
+<li><a href="https://www.mit.edu/~amidi/teaching/data-science-tools/conversion-guide/r-python-data-manipulation/">Conversion R and Python</a></li>
+<li><a href="https://blog.tidy-intelligence.com/posts/dplyr-vs-polars/#work-with-groups-of-rows">dplyr vs polars</a></li>
+<li><a href="https://blog.tidy-intelligence.com/posts/dplyr-vs-pandas/">dplyr vs pandas</a></li>
+</ul></li>
+</ul>
 
 
 </section>

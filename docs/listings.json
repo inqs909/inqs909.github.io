@@ -13,6 +13,8 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/blog/2024-12-26-python-programming/index.html",
+      "/blog/2024-12-22-positron/index.html",
       "/blog/2024-12-21-r2py/index.html",
       "/blog/2023-01-27-wellness-plan-spring-2023/index.html",
       "/blog/2021-05-03-smart-program/index.html",
