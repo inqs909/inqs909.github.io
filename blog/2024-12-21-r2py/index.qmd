@@ -42,13 +42,21 @@ While I am translating/designing this course, there will be some deviations from
 
 Lastly, as I am part of the [Southern California Consortium for Data Science](https://sites.google.com/view/socaldatasci/home), I will try to incorporate their recommendations in the course.
 
+## d200x
+
+*Coming soon ...*
+
 ## Conclusion
 
 As I continue with building this Data Science Course, I will try to write blog posts writing my experiences, giving out tips, and possibly tutorials. I will also be writing about my experience with positron and a few other tools, possibly quarto^[I am pretty good at this.], and much more.
 
 ## Updates
 
-While I do want these posts to highlight my raw experiences, they will be edited from time to time to ensure that R programmers will properly learn how to use python from a statisticians perspective. However, at the end of each post, there will be a reflection that will not change from the original post.
+After spending some time translating the first few lectures of data science in a box, I am reflecting on how I am going to write these blog posts. I do not want to be writing posts on how to program in python. I feel that I would not do a good job, and to be honest, I am not really interested in doing that. I would rather write about my experiences learning Python, and provide tips and tricks, definitions, and rationales on certina things I am doing. I believe this would be more beneficial in the long run for both readers of this posts, and my own sanity.
+
+For each major blog post, I will be updating them with my own thoughts through out my time creating this data science course.
+
+
 
 ## Resources
 

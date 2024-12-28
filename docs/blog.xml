@@ -23,7 +23,15 @@
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>When writing this post, I realize how difficult it will be for me to create a comprehensive tutorial about Python. There are things I learned along the way that makes it easier for me to pick up Python from programming in R, and most importantly c++. For example, Python’s indexing begins with 0 instead of 1, python does not uses braces for code blocks, or how functions can be applied to objects. This makes it easier for me to learn programming in python. However, I certainly struggled with these topics when first learning about it, but I managed to learn it. And I believe anyone can as well.</p>
-<p>Most of the material I talk about can be found in Wes McKinney’s <a href="https://wesmckinney.com/book/">Python for Data Analysis</a>; specifically, in Chapter 2, 3, and 4.</p>
+</section>
+<section id="recommended-material" class="level2">
+<h2 class="anchored" data-anchor-id="recommended-material">Recommended Material</h2>
+<ul>
+<li>Wes McKinney’s <a href="https://wesmckinney.com/book/">Python for Data Analysis</a></li>
+</ul>
+</section>
+<section id="post-1-122624" class="level2">
+<h2 class="anchored" data-anchor-id="post-1-122624">Post 1 12/26/24</h2>
 <section id="loaded-modules" class="level3">
 <h3 class="anchored" data-anchor-id="loaded-modules">Loaded Modules</h3>
 <div class="cell">
@@ -37,12 +45,11 @@ background-color: null;
 font-style: inherit;">as</span> np</span></code></pre></div>
 </div>
 </section>
-</section>
-<section id="python-as-a-calculator" class="level2">
-<h2 class="anchored" data-anchor-id="python-as-a-calculator">Python as a calculator</h2>
+<section id="python-as-a-calculator" class="level3">
+<h3 class="anchored" data-anchor-id="python-as-a-calculator">Python as a calculator</h3>
 <p>This is almost a direct copy of my own tutorial written in R. Notice how several of the commands you learned in R also work in Python, with some slight deviations.</p>
-<section id="calculator" class="level3">
-<h3 class="anchored" data-anchor-id="calculator">Calculator</h3>
+<section id="calculator" class="level4">
+<h4 class="anchored" data-anchor-id="calculator">Calculator</h4>
 <p>This section focuses on the basic calculation that can be done in R. This is done by using different operators in Python. The table below provides some of the basic operators Python can use:</p>
 <table class="caption-top table">
 <thead>
@@ -78,8 +85,8 @@ font-style: inherit;">as</span> np</span></code></pre></div>
 </tr>
 </tbody>
 </table>
-<section id="addition" class="level4">
-<h4 class="anchored" data-anchor-id="addition">Addition</h4>
+<section id="addition" class="level5">
+<h5 class="anchored" data-anchor-id="addition">Addition</h5>
 <p>To add numbers in R, all you need to use the <code>+</code> operator. For example <img src="https://latex.codecogs.com/png.latex?2%20+%202%20=%204">. When you type it in R you have:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="dv" style="color: #AD0000;
@@ -113,8 +120,8 @@ font-style: inherit;">2</span></span></code></pre></div>
 </div>
 <p>This provides the number 6.</p>
 </section>
-<section id="subtraction" class="level4">
-<h4 class="anchored" data-anchor-id="subtraction">Subtraction</h4>
+<section id="subtraction" class="level5">
+<h5 class="anchored" data-anchor-id="subtraction">Subtraction</h5>
 <p>To subtract numbers, you need to use the <code>-</code> operator. Try <code>4 - 2</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="dv" style="color: #AD0000;
@@ -168,8 +175,8 @@ font-style: inherit;">8</span></span></code></pre></div>
 </div>
 </div>
 </section>
-<section id="multiplication" class="level4">
-<h4 class="anchored" data-anchor-id="multiplication">Multiplication</h4>
+<section id="multiplication" class="level5">
+<h5 class="anchored" data-anchor-id="multiplication">Multiplication</h5>
 <p>To multiply numbers, you will need to use the <code>*</code> operator. Try <code>4 * 4</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><span class="dv" style="color: #AD0000;
@@ -184,8 +191,8 @@ font-style: inherit;">4</span></span></code></pre></div>
 </div>
 </div>
 </section>
-<section id="division" class="level4">
-<h4 class="anchored" data-anchor-id="division">Division</h4>
+<section id="division" class="level5">
+<h5 class="anchored" data-anchor-id="division">Division</h5>
 <p>To divide numbers, you can use the <code>/</code> operator. Try <code>9 / 3</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><span class="dv" style="color: #AD0000;
@@ -200,8 +207,8 @@ font-style: inherit;">3</span></span></code></pre></div>
 </div>
 </div>
 </section>
-<section id="exponents" class="level4">
-<h4 class="anchored" data-anchor-id="exponents">Exponents</h4>
+<section id="exponents" class="level5">
+<h5 class="anchored" data-anchor-id="exponents">Exponents</h5>
 <p>To exponentiate a number to the power of another number, you can use the <code>**</code> operator. Try <code>2**5</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><span class="dv" style="color: #AD0000;
@@ -216,8 +223,8 @@ font-style: inherit;">5</span></span></code></pre></div>
 </div>
 </div>
 </section>
-<section id="roots" class="level4">
-<h4 class="anchored" data-anchor-id="roots">Roots</h4>
+<section id="roots" class="level5">
+<h5 class="anchored" data-anchor-id="roots">Roots</h5>
 <p>To take the n-th root of a value, use the <code>**</code> operator with the <code>/</code> operator to take the n-th root. For example, to take <img src="https://latex.codecogs.com/png.latex?%5Csqrt%5B5%5D%7B35%7D">, type <code>32**(1/5)</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><span class="dv" style="color: #AD0000;
@@ -236,8 +243,8 @@ font-style: inherit;">5</span>)</span></code></pre></div>
 </div>
 </div>
 </section>
-<section id="logarithms" class="level4">
-<h4 class="anchored" data-anchor-id="logarithms">Logarithms</h4>
+<section id="logarithms" class="level5">
+<h5 class="anchored" data-anchor-id="logarithms">Logarithms</h5>
 <p>We will use the <code>math</code> module for mathematical functions:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><span class="im" style="color: #00769E;
@@ -267,8 +274,8 @@ font-style: inherit;">2</span>)</span></code></pre></div>
 </div>
 </section>
 </section>
-<section id="sec-comparing-numbers" class="level3">
-<h3 class="anchored" data-anchor-id="sec-comparing-numbers">Comparing Numbers</h3>
+<section id="sec-comparing-numbers" class="level4">
+<h4 class="anchored" data-anchor-id="sec-comparing-numbers">Comparing Numbers</h4>
 <p>Another important part of R is comparing numbers. When you compare two numbers, R will tell if the statement is <code>True</code> or <code>False</code>. Below are the different comparisons you can make:</p>
 <table class="caption-top table">
 <thead>
@@ -304,8 +311,8 @@ font-style: inherit;">2</span>)</span></code></pre></div>
 </tr>
 </tbody>
 </table>
-<section id="less-thangreater-than" class="level4">
-<h4 class="anchored" data-anchor-id="less-thangreater-than">Less than/Greater than</h4>
+<section id="less-thangreater-than" class="level5">
+<h5 class="anchored" data-anchor-id="less-thangreater-than">Less than/Greater than</h5>
 <p>To check if one number is less than or greater than another number, you will use the <code>&gt;</code> or <code>&lt;</code> operators. Try <code>5 &gt; 4</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><span class="dv" style="color: #AD0000;
@@ -334,8 +341,8 @@ font-style: inherit;">4</span></span></code></pre></div>
 </div>
 <p>Notice that R tells you it is false.</p>
 </section>
-<section id="less-than-or-equal-togreater-than-or-equal-to" class="level4">
-<h4 class="anchored" data-anchor-id="less-than-or-equal-togreater-than-or-equal-to">Less than or equal to/Greater than or equal to</h4>
+<section id="less-than-or-equal-togreater-than-or-equal-to" class="level5">
+<h5 class="anchored" data-anchor-id="less-than-or-equal-togreater-than-or-equal-to">Less than or equal to/Greater than or equal to</h5>
 <p>To check if one number is less than or equal to/greater than or equal to another number, you will use the <code>&gt;=</code> or <code>&lt;=</code> operators. Try <code>5 &gt;= 5</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><span class="dv" style="color: #AD0000;
@@ -376,8 +383,8 @@ font-style: inherit;">4</span></span></code></pre></div>
 </div>
 </div>
 </section>
-<section id="equals-and-not-equals" class="level4">
-<h4 class="anchored" data-anchor-id="equals-and-not-equals">Equals and Not Equals</h4>
+<section id="equals-and-not-equals" class="level5">
+<h5 class="anchored" data-anchor-id="equals-and-not-equals">Equals and Not Equals</h5>
 <p>To check if 2 numbers are equal to each other, you can use the <code>==</code> operator. Try <code>3 == 3</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><span class="dv" style="color: #AD0000;
@@ -435,16 +442,30 @@ font-style: inherit;">3</span></span></code></pre></div>
 </section>
 </section>
 </section>
-<section id="modules-and-functions" class="level2">
-<h2 class="anchored" data-anchor-id="modules-and-functions">Modules and Functions</h2>
-<p>As I am learning</p>
+<section id="modules-and-functions" class="level3">
+<h3 class="anchored" data-anchor-id="modules-and-functions">Modules and Functions</h3>
+<p>As I am learning Python, I am noticing the importance of modules since it extends the functionality of Python, the same way as R packages do. Base Python, is very bare-bones. I think the reason being is that R loads several packages up for your own use, I assumed Python would load a bit more. Anyways, we need to load modules for more functionality.</p>
+<section id="load-a-module" class="level4">
+<h4 class="anchored" data-anchor-id="load-a-module">Load a Module</h4>
+<p>The <code>import</code> command will load up a module. The</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> math</span>
+<span id="cb43-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span></code></pre></div>
+</div>
 </section>
-<section id="tuples-and-lists" class="level2">
-<h2 class="anchored" data-anchor-id="tuples-and-lists">Tuples and Lists</h2>
+</section>
+<section id="tuples-and-lists" class="level3">
+<h3 class="anchored" data-anchor-id="tuples-and-lists">Tuples and Lists</h3>
 <p>After getting a handle of python with basic computations and basic modules, my next urging was to create a vector in the same way that I do it in R. After researching around, I noticed that Python had these vector-like objects called Tuple and Lists. The main differenece is that Tuples are immutable (cannot alter) and Lists are mutable (can alter).</p>
 <p>To create a Tuple, we name an object, use the <code>=</code> sign, list a set of values (seperated by commas), and surround the lists by paranthesis <code>()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1">a <span class="op" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb44" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1">a <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> (<span class="dv" style="color: #AD0000;
 background-color: null;
@@ -460,7 +481,7 @@ font-style: inherit;">5</span>)</span></code></pre></div>
 </div>
 <p>To create a List, we follow the same format as a Tuple, but change the paranthesis to square brackets:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1">b <span class="op" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb45" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1">b <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> [<span class="dv" style="color: #AD0000;
 background-color: null;
@@ -476,7 +497,7 @@ font-style: inherit;">5</span>]</span></code></pre></div>
 </div>
 <p>Now if you try to perform an operation to a Tuple or List, you will get an error:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1">a<span class="op" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb46" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1">a<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
 background-color: null;
@@ -484,7 +505,7 @@ font-style: inherit;">5</span></span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>TypeError: can only concatenate tuple (not "int") to tuple</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb47" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1">b<span class="op" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb48" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1">b<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
 background-color: null;
@@ -495,7 +516,7 @@ font-style: inherit;">8</span></span></code></pre></div>
 </div>
 <p>Other operations may lead to other things:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb49" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1">a<span class="op" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb50" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1">a<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
 background-color: null;
@@ -503,7 +524,7 @@ font-style: inherit;">5</span></span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb51" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1">b<span class="op" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb52" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1">b<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
 background-color: null;
@@ -514,14 +535,14 @@ font-style: inherit;">5</span></span></code></pre></div>
 </div>
 <p>As you can see, you cannot treat this as the traditional vector from R, this has lead me to look at arrays from Numpy.</p>
 </section>
-<section id="numpy" class="level2">
-<h2 class="anchored" data-anchor-id="numpy">Numpy</h2>
+<section id="numpy" class="level3">
+<h3 class="anchored" data-anchor-id="numpy">Numpy</h3>
 <p>Numpy, or Numerical Python, is a Python module used for scientific computing. From what I can tell, you conduct computational tasks on a Numpy array. This makes me think that Numpy is closest to vector a matrix operations from R.</p>
-<section id="create-a-numpy-array" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-numpy-array">Create a Numpy Array</h3>
+<section id="create-a-numpy-array" class="level4">
+<h4 class="anchored" data-anchor-id="create-a-numpy-array">Create a Numpy Array</h4>
 <p>To create a numpy array, we will input a list into the function <code>np.array</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb53" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1">c <span class="op" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb54" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1">c <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
 background-color: null;
@@ -537,14 +558,14 @@ font-style: inherit;">5</span>])</span></code></pre></div>
 </div>
 <p>Printing out <code>c</code> will display the array:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb54" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1">c</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb55" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1">c</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([1, 2, 3, 4, 5])</code></pre>
 </div>
 </div>
 <p>We can do some basic operations on the array:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb56" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1">c <span class="op" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb57" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1">c <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
 background-color: null;
@@ -552,7 +573,7 @@ font-style: inherit;">2</span></span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([3, 4, 5, 6, 7])</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb58" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1">c<span class="op" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb59" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1">c<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">/</span><span class="dv" style="color: #AD0000;
 background-color: null;
@@ -560,7 +581,7 @@ font-style: inherit;">2</span></span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([0.5, 1. , 1.5, 2. , 2.5])</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb60" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1">c<span class="op" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb61" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1">c<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
 background-color: null;
@@ -571,54 +592,44 @@ font-style: inherit;">2</span></span></code></pre></div>
 </div>
 <p>Additionally, we can apply basic functions to the object <code>c</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb62" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1">c.shape</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb63" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1">c.shape</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(5,)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb64" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1">c.mean()</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb65" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1">c.mean()</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>np.float64(3.0)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb66" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1">c.<span class="bu" style="color: null;
+<div class="sourceCode cell-code" id="cb67" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1">c.<span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">sum</span>()</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>np.int64(15)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb68" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1">np.median(c)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb69" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1">np.median(c)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>np.float64(3.0)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb70" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb70-1">c.<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">sum</span>() <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">8</span></span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>np.int64(23)</code></pre>
 </div>
-</div>
-<p>Notice how some functions, like <code>shape</code>, and be provided after the object (seperated by a period) without paranthesis. Other objects need the paranthesis to be executed.</p>
+<p>Notice how some functions, like <code>shape</code>, and be provided after the object (seperated by a period) without paranthesis. Other objects need the paranthesis to be executed. You can also type the name of the function first, and put the object in the paranthesis.</p>
 </section>
-<section id="indexing-a-numpy-array" class="level3">
-<h3 class="anchored" data-anchor-id="indexing-a-numpy-array">Indexing a Numpy Array</h3>
+<section id="indexing-a-numpy-array" class="level4">
+<h4 class="anchored" data-anchor-id="indexing-a-numpy-array">Indexing a Numpy Array</h4>
 <p>We can index the array <code>c</code> using the square brackets on the object:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb72" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1">c[<span class="dv" style="color: #AD0000;
+<div class="sourceCode cell-code" id="cb71" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb71-1">c[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>]</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>np.int64(1)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb74" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1">c[<span class="dv" style="color: #AD0000;
+<div class="sourceCode cell-code" id="cb73" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb73-1">c[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>]</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>np.int64(3)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb76" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb76-1">c[<span class="dv" style="color: #AD0000;
+<div class="sourceCode cell-code" id="cb75" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb75-1">c[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>:<span class="dv" style="color: #AD0000;
 background-color: null;
@@ -626,7 +637,7 @@ font-style: inherit;">2</span>]</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([1, 2])</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb78" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb78-1">c[<span class="dv" style="color: #AD0000;
+<div class="sourceCode cell-code" id="cb77" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb77-1">c[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>:<span class="dv" style="color: #AD0000;
 background-color: null;
@@ -638,44 +649,48 @@ font-style: inherit;">3</span>]</span></code></pre></div>
 <p>For the code block above, we notice a few things. First is that indexing stats with 0. Second, when we are indexing sequential values using the <code>:</code> operator<sup>2</sup>, it does not return the last element indicated on the right of the colon.</p>
 <p>Now, let’s create a new array called <code>d</code> which is a subset of <code>c[0:3]</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb80" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb80-1">d <span class="op" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb79" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb79-1">d <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> c[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>:<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3</span>]</span>
-<span id="cb80-2">d</span></code></pre></div>
+<span id="cb79-2">d</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([1, 2, 3])</code></pre>
 </div>
 </div>
 <p>We have a new array with the first 3 elements. Now let’s change the second value of <code>d</code> to 909.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb82" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb82-1">d[<span class="dv" style="color: #AD0000;
+<div class="sourceCode cell-code" id="cb81" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb81-1">d[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>] <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">909</span></span>
-<span id="cb82-2">d</span></code></pre></div>
+<span id="cb81-2">d</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([  1, 909,   3])</code></pre>
 </div>
 </div>
 <p>It goes as expected. Let’s print out <code>c</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb84" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb84-1">c</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb83" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb83-1">c</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([  1, 909,   3,   4,   5])</code></pre>
 </div>
 </div>
 <p>Notice how <code>c</code> now contains the value 909, even though that <code>d</code> was the only one changed. This is because Python creates the object, and the names of those objects (<code>c</code> and <code>d</code>) point and/or transform that object as necessary. Any changes to one named object will change the overall object. It does not create a new object like in R.</p>
 <p>After I learned this, I did not know how I feel about this. I personally liked the R’s way to copy and paste objects, which allowed me to manipulate something without having to worry about changing the original. After some thinking, I don’t think I liked it, but that could be because I am stuck in my ways. There may be some advantages on how Python treats objects, but as of right now, I do not know.</p>
-
-
 </section>
+</section>
+</section>
+<section id="post-2-12282024" class="level2">
+<h2 class="anchored" data-anchor-id="post-2-12282024">Post 2 12/28/2024</h2>
+
+
 </section>
 
 
