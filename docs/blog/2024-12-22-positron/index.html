@@ -8,9 +8,9 @@
 
 <meta name="author" content="Isaac Quintanilla Salinas">
 <meta name="dcterms.date" content="2024-12-22">
-<meta name="description" content="Getting Started with Positron and Python.">
+<meta name="description" content="Getting Started with Positron">
 
-<title>Positron and Python – INQS</title>
+<title>Positron – INQS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -164,14 +198,11 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#vs-code" id="toc-vs-code" class="nav-link" data-scroll-target="#vs-code">VS Code</a></li>
   </ul></li>
-  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a>
+  <li><a href="#post-1-data-science-projects" id="toc-post-1-data-science-projects" class="nav-link" data-scroll-target="#post-1-data-science-projects">Post 1: Data Science Projects</a>
   <ul class="collapse">
-  <li><a href="#virtual-environments-and-pyenv" id="toc-virtual-environments-and-pyenv" class="nav-link" data-scroll-target="#virtual-environments-and-pyenv">Virtual Environments and pyenv</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
   </ul></li>
-  <li><a href="#data-science-projects" id="toc-data-science-projects" class="nav-link" data-scroll-target="#data-science-projects">Data Science Projects</a>
-  <ul class="collapse">
-  <li><a href="#python-1" id="toc-python-1" class="nav-link" data-scroll-target="#python-1">Python</a></li>
-  </ul></li>
+  <li><a href="#post-2-162024-quarto" id="toc-post-2-162024-quarto" class="nav-link" data-scroll-target="#post-2-162024-quarto">Post 2 (1/6/2024): Quarto</a></li>
   </ul>
 </nav>
     </div>
@@ -180,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Positron and Python</h1>
+<h1 class="title">Positron</h1>
   <div class="quarto-categories">
     <div class="quarto-category">r2py</div>
   </div>
@@ -188,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Getting Started with Positron and Python.
+    Getting Started with Positron
   </div>
 </div>
 
@@ -209,6 +240,12 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">January 6, 2025</p>
+    </div>
+  </div>
     
   </div>
   
@@ -241,23 +278,14 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="python" class="level2">
-<h2 class="anchored" data-anchor-id="python">Python</h2>
-<p>As you are installing Positron, you should notice that there are instructions to installing python on to your system. If you have python already installed on your computer, Positron should allow you to point to it. However, Posit has recommended to use <a href="https://github.com/pyenv/pyenv">pyenv</a>. After playing around with it, I also recommend it for now.</p>
-<p>Why pyenv? First, it looks like Positron works better with pyenv installed. Therefore, I decided to stick with posit’s recommendation and utilize it. Afterwards, I played around with it and installed the latest version of python and some modules/libraries/packages. It worked, and it seemed like it did not change anything in my systen for now. I think what I liked the most about it was the minimalist nature of the program. I feel a little more confident that it only install this piece of software and nothing more.</p>
-<section id="virtual-environments-and-pyenv" class="level3">
-<h3 class="anchored" data-anchor-id="virtual-environments-and-pyenv">Virtual Environments and pyenv</h3>
-<p>I recently learned that the best way to use python is by creating virtual environments and installing everything you need for python in that environment. This is a completely new idea for me since R never required me to use it. I have heard of <a href="https://rstudio.github.io/renv/articles/renv.html">renv</a> designed to create a reproducible environment, but I never utilized. In hindsight, if I learned more about it, python may have been easier to start off.</p>
-</section>
-</section>
-<section id="data-science-projects" class="level2">
-<h2 class="anchored" data-anchor-id="data-science-projects">Data Science Projects</h2>
+<section id="post-1-data-science-projects" class="level2">
+<h2 class="anchored" data-anchor-id="post-1-data-science-projects">Post 1: Data Science Projects</h2>
 <p>In Positron, and VS Code, projects are created as workspaces by associating folders as specialized place called workspaces. These workspaces allow you to organize your projects as necessary, such as creating folders for you scripts, data, source files, and much more. Additionally, you can initialize a git repository for the work space</p>
 <p>It is highly recommended to creat a workspace for any project you work on.</p>
-<section id="python-1" class="level3">
-<h3 class="anchored" data-anchor-id="python-1">Python</h3>
+<section id="python" class="level3">
+<h3 class="anchored" data-anchor-id="python">Python</h3>
 <p>To create a Python-based workspace, you will go to the top right corner and click on the folder icon:</p>
-<p><img src="img/Screenshot From 2024-12-25 14-36-21.png" class="img-fluid"></p>
+<p><img src="img/Screenshot From 2024-12-26 14-36-21.png" class="img-fluid"></p>
 <p>This will open a new drop-down menu:</p>
 <p><img src="img/Screenshot From 2024-12-26 14-38-04.png" class="img-fluid"></p>
 <p>Click on the “New Project…” to begin creating a workspace. This will then create a new window:</p>
@@ -269,9 +297,17 @@ ul.task-list li input[type="checkbox"] {
 <p>I recommend doing so. This will create a new environment that I believe will only be used for the project. Note, you will need to install the python modules again for this new environment. A final window will popup:</p>
 <p><img src="img/Screenshot From 2024-12-26 14-39-50.png" class="img-fluid"></p>
 <p>You should click “New Window” for now. This will open a new session of Positron. It may take a few minutes to create the python environment, but it will work after.</p>
-
-
 </section>
+</section>
+<section id="post-2-162024-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="post-2-162024-quarto">Post 2 (1/6/2024): Quarto</h2>
+<p>When working in Quarto, the python chunks can send code to a console to be executed. The console is set up to use python via pyenv. However, whenever the quarto document gets an R chunk, the console will immediately change to an R console, and all the python chunks will be sent to the R console and evaluated with <a href="https://rstudio.github.io/reticulate/">reticulate</a>. This would be okay, but reticulate may not have all the python packages that pyenv has. I have tried searching for a way to have reticulate communicate with the pyenv installation, but I haven’t found anything thus far. Therefore, I recommend installing python modules via reticulate.</p>
+<p>You can install a python module with:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_install</span>(<span class="st">"polars"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
 </section>
 
 

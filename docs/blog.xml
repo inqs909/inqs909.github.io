@@ -707,7 +707,7 @@ font-style: inherit;">909</span></span>
   <media:content url="www.inqs.info/blog/2024-12-26-python-programming/test.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Positron and Python</title>
+  <title>Positron</title>
   <dc:creator>Isaac Quintanilla Salinas</dc:creator>
   <link>www.inqs.info/blog/2024-12-22-positron/</link>
   <description><![CDATA[ 
@@ -739,23 +739,14 @@ font-style: inherit;">909</span></span>
 </ul>
 </section>
 </section>
-<section id="python" class="level2">
-<h2 class="anchored" data-anchor-id="python">Python</h2>
-<p>As you are installing Positron, you should notice that there are instructions to installing python on to your system. If you have python already installed on your computer, Positron should allow you to point to it. However, Posit has recommended to use <a href="https://github.com/pyenv/pyenv">pyenv</a>. After playing around with it, I also recommend it for now.</p>
-<p>Why pyenv? First, it looks like Positron works better with pyenv installed. Therefore, I decided to stick with posit’s recommendation and utilize it. Afterwards, I played around with it and installed the latest version of python and some modules/libraries/packages. It worked, and it seemed like it did not change anything in my systen for now. I think what I liked the most about it was the minimalist nature of the program. I feel a little more confident that it only install this piece of software and nothing more.</p>
-<section id="virtual-environments-and-pyenv" class="level3">
-<h3 class="anchored" data-anchor-id="virtual-environments-and-pyenv">Virtual Environments and pyenv</h3>
-<p>I recently learned that the best way to use python is by creating virtual environments and installing everything you need for python in that environment. This is a completely new idea for me since R never required me to use it. I have heard of <a href="https://rstudio.github.io/renv/articles/renv.html">renv</a> designed to create a reproducible environment, but I never utilized. In hindsight, if I learned more about it, python may have been easier to start off.</p>
-</section>
-</section>
-<section id="data-science-projects" class="level2">
-<h2 class="anchored" data-anchor-id="data-science-projects">Data Science Projects</h2>
+<section id="post-1-data-science-projects" class="level2">
+<h2 class="anchored" data-anchor-id="post-1-data-science-projects">Post 1: Data Science Projects</h2>
 <p>In Positron, and VS Code, projects are created as workspaces by associating folders as specialized place called workspaces. These workspaces allow you to organize your projects as necessary, such as creating folders for you scripts, data, source files, and much more. Additionally, you can initialize a git repository for the work space</p>
 <p>It is highly recommended to creat a workspace for any project you work on.</p>
-<section id="python-1" class="level3">
-<h3 class="anchored" data-anchor-id="python-1">Python</h3>
+<section id="python" class="level3">
+<h3 class="anchored" data-anchor-id="python">Python</h3>
 <p>To create a Python-based workspace, you will go to the top right corner and click on the folder icon:</p>
-<p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-25 14-36-21.png" class="img-fluid"></p>
+<p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-26 14-36-21.png" class="img-fluid"></p>
 <p>This will open a new drop-down menu:</p>
 <p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-26 14-38-04.png" class="img-fluid"></p>
 <p>Click on the “New Project…” to begin creating a workspace. This will then create a new window:</p>
@@ -767,9 +758,23 @@ font-style: inherit;">909</span></span>
 <p>I recommend doing so. This will create a new environment that I believe will only be used for the project. Note, you will need to install the python modules again for this new environment. A final window will popup:</p>
 <p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-26 14-39-50.png" class="img-fluid"></p>
 <p>You should click “New Window” for now. This will open a new session of Positron. It may take a few minutes to create the python environment, but it will work after.</p>
-
-
 </section>
+</section>
+<section id="post-2-162024-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="post-2-162024-quarto">Post 2 (1/6/2024): Quarto</h2>
+<p>When working in Quarto, the python chunks can send code to a console to be executed. The console is set up to use python via pyenv. However, whenever the quarto document gets an R chunk, the console will immediately change to an R console, and all the python chunks will be sent to the R console and evaluated with <a href="https://rstudio.github.io/reticulate/">reticulate</a>. This would be okay, but reticulate may not have all the python packages that pyenv has. I have tried searching for a way to have reticulate communicate with the pyenv installation, but I haven’t found anything thus far. Therefore, I recommend installing python modules via reticulate.</p>
+<p>You can install a python module with:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">reticulate<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">py_install</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"polars"</span>)</span></code></pre></div>
+</div>
+
+
 </section>
 
 

@@ -1,7 +1,7 @@
 ---
-title: "Basic Python Programming"
+title: "Python Programming"
 date: 2024-12-26
-date-modified: 2024-12-28
+date-modified: 2025-01-06
 description: "Basics of Python Programming."
 author: "Isaac Quintanilla Salinas"
 draft: false
@@ -25,7 +25,18 @@ When writing this post, I realize how difficult it will be for me to create a co
 
 - Wes McKinney's [Python for Data Analysis](https://wesmckinney.com/book/)
 
-## Post 1 12/26/24
+
+## Post 1: Installing Python
+
+As you are installing Positron, you should notice that there are instructions to installing python on to your system. If you have python already installed on your computer, Positron should allow you to point to it. However, Posit has recommended to use [pyenv](https://github.com/pyenv/pyenv). After playing around with it, I also recommend it for now.
+
+Why pyenv? First, it looks like Positron works better with pyenv installed. Therefore, I decided to stick with posit's recommendation and utilize it. Afterwards, I played around with it and installed the latest version of python and some modules/libraries/packages. It worked, and it seemed like it did not change anything in my systen for now. I think what I liked the most about it was the minimalist nature of the program. I feel a little more confident that it only install this piece of software and nothing more. 
+
+### Virtual Environments and pyenv
+
+I recently learned that the best way to use python is by creating virtual environments and installing everything you need for python in that environment. This is a completely new idea for me since R never required me to use it. I have heard of [renv](https://rstudio.github.io/renv/articles/renv.html) designed to create a reproducible environment, but I never utilized. In hindsight, if I learned more about it, python may have been easier to start off.
+
+## Post 2 12/26/24
 
 ### Loaded Modules
 
@@ -357,6 +368,30 @@ Notice how `c` now contains the value 909, even though that `d` was the only one
 
 After I learned this, I did not know how I feel about this. I personally liked the R's way to copy and paste objects, which allowed me to manipulate something without having to worry about changing the original. After some thinking, I don't think I liked it, but that could be because I am stuck in my ways. There may be some advantages on how Python treats objects, but as of right now, I do not know.
 
-## Post 2 12/28/2024
+## Post 3 12/30/2024
 
-I have completed several posts 
+I have completed several lectures on on introduction to data science, and one thing that has always perplexed me was the addition of multiple functions to an object, somewhat liked the pseudo code below:
+
+
+```{python}
+#| eval: false
+
+obj.fun1().fun2().fun3()
+
+```
+
+When looking at it, you take the object and pass it to fun, fun2, and finally fun3. This reminds me of R's `|>` operator. After googling around this seems to be called [method chaining](https://www.geeksforgeeks.org/method-chaining-in-python/). Now to make it look like R's version of piping, where each function will be in a new line, we can surround all the code in paranthesis and seperate each function:
+
+
+```{python}
+#| eval: false
+
+(
+  obj
+    .fun1()
+    .fun2()
+    .fun3()
+)
+```
+
+The paranthesis will transfer everything in it to readable code for python. Hence "piping" in python! 
