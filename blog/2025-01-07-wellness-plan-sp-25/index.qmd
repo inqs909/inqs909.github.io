@@ -1,0 +1,133 @@
+---
+title: "Wellness Plan Spring 2025"
+author: "Isaac Quintanilla Salinas"
+navbar: false
+image: "img/wp3_1.jpg"
+date: 2025-01-08
+format:
+  closeread-html:
+    debug-mode: false
+    cr-style:
+      narrative-text-color-sidebar: white
+      narrative-font-family: 'Georgia, "Times New Roman", Times, serif'
+      narrative-font-size: 1.25rem
+      narrative-sidebar-width: minmax(400px, 1fr)
+      narrative-border-radius: 5px
+      narrative-background-color-overlay: "#111111dd"
+      narrative-background-color-sidebar: "#111111"
+      section-background-color: "#033E3E"
+      poem-font-family: 'Georgia, "Times New Roman", Times, serif'
+
+editor: source
+---
+
+:::{.cr-section}
+
+:::{focus-on="cr-fw"}
+# Reuse, Reduce, and Repair 
+:::
+
+During my dissertation phase, my laptop stopped working because it could not connect to my charger. The worst part was that I could not fix it like I have done in the past, which infuriated me. Fortunately at that time, Framework laptops came out with the promise that all the parts to fix the laptop to would be made available for users to repair. Knowing this, I quickly pulled the trigger and bought the laptop almost immediately, and has served me to this day.
+
+Once, I passed my dissertation, I slowly realized the importance of [right to repair](https://www.theverge.com/23910066/right-to-repair-law-newsom-california-sb-244) to continue use perfectly good products that can be repaired with a simple part change. Which ultimately reduces the waste I produce. Now I try to purchase things with a right to repair mentality. Which ultimately means to purchase things that are meant to last, and asking serious questions if I truly need this product and what I would do if it no longer works. A goal I strive to achieve every day.   
+
+Over the past year, I began reducing my plastic use by investing in products that come with minimal packaging or minimal plastic. We all know that plastics have polluted the [environment](https://www.unep.org/news-and-stories/story/microplastics-long-legacy-left-behind-plastic-pollution) and been found in our [human bodies](https://www.sciencenews.org/article/microplastics-human-bodies-health-risks). Therefore, I am committed to take small steps to reduce my impact to plastic waste. Last year, I began purchasing plastic-free cleaning products, especially the for plastic-wrapped cleaning pods, to reduce my own plastic waste. It has been a success, and I hope to continue working on this. 
+
+
+**Goal:** Identify one more product that reduces my environmental impact and encourages right to repair, and ultimately implement it. 
+
+
+
+:::{#cr-fw}
+![](img/wp1_1.jpg)
+:::
+:::
+
+:::{.cr-section layout="sidebar-right"}
+
+:::{focus-on="cr-pack"}
+# Routines 
+:::
+
+Procrastination has always been a problem for me, and still is. I have tried many things to motivate me to complete a task, with only partial success. Therefore, I want to attempt new things that will reduce my procrastination.
+
+Lately, I noticed that I have been building better habits that I perceive will benefit me. Whether it being walking more, eating healthier, or be concious about my purchases. I am not sure how much is it due to me maturing, or focusing on completing small steps. But there have been positive results. Therefore, I want to continue with the progress that I have achieved thus far and experiment with other techniques and assess their efficacy. 
+
+**Goal:** Every week, I will right down all the tasks that I have not completed for the week, and I will spend a few hours to complete a task.
+
+:::{#cr-pack}
+![](img/wp2_1.jpg)
+:::
+:::
+
+:::{.cr-section layout="sidebar-right"}
+
+:::{focus-on="cr-foss"}
+# Disconnect from Online Platforms
+:::
+
+Last year, I listened to a podcast on [Indigenous AI](https://www.allmyrelationspodcast.com/podcast/episode/7b45f1e5/indigenous-ai-revolution-or-colonizer-bullshit) and how AI can help indigenous communities as well as harm them and the planet. A couple of highlights that the main speaker talks about is the amount energy used to run these algorithms and data centers, and how we use it to "help" our lives. While there are many messages from the podcast episode, one thing idea I gain is "Do not let perfect be the enemy of good".
+
+After listening to the podcast, I began to think how my use of online platforms impact the environment. While, I have not found a definitive answer to this questions. Once thing I can do is to not use cloud-based applications and run them locally. I am still using energy to produce the product, by I am not using the internet to communicate, which overall reduces the amount of energy needed.  
+
+In the past, I always adopted free and open source software (foss), for 2 reasons. First, I did not have any money to buy the best software. Second, whatever I create will not matter if no one from El Salvador can use it. Therefore, I committed to prioritize the use foss because it would ensure that any Salvadoreñ@ can use it, with only the limitation of needing a computer and internet to download the stuff. Now I have environmental reasons to continue using offline free and open source software.
+
+My goal for this semester is find an offline application for a technology tool I personally use. I am not sure which tool it may be, but I am eyeing Canva to be replaced. 
+
+:::{#cr-foss}
+![](img/wp4.png)
+:::
+:::
+
+:::{.cr-section layout="sidebar-left"}
+
+:::{focus-on="cr-walk"}
+# Walking
+:::
+
+Over the past year, I have managed to have a daily average of 10,000 steps a day.
+
+**Goal:** Increase my daily average steps to 12,500.
+
+:::{#cr-walk}
+![](img/wp5_1.jpg)
+:::
+:::
+
+
+:::{.cr-section layout="sidebar-right"}
+
+:::{focus-on="cr-amtrak"}
+# Travel
+:::
+
+**Goal:** Take the train to either San Luis Obispo or San Diego in the semester.
+
+:::{#cr-amtrak}
+![](img/wp6_1.jpg)
+:::
+:::
+
+
+
+:::{.cr-section layout="sidebar-left"}
+
+:::{focus-on="cr-twilight"}
+# 2025 Goals
+:::
+
+I have several other goals I have for the year, and I plan to continue work on them this year:
+
+Work on being grateful and appreciative of the smaller things.
+
+Learn Causal Inference.
+
+Learn to cook new dishes from scratch.
+
+Learn a new hobby.
+
+
+:::{#cr-twilight}
+![](img/wp3_1.jpg)
+:::
+:::

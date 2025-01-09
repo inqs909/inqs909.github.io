@@ -6,6 +6,7 @@ description: "Basics of Python Programming."
 author: "Isaac Quintanilla Salinas"
 draft: false
 editor: source
+navbar: false
 categories: 
   - r2py
 image: "test.jpg"

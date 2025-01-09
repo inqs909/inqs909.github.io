@@ -5,6 +5,7 @@ date-modified: 2025-01-06
 description: "Getting Started with Positron"
 author: "Isaac Quintanilla Salinas"
 draft: false
+navbar: false
 editor: source
 categories: 
   - r2py

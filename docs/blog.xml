@@ -10,7 +10,230 @@
 <atom:link href="www.inqs.info/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Thu, 26 Dec 2024 08:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 08 Jan 2025 08:00:00 GMT</lastBuildDate>
+<item>
+  <title>Wellness Plan Spring 2025</title>
+  <dc:creator>Isaac Quintanilla Salinas</dc:creator>
+  <link>www.inqs.info/blog/2025-01-07-wellness-plan-sp-25/</link>
+  <description><![CDATA[ 
+      <!-- user-provided yaml closeread style options -->
+      <style>
+        :root {
+          --cr-narrative-font-family: Georgia, “Times New Roman”, Times, serif;
+--cr-narrative-background-color-sidebar: #111111;
+--cr-narrative-background-color-overlay: #111111dd;
+--cr-narrative-text-color-sidebar: white;
+--cr-narrative-sidebar-width: minmax(400px, 1fr);
+--cr-poem-font-family: Georgia, “Times New Roman”, Times, serif;
+--cr-section-background-color: #033E3E;
+--cr-narrative-font-size: 1.25rem;
+--cr-narrative-border-radius: 5px;
+        }
+      </style>
+    
+
+
+
+
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-fw">
+<section id="reuse-reduce-and-repair" class="level1 narrative">
+<h1>Reuse, Reduce, and Repair</h1>
+</section>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>During my dissertation phase, my laptop stopped working because it could not connect to my charger. The worst part was that I could not fix it like I have done in the past, which infuriated me. Fortunately at that time, Framework laptops came out with the promise that all the parts to fix the laptop to would be made available for users to repair. Knowing this, I quickly pulled the trigger and bought the laptop almost immediately, and has served me to this day.</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>Once, I passed my dissertation, I slowly realized the importance of <a href="https://www.theverge.com/23910066/right-to-repair-law-newsom-california-sb-244">right to repair</a> to continue use perfectly good products that can be repaired with a simple part change. Which ultimately reduces the waste I produce. Now I try to purchase things with a right to repair mentality. Which ultimately means to purchase things that are meant to last, and asking serious questions if I truly need this product and what I would do if it no longer works. A goal I strive to achieve every day.</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>Over the past year, I began reducing my plastic use by investing in products that come with minimal packaging or minimal plastic. We all know that plastics have polluted the <a href="https://www.unep.org/news-and-stories/story/microplastics-long-legacy-left-behind-plastic-pollution">environment</a> and been found in our <a href="https://www.sciencenews.org/article/microplastics-human-bodies-health-risks">human bodies</a>. Therefore, I am committed to take small steps to reduce my impact to plastic waste. Last year, I began purchasing plastic-free cleaning products, especially the for plastic-wrapped cleaning pods, to reduce my own plastic waste. It has been a success, and I hope to continue working on this.</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p><strong>Goal:</strong> Identify one more product that reduces my environmental impact and encourages right to repair, and ultimately implement it.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-fw" class="sticky">
+<p><img src="www.inqs.info/blog/2025-01-07-wellness-plan-sp-25/img/wp1_1.jpg" class="img-fluid"></p>
+</div>
+</div>
+</div>
+</div>
+<div class="cr-section cr-column-screen sidebar-right">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-pack">
+<section id="routines" class="level1 narrative">
+<h1>Routines</h1>
+</section>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>Procrastination has always been a problem for me, and still is. I have tried many things to motivate me to complete a task, with only partial success. Therefore, I want to attempt new things that will reduce my procrastination.</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>Lately, I noticed that I have been building better habits that I perceive will benefit me. Whether it being walking more, eating healthier, or be concious about my purchases. I am not sure how much is it due to me maturing, or focusing on completing small steps. But there have been positive results. Therefore, I want to continue with the progress that I have achieved thus far and experiment with other techniques and assess their efficacy.</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p><strong>Goal:</strong> Every week, I will right down all the tasks that I have not completed for the week, and I will spend a few hours to complete a task.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-pack" class="sticky">
+<p><img src="www.inqs.info/blog/2025-01-07-wellness-plan-sp-25/img/wp2_1.jpg" class="img-fluid"></p>
+</div>
+</div>
+</div>
+</div>
+<div class="cr-section cr-column-screen sidebar-right">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-foss">
+<section id="disconnect-from-online-platforms" class="level1 narrative">
+<h1>Disconnect from Online Platforms</h1>
+</section>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>Last year, I listened to a podcast on <a href="https://www.allmyrelationspodcast.com/podcast/episode/7b45f1e5/indigenous-ai-revolution-or-colonizer-bullshit">Indigenous AI</a> and how AI can help indigenous communities as well as harm them and the planet. A couple of highlights that the main speaker talks about is the amount energy used to run these algorithms and data centers, and how we use it to “help” our lives. While there are many messages from the podcast episode, one thing idea I gain is “Do not let perfect be the enemy of good”.</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>After listening to the podcast, I began to think how my use of online platforms impact the environment. While, I have not found a definitive answer to this questions. Once thing I can do is to not use cloud-based applications and run them locally. I am still using energy to produce the product, by I am not using the internet to communicate, which overall reduces the amount of energy needed.</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>In the past, I always adopted free and open source software (foss), for 2 reasons. First, I did not have any money to buy the best software. Second, whatever I create will not matter if no one from El Salvador can use it. Therefore, I committed to prioritize the use foss because it would ensure that any Salvadoreñ@ can use it, with only the limitation of needing a computer and internet to download the stuff. Now I have environmental reasons to continue using offline free and open source software.</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>My goal for this semester is find an offline application for a technology tool I personally use. I am not sure which tool it may be, but I am eyeing Canva to be replaced.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-foss" class="sticky">
+<p><img src="www.inqs.info/blog/2025-01-07-wellness-plan-sp-25/img/wp4.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+</div>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-walk">
+<section id="walking" class="level1 narrative">
+<h1>Walking</h1>
+</section>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>Over the past year, I have managed to have a daily average of 10,000 steps a day.</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p><strong>Goal:</strong> Increase my daily average steps to 12,500.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-walk" class="sticky">
+<p><img src="www.inqs.info/blog/2025-01-07-wellness-plan-sp-25/img/wp5_1.jpg" class="img-fluid"></p>
+</div>
+</div>
+</div>
+</div>
+<div class="cr-section cr-column-screen sidebar-right">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-amtrak">
+<section id="travel" class="level1 narrative">
+<h1>Travel</h1>
+</section>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p><strong>Goal:</strong> Take the train to either San Luis Obispo or San Diego in the semester.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-amtrak" class="sticky">
+<p><img src="www.inqs.info/blog/2025-01-07-wellness-plan-sp-25/img/wp6_1.jpg" class="img-fluid"></p>
+</div>
+</div>
+</div>
+</div>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-twilight">
+<section id="goals" class="level1 narrative">
+<h1>2025 Goals</h1>
+</section>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>I have several other goals I have for the year, and I plan to continue work on them this year:</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>Work on being grateful and appreciative of the smaller things.</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>Learn Causal Inference.</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>Learn to cook new dishes from scratch.</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>Learn a new hobby.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-twilight" class="sticky">
+<p><img src="www.inqs.info/blog/2025-01-07-wellness-plan-sp-25/img/wp3_1.jpg" class="img-fluid"></p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+ ]]></description>
+  <guid>www.inqs.info/blog/2025-01-07-wellness-plan-sp-25/</guid>
+  <pubDate>Wed, 08 Jan 2025 08:00:00 GMT</pubDate>
+  <media:content url="www.inqs.info/blog/2025-01-07-wellness-plan-sp-25/img/wp3_1.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Basic Python Programming</title>
   <dc:creator>Isaac Quintanilla Salinas</dc:creator>

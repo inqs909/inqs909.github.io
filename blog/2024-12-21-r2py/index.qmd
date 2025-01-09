@@ -4,6 +4,7 @@ date: 2024-12-21
 description: "A post documenting my journey to learn python for data science courses."
 author: "Isaac Quintanilla Salinas"
 draft: false
+navbar: false
 editor: source
 categories: 
   - r2py
