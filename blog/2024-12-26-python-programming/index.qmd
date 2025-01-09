@@ -9,7 +9,7 @@ editor: source
 navbar: false
 categories: 
   - r2py
-image: "test.jpg"
+image: "python_1.jpg"
 knitr:
   opts_chunk: 
     echo: true

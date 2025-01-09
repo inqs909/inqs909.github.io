@@ -9,7 +9,7 @@ navbar: false
 editor: source
 categories: 
   - r2py
-image: "test.jpg"
+image: "positron_1.jpg"
 knitr:
   opts_chunk: 
     echo: true

@@ -3,6 +3,7 @@ title: "Wellness Plan Spring 2023"
 author: "Isaac Quintanilla Salinas"
 description: "My wellness plan for Spring 2023."
 draft: false
+navbar: false
 date: 2023-01-31
 image: "CI.jpg"
 categories: 

@@ -5,6 +5,7 @@ summary: "Welcome to the INQS Blog. A blog documenting my experiences through St
 author: "Isaac Quintanilla Salinas"
 date: 2021-04-14
 image: "sunset.jpg"
+navbar: false
 ---
 
 ```{r setup, include=FALSE}

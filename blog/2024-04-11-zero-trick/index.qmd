@@ -3,6 +3,7 @@ title: "The 'Zero-Trick' in Bayesian Survival Analysis"
 author: "Isaac Quintanilla Salinas"
 description: "The zero-trick explained in bayesian survival analysis."
 draft: true
+navbar: false
 date: 2024-01-31
 image: ci.jpg
 categories: 

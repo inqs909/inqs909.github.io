@@ -4,6 +4,7 @@ description: "I describe some of the functions available in Rcpp. If you want to
 author: "Isaac Quintanilla"
 date: 2021-05-01
 draft: false
+navbar: false
 categories: 
   - RCPP
 image: "JT7.jpg"
