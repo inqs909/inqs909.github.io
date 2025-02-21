@@ -27,7 +27,7 @@ filters:
 
 ## Website
 
-[https://www.inqs.info/p/plotathon/f22.html](https://www.inqs.info/p/plotathon/f24)
+[https://www.inqs.info/p/plotathon/f24.html](https://www.inqs.info/p/plotathon/f24)
 
 # Installation
 
