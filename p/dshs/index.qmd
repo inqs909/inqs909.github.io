@@ -1,0 +1,140 @@
+---
+title: |
+  Data Science \
+  in High School
+author: "Isaac Quintanilla Salinas"
+format:
+  revealjs:
+    scrollable: true
+    navigation-mode: vertical
+    controls-layout: bottom-right
+    controls-tutorial: true
+    incremental: false 
+knitr:
+  opts_chunk: 
+    echo: true
+    eval: true
+    message: false
+    warnings: false
+    comment: "#>" 
+    
+revealjs-plugins:
+  - verticator
+  
+filters: 
+  - reveal-header
+  - reveal-auto-agenda
+
+editor: source
+---
+
+## Introductions
+
+:::: {.columns}
+
+::: {.column width="50%"}
+-   San Bernardino, CA
+
+-   CSU Monterey Bay
+
+    -   BS Biology
+
+-   San Diego State University
+
+    -   Master's in Public Health
+
+-   UC Riverside
+
+    -   PhD in Applied Statistics
+:::
+
+::: {.column width="50%"}
+![](img/sb.jpg)
+:::
+
+::::
+
+
+
+## Introductions
+
+-   Name
+
+-   Year
+
+-   What was your Major?
+
+-   Fun Fact
+
+-   Career Goal
+
+
+# Data Science 
+
+## What is Data Science?
+
+Data science is an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from structured and unstructured data.
+
+## DS Components
+
+::: incremental
+
+- **Data Collection & Preparation:** Gathering data from various sources, cleaning it, and transforming it into a usable format.
+- **Data Exploration & Analysis:** Summarizing data, identifying patterns, and uncovering relationships.
+- **Data Modeling & Machine Learning:** Building predictive models, making classifications, and identifying trends.
+- **Data Visualization & Communication:** Presenting findings in a clear, concise, and impactful way (charts, graphs, dashboards).
+
+:::
+
+## Why is Data Science Important Today?
+
+::: panel-tabset
+
+### Business Applications
+- **Personalized Experiences:** Recommender systems (think Amazon, Netflix), targeted advertising.
+- **Improved Decision Making:** Data-driven insights for business strategy, finance, and operations.
+- **Fraud Detection:** Identifying and preventing fraudulent activities.
+
+### Scientific Advancements
+- **Medical Research:** Discovering new treatments, predicting disease outbreaks.
+- **Environmental Monitoring:** Understanding climate change, predicting natural disasters.
+- **Social Sciences:** Analyzing social trends, understanding human behavior.
+
+:::
+
+
+## Key Skills for Data Scientists
+
+- **Programming:** Julia, Python, SQL, R
+- **Mathematics & Statistics:** Probability, statistics, linear algebra, calculus
+- **Machine Learning:** Supervised learning, unsupervised learning, deep learning
+- **Data Visualization:** Plots, maps, and dashboards
+- **Communication & Storytelling:** Scientifical and technical writing
+- **Domain Expertise:** Knowledge of the specific field (business, healthcare, finance, etc.)
+
+## The Future of Data Science
+
+- **Artificial Intelligence (AI) and Machine Learning:** Continued advancements in these areas will drive innovation in many fields.
+- **Big Data & Cloud Computing:** Handling and analyzing massive datasets will become increasingly important.
+- **Data Ethics & Privacy:** Addressing concerns related to data security, bias, and fairness.
+
+
+## Data Science 
+
+![](https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.OCvrb6WvDfszLRgPQbuFtAHaGt%26pid%3DApi&sp=1741904691T834168f7bc565031f7971fc1bc784e44dfbd69548bd44b5554736bf3a74bd28f){align="middle"}
+
+# Data Science in High School
+
+## What math opportunities were in your high school?
+
+## What Math do High School Students Need to Know to Graduate?
+
+## Algebra 2 vs Data Science
+
+[Changes to the AG Requirements](https://edsource.org/2023/uc-committee-changes-admission-standard-for-data-science-causing-confusion-over-math-framework/693892)
+
+## Who are the stakeholders
+
+## Is there any other math?
+
+## Should Calculus be the goal?
