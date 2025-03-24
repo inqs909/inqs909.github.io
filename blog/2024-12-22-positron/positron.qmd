@@ -1,0 +1,84 @@
+# Positron
+
+Positron and Python are both new to me, but as always, the first step is installing the software on your computer. In this post, I will highlight my adventures installing both of these softwares on to my computer. I will layout what is working and what is not working. 
+
+**Disclaimer: I daily drive Linux, currently using Fedora, so my experiences will be different.**
+
+## Positron
+
+Since I had R installed, my first intuition was to install Positron becuase I learned that was the new ide, *still in beta*, from Posit that will allow users to work in both R and in Python. Therefore, I can learn how to use python without having to worried about choosing a proper IDE. 
+
+To install Positron, go to their [website](https://positron.posit.co) and click on [get started](https://positron.posit.co/start.html). Afterwards, follow the instructions to prepare your computer to use positron. This involves either installing R from [CRAN](https://cloud.r-project.org/) or Python via [pyenv](https://github.com/pyenv/pyenv) ([Windows](https://github.com/pyenv-win/pyenv-win)). Once that is done, you can navigate to their download [page](https://positron.posit.co/download.html), where you download the appropriate file^[Lucked out they had Fedora.]. Afterwards, run the installer and follow the prompts. And there you go, Positron should be ready for use.
+
+After you install Positron, it should look like this:
+
+![](img/Screenshot%20From%202024-12-26%2014-35-49.png){An image displaying the Positron IDE, the interpreter is R.}
+
+Note that I changed the appearance of Positron to dark theme. Here is Positron when Python is being utilized:
+
+![](img/Screenshot%20From%202024-12-26%2014-36-00.png){fig-alt="An image displaying the Positron IDE, the interpreter is Python."}
+
+
+### VS Code
+
+Positron is based on Microsoft's [Code OSS](https://github.com/microsoft/vscode) platform, which makes it look very similar to [visual Studio Code](https://code.visualstudio.com/). It is an [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) similar to RStudio, but it is program agnostic. Additionally, it is capable to be more customizable with the use of extensions provided by [Open VSX](https://open-vsx.org/); however, you may install extensions from [VS Code](https://marketplace.visualstudio.com/vscode) as well.
+
+To learn more about Positron and VS Code, visit the following pages:
+
+  - [Positron Introduction](https://youtu.be/8uRcB34Hhsw?si=ZbycZdtjZ_cvnOJv)
+  - [Positron Guides](https://positron.posit.co/add-to-path.html)
+  - [R Package Development](https://blog.stephenturner.us/p/r-package-development-in-positron)
+  - [GitHub Discussions](https://github.com/posit-dev/positron/discussions)
+  - [VS Code Help](https://code.visualstudio.com/docs/introvideos/basics)
+  - [VS Code Basics Videos](https://code.visualstudio.com/docs/getstarted/introvideos)
+
+
+## Post 1: Data Science Projects
+
+
+In Positron, and VS Code, projects are created as workspaces by associating folders as specialized place called workspaces. These workspaces allow you to organize your projects as necessary, such as creating folders for you scripts, data, source files, and much more. Additionally, you can initialize a git repository for the work space 
+
+It is highly recommended to creat a workspace for any project you work on.
+
+### Python
+
+To create a Python-based workspace, you will go to the top right corner and click on the folder icon:
+
+![](img/Screenshot%20From%202024-12-26%2014-36-21.png)
+
+This will open a new drop-down menu:
+
+![](img/Screenshot%20From%202024-12-26%2014-38-04.png)
+
+Click on the "New Project..." to begin creating a workspace. This will then create a new window:
+
+![](img/Screenshot%20From%202024-12-26%2014-38-21.png)
+
+Now select the "Python Project" and click "Next". Afterwards, a new window will popup asking you to create a new folder and where to store it:
+
+![](img/Screenshot%20From%202024-12-26%2014-38-57.png)
+
+Notice that I have the "Initialize project at Git repository", if you have [git](https://git-scm.com/) installed and plan to use it, it would be a good idea to initialize it. Then, a new window will popup asking you to create a new Python environment:
+
+![](img/Screenshot%20From%202024-12-26%2014-39-29.png)
+
+I recommend doing so. This will create a new environment that I believe will only be used for the project. Note, you will need to install the python modules again for this new environment. A final window will popup:
+
+![](img/Screenshot%20From%202024-12-26%2014-39-50.png)
+
+You should click "New Window" for now. This will open a new session of Positron. It may take a few minutes to create the python environment, but it will work after.
+
+## Post 2 (1/6/2024): Quarto
+
+When working in Quarto, the python chunks can send code to a console to be executed. The console is set up to use python via pyenv. However, whenever the quarto document gets an R chunk, the console will immediately change to an R console, and all the python chunks will be sent to the R console and evaluated with [reticulate](https://rstudio.github.io/reticulate/). This would be okay, but reticulate may not have all the python packages that pyenv has. I have tried searching for a way to have reticulate communicate with the pyenv installation, but I haven't found anything thus far. Therefore, I recommend installing python modules via reticulate.
+
+You can install a python module with:
+
+```{r}
+#| eval: false
+
+reticulate::py_install("polars")
+```
+
+
+

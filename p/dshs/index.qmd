@@ -125,6 +125,15 @@ Data science is an interdisciplinary field that uses scientific methods, process
 
 # Data Science in High School
 
+## George Cobb
+
+For the last half-century, mathematics has been hovering like a helicopter parent, making it hard for our Stat 101 course to go out and play with its curricular friends. 
+
+In our current daycare, **Central Limit Theorem is Bully**.
+
+
+The American Statistician 2015
+
 ## What math opportunities were in your high school?
 
 ## What Math do High School Students Need to Know to Graduate?
