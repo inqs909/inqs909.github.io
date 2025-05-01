@@ -19,15 +19,15 @@
       <!-- user-provided yaml closeread style options -->
       <style>
         :root {
-          --cr-section-background-color: #033E3E;
---cr-narrative-text-color-sidebar: white;
+          --cr-poem-font-family: Georgia, “Times New Roman”, Times, serif;
 --cr-narrative-sidebar-width: minmax(400px, 1fr);
---cr-poem-font-family: Georgia, “Times New Roman”, Times, serif;
 --cr-narrative-font-family: Georgia, “Times New Roman”, Times, serif;
---cr-narrative-background-color-overlay: #111111dd;
---cr-narrative-font-size: 1.25rem;
 --cr-narrative-background-color-sidebar: #111111;
+--cr-narrative-background-color-overlay: #111111dd;
+--cr-narrative-text-color-sidebar: white;
 --cr-narrative-border-radius: 5px;
+--cr-narrative-font-size: 1.25rem;
+--cr-section-background-color: #033E3E;
         }
       </style>
     
@@ -1945,89 +1945,6 @@ font-style: inherit;">5</span>)</span>
   <guid>www.inqs.info/blog/welcome/</guid>
   <pubDate>Wed, 14 Apr 2021 07:00:00 GMT</pubDate>
   <media:content url="www.inqs.info/blog/welcome/sunset.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title></title>
-  <link>www.inqs.info/blog/2024-12-22-positron/positron.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="positron" class="level1">
-<h1>Positron</h1>
-<p>Positron and Python are both new to me, but as always, the first step is installing the software on your computer. In this post, I will highlight my adventures installing both of these softwares on to my computer. I will layout what is working and what is not working.</p>
-<p><strong>Disclaimer: I daily drive Linux, currently using Fedora, so my experiences will be different.</strong></p>
-<section id="positron-1" class="level2">
-<h2 class="anchored" data-anchor-id="positron-1">Positron</h2>
-<p>Since I had R installed, my first intuition was to install Positron becuase I learned that was the new ide, <em>still in beta</em>, from Posit that will allow users to work in both R and in Python. Therefore, I can learn how to use python without having to worried about choosing a proper IDE.</p>
-<p>To install Positron, go to their <a href="https://positron.posit.co">website</a> and click on <a href="https://positron.posit.co/start.html">get started</a>. Afterwards, follow the instructions to prepare your computer to use positron. This involves either installing R from <a href="https://cloud.r-project.org/">CRAN</a> or Python via <a href="https://github.com/pyenv/pyenv">pyenv</a> (<a href="https://github.com/pyenv-win/pyenv-win">Windows</a>). Once that is done, you can navigate to their download <a href="https://positron.posit.co/download.html">page</a>, where you download the appropriate file<sup>1</sup>. Afterwards, run the installer and follow the prompts. And there you go, Positron should be ready for use.</p>
-<p>After you install Positron, it should look like this:</p>
-<p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-26 14-35-49.png" class="img-fluid">{An image displaying the Positron IDE, the interpreter is R.}</p>
-<p>Note that I changed the appearance of Positron to dark theme. Here is Positron when Python is being utilized:</p>
-<p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-26 14-36-00.png" class="img-fluid" alt="An image displaying the Positron IDE, the interpreter is Python."></p>
-<section id="vs-code" class="level3">
-<h3 class="anchored" data-anchor-id="vs-code">VS Code</h3>
-<p>Positron is based on Microsoft’s <a href="https://github.com/microsoft/vscode">Code OSS</a> platform, which makes it look very similar to <a href="https://code.visualstudio.com/">visual Studio Code</a>. It is an <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a> similar to RStudio, but it is program agnostic. Additionally, it is capable to be more customizable with the use of extensions provided by <a href="https://open-vsx.org/">Open VSX</a>; however, you may install extensions from <a href="https://marketplace.visualstudio.com/vscode">VS Code</a> as well.</p>
-<p>To learn more about Positron and VS Code, visit the following pages:</p>
-<ul>
-<li><a href="https://youtu.be/8uRcB34Hhsw?si=ZbycZdtjZ_cvnOJv">Positron Introduction</a></li>
-<li><a href="https://positron.posit.co/add-to-path.html">Positron Guides</a></li>
-<li><a href="https://blog.stephenturner.us/p/r-package-development-in-positron">R Package Development</a></li>
-<li><a href="https://github.com/posit-dev/positron/discussions">GitHub Discussions</a></li>
-<li><a href="https://code.visualstudio.com/docs/introvideos/basics">VS Code Help</a></li>
-<li><a href="https://code.visualstudio.com/docs/getstarted/introvideos">VS Code Basics Videos</a></li>
-</ul>
-</section>
-</section>
-<section id="post-1-data-science-projects" class="level2">
-<h2 class="anchored" data-anchor-id="post-1-data-science-projects">Post 1: Data Science Projects</h2>
-<p>In Positron, and VS Code, projects are created as workspaces by associating folders as specialized place called workspaces. These workspaces allow you to organize your projects as necessary, such as creating folders for you scripts, data, source files, and much more. Additionally, you can initialize a git repository for the work space</p>
-<p>It is highly recommended to creat a workspace for any project you work on.</p>
-<section id="python" class="level3">
-<h3 class="anchored" data-anchor-id="python">Python</h3>
-<p>To create a Python-based workspace, you will go to the top right corner and click on the folder icon:</p>
-<p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-26 14-36-21.png" class="img-fluid"></p>
-<p>This will open a new drop-down menu:</p>
-<p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-26 14-38-04.png" class="img-fluid"></p>
-<p>Click on the “New Project…” to begin creating a workspace. This will then create a new window:</p>
-<p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-26 14-38-21.png" class="img-fluid"></p>
-<p>Now select the “Python Project” and click “Next”. Afterwards, a new window will popup asking you to create a new folder and where to store it:</p>
-<p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-26 14-38-57.png" class="img-fluid"></p>
-<p>Notice that I have the “Initialize project at Git repository”, if you have <a href="https://git-scm.com/">git</a> installed and plan to use it, it would be a good idea to initialize it. Then, a new window will popup asking you to create a new Python environment:</p>
-<p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-26 14-39-29.png" class="img-fluid"></p>
-<p>I recommend doing so. This will create a new environment that I believe will only be used for the project. Note, you will need to install the python modules again for this new environment. A final window will popup:</p>
-<p><img src="www.inqs.info/blog/2024-12-22-positron/img/Screenshot From 2024-12-26 14-39-50.png" class="img-fluid"></p>
-<p>You should click “New Window” for now. This will open a new session of Positron. It may take a few minutes to create the python environment, but it will work after.</p>
-</section>
-</section>
-<section id="post-2-162024-quarto" class="level2">
-<h2 class="anchored" data-anchor-id="post-2-162024-quarto">Post 2 (1/6/2024): Quarto</h2>
-<p>When working in Quarto, the python chunks can send code to a console to be executed. The console is set up to use python via pyenv. However, whenever the quarto document gets an R chunk, the console will immediately change to an R console, and all the python chunks will be sent to the R console and evaluated with <a href="https://rstudio.github.io/reticulate/">reticulate</a>. This would be okay, but reticulate may not have all the python packages that pyenv has. I have tried searching for a way to have reticulate communicate with the pyenv installation, but I haven’t found anything thus far. Therefore, I recommend installing python modules via reticulate.</p>
-<p>You can install a python module with:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">reticulate<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">py_install</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"polars"</span>)</span></code></pre></div>
-</div>
-
-
-</section>
-</section>
-
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Lucked out they had Fedora.↩︎</p></li>
-</ol>
-</section></div> ]]></description>
-  <guid>www.inqs.info/blog/2024-12-22-positron/positron.html</guid>
-  <pubDate>Thu, 01 May 2025 17:20:39 GMT</pubDate>
 </item>
 </channel>
 </rss>

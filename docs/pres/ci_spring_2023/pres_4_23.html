@@ -216,6 +216,70 @@ Isaac Quintanilla Salinas
 </div>
 </div>
 
+</section><section id="TOC">
+<nav role="doc-toc"> 
+<h2 id="toc-title">Table of contents</h2>
+<ul>
+<li>Background Information
+<ul>
+<li><a href="#/study-example" id="/toc-study-example">Study Example</a></li>
+<li><a href="#/how-do-determine-the-survival-rate" id="/toc-how-do-determine-the-survival-rate">How do determine the survival rate?</a></li>
+<li><a href="#/data-type" id="/toc-data-type">Data Type</a></li>
+</ul></li>
+<li>Censoring
+<ul>
+<li><a href="#/censoring-1" id="/toc-censoring-1">Censoring</a></li>
+<li><a href="#/left-censoring" id="/toc-left-censoring">Left Censoring</a></li>
+<li><a href="#/interval-censoring" id="/toc-interval-censoring">Interval Censoring</a></li>
+<li><a href="#/right-censoring" id="/toc-right-censoring">Right Censoring</a></li>
+<li><a href="#/censoring-2" id="/toc-censoring-2">Censoring</a></li>
+<li><a href="#/data-construction" id="/toc-data-construction">Data Construction</a></li>
+</ul></li>
+<li>Survival Analysis Functions
+<ul>
+<li><a href="#/survivial-analysis-functions" id="/toc-survivial-analysis-functions">Survivial Analysis Functions</a></li>
+<li><a href="#/hazard-function" id="/toc-hazard-function">Hazard Function</a></li>
+<li><a href="#/survival-function" id="/toc-survival-function">Survival Function</a></li>
+<li><a href="#/cumulative-hazard-function" id="/toc-cumulative-hazard-function">Cumulative Hazard Function</a></li>
+<li><a href="#/survival-and-hazard-function-relationship" id="/toc-survival-and-hazard-function-relationship">Survival and Hazard Function Relationship</a></li>
+<li><a href="#/probability-density-function" id="/toc-probability-density-function">Probability Density Function</a></li>
+</ul></li>
+<li>Survival Rate
+<ul>
+<li><a href="#/survival-curve" id="/toc-survival-curve">Survival Curve</a></li>
+<li><a href="#/data" id="/toc-data">Data</a></li>
+<li><a href="#/kaplan-meier-estimator" id="/toc-kaplan-meier-estimator">Kaplan-Meier Estimator</a></li>
+<li><a href="#/standard-error" id="/toc-standard-error">Standard Error</a></li>
+<li><a href="#/survival-curve-1" id="/toc-survival-curve-1">Survival Curve</a></li>
+</ul></li>
+<li>Cox Proportional Hazard Model
+<ul>
+<li><a href="#/data-1" id="/toc-data-1">Data</a></li>
+<li><a href="#/proportional-hazard-model" id="/toc-proportional-hazard-model">Proportional Hazard Model</a></li>
+<li><a href="#/how-do-we-estimate-parameters-boldsymbol-beta" id="/toc-how-do-we-estimate-parameters-boldsymbol-beta">How do we estimate parameters <span class="math inline">\(\boldsymbol \beta\)</span></a></li>
+<li><a href="#/construction-of-the-likelihood-function" id="/toc-construction-of-the-likelihood-function">Construction of the Likelihood Function</a></li>
+<li><a href="#/likelihood-function" id="/toc-likelihood-function">Likelihood Function</a></li>
+<li><a href="#/likelihood-function-1" id="/toc-likelihood-function-1">Likelihood Function</a></li>
+<li><a href="#/estimating-the-baseline-hazard-function" id="/toc-estimating-the-baseline-hazard-function">Estimating the Baseline Hazard Function</a></li>
+<li><a href="#/partial-likelihood" id="/toc-partial-likelihood">Partial Likelihood</a></li>
+<li><a href="#/estimation" id="/toc-estimation">Estimation</a></li>
+<li><a href="#/sampling-distribution" id="/toc-sampling-distribution">Sampling Distribution</a></li>
+</ul></li>
+<li>Example
+<ul>
+<li><a href="#/colon-example" id="/toc-colon-example">Colon Example</a></li>
+<li><a href="#/colon-survival-curve" id="/toc-colon-survival-curve">Colon Survival Curve</a></li>
+<li><a href="#/colon-survival-curve-1" id="/toc-colon-survival-curve-1">Colon Survival Curve</a></li>
+<li><a href="#/colon-survival-curve-2" id="/toc-colon-survival-curve-2">Colon Survival Curve</a></li>
+<li><a href="#/cox-ph-model" id="/toc-cox-ph-model">Cox PH Model</a></li>
+</ul></li>
+<li>R Code
+<ul>
+<li><a href="#/fitting-a-survival-curve" id="/toc-fitting-a-survival-curve">Fitting a Survival Curve</a></li>
+<li><a href="#/fitting-cox-ph-model" id="/toc-fitting-cox-ph-model">Fitting Cox PH Model</a></li>
+</ul></li>
+</ul>
+</nav>
 </section>
 <section>
 <section class="title-slide slide level1 agenda-slide center">
@@ -740,8 +804,8 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 <span id="cb8-5"><a></a>            <span class="at">digits =</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb8-6"><a></a>  DT<span class="sc">::</span><span class="fu">datatable</span>(<span class="at">options =</span> <span class="fu">list</span>(<span class="at">dom =</span> <span class="st">'t'</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-d0c4a1a8fbbf4c52e2ab" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-d0c4a1a8fbbf4c52e2ab">{"x":{"filter":"none","vertical":false,"data":[["1","2"],["rxLevamisole","rxLevamisole+5-FU"],[0.98,0.6],[0.11,0.12],[-0.14,-4.32],[0.89,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>term<\/th>\n      <th>estimate<\/th>\n      <th>std.error<\/th>\n      <th>statistic<\/th>\n      <th>p.value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"term","targets":1},{"name":"estimate","targets":2},{"name":"std.error","targets":3},{"name":"statistic","targets":4},{"name":"p.value","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-d7cf1bffab933e804f74" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-d7cf1bffab933e804f74">{"x":{"filter":"none","vertical":false,"data":[["1","2"],["rxLevamisole","rxLevamisole+5-FU"],[0.98,0.6],[0.11,0.12],[-0.14,-4.32],[0.89,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>term<\/th>\n      <th>estimate<\/th>\n      <th>std.error<\/th>\n      <th>statistic<\/th>\n      <th>p.value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"term","targets":1},{"name":"estimate","targets":2},{"name":"std.error","targets":3},{"name":"statistic","targets":4},{"name":"p.value","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section></section>
