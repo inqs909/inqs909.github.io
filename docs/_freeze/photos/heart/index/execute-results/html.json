@@ -1,0 +1,19 @@
+{
+  "hash": "0614cab051ba8c8af0e2f7646630a9cb",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Heart Rock Trail\"\neditor: source\nformat: html\nimage: \"img/HR1.jpg\"\nknitr: \n  opts_chunk: \n    eval: true\n    message: false\n    \n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(pixture)\n\npixgallery(\n  list.files(\"img\", \n             full.names=TRUE),\n  dim=\"350px\",\n  gap = \"10px\"\n)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning in pixgallery(list.files(\"img\", full.names = TRUE), dim = \"350px\", :\nParameter 'dim' is deprecated. Please use 'h' and/or 'w' to set height and\nwidth of thumbnails.\n```\n\n\n:::\n\n::: {.cell-output-display}\n\n```{=html}\n<div id=\"htmlwidget-3beedff0b7c81e82f13d\" style=\"width:100%;height:100%;\" class=\"pixgallery html-widget\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-3beedff0b7c81e82f13d\">{\"x\":{\"path\":[\"img/HR1.jpg\",\"img/HR2.jpg\",\"img/HR3.jpg\",\"img/HR4.jpg\"],\"caption\":[],\"caption_valign\":\"none\",\"caption_halign\":\"left\",\"link\":[true],\"h\":\"350px\",\"w\":\"350px\",\"gap\":\"10px\",\"border_radius\":\"0px\",\"layout\":\"grid\",\"shuffle\":false},\"evals\":[],\"jsHooks\":[]}</script>\n```\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js\"></script>\n<link href=\"../../site_libs/simplelightbox-2.1.0/css/simplelightbox.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/simplelightbox-2.1.0/js/simplelightbox.js\"></script>\n<link href=\"../../site_libs/pixgallery-0/css/pixgallery.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/pixgallery-binding-0.1.0/pixgallery.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,7 +1,7 @@
 ---
 title: "Black Man in a White Coat"
 date: "2023-07-02"
-image: https://static.scientificamerican.com/sciam/cache/file/132BA294-9B10-4FF2-AF02895EAB49D48A_source.jpg
+image: coat.jpg
 categories: [memoir]
 ---
 
@@ -16,5 +16,5 @@ Damon Tweedy M.D.
 ::: {.callout-note icon="false"}
 ## Book Availability
 
-[Amazon Link](https://www.amazon.com/Black-Man-White-Coat-Reflections/dp/1250105048)
+[Bookshop Link](https://bookshop.org/p/books/black-man-in-a-white-coat-a-doctor-s-reflections-on-race-and-medicine-damon-tweedy/8395478?ean=9781250105042&next=t)
 :::

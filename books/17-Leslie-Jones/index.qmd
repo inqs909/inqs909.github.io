@@ -1,0 +1,18 @@
+---
+title: "Leslie F*cking Jones"
+date: "2025-04-30"
+image: leslie.jpg
+categories: [memoir]
+---
+
+::: {.callout-tip icon="false"}
+## Book
+
+Leslie F\*cking Jones
+
+Leslie Jones
+
+#### Book Availability
+
+[Bookshop](https://bookshop.org/p/books/leslie-f-cking-jones-leslie-jones/19846348?ean=9781538706503&next=t)
+:::

@@ -1,0 +1,18 @@
+---
+title: "If I Must Die"
+date: "2025-01-08"
+image: if.jpg
+categories: [poetry]
+---
+
+::: {.callout-tip icon="false"}
+## Book
+
+If I Must Die: Poetry and Prose
+
+Refaat Alareer
+
+## Book Availability
+
+[Bookshop](https://bookshop.org/p/books/if-i-must-die-poetry-and-prose/21530923?ean=9781682196212&next=t)
+:::

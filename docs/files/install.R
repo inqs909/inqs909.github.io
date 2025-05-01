@@ -1,0 +1,7 @@
+install.packages("tidyverse")
+install.packages("remotes")
+remotes::install_github("R-CoderDotCom/ggcats@main")
+install.packages("ggsurvfit")
+install.packages("car")
+install.packages(c("htmlwidgets","shiny","remotes"))
+remotes::install_github('royfrancis/pixture')

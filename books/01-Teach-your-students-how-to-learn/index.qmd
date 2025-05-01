@@ -1,7 +1,7 @@
 ---
 title: "Teach Students How To Learn"
 date: "2023-06-26"
-image: https://m.media-amazon.com/images/I/71ViiQPDuRL._AC_UF1000,1000_QL80_.jpg
+image: teach.jpg
 categories: [learning]
 ---
 
@@ -20,7 +20,5 @@ Saundra Yancy McGuire and Stephanie McGuire
 
 Ebook Available from the Broome Library: [Faculty](https://csu-ci.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma999861965202903&context=L&vid=01CALS_UCI:JSBL&lang=en&search_scope=MyInst_and_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,Teach%20your%20students%20how%20to%20learn&offset=0) \| [Students](https://csu-ci.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma999861865202903&context=L&vid=01CALS_UCI:JSBL&lang=en&search_scope=MyInst_and_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,Teach%20yourself%20how%20to%20learn&offset=0)
 
-Amazon Links:
-
-[Faculty](https://www.amazon.com/Teach-Students-How-Learn-Metacognition/dp/162036316X/ref=sr_1_1?keywords=teach+your+students+how+to+learn&qid=1687845214&s=books&sprefix=Teach+your+studen%2Cstripbooks%2C136&sr=1-1) \| [Students](https://www.amazon.com/Teach-Yourself-How-Learn-Strategies/dp/1620367564/ref=pd_bxgy_img_sccl_1/134-5912753-3439629?pd_rd_w=TjjWb&content-id=amzn1.sym.26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_p=26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_r=W8KMEN1AP369CZTT5AVM&pd_rd_wg=Dtt6Q&pd_rd_r=edcc0f3d-0609-45df-a9eb-ba6b09f96cbd&pd_rd_i=1620367564&psc=1) \| [Parents](https://www.amazon.com/Parents-Guide-Studying-Learning-School/dp/B09QFFLJTX?ref_=ast_author_dp)
+[Bookshop Link](https://bookshop.org/p/books/teach-yourself-how-to-learn-strategies-you-can-use-to-ace-any-course-at-any-level-saundra-yancy-mcguire/7178150?ean=9781620367568&next=t)
 :::

@@ -1,7 +1,7 @@
 ---
 title: "Fresh Banana Leaves"
 date: "2023-07-03"
-image: https://m.media-amazon.com/images/I/51ODZV9jl2L._SL500_.jpg
+image: bananas.jpg
 categories: [indigenous studies, environmental conservation]
 ---
 
@@ -18,5 +18,5 @@ Jessica Hernandez PhD
 
 Available from the Broome Library
 
-[Amazon Link](https://www.amazon.com/Fresh-Banana-Leaves-Indigenous-Landscapes/dp/1623176050/ref=asc_df_1623176050/?tag=hyprod-20&linkCode=df0&hvadid=532423136858&hvpos=&hvnetw=g&hvrand=6717168610114855695&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9031618&hvtargid=pla-1372520572922&psc=1)
+[Bookshop Link](https://bookshop.org/p/books/fresh-banana-leaves-healing-indigenous-landscapes-through-indigenous-science-jessica-hernandez/16859402?ean=9781623176051&next=t)
 :::

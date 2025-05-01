@@ -1,0 +1,19 @@
+{
+  "hash": "7ad91a3fbcfc1c87f68deef0372f400c",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Big Bear Lake\"\neditor: source\nimage: \"img/BB1.jpg\"\nformat: html\nknitr: \n  opts_chunk: \n    echo: false\n    eval: true\n    message: false\n---\n\n::: {.cell}\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning in pixgallery(list.files(\"img\", full.names = TRUE), dim = \"350px\", :\nParameter 'dim' is deprecated. Please use 'h' and/or 'w' to set height and\nwidth of thumbnails.\n```\n\n\n:::\n\n::: {.cell-output-display}\n\n```{=html}\n<div id=\"htmlwidget-fb2ff98c08104a736a6a\" style=\"width:100%;height:100%;\" class=\"pixgallery html-widget\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-fb2ff98c08104a736a6a\">{\"x\":{\"path\":[\"img/BB1.jpg\",\"img/BB2.jpg\",\"img/BB3.jpg\",\"img/BB4.jpg\"],\"caption\":[],\"caption_valign\":\"none\",\"caption_halign\":\"left\",\"link\":[true],\"h\":\"350px\",\"w\":\"350px\",\"gap\":\"10px\",\"border_radius\":\"0px\",\"layout\":\"grid\",\"shuffle\":false},\"evals\":[],\"jsHooks\":[]}</script>\n```\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js\"></script>\n<link href=\"../../site_libs/simplelightbox-2.1.0/css/simplelightbox.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/simplelightbox-2.1.0/js/simplelightbox.js\"></script>\n<link href=\"../../site_libs/pixgallery-0/css/pixgallery.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/pixgallery-binding-0.1.0/pixgallery.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
