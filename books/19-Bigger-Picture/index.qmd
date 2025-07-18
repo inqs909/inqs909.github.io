@@ -1,0 +1,18 @@
+---
+title: "A Bigger Picture"
+date: "2025-06-15"
+image: picture.jpg
+categories: [memoir, climate change]
+---
+
+::: {.callout-tip icon="false"}
+## Book
+
+A Bigger Picture: My Fight to Bring a New African Voice to the Climate Crisis
+
+Vanessa Nakate
+
+#### Book Availability
+
+[Bookshop](https://bookshop.org/p/books/a-bigger-picture-my-fight-to-bring-a-new-african-voice-to-the-climate-crisis-vanessa-nakate/16191298?ean=9780358654506&next=t)
+:::

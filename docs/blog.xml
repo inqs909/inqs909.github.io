@@ -9,7 +9,7 @@
 <link>www.inqs.info/blog.html</link>
 <atom:link href="www.inqs.info/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.6.40</generator>
+<generator>quarto-1.7.31</generator>
 <lastBuildDate>Wed, 08 Jan 2025 08:00:00 GMT</lastBuildDate>
 <item>
   <title>Wellness Plan Spring 2025</title>
@@ -19,15 +19,15 @@
       <!-- user-provided yaml closeread style options -->
       <style>
         :root {
-          --cr-poem-font-family: Georgia, “Times New Roman”, Times, serif;
---cr-narrative-sidebar-width: minmax(400px, 1fr);
---cr-narrative-font-family: Georgia, “Times New Roman”, Times, serif;
---cr-narrative-background-color-sidebar: #111111;
---cr-narrative-background-color-overlay: #111111dd;
---cr-narrative-text-color-sidebar: white;
---cr-narrative-border-radius: 5px;
---cr-narrative-font-size: 1.25rem;
+          --cr-narrative-border-radius: 5px;
 --cr-section-background-color: #033E3E;
+--cr-narrative-font-family: Georgia, “Times New Roman”, Times, serif;
+--cr-narrative-text-color-sidebar: white;
+--cr-narrative-sidebar-width: minmax(400px, 1fr);
+--cr-narrative-background-color-overlay: #111111dd;
+--cr-narrative-background-color-sidebar: #111111;
+--cr-narrative-font-size: 1.25rem;
+--cr-poem-font-family: Georgia, “Times New Roman”, Times, serif;
         }
       </style>
     
@@ -239,6 +239,7 @@
   <dc:creator>Isaac Quintanilla Salinas</dc:creator>
   <link>www.inqs.info/blog/2024-12-26-python-programming/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -938,6 +939,7 @@ font-style: inherit;">909</span></span>
 
 
 
+
 <p>Positron and Python are both new to me, but as always, the first step is installing the software on your computer. In this post, I will highlight my adventures installing both of these softwares on to my computer. I will layout what is working and what is not working.</p>
 <p><strong>Disclaimer: I daily drive Linux, currently using Fedora, so my experiences will be different.</strong></p>
 <section id="positron" class="level2">
@@ -1021,6 +1023,7 @@ font-style: inherit;">"polars"</span>)</span></code></pre></div>
 
 
 
+
 <section id="my-programming-journey" class="level2">
 <h2 class="anchored" data-anchor-id="my-programming-journey">My Programming Journey</h2>
 <p>I first learned about programming, when I did a Biostatistics internship where we analyzed data using SAS<sup>1</sup>. This was the first time where I sent commands to a computer to conduct a task, and I thoroughly enjoyed doing this. However, when my internship was over, I no longer had access to SAS at my own institution and could not learn more about Statistics or programming because of a huge financial barrier. This is where I learned about R and it being free and open-source software. This was a game changer! I was able to learn more about statistics and programming because the ultimate barrier was removed. Yes, it was completely different from SAS, but I can learn, and no one can stop me.</p>
@@ -1092,6 +1095,7 @@ font-style: inherit;">"polars"</span>)</span></code></pre></div>
   <dc:creator>Isaac Quintanilla Salinas</dc:creator>
   <link>www.inqs.info/blog/2023-01-27-wellness-plan-spring-2023/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1260,6 +1264,7 @@ Goal
 
 
 
+
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>At the beginning 2020, I learned that there were several undergraduate students interested in attending graduate school. However, many of them had the idea that they weren’t capable of succeeding in graduate school. This was nonsense! I TA’ed them through Regression and ANOVA courses and got to see first hand their capabilities. It was shocking to hear that they think like this. While I can go into details of my ideas why they think like this (possibly imposter syndrome<sup>1</sup>), this isn’t the post for it. I was set out to convince and prepare these students to apply to graduate school.</p>
@@ -1310,6 +1315,7 @@ Goal
   <dc:creator>Isaac Quintanilla</dc:creator>
   <link>www.inqs.info/blog/2021-04-20-incorporating-rcpp/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1472,6 +1478,7 @@ font-style: inherit;">mean_cpp</span>(Y)</span>
   <dc:creator>Isaac Quintanilla</dc:creator>
   <link>www.inqs.info/blog/2021-05-01-rcpp-functions/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1910,6 +1917,7 @@ font-style: inherit;">5</span>)</span>
 
 
 
+
 <p>This is the first post of my “Rcpp” collection detailing my journey with Rcpp. The “Rcpp” collection contains information about the struggles I faced while implementing Rcpp. Even though my first venture to Rcpp happened in the Summer of 2020, I realized I am learning new things every day. I thought it would be wised to write a blog of everything I have and will learn with Rcpp. I hope this collection will guide other students who have never used c++ before.</p>
 <p>As I am developing my model for my PhD, a major limiting factor is that my model takes a really long time to compute the results I need. Due to the complexity of the model, I need to approximate different components using iterative algorithms. This in turn increases the computation time to obtain results. You can only imagine my frustration when I first coded my model in R and it took more than a week to obtain results!</p>
 <p>Therefore, I decided to focus on speeding up my code. I spent time reading Wickham’s <a href="https://adv-r.hadley.nz/index.html">Advanced R</a> Book to speed up my code. There I learned how about vectorizing code, utilizing built-in optimized functions, and common practices for speed gains. All this work has made me a better R programmer. Unfortunately, when I reran my model, the speed gains was not enough to call my efforts a success.</p>
@@ -1932,6 +1940,7 @@ font-style: inherit;">5</span>)</span>
   <dc:creator>Isaac Quintanilla Salinas</dc:creator>
   <link>www.inqs.info/blog/welcome/</link>
   <description><![CDATA[ 
+
 
 
 

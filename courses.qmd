@@ -1,13 +1,23 @@
 ---
 title: "Courses"
 css: courses.css
-editor: visual
+editor: source
 ---
 
-::: content-block
+:::: content-block
 ## CSU Channel Islands
 
 ::: {.panel-tabset .nav-pills}
+
+## AY 25-26
+
+-   [Math 201: Elementary Statistics](https://www.inqs.info/m201_f25)
+
+-   [Math 352: Probability and Statistics](https://www.inqs.info/m352_f25)
+
+-   [Data 300: Introduction to Monte Carlo Methods](https://www.inqs.info/d300_f25)
+
+
 ## AY 24-25
 
 -   [Math 201: Elementary Statistics](https://www.inqs.info/m201_f24)
@@ -32,9 +42,9 @@ editor: visual
 
 -   [Math 453: Mathematical Statistics](https://inqs909.gitlab.io/m453_f22)
 :::
-:::
+::::
 
-::: content-block
+:::: content-block
 ## UC Riverside
 
 ::: {.panel-tabset .nav-pills}
@@ -70,4 +80,4 @@ editor: visual
 
 -   STAT 048: Introduction to Business Statistics
 :::
-:::
+::::

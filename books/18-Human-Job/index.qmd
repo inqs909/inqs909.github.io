@@ -1,0 +1,18 @@
+---
+title: "Last Human Job"
+date: "2025-05-15"
+image: human.jpg
+categories: [sociology]
+---
+
+::: {.callout-tip icon="false"}
+## Book
+
+The Last Human Job: The Work of Connecting in a Disconnected World
+
+Allison Pugh
+
+#### Book Availability
+
+[Bookshop](https://bookshop.org/p/books/the-last-human-job-the-work-of-connecting-in-a-disconnected-world-allison-pugh/20295822?ean=9780691240817&next=t)
+:::

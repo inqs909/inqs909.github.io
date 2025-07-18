@@ -1,0 +1,18 @@
+---
+title: "Invisible Women"
+date: "2025-07-02"
+image: women.jpg
+categories: [sociology]
+---
+
+::: {.callout-tip icon="false"}
+## Book
+
+Invisible Women: Data Bias in a World Designed for Men
+
+Caroline Criado Perez
+
+#### Book Availability
+
+[Bookshop](https://bookshop.org/p/books/invisible-women-data-bias-in-a-world-designed-for-men-caroline-criado-perez/15136602?ean=9781419735219&next=t)
+:::

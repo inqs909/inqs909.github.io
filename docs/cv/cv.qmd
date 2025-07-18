@@ -394,7 +394,8 @@ format:
 
 \vspace{4pt}
 
-<!-- Publications -->
+```{=html}
+<!-- Publications
 
 \begin{large}
   {\bf Publications}
@@ -406,18 +407,23 @@ format:
   \vspace{3pt}
 \end{normalsize}
 
-<!-- -   Krisha Algoso, Selene Lopez, Barbara Reque, Leniha Lagarde, Natalie Leon, Gabriella Amador, **Isaac Quintanilla Salinas,** Ashley McCarley, and Caryl Ann Becerra. Antibacterial Potential of Native Medicinal Chumash Plants on *Bacillus subtilis*, *Escherichia coli*, and *Pseudomonas fluorescens*. Microorganisms -->
+--\>
 
--   Azer, Lilian; **Salinas, Isaac**; Kürüm, Esra; Ferguson, Leah; Davis, Elizabeth; Zhang, Weiwei; Strickland-Hughes, Carla; Wu, Rachel. Subjective Executive Functioning and Skill Learning during the COVID-19 Pandemic Associated with Perceived Loneliness, Depressive Symptoms, and Well-being. *The International Journal of Aging and Human Development.*
+<!-- -   Krisha Algoso, Selene Lopez, Barbara Reque, Leniha Lagarde, Natalie Leon, Gabriella Amador, **Isaac Quintanilla Salinas,** Ashley McCarley, and Caryl Ann Becerra. Antibacterial Potential of Native Medicinal Chumash Plants on *Bacillus subtilis*, *Escherichia coli*, and *Pseudomonas fluorescens*. Microorganisms -->
+```
 
 \begin{normalsize}
   {\bf Peer-Reviewed Journals}
   \vspace{3pt}
 \end{normalsize}
 
+-   Romero, Deanna; Clobes, Thomas; Mee, Marshall; **Quintanilla-Salinas, Isaac.** (2025) Medical Cannabis Utilization Across States with Varying Legal Status. *AJPM Focus. Accepted Manuscript.*
+
+-   Azer, Lilian; **Quintanilla** **Salinas, Isaac**; Kürüm, Esra; Ferguson, Leah; Davis, Elizabeth; Zhang, Weiwei; Strickland-Hughes, Carla; Wu, Rachel. (2025) Subjective Executive Functioning and Skill Learning during the COVID-19 Pandemic Associated with Perceived Loneliness, Depressive Symptoms, and Well-being. *PLOS Mental Health. In Press.*
+
 -   Magdaleno, Francisco, **Salinas INQ**, and Rothstein, Stephen. (2024) Vocal Functional Flexibility in a Non-Primate Vocal Learning Species. *Journal of Language Evolution***.** [doi.org/10.1093/jole/lzae006](https://doi.org/10.1093/jole/lzae006)
 
--   Hawkins LR, Magdaleno F, **Salinas INQ**, and Peer BD. Egg shape in an obligate brood parasite contributes to decreased temperature variation during incubation. *Current Zoology.* [doi.org/10.1093/cz/zoae070](https://doi.org/10.1093/cz/zoae070)
+-   Hawkins LR, Magdaleno F, **Salinas INQ**, and Peer BD. (2024) Egg shape in an obligate brood parasite contributes to decreased temperature variation during incubation. *Current Zoology.* [doi.org/10.1093/cz/zoae070](https://doi.org/10.1093/cz/zoae070)
 
 -   Juarez BH, **Quintanilla-Salinas I**, Lacey MP, O'Connell A. (2024) Water Availability and Temperature as Modifiers of Evaporative Water Loss in Tropical Frogs. *Integrative and Comparative Biology.* [doi.org/10.1093/icb/icae057](https://doi.org/10.1093/icb/icae057)
 
@@ -643,10 +649,24 @@ format:
 \end{large}
 \vspace{-0.16cm}
 
+-   *Member*: Faculty Development
+    -   2025-2027
+    -   Elected
+-   *Faculty Co-Chair*: Chicana/o and Latina/o Faculty and Staff Association
+    -   2025-2026
+    -   Appointed
 -   *Faculty at Large*: Chicana/o and Latina/o Faculty and Staff Association
--   2024-2025
+    -   2025-2027
+    -   Elected
+-   *Co-Chair*: 2025 CSUCI Datathon Task Force
+    -   <https://www.inqs.info/ci_datathon_25/>
+-   *Member:* Faculty Disciplinary Search Committee
+    -   2024-2025
+    -   Discipline: Data Science
+-   *Faculty at Large*: Chicana/o and Latina/o Faculty and Staff Association
+    -   2024-2025
 -   *Co-Chair*: CSUCI Data Science Program Development Task Force
--   2023-2025
+    -   2023-2025
 
 \vspace{4pt}
 
@@ -674,7 +694,7 @@ format:
 \end{large}
 \vspace{-0.16cm}
 
--   **Languages:** R, Stan, Markdown, SAS, LaTeX, and C++
+-   **Languages:** R, Stan, Markdown, SAS, SQL, LaTeX, and C++
 
 -   **Tools:** Bash, Git, SPSS, and ArcGIS
 
