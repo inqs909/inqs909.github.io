@@ -3,7 +3,7 @@ title: "Curriculum Vitae"
 ---
 
 ```{=html}
-   <object data="cv/cv.pdf" type="application/pdf" width="125%" height="500px">
+   <object data="cv/cv.pdf" type="application/pdf" width="150%" height="700px">
       <p>Unable to display PDF file. <a href="cv/cv.pdf">Download</a> instead.</p>
     </object>
 ```
