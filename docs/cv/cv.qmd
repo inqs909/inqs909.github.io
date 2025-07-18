@@ -401,7 +401,6 @@ format:
   \vspace{3pt}
   \hrule
 \end{large}
-
 \begin{normalsize}
   {\bf In-Review}
   \vspace{3pt}
