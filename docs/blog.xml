@@ -21,13 +21,13 @@
         :root {
           --cr-poem-font-family: Georgia, “Times New Roman”, Times, serif;
 --cr-narrative-background-color-sidebar: #111111;
---cr-narrative-border-radius: 5px;
+--cr-narrative-text-color-sidebar: white;
 --cr-section-background-color: #033E3E;
 --cr-narrative-background-color-overlay: #111111dd;
+--cr-narrative-sidebar-width: minmax(400px, 1fr);
 --cr-narrative-font-family: Georgia, “Times New Roman”, Times, serif;
 --cr-narrative-font-size: 1.25rem;
---cr-narrative-sidebar-width: minmax(400px, 1fr);
---cr-narrative-text-color-sidebar: white;
+--cr-narrative-border-radius: 5px;
         }
       </style>
     

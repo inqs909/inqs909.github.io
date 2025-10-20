@@ -700,32 +700,18 @@
     "text": "Isaac Quintanilla Salinas\n\nAssistant Professor of Statistics\nCSU Channel Islands Orcid\n\n\n\n\nBiography\nIsaac Quintanilla Salinas is a graduate from the Department of Statistics at the University of California, Riverside with a PhD in Applied Statistics. He joined the Department of Mathematics at the California State University Channel Islands in Fall 2022. Prior to his doctoral research, Dr. Quintanilla Salinas earned his MPH from San Diego State University and BS in Biology from the California State University Monterey Bay.\nDr. Quintanilla Salinas research focuses on developing statistical models to understand the association between survival and longitudinal outcomes. His dissertation “Multilevel Time-Varying Joint Models for Longitudinal and Survival Outcomes” develops a novel model to address challenges of modeling dependent outcomes. Additionally, Dr. Quintanilla Salinas collaborates with several researchers at different institutions in the fields of Public Health, Psychology, Biology, Geographic Information Systems, and Education.\n\n\n\n\n\n\nEducation\n\nUC Riverside\n\nPhD in Applied Statistics\n\nSan Diego State University\n\nMaster’s in Public Health\n\nCSU Monterey Bay\n\nBS Biology\n\n\n\n\nInterests\n\nJoint Longitudinal and Survival Models\nHealth and Well Being\nEducation\nAlgorithmic Bias"
   },
   {
-    "objectID": "cv/canvas.html",
-    "href": "cv/canvas.html",
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Unable to display PDF file. Download instead."
+  },
+  {
+    "objectID": "canvas.html",
+    "href": "canvas.html",
     "title": "Canvas",
     "section": "",
     "text": "Notebook\nExit Ticket\nR Code Reference"
-  },
-  {
-    "objectID": "courses.html",
-    "href": "courses.html",
-    "title": "Courses",
-    "section": "",
-    "text": "AY 25-26AY 24-25AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 352: Probability and Statistics\nData 300: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 453: Mathematical Statistics\nMath 497: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
-  },
-  {
-    "objectID": "courses.html#csu-channel-islands",
-    "href": "courses.html#csu-channel-islands",
-    "title": "Courses",
-    "section": "",
-    "text": "AY 25-26AY 24-25AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 352: Probability and Statistics\nData 300: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 453: Mathematical Statistics\nMath 497: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
-  },
-  {
-    "objectID": "courses.html#uc-riverside",
-    "href": "courses.html#uc-riverside",
-    "title": "Courses",
-    "section": "UC Riverside",
-    "text": "UC Riverside\n\nAllAssociate InstructorTeaching Assistant\n\n\n\nSTAT 127: Introduction to Quality Management\nSTAT 147: Introduction to Statistical Computing\nSTAT 100: Introduction to Statistics\nSTAT 170: Regression and ANOVA\nSTAT 048: Introduction to Business Statistics\nUB: Math Courses\nUB: Public Health Courses\nUB: Research Courses\n\n\n\n\nSTAT 127: Introduction to Quality Management\nSTAT 147: Introduction to Statistical Computing\n\n\n\n\nSTAT 100: Introduction to Statistics\nSTAT 170: Regression and ANOVA\nSTAT 048: Introduction to Business Statistics"
   },
   {
     "objectID": "books/19-Bigger-Picture/index.html",
@@ -1204,11 +1190,25 @@
     "text": "Book\n\n\n\nInvisible Women: Data Bias in a World Designed for Men\nCaroline Criado Perez\n\nBook Availability\nBookshop"
   },
   {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "Curriculum Vitae",
+    "objectID": "courses.html",
+    "href": "courses.html",
+    "title": "Courses",
     "section": "",
-    "text": "Unable to display PDF file. Download instead."
+    "text": "AY 25-26AY 24-25AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 352: Probability and Statistics\nData 300: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 453: Mathematical Statistics\nMath 497: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
+  },
+  {
+    "objectID": "courses.html#csu-channel-islands",
+    "href": "courses.html#csu-channel-islands",
+    "title": "Courses",
+    "section": "",
+    "text": "AY 25-26AY 24-25AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 352: Probability and Statistics\nData 300: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 453: Mathematical Statistics\nMath 497: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
+  },
+  {
+    "objectID": "courses.html#uc-riverside",
+    "href": "courses.html#uc-riverside",
+    "title": "Courses",
+    "section": "UC Riverside",
+    "text": "UC Riverside\n\nAllAssociate InstructorTeaching Assistant\n\n\n\nSTAT 127: Introduction to Quality Management\nSTAT 147: Introduction to Statistical Computing\nSTAT 100: Introduction to Statistics\nSTAT 170: Regression and ANOVA\nSTAT 048: Introduction to Business Statistics\nUB: Math Courses\nUB: Public Health Courses\nUB: Research Courses\n\n\n\n\nSTAT 127: Introduction to Quality Management\nSTAT 147: Introduction to Statistical Computing\n\n\n\n\nSTAT 100: Introduction to Statistics\nSTAT 170: Regression and ANOVA\nSTAT 048: Introduction to Business Statistics"
   },
   {
     "objectID": "p/dshs/index.html#introductions",
