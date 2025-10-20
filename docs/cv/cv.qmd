@@ -417,9 +417,9 @@ format:
   \vspace{3pt}
 \end{normalsize}
 
--   Romero, Deanna; Clobes, Thomas; Mee, Marshall; **Quintanilla-Salinas, Isaac.** (2025) Medical Cannabis Utilization Across States with Varying Legal Status. *AJPM Focus. Accepted Manuscript.*
+-   Romero, Deanna; Clobes, Thomas; Mee, Marshall; **Quintanilla-Salinas, Isaac.** (2025) Medical Cannabis Utilization Across States with Varying Legal Status. *AJPM Focus.* <https://www.ajpmfocus.org/article/S2773-0654(25)00084-7/fulltext>
 
--   Azer, Lilian; **Quintanilla** **Salinas, Isaac**; Kürüm, Esra; Ferguson, Leah; Davis, Elizabeth; Zhang, Weiwei; Strickland-Hughes, Carla; Wu, Rachel. (2025) Subjective Executive Functioning and Skill Learning during the COVID-19 Pandemic Associated with Perceived Loneliness, Depressive Symptoms, and Well-being. *PLOS Mental Health. In Press.*
+-   Azer, Lilian; **Quintanilla** **Salinas, Isaac**; Kürüm, Esra; Ferguson, Leah; Davis, Elizabeth; Zhang, Weiwei; Strickland-Hughes, Carla; Wu, Rachel. (2025) Subjective Executive Functioning and Skill Learning during the COVID-19 Pandemic Associated with Perceived Loneliness, Depressive Symptoms, and Well-being. *PLOS Mental Health.* <https://doi.org/10.1371/journal.pmen.0000372>
 
 -   Magdaleno, Francisco, **Salinas INQ**, and Rothstein, Stephen. (2024) Vocal Functional Flexibility in a Non-Primate Vocal Learning Species. *Journal of Language Evolution***.** [doi.org/10.1093/jole/lzae006](https://doi.org/10.1093/jole/lzae006)
 

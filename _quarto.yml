@@ -44,5 +44,5 @@ format:
       light: theme.scss
       dark: dark.scss
 
-editor: visual
+editor: source
 
