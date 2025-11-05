@@ -7,7 +7,7 @@
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-contrib/reveal-auto-agenda-0.0.1/reveal-auto-agenda.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../../site_libs/quarto-contrib/reveal-auto-agenda-0.0.3/reveal-auto-agenda.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.31">
 
   <meta name="author" content="Isaac Quintanilla Salinas">
@@ -221,13 +221,13 @@ Isaac Quintanilla Salinas
 <nav role="doc-toc"> 
 <h2 id="toc-title">Table of contents</h2>
 <ul>
-<li>Background Information
+<li><a href="#/background-information" id="/toc-background-information">Background Information</a>
 <ul>
 <li><a href="#/study-example" id="/toc-study-example">Study Example</a></li>
 <li><a href="#/how-do-determine-the-survival-rate" id="/toc-how-do-determine-the-survival-rate">How do determine the survival rate?</a></li>
 <li><a href="#/data-type" id="/toc-data-type">Data Type</a></li>
 </ul></li>
-<li>Censoring
+<li><a href="#/censoring" id="/toc-censoring">Censoring</a>
 <ul>
 <li><a href="#/censoring-1" id="/toc-censoring-1">Censoring</a></li>
 <li><a href="#/left-censoring" id="/toc-left-censoring">Left Censoring</a></li>
@@ -236,7 +236,7 @@ Isaac Quintanilla Salinas
 <li><a href="#/censoring-2" id="/toc-censoring-2">Censoring</a></li>
 <li><a href="#/data-construction" id="/toc-data-construction">Data Construction</a></li>
 </ul></li>
-<li>Survival Analysis Functions
+<li><a href="#/survival-analysis-functions" id="/toc-survival-analysis-functions">Survival Analysis Functions</a>
 <ul>
 <li><a href="#/survivial-analysis-functions" id="/toc-survivial-analysis-functions">Survivial Analysis Functions</a></li>
 <li><a href="#/hazard-function" id="/toc-hazard-function">Hazard Function</a></li>
@@ -245,7 +245,7 @@ Isaac Quintanilla Salinas
 <li><a href="#/survival-and-hazard-function-relationship" id="/toc-survival-and-hazard-function-relationship">Survival and Hazard Function Relationship</a></li>
 <li><a href="#/probability-density-function" id="/toc-probability-density-function">Probability Density Function</a></li>
 </ul></li>
-<li>Survival Rate
+<li><a href="#/survival-rate" id="/toc-survival-rate">Survival Rate</a>
 <ul>
 <li><a href="#/survival-curve" id="/toc-survival-curve">Survival Curve</a></li>
 <li><a href="#/data" id="/toc-data">Data</a></li>
@@ -253,7 +253,7 @@ Isaac Quintanilla Salinas
 <li><a href="#/standard-error" id="/toc-standard-error">Standard Error</a></li>
 <li><a href="#/survival-curve-1" id="/toc-survival-curve-1">Survival Curve</a></li>
 </ul></li>
-<li>Cox Proportional Hazard Model
+<li><a href="#/cox-proportional-hazard-model" id="/toc-cox-proportional-hazard-model">Cox Proportional Hazard Model</a>
 <ul>
 <li><a href="#/data-1" id="/toc-data-1">Data</a></li>
 <li><a href="#/proportional-hazard-model" id="/toc-proportional-hazard-model">Proportional Hazard Model</a></li>
@@ -266,7 +266,7 @@ Isaac Quintanilla Salinas
 <li><a href="#/estimation" id="/toc-estimation">Estimation</a></li>
 <li><a href="#/sampling-distribution" id="/toc-sampling-distribution">Sampling Distribution</a></li>
 </ul></li>
-<li>Example
+<li><a href="#/example" id="/toc-example">Example</a>
 <ul>
 <li><a href="#/colon-example" id="/toc-colon-example">Colon Example</a></li>
 <li><a href="#/colon-survival-curve" id="/toc-colon-survival-curve">Colon Survival Curve</a></li>
@@ -274,7 +274,7 @@ Isaac Quintanilla Salinas
 <li><a href="#/colon-survival-curve-2" id="/toc-colon-survival-curve-2">Colon Survival Curve</a></li>
 <li><a href="#/cox-ph-model" id="/toc-cox-ph-model">Cox PH Model</a></li>
 </ul></li>
-<li>R Code
+<li><a href="#/r-code" id="/toc-r-code">R Code</a>
 <ul>
 <li><a href="#/fitting-a-survival-curve" id="/toc-fitting-a-survival-curve">Fitting a Survival Curve</a></li>
 <li><a href="#/fitting-cox-ph-model" id="/toc-fitting-cox-ph-model">Fitting Cox PH Model</a></li>
@@ -283,7 +283,7 @@ Isaac Quintanilla Salinas
 </nav>
 </section>
 <section>
-<section class="title-slide slide level1 agenda-slide center">
+<section id="background-information" class="title-slide slide level1 agenda-slide center">
 <h1>Background Information</h1>
 <div class="agenda">
 <ul>
@@ -334,7 +334,7 @@ Isaac Quintanilla Salinas
 </ul>
 </section></section>
 <section>
-<section class="title-slide slide level1 agenda-slide center">
+<section id="censoring" class="title-slide slide level1 agenda-slide center">
 <h1>Censoring</h1>
 <div class="agenda">
 <ul>
@@ -458,7 +458,7 @@ Isaac Quintanilla Salinas
 </ul>
 </section></section>
 <section>
-<section class="title-slide slide level1 agenda-slide center">
+<section id="survival-analysis-functions" class="title-slide slide level1 agenda-slide center">
 <h1>Survival Analysis Functions</h1>
 <div class="agenda">
 <ul>
@@ -526,7 +526,7 @@ f(t) = h(t)S(t)
 \]</span></p>
 </section></section>
 <section>
-<section class="title-slide slide level1 agenda-slide center">
+<section id="survival-rate" class="title-slide slide level1 agenda-slide center">
 <h1>Survival Rate</h1>
 <div class="agenda">
 <ul>
@@ -594,7 +594,7 @@ f(t) = h(t)S(t)
 </div>
 <img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section></section>
 <section>
-<section class="title-slide slide level1 agenda-slide center">
+<section id="cox-proportional-hazard-model" class="title-slide slide level1 agenda-slide center">
 <h1>Cox Proportional Hazard Model</h1>
 <div class="agenda">
 <ul>
@@ -714,7 +714,7 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 \]</span></p>
 </section></section>
 <section>
-<section class="title-slide slide level1 agenda-slide center">
+<section id="example" class="title-slide slide level1 agenda-slide center">
 <h1>Example</h1>
 <div class="agenda">
 <ul>
@@ -797,7 +797,7 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 </div>
 </section></section>
 <section>
-<section class="title-slide slide level1 agenda-slide center">
+<section id="r-code" class="title-slide slide level1 agenda-slide center">
 <h1>R Code</h1>
 <div class="agenda">
 <ul>

@@ -1,0 +1,312 @@
+---
+title: "Plotathon"
+author: "Isaac Quintanilla Salinas"
+format: 
+  revealjs:
+    width: 1200
+    scrollable: true
+    theme: [default, styles.scss]
+    controls-tutorial: true
+    incremental: false 
+    touch: false
+    controls: true
+    pointer:
+      pointerSize: 32
+    slide-number: true
+    sc-sb-title: h1
+    footer: inqs.info/p/plotathon/f25
+knitr:
+  opts_chunk: 
+    echo: true
+    eval: false
+    message: false
+    warnings: false
+    comment: "#>" 
+
+revealjs-plugins:
+  - pointer
+  - verticator
+  
+filters: 
+  - reveal-header
+  - code-fullscreen
+  - reveal-auto-agenda
+  
+auto-agenda:
+  bullets: numbered
+  clickable: true
+  heading: Outline
+
+editor: source
+---
+
+# Installation
+
+## Installing R
+
+<https://cloud.r-project.org/>
+
+## Installing RStudio
+
+<https://posit.co/download/rstudio-desktop/>
+
+## Installing RTools (Windows)
+
+<https://cran.r-project.org/bin/windows/Rtools/>
+
+## Posit Cloud
+
+<https://posit.cloud/>
+
+# R Packages
+
+## R Packages
+
+
+:::: panel-tabset
+
+### Tidyverse
+
+```{r}
+install.packages("tidyverse")
+```
+
+### Plotly
+
+```{r}
+install.packages("plotly")
+```
+
+### ggthemes
+
+```{r}
+install.packages("ggthemes")
+```
+
+### Esquisse
+
+```{r}
+install.packages("esquisse")
+```
+
+### All/Other
+
+```r
+install.packages(c("tidyvere", "plotly", 
+                   "ggthemes", "esquisse",
+                   "ggwordcloud", "ggbump",
+                   "ggpie", "tidytext", "tidytuesdayR"))
+```
+
+::::
+
+## Load Packages
+
+```{r}
+library(tidyverse)
+library(plotly)
+library(ggthemes)
+library(esquisse)
+```
+
+# R Projects
+
+## R Projects
+
+R Projects are designed to contain all your data, scripts, and output in one location. This ensures that things are compatible on other computers.
+
+## Directories (Folders)
+
+-   data
+
+-   output
+
+-   scripts
+
+# RStudio Layout
+
+## RStudio Layout
+
+-   Scripts
+
+-   Console
+
+-   Environment
+
+-   Files
+
+-   Everything else
+
+# Scripts
+
+## Adding Script
+
+-   Use the top right corner
+
+# Loading Data
+
+## Downloading Data
+
+```{r}
+#| echo: true
+#| eval: false
+u <- "https://www.inqs.info/p/plotathon/owenWilsonWows.csv"
+basename(u)
+download.file(u,
+              file.path(getwd(), "data", basename(u)))
+
+```
+
+## Loading Data
+
+```{r}
+#| eval: false
+mds <- read_csv("data/owenWilsonWows.csv")
+```
+
+# Plotting
+
+## Base Plot
+
+```{r}
+mds |> ggplot(aes(x = total_wows_in_movie)) 
+```
+
+## Histogram
+
+```{r}
+mds |> ggplot(aes(x = total_wows_in_movie)) +
+  geom_histogram()
+```
+
+## Box Plot
+
+```{r}
+mds |> ggplot(aes(x = total_wows_in_movie)) +
+  geom_boxplot()
+```
+
+## Density Plot
+
+```{r}
+mds |> ggplot(aes(x = total_wows_in_movie)) +
+  geom_density()
+```
+
+## Box Plot By Category
+
+```{r}
+mds |> ggplot(aes(x = total_wows_in_movie, y = era)) +
+  geom_boxplot()
+```
+
+## Density Plot By Category
+
+```{r}
+mds |> ggplot(aes(x = total_wows_in_movie, color = era)) +
+  geom_density()
+```
+
+## Scatter Plot
+
+```{r}
+mds |> ggplot(aes(x = durationInSeconds, 
+                  y = total_wows_in_movie)) +
+  geom_point()
+```
+
+## Scatter Plot by Group
+
+```{r}
+mds |> ggplot(aes(x = durationInSeconds, 
+                  y = total_wows_in_movie, color = era)) +
+  geom_point()
+```
+
+## Add Regression Line
+
+```{r}
+mds |> ggplot(aes(x = durationInSeconds, 
+                  y = total_wows_in_movie)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = F)
+```
+
+## Smooth Line
+
+```{r}
+mds |> ggplot(aes(x = durationInSeconds, 
+                  y = total_wows_in_movie)) +
+  geom_point() +
+  geom_smooth(se = F)
+```
+
+## Regression Lines by Group
+
+```{r}
+mds |> ggplot(aes(x = durationInSeconds, 
+                  y = total_wows_in_movie,
+                  color = era)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = F)
+```
+
+# Esquisse
+
+# Generative Artificial Intelligence
+
+## AI Misuse
+
+::: incremental
+
+- **Never upload any data to a company**
+
+- **AI is known to make things up**
+
+- **Do not implement a method that you know nothing about**
+
+- **Consider who you are harming when you use AI**
+
+:::
+
+
+## AI use in R
+
+::: incremental
+
+- Ask AI to give you example code
+
+- Verify with reputable resources if the code is correct
+
+  - Read documentation
+
+  - Identify real-life use
+
+- Change the code to your needs
+
+
+:::
+
+# Resources
+
+## Resources
+
+[R Graphics Cookbook](https://r-graphics.org/)
+
+[R Graph Gallery](https://r-graph-gallery.com/)
+
+[R Charts](https://r-charts.com/)
+
+[ggplot2](https://ggplot2.tidyverse.org/)
+
+[Graphical Data Analysis in R](http://www.gradaanwr.net/)
+
+[Modern Data Visualization](https://rkabacoff.github.io/datavis/)
+
+## Tidy Tuesday
+
+Tidy Tuesday is a weekly data visualization challenge from the [Data Science Learning Community](https://github.com/rfordatascience/tidytuesday).
+
+Search #tidytuesday on social media such as Bluesky or [Fosstodon](https://fosstodon.org/tags/tidytuesday)
+
+Also check out my attempts at tidy tuesday: [inqs.info/ttw](https://www.inqs.info/ttw)
