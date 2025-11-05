@@ -1,12 +1,12 @@
 ---
 title: "Publications"
 css: styles.css
-editor: visual
+editor: source
 ---
 
-::: content-block
-::: features
-::: {.feature .box}
+:::::::::::: content-block
+::::::::::: features
+:::: {.feature .box}
 #### Association Between Parental Barriers to Accessing a Usual Source of Care and Children's Receipt of Preventative Services.
 
 John Bellettiere, Emmeline Chuang, Suzanne C Hughes, Isaac Quintanilla, C Richard Hofstetter, and Melbourne F Hovell
@@ -14,9 +14,22 @@ John Bellettiere, Emmeline Chuang, Suzanne C Hughes, Isaac Quintanilla, C Richar
 ::: learn-more
 [Learn more »](https://pubmed.ncbi.nlm.nih.gov/28358997/)
 :::
-:::
+::::
 
-::: {.feature .box}
+
+:::::::::::: content-block
+::::::::::: features
+:::: {.feature .box}
+#### Association Between Parental Barriers to Accessing a Usual Source of Care and Children's Receipt of Preventative Services.
+
+John Bellettiere, Emmeline Chuang, Suzanne C Hughes, Isaac Quintanilla, C Richard Hofstetter, and Melbourne F Hovell
+
+::: learn-more
+[Learn more »](https://pubmed.ncbi.nlm.nih.gov/28358997/)
+:::
+::::
+
+:::: {.feature .box}
 #### Selective Array‐based Sensing of Anabolic Steroids in Aqueous Solution by Host:Guest Reporter Complexes.
 
 Adam D Gill, Lizeth Perez, Isaac Quintanilla Salinas, Samantha R Byers, Yang Liu, Briana L Hickey, Wenwan Zhong, and Richard J Hooley
@@ -24,9 +37,9 @@ Adam D Gill, Lizeth Perez, Isaac Quintanilla Salinas, Samantha R Byers, Yang Liu
 ::: learn-more
 [Learn more »](https://pubmed.ncbi.nlm.nih.gov/30427566/)
 :::
-:::
+::::
 
-::: {.feature .box}
+:::: {.feature .box}
 #### Glioblastoma in elderly: treatment patterns and survival. CNS Oncology.
 
 Jean-Aine Pretanvil, Isaac Quintanilla Salinas, and David E Piccioni
@@ -34,9 +47,9 @@ Jean-Aine Pretanvil, Isaac Quintanilla Salinas, and David E Piccioni
 ::: learn-more
 [Learn more »](https://pubmed.ncbi.nlm.nih.gov/28001088/)
 :::
-:::
+::::
 
-::: {.feature .box}
+:::: {.feature .box}
 #### Donor age and early graft failure after lung transplantation: a cohort study.
 
 MR Baldwin, ER Peterson, I Easthausen, I Quintanilla, E Colago, JR Sonnett, F D'Ovidio, J Costa, JM Diamond, JD Christie, SM Arcasoy, and DJ Lederer
@@ -44,6 +57,6 @@ MR Baldwin, ER Peterson, I Easthausen, I Quintanilla, E Colago, JR Sonnett, F D'
 ::: learn-more
 [Learn more »](https://pubmed.ncbi.nlm.nih.gov/24034167/)
 :::
-:::
-:::
-:::
+::::
+:::::::::::
+::::::::::::

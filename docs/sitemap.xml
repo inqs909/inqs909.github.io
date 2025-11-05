@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>www.inqs.info/pubs.html</loc>
-    <lastmod>2025-06-27T22:10:16.450Z</lastmod>
-  </url>
-  <url>
     <loc>www.inqs.info/presentations.html</loc>
     <lastmod>2025-06-27T22:10:16.450Z</lastmod>
   </url>
@@ -46,7 +42,7 @@
   </url>
   <url>
     <loc>www.inqs.info/courses.html</loc>
-    <lastmod>2025-07-18T19:08:54.938Z</lastmod>
+    <lastmod>2025-11-05T18:44:24.868Z</lastmod>
   </url>
   <url>
     <loc>www.inqs.info/books/20-Invisible-Women/index.html</loc>
@@ -222,10 +218,6 @@
   </url>
   <url>
     <loc>www.inqs.info/pres/surf_2023/anova.html</loc>
-    <lastmod>2025-06-27T22:10:16.450Z</lastmod>
-  </url>
-  <url>
-    <loc>www.inqs.info/projects.html</loc>
     <lastmod>2025-06-27T22:10:16.450Z</lastmod>
   </url>
 </urlset>

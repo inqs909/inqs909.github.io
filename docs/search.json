@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "pubs.html",
-    "href": "pubs.html",
-    "title": "Publications",
-    "section": "",
-    "text": "Association Between Parental Barriers to Accessing a Usual Source of Care and Children’s Receipt of Preventative Services.\nJohn Bellettiere, Emmeline Chuang, Suzanne C Hughes, Isaac Quintanilla, C Richard Hofstetter, and Melbourne F Hovell\n\nLearn more »\n\n\n\nSelective Array‐based Sensing of Anabolic Steroids in Aqueous Solution by Host:Guest Reporter Complexes.\nAdam D Gill, Lizeth Perez, Isaac Quintanilla Salinas, Samantha R Byers, Yang Liu, Briana L Hickey, Wenwan Zhong, and Richard J Hooley\n\nLearn more »\n\n\n\nGlioblastoma in elderly: treatment patterns and survival. CNS Oncology.\nJean-Aine Pretanvil, Isaac Quintanilla Salinas, and David E Piccioni\n\nLearn more »\n\n\n\nDonor age and early graft failure after lung transplantation: a cohort study.\nMR Baldwin, ER Peterson, I Easthausen, I Quintanilla, E Colago, JR Sonnett, F D’Ovidio, J Costa, JM Diamond, JD Christie, SM Arcasoy, and DJ Lederer\n\nLearn more »"
-  },
-  {
     "objectID": "presentations.html",
     "href": "presentations.html",
     "title": "Presentations",
@@ -816,14 +809,14 @@
     "href": "courses.html",
     "title": "Courses",
     "section": "",
-    "text": "AY 25-26AY 24-25AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 352: Probability and Statistics\nData 300: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 453: Mathematical Statistics\nMath 497: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
+    "text": "AY 25-26AY 24-25AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 202: Biostatistics\nMath 352: Probability and Statistics\nMath 408: Machine Learning\nMath 453: Mathematical Statistics\n\n\n\n\nMath 201: Elementary Statistics\nMath 453: Mathematical Statistics\nMath 497: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
   },
   {
     "objectID": "courses.html#csu-channel-islands",
     "href": "courses.html#csu-channel-islands",
     "title": "Courses",
     "section": "",
-    "text": "AY 25-26AY 24-25AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 352: Probability and Statistics\nData 300: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 453: Mathematical Statistics\nMath 497: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
+    "text": "AY 25-26AY 24-25AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 202: Biostatistics\nMath 352: Probability and Statistics\nMath 408: Machine Learning\nMath 453: Mathematical Statistics\n\n\n\n\nMath 201: Elementary Statistics\nMath 453: Mathematical Statistics\nMath 497: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
   },
   {
     "objectID": "courses.html#uc-riverside",
@@ -2700,12 +2693,5 @@
     "title": "One- & Two-Way ANOVA",
     "section": "Tukey HSD",
     "text": "Tukey HSD\n\nTukey HSDComparison Plot\n\n\n\nTukeyHSD(two_aov)\n\n#&gt;   Tukey multiple comparisons of means\n#&gt;     95% family-wise confidence level\n#&gt; \n#&gt; Fit: aov(formula = len ~ dose * supp, data = .)\n#&gt; \n#&gt; $dose\n#&gt;         diff       lwr       upr   p adj\n#&gt; 1-0.5  9.130  6.362488 11.897512 0.0e+00\n#&gt; 2-0.5 15.495 12.727488 18.262512 0.0e+00\n#&gt; 2-1    6.365  3.597488  9.132512 2.7e-06\n#&gt; \n#&gt; $supp\n#&gt;       diff       lwr       upr     p adj\n#&gt; VC-OJ -3.7 -5.579828 -1.820172 0.0002312\n#&gt; \n#&gt; $`dose:supp`\n#&gt;                 diff        lwr         upr     p adj\n#&gt; 1:OJ-0.5:OJ     9.47   4.671876  14.2681238 0.0000046\n#&gt; 2:OJ-0.5:OJ    12.83   8.031876  17.6281238 0.0000000\n#&gt; 0.5:VC-0.5:OJ  -5.25 -10.048124  -0.4518762 0.0242521\n#&gt; 1:VC-0.5:OJ     3.54  -1.258124   8.3381238 0.2640208\n#&gt; 2:VC-0.5:OJ    12.91   8.111876  17.7081238 0.0000000\n#&gt; 2:OJ-1:OJ       3.36  -1.438124   8.1581238 0.3187361\n#&gt; 0.5:VC-1:OJ   -14.72 -19.518124  -9.9218762 0.0000000\n#&gt; 1:VC-1:OJ      -5.93 -10.728124  -1.1318762 0.0073930\n#&gt; 2:VC-1:OJ       3.44  -1.358124   8.2381238 0.2936430\n#&gt; 0.5:VC-2:OJ   -18.08 -22.878124 -13.2818762 0.0000000\n#&gt; 1:VC-2:OJ      -9.29 -14.088124  -4.4918762 0.0000069\n#&gt; 2:VC-2:OJ       0.08  -4.718124   4.8781238 1.0000000\n#&gt; 1:VC-0.5:VC     8.79   3.991876  13.5881238 0.0000210\n#&gt; 2:VC-0.5:VC    18.16  13.361876  22.9581238 0.0000000\n#&gt; 2:VC-1:VC       9.37   4.571876  14.1681238 0.0000058\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\nAnalysis of Variance"
-  },
-  {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
-    "section": "",
-    "text": "The csustats package\nAn R package designed to teach statistical methods in R.\n\nLearn more »\n\n\n\nThe SMART Program\nA mentoring program for undergraduate students to completer statistical projects at UC Riverside.\n\nLearn more »\n\n\n\nThe tvcm Package\nThe tvcm package allows you to fit time-varying coefficient models in R\n\nLearn more »"
   }
 ]
