@@ -2693,5 +2693,19 @@
     "title": "One- & Two-Way ANOVA",
     "section": "Tukey HSD",
     "text": "Tukey HSD\n\nTukey HSDComparison Plot\n\n\n\nTukeyHSD(two_aov)\n\n#&gt;   Tukey multiple comparisons of means\n#&gt;     95% family-wise confidence level\n#&gt; \n#&gt; Fit: aov(formula = len ~ dose * supp, data = .)\n#&gt; \n#&gt; $dose\n#&gt;         diff       lwr       upr   p adj\n#&gt; 1-0.5  9.130  6.362488 11.897512 0.0e+00\n#&gt; 2-0.5 15.495 12.727488 18.262512 0.0e+00\n#&gt; 2-1    6.365  3.597488  9.132512 2.7e-06\n#&gt; \n#&gt; $supp\n#&gt;       diff       lwr       upr     p adj\n#&gt; VC-OJ -3.7 -5.579828 -1.820172 0.0002312\n#&gt; \n#&gt; $`dose:supp`\n#&gt;                 diff        lwr         upr     p adj\n#&gt; 1:OJ-0.5:OJ     9.47   4.671876  14.2681238 0.0000046\n#&gt; 2:OJ-0.5:OJ    12.83   8.031876  17.6281238 0.0000000\n#&gt; 0.5:VC-0.5:OJ  -5.25 -10.048124  -0.4518762 0.0242521\n#&gt; 1:VC-0.5:OJ     3.54  -1.258124   8.3381238 0.2640208\n#&gt; 2:VC-0.5:OJ    12.91   8.111876  17.7081238 0.0000000\n#&gt; 2:OJ-1:OJ       3.36  -1.438124   8.1581238 0.3187361\n#&gt; 0.5:VC-1:OJ   -14.72 -19.518124  -9.9218762 0.0000000\n#&gt; 1:VC-1:OJ      -5.93 -10.728124  -1.1318762 0.0073930\n#&gt; 2:VC-1:OJ       3.44  -1.358124   8.2381238 0.2936430\n#&gt; 0.5:VC-2:OJ   -18.08 -22.878124 -13.2818762 0.0000000\n#&gt; 1:VC-2:OJ      -9.29 -14.088124  -4.4918762 0.0000069\n#&gt; 2:VC-2:OJ       0.08  -4.718124   4.8781238 1.0000000\n#&gt; 1:VC-0.5:VC     8.79   3.991876  13.5881238 0.0000210\n#&gt; 2:VC-0.5:VC    18.16  13.361876  22.9581238 0.0000000\n#&gt; 2:VC-1:VC       9.37   4.571876  14.1681238 0.0000058\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\nAnalysis of Variance"
+  },
+  {
+    "objectID": "blog/2025-11-22-it/index.html",
+    "href": "blog/2025-11-22-it/index.html",
+    "title": "I’m assuming you’re IT, …",
+    "section": "",
+    "text": "Windy day @CSUCI SCCUR\nWore and SDSU sweater and father’s green jacket.\nListen to Kendric Lamar’s Not like us..\nWorked on my RSCA applications\n\nOnly Reference Latino authors"
+  },
+  {
+    "objectID": "blog/2025-11-22-it/index.html#introduction",
+    "href": "blog/2025-11-22-it/index.html#introduction",
+    "title": "I’m assuming you’re IT, …",
+    "section": "",
+    "text": "Windy day @CSUCI SCCUR\nWore and SDSU sweater and father’s green jacket.\nListen to Kendric Lamar’s Not like us..\nWorked on my RSCA applications\n\nOnly Reference Latino authors"
   }
 ]

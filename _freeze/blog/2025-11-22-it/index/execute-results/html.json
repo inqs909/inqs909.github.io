@@ -1,0 +1,15 @@
+{
+  "hash": "a8bbe46e1f0773538f6798c13ca732c9",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"I'm assuming you're IT, ...\"\nauthor: \"Isaac Quintanilla Salinas\"\ndescription: \"When a PhD is not enough\"\ndraft: true\nnavbar: false\ndate: 2024-01-31\nimage: it.jpg\nimage-alt: \"An image of a \\\"scary\\\" clown on a white board located outside my wall.\"\ncategories: \n  - Statistics\nknitr:\n  opts_chunk: \n    echo: true\n    message: false\n    warning: false\n---\n\n## Introduction\n\n- Windy day @CSUCI SCCUR\n\n- Wore and SDSU sweater and father's green jacket.\n\n- Listen to Kendric Lamar's Not like us..\n\n- Worked on my RSCA applications\n\n    - Only Reference Latino authors\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

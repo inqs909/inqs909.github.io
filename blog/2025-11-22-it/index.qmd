@@ -1,0 +1,30 @@
+---
+title: "I'm assuming you're IT, ..."
+author: "Isaac Quintanilla Salinas"
+description: "When a PhD is not enough"
+draft: true
+navbar: false
+date: 2024-01-31
+image: it.jpg
+image-alt: "An image of a \"scary\" clown on a white board located outside my office wall. After this, I think I growned to appreciate IT more."
+categories: 
+  - Academia
+knitr:
+  opts_chunk: 
+    echo: true
+    message: false
+    warning: false
+---
+
+## Introduction
+
+- Windy day @CSUCI SCCUR
+
+- Wore and SDSU sweater and father's green jacket.
+
+- Listen to Kendric Lamar's Not like us..
+
+- Worked on my RSCA applications
+
+    - Only Reference Latino authors
+
