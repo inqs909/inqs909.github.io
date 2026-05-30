@@ -6,8 +6,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.31">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Isaac Quintanilla Salinas">
   <title>INQS – Bayesian Mixed Effects Models and Cats</title>
@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -95,7 +98,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
   <link rel="stylesheet" href="styles.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -989,7 +992,7 @@ q(x,y) = \min\left\{\frac{f(y)g(x|y)}{f(x)g(y|x)},1\right\}
 <section id="stan-code" class="slide level2">
 <h2>Stan Code</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a></a>data {</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a></a>data {</span>
 <span id="cb1-2"><a></a>  int N;</span>
 <span id="cb1-3"><a></a>  int D;</span>
 <span id="cb1-4"><a></a>  int S;</span>
@@ -1060,13 +1063,13 @@ q(x,y) = \min\left\{\frac{f(y)g(x|y)}{f(x)g(y|x)},1\right\}
 <span id="cb1-69"><a></a>  sig_e ~ gamma(1, 1);</span>
 <span id="cb1-70"><a></a>  sig_h ~ gamma(3, 2);</span>
 <span id="cb1-71"><a></a>  rho ~ uniform(-1, 1);</span>
-<span id="cb1-72"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-72"><a></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="r-code" class="slide level2">
 <h2>R Code</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># Loading R Packages</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># Loading R Packages</span></span>
 <span id="cb2-2"><a></a><span class="fu">library</span>(mvtnorm)</span>
 <span id="cb2-3"><a></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb2-4"><a></a><span class="fu">library</span>(lme4)</span>
@@ -1192,7 +1195,7 @@ q(x,y) = \min\left\{\frac{f(y)g(x|y)}{f(x)g(y|x)},1\right\}
 <span id="cb2-124"><a></a><span class="fu">kubrick</span>()</span>
 <span id="cb2-125"><a></a></span>
 <span id="cb2-126"><a></a><span class="do">## Save the results</span></span>
-<span id="cb2-127"><a></a><span class="fu">save</span>(res, <span class="st">"~/Dropbox/Machine/res/save.RData"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-127"><a></a><span class="fu">save</span>(res, <span class="st">"~/Dropbox/Machine/res/save.RData"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="frog-paper" class="slide level2">
@@ -1428,7 +1431,7 @@ q(x,y) = \min\left\{\frac{f(y)g(x|y)}{f(x)g(y|x)},1\right\}
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -1540,13 +1543,14 @@ q(x,y) = \min\left\{\frac{f(y)g(x|y)}{f(x)g(y|x)},1\right\}
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

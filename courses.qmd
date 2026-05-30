@@ -9,6 +9,18 @@ editor: source
 
 ::: {.panel-tabset .nav-pills}
 
+## AY 26-27
+
+-   [Math 201: Elementary Statistics]()
+
+-   [Math 398: Advanced Research Investigation]()
+
+-   [Math 408: Machine Learning]()
+
+-   [Data 300: Intro to Data Management]()
+
+-   [Data 426: Statistical Computing]()
+
 ## AY 25-26
 
 -   [Math 201: Elementary Statistics](https://www.inqs.info/m201_s26)

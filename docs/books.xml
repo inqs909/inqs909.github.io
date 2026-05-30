@@ -9,7 +9,7 @@
 <link>www.inqs.info/books.html</link>
 <atom:link href="www.inqs.info/books.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.7.31</generator>
+<generator>quarto-1.9.37</generator>
 <lastBuildDate>Wed, 02 Jul 2025 07:00:00 GMT</lastBuildDate>
 <item>
   <title>Invisible Women</title>
@@ -26,7 +26,7 @@
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -62,7 +62,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -99,7 +99,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -135,7 +135,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -171,7 +171,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -206,7 +206,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -242,7 +242,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -279,7 +279,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -315,7 +315,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -351,7 +351,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -387,7 +387,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -423,7 +423,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -459,7 +459,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -495,7 +495,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -511,7 +511,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book Availability
+<span class="screen-reader-only">Note</span>Book Availability
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -542,7 +542,7 @@ Book Availability
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -556,7 +556,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book Availability
+<span class="screen-reader-only">Note</span>Book Availability
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -588,7 +588,7 @@ Book Availability
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -602,7 +602,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book Availability
+<span class="screen-reader-only">Note</span>Book Availability
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -635,7 +635,7 @@ Book Availability
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -649,7 +649,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book Availability
+<span class="screen-reader-only">Note</span>Book Availability
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -680,7 +680,7 @@ Book Availability
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -694,7 +694,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book Availability
+<span class="screen-reader-only">Note</span>Book Availability
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -726,7 +726,7 @@ Book Availability
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -741,7 +741,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book Availability
+<span class="screen-reader-only">Note</span>Book Availability
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -773,7 +773,7 @@ Book Availability
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book
+<span class="screen-reader-only">Tip</span>Book
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -788,7 +788,7 @@ Book
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Book Availability
+<span class="screen-reader-only">Note</span>Book Availability
 </div>
 </div>
 <div class="callout-body-container callout-body">

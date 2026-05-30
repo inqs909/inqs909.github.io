@@ -6,9 +6,9 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-contrib/reveal-auto-agenda-0.0.3/reveal-auto-agenda.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.31">
+  <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Isaac Quintanilla Salinas">
   <title>INQS – Survival Analysis:</title>
@@ -18,6 +18,9 @@
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -96,7 +99,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -373,7 +376,7 @@ Isaac Quintanilla Salinas
 <section id="left-censoring" class="slide level2">
 <h2>Left Censoring</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-2"><a></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">ID =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, </span>
 <span id="cb1-3"><a></a>                  <span class="at">t1 =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">6</span>, <span class="dv">7</span>) , </span>
 <span id="cb1-4"><a></a>                  <span class="at">censored =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>))</span>
@@ -384,14 +387,14 @@ Isaac Quintanilla Salinas
 <span id="cb1-9"><a></a>    <span class="fu">scale_shape_manual</span>(<span class="at">name =</span> <span class="st">"Event"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="dv">19</span>, <span class="dv">15</span>)) <span class="sc">+</span></span>
 <span id="cb1-10"><a></a>    <span class="fu">ggtitle</span>(<span class="st">"Left Censoring"</span>) <span class="sc">+</span> </span>
 <span id="cb1-11"><a></a>    <span class="fu">xlab</span>(<span class="st">"Patient ID"</span>) <span class="sc">+</span>  <span class="fu">ylab</span>(<span class="st">"Days"</span>) <span class="sc">+</span> </span>
-<span id="cb1-12"><a></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-12"><a></a>    <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
 <section id="interval-censoring" class="slide level2">
 <h2>Interval Censoring</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb2-2"><a></a>dat <span class="ot">&lt;-</span> <span class="fu">structure</span>(<span class="fu">list</span>(<span class="at">ID =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">eventA =</span> <span class="fu">c</span>(<span class="dv">0</span>L, <span class="dv">1</span>L, <span class="dv">1</span>L, <span class="dv">0</span>L, <span class="dv">1</span>L), </span>
 <span id="cb2-3"><a></a>    <span class="at">eventB =</span> <span class="fu">c</span>(<span class="dv">1</span>L, <span class="dv">0</span>L, <span class="dv">0</span>L, <span class="dv">1</span>L, <span class="dv">0</span>L), <span class="at">t1 =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">10</span>, <span class="fl">4.5</span>, <span class="dv">2</span>), <span class="at">t2 =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">10</span>, <span class="fl">4.5</span>, </span>
 <span id="cb2-4"><a></a>    <span class="dv">8</span>), <span class="at">censored =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>)), <span class="at">.Names =</span> <span class="fu">c</span>(<span class="st">"ID"</span>, <span class="st">"eventA"</span>, </span>
@@ -414,14 +417,14 @@ Isaac Quintanilla Salinas
 <span id="cb2-21"><a></a>    <span class="fu">scale_shape_manual</span>(<span class="at">name =</span> <span class="st">"Event"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="dv">19</span>, <span class="dv">15</span>)) <span class="sc">+</span></span>
 <span id="cb2-22"><a></a>    <span class="fu">ggtitle</span>(<span class="st">"Interval Censoring"</span>) <span class="sc">+</span> </span>
 <span id="cb2-23"><a></a>    <span class="fu">xlab</span>(<span class="st">"Patient ID"</span>) <span class="sc">+</span>  <span class="fu">ylab</span>(<span class="st">"Days"</span>) <span class="sc">+</span> </span>
-<span id="cb2-24"><a></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-24"><a></a>    <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
 <section id="right-censoring" class="slide level2">
 <h2>Right Censoring</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb3-2"><a></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">ID =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, </span>
 <span id="cb3-3"><a></a>                  <span class="at">t1 =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>) , </span>
 <span id="cb3-4"><a></a>                  <span class="at">censored =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>))</span>
@@ -434,7 +437,7 @@ Isaac Quintanilla Salinas
 <span id="cb3-11"><a></a>    <span class="fu">scale_shape_manual</span>(<span class="at">name =</span> <span class="st">"Event"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="dv">19</span>, <span class="dv">15</span>)) <span class="sc">+</span></span>
 <span id="cb3-12"><a></a>    <span class="fu">ggtitle</span>(<span class="st">"Right Censoring"</span>) <span class="sc">+</span> </span>
 <span id="cb3-13"><a></a>    <span class="fu">xlab</span>(<span class="st">"Patient ID"</span>) <span class="sc">+</span>  <span class="fu">ylab</span>(<span class="st">"Days"</span>) <span class="sc">+</span> </span>
-<span id="cb3-14"><a></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-14"><a></a>    <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
@@ -584,12 +587,12 @@ f(t) = h(t)S(t)
 <section id="survival-curve-1" class="slide level2">
 <h2>Survival Curve</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">library</span>(survival)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">library</span>(survival)</span>
 <span id="cb4-2"><a></a><span class="fu">library</span>(ggsurvfit)</span>
 <span id="cb4-3"><a></a><span class="fu">library</span>(magrittr)</span>
 <span id="cb4-4"><a></a>aml <span class="sc">%$%</span> <span class="fu">survfit2</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>)  <span class="sc">%&gt;%</span> </span>
 <span id="cb4-5"><a></a>      <span class="fu">ggsurvfit</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb4-6"><a></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-6"><a></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section></section>
@@ -752,44 +755,44 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 <section id="colon-survival-curve" class="slide level2">
 <h2>Colon Survival Curve</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">library</span>(survival)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">library</span>(survival)</span>
 <span id="cb5-2"><a></a><span class="fu">library</span>(ggsurvfit)</span>
 <span id="cb5-3"><a></a><span class="fu">library</span>(magrittr)</span>
 <span id="cb5-4"><a></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb5-5"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">survfit2</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>)  <span class="sc">%&gt;%</span> </span>
 <span id="cb5-6"><a></a>      <span class="fu">ggsurvfit</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb5-7"><a></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-7"><a></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
 <section id="colon-survival-curve-1" class="slide level2">
 <h2>Colon Survival Curve</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">survfit2</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> rx)  <span class="sc">%&gt;%</span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">survfit2</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> rx)  <span class="sc">%&gt;%</span> </span>
 <span id="cb6-2"><a></a>      <span class="fu">ggsurvfit</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb6-3"><a></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-3"><a></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
 <section id="colon-survival-curve-2" class="slide level2">
 <h2>Colon Survival Curve</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">survfit2</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> rx)  <span class="sc">%&gt;%</span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">survfit2</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> rx)  <span class="sc">%&gt;%</span> </span>
 <span id="cb7-2"><a></a>      <span class="fu">ggsurvfit</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
 <span id="cb7-3"><a></a>      <span class="fu">add_confidence_interval</span>() <span class="sc">+</span></span>
-<span id="cb7-4"><a></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-4"><a></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="pres_4_23_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
 <section id="cox-ph-model" class="slide level2">
 <h2>Cox PH Model</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> rx) <span class="sc">%&gt;%</span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> rx) <span class="sc">%&gt;%</span> </span>
 <span id="cb8-2"><a></a>  broom<span class="sc">::</span><span class="fu">tidy</span>(<span class="at">exponentiate =</span> T) <span class="sc">%&gt;%</span> </span>
 <span id="cb8-3"><a></a>  <span class="fu">mutate_if</span>(is.numeric,</span>
 <span id="cb8-4"><a></a>            round,</span>
 <span id="cb8-5"><a></a>            <span class="at">digits =</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-6"><a></a>  DT<span class="sc">::</span><span class="fu">datatable</span>(<span class="at">options =</span> <span class="fu">list</span>(<span class="at">dom =</span> <span class="st">'t'</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-6"><a></a>  DT<span class="sc">::</span><span class="fu">datatable</span>(<span class="at">options =</span> <span class="fu">list</span>(<span class="at">dom =</span> <span class="st">'t'</span>)) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="datatables html-widget html-fill-item" id="htmlwidget-d7cf1bffab933e804f74" style="width:100%;height:auto;"></div>
 <script type="application/json" data-for="htmlwidget-d7cf1bffab933e804f74">{"x":{"filter":"none","vertical":false,"data":[["1","2"],["rxLevamisole","rxLevamisole+5-FU"],[0.98,0.6],[0.11,0.12],[-0.14,-4.32],[0.89,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>term<\/th>\n      <th>estimate<\/th>\n      <th>std.error<\/th>\n      <th>statistic<\/th>\n      <th>p.value<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"term","targets":1},{"name":"estimate","targets":2},{"name":"std.error","targets":3},{"name":"statistic","targets":4},{"name":"p.value","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
@@ -832,13 +835,13 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 <div class="tab-content">
 <div id="tabset-1-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="annotated-cell-9"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-9" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-9-1" class="code-annotation-target"><a href="#annotated-cell-9-1"></a><span class="fu">library</span>(magrittr)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-9"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-9" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-9-1" class="code-annotation-target"><a href="#annotated-cell-9-1"></a><span class="fu">library</span>(magrittr)</span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-9" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-9-2" class="code-annotation-target"><a href="#annotated-cell-9-2"></a><span class="fu">library</span>(survival)</span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-9" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-9-3" class="code-annotation-target"><a href="#annotated-cell-9-3"></a><span class="fu">library</span>(ggsurvfit)</span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-9" data-target-annotation="4" onclick="event.preventDefault();">4</a><span id="annotated-cell-9-4" class="code-annotation-target"><a href="#annotated-cell-9-4"></a>df_colon <span class="sc">%$%</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> surg)  <span class="sc">%&gt;%</span></span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-9" data-target-annotation="5" onclick="event.preventDefault();">5</a><span id="annotated-cell-9-5" class="code-annotation-target"><a href="#annotated-cell-9-5"></a>      <span class="fu">ggsurvfit</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-9" data-target-annotation="6" onclick="event.preventDefault();">6</a><span id="annotated-cell-9-6" class="code-annotation-target"><a href="#annotated-cell-9-6"></a>      <span class="fu">add_confidence_interval</span>() <span class="sc">+</span></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-9" data-target-annotation="7" onclick="event.preventDefault();">7</a><span id="annotated-cell-9-7" class="code-annotation-target"><a href="#annotated-cell-9-7"></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-9" data-target-annotation="7" onclick="event.preventDefault();">7</a><span id="annotated-cell-9-7" class="code-annotation-target"><a href="#annotated-cell-9-7"></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-9" data-target-annotation="1">1</dt>
@@ -875,10 +878,10 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 </div>
 <div id="tabset-1-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> surg)  <span class="sc">%&gt;%</span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> surg)  <span class="sc">%&gt;%</span> </span>
 <span id="cb9-2"><a></a>      <span class="fu">ggsurvfit</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
 <span id="cb9-3"><a></a>      <span class="fu">add_confidence_interval</span>() <span class="sc">+</span></span>
-<span id="cb9-4"><a></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-4"><a></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -898,14 +901,14 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
 <div class="tab-content">
 <div id="tabset-2-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> surg)  <span class="sc">%&gt;%</span></span>
-<span id="cb10-2"><a></a>  summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> surg)  <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a></a>  summary</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <div id="tabset-2-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> surg)  <span class="sc">%&gt;%</span></span>
-<span id="cb11-2"><a></a>  summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> surg)  <span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a></a>  summary</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; Call:
 #&gt; coxph(formula = Surv(time, status) ~ surg)
@@ -1123,7 +1126,7 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -1235,13 +1238,14 @@ L_P(\boldsymbol\beta) = \prod_{i=1}^D \frac{\exp(\boldsymbol\beta^T \boldsymbol 
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

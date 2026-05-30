@@ -9,7 +9,7 @@
 <link>www.inqs.info/blog.html</link>
 <atom:link href="www.inqs.info/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.7.31</generator>
+<generator>quarto-1.9.37</generator>
 <lastBuildDate>Wed, 08 Jan 2025 08:00:00 GMT</lastBuildDate>
 <item>
   <title>Wellness Plan Spring 2025</title>
@@ -19,15 +19,15 @@
       <!-- user-provided yaml closeread style options -->
       <style>
         :root {
-          --cr-section-background-color: #033E3E;
---cr-narrative-border-radius: 5px;
---cr-narrative-font-family: Georgia, “Times New Roman”, Times, serif;
+          --cr-narrative-background-color-sidebar: #111111;
+--cr-section-background-color: #033E3E;
 --cr-narrative-text-color-sidebar: white;
---cr-narrative-sidebar-width: minmax(400px, 1fr);
---cr-narrative-background-color-overlay: #111111dd;
+--cr-narrative-font-family: Georgia, “Times New Roman”, Times, serif;
 --cr-narrative-font-size: 1.25rem;
---cr-narrative-background-color-sidebar: #111111;
+--cr-narrative-sidebar-width: minmax(400px, 1fr);
+--cr-narrative-border-radius: 5px;
 --cr-poem-font-family: Georgia, “Times New Roman”, Times, serif;
+--cr-narrative-background-color-overlay: #111111dd;
         }
       </style>
     
@@ -259,14 +259,14 @@
 <section id="loaded-modules" class="level3">
 <h3 class="anchored" data-anchor-id="loaded-modules">Loaded Modules</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> math</span>
 <span id="cb1-2"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
 background-color: null;
-font-style: inherit;">as</span> np</span></code></pre></div>
+font-style: inherit;">as</span> np</span></code></pre></div></div>
 </div>
 </section>
 <section id="python-as-a-calculator" class="level3">
@@ -313,13 +313,13 @@ font-style: inherit;">as</span> np</span></code></pre></div>
 <h5 class="anchored" data-anchor-id="addition">Addition</h5>
 <p>To add numbers in R, all you need to use the <code>+</code> operator. For example <img src="https://latex.codecogs.com/png.latex?2%20+%202%20=%204">. When you type it in R you have:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">2</span></span></code></pre></div>
+font-style: inherit;">2</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>4</code></pre>
 </div>
@@ -327,7 +327,7 @@ font-style: inherit;">2</span></span></code></pre></div>
 <p>When you ask R to perform a task, it prints out the result of the task. As we can see above, R prints out the number 4.</p>
 <p>To add more than 2 numbers, you can simply just type it in.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -337,7 +337,7 @@ font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">2</span></span></code></pre></div>
+font-style: inherit;">2</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>6</code></pre>
 </div>
@@ -348,20 +348,20 @@ font-style: inherit;">2</span></span></code></pre></div>
 <h5 class="anchored" data-anchor-id="subtraction">Subtraction</h5>
 <p>To subtract numbers, you need to use the <code>-</code> operator. Try <code>4 - 2</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">2</span></span></code></pre></div>
+font-style: inherit;">2</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>2</code></pre>
 </div>
 </div>
 <p>Try <code>4 - 6 - 4</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -371,7 +371,7 @@ font-style: inherit;">6</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">4</span></span></code></pre></div>
+font-style: inherit;">4</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>-6</code></pre>
 </div>
@@ -379,7 +379,7 @@ font-style: inherit;">4</span></span></code></pre></div>
 <p>Notice that you get a negative number.</p>
 <p>Now try <code>4 + 4 - 2 + 8</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -393,7 +393,7 @@ font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">8</span></span></code></pre></div>
+font-style: inherit;">8</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>14</code></pre>
 </div>
@@ -403,13 +403,13 @@ font-style: inherit;">8</span></span></code></pre></div>
 <h5 class="anchored" data-anchor-id="multiplication">Multiplication</h5>
 <p>To multiply numbers, you will need to use the <code>*</code> operator. Try <code>4 * 4</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">*</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">4</span></span></code></pre></div>
+font-style: inherit;">4</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>16</code></pre>
 </div>
@@ -419,13 +419,13 @@ font-style: inherit;">4</span></span></code></pre></div>
 <h5 class="anchored" data-anchor-id="division">Division</h5>
 <p>To divide numbers, you can use the <code>/</code> operator. Try <code>9 / 3</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">9</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">/</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">3</span></span></code></pre></div>
+font-style: inherit;">3</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>3.0</code></pre>
 </div>
@@ -435,13 +435,13 @@ font-style: inherit;">3</span></span></code></pre></div>
 <h5 class="anchored" data-anchor-id="exponents">Exponents</h5>
 <p>To exponentiate a number to the power of another number, you can use the <code>**</code> operator. Try <code>2**5</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">5</span></span></code></pre></div>
+font-style: inherit;">5</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>32</code></pre>
 </div>
@@ -451,7 +451,7 @@ font-style: inherit;">5</span></span></code></pre></div>
 <h5 class="anchored" data-anchor-id="roots">Roots</h5>
 <p>To take the n-th root of a value, use the <code>**</code> operator with the <code>/</code> operator to take the n-th root. For example, to take <img src="https://latex.codecogs.com/png.latex?%5Csqrt%5B5%5D%7B35%7D">, type <code>32**(1/5)</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">32</span><span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -461,7 +461,7 @@ font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">/</span><span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">5</span>)</span></code></pre></div>
+font-style: inherit;">5</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>2.0</code></pre>
 </div>
@@ -471,17 +471,17 @@ font-style: inherit;">5</span>)</span></code></pre></div>
 <h5 class="anchored" data-anchor-id="logarithms">Logarithms</h5>
 <p>We will use the <code>math</code> module for mathematical functions:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><span class="im" style="color: #00769E;
 background-color: null;
-font-style: inherit;">import</span> math</span></code></pre></div>
+font-style: inherit;">import</span> math</span></code></pre></div></div>
 </div>
 <p>To take the natural logarithm of a value, you will use the <code>math.log()</code> function. Try <code>math.log(5)</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1">math.log(<span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1">math.log(<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">10</span>)</span></code></pre></div>
+font-style: inherit;">10</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0.6989700043360187</code></pre>
 </div>
@@ -489,9 +489,9 @@ font-style: inherit;">10</span>)</span></code></pre></div>
 <p>If you want to take the logarithm of a different base, you will use the <code>math.log(X, Y)</code>, where <code>X</code> is the number you wish to take the logarithm and <code>Y</code> is the base of the log<sup>1</sup>.</p>
 <p>If you want to find <img src="https://latex.codecogs.com/png.latex?e%5E5">, you will use the <code>math.exp()</code> function. Try <code>math.exp(2)</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1">math.exp(<span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1">math.exp(<span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">2</span>)</span></code></pre></div>
+font-style: inherit;">2</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>7.38905609893065</code></pre>
 </div>
@@ -539,26 +539,26 @@ font-style: inherit;">2</span>)</span></code></pre></div>
 <h5 class="anchored" data-anchor-id="less-thangreater-than">Less than/Greater than</h5>
 <p>To check if one number is less than or greater than another number, you will use the <code>&gt;</code> or <code>&lt;</code> operators. Try <code>5 &gt; 4</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">4</span></span></code></pre></div>
+font-style: inherit;">4</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>True</code></pre>
 </div>
 </div>
 <p>Notice that R states it’s true. It evaluates the expression and tells you if it’s true or not. Try <code>5 &lt; 4</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">4</span></span></code></pre></div>
+font-style: inherit;">4</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>False</code></pre>
 </div>
@@ -569,39 +569,39 @@ font-style: inherit;">4</span></span></code></pre></div>
 <h5 class="anchored" data-anchor-id="less-than-or-equal-togreater-than-or-equal-to">Less than or equal to/Greater than or equal to</h5>
 <p>To check if one number is less than or equal to/greater than or equal to another number, you will use the <code>&gt;=</code> or <code>&lt;=</code> operators. Try <code>5 &gt;= 5</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">5</span></span></code></pre></div>
+font-style: inherit;">5</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>True</code></pre>
 </div>
 </div>
 <p>Try <code>5 &gt;= 4</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">4</span></span></code></pre></div>
+font-style: inherit;">4</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>True</code></pre>
 </div>
 </div>
 <p>Try <code>5 &lt;= 4</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">4</span></span></code></pre></div>
+font-style: inherit;">4</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>False</code></pre>
 </div>
@@ -611,52 +611,52 @@ font-style: inherit;">4</span></span></code></pre></div>
 <h5 class="anchored" data-anchor-id="equals-and-not-equals">Equals and Not Equals</h5>
 <p>To check if 2 numbers are equal to each other, you can use the <code>==</code> operator. Try <code>3 == 3</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">3</span></span></code></pre></div>
+font-style: inherit;">3</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>True</code></pre>
 </div>
 </div>
 <p>Try <code>4 == 3</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">4</span></span></code></pre></div>
+font-style: inherit;">4</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>False</code></pre>
 </div>
 </div>
 <p>Another way to see if 2 numbers are not equal to each other, you can use the <code>!=</code>. Try <code>3 != 4</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">!=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">4</span></span></code></pre></div>
+font-style: inherit;">4</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>True</code></pre>
 </div>
 </div>
 <p>Try <code>3 != 3</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">!=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">3</span></span></code></pre></div>
+font-style: inherit;">3</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>False</code></pre>
 </div>
@@ -673,14 +673,14 @@ font-style: inherit;">3</span></span></code></pre></div>
 <h4 class="anchored" data-anchor-id="load-a-module">Load a Module</h4>
 <p>The <code>import</code> command will load up a module. The</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> math</span>
 <span id="cb43-2"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
 background-color: null;
-font-style: inherit;">as</span> np</span></code></pre></div>
+font-style: inherit;">as</span> np</span></code></pre></div></div>
 </div>
 </section>
 </section>
@@ -689,7 +689,7 @@ font-style: inherit;">as</span> np</span></code></pre></div>
 <p>After getting a handle of python with basic computations and basic modules, my next urging was to create a vector in the same way that I do it in R. After researching around, I noticed that Python had these vector-like objects called Tuple and Lists. The main differenece is that Tuples are immutable (cannot alter) and Lists are mutable (can alter).</p>
 <p>To create a Tuple, we name an object, use the <code>=</code> sign, list a set of values (seperated by commas), and surround the lists by paranthesis <code>()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1">a <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1">a <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> (<span class="dv" style="color: #AD0000;
 background-color: null;
@@ -701,11 +701,11 @@ font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">5</span>)</span></code></pre></div>
+font-style: inherit;">5</span>)</span></code></pre></div></div>
 </div>
 <p>To create a List, we follow the same format as a Tuple, but change the paranthesis to square brackets:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1">b <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1">b <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> [<span class="dv" style="color: #AD0000;
 background-color: null;
@@ -717,42 +717,42 @@ font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">5</span>]</span></code></pre></div>
+font-style: inherit;">5</span>]</span></code></pre></div></div>
 </div>
 <p>Now if you try to perform an operation to a Tuple or List, you will get an error:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb46" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1">a<span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1">a<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">5</span></span></code></pre></div>
+font-style: inherit;">5</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>TypeError: can only concatenate tuple (not "int") to tuple</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb48" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1">b<span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1">b<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">8</span></span></code></pre></div>
+font-style: inherit;">8</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>TypeError: can only concatenate list (not "int") to list</code></pre>
 </div>
 </div>
 <p>Other operations may lead to other things:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb50" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1">a<span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1">a<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">5</span></span></code></pre></div>
+font-style: inherit;">5</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb52" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1">b<span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1">b<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">5</span></span></code></pre></div>
+font-style: inherit;">5</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]</code></pre>
 </div>
@@ -766,7 +766,7 @@ font-style: inherit;">5</span></span></code></pre></div>
 <h4 class="anchored" data-anchor-id="create-a-numpy-array">Create a Numpy Array</h4>
 <p>To create a numpy array, we will input a list into the function <code>np.array</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb54" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1">c <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1">c <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
 background-color: null;
@@ -778,59 +778,59 @@ font-style: inherit;">3</span>,<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span>,<span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">5</span>])</span></code></pre></div>
+font-style: inherit;">5</span>])</span></code></pre></div></div>
 </div>
 <p>Printing out <code>c</code> will display the array:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb55" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1">c</span></code></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1">c</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([1, 2, 3, 4, 5])</code></pre>
 </div>
 </div>
 <p>We can do some basic operations on the array:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb57" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1">c <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1">c <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">2</span></span></code></pre></div>
+font-style: inherit;">2</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([3, 4, 5, 6, 7])</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb59" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1">c<span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1">c<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">/</span><span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">2</span></span></code></pre></div>
+font-style: inherit;">2</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([0.5, 1. , 1.5, 2. , 2.5])</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb61" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1">c<span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1">c<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">2</span></span></code></pre></div>
+font-style: inherit;">2</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([ 2,  4,  6,  8, 10])</code></pre>
 </div>
 </div>
 <p>Additionally, we can apply basic functions to the object <code>c</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb63" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1">c.shape</span></code></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1">c.shape</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(5,)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb65" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1">c.mean()</span></code></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1">c.mean()</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>np.float64(3.0)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb67" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1">c.<span class="bu" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1">c.<span class="bu" style="color: null;
 background-color: null;
-font-style: inherit;">sum</span>()</span></code></pre></div>
+font-style: inherit;">sum</span>()</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>np.int64(15)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb69" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1">np.median(c)</span></code></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1">np.median(c)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>np.float64(3.0)</code></pre>
 </div>
@@ -841,31 +841,31 @@ font-style: inherit;">sum</span>()</span></code></pre></div>
 <h4 class="anchored" data-anchor-id="indexing-a-numpy-array">Indexing a Numpy Array</h4>
 <p>We can index the array <code>c</code> using the square brackets on the object:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb71" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb71-1">c[<span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb71" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb71-1">c[<span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">0</span>]</span></code></pre></div>
+font-style: inherit;">0</span>]</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>np.int64(1)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb73" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb73-1">c[<span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb73" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb73-1">c[<span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">2</span>]</span></code></pre></div>
+font-style: inherit;">2</span>]</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>np.int64(3)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb75" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb75-1">c[<span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb75" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb75-1">c[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>:<span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">2</span>]</span></code></pre></div>
+font-style: inherit;">2</span>]</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([1, 2])</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb77" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb77-1">c[<span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb77" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb77-1">c[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>:<span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">3</span>]</span></code></pre></div>
+font-style: inherit;">3</span>]</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([1, 2, 3])</code></pre>
 </div>
@@ -873,35 +873,35 @@ font-style: inherit;">3</span>]</span></code></pre></div>
 <p>For the code block above, we notice a few things. First is that indexing stats with 0. Second, when we are indexing sequential values using the <code>:</code> operator<sup>2</sup>, it does not return the last element indicated on the right of the colon.</p>
 <p>Now, let’s create a new array called <code>d</code> which is a subset of <code>c[0:3]</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb79" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb79-1">d <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb79" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb79-1">d <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> c[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>:<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3</span>]</span>
-<span id="cb79-2">d</span></code></pre></div>
+<span id="cb79-2">d</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([1, 2, 3])</code></pre>
 </div>
 </div>
 <p>We have a new array with the first 3 elements. Now let’s change the second value of <code>d</code> to 909.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb81" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb81-1">d[<span class="dv" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb81" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb81-1">d[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>] <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">909</span></span>
-<span id="cb81-2">d</span></code></pre></div>
+<span id="cb81-2">d</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([  1, 909,   3])</code></pre>
 </div>
 </div>
 <p>It goes as expected. Let’s print out <code>c</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb83" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb83-1">c</span></code></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb83" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb83-1">c</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([  1, 909,   3,   4,   5])</code></pre>
 </div>
@@ -990,13 +990,13 @@ font-style: inherit;">909</span></span>
 <p>When working in Quarto, the python chunks can send code to a console to be executed. The console is set up to use python via pyenv. However, whenever the quarto document gets an R chunk, the console will immediately change to an R console, and all the python chunks will be sent to the R console and evaluated with <a href="https://rstudio.github.io/reticulate/">reticulate</a>. This would be okay, but reticulate may not have all the python packages that pyenv has. I have tried searching for a way to have reticulate communicate with the pyenv installation, but I haven’t found anything thus far. Therefore, I recommend installing python modules via reticulate.</p>
 <p>You can install a python module with:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">reticulate<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">reticulate<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">py_install</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"polars"</span>)</span></code></pre></div>
+font-style: inherit;">"polars"</span>)</span></code></pre></div></div>
 </div>
 
 
@@ -1126,7 +1126,7 @@ font-style: inherit;">"polars"</span>)</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="goals">Goals</h2>
 <p>Looking at the areas that I want to focus on, I want to create realistic goals. Additionally, each goal can satisfy multiple aspects of my life. I will use SMART goals to ensure <a href="https://www.ucop.edu/local-human-resources/_files/performance-appraisal/How%20to%20write%20SMART%20Goals%20v2.pdf">SMART</a> goals to make sure I create achievable goals. The period for all the goals is the Spring semester.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true">Goal 1</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Goal 2</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">Goal 3</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" aria-controls="tabset-1-4" aria-selected="false">Goal 4</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" aria-controls="tabset-1-5" aria-selected="false">Goal 5</a></li></ul>
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Goal 1</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Goal 2</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">Goal 3</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" aria-controls="tabset-1-4" aria-selected="false" href="">Goal 4</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" aria-controls="tabset-1-5" aria-selected="false" href="">Goal 5</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <div class="callout callout-style-default callout-note no-icon callout-titled">
@@ -1135,7 +1135,7 @@ font-style: inherit;">"polars"</span>)</span></code></pre></div>
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Goal
+<span class="screen-reader-only">Note</span>Goal
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1151,7 +1151,7 @@ Goal
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Goal
+<span class="screen-reader-only">Note</span>Goal
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1167,7 +1167,7 @@ Goal
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Goal
+<span class="screen-reader-only">Note</span>Goal
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1183,7 +1183,7 @@ Goal
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Goal
+<span class="screen-reader-only">Note</span>Goal
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1199,7 +1199,7 @@ Goal
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Goal
+<span class="screen-reader-only">Note</span>Goal
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1214,7 +1214,7 @@ Goal
 <section id="plan" class="level2">
 <h2 class="anchored" data-anchor-id="plan">Plan</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" aria-controls="tabset-2-1" aria-selected="true">Goal 1</a></li><li class="nav-item"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" aria-controls="tabset-2-2" aria-selected="false">Goal 2</a></li><li class="nav-item"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" aria-controls="tabset-2-3" aria-selected="false">Goal 3</a></li><li class="nav-item"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" aria-controls="tabset-2-4" aria-selected="false">Goal 4</a></li><li class="nav-item"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" aria-controls="tabset-2-5" aria-selected="false">Goal 5</a></li></ul>
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" aria-controls="tabset-2-1" aria-selected="true" href="">Goal 1</a></li><li class="nav-item"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" aria-controls="tabset-2-2" aria-selected="false" href="">Goal 2</a></li><li class="nav-item"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" aria-controls="tabset-2-3" aria-selected="false" href="">Goal 3</a></li><li class="nav-item"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" aria-controls="tabset-2-4" aria-selected="false" href="">Goal 4</a></li><li class="nav-item"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" aria-controls="tabset-2-5" aria-selected="false" href="">Goal 5</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" aria-labelledby="tabset-2-1-tab">
 <p>Since I am struggling to keep my research productivity up, I will try new strategies. To get more research done, I plan to work on research as the very first thing I do when I get into my office. If I complete this task at the beginning of my day, I will get it out of the way and focus on things that are easier for me. The idea is to do the things I struggle with at the very beginning of my day.</p>
@@ -1332,25 +1332,25 @@ Goal
 <section id="using-rcpparmadillo" class="level2">
 <h2 class="anchored" data-anchor-id="using-rcpparmadillo">Using RcppArmadillo</h2>
 <p>I like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: <code>file_name.cpp</code>. The first lines in my files are given below<sup>5</sup>:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1">#include &lt;RcppArmadillo.h&gt;</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1">#include &lt;RcppArmadillo.h&gt;</span>
 <span id="cb1-2">#include &lt;Rcpp.h&gt;</span>
 <span id="cb1-3"></span>
 <span id="cb1-4">using namespace Rcpp;</span>
 <span id="cb1-5">using namespace arma;</span>
 <span id="cb1-6"></span>
-<span id="cb1-7">// [[Rcpp::depends(RcppArmadillo)]]</span></code></pre></div>
+<span id="cb1-7">// [[Rcpp::depends(RcppArmadillo)]]</span></code></pre></div></div>
 <p>The first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the <code>library()</code> function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s <code>::</code> operator. The last line is used by the <code>sourcecpp()</code> function in R. It helps with library dependency.</p>
 <p>Now we can create functions to be utilized in R. The code below calculates the mean in cpp:</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1">// [[Rcpp::export]]</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1">// [[Rcpp::export]]</span>
 <span id="cb2-2"></span>
 <span id="cb2-3">double mean_cpp(arma::vec x){</span>
 <span id="cb2-4">  int n = x.size();</span>
 <span id="cb2-5">  double x_sum = sum(x);</span>
 <span id="cb2-6">  double x_mean = x_sum / n; </span>
 <span id="cb2-7">  return x_mean; </span>
-<span id="cb2-8">}</span></code></pre></div>
+<span id="cb2-8">}</span></code></pre></div></div>
 <p>The first line tells R to make the following function accessible to the user<sup>6</sup>. The remaining lines are the function itself. Creating a function in cpp is similar to R<sup>7</sup>. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1">#include &lt;RcppArmadillo.h&gt;</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1">#include &lt;RcppArmadillo.h&gt;</span>
 <span id="cb3-2">#include &lt;Rcpp.h&gt;</span>
 <span id="cb3-3"></span>
 <span id="cb3-4">using namespace Rcpp;</span>
@@ -1365,29 +1365,29 @@ Goal
 <span id="cb3-13">  double x_sum = sum(x);</span>
 <span id="cb3-14">  double x_mean = x_sum / n; </span>
 <span id="cb3-15">  return x_mean; </span>
-<span id="cb3-16">}</span></code></pre></div>
+<span id="cb3-16">}</span></code></pre></div></div>
 <p>In R, you will need to load the following packages<sup>8</sup>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(Rcpp)</span>
 <span id="cb4-2"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(RcppArmadillo)</span></code></pre></div>
+font-style: inherit;">library</span>(RcppArmadillo)</span></code></pre></div></div>
 </div>
 <p>The next step is to compile your cpp file. You can do this with the <code>sourceCpp()</code> function:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">Rcpp<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">Rcpp<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sourceCpp</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"example_cpp.cpp"</span>)</span></code></pre></div>
+font-style: inherit;">"example_cpp.cpp"</span>)</span></code></pre></div></div>
 </div>
 <p>This will compile your functions and make them executable in R. You can now use your function like any other R function.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="do" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Generating Data</span></span>
 <span id="cb6-2">Y <span class="ot" style="color: #003B4F;
@@ -1403,23 +1403,23 @@ background-color: null;
 font-style: italic;">## Using mean_cpp</span></span>
 <span id="cb6-5"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">mean_cpp</span>(Y)</span></code></pre></div>
+font-style: inherit;">mean_cpp</span>(Y)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -0.02584726</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="do" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## Using Built-in mean functions</span></span>
 <span id="cb8-2"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">mean</span>(Y)</span></code></pre></div>
+font-style: inherit;">mean</span>(Y)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -0.02584726</code></pre>
 </div>
 </div>
 <p>To see the speed gains, we can use the <code>mark()</code> function from the <code>bench</code> package.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">bench<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">bench<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1430,7 +1430,7 @@ font-style: inherit;">mean</span>(Y),</span>
 <span id="cb10-3">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mean_cpp</span>(Y)</span>
-<span id="cb10-4">)</span></code></pre></div>
+<span id="cb10-4">)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 6
   expression       min   median `itr/sec` mem_alloc `gc/sec`
@@ -1489,13 +1489,13 @@ font-style: inherit;">mean_cpp</span>(Y)</span>
 <p>Hadley Wickham’s <a href="https://adv-r.hadley.nz/">book</a> describes how to use R functions in cpp code. However, I worried that this may computationally taxing by switching from one language to another. Therefore, I searched for potential solutions to compute the iCDF of a normal distribution. This has brought me to this incredible website: <a href="https://teuder.github.io/rcpp4everyone_en/">Rcpp for everyone</a>.</p>
 <p>Rcpp for everyone is an excellent website that provides the complete basics of using cpp in R. It is comprehensive that can answer the majority<sup>2</sup> of your questions when implementing Rcpp. Highly recommend reading it before you implement Rcpp in your code.</p>
 <p>To obtain the iCDF, I needed to use the <a href="https://teuder.github.io/rcpp4everyone_en/310_Rmath.html">R Math Library</a><sup>3</sup>. This library seems to be loaded when you included in the <code>Rcpp.h</code> file. However, you will need to include the line <code>using namespace R</code> or <code>R::</code> in your cpp code. Below is an example of making <code>qnorm</code> executable in R:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1">double qnorm_cpp(double p, double mean, double sd, int lower, int log){</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1">double qnorm_cpp(double p, double mean, double sd, int lower, int log){</span>
 <span id="cb1-2">  double val = R::qnorm(p, mean, sd, lower, log);</span>
 <span id="cb1-3">  return val;</span>
-<span id="cb1-4">}</span></code></pre></div>
+<span id="cb1-4">}</span></code></pre></div></div>
 <p>Now it can be used to obtain the iCDF of a standard normal distribution:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">qnorm_cpp</span>(<span class="fl" style="color: #AD0000;
 background-color: null;
@@ -1507,11 +1507,11 @@ font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>,<span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">0</span>)</span></code></pre></div>
+font-style: inherit;">0</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">qnorm</span>(<span class="fl" style="color: #AD0000;
 background-color: null;
@@ -1519,14 +1519,14 @@ font-style: inherit;">0.5</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">1</span>)</span></code></pre></div>
+font-style: inherit;">1</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0</code></pre>
 </div>
 </div>
 <p>For my research, I didn’t need create an executable function for R. However, I did worry about compatibility issues with the Armadillo library. Fortunately, the function returns a double value making it easy to work with.</p>
 <p>Once I learned about these different functions, I decided to clean my cpp code with a couple of other functions. For example, I needed to take the factorial of a number. The Armadillo library does not provide a useful function. Therefore, I wrote a function:</p>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1">double fact (int x){</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1">double fact (int x){</span>
 <span id="cb6-2">  if (x == 0){</span>
 <span id="cb6-3">    return 1;</span>
 <span id="cb6-4">  } else if (x == 1){</span>
@@ -1538,16 +1538,16 @@ font-style: inherit;">1</span>)</span></code></pre></div>
 <span id="cb6-10">    double post = ccpp[ide];</span>
 <span id="cb6-11">    return post;</span>
 <span id="cb6-12">  }</span>
-<span id="cb6-13">}</span></code></pre></div>
+<span id="cb6-13">}</span></code></pre></div></div>
 <p>As you can see, it isn’t a pretty function. However the Rcpp provides the following function: <code>factorial</code><sup>4</sup>. Below is the implementation of the function to obtain a double value:</p>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1">double fact_cpp(double x){</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1">double fact_cpp(double x){</span>
 <span id="cb7-2">  NumericVector y = NumericVector::create(x);</span>
 <span id="cb7-3">  double val = Rcpp::factorial(y)[0];</span>
 <span id="cb7-4">  return val;</span>
-<span id="cb7-5">}</span></code></pre></div>
+<span id="cb7-5">}</span></code></pre></div></div>
 <p>Below is code to benchmark the 2 functions:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">bench<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">bench<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1562,7 +1562,7 @@ background-color: null;
 font-style: inherit;">fact_cpp</span>(<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span>)</span>
-<span id="cb8-4">)</span></code></pre></div>
+<span id="cb8-4">)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 6
   expression       min   median `itr/sec` mem_alloc `gc/sec`
