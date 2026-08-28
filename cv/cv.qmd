@@ -262,10 +262,12 @@ format:
 \end{large}
 \vspace{-0.16cm}
 
+-   Data 300: Introduction to Data Management
 -   MATH 201: Elementary Statistics
+-   Math 202: Biostatistics
 -   MATH 352: Probability and Statistics
 -   MATH 398: Advance Research Investigation
--   MATH 408: Advance Data Analysis
+-   MATH 408: Advance Data Analysis/Machine Learning
 -   MATH 453: Mathematical Statistics
 
 \vspace{4pt}
@@ -453,6 +455,9 @@ format:
   \vspace{3pt}
 \end{normalsize}
 
+-   Scogin Jeanette, Congelle Neomie, and **Quintanilla Salinas, I**. (2026). Self-Efficacy in the Dedicated Education Unit and Traditional Clinical. Student Poster presented at CSUCI Student Research Conference. Camarillo, CA.
+
+
 -   **Quintanilla, I**. (2016). Geographic Distribution of Vaccine Personal Belief Exemptions in San Diego County. Poster presented at San Diego County Epidemiology Exchange. San Diego, CA.
 
 -   Reuter C., **Quintanilla I**., Bellettiere J., Berardi V., Robusto K., Hughes S., Hovell M. (2015). The Effect of Prompts to Increase Stair Use Among Escalator Users. Poster presented at SDSU Student Research Symposium. San Diego, CA.
@@ -463,6 +468,12 @@ format:
   {\bf Presentations}
   \vspace{4pt}
   \hrule
+\end{large}
+\begin{large}
+    \textbf{Bats of Santa Rosa Island: Spatiotemporal Patterns and Abiotic Influences on Activity
+\newline Student Presenters: Selene Lopez and Barbara Mia Reque}
+\newline Authors: Selene Lopez, Barbara Mia Reque, Isaac Quintanilla Salinas, Russell Bradley
+    \textit{\newline CSUCI Sage Conference, May 2024, Camarillo, CA}
 \end{large}
 \begin{large}
     \textbf{Overview of Joint Longitudinal-Survival Models: Modeling the Association Between Dependent Outcomes\newline Presenter: Isaac Quintanilla}
@@ -648,8 +659,13 @@ format:
   \hrule
 \end{large}
 \vspace{-0.16cm}
-
--   *Member*: Faculty Development
+-   *CSUCI Academic Senator*: Chicana/o and Latina/o Faculty and Staff Association
+    -   2026-2027
+    -   Appointed
+-   *Faculty Co-Chair*: Chicana/o and Latina/o Faculty and Staff Association
+    -   2026-2028
+    -   Elected
+-   *Member*: Faculty Development Committee
     -   2025-2027
     -   Elected
 -   *Faculty Co-Chair*: Chicana/o and Latina/o Faculty and Staff Association

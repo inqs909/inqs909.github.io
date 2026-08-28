@@ -6,9 +6,9 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-contrib/reveal-auto-agenda-0.0.3/reveal-auto-agenda.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.37">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Isaac Quintanilla Salinas">
   <title>INQS – Not Dead… Yet!</title>
@@ -21,10 +21,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -215,7 +218,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Isaac Quintanilla Salinas 
+Isaac Quintanilla Salinas
 </div>
 </div>
 </div>
@@ -424,18 +427,18 @@ Isaac Quintanilla Salinas
 </div>
 <div id="tabset-1-2">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-2"><a></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">ID =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, </span>
-<span id="cb1-3"><a></a>                  <span class="at">t1 =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">6</span>, <span class="dv">7</span>) , </span>
-<span id="cb1-4"><a></a>                  <span class="at">censored =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>))</span>
-<span id="cb1-5"><a></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x =</span> ID, <span class="at">y =</span> t1, <span class="at">shape =</span> <span class="fu">ifelse</span>(censored, <span class="st">"Death"</span>, <span class="st">"Censored"</span>))) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span> </span>
-<span id="cb1-6"><a></a>    <span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> t1)) <span class="sc">+</span></span>
-<span id="cb1-7"><a></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">5</span>, <span class="at">lty =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb1-8"><a></a>    <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
-<span id="cb1-9"><a></a>    <span class="fu">scale_shape_manual</span>(<span class="at">name =</span> <span class="st">"Event"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="dv">19</span>, <span class="dv">15</span>)) <span class="sc">+</span></span>
-<span id="cb1-10"><a></a>    <span class="co"># ggtitle("Left Censoring") + </span></span>
-<span id="cb1-11"><a></a>    <span class="fu">xlab</span>(<span class="st">"Patient ID"</span>) <span class="sc">+</span>  <span class="fu">ylab</span>(<span class="st">"Months"</span>) <span class="sc">+</span> </span>
-<span id="cb1-12"><a></a>    <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a aria-label="2"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">ID =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, </span>
+<span id="cb1-3"><a aria-label="3"></a>                  <span class="at">t1 =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">6</span>, <span class="dv">7</span>) , </span>
+<span id="cb1-4"><a aria-label="4"></a>                  <span class="at">censored =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb1-5"><a aria-label="5"></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x =</span> ID, <span class="at">y =</span> t1, <span class="at">shape =</span> <span class="fu">ifelse</span>(censored, <span class="st">"Death"</span>, <span class="st">"Censored"</span>))) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span> </span>
+<span id="cb1-6"><a aria-label="6"></a>    <span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> t1)) <span class="sc">+</span></span>
+<span id="cb1-7"><a aria-label="7"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">5</span>, <span class="at">lty =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb1-8"><a aria-label="8"></a>    <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
+<span id="cb1-9"><a aria-label="9"></a>    <span class="fu">scale_shape_manual</span>(<span class="at">name =</span> <span class="st">"Event"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="dv">19</span>, <span class="dv">15</span>)) <span class="sc">+</span></span>
+<span id="cb1-10"><a aria-label="10"></a>    <span class="co"># ggtitle("Left Censoring") + </span></span>
+<span id="cb1-11"><a aria-label="11"></a>    <span class="fu">xlab</span>(<span class="st">"Patient ID"</span>) <span class="sc">+</span>  <span class="fu">ylab</span>(<span class="st">"Months"</span>) <span class="sc">+</span> </span>
+<span id="cb1-12"><a aria-label="12"></a>    <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -466,34 +469,34 @@ Isaac Quintanilla Salinas
 </div>
 <div id="tabset-2-2">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb2-2"><a></a>dat <span class="ot">&lt;-</span> <span class="fu">structure</span>(<span class="fu">list</span>(<span class="at">ID =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, </span>
-<span id="cb2-3"><a></a>                      <span class="at">eventA =</span> <span class="fu">c</span>(<span class="dv">0</span>L, <span class="dv">1</span>L, <span class="dv">1</span>L, <span class="dv">0</span>L, <span class="dv">1</span>L, <span class="dv">0</span>L),</span>
-<span id="cb2-4"><a></a>                      <span class="at">eventB =</span> <span class="fu">c</span>(<span class="dv">1</span>L, <span class="dv">0</span>L, <span class="dv">0</span>L, <span class="dv">1</span>L, <span class="dv">0</span>L, <span class="dv">1</span>L), </span>
-<span id="cb2-5"><a></a>                      <span class="at">t1 =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="fl">4.5</span>, <span class="dv">4</span>, <span class="dv">8</span>), </span>
-<span id="cb2-6"><a></a>                      <span class="at">t2 =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">10</span>, <span class="fl">4.5</span>, <span class="dv">7</span>, <span class="dv">8</span>),</span>
-<span id="cb2-7"><a></a>                      <span class="at">censored =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>)), </span>
-<span id="cb2-8"><a></a>                 <span class="at">.Names =</span> <span class="fu">c</span>(<span class="st">"ID"</span>, <span class="st">"eventA"</span>, <span class="st">"eventB"</span>, <span class="st">"t1"</span>, <span class="st">"t2"</span>, <span class="st">"censored"</span>), </span>
-<span id="cb2-9"><a></a>                 <span class="at">class =</span> <span class="st">"data.frame"</span>, <span class="at">row.names =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="sc">-</span><span class="dv">6</span>L))</span>
-<span id="cb2-10"><a></a></span>
-<span id="cb2-11"><a></a>dat<span class="sc">$</span>event <span class="ot">&lt;-</span> <span class="fu">with</span>(dat, <span class="fu">ifelse</span>(eventA, <span class="st">"Censored"</span>, <span class="st">"Death"</span>))</span>
-<span id="cb2-12"><a></a></span>
-<span id="cb2-13"><a></a>dat<span class="sc">$</span>id.ordered <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="at">x =</span> dat<span class="sc">$</span>ID, <span class="at">levels =</span> <span class="fu">order</span>(dat<span class="sc">$</span>t2, <span class="at">decreasing =</span> T))</span>
-<span id="cb2-14"><a></a></span>
-<span id="cb2-15"><a></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x =</span> id.ordered)) <span class="sc">+</span> </span>
-<span id="cb2-16"><a></a>    <span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> t1)) <span class="sc">+</span> </span>
-<span id="cb2-17"><a></a>    <span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> t1, <span class="at">ymax =</span> t2, </span>
-<span id="cb2-18"><a></a>                       <span class="at">linetype =</span> <span class="fu">as.factor</span>(censored))) <span class="sc">+</span>  </span>
-<span id="cb2-19"><a></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">ifelse</span>(censored, </span>
-<span id="cb2-20"><a></a>                              t1 <span class="sc">+</span> (t2 <span class="sc">-</span> t1) <span class="sc">/</span> <span class="dv">2</span>, t2), </span>
-<span id="cb2-21"><a></a>                   <span class="at">shape =</span> event), <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
-<span id="cb2-22"><a></a>    <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
-<span id="cb2-23"><a></a>    <span class="fu">scale_linetype_manual</span>(<span class="at">name =</span> <span class="st">"Censoring"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>), </span>
-<span id="cb2-24"><a></a>        <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Not censored"</span>, <span class="st">"Interval censored"</span>)) <span class="sc">+</span></span>
-<span id="cb2-25"><a></a>    <span class="fu">scale_shape_manual</span>(<span class="at">name =</span> <span class="st">"Event"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="dv">19</span>, <span class="dv">15</span>)) <span class="sc">+</span></span>
-<span id="cb2-26"><a></a>    <span class="co"># ggtitle("Interval Censoring") + </span></span>
-<span id="cb2-27"><a></a>    <span class="fu">xlab</span>(<span class="st">"Eggs"</span>) <span class="sc">+</span>  <span class="fu">ylab</span>(<span class="st">"Weeks"</span>) <span class="sc">+</span> </span>
-<span id="cb2-28"><a></a>    <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-2"><a aria-label="2"></a>dat <span class="ot">&lt;-</span> <span class="fu">structure</span>(<span class="fu">list</span>(<span class="at">ID =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, </span>
+<span id="cb2-3"><a aria-label="3"></a>                      <span class="at">eventA =</span> <span class="fu">c</span>(<span class="dv">0</span>L, <span class="dv">1</span>L, <span class="dv">1</span>L, <span class="dv">0</span>L, <span class="dv">1</span>L, <span class="dv">0</span>L),</span>
+<span id="cb2-4"><a aria-label="4"></a>                      <span class="at">eventB =</span> <span class="fu">c</span>(<span class="dv">1</span>L, <span class="dv">0</span>L, <span class="dv">0</span>L, <span class="dv">1</span>L, <span class="dv">0</span>L, <span class="dv">1</span>L), </span>
+<span id="cb2-5"><a aria-label="5"></a>                      <span class="at">t1 =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="fl">4.5</span>, <span class="dv">4</span>, <span class="dv">8</span>), </span>
+<span id="cb2-6"><a aria-label="6"></a>                      <span class="at">t2 =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">10</span>, <span class="fl">4.5</span>, <span class="dv">7</span>, <span class="dv">8</span>),</span>
+<span id="cb2-7"><a aria-label="7"></a>                      <span class="at">censored =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>)), </span>
+<span id="cb2-8"><a aria-label="8"></a>                 <span class="at">.Names =</span> <span class="fu">c</span>(<span class="st">"ID"</span>, <span class="st">"eventA"</span>, <span class="st">"eventB"</span>, <span class="st">"t1"</span>, <span class="st">"t2"</span>, <span class="st">"censored"</span>), </span>
+<span id="cb2-9"><a aria-label="9"></a>                 <span class="at">class =</span> <span class="st">"data.frame"</span>, <span class="at">row.names =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="sc">-</span><span class="dv">6</span>L))</span>
+<span id="cb2-10"><a aria-label="10"></a></span>
+<span id="cb2-11"><a aria-label="11"></a>dat<span class="sc">$</span>event <span class="ot">&lt;-</span> <span class="fu">with</span>(dat, <span class="fu">ifelse</span>(eventA, <span class="st">"Censored"</span>, <span class="st">"Death"</span>))</span>
+<span id="cb2-12"><a aria-label="12"></a></span>
+<span id="cb2-13"><a aria-label="13"></a>dat<span class="sc">$</span>id.ordered <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="at">x =</span> dat<span class="sc">$</span>ID, <span class="at">levels =</span> <span class="fu">order</span>(dat<span class="sc">$</span>t2, <span class="at">decreasing =</span> T))</span>
+<span id="cb2-14"><a aria-label="14"></a></span>
+<span id="cb2-15"><a aria-label="15"></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x =</span> id.ordered)) <span class="sc">+</span> </span>
+<span id="cb2-16"><a aria-label="16"></a>    <span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> t1)) <span class="sc">+</span> </span>
+<span id="cb2-17"><a aria-label="17"></a>    <span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> t1, <span class="at">ymax =</span> t2, </span>
+<span id="cb2-18"><a aria-label="18"></a>                       <span class="at">linetype =</span> <span class="fu">as.factor</span>(censored))) <span class="sc">+</span>  </span>
+<span id="cb2-19"><a aria-label="19"></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">ifelse</span>(censored, </span>
+<span id="cb2-20"><a aria-label="20"></a>                              t1 <span class="sc">+</span> (t2 <span class="sc">-</span> t1) <span class="sc">/</span> <span class="dv">2</span>, t2), </span>
+<span id="cb2-21"><a aria-label="21"></a>                   <span class="at">shape =</span> event), <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb2-22"><a aria-label="22"></a>    <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
+<span id="cb2-23"><a aria-label="23"></a>    <span class="fu">scale_linetype_manual</span>(<span class="at">name =</span> <span class="st">"Censoring"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>), </span>
+<span id="cb2-24"><a aria-label="24"></a>        <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Not censored"</span>, <span class="st">"Interval censored"</span>)) <span class="sc">+</span></span>
+<span id="cb2-25"><a aria-label="25"></a>    <span class="fu">scale_shape_manual</span>(<span class="at">name =</span> <span class="st">"Event"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="dv">19</span>, <span class="dv">15</span>)) <span class="sc">+</span></span>
+<span id="cb2-26"><a aria-label="26"></a>    <span class="co"># ggtitle("Interval Censoring") + </span></span>
+<span id="cb2-27"><a aria-label="27"></a>    <span class="fu">xlab</span>(<span class="st">"Eggs"</span>) <span class="sc">+</span>  <span class="fu">ylab</span>(<span class="st">"Weeks"</span>) <span class="sc">+</span> </span>
+<span id="cb2-28"><a aria-label="28"></a>    <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -524,20 +527,20 @@ Isaac Quintanilla Salinas
 </div>
 <div id="tabset-3-2">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb3-2"><a></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">ID =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, </span>
-<span id="cb3-3"><a></a>                  <span class="at">t1 =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>) , </span>
-<span id="cb3-4"><a></a>                  <span class="at">censored =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>))</span>
-<span id="cb3-5"><a></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x =</span> ID, <span class="at">y =</span> t1, </span>
-<span id="cb3-6"><a></a>                <span class="at">shape =</span> <span class="fu">ifelse</span>(censored, <span class="st">"Death"</span>, <span class="st">"Censored"</span>))) <span class="sc">+</span></span>
-<span id="cb3-7"><a></a>    <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span> </span>
-<span id="cb3-8"><a></a>    <span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> t1)) <span class="sc">+</span></span>
-<span id="cb3-9"><a></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">10</span>, <span class="at">lty =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb3-10"><a></a>    <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
-<span id="cb3-11"><a></a>    <span class="fu">scale_shape_manual</span>(<span class="at">name =</span> <span class="st">"Event"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="dv">19</span>, <span class="dv">15</span>)) <span class="sc">+</span></span>
-<span id="cb3-12"><a></a>    <span class="co"># ggtitle("Right Censoring") + </span></span>
-<span id="cb3-13"><a></a>    <span class="fu">xlab</span>(<span class="st">"Patient ID"</span>) <span class="sc">+</span>  <span class="fu">ylab</span>(<span class="st">"Months"</span>) <span class="sc">+</span> </span>
-<span id="cb3-14"><a></a>    <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-2"><a aria-label="2"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">ID =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, </span>
+<span id="cb3-3"><a aria-label="3"></a>                  <span class="at">t1 =</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>) , </span>
+<span id="cb3-4"><a aria-label="4"></a>                  <span class="at">censored =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>))</span>
+<span id="cb3-5"><a aria-label="5"></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x =</span> ID, <span class="at">y =</span> t1, </span>
+<span id="cb3-6"><a aria-label="6"></a>                <span class="at">shape =</span> <span class="fu">ifelse</span>(censored, <span class="st">"Death"</span>, <span class="st">"Censored"</span>))) <span class="sc">+</span></span>
+<span id="cb3-7"><a aria-label="7"></a>    <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span> </span>
+<span id="cb3-8"><a aria-label="8"></a>    <span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> t1)) <span class="sc">+</span></span>
+<span id="cb3-9"><a aria-label="9"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">10</span>, <span class="at">lty =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb3-10"><a aria-label="10"></a>    <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
+<span id="cb3-11"><a aria-label="11"></a>    <span class="fu">scale_shape_manual</span>(<span class="at">name =</span> <span class="st">"Event"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="dv">19</span>, <span class="dv">15</span>)) <span class="sc">+</span></span>
+<span id="cb3-12"><a aria-label="12"></a>    <span class="co"># ggtitle("Right Censoring") + </span></span>
+<span id="cb3-13"><a aria-label="13"></a>    <span class="fu">xlab</span>(<span class="st">"Patient ID"</span>) <span class="sc">+</span>  <span class="fu">ylab</span>(<span class="st">"Months"</span>) <span class="sc">+</span> </span>
+<span id="cb3-14"><a aria-label="14"></a>    <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -623,12 +626,12 @@ Isaac Quintanilla Salinas
 </div>
 <div id="tabset-4-2">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">library</span>(survival)</span>
-<span id="cb4-2"><a></a><span class="fu">library</span>(ggsurvfit)</span>
-<span id="cb4-3"><a></a><span class="fu">library</span>(magrittr)</span>
-<span id="cb4-4"><a></a>aml <span class="sc">%$%</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>)  <span class="sc">%&gt;%</span> </span>
-<span id="cb4-5"><a></a>      <span class="fu">ggsurvfit</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb4-6"><a></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-label="1"></a><span class="fu">library</span>(survival)</span>
+<span id="cb4-2"><a aria-label="2"></a><span class="fu">library</span>(ggsurvfit)</span>
+<span id="cb4-3"><a aria-label="3"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb4-4"><a aria-label="4"></a>aml <span class="sc">%$%</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>)  <span class="sc">%&gt;%</span> </span>
+<span id="cb4-5"><a aria-label="5"></a>      <span class="fu">ggsurvfit</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb4-6"><a aria-label="6"></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -675,11 +678,11 @@ Isaac Quintanilla Salinas
 </div>
 <div id="tabset-5-3">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb5-2"><a></a><span class="fu">library</span>(ggsurvfit)</span>
-<span id="cb5-3"><a></a><span class="fu">library</span>(DT)</span>
-<span id="cb5-4"><a></a>adj_df <span class="ot">&lt;-</span> df_colon <span class="sc">%&gt;%</span> <span class="fu">select</span>(id, rx, time, status)</span>
-<span id="cb5-5"><a></a><span class="fu">datatable</span>(adj_df, <span class="at">options =</span> <span class="fu">list</span>(<span class="at">pageLength =</span> <span class="dv">5</span>, <span class="at">dom =</span> <span class="st">'i'</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-label="1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb5-2"><a aria-label="2"></a><span class="fu">library</span>(ggsurvfit)</span>
+<span id="cb5-3"><a aria-label="3"></a><span class="fu">library</span>(DT)</span>
+<span id="cb5-4"><a aria-label="4"></a>adj_df <span class="ot">&lt;-</span> df_colon <span class="sc">%&gt;%</span> <span class="fu">select</span>(id, rx, time, status)</span>
+<span id="cb5-5"><a aria-label="5"></a><span class="fu">datatable</span>(adj_df, <span class="at">options =</span> <span class="fu">list</span>(<span class="at">pageLength =</span> <span class="dv">5</span>, <span class="at">dom =</span> <span class="st">'i'</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -699,9 +702,9 @@ Isaac Quintanilla Salinas
 </div>
 <div id="tabset-6-2">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-6"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-6-1" class="code-annotation-target"><a href="#annotated-cell-6-1"></a><span class="fu">library</span>(survival)</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-6-2" class="code-annotation-target"><a href="#annotated-cell-6-2"></a>outcome <span class="ot">&lt;-</span> <span class="fu">Surv</span>(data<span class="sc">$</span>time, data<span class="sc">$</span>censor)</span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-6-3" class="code-annotation-target"><a href="#annotated-cell-6-3"></a>model <span class="ot">&lt;-</span> <span class="fu">survfit</span>(outcome <span class="sc">~</span> <span class="dv">1</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-6"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-6-1" class="code-annotation-target"><a href="#annotated-cell-6-1" aria-label="1"></a><span class="fu">library</span>(survival)</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-6-2" class="code-annotation-target"><a href="#annotated-cell-6-2" aria-label="2"></a>outcome <span class="ot">&lt;-</span> <span class="fu">Surv</span>(data<span class="sc">$</span>time, data<span class="sc">$</span>censor)</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-6-3" class="code-annotation-target"><a href="#annotated-cell-6-3" aria-label="3"></a>model <span class="ot">&lt;-</span> <span class="fu">survfit</span>(outcome <span class="sc">~</span> <span class="dv">1</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-6" data-target-annotation="1">1</dt>
@@ -738,9 +741,9 @@ Isaac Quintanilla Salinas
 </div>
 <div id="tabset-7-2">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">ggsurvfit</span>(model) <span class="sc">+</span> </span>
-<span id="cb6-2"><a></a>  <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb6-3"><a></a>  <span class="fu">add_confidence_interval</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-label="1"></a><span class="fu">ggsurvfit</span>(model) <span class="sc">+</span> </span>
+<span id="cb6-2"><a aria-label="2"></a>  <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb6-3"><a aria-label="3"></a>  <span class="fu">add_confidence_interval</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -756,7 +759,7 @@ Isaac Quintanilla Salinas
 </div>
 <div id="tabset-8-2">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">survfit</span>(<span class="fu">Surv</span>(time, censor) <span class="sc">~</span> group, data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-label="1"></a><span class="fu">survfit</span>(<span class="fu">Surv</span>(time, censor) <span class="sc">~</span> group, data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <div id="tabset-8-3">
@@ -791,13 +794,13 @@ Isaac Quintanilla Salinas
 </div>
 <div id="tabset-9-3">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">library</span>(survival)</span>
-<span id="cb8-2"><a></a><span class="fu">library</span>(ggsurvfit)</span>
-<span id="cb8-3"><a></a><span class="fu">library</span>(magrittr)</span>
-<span id="cb8-4"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb8-5"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>)  <span class="sc">%&gt;%</span> </span>
-<span id="cb8-6"><a></a>      <span class="fu">ggsurvfit</span>() <span class="sc">+</span></span>
-<span id="cb8-7"><a></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a aria-label="1"></a><span class="fu">library</span>(survival)</span>
+<span id="cb8-2"><a aria-label="2"></a><span class="fu">library</span>(ggsurvfit)</span>
+<span id="cb8-3"><a aria-label="3"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb8-4"><a aria-label="4"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb8-5"><a aria-label="5"></a>df_colon <span class="sc">%$%</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>)  <span class="sc">%&gt;%</span> </span>
+<span id="cb8-6"><a aria-label="6"></a>      <span class="fu">ggsurvfit</span>() <span class="sc">+</span></span>
+<span id="cb8-7"><a aria-label="7"></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -830,9 +833,9 @@ Isaac Quintanilla Salinas
 </div>
 <div id="tabset-10-3">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> rx)  <span class="sc">%&gt;%</span> </span>
-<span id="cb9-2"><a></a>      <span class="fu">ggsurvfit</span>() <span class="sc">+</span></span>
-<span id="cb9-3"><a></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-label="1"></a>df_colon <span class="sc">%$%</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> rx)  <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a aria-label="2"></a>      <span class="fu">ggsurvfit</span>() <span class="sc">+</span></span>
+<span id="cb9-3"><a aria-label="3"></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -867,10 +870,10 @@ Isaac Quintanilla Salinas
 </div>
 <div id="tabset-11-3">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>df_colon <span class="sc">%$%</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> rx)  <span class="sc">%&gt;%</span> </span>
-<span id="cb10-2"><a></a>      <span class="fu">ggsurvfit</span>() <span class="sc">+</span></span>
-<span id="cb10-3"><a></a>      <span class="fu">add_confidence_interval</span>() <span class="sc">+</span></span>
-<span id="cb10-4"><a></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a aria-label="1"></a>df_colon <span class="sc">%$%</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> rx)  <span class="sc">%&gt;%</span> </span>
+<span id="cb10-2"><a aria-label="2"></a>      <span class="fu">ggsurvfit</span>() <span class="sc">+</span></span>
+<span id="cb10-3"><a aria-label="3"></a>      <span class="fu">add_confidence_interval</span>() <span class="sc">+</span></span>
+<span id="cb10-4"><a aria-label="4"></a>      <span class="fu">add_quantile</span>(<span class="at">y_value =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.75</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>

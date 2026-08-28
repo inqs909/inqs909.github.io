@@ -9,7 +9,7 @@
 <link>www.inqs.info/blog.html</link>
 <atom:link href="www.inqs.info/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.9.37</generator>
+<generator>quarto-1.10.18</generator>
 <lastBuildDate>Wed, 08 Jan 2025 08:00:00 GMT</lastBuildDate>
 <item>
   <title>Wellness Plan Spring 2025</title>
@@ -20,14 +20,14 @@
       <style>
         :root {
           --cr-narrative-background-color-sidebar: #111111;
---cr-section-background-color: #033E3E;
---cr-narrative-text-color-sidebar: white;
---cr-narrative-font-family: Georgia, “Times New Roman”, Times, serif;
---cr-narrative-font-size: 1.25rem;
 --cr-narrative-sidebar-width: minmax(400px, 1fr);
---cr-narrative-border-radius: 5px;
---cr-poem-font-family: Georgia, “Times New Roman”, Times, serif;
 --cr-narrative-background-color-overlay: #111111dd;
+--cr-narrative-border-radius: 5px;
+--cr-section-background-color: #033E3E;
+--cr-narrative-font-family: Georgia, “Times New Roman”, Times, serif;
+--cr-narrative-text-color-sidebar: white;
+--cr-narrative-font-size: 1.25rem;
+--cr-poem-font-family: Georgia, “Times New Roman”, Times, serif;
         }
       </style>
     
