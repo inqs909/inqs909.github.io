@@ -439,7 +439,6 @@ format:
 
 -   Baldwin MR, Peterson E, Easthausen I, **Quintanilla I**, Colago E, Sonett JR, D'Ovidio F, Bacchetta M, Costa J, Diamond J, Christie JD, Arcasoy SM, Lederer DJ. Donor age and early graft failure after lung transplantation: a cohort study. *Am J Transplant*. 2013. 13(10):2685-95. Epub 2013/08/26. [doi.org/10.1111/ajt.12428](https://doi.org/10.1111/ajt.12428).
 
-\newpage
 
 \begin{normalsize}
   {\bf Reports}
@@ -455,14 +454,26 @@ format:
   \vspace{3pt}
 \end{normalsize}
 
--   Scogin Jeanette, Congelle Neomie, and **Quintanilla Salinas, I**. (2026). Self-Efficacy in the Dedicated Education Unit and Traditional Clinical. Student Poster presented at CSUCI Student Research Conference. Camarillo, CA.
+-   *Scogin J, Congelle N, and **Quintanilla Salinas I**. (2026). *Self-Efficacy in the Dedicated Education Unit and Traditional Clinical.* Student Poster presented at CSUCI Student Research Conference. Camarillo, CA.
+
+-   Algoso K, \*LaGarde L, \*Reque B, \*Lopez S, \*Leon N, \*Amador G, McCarley A, **Quintanilla Salinas I**, Becerra CA. (2024).  *Nature’s Pharmacy: Investigating the Antibacterial Effects of Native Chumash Medicinal Plants.* ASM Microbe, Atlanta, GA.
+
+-   \*Reque B, \*LaGarde L, \*Leon N, \*Lopez S, \*Amador G, Alogos K, **Quintanilla Salinas I**, McCarley A, Becerra CA. (2023). *Antimicrobial Efficacy of Medical Chumash Plants on Bacillus subtilis and Escherichia coli.* SACNAS National Diversity in Science Conference, Portland, OR.
+
+- \*Leon N, \*LaGarde L, \*Lopez S, \*Amador G, \*Reque B, Alogos K, **Quintanilla Salinas I**, McCarley A, Becerra CA. (2023) *Examination of Bacterial Susceptibility to Chumash Medicinal Plant Extracts.* SACNAS National Diversity in Science Conference. Portland, OR.
+
+- \*Amador G, \*LaGarde L, \*Leon N, \*Lopez S, \*Reque B, Alogos K, **Quintanilla Salinas I**, McCarley A, Becerra CA. (2023). *Antibacterial Properties of Chumash Medicinal Plants in Solvents with Varying Polarity.* SACNAS National Diversity in Science Conference. Portland, OR.
+
+- \*LaGarde L, \*Leon N, \*Lopez S, \*Amador G, \*Reque B, Alogos K, **Quintanilla Salinas I**,  McCarley A, Becerra CA. (2023). *Synergistic Effect via Combinational Therapy of Native Chumash Plants in Southern California.* SACNAS National Diversity in Science Conference. Portland, OR.
+
+-   **Quintanilla, I**. (2016). *Geographic Distribution of Vaccine Personal Belief Exemptions in San Diego County.* Poster presented at San Diego County Epidemiology Exchange. San Diego, CA.
+
+-   Reuter C, **Quintanilla I**, Bellettiere J, Berardi V, Robusto K, Hughes S, Hovell M. (2015). *The Effect of Prompts to Increase Stair Use Among Escalator Users.* Poster presented at SDSU Student Research Symposium. San Diego, CA.
+
+-   **Quintanilla Salinas I**, Munoz B, Anastasia S, Haffa A. (2013). *Phylogenetic and Biochemical Analysis of novel Acidovorax Species isolated using Diazinon enrichment culture.* Poster presented at CSUMB Capstone Festival. Seaside, CA.
 
 
--   **Quintanilla, I**. (2016). Geographic Distribution of Vaccine Personal Belief Exemptions in San Diego County. Poster presented at San Diego County Epidemiology Exchange. San Diego, CA.
-
--   Reuter C., **Quintanilla I**., Bellettiere J., Berardi V., Robusto K., Hughes S., Hovell M. (2015). The Effect of Prompts to Increase Stair Use Among Escalator Users. Poster presented at SDSU Student Research Symposium. San Diego, CA.
-
--   **Quintanilla Salinas I**, Munoz Brittany, Anastasia Steph, Haffa A. (2013). Phylogenetic and Biochemical Analysis of novel Acidovorax Species isolated using Diazinon enrichment culture. Poster presented at CSUMB Capstone Festival. Seaside, CA.
+\* Undergraduate Sutdent
 
 \begin{large}
   {\bf Presentations}
@@ -475,6 +486,8 @@ format:
 \newline Authors: Selene Lopez, Barbara Mia Reque, Isaac Quintanilla Salinas, Russell Bradley
     \textit{\newline CSUCI Sage Conference, May 2024, Camarillo, CA}
 \end{large}
+
+
 \begin{large}
     \textbf{Overview of Joint Longitudinal-Survival Models: Modeling the Association Between Dependent Outcomes\newline Presenter: Isaac Quintanilla}
     \textit{\newline National Institute of Statistical Sciences \newline Virtual \newline June 2021}
