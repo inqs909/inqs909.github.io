@@ -20,7 +20,6 @@ website:
       - text: "Academic"
         menu:
           - courses.qmd
-          - cv.qmd
       - text: "Other"
         menu:
           - blog.qmd
