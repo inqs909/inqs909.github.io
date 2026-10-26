@@ -1316,11 +1316,25 @@
     "text": "UC Riverside\n\nAllAssociate InstructorTeaching Assistant\n\n\n\nSTAT 127: Introduction to Quality Management\nSTAT 147: Introduction to Statistical Computing\nSTAT 100: Introduction to Statistics\nSTAT 170: Regression and ANOVA\nSTAT 048: Introduction to Business Statistics\nUB: Math Courses\nUB: Public Health Courses\nUB: Research Courses\n\n\n\n\nSTAT 127: Introduction to Quality Management\nSTAT 147: Introduction to Statistical Computing\n\n\n\n\nSTAT 100: Introduction to Statistics\nSTAT 170: Regression and ANOVA\nSTAT 048: Introduction to Business Statistics"
   },
   {
+    "objectID": "p/cif26/index.html#transformers",
+    "href": "p/cif26/index.html#transformers",
+    "title": "Deep Learning",
+    "section": "Transformers",
+    "text": "Transformers"
+  },
+  {
+    "objectID": "p/cif26/index.html#transformer",
+    "href": "p/cif26/index.html#transformer",
+    "title": "Deep Learning",
+    "section": "Transformer",
+    "text": "Transformer"
+  },
+  {
     "objectID": "p/cif26/index.html#chatgpt",
     "href": "p/cif26/index.html#chatgpt",
     "title": "Deep Learning",
     "section": "ChatGPT",
-    "text": "ChatGPT\nChat Generative Pre-Trained Transformer\n\nDecoder-Only Transformer"
+    "text": "ChatGPT\nChat Generative Pre-trained Transformer\n\nDecoder-Only Transformer"
   },
   {
     "objectID": "p/cif26/index.html#question",
@@ -1411,7 +1425,7 @@
     "href": "p/cif26/index.html#hidden-layer-3",
     "title": "Deep Learning",
     "section": "Hidden Layer 3 +",
-    "text": "Hidden Layer 3 +\n\\[\na^{(3)}_m(X) = A^{(3)}_l = g\\left\\{\\gamma_{m0} + \\sum^4_{l=1}\\gamma_{ml}A^{(2)}_{l}\\right\\}\n\\] for \\(m = 1, \\cdots, 3\\) nodes."
+    "text": "Hidden Layer 3 +\n\\[\na^{(3)}_m(X) = A^{(3)}_m = g\\left\\{\\gamma_{m0} + \\sum^4_{l=1}\\gamma_{ml}A^{(2)}_{l}\\right\\}\n\\] for \\(m = 1, \\cdots, 3\\) nodes."
   },
   {
     "objectID": "p/cif26/index.html#output-layer-regression",
@@ -1439,7 +1453,7 @@
     "href": "p/cif26/index.html#optimizer",
     "title": "Deep Learning",
     "section": "Optimizer",
-    "text": "Optimizer\nThe optimizer is the mathematical algorithm used to find the numerical values for the parameters \\(\\alpha\\), \\(\\beta\\), \\(\\gamma\\), and \\(\\delta\\).\n\nThe most basic algorithm used in gradient descent."
+    "text": "Optimizer\nThe optimizer is the mathematical algorithm used to find the numerical values for the parameters \\(\\alpha\\), \\(\\beta\\), \\(\\gamma\\), and \\(\\delta\\).\n\nThe most basic algorithm used in gradient descent.\n\n\nBackpropagation uses the concepts of chain rule to compute the derivatives."
   },
   {
     "objectID": "p/cif26/index.html#recurrent-neural-networks-1",
@@ -1467,7 +1481,7 @@
     "href": "p/cif26/index.html#inputs-and-outputs",
     "title": "Deep Learning",
     "section": "Inputs and Outputs",
-    "text": "Inputs and Outputs\n\nWith Time-Series data, the data acts as both inputs and outputs.\nThere is a usually a lead-up in the input before we get an output."
+    "text": "Inputs and Outputs\n\nWith Series data, the data acts as both inputs and outputs.\n\nTime-Series\nText\n\nThere is a usually a lead-up in the input before we get an output."
   },
   {
     "objectID": "p/cif26/index.html#given-the-data",

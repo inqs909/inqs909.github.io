@@ -8,8 +8,6 @@ format:
     controls-tutorial: true
     incremental: false
     theme: [default, styles.scss]
-    title-slide-attributes:
-      data-background-color: "#00475D"
     slide-number: c/t
 knitr:
   opts_chunk: 
@@ -19,9 +17,6 @@ knitr:
     warnings: false
     comment: "#>" 
     
-revealjs-plugins:
-  - verticator
-  
 filters: 
   - reveal-header
   - reveal-auto-agenda
@@ -29,10 +24,52 @@ filters:
 editor: source
 ---
 
+## Transformers
+
+
+
+::: {.columns}
+
+::: {.column}
+
+
+::: {.fragment}
+
+![](https://upload.wikimedia.org/wikipedia/en/3/36/Autobot_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled){width=450px fig-align="center"}
+
+:::
+
+
+:::
+
+::: {.column}
+
+
+::: {.fragment}
+
+![](https://upload.wikimedia.org/wikipedia/en/d/d3/Decepticon_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled){width=450px fig-align="center"}
+
+
+:::
+
+
+:::
+
+:::
+
+## Transformer
+
+
+::: {.fragment}
+
+![](https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/OpenAI_logo_2025_%28symbol%29.svg/960px-OpenAI_logo_2025_%28symbol%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail){width=450px fig-align="center"}
+
+:::
+
 
 ## ChatGPT
 
-Chat Generative Pre-Trained Transformer
+Chat Generative Pre-trained Transformer
 
 ::: fragment
 Decoder-Only Transformer
@@ -130,7 +167,7 @@ for $l = 1, \cdots, 4$ nodes.
 ## Hidden Layer 3 +
 
 $$
-a^{(3)}_m(X) = A^{(3)}_l = g\left\{\gamma_{m0} + \sum^4_{l=1}\gamma_{ml}A^{(2)}_{l}\right\}
+a^{(3)}_m(X) = A^{(3)}_m = g\left\{\gamma_{m0} + \sum^4_{l=1}\gamma_{ml}A^{(2)}_{l}\right\}
 $$
 for $m = 1, \cdots, 3$ nodes.
 
@@ -166,6 +203,10 @@ The optimizer is the mathematical algorithm used to find the numerical values fo
 The most basic algorithm used in gradient descent.
 :::
 
+::: {.fragment}
+Backpropagation uses the concepts of chain rule to compute the derivatives.
+:::
+
 
 # Recurrent Neural Networks
 
@@ -192,7 +233,9 @@ Using the data sequence, we can predict and outcome $Y$.
 
 ## Inputs and Outputs
 
-- With Time-Series data, the data acts as both inputs and outputs.
+- With Series data, the data acts as both inputs and outputs.
+  - Time-Series
+  - Text
 - There is a usually a lead-up in the input before we get an output.
 
 ## Given the Data
@@ -738,6 +781,6 @@ Math 408
 
 ## Other Useful Resources
 
-
+![](img/stat_quest.jpg){width=650px fig-align="center"}
 
 

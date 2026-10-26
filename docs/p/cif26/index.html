@@ -109,7 +109,6 @@
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../../site_libs/revealjs/plugin/verticator/verticator.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
@@ -204,7 +203,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-color="#00475D" class="quarto-title-block center">
+<section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Deep Learning</h1>
   <p class="subtitle">A Journey to Transformers</p>
 
@@ -217,9 +216,40 @@ Isaac Quintanilla Salinas
 </div>
 
 </section>
+<section id="transformers" class="slide level2">
+<h2>Transformers</h2>
+<div class="columns">
+<div class="column">
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/en/3/36/Autobot_logo.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" class="quarto-figure quarto-figure-center" width="450"></p>
+</figure>
+</div>
+</div>
+</div><div class="column">
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/en/d/d3/Decepticon_logo.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" class="quarto-figure quarto-figure-center" width="450"></p>
+</figure>
+</div>
+</div>
+</div></div>
+</section>
+<section id="transformer" class="slide level2">
+<h2>Transformer</h2>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/OpenAI_logo_2025_%28symbol%29.svg/960px-OpenAI_logo_2025_%28symbol%29.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" class="quarto-figure quarto-figure-center" width="450"></p>
+</figure>
+</div>
+</div>
+</section>
 <section id="chatgpt" class="slide level2">
 <h2>ChatGPT</h2>
-<p>Chat Generative Pre-Trained Transformer</p>
+<p>Chat Generative Pre-trained Transformer</p>
 <div class="fragment">
 <p>Decoder-Only Transformer</p>
 </div>
@@ -375,7 +405,7 @@ a^{(2)}_l(X) = A^{(2)}_l = g\left\{\beta_{l0} + \sum^5_{k=1}\beta_{lk}A^{(1)}_{k
 <section id="hidden-layer-3" class="slide level2">
 <h2>Hidden Layer 3 +</h2>
 <p><span class="math display">\[
-a^{(3)}_m(X) = A^{(3)}_l = g\left\{\gamma_{m0} + \sum^4_{l=1}\gamma_{ml}A^{(2)}_{l}\right\}
+a^{(3)}_m(X) = A^{(3)}_m = g\left\{\gamma_{m0} + \sum^4_{l=1}\gamma_{ml}A^{(2)}_{l}\right\}
 \]</span> for <span class="math inline">\(m = 1, \cdots, 3\)</span> nodes.</p>
 </section>
 <section id="output-layer-regression" class="slide level2">
@@ -404,6 +434,9 @@ f(X)_o = \hat y_o = \delta_{0o} + \sum^3_{m=1}\delta_{0}A^{(3)}_m
 <p>The optimizer is the mathematical algorithm used to find the numerical values for the parameters <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span>, and <span class="math inline">\(\delta\)</span>.</p>
 <div class="fragment">
 <p>The most basic algorithm used in gradient descent.</p>
+</div>
+<div class="fragment">
+<p>Backpropagation uses the concepts of chain rule to compute the derivatives.</p>
 </div>
 </section></section>
 <section>
@@ -459,7 +492,11 @@ f(X)_o = \hat y_o = \delta_{0o} + \sum^3_{m=1}\delta_{0}A^{(3)}_m
 <section id="inputs-and-outputs" class="slide level2">
 <h2>Inputs and Outputs</h2>
 <ul>
-<li>With Time-Series data, the data acts as both inputs and outputs.</li>
+<li>With Series data, the data acts as both inputs and outputs.
+<ul>
+<li>Time-Series</li>
+<li>Text</li>
+</ul></li>
 <li>There is a usually a lead-up in the input before we get an output.</li>
 </ul>
 </section>
@@ -972,7 +1009,7 @@ h_t = o_t\tanh\left(C_t\right)
 
 <img data-src="img/Attention-Model.png" class="r-stretch"></section></section>
 <section>
-<section id="transformers" class="title-slide slide level1 agenda-slide center">
+<section id="transformers-1" class="title-slide slide level1 agenda-slide center">
 <h1>Transformers</h1>
 <div class="agenda">
 <ul>
@@ -1115,6 +1152,11 @@ PE_i = T_i + P_i
 </section>
 <section id="other-useful-resources" class="slide level2">
 <h2>Other Useful Resources</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/stat_quest.jpg" class="quarto-figure quarto-figure-center" width="650"></p>
+</figure>
+</div>
 
 
 <div class="reveal-header">
@@ -1146,7 +1188,6 @@ PE_i = T_i + P_i
   <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../../site_libs/revealjs/plugin/verticator/verticator.js"></script>
   <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -1169,7 +1210,6 @@ PE_i = T_i + P_i
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'verticator': {"themetag":"h1","color":"","inversecolor":"","skipuncounted":false,"clickable":true,"position":"auto","offset":"3vmin","autogenerate":true,"tooltip":false,"scale":1},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1340,7 +1380,7 @@ PE_i = T_i + P_i
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Verticator, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
           RevealNotes,
