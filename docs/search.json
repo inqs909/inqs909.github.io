@@ -805,326 +805,144 @@
     "text": "Should Calculus be the goal?"
   },
   {
-    "objectID": "courses.html",
-    "href": "courses.html",
-    "title": "Courses",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "INQS",
     "section": "",
-    "text": "AY 26-27AY 25-26AY 24-25AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Machine Learning\nData 300: Intro to Data Management\nData 426: Statistical Computing\n\n\n\n\nMath 201: Elementary Statistics\nMath 202: Biostatistics\nMath 352: Probability and Statistics\nMath 408: Machine Learning\nMath 453: Mathematical Statistics\n\n\n\n\nMath 201: Elementary Statistics\nMath 453: Mathematical Statistics\nMath 497: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
+    "text": "Isaac Quintanilla Salinas\n\nAssistant Professor of Statistics\nCSU Channel Islands Orcid\nAll official inquiries come from my official CSUCI email account.\n\n\n\n\nBiography\nIsaac Quintanilla Salinas is a graduate from the Department of Statistics at the University of California, Riverside with a PhD in Applied Statistics. He joined the Department of Mathematics at the California State University Channel Islands in Fall 2022. Prior to his doctoral research, Dr. Quintanilla Salinas earned his MPH from San Diego State University and BS in Biology from the California State University Monterey Bay.\nDr. Quintanilla Salinas research focuses on developing statistical models to understand the association between survival and longitudinal outcomes. His dissertation “Multilevel Time-Varying Joint Models for Longitudinal and Survival Outcomes” develops a novel model to address challenges of modeling dependent outcomes. Additionally, Dr. Quintanilla Salinas collaborates with several researchers at different institutions in the fields of Public Health, Psychology, Biology, Geographic Information Systems, and Education.\n\n\n\n\n\n\nEducation\n\nUC Riverside\n\nPhD in Applied Statistics\n\nSan Diego State University\n\nMaster’s in Public Health\n\nCSU Monterey Bay\n\nBS Biology\n\n\n\n\nInterests\n\nJoint Longitudinal and Survival Models\nHealth and Well Being\nEducation\nAlgorithmic Bias"
   },
   {
-    "objectID": "courses.html#csu-channel-islands",
-    "href": "courses.html#csu-channel-islands",
-    "title": "Courses",
+    "objectID": "canvas.html",
+    "href": "canvas.html",
+    "title": "Canvas",
     "section": "",
-    "text": "AY 26-27AY 25-26AY 24-25AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Machine Learning\nData 300: Intro to Data Management\nData 426: Statistical Computing\n\n\n\n\nMath 201: Elementary Statistics\nMath 202: Biostatistics\nMath 352: Probability and Statistics\nMath 408: Machine Learning\nMath 453: Mathematical Statistics\n\n\n\n\nMath 201: Elementary Statistics\nMath 453: Mathematical Statistics\nMath 497: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
+    "text": "Notebook\nExit Ticket\nR Code Reference"
   },
   {
-    "objectID": "courses.html#uc-riverside",
-    "href": "courses.html#uc-riverside",
-    "title": "Courses",
-    "section": "UC Riverside",
-    "text": "UC Riverside\n\nAllAssociate InstructorTeaching Assistant\n\n\n\nSTAT 127: Introduction to Quality Management\nSTAT 147: Introduction to Statistical Computing\nSTAT 100: Introduction to Statistics\nSTAT 170: Regression and ANOVA\nSTAT 048: Introduction to Business Statistics\nUB: Math Courses\nUB: Public Health Courses\nUB: Research Courses\n\n\n\n\nSTAT 127: Introduction to Quality Management\nSTAT 147: Introduction to Statistical Computing\n\n\n\n\nSTAT 100: Introduction to Statistics\nSTAT 170: Regression and ANOVA\nSTAT 048: Introduction to Business Statistics"
-  },
-  {
-    "objectID": "books/20-Invisible-Women/index.html",
-    "href": "books/20-Invisible-Women/index.html",
-    "title": "Invisible Women",
+    "objectID": "books/19-Bigger-Picture/index.html",
+    "href": "books/19-Bigger-Picture/index.html",
+    "title": "A Bigger Picture",
     "section": "",
-    "text": "TipBook\n\n\n\nInvisible Women: Data Bias in a World Designed for Men\nCaroline Criado Perez\n\nBook Availability\nBookshop"
+    "text": "TipBook\n\n\n\nA Bigger Picture: My Fight to Bring a New African Voice to the Climate Crisis\nVanessa Nakate\n\nBook Availability\nBookshop"
   },
   {
-    "objectID": "books/18-Human-Job/index.html",
-    "href": "books/18-Human-Job/index.html",
-    "title": "Last Human Job",
+    "objectID": "books/17-Leslie-Jones/index.html",
+    "href": "books/17-Leslie-Jones/index.html",
+    "title": "Leslie F*cking Jones",
     "section": "",
-    "text": "TipBook\n\n\n\nThe Last Human Job: The Work of Connecting in a Disconnected World\nAllison Pugh\n\nBook Availability\nBookshop"
+    "text": "TipBook\n\n\n\nLeslie F*cking Jones\nLeslie Jones\n\nBook Availability\nBookshop"
   },
   {
-    "objectID": "books/16-Chicana-Role-Model/index.html",
-    "href": "books/16-Chicana-Role-Model/index.html",
-    "title": "How to Be a Chicana Role Model",
+    "objectID": "books/15-If-I-Must-Die/index.html",
+    "href": "books/15-If-I-Must-Die/index.html",
+    "title": "If I Must Die",
     "section": "",
-    "text": "TipBook\n\n\n\nHow to Be a Chicana Role Model\nMichele Serros\n\nBook Availability"
+    "text": "TipBook\n\n\n\nIf I Must Die: Poetry and Prose\nRefaat Alareer\n\n\nBookshop"
   },
   {
-    "objectID": "books/14-The-Fantasy-Economy/index.html",
-    "href": "books/14-The-Fantasy-Economy/index.html",
-    "title": "The Fantasy Economy",
+    "objectID": "books/15-If-I-Must-Die/index.html#book-availability",
+    "href": "books/15-If-I-Must-Die/index.html#book-availability",
+    "title": "If I Must Die",
     "section": "",
-    "text": "TipBook\n\n\n\nThe Fantasy Economy: Neoliberalism, Inequality, and the Education Reform Movement\nNeil Kraus\n\nBook Availability\nBookshop"
+    "text": "Bookshop"
   },
   {
-    "objectID": "books/12-Why-Dont-Like-School/index.html",
-    "href": "books/12-Why-Dont-Like-School/index.html",
-    "title": "Why Don’t Students Like School?",
+    "objectID": "books/13-Peoples-History-Science/index.html",
+    "href": "books/13-Peoples-History-Science/index.html",
+    "title": "A People’s History of Science",
     "section": "",
-    "text": "TipBook\n\n\n\nWhy Don’t Students Like School?: A Cognitive Scientist Answers Questions About How the Mind Works and What It Means for the Classroom\nDaniel Willingham\n\nBook Availability\nBookshop Link"
+    "text": "TipBook\n\n\n\nA People’s History of Science: Miners, Midwives, and Low Mechanicks\nClifford Conner\n\nBook Availability\nBookshop Link"
   },
   {
-    "objectID": "books/10-Thrivers/index.html",
-    "href": "books/10-Thrivers/index.html",
-    "title": "Thrivers",
+    "objectID": "books/11-Inclusive-Teaching/index.html",
+    "href": "books/11-Inclusive-Teaching/index.html",
+    "title": "Inclusive teaching",
     "section": "",
-    "text": "TipBook\n\n\n\nThrivers: The Surprising Reasons Why Some Kids Struggle and Others Shine\nMichele Borba\n\nBook Availability\nBookshop Link"
+    "text": "TipBook\n\n\n\nInclusive Teaching: Strategies for Promoting Equity in the College Classroom\nKelly Hogan and Viji Sathy\n\nBook Availability\nBookshop Link"
   },
   {
-    "objectID": "books/08-Limitless-Mind/index.html",
-    "href": "books/08-Limitless-Mind/index.html",
-    "title": "Limitless Mind",
+    "objectID": "books/09-Solito/index.html",
+    "href": "books/09-Solito/index.html",
+    "title": "Solito",
     "section": "",
-    "text": "TipBook\n\n\n\nLimitless Mind: Learn, Lead, and Live Without Borders\nJo Boaler\n\nBook Availability\nBookshop Link"
+    "text": "TipBook\n\n\n\nSolito: A Memoir\nJavier Zamora\n\nBook Availability\nBookshop Link"
   },
   {
-    "objectID": "books/06-Happiness/index.html",
-    "href": "books/06-Happiness/index.html",
-    "title": "Happiness",
+    "objectID": "books/07-Make-it-Stick/index.html",
+    "href": "books/07-Make-it-Stick/index.html",
+    "title": "Make it Stick",
     "section": "",
-    "text": "TipBook\n\n\n\nHappiness: A Guide to Developing Life’s Most Important Skill\nMatthieu Ricard\n\n\n\n\n\n\n\n\nNoteBook Availability\n\n\n\nBookshop Link"
+    "text": "TipBook\n\n\n\nMake it Stick: The Science of Successful Learning\nPeter Brown\nHenry Roediger III\nMark McDaniel\n\n\n\n\n\n\n\n\nNoteBook Availability\n\n\n\nBookshop Link"
   },
   {
-    "objectID": "books/04-Black-In-A-White-Coat/index.html",
-    "href": "books/04-Black-In-A-White-Coat/index.html",
-    "title": "Black Man in a White Coat",
+    "objectID": "books/05-Fresh-Banana-Leaves/index.html",
+    "href": "books/05-Fresh-Banana-Leaves/index.html",
+    "title": "Fresh Banana Leaves",
     "section": "",
-    "text": "TipBook\n\n\n\nBlack Man in a White Coat: A Doctor’s Reflections on Race and Medicine\nDamon Tweedy M.D.\n\n\n\n\n\n\n\n\nNoteBook Availability\n\n\n\nBookshop Link"
+    "text": "TipBook\n\n\n\nFresh Banana Leaves: Healing Indigenous Landscapes Through Indigenous Science\nJessica Hernandez PhD\n\n\n\n\n\n\n\n\nNoteBook Availability\n\n\n\nAvailable from the Broome Library\nBookshop Link"
   },
   {
-    "objectID": "books/02-Small-Teaching/index.html",
-    "href": "books/02-Small-Teaching/index.html",
-    "title": "Small Teaching",
+    "objectID": "books/03-Educated/index.html",
+    "href": "books/03-Educated/index.html",
+    "title": "Educated",
     "section": "",
-    "text": "TipBook\n\n\n\nSmall Teaching: Everyday Lessons from the Science of Learning\n2nd Edition\nJames Lang\n\n\n\n\n\n\n\n\nNoteBook Availability\n\n\n\nPhysical Copy Available from the Broome Library: Link\nBookshop Link"
+    "text": "TipBook\n\n\n\nEducated\nTara Westover\n\n\n\n\n\n\n\n\nNoteBook Availability\n\n\n\nPhysical Book Available from the Broome Library\nBookshop Link"
   },
   {
-    "objectID": "books.html",
-    "href": "books.html",
-    "title": "Reading List",
+    "objectID": "books/01-Teach-your-students-how-to-learn/index.html",
+    "href": "books/01-Teach-your-students-how-to-learn/index.html",
+    "title": "Teach Students How To Learn",
     "section": "",
-    "text": "Invisible Women\n\n\n\nsociology\n\n\n\n\n\n\n\n\n\nJul 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nA Bigger Picture\n\n\n\nmemoir\n\nclimate change\n\n\n\n\n\n\n\n\n\nJun 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nLast Human Job\n\n\n\nsociology\n\n\n\n\n\n\n\n\n\nMay 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nLeslie F*cking Jones\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\nApr 30, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nHow to Be a Chicana Role Model\n\n\n\nstories\n\n\n\n\n\n\n\n\n\nMar 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nIf I Must Die\n\n\n\npoetry\n\n\n\n\n\n\n\n\n\nJan 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nThe Fantasy Economy\n\n\n\neconomics\n\neducation\n\n\n\n\n\n\n\n\n\nAug 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nA People’s History of Science\n\n\n\nhistory\n\n\n\n\n\n\n\n\n\nApr 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nWhy Don’t Students Like School?\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nJan 10, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nInclusive teaching\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nDec 28, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nThrivers\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nDec 20, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSolito\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\nAug 25, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nLimitless Mind\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nAug 12, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nMake it Stick\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nAug 5, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nHappiness\n\n\n\npsychology\n\nempowerment\n\n\n\n\n\n\n\n\n\nJul 22, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nFresh Banana Leaves\n\n\n\nindigenous studies\n\nenvironmental conservation\n\n\n\n\n\n\n\n\n\nJul 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nBlack Man in a White Coat\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\nJul 2, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nEducated\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\nJun 29, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nTeach Students How To Learn\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nJun 26, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSmall Teaching\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nJun 26, 2023\n\n\n\n\n\nNo matching items"
+    "text": "TipBook\n\n\n\nTeach Students How to Learn: Strategies You Can Incorporate Into Any Course to Improve Student Metacognition, Study Skills, and Motivation\n1st Edition\nSaundra Yancy McGuire and Stephanie McGuire\n\n\n\n\n\n\n\n\nNoteBook Availability\n\n\n\nEbook Available from the Broome Library: Faculty | Students\nBookshop Link"
   },
   {
-    "objectID": "blog/2024-12-26-python-programming/index.html",
-    "href": "blog/2024-12-26-python-programming/index.html",
-    "title": "Basic Python Programming",
+    "objectID": "blog/welcome/index.html",
+    "href": "blog/welcome/index.html",
+    "title": "Welcome!",
     "section": "",
-    "text": "When writing this post, I realize how difficult it will be for me to create a comprehensive tutorial about Python. There are things I learned along the way that makes it easier for me to pick up Python from programming in R, and most importantly c++. For example, Python’s indexing begins with 0 instead of 1, python does not uses braces for code blocks, or how functions can be applied to objects. This makes it easier for me to learn programming in python. However, I certainly struggled with these topics when first learning about it, but I managed to learn it. And I believe anyone can as well."
+    "text": "Welcome! I’ve decided to create this blog as a way to record my journey in Statistics. As I am working through my PhD, I’ve read numerous posts on vast topics. As I was reading about topics related to Rcpp. I noticed how difficult it was to implement Rcpp for my needs. At the same moment, it dawned on me that I am reading from individuals that at some point in time were struggling with the same issues. This inspired me to create a blog of my own with the same intentions to help other individuals. My hope is to demonstrate how I overcame the challenges I faced to others that are facing similar issues.\nI don’t know how this blog will go. It’s going to be a learning experience. I don’t even know how many blog posts I will write in a year. I don’t even know what topics I will write about. However, I hope overtime, I can create a blog that may help people."
   },
   {
-    "objectID": "blog/2024-12-26-python-programming/index.html#introduction",
-    "href": "blog/2024-12-26-python-programming/index.html#introduction",
-    "title": "Basic Python Programming",
+    "objectID": "blog/2025-01-07-wellness-plan-sp-25/index.html",
+    "href": "blog/2025-01-07-wellness-plan-sp-25/index.html",
+    "title": "Wellness Plan Spring 2025",
     "section": "",
-    "text": "When writing this post, I realize how difficult it will be for me to create a comprehensive tutorial about Python. There are things I learned along the way that makes it easier for me to pick up Python from programming in R, and most importantly c++. For example, Python’s indexing begins with 0 instead of 1, python does not uses braces for code blocks, or how functions can be applied to objects. This makes it easier for me to learn programming in python. However, I certainly struggled with these topics when first learning about it, but I managed to learn it. And I believe anyone can as well."
+    "text": "Reuse, Reduce, and Repair\n\n\n\n\nDuring my dissertation phase, my laptop stopped working because it could not connect to my charger. The worst part was that I could not fix it like I have done in the past, which infuriated me. Fortunately at that time, Framework laptops came out with the promise that all the parts to fix the laptop to would be made available for users to repair. Knowing this, I quickly pulled the trigger and bought the laptop almost immediately, and has served me to this day.\n\n\n\n\nOnce, I passed my dissertation, I slowly realized the importance of right to repair to continue use perfectly good products that can be repaired with a simple part change. Which ultimately reduces the waste I produce. Now I try to purchase things with a right to repair mentality. Which ultimately means to purchase things that are meant to last, and asking serious questions if I truly need this product and what I would do if it no longer works. A goal I strive to achieve every day.\n\n\n\n\nOver the past year, I began reducing my plastic use by investing in products that come with minimal packaging or minimal plastic. We all know that plastics have polluted the environment and been found in our human bodies. Therefore, I am committed to take small steps to reduce my impact to plastic waste. Last year, I began purchasing plastic-free cleaning products, especially the for plastic-wrapped cleaning pods, to reduce my own plastic waste. It has been a success, and I hope to continue working on this.\n\n\n\n\nGoal: Identify one more product that reduces my environmental impact and encourages right to repair, and ultimately implement it.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRoutines\n\n\n\n\nProcrastination has always been a problem for me, and still is. I have tried many things to motivate me to complete a task, with only partial success. Therefore, I want to attempt new things that will reduce my procrastination.\n\n\n\n\nLately, I noticed that I have been building better habits that I perceive will benefit me. Whether it being walking more, eating healthier, or be concious about my purchases. I am not sure how much is it due to me maturing, or focusing on completing small steps. But there have been positive results. Therefore, I want to continue with the progress that I have achieved thus far and experiment with other techniques and assess their efficacy.\n\n\n\n\nGoal: Every week, I will right down all the tasks that I have not completed for the week, and I will spend a few hours to complete a task.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDisconnect from Online Platforms\n\n\n\n\nLast year, I listened to a podcast on Indigenous AI and how AI can help indigenous communities as well as harm them and the planet. A couple of highlights that the main speaker talks about is the amount energy used to run these algorithms and data centers, and how we use it to “help” our lives. While there are many messages from the podcast episode, one thing idea I gain is “Do not let perfect be the enemy of good”.\n\n\n\n\nAfter listening to the podcast, I began to think how my use of online platforms impact the environment. While, I have not found a definitive answer to this questions. Once thing I can do is to not use cloud-based applications and run them locally. I am still using energy to produce the product, by I am not using the internet to communicate, which overall reduces the amount of energy needed.\n\n\n\n\nIn the past, I always adopted free and open source software (foss), for 2 reasons. First, I did not have any money to buy the best software. Second, whatever I create will not matter if no one from El Salvador can use it. Therefore, I committed to prioritize the use foss because it would ensure that any Salvadoreñ@ can use it, with only the limitation of needing a computer and internet to download the stuff. Now I have environmental reasons to continue using offline free and open source software.\n\n\n\n\nMy goal for this semester is find an offline application for a technology tool I personally use. I am not sure which tool it may be, but I am eyeing Canva to be replaced.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWalking\n\n\n\n\nOver the past year, I have managed to have a daily average of 10,000 steps a day.\n\n\n\n\nGoal: Increase my daily average steps to 12,500.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTravel\n\n\n\n\nGoal: Take the train to either San Luis Obispo or San Diego in the semester.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2025 Goals\n\n\n\n\nI have several other goals I have for the year, and I plan to continue work on them this year:\n\n\n\n\nWork on being grateful and appreciative of the smaller things.\n\n\n\n\nLearn Causal Inference.\n\n\n\n\nLearn to cook new dishes from scratch.\n\n\n\n\nLearn a new hobby."
   },
   {
-    "objectID": "blog/2024-12-26-python-programming/index.html#recommended-material",
-    "href": "blog/2024-12-26-python-programming/index.html#recommended-material",
-    "title": "Basic Python Programming",
-    "section": "Recommended Material",
-    "text": "Recommended Material\n\nWes McKinney’s Python for Data Analysis"
+    "objectID": "blog/2024-12-22-positron/index.html",
+    "href": "blog/2024-12-22-positron/index.html",
+    "title": "Positron",
+    "section": "",
+    "text": "Positron and Python are both new to me, but as always, the first step is installing the software on your computer. In this post, I will highlight my adventures installing both of these softwares on to my computer. I will layout what is working and what is not working.\nDisclaimer: I daily drive Linux, currently using Fedora, so my experiences will be different."
   },
   {
-    "objectID": "blog/2024-12-26-python-programming/index.html#post-1-122624",
-    "href": "blog/2024-12-26-python-programming/index.html#post-1-122624",
-    "title": "Basic Python Programming",
-    "section": "Post 1 12/26/24",
-    "text": "Post 1 12/26/24\n\nLoaded Modules\n\nimport math\nimport numpy as np\n\n\n\nPython as a calculator\nThis is almost a direct copy of my own tutorial written in R. Notice how several of the commands you learned in R also work in Python, with some slight deviations.\n\nCalculator\nThis section focuses on the basic calculation that can be done in R. This is done by using different operators in Python. The table below provides some of the basic operators Python can use:\n\n\n\nOperator\nDescription\n\n\n\n\n+\nAddition\n\n\n-\nSubtraction\n\n\n*\nMultiplication\n\n\n/\nDivides\n\n\n**\nExponentiate\n\n\n?\nHelp Documentation\n\n\n\n\nAddition\nTo add numbers in R, all you need to use the + operator. For example \\(2 + 2 = 4\\). When you type it in R you have:\n\n2 + 2\n\n4\n\n\nWhen you ask R to perform a task, it prints out the result of the task. As we can see above, R prints out the number 4.\nTo add more than 2 numbers, you can simply just type it in.\n\n2 + 2 + 2\n\n6\n\n\nThis provides the number 6.\n\n\nSubtraction\nTo subtract numbers, you need to use the - operator. Try 4 - 2:\n\n4 - 2\n\n2\n\n\nTry 4 - 6 - 4\n\n4 - 6 - 4\n\n-6\n\n\nNotice that you get a negative number.\nNow try 4 + 4 - 2 + 8:\n\n4 + 4 - 2 + 8\n\n14\n\n\n\n\nMultiplication\nTo multiply numbers, you will need to use the * operator. Try 4 * 4:\n\n4 * 4\n\n16\n\n\n\n\nDivision\nTo divide numbers, you can use the / operator. Try 9 / 3:\n\n9 / 3\n\n3.0\n\n\n\n\nExponents\nTo exponentiate a number to the power of another number, you can use the ** operator. Try 2**5:\n\n2**5\n\n32\n\n\n\n\nRoots\nTo take the n-th root of a value, use the ** operator with the / operator to take the n-th root. For example, to take \\(\\sqrt[5]{35}\\), type 32**(1/5):\n\n32**(1/5)\n\n2.0\n\n\n\n\nLogarithms\nWe will use the math module for mathematical functions:\n\nimport math\n\nTo take the natural logarithm of a value, you will use the math.log() function. Try math.log(5):\n\nmath.log(5, 10)\n\n0.6989700043360187\n\n\nIf you want to take the logarithm of a different base, you will use the math.log(X, Y), where X is the number you wish to take the logarithm and Y is the base of the log1.\nIf you want to find \\(e^5\\), you will use the math.exp() function. Try math.exp(2):\n\nmath.exp(2)\n\n7.38905609893065\n\n\n\n\n\nComparing Numbers\nAnother important part of R is comparing numbers. When you compare two numbers, R will tell if the statement is True or False. Below are the different comparisons you can make:\n\n\n\nOperator\nDescription\n\n\n\n\n&gt;\nGreater Than\n\n\n&lt;\nLess Than\n\n\n&gt;=\nGreater than or equal\n\n\n&lt;=\nLess than or equal\n\n\n==\nEquals\n\n\n!=\nNot Equals\n\n\n\n\nLess than/Greater than\nTo check if one number is less than or greater than another number, you will use the &gt; or &lt; operators. Try 5 &gt; 4:\n\n5 &gt; 4\n\nTrue\n\n\nNotice that R states it’s true. It evaluates the expression and tells you if it’s true or not. Try 5 &lt; 4:\n\n5 &lt; 4\n\nFalse\n\n\nNotice that R tells you it is false.\n\n\nLess than or equal to/Greater than or equal to\nTo check if one number is less than or equal to/greater than or equal to another number, you will use the &gt;= or &lt;= operators. Try 5 &gt;= 5:\n\n5 &gt;= 5\n\nTrue\n\n\nTry 5 &gt;= 4:\n\n5 &gt;= 4\n\nTrue\n\n\nTry 5 &lt;= 4\n\n5 &lt;= 4\n\nFalse\n\n\n\n\nEquals and Not Equals\nTo check if 2 numbers are equal to each other, you can use the == operator. Try 3 == 3:\n\n3 == 3\n\nTrue\n\n\nTry 4 == 3\n\n3 == 4\n\nFalse\n\n\nAnother way to see if 2 numbers are not equal to each other, you can use the !=. Try 3 != 4:\n\n3 != 4\n\nTrue\n\n\nTry 3 != 3:\n\n3 != 3\n\nFalse\n\n\nYou may be asking why use != instead of ==. They both provides similar results. Well the reason is that you may need the True output for analysis. One is only true when they are equal, while the other is true when they are not equal.\nIn general, the ! operator means not or opposite. It can be used to change an True to a False and vice-versa.\n\n\n\n\nModules and Functions\nAs I am learning Python, I am noticing the importance of modules since it extends the functionality of Python, the same way as R packages do. Base Python, is very bare-bones. I think the reason being is that R loads several packages up for your own use, I assumed Python would load a bit more. Anyways, we need to load modules for more functionality.\n\nLoad a Module\nThe import command will load up a module. The\n\nimport math\nimport numpy as np\n\n\n\n\nTuples and Lists\nAfter getting a handle of python with basic computations and basic modules, my next urging was to create a vector in the same way that I do it in R. After researching around, I noticed that Python had these vector-like objects called Tuple and Lists. The main differenece is that Tuples are immutable (cannot alter) and Lists are mutable (can alter).\nTo create a Tuple, we name an object, use the = sign, list a set of values (seperated by commas), and surround the lists by paranthesis ().\n\na = (1, 2, 3, 4, 5)\n\nTo create a List, we follow the same format as a Tuple, but change the paranthesis to square brackets:\n\nb = [1, 2, 3, 4, 5]\n\nNow if you try to perform an operation to a Tuple or List, you will get an error:\n\na+5\n\nTypeError: can only concatenate tuple (not \"int\") to tuple\n\nb+8\n\nTypeError: can only concatenate list (not \"int\") to list\n\n\nOther operations may lead to other things:\n\na*5\n\n(1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5)\n\nb*5\n\n[1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]\n\n\nAs you can see, you cannot treat this as the traditional vector from R, this has lead me to look at arrays from Numpy.\n\n\nNumpy\nNumpy, or Numerical Python, is a Python module used for scientific computing. From what I can tell, you conduct computational tasks on a Numpy array. This makes me think that Numpy is closest to vector a matrix operations from R.\n\nCreate a Numpy Array\nTo create a numpy array, we will input a list into the function np.array:\n\nc = np.array([1,2,3,4,5])\n\nPrinting out c will display the array:\n\nc\n\narray([1, 2, 3, 4, 5])\n\n\nWe can do some basic operations on the array:\n\nc + 2\n\narray([3, 4, 5, 6, 7])\n\nc/2\n\narray([0.5, 1. , 1.5, 2. , 2.5])\n\nc*2\n\narray([ 2,  4,  6,  8, 10])\n\n\nAdditionally, we can apply basic functions to the object c:\n\nc.shape\n\n(5,)\n\nc.mean()\n\nnp.float64(3.0)\n\nc.sum()\n\nnp.int64(15)\n\nnp.median(c)\n\nnp.float64(3.0)\n\n\nNotice how some functions, like shape, and be provided after the object (seperated by a period) without paranthesis. Other objects need the paranthesis to be executed. You can also type the name of the function first, and put the object in the paranthesis.\n\n\nIndexing a Numpy Array\nWe can index the array c using the square brackets on the object:\n\nc[0]\n\nnp.int64(1)\n\nc[2]\n\nnp.int64(3)\n\nc[0:2]\n\narray([1, 2])\n\nc[0:3]\n\narray([1, 2, 3])\n\n\nFor the code block above, we notice a few things. First is that indexing stats with 0. Second, when we are indexing sequential values using the : operator2, it does not return the last element indicated on the right of the colon.\nNow, let’s create a new array called d which is a subset of c[0:3]:\n\nd = c[0:3]\nd\n\narray([1, 2, 3])\n\n\nWe have a new array with the first 3 elements. Now let’s change the second value of d to 909.\n\nd[1] = 909\nd\n\narray([  1, 909,   3])\n\n\nIt goes as expected. Let’s print out c:\n\nc\n\narray([  1, 909,   3,   4,   5])\n\n\nNotice how c now contains the value 909, even though that d was the only one changed. This is because Python creates the object, and the names of those objects (c and d) point and/or transform that object as necessary. Any changes to one named object will change the overall object. It does not create a new object like in R.\nAfter I learned this, I did not know how I feel about this. I personally liked the R’s way to copy and paste objects, which allowed me to manipulate something without having to worry about changing the original. After some thinking, I don’t think I liked it, but that could be because I am stuck in my ways. There may be some advantages on how Python treats objects, but as of right now, I do not know."
+    "objectID": "blog/2024-12-22-positron/index.html#positron",
+    "href": "blog/2024-12-22-positron/index.html#positron",
+    "title": "Positron",
+    "section": "Positron",
+    "text": "Positron\nSince I had R installed, my first intuition was to install Positron becuase I learned that was the new ide, still in beta, from Posit that will allow users to work in both R and in Python. Therefore, I can learn how to use python without having to worried about choosing a proper IDE.\nTo install Positron, go to their website and click on get started. Afterwards, follow the instructions to prepare your computer to use positron. This involves either installing R from CRAN or Python via pyenv (Windows). Once that is done, you can navigate to their download page, where you download the appropriate file1. Afterwards, run the installer and follow the prompts. And there you go, Positron should be ready for use.\nAfter you install Positron, it should look like this:\n{An image displaying the Positron IDE, the interpreter is R.}\nNote that I changed the appearance of Positron to dark theme. Here is Positron when Python is being utilized:\n\n\nVS Code\nPositron is based on Microsoft’s Code OSS platform, which makes it look very similar to visual Studio Code. It is an IDE similar to RStudio, but it is program agnostic. Additionally, it is capable to be more customizable with the use of extensions provided by Open VSX; however, you may install extensions from VS Code as well.\nTo learn more about Positron and VS Code, visit the following pages:\n\nPositron Introduction\nPositron Guides\nR Package Development\nGitHub Discussions\nVS Code Help\nVS Code Basics Videos"
   },
   {
-    "objectID": "blog/2024-12-26-python-programming/index.html#post-2-12282024",
-    "href": "blog/2024-12-26-python-programming/index.html#post-2-12282024",
-    "title": "Basic Python Programming",
-    "section": "Post 2 12/28/2024",
-    "text": "Post 2 12/28/2024"
+    "objectID": "blog/2024-12-22-positron/index.html#post-1-data-science-projects",
+    "href": "blog/2024-12-22-positron/index.html#post-1-data-science-projects",
+    "title": "Positron",
+    "section": "Post 1: Data Science Projects",
+    "text": "Post 1: Data Science Projects\nIn Positron, and VS Code, projects are created as workspaces by associating folders as specialized place called workspaces. These workspaces allow you to organize your projects as necessary, such as creating folders for you scripts, data, source files, and much more. Additionally, you can initialize a git repository for the work space\nIt is highly recommended to creat a workspace for any project you work on.\n\nPython\nTo create a Python-based workspace, you will go to the top right corner and click on the folder icon:\n\nThis will open a new drop-down menu:\n\nClick on the “New Project…” to begin creating a workspace. This will then create a new window:\n\nNow select the “Python Project” and click “Next”. Afterwards, a new window will popup asking you to create a new folder and where to store it:\n\nNotice that I have the “Initialize project at Git repository”, if you have git installed and plan to use it, it would be a good idea to initialize it. Then, a new window will popup asking you to create a new Python environment:\n\nI recommend doing so. This will create a new environment that I believe will only be used for the project. Note, you will need to install the python modules again for this new environment. A final window will popup:\n\nYou should click “New Window” for now. This will open a new session of Positron. It may take a few minutes to create the python environment, but it will work after."
   },
   {
-    "objectID": "blog/2024-12-26-python-programming/index.html#footnotes",
-    "href": "blog/2024-12-26-python-programming/index.html#footnotes",
-    "title": "Basic Python Programming",
+    "objectID": "blog/2024-12-22-positron/index.html#post-2-162024-quarto",
+    "href": "blog/2024-12-22-positron/index.html#post-2-162024-quarto",
+    "title": "Positron",
+    "section": "Post 2 (1/6/2024): Quarto",
+    "text": "Post 2 (1/6/2024): Quarto\nWhen working in Quarto, the python chunks can send code to a console to be executed. The console is set up to use python via pyenv. However, whenever the quarto document gets an R chunk, the console will immediately change to an R console, and all the python chunks will be sent to the R console and evaluated with reticulate. This would be okay, but reticulate may not have all the python packages that pyenv has. I have tried searching for a way to have reticulate communicate with the pyenv installation, but I haven’t found anything thus far. Therefore, I recommend installing python modules via reticulate.\nYou can install a python module with:\n\nreticulate::py_install(\"polars\")"
+  },
+  {
+    "objectID": "blog/2024-12-22-positron/index.html#footnotes",
+    "href": "blog/2024-12-22-positron/index.html#footnotes",
+    "title": "Positron",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nI tried to type the argument Base= but did not work↩︎\nThe same as R.↩︎"
-  },
-  {
-    "objectID": "blog/2024-12-21-r2py/index.html",
-    "href": "blog/2024-12-21-r2py/index.html",
-    "title": "R 2 Python",
-    "section": "",
-    "text": "I first learned about programming, when I did a Biostatistics internship where we analyzed data using SAS1. This was the first time where I sent commands to a computer to conduct a task, and I thoroughly enjoyed doing this. However, when my internship was over, I no longer had access to SAS at my own institution and could not learn more about Statistics or programming because of a huge financial barrier. This is where I learned about R and it being free and open-source software. This was a game changer! I was able to learn more about statistics and programming because the ultimate barrier was removed. Yes, it was completely different from SAS, but I can learn, and no one can stop me.\nAfter CSUMB, I went on to get my Master’s in Public Health2 at San Diego State University where I expanded my R skills and really got to learn how to use RStudio. Afterwards, I started my PhD in Applied Statistics at UC Riverside where I refined my programming skills even further. Additionally, I learned how to program in c++, well at least via Rcpp, to efficiently complete my dissertation. As you can see, my programming journey primarily focused on langauges that helped my Statistics journey, it being R.\nAs an Assistant Professor of Statistics at CSUCI where we are planning to launch a new BS in Data Science program this upcoming Fall 2025. As part of the program, we are planning to teach an Introduction to Data Science course with python, in addition to several other courses that will be taught in R or SQL. Therefore, there is a need for me to learn python and SQL to properly train my students.\nAs I am learning python, I am not really planning to switch to it. I will still use R for all my work. In honesty, I would rather get better at c++ via rcpp, learn rust, learn julia, or truthfully get better at vim via neovim. However, I understand that python is a popular language for data scientists, and it would be a disservice to my students if I do not learn and properly train them."
-  },
-  {
-    "objectID": "blog/2024-12-21-r2py/index.html#my-programming-journey",
-    "href": "blog/2024-12-21-r2py/index.html#my-programming-journey",
-    "title": "R 2 Python",
-    "section": "",
-    "text": "I first learned about programming, when I did a Biostatistics internship where we analyzed data using SAS1. This was the first time where I sent commands to a computer to conduct a task, and I thoroughly enjoyed doing this. However, when my internship was over, I no longer had access to SAS at my own institution and could not learn more about Statistics or programming because of a huge financial barrier. This is where I learned about R and it being free and open-source software. This was a game changer! I was able to learn more about statistics and programming because the ultimate barrier was removed. Yes, it was completely different from SAS, but I can learn, and no one can stop me.\nAfter CSUMB, I went on to get my Master’s in Public Health2 at San Diego State University where I expanded my R skills and really got to learn how to use RStudio. Afterwards, I started my PhD in Applied Statistics at UC Riverside where I refined my programming skills even further. Additionally, I learned how to program in c++, well at least via Rcpp, to efficiently complete my dissertation. As you can see, my programming journey primarily focused on langauges that helped my Statistics journey, it being R.\nAs an Assistant Professor of Statistics at CSUCI where we are planning to launch a new BS in Data Science program this upcoming Fall 2025. As part of the program, we are planning to teach an Introduction to Data Science course with python, in addition to several other courses that will be taught in R or SQL. Therefore, there is a need for me to learn python and SQL to properly train my students.\nAs I am learning python, I am not really planning to switch to it. I will still use R for all my work. In honesty, I would rather get better at c++ via rcpp, learn rust, learn julia, or truthfully get better at vim via neovim. However, I understand that python is a popular language for data scientists, and it would be a disservice to my students if I do not learn and properly train them."
-  },
-  {
-    "objectID": "blog/2024-12-21-r2py/index.html#how-will-i-learn",
-    "href": "blog/2024-12-21-r2py/index.html#how-will-i-learn",
-    "title": "R 2 Python",
-    "section": "How will I learn?",
-    "text": "How will I learn?\nEvery time I began to work with python, I always dreaded it. I think because I was coming from R as a Statistician, I was always so upset on how difficult it is to begin working in python. In R, getting started is super easy: install R from CRAN, install RStudio form Posit, and then install R packages and there we go!. In python, it is install Anacanda, use jupyter or spyder, and try to do data analysis. And so I do it for a few days, then I need to run another program, most likely R, and learn that it will no longer run due to changes in R. I later learned that Anaconda changed my system, and I would have to delete it get back to my work. I do not know what is going on with Anaconda, but changing R in my system without telling me is unacceptable3. This leads me back to the R community for solutions.\n\nLearning python, the R way!\nReading a few blog posts online, many R users learning python recommended to just simply install python, install VS Code, and have VS code point to the python version you would like to work with. Afterwards install the python libraries4, the same way as you would install R packages. Fortunately, Posit is developing their next generation Data Science IDE, called Positron, designed for both R and python users. What I appreciate the most is that they have instructions to install python via pyenv. As of right now, it has allowed me to learn python without changing my system. Additionally, I am able to learn positron, which is not bad at all. My only gripe is that I can not move the console to the top-right as I have it in my RStudio.\n\n\nIntro to Data Science\nThe main mechanism I am using to learn python is by converting Data Science in a Box to a python-based course instead of an R-based course. There are several reasons to do it this way. First, I understand what is going on in the course and can read the R code, so I can translate to python and know when I am making a mistake. Second, I have not found python versions of this course5; therefore, it will force me to really learn python. Third, the course is very user-friendly for our students. The topics they provide are fascinating, and I believe it is more suitable to my students. Fourth, there license is very permissable, CC BY-SA 4.0 for the win! Fifth, other faculty members in my department have expressed interest in teaching a Data Science course with this material. Therefore, for all these reasons, and many more, I will be learning python, well the basics at least, by converting Data Science in a Box from R to python.\nWhile I am translating/designing this course, there will be some deviations from the standard data science course. Most of decisions I will make is based on what is pedagogically more feasible for my students. For example, I will be using plotnine, the ggplot2 of python, to create graphics since the syntax is exactly the same as in R. Another one is using the polars library, an alternate version of pandas, for data frames due to the simple nature data manipulation6. These design changes are meant to show students what is possible without scarying them away from the field. I do not know what other changes I will make, but I am positive there will be more.\nLastly, as I am part of the Southern California Consortium for Data Science, I will try to incorporate their recommendations in the course."
-  },
-  {
-    "objectID": "blog/2024-12-21-r2py/index.html#conclusion",
-    "href": "blog/2024-12-21-r2py/index.html#conclusion",
-    "title": "R 2 Python",
-    "section": "Conclusion",
-    "text": "Conclusion\nAs I continue with building this Data Science Course, I will try to write blog posts writing my experiences, giving out tips, and possibly tutorials. I will also be writing about my experience with positron and a few other tools, possibly quarto7, and much more."
-  },
-  {
-    "objectID": "blog/2024-12-21-r2py/index.html#disclaimer",
-    "href": "blog/2024-12-21-r2py/index.html#disclaimer",
-    "title": "R 2 Python",
-    "section": "Disclaimer",
-    "text": "Disclaimer\nWhile I do want these posts to highlight my raw experiences, they will be edited from time to time to ensure that R programmers will properly learn how to use python from a statisticians perspective. However, at the end of each post, there will be a reflection that will not change from the original post."
-  },
-  {
-    "objectID": "blog/2024-12-21-r2py/index.html#resources",
-    "href": "blog/2024-12-21-r2py/index.html#resources",
-    "title": "R 2 Python",
-    "section": "Resources",
-    "text": "Resources\nHere are some resources that I found useful. I will be updating it as I learn more about python and positron.\n\nPositron\n\nR Package Development\n\nConversion Guides\n\nConversion R and Python\ndplyr vs polars\ndplyr vs pandas"
-  },
-  {
-    "objectID": "blog/2024-12-21-r2py/index.html#footnotes",
-    "href": "blog/2024-12-21-r2py/index.html#footnotes",
-    "title": "R 2 Python",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nYes, I know SAS and R are not considered programming languages, but I honestly do not care. It is gate-keepery language designed to make people feel bad.↩︎\nIn hindsight, this is probably my most important education. It taught me how to work with communities and to be willing to break norms when they are not working.↩︎\nOn a side note: I learned that there may be licensing issues for Anaconda for Universities. So it is an out for me.↩︎\nI am not sure what packages are called in python.↩︎\nI will admit, I have not tried that hard to look for a python version of the course material↩︎\nAlso, it is much faster than pandas and have and R version as well.↩︎\nI am pretty good at this.↩︎"
-  },
-  {
-    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html",
-    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html",
-    "title": "Wellness Plan Spring 2023",
-    "section": "",
-    "text": "Before designing a wellness plan, I need to assess all areas of my life and see what I can improve. Below is a list of areas that are important to me:\n\n\n\nMental\nEmotional\nSocial\nSpiritual\n\n\n\nPhysical\nEnvironmental\nFinancial\nCareer\n\n\n\nWhile there are many other aspects of my life that I would like to improve on, this is a good starting point for this semester."
-  },
-  {
-    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#areas-of-improvement",
-    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#areas-of-improvement",
-    "title": "Wellness Plan Spring 2023",
-    "section": "",
-    "text": "Before designing a wellness plan, I need to assess all areas of my life and see what I can improve. Below is a list of areas that are important to me:\n\n\n\nMental\nEmotional\nSocial\nSpiritual\n\n\n\nPhysical\nEnvironmental\nFinancial\nCareer\n\n\n\nWhile there are many other aspects of my life that I would like to improve on, this is a good starting point for this semester."
-  },
-  {
-    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#goals",
-    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#goals",
-    "title": "Wellness Plan Spring 2023",
-    "section": "Goals",
-    "text": "Goals\nLooking at the areas that I want to focus on, I want to create realistic goals. Additionally, each goal can satisfy multiple aspects of my life. I will use SMART goals to ensure SMART goals to make sure I create achievable goals. The period for all the goals is the Spring semester.\n\nGoal 1Goal 2Goal 3Goal 4Goal 5\n\n\n\n\n\n\n\n\nNoteGoal\n\n\n\nI will spend at least 1 hour every day, Monday through Friday, working on research related to my dissertation.\n\n\nI want to increase my research productivity for my own career goals. Additionally, working on this will help me through my tenure process.\n\n\n\n\n\n\n\n\nNoteGoal\n\n\n\nI will learn how to create a new tea-related beverage at home each month.\n\n\nThis goal has the potential to serve three aspects of my life: Physical, Environmental, and Financial. Learning how to create new tea drinks will allow me to save money instead of buying them from different coffee shops. Additionally, I will know what ingredients are used in the drinks. Therefore, I will be able to improve the physical aspect of my life. Lastly, this will help the environmental part of my life by reducing my environmental impact and using less plastic.\n\n\n\n\n\n\n\n\nNoteGoal\n\n\n\nI will travel to a new city in Southern CA each month and buy their local newspaper.\n\n\nOne of my main goals is to travel more globally and locally. I especially want to get to know small communities located in Southern California. For that reason, I want to make an effort to explore more of Southern CA. This goal has the potential to affect four aspects of my life: mental, social, spiritual, and physical.\n\n\n\n\n\n\n\n\nNoteGoal\n\n\n\nI will go swimming two times a week for 30 minutes.\n\n\nWhen I was planning to move to Camarillo, I wanted to start something new for my physical health. Therefore, I decided to start swimming.\n\n\n\n\n\n\n\n\nNoteGoal\n\n\n\nI will go to the gym three times a week for 1 hour.\n\n\nSimilar to swimming, I want to develop new habits and exercise more. Developing this habit and going to the gym more will help my physical health."
-  },
-  {
-    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#plan",
-    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#plan",
-    "title": "Wellness Plan Spring 2023",
-    "section": "Plan",
-    "text": "Plan\n\nGoal 1Goal 2Goal 3Goal 4Goal 5\n\n\nSince I am struggling to keep my research productivity up, I will try new strategies. To get more research done, I plan to work on research as the very first thing I do when I get into my office. If I complete this task at the beginning of my day, I will get it out of the way and focus on things that are easier for me. The idea is to do the things I struggle with at the very beginning of my day.\nAdditionally, I plan to use the Forest App to maintain my focus. I will do a 20 minute session of writing1 and then do a 10 minute break. I will repeat this process until I complete an hour of writing.\n\n\nRight now, I am working on learning how to make a chai latte at home. So far, I have learned how to make oat milk how I like it. Next, I want to make chai concentrate using raw ingredients. I have bought many of the tools and feel ready to start experimenting with making the concentrate.\nOther types of teas that I want to learn are hibiscus and Thai.\n\n\nI first plan to visit Ojai in February. Depending on the weather, I want to visit Twentynine Palms for the super bloom; otherwise, I will visit Carpinteria. Lastly, I want to visit Idyllwild. I want to visit a special event/festival for each location if possible.\n\n\nBecause I set this goal for two 30 minute sessions, I believe I can complete this task. It is easier to spend a quick 30 minute session than a full hour.\n\n\nSimilar to my research goals, I plan to go to the gym in the morning and get them done early so I can focus on other things I am interested in. I plan to go to the gym early every Monday, Wednesday, and Friday. This task will be before my writing sessions."
-  },
-  {
-    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#accountability",
-    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#accountability",
-    "title": "Wellness Plan Spring 2023",
-    "section": "Accountability",
-    "text": "Accountability\nThere are two ways that I will try told hold myself accountable. First, I will share my wellness plan with friends and family members. Second, I will create an incentive plan for each goal I complete. I will reassess my goals before spring break (3/17/23) and adjust accordingly. Overall, I want to create consistency with these goals. Any positive gain will be a win. At the end of the semester, I plan to reflect on the process and see what worked and what did not."
-  },
-  {
-    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#footnotes",
-    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#footnotes",
-    "title": "Wellness Plan Spring 2023",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nwriting means any task related to research↩︎"
-  },
-  {
-    "objectID": "blog/2021-05-01-rcpp-functions/index.html",
-    "href": "blog/2021-05-01-rcpp-functions/index.html",
-    "title": "Rcpp Functions",
-    "section": "",
-    "text": "When I was implementing RcppArmadillo, there were a couple scenarios where I couldn’t find an easy function for a certain result. This is partly due to strictly sticking with the Armadillo library for all my needs. I built functions to resolve these issues. However, I got to the point where I couldn’t rely on the armadillo library to compute the needed value. I needed to compute the value from the inverse cumulative distribution function (iCDF) of a standard normal distribution. The armadillo library is only for linear algebra and scientific computing. It did not have any distribution functions1. Therefore, I needed to find a solution to my problem.\nHadley Wickham’s book describes how to use R functions in cpp code. However, I worried that this may computationally taxing by switching from one language to another. Therefore, I searched for potential solutions to compute the iCDF of a normal distribution. This has brought me to this incredible website: Rcpp for everyone.\nRcpp for everyone is an excellent website that provides the complete basics of using cpp in R. It is comprehensive that can answer the majority2 of your questions when implementing Rcpp. Highly recommend reading it before you implement Rcpp in your code.\nTo obtain the iCDF, I needed to use the R Math Library3. This library seems to be loaded when you included in the Rcpp.h file. However, you will need to include the line using namespace R or R:: in your cpp code. Below is an example of making qnorm executable in R:\ndouble qnorm_cpp(double p, double mean, double sd, int lower, int log){\n  double val = R::qnorm(p, mean, sd, lower, log);\n  return val;\n}\nNow it can be used to obtain the iCDF of a standard normal distribution:\n\nqnorm_cpp(0.5, 0,1,0,0)\n\n[1] 0\n\nqnorm(0.5, 0, 1)\n\n[1] 0\n\n\nFor my research, I didn’t need create an executable function for R. However, I did worry about compatibility issues with the Armadillo library. Fortunately, the function returns a double value making it easy to work with.\nOnce I learned about these different functions, I decided to clean my cpp code with a couple of other functions. For example, I needed to take the factorial of a number. The Armadillo library does not provide a useful function. Therefore, I wrote a function:\ndouble fact (int x){\n  if (x == 0){\n    return 1;\n  } else if (x == 1){\n    return 1;\n  } else {\n    int ide = x - 1;\n    arma::vec ff = linspace(1, x, x);\n    arma::vec ccpp = cumprod(ff);\n    double post = ccpp[ide];\n    return post;\n  }\n}\nAs you can see, it isn’t a pretty function. However the Rcpp provides the following function: factorial4. Below is the implementation of the function to obtain a double value:\ndouble fact_cpp(double x){\n  NumericVector y = NumericVector::create(x);\n  double val = Rcpp::factorial(y)[0];\n  return val;\n}\nBelow is code to benchmark the 2 functions:\n\nbench::mark(\nfact(5),\nfact_cpp(5)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 fact(5)        476ns    541ns  1330868.        0B     133.\n2 fact_cpp(5)    543ns    608ns  1364437.        0B       0 \n\n\nNotice the Rcpp function is slightly faster than my Armadillo implementation."
-  },
-  {
-    "objectID": "blog/2021-05-01-rcpp-functions/index.html#journey",
-    "href": "blog/2021-05-01-rcpp-functions/index.html#journey",
-    "title": "Rcpp Functions",
-    "section": "",
-    "text": "When I was implementing RcppArmadillo, there were a couple scenarios where I couldn’t find an easy function for a certain result. This is partly due to strictly sticking with the Armadillo library for all my needs. I built functions to resolve these issues. However, I got to the point where I couldn’t rely on the armadillo library to compute the needed value. I needed to compute the value from the inverse cumulative distribution function (iCDF) of a standard normal distribution. The armadillo library is only for linear algebra and scientific computing. It did not have any distribution functions1. Therefore, I needed to find a solution to my problem.\nHadley Wickham’s book describes how to use R functions in cpp code. However, I worried that this may computationally taxing by switching from one language to another. Therefore, I searched for potential solutions to compute the iCDF of a normal distribution. This has brought me to this incredible website: Rcpp for everyone.\nRcpp for everyone is an excellent website that provides the complete basics of using cpp in R. It is comprehensive that can answer the majority2 of your questions when implementing Rcpp. Highly recommend reading it before you implement Rcpp in your code.\nTo obtain the iCDF, I needed to use the R Math Library3. This library seems to be loaded when you included in the Rcpp.h file. However, you will need to include the line using namespace R or R:: in your cpp code. Below is an example of making qnorm executable in R:\ndouble qnorm_cpp(double p, double mean, double sd, int lower, int log){\n  double val = R::qnorm(p, mean, sd, lower, log);\n  return val;\n}\nNow it can be used to obtain the iCDF of a standard normal distribution:\n\nqnorm_cpp(0.5, 0,1,0,0)\n\n[1] 0\n\nqnorm(0.5, 0, 1)\n\n[1] 0\n\n\nFor my research, I didn’t need create an executable function for R. However, I did worry about compatibility issues with the Armadillo library. Fortunately, the function returns a double value making it easy to work with.\nOnce I learned about these different functions, I decided to clean my cpp code with a couple of other functions. For example, I needed to take the factorial of a number. The Armadillo library does not provide a useful function. Therefore, I wrote a function:\ndouble fact (int x){\n  if (x == 0){\n    return 1;\n  } else if (x == 1){\n    return 1;\n  } else {\n    int ide = x - 1;\n    arma::vec ff = linspace(1, x, x);\n    arma::vec ccpp = cumprod(ff);\n    double post = ccpp[ide];\n    return post;\n  }\n}\nAs you can see, it isn’t a pretty function. However the Rcpp provides the following function: factorial4. Below is the implementation of the function to obtain a double value:\ndouble fact_cpp(double x){\n  NumericVector y = NumericVector::create(x);\n  double val = Rcpp::factorial(y)[0];\n  return val;\n}\nBelow is code to benchmark the 2 functions:\n\nbench::mark(\nfact(5),\nfact_cpp(5)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 fact(5)        476ns    541ns  1330868.        0B     133.\n2 fact_cpp(5)    543ns    608ns  1364437.        0B       0 \n\n\nNotice the Rcpp function is slightly faster than my Armadillo implementation."
-  },
-  {
-    "objectID": "blog/2021-05-01-rcpp-functions/index.html#rcpp-functions",
-    "href": "blog/2021-05-01-rcpp-functions/index.html#rcpp-functions",
-    "title": "Rcpp Functions",
-    "section": "Rcpp Functions",
-    "text": "Rcpp Functions\nFor more accurate information, I highly recommend looking Rcpp for everyone’s Chapter 23 and Chapter 31. I will talk about certain functions I think are important to know.\n\nDistributions\nAs the same with R, the R Math library and Rcpp contain four different functions for each distribution. The letter at the beginning of the distribution indicates the functions capabilities.\n\n\n\n\n\n\n\nLetter\nFunctionality\n\n\n\n\ndXXX\nreturns the height of the probability density function\n\n\npXXX\nreturns the cumulative density function value\n\n\nqXXX\nreturns the inverse cumulative density function (percentiles)\n\n\nrXXX\nreturns a randomly generated number\n\n\n\n\nRcpp\nThe Rcpp distribution functions are vectorized to accept and return vector. The tables below provide more details about each function.\ndXXX\n\n\n\nArgument\nData Type\nDescription\n\n\n\n\nx\nNumericVector\nrandom variable\n\n\npar\ndouble\nparameters\n\n\nlog\nbool\nreturn log value\n\n\n\npXXX\n\n\n\nArgument\nData Type\nDescription\n\n\n\n\nq\nNumericVector\nrandom variable\n\n\npar\ndouble\nparameters\n\n\nlower\nbool\nreturn lower value\n\n\nlog\nbool\nreturn log value\n\n\n\nqXXX\n\n\n\nArgument\nData Type\nDescription\n\n\n\n\np\nNumericVector\nprobability\n\n\npar\ndouble\nparameters\n\n\nlower\nbool\nreturn lower value\n\n\nlog\nbool\nreturn log value\n\n\n\nrXXX\n\n\n\nArgument\nData Type\nDescription\n\n\n\n\nn\nint\nnumber of random variables\n\n\npar\ndouble\nparameters\n\n\n\n\n\nR\nThe R Math library distribution functions return scalar values. The tables below describe the functions in more detail.\ndXXX\n\n\n\nArgument\nData Type\nDescription\n\n\n\n\nx\ndouble\nrandom variable\n\n\npar\ndouble\nparameters\n\n\nlog\nint\nreturn log value\n\n\n\npXXX\n\n\n\nArgument\nData Type\nDescription\n\n\n\n\nq\ndouble\nrandom variable\n\n\npar\ndouble\nparameters\n\n\nlower\nint\nreturn lower value\n\n\nlog\nint\nreturn log value\n\n\n\nqXXX\n\n\n\nArgument\nData Type\nDescription\n\n\n\n\np\nNumericVector\nprobability\n\n\npar\ndouble\nparameters\n\n\nlower\nint\nreturn lower value\n\n\nlog\nint\nreturn log value\n\n\n\nrXXX\n\n\n\nArgument\nData Type\nDescription\n\n\n\n\npar\ndouble\nparameters\n\n\n\n\n\nAvailable Distributions\nThe table below describe a select number of distribution functions available in R and Rcpp.\n\n\n\ncode\nDistributions\n\n\n\n\nunif\nUniform Distribution\n\n\nnorm\nNormal Distribution\n\n\nchisq\n\\(\\chi²\\) Distribution\n\n\nt\nt Distribution\n\n\nf\nF Distribution\n\n\nexp\nExponential Distribution\n\n\nbinom\nBinomial Distribution\n\n\npois\nPoisson Distribution"
-  },
-  {
-    "objectID": "blog/2021-05-01-rcpp-functions/index.html#next-steps-..",
-    "href": "blog/2021-05-01-rcpp-functions/index.html#next-steps-..",
-    "title": "Rcpp Functions",
-    "section": "Next steps ..",
-    "text": "Next steps ..\nI don’t know"
-  },
-  {
-    "objectID": "blog/2021-05-01-rcpp-functions/index.html#footnotes",
-    "href": "blog/2021-05-01-rcpp-functions/index.html#footnotes",
-    "title": "Rcpp Functions",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nI didn’t find any in its documentation.↩︎\nIf not all.↩︎\nFor more information about the R Math Library, click here.↩︎\nNote that this is misspelled in Rcpp for everyone.↩︎"
-  },
-  {
-    "objectID": "blog/2021-04-15-rcpp-and-research/index.html",
-    "href": "blog/2021-04-15-rcpp-and-research/index.html",
-    "title": "Rcpp and Research",
-    "section": "",
-    "text": "This is the first post of my “Rcpp” collection detailing my journey with Rcpp. The “Rcpp” collection contains information about the struggles I faced while implementing Rcpp. Even though my first venture to Rcpp happened in the Summer of 2020, I realized I am learning new things every day. I thought it would be wised to write a blog of everything I have and will learn with Rcpp. I hope this collection will guide other students who have never used c++ before.\nAs I am developing my model for my PhD, a major limiting factor is that my model takes a really long time to compute the results I need. Due to the complexity of the model, I need to approximate different components using iterative algorithms. This in turn increases the computation time to obtain results. You can only imagine my frustration when I first coded my model in R and it took more than a week to obtain results!\nTherefore, I decided to focus on speeding up my code. I spent time reading Wickham’s Advanced R Book to speed up my code. There I learned how about vectorizing code, utilizing built-in optimized functions, and common practices for speed gains. All this work has made me a better R programmer. Unfortunately, when I reran my model, the speed gains was not enough to call my efforts a success.\n\nDue to the lack of improvements, and knowing I will need expand my model for larger data sets, I set on a quest to improve my model. I attacked this problem on two fronts: looking for mathematical methods to reduce my computation needs and implementing different computing techniques. While both components dramatically improved my computational time, implementing c++ via Rcpp was the biggest game changer for my model.\nAfter I implemented everything I can from Wickham’s Book. I began reading more about about c++ from the book’s c++ chapter. I will be honest, I didn’t know what I was doing. This was my first time learning how to use c++. Nevertheless, I was determined to learn more about the c++ due to the potential speed gains. During the summer of 2020, I spent all my time learning about c++ and Rcpp. By the end of my summer, a model that took 3.5 days to converge was now taking approximately 6 hours!\n\nWith this triumph, I have been able to test and diagnose any faults with my model. I can honestly say that implementing Rcpp has drastically improved my PhD experience. I no longer have the feeling of being anxious for days wondering if my model works or not. I feel more productive! With this confidence, I feel prepared to tackle new problems with my research."
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Wellness Plan Spring 2025\n\n\n\n\n\n\n\n\nJan 8, 2025\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\n\n\n\n\n\n\n\nPython Programming\n\n\n\nr2py\n\n\n\nBasics of Python Programming.\n\n\n\n\n\nDec 26, 2024\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\n\n\n\n\n\n\n\nPositron\n\n\n\nr2py\n\n\n\nGetting Started with Positron\n\n\n\n\n\nDec 22, 2024\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\n\n\n\n\n\n\n\nR 2 Python\n\n\n\nr2py\n\n\n\nA post documenting my journey to learn python for data science courses.\n\n\n\n\n\nDec 21, 2024\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\n\n\n\n\n\n\n\nWellness Plan Spring 2023\n\n\n\nWellness\n\n\n\nMy wellness plan for Spring 2023.\n\n\n\n\n\nJan 31, 2023\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\n\n\n\n\n\n\n\nSMART Program\n\n\nThe Statistical Mentoring in Application, Research, and/or Technology (SMART) Program is a mentoring program where undergraduate students get the opportunity to conduct a statistical project under the supervision of a graduate student. The pilot program was implemented in Spring 2021 where we determined to see the feasibility of both the undergraduate and graduate students to complete the program. For this blog post, I will talk about the inspiration, development and implementation of the SMART Program. As the main architect of the program, I will talk about my thought process and the goals for the future of the program.\n\n\n\n\n\nJun 10, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n\n\n\n\n\n\nRcppArmadillo\n\n\n\nRCPP\n\n\n\nDocumenting my experience implementing RcppArmadillo to my research.\n\n\n\n\n\nMay 1, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n\n\n\n\n\n\nRcpp Functions\n\n\n\nRCPP\n\n\n\nI describe some of the functions available in Rcpp. If you want to get straight to the material, go to Rcpp Functions.\n\n\n\n\n\nMay 1, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n\n\n\n\n\n\nRcpp and Research\n\n\n\nRCPP\n\n\n\nA post describing why I decided to use Rcpp for my research.\n\n\n\n\n\nApr 15, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome!\n\n\nWelcome to the INQS Blog. A blog documenting my experiences through Statistics. I hope you enjoy reading my blog!\n\n\n\n\n\nApr 14, 2021\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html",
-    "href": "blog/2021-04-20-incorporating-rcpp/index.html",
-    "title": "RcppArmadillo",
-    "section": "",
-    "text": "When I first started using Rcpp for my research, I had no idea what I was doing. All I knew was that you can incorporate C++1 code in your R scripts to speed up data processing. I did spend some time learning C++ through www.learningcpp.com, but I didn’t get far because my example program did not go well. Troubleshooting the problem was a nightmare. However, it did give me an idea of how C++ programming looks like.\nOnce, I decided to implement C++ for my research, I focused on how to incorporate it in R. At the time, I had a fairly strong R background, and I knew you can use C++ in R via Rcpp. Therefore, I spent some time learning more about Rcpp from their website and book. After reading everything I could, I didn’t learn much. It was really advanced and not written for a newbie. However, I did learn that you can compile a C++ function2 that can be executed in R via Rcpp. The challenge was to build a cpp file that contained functions for my analysis. I turned to Advanced R by Hadley Wickham for more help.\nWickham’s book provided the necessary information to build basic functions to use in R. I learned how to write basic functions in cpp and making them executable with cppFunction. Additionally, the book covers the basic classes, looping, and function exporting. I felt prepared to write and use functions in R! However, my research required linear algebra, and it would have been a nightmare to program matrix multiplication with the basics. These challenges led me to RcppArmadillo.\nRcppArmadillo is designed to incorporate the Armadillo library in R via Rcpp. The Armadillo library contains functions that make it easy to conduct linear algebra in cpp. Additionally, it isn’t difficult to learn the syntax. The library is implemented to closely follow Matlab3 syntax.\nAfter writing functions and troubleshooting problems, I was able to export my functions to R. Making sure everything worked, I ran the same data on both my R and cpp functions, and it worked! I was able to produce the same value for each function. It gave me the confidence that I would be able to complete my research.\nAfter successfully implementing cpp in my research, I wanted to know how much faster was my code. Going back to Wickham’s book, there was information on benchmarking different functions. Using the bench package to identify how long each function was taking to execute, I found my R function took 13 times longer than my cpp function. I was shocked! I knew cpp would make my code faster, but I didn’t expect it to be that much faster4. This convinced me that all my efforts were worth it!"
-  },
-  {
-    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#journey",
-    "href": "blog/2021-04-20-incorporating-rcpp/index.html#journey",
-    "title": "RcppArmadillo",
-    "section": "",
-    "text": "When I first started using Rcpp for my research, I had no idea what I was doing. All I knew was that you can incorporate C++1 code in your R scripts to speed up data processing. I did spend some time learning C++ through www.learningcpp.com, but I didn’t get far because my example program did not go well. Troubleshooting the problem was a nightmare. However, it did give me an idea of how C++ programming looks like.\nOnce, I decided to implement C++ for my research, I focused on how to incorporate it in R. At the time, I had a fairly strong R background, and I knew you can use C++ in R via Rcpp. Therefore, I spent some time learning more about Rcpp from their website and book. After reading everything I could, I didn’t learn much. It was really advanced and not written for a newbie. However, I did learn that you can compile a C++ function2 that can be executed in R via Rcpp. The challenge was to build a cpp file that contained functions for my analysis. I turned to Advanced R by Hadley Wickham for more help.\nWickham’s book provided the necessary information to build basic functions to use in R. I learned how to write basic functions in cpp and making them executable with cppFunction. Additionally, the book covers the basic classes, looping, and function exporting. I felt prepared to write and use functions in R! However, my research required linear algebra, and it would have been a nightmare to program matrix multiplication with the basics. These challenges led me to RcppArmadillo.\nRcppArmadillo is designed to incorporate the Armadillo library in R via Rcpp. The Armadillo library contains functions that make it easy to conduct linear algebra in cpp. Additionally, it isn’t difficult to learn the syntax. The library is implemented to closely follow Matlab3 syntax.\nAfter writing functions and troubleshooting problems, I was able to export my functions to R. Making sure everything worked, I ran the same data on both my R and cpp functions, and it worked! I was able to produce the same value for each function. It gave me the confidence that I would be able to complete my research.\nAfter successfully implementing cpp in my research, I wanted to know how much faster was my code. Going back to Wickham’s book, there was information on benchmarking different functions. Using the bench package to identify how long each function was taking to execute, I found my R function took 13 times longer than my cpp function. I was shocked! I knew cpp would make my code faster, but I didn’t expect it to be that much faster4. This convinced me that all my efforts were worth it!"
-  },
-  {
-    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
-    "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
-    "title": "RcppArmadillo",
-    "section": "Using RcppArmadillo",
-    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] -0.02584726\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] -0.02584726\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.32µs   3.79µs   231640.        0B        0\n2 mean_cpp(Y)   1.35µs   1.56µs   615851.    5.17KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
-  },
-  {
-    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
-    "href": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
-    "title": "RcppArmadillo",
-    "section": "Speed Gains Explanation",
-    "text": "Speed Gains Explanation\nYou may be asking why is R much slower than cpp. From what I can gather, R is an interpreted language while cpp is a compiled language. While I don’t really know what the difference is, it makes cpp much faster.\nI like to think there is a difference of requirements. You need to be more careful with cpp because it does not convert inputs to the correct data type. R will do it automatically. Therefore, R takes more time to ensure everything is correct before computing a function. Cpp requires more thinking from the user, but will reward them with speed gains. I am sure there is way more to this simple explanation, but the end result is that cpp is much faster than R."
-  },
-  {
-    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#next-steps",
-    "href": "blog/2021-04-20-incorporating-rcpp/index.html#next-steps",
-    "title": "RcppArmadillo",
-    "section": "Next Steps …",
-    "text": "Next Steps …\nAs my research is progressing, I am noticing the need to incorporate different methods not found in the Armadillo library. For example, I want to incorporate the GNU Scientific Library. I learned there is an R package exists for the library, RcppGSL! This gives me hope that I can use it for my research. However, I want to use the Armadillo library alongside with GSL. This has a potential to bring new problems with data type incompatibilities. I have ideas for potential solutions, but I will need to test them out.\nI also want to learn more about the capabilities of Rcpp. Specifically, what other functions does it contain. I learned that Rcpp has functions for distribution functions. This can be useful for expanding my research."
-  },
-  {
-    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#footnotes",
-    "href": "blog/2021-04-20-incorporating-rcpp/index.html#footnotes",
-    "title": "RcppArmadillo",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nI may write C++ as cpp at times.↩︎\nIt may be called a function or program. Not really sure.↩︎\nI never learned Matlab.↩︎\nI will admit, I don’t know what I am doing when benchmarking these functions, but based on my experiences, this is true.↩︎\nI am still shaky on what each thing does.↩︎\nIf you don’t have the first line. R will not make it executable, but the function may be utilized by other functions within the cpp file.↩︎\nThere are occasions where it is not as straight forward.↩︎\nYou may need to install other software such as rtools40. In linux, I have r-base-dev installed which may solve some of the needed dependencies.↩︎"
+    "text": "Footnotes\n\n\nLucked out they had Fedora.↩︎"
   },
   {
     "objectID": "blog/2021-05-03-smart-program/index.html",
@@ -1176,144 +994,802 @@
     "text": "Footnotes\n\n\nReally the myth of imposter syndrome and more how Academia is designed only for the privileged.↩︎\nThe seminar occurred at the beginning of the pandemic. My goal was to create some form of normal for the students during this time. However, other students may have found it difficult to concentrate during the quarter.↩︎\nThe discussion from the first seminar was the most important part!↩︎\nI wised to have the mentors there as well but could not schedule everyone together.↩︎"
   },
   {
-    "objectID": "blog/2024-12-22-positron/index.html",
-    "href": "blog/2024-12-22-positron/index.html",
-    "title": "Positron",
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html",
+    "title": "RcppArmadillo",
     "section": "",
-    "text": "Positron and Python are both new to me, but as always, the first step is installing the software on your computer. In this post, I will highlight my adventures installing both of these softwares on to my computer. I will layout what is working and what is not working.\nDisclaimer: I daily drive Linux, currently using Fedora, so my experiences will be different."
+    "text": "When I first started using Rcpp for my research, I had no idea what I was doing. All I knew was that you can incorporate C++1 code in your R scripts to speed up data processing. I did spend some time learning C++ through www.learningcpp.com, but I didn’t get far because my example program did not go well. Troubleshooting the problem was a nightmare. However, it did give me an idea of how C++ programming looks like.\nOnce, I decided to implement C++ for my research, I focused on how to incorporate it in R. At the time, I had a fairly strong R background, and I knew you can use C++ in R via Rcpp. Therefore, I spent some time learning more about Rcpp from their website and book. After reading everything I could, I didn’t learn much. It was really advanced and not written for a newbie. However, I did learn that you can compile a C++ function2 that can be executed in R via Rcpp. The challenge was to build a cpp file that contained functions for my analysis. I turned to Advanced R by Hadley Wickham for more help.\nWickham’s book provided the necessary information to build basic functions to use in R. I learned how to write basic functions in cpp and making them executable with cppFunction. Additionally, the book covers the basic classes, looping, and function exporting. I felt prepared to write and use functions in R! However, my research required linear algebra, and it would have been a nightmare to program matrix multiplication with the basics. These challenges led me to RcppArmadillo.\nRcppArmadillo is designed to incorporate the Armadillo library in R via Rcpp. The Armadillo library contains functions that make it easy to conduct linear algebra in cpp. Additionally, it isn’t difficult to learn the syntax. The library is implemented to closely follow Matlab3 syntax.\nAfter writing functions and troubleshooting problems, I was able to export my functions to R. Making sure everything worked, I ran the same data on both my R and cpp functions, and it worked! I was able to produce the same value for each function. It gave me the confidence that I would be able to complete my research.\nAfter successfully implementing cpp in my research, I wanted to know how much faster was my code. Going back to Wickham’s book, there was information on benchmarking different functions. Using the bench package to identify how long each function was taking to execute, I found my R function took 13 times longer than my cpp function. I was shocked! I knew cpp would make my code faster, but I didn’t expect it to be that much faster4. This convinced me that all my efforts were worth it!"
   },
   {
-    "objectID": "blog/2024-12-22-positron/index.html#positron",
-    "href": "blog/2024-12-22-positron/index.html#positron",
-    "title": "Positron",
-    "section": "Positron",
-    "text": "Positron\nSince I had R installed, my first intuition was to install Positron becuase I learned that was the new ide, still in beta, from Posit that will allow users to work in both R and in Python. Therefore, I can learn how to use python without having to worried about choosing a proper IDE.\nTo install Positron, go to their website and click on get started. Afterwards, follow the instructions to prepare your computer to use positron. This involves either installing R from CRAN or Python via pyenv (Windows). Once that is done, you can navigate to their download page, where you download the appropriate file1. Afterwards, run the installer and follow the prompts. And there you go, Positron should be ready for use.\nAfter you install Positron, it should look like this:\n{An image displaying the Positron IDE, the interpreter is R.}\nNote that I changed the appearance of Positron to dark theme. Here is Positron when Python is being utilized:\n\n\nVS Code\nPositron is based on Microsoft’s Code OSS platform, which makes it look very similar to visual Studio Code. It is an IDE similar to RStudio, but it is program agnostic. Additionally, it is capable to be more customizable with the use of extensions provided by Open VSX; however, you may install extensions from VS Code as well.\nTo learn more about Positron and VS Code, visit the following pages:\n\nPositron Introduction\nPositron Guides\nR Package Development\nGitHub Discussions\nVS Code Help\nVS Code Basics Videos"
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#journey",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#journey",
+    "title": "RcppArmadillo",
+    "section": "",
+    "text": "When I first started using Rcpp for my research, I had no idea what I was doing. All I knew was that you can incorporate C++1 code in your R scripts to speed up data processing. I did spend some time learning C++ through www.learningcpp.com, but I didn’t get far because my example program did not go well. Troubleshooting the problem was a nightmare. However, it did give me an idea of how C++ programming looks like.\nOnce, I decided to implement C++ for my research, I focused on how to incorporate it in R. At the time, I had a fairly strong R background, and I knew you can use C++ in R via Rcpp. Therefore, I spent some time learning more about Rcpp from their website and book. After reading everything I could, I didn’t learn much. It was really advanced and not written for a newbie. However, I did learn that you can compile a C++ function2 that can be executed in R via Rcpp. The challenge was to build a cpp file that contained functions for my analysis. I turned to Advanced R by Hadley Wickham for more help.\nWickham’s book provided the necessary information to build basic functions to use in R. I learned how to write basic functions in cpp and making them executable with cppFunction. Additionally, the book covers the basic classes, looping, and function exporting. I felt prepared to write and use functions in R! However, my research required linear algebra, and it would have been a nightmare to program matrix multiplication with the basics. These challenges led me to RcppArmadillo.\nRcppArmadillo is designed to incorporate the Armadillo library in R via Rcpp. The Armadillo library contains functions that make it easy to conduct linear algebra in cpp. Additionally, it isn’t difficult to learn the syntax. The library is implemented to closely follow Matlab3 syntax.\nAfter writing functions and troubleshooting problems, I was able to export my functions to R. Making sure everything worked, I ran the same data on both my R and cpp functions, and it worked! I was able to produce the same value for each function. It gave me the confidence that I would be able to complete my research.\nAfter successfully implementing cpp in my research, I wanted to know how much faster was my code. Going back to Wickham’s book, there was information on benchmarking different functions. Using the bench package to identify how long each function was taking to execute, I found my R function took 13 times longer than my cpp function. I was shocked! I knew cpp would make my code faster, but I didn’t expect it to be that much faster4. This convinced me that all my efforts were worth it!"
   },
   {
-    "objectID": "blog/2024-12-22-positron/index.html#post-1-data-science-projects",
-    "href": "blog/2024-12-22-positron/index.html#post-1-data-science-projects",
-    "title": "Positron",
-    "section": "Post 1: Data Science Projects",
-    "text": "Post 1: Data Science Projects\nIn Positron, and VS Code, projects are created as workspaces by associating folders as specialized place called workspaces. These workspaces allow you to organize your projects as necessary, such as creating folders for you scripts, data, source files, and much more. Additionally, you can initialize a git repository for the work space\nIt is highly recommended to creat a workspace for any project you work on.\n\nPython\nTo create a Python-based workspace, you will go to the top right corner and click on the folder icon:\n\nThis will open a new drop-down menu:\n\nClick on the “New Project…” to begin creating a workspace. This will then create a new window:\n\nNow select the “Python Project” and click “Next”. Afterwards, a new window will popup asking you to create a new folder and where to store it:\n\nNotice that I have the “Initialize project at Git repository”, if you have git installed and plan to use it, it would be a good idea to initialize it. Then, a new window will popup asking you to create a new Python environment:\n\nI recommend doing so. This will create a new environment that I believe will only be used for the project. Note, you will need to install the python modules again for this new environment. A final window will popup:\n\nYou should click “New Window” for now. This will open a new session of Positron. It may take a few minutes to create the python environment, but it will work after."
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#using-rcpparmadillo",
+    "title": "RcppArmadillo",
+    "section": "Using RcppArmadillo",
+    "text": "Using RcppArmadillo\nI like to keep my functions in separate scripts and source them from my main analysis script. Naturally, I have all my cpp function in a separate file. The first thing you will need to do is create a cpp file: file_name.cpp. The first lines in my files are given below5:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\nThe first couple of lines indicates which header or standard files to be included for compilation. I like to think of them as the library() function in R. The next couple lines indicate the names for different libraries. Different libraries may have functions with the same. Namespace allows you to use functions with the same name but from different libraries. Similar with R’s :: operator. The last line is used by the sourcecpp() function in R. It helps with library dependency.\nNow we can create functions to be utilized in R. The code below calculates the mean in cpp:\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nThe first line tells R to make the following function accessible to the user6. The remaining lines are the function itself. Creating a function in cpp is similar to R7. The main difference is that you need to specify the data types. Combining the two chunks together, your cpp file should look similar to the chunk below:\n#include &lt;RcppArmadillo.h&gt;\n#include &lt;Rcpp.h&gt;\n\nusing namespace Rcpp;\nusing namespace arma;\n\n// [[Rcpp::depends(RcppArmadillo)]]\n\n// [[Rcpp::export]]\n\ndouble mean_cpp(arma::vec x){\n  int n = x.size();\n  double x_sum = sum(x);\n  double x_mean = x_sum / n; \n  return x_mean; \n}\nIn R, you will need to load the following packages8:\n\nlibrary(Rcpp)\nlibrary(RcppArmadillo)\n\nThe next step is to compile your cpp file. You can do this with the sourceCpp() function:\n\nRcpp::sourceCpp(\"example_cpp.cpp\")\n\nThis will compile your functions and make them executable in R. You can now use your function like any other R function.\n\n## Generating Data\nY &lt;- rnorm(1000)\n\n## Using mean_cpp\nmean_cpp(Y)\n\n[1] -0.02584726\n\n## Using Built-in mean functions\nmean(Y)\n\n[1] -0.02584726\n\n\nTo see the speed gains, we can use the mark() function from the bench package.\n\nbench::mark(\n  mean(Y),\n  mean_cpp(Y)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 mean(Y)       3.32µs   3.79µs   231640.        0B        0\n2 mean_cpp(Y)   1.35µs   1.56µs   615851.    5.17KB        0\n\n\nYou can see that the cpp function is much faster than the R built-in function."
   },
   {
-    "objectID": "blog/2024-12-22-positron/index.html#post-2-162024-quarto",
-    "href": "blog/2024-12-22-positron/index.html#post-2-162024-quarto",
-    "title": "Positron",
-    "section": "Post 2 (1/6/2024): Quarto",
-    "text": "Post 2 (1/6/2024): Quarto\nWhen working in Quarto, the python chunks can send code to a console to be executed. The console is set up to use python via pyenv. However, whenever the quarto document gets an R chunk, the console will immediately change to an R console, and all the python chunks will be sent to the R console and evaluated with reticulate. This would be okay, but reticulate may not have all the python packages that pyenv has. I have tried searching for a way to have reticulate communicate with the pyenv installation, but I haven’t found anything thus far. Therefore, I recommend installing python modules via reticulate.\nYou can install a python module with:\n\nreticulate::py_install(\"polars\")"
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#speed-gains-explanation",
+    "title": "RcppArmadillo",
+    "section": "Speed Gains Explanation",
+    "text": "Speed Gains Explanation\nYou may be asking why is R much slower than cpp. From what I can gather, R is an interpreted language while cpp is a compiled language. While I don’t really know what the difference is, it makes cpp much faster.\nI like to think there is a difference of requirements. You need to be more careful with cpp because it does not convert inputs to the correct data type. R will do it automatically. Therefore, R takes more time to ensure everything is correct before computing a function. Cpp requires more thinking from the user, but will reward them with speed gains. I am sure there is way more to this simple explanation, but the end result is that cpp is much faster than R."
   },
   {
-    "objectID": "blog/2024-12-22-positron/index.html#footnotes",
-    "href": "blog/2024-12-22-positron/index.html#footnotes",
-    "title": "Positron",
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#next-steps",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#next-steps",
+    "title": "RcppArmadillo",
+    "section": "Next Steps …",
+    "text": "Next Steps …\nAs my research is progressing, I am noticing the need to incorporate different methods not found in the Armadillo library. For example, I want to incorporate the GNU Scientific Library. I learned there is an R package exists for the library, RcppGSL! This gives me hope that I can use it for my research. However, I want to use the Armadillo library alongside with GSL. This has a potential to bring new problems with data type incompatibilities. I have ideas for potential solutions, but I will need to test them out.\nI also want to learn more about the capabilities of Rcpp. Specifically, what other functions does it contain. I learned that Rcpp has functions for distribution functions. This can be useful for expanding my research."
+  },
+  {
+    "objectID": "blog/2021-04-20-incorporating-rcpp/index.html#footnotes",
+    "href": "blog/2021-04-20-incorporating-rcpp/index.html#footnotes",
+    "title": "RcppArmadillo",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nLucked out they had Fedora.↩︎"
+    "text": "Footnotes\n\n\nI may write C++ as cpp at times.↩︎\nIt may be called a function or program. Not really sure.↩︎\nI never learned Matlab.↩︎\nI will admit, I don’t know what I am doing when benchmarking these functions, but based on my experiences, this is true.↩︎\nI am still shaky on what each thing does.↩︎\nIf you don’t have the first line. R will not make it executable, but the function may be utilized by other functions within the cpp file.↩︎\nThere are occasions where it is not as straight forward.↩︎\nYou may need to install other software such as rtools40. In linux, I have r-base-dev installed which may solve some of the needed dependencies.↩︎"
   },
   {
-    "objectID": "blog/2025-01-07-wellness-plan-sp-25/index.html",
-    "href": "blog/2025-01-07-wellness-plan-sp-25/index.html",
-    "title": "Wellness Plan Spring 2025",
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
     "section": "",
-    "text": "Reuse, Reduce, and Repair\n\n\n\n\nDuring my dissertation phase, my laptop stopped working because it could not connect to my charger. The worst part was that I could not fix it like I have done in the past, which infuriated me. Fortunately at that time, Framework laptops came out with the promise that all the parts to fix the laptop to would be made available for users to repair. Knowing this, I quickly pulled the trigger and bought the laptop almost immediately, and has served me to this day.\n\n\n\n\nOnce, I passed my dissertation, I slowly realized the importance of right to repair to continue use perfectly good products that can be repaired with a simple part change. Which ultimately reduces the waste I produce. Now I try to purchase things with a right to repair mentality. Which ultimately means to purchase things that are meant to last, and asking serious questions if I truly need this product and what I would do if it no longer works. A goal I strive to achieve every day.\n\n\n\n\nOver the past year, I began reducing my plastic use by investing in products that come with minimal packaging or minimal plastic. We all know that plastics have polluted the environment and been found in our human bodies. Therefore, I am committed to take small steps to reduce my impact to plastic waste. Last year, I began purchasing plastic-free cleaning products, especially the for plastic-wrapped cleaning pods, to reduce my own plastic waste. It has been a success, and I hope to continue working on this.\n\n\n\n\nGoal: Identify one more product that reduces my environmental impact and encourages right to repair, and ultimately implement it.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRoutines\n\n\n\n\nProcrastination has always been a problem for me, and still is. I have tried many things to motivate me to complete a task, with only partial success. Therefore, I want to attempt new things that will reduce my procrastination.\n\n\n\n\nLately, I noticed that I have been building better habits that I perceive will benefit me. Whether it being walking more, eating healthier, or be concious about my purchases. I am not sure how much is it due to me maturing, or focusing on completing small steps. But there have been positive results. Therefore, I want to continue with the progress that I have achieved thus far and experiment with other techniques and assess their efficacy.\n\n\n\n\nGoal: Every week, I will right down all the tasks that I have not completed for the week, and I will spend a few hours to complete a task.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDisconnect from Online Platforms\n\n\n\n\nLast year, I listened to a podcast on Indigenous AI and how AI can help indigenous communities as well as harm them and the planet. A couple of highlights that the main speaker talks about is the amount energy used to run these algorithms and data centers, and how we use it to “help” our lives. While there are many messages from the podcast episode, one thing idea I gain is “Do not let perfect be the enemy of good”.\n\n\n\n\nAfter listening to the podcast, I began to think how my use of online platforms impact the environment. While, I have not found a definitive answer to this questions. Once thing I can do is to not use cloud-based applications and run them locally. I am still using energy to produce the product, by I am not using the internet to communicate, which overall reduces the amount of energy needed.\n\n\n\n\nIn the past, I always adopted free and open source software (foss), for 2 reasons. First, I did not have any money to buy the best software. Second, whatever I create will not matter if no one from El Salvador can use it. Therefore, I committed to prioritize the use foss because it would ensure that any Salvadoreñ@ can use it, with only the limitation of needing a computer and internet to download the stuff. Now I have environmental reasons to continue using offline free and open source software.\n\n\n\n\nMy goal for this semester is find an offline application for a technology tool I personally use. I am not sure which tool it may be, but I am eyeing Canva to be replaced.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWalking\n\n\n\n\nOver the past year, I have managed to have a daily average of 10,000 steps a day.\n\n\n\n\nGoal: Increase my daily average steps to 12,500.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTravel\n\n\n\n\nGoal: Take the train to either San Luis Obispo or San Diego in the semester.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2025 Goals\n\n\n\n\nI have several other goals I have for the year, and I plan to continue work on them this year:\n\n\n\n\nWork on being grateful and appreciative of the smaller things.\n\n\n\n\nLearn Causal Inference.\n\n\n\n\nLearn to cook new dishes from scratch.\n\n\n\n\nLearn a new hobby."
+    "text": "Wellness Plan Spring 2025\n\n\n\n\n\n\n\n\nJan 8, 2025\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\n\n\n\n\n\n\n\nPython Programming\n\n\n\nr2py\n\n\n\nBasics of Python Programming.\n\n\n\n\n\nDec 26, 2024\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\n\n\n\n\n\n\n\nPositron\n\n\n\nr2py\n\n\n\nGetting Started with Positron\n\n\n\n\n\nDec 22, 2024\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\n\n\n\n\n\n\n\nR 2 Python\n\n\n\nr2py\n\n\n\nA post documenting my journey to learn python for data science courses.\n\n\n\n\n\nDec 21, 2024\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\n\n\n\n\n\n\n\nWellness Plan Spring 2023\n\n\n\nWellness\n\n\n\nMy wellness plan for Spring 2023.\n\n\n\n\n\nJan 31, 2023\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\n\n\n\n\n\n\n\nSMART Program\n\n\nThe Statistical Mentoring in Application, Research, and/or Technology (SMART) Program is a mentoring program where undergraduate students get the opportunity to conduct a statistical project under the supervision of a graduate student. The pilot program was implemented in Spring 2021 where we determined to see the feasibility of both the undergraduate and graduate students to complete the program. For this blog post, I will talk about the inspiration, development and implementation of the SMART Program. As the main architect of the program, I will talk about my thought process and the goals for the future of the program.\n\n\n\n\n\nJun 10, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n\n\n\n\n\n\nRcppArmadillo\n\n\n\nRCPP\n\n\n\nDocumenting my experience implementing RcppArmadillo to my research.\n\n\n\n\n\nMay 1, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n\n\n\n\n\n\nRcpp Functions\n\n\n\nRCPP\n\n\n\nI describe some of the functions available in Rcpp. If you want to get straight to the material, go to Rcpp Functions.\n\n\n\n\n\nMay 1, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n\n\n\n\n\n\nRcpp and Research\n\n\n\nRCPP\n\n\n\nA post describing why I decided to use Rcpp for my research.\n\n\n\n\n\nApr 15, 2021\n\n\nIsaac Quintanilla\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome!\n\n\nWelcome to the INQS Blog. A blog documenting my experiences through Statistics. I hope you enjoy reading my blog!\n\n\n\n\n\nApr 14, 2021\n\n\nIsaac Quintanilla Salinas\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "blog/welcome/index.html",
-    "href": "blog/welcome/index.html",
-    "title": "Welcome!",
+    "objectID": "blog/2021-04-15-rcpp-and-research/index.html",
+    "href": "blog/2021-04-15-rcpp-and-research/index.html",
+    "title": "Rcpp and Research",
     "section": "",
-    "text": "Welcome! I’ve decided to create this blog as a way to record my journey in Statistics. As I am working through my PhD, I’ve read numerous posts on vast topics. As I was reading about topics related to Rcpp. I noticed how difficult it was to implement Rcpp for my needs. At the same moment, it dawned on me that I am reading from individuals that at some point in time were struggling with the same issues. This inspired me to create a blog of my own with the same intentions to help other individuals. My hope is to demonstrate how I overcame the challenges I faced to others that are facing similar issues.\nI don’t know how this blog will go. It’s going to be a learning experience. I don’t even know how many blog posts I will write in a year. I don’t even know what topics I will write about. However, I hope overtime, I can create a blog that may help people."
+    "text": "This is the first post of my “Rcpp” collection detailing my journey with Rcpp. The “Rcpp” collection contains information about the struggles I faced while implementing Rcpp. Even though my first venture to Rcpp happened in the Summer of 2020, I realized I am learning new things every day. I thought it would be wised to write a blog of everything I have and will learn with Rcpp. I hope this collection will guide other students who have never used c++ before.\nAs I am developing my model for my PhD, a major limiting factor is that my model takes a really long time to compute the results I need. Due to the complexity of the model, I need to approximate different components using iterative algorithms. This in turn increases the computation time to obtain results. You can only imagine my frustration when I first coded my model in R and it took more than a week to obtain results!\nTherefore, I decided to focus on speeding up my code. I spent time reading Wickham’s Advanced R Book to speed up my code. There I learned how about vectorizing code, utilizing built-in optimized functions, and common practices for speed gains. All this work has made me a better R programmer. Unfortunately, when I reran my model, the speed gains was not enough to call my efforts a success.\n\nDue to the lack of improvements, and knowing I will need expand my model for larger data sets, I set on a quest to improve my model. I attacked this problem on two fronts: looking for mathematical methods to reduce my computation needs and implementing different computing techniques. While both components dramatically improved my computational time, implementing c++ via Rcpp was the biggest game changer for my model.\nAfter I implemented everything I can from Wickham’s Book. I began reading more about about c++ from the book’s c++ chapter. I will be honest, I didn’t know what I was doing. This was my first time learning how to use c++. Nevertheless, I was determined to learn more about the c++ due to the potential speed gains. During the summer of 2020, I spent all my time learning about c++ and Rcpp. By the end of my summer, a model that took 3.5 days to converge was now taking approximately 6 hours!\n\nWith this triumph, I have been able to test and diagnose any faults with my model. I can honestly say that implementing Rcpp has drastically improved my PhD experience. I no longer have the feeling of being anxious for days wondering if my model works or not. I feel more productive! With this confidence, I feel prepared to tackle new problems with my research."
   },
   {
-    "objectID": "books/01-Teach-your-students-how-to-learn/index.html",
-    "href": "books/01-Teach-your-students-how-to-learn/index.html",
-    "title": "Teach Students How To Learn",
+    "objectID": "blog/2021-05-01-rcpp-functions/index.html",
+    "href": "blog/2021-05-01-rcpp-functions/index.html",
+    "title": "Rcpp Functions",
     "section": "",
-    "text": "TipBook\n\n\n\nTeach Students How to Learn: Strategies You Can Incorporate Into Any Course to Improve Student Metacognition, Study Skills, and Motivation\n1st Edition\nSaundra Yancy McGuire and Stephanie McGuire\n\n\n\n\n\n\n\n\nNoteBook Availability\n\n\n\nEbook Available from the Broome Library: Faculty | Students\nBookshop Link"
+    "text": "When I was implementing RcppArmadillo, there were a couple scenarios where I couldn’t find an easy function for a certain result. This is partly due to strictly sticking with the Armadillo library for all my needs. I built functions to resolve these issues. However, I got to the point where I couldn’t rely on the armadillo library to compute the needed value. I needed to compute the value from the inverse cumulative distribution function (iCDF) of a standard normal distribution. The armadillo library is only for linear algebra and scientific computing. It did not have any distribution functions1. Therefore, I needed to find a solution to my problem.\nHadley Wickham’s book describes how to use R functions in cpp code. However, I worried that this may computationally taxing by switching from one language to another. Therefore, I searched for potential solutions to compute the iCDF of a normal distribution. This has brought me to this incredible website: Rcpp for everyone.\nRcpp for everyone is an excellent website that provides the complete basics of using cpp in R. It is comprehensive that can answer the majority2 of your questions when implementing Rcpp. Highly recommend reading it before you implement Rcpp in your code.\nTo obtain the iCDF, I needed to use the R Math Library3. This library seems to be loaded when you included in the Rcpp.h file. However, you will need to include the line using namespace R or R:: in your cpp code. Below is an example of making qnorm executable in R:\ndouble qnorm_cpp(double p, double mean, double sd, int lower, int log){\n  double val = R::qnorm(p, mean, sd, lower, log);\n  return val;\n}\nNow it can be used to obtain the iCDF of a standard normal distribution:\n\nqnorm_cpp(0.5, 0,1,0,0)\n\n[1] 0\n\nqnorm(0.5, 0, 1)\n\n[1] 0\n\n\nFor my research, I didn’t need create an executable function for R. However, I did worry about compatibility issues with the Armadillo library. Fortunately, the function returns a double value making it easy to work with.\nOnce I learned about these different functions, I decided to clean my cpp code with a couple of other functions. For example, I needed to take the factorial of a number. The Armadillo library does not provide a useful function. Therefore, I wrote a function:\ndouble fact (int x){\n  if (x == 0){\n    return 1;\n  } else if (x == 1){\n    return 1;\n  } else {\n    int ide = x - 1;\n    arma::vec ff = linspace(1, x, x);\n    arma::vec ccpp = cumprod(ff);\n    double post = ccpp[ide];\n    return post;\n  }\n}\nAs you can see, it isn’t a pretty function. However the Rcpp provides the following function: factorial4. Below is the implementation of the function to obtain a double value:\ndouble fact_cpp(double x){\n  NumericVector y = NumericVector::create(x);\n  double val = Rcpp::factorial(y)[0];\n  return val;\n}\nBelow is code to benchmark the 2 functions:\n\nbench::mark(\nfact(5),\nfact_cpp(5)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 fact(5)        476ns    541ns  1330868.        0B     133.\n2 fact_cpp(5)    543ns    608ns  1364437.        0B       0 \n\n\nNotice the Rcpp function is slightly faster than my Armadillo implementation."
   },
   {
-    "objectID": "books/03-Educated/index.html",
-    "href": "books/03-Educated/index.html",
-    "title": "Educated",
+    "objectID": "blog/2021-05-01-rcpp-functions/index.html#journey",
+    "href": "blog/2021-05-01-rcpp-functions/index.html#journey",
+    "title": "Rcpp Functions",
     "section": "",
-    "text": "TipBook\n\n\n\nEducated\nTara Westover\n\n\n\n\n\n\n\n\nNoteBook Availability\n\n\n\nPhysical Book Available from the Broome Library\nBookshop Link"
+    "text": "When I was implementing RcppArmadillo, there were a couple scenarios where I couldn’t find an easy function for a certain result. This is partly due to strictly sticking with the Armadillo library for all my needs. I built functions to resolve these issues. However, I got to the point where I couldn’t rely on the armadillo library to compute the needed value. I needed to compute the value from the inverse cumulative distribution function (iCDF) of a standard normal distribution. The armadillo library is only for linear algebra and scientific computing. It did not have any distribution functions1. Therefore, I needed to find a solution to my problem.\nHadley Wickham’s book describes how to use R functions in cpp code. However, I worried that this may computationally taxing by switching from one language to another. Therefore, I searched for potential solutions to compute the iCDF of a normal distribution. This has brought me to this incredible website: Rcpp for everyone.\nRcpp for everyone is an excellent website that provides the complete basics of using cpp in R. It is comprehensive that can answer the majority2 of your questions when implementing Rcpp. Highly recommend reading it before you implement Rcpp in your code.\nTo obtain the iCDF, I needed to use the R Math Library3. This library seems to be loaded when you included in the Rcpp.h file. However, you will need to include the line using namespace R or R:: in your cpp code. Below is an example of making qnorm executable in R:\ndouble qnorm_cpp(double p, double mean, double sd, int lower, int log){\n  double val = R::qnorm(p, mean, sd, lower, log);\n  return val;\n}\nNow it can be used to obtain the iCDF of a standard normal distribution:\n\nqnorm_cpp(0.5, 0,1,0,0)\n\n[1] 0\n\nqnorm(0.5, 0, 1)\n\n[1] 0\n\n\nFor my research, I didn’t need create an executable function for R. However, I did worry about compatibility issues with the Armadillo library. Fortunately, the function returns a double value making it easy to work with.\nOnce I learned about these different functions, I decided to clean my cpp code with a couple of other functions. For example, I needed to take the factorial of a number. The Armadillo library does not provide a useful function. Therefore, I wrote a function:\ndouble fact (int x){\n  if (x == 0){\n    return 1;\n  } else if (x == 1){\n    return 1;\n  } else {\n    int ide = x - 1;\n    arma::vec ff = linspace(1, x, x);\n    arma::vec ccpp = cumprod(ff);\n    double post = ccpp[ide];\n    return post;\n  }\n}\nAs you can see, it isn’t a pretty function. However the Rcpp provides the following function: factorial4. Below is the implementation of the function to obtain a double value:\ndouble fact_cpp(double x){\n  NumericVector y = NumericVector::create(x);\n  double val = Rcpp::factorial(y)[0];\n  return val;\n}\nBelow is code to benchmark the 2 functions:\n\nbench::mark(\nfact(5),\nfact_cpp(5)\n)\n\n# A tibble: 2 × 6\n  expression       min   median `itr/sec` mem_alloc `gc/sec`\n  &lt;bch:expr&gt;  &lt;bch:tm&gt; &lt;bch:tm&gt;     &lt;dbl&gt; &lt;bch:byt&gt;    &lt;dbl&gt;\n1 fact(5)        476ns    541ns  1330868.        0B     133.\n2 fact_cpp(5)    543ns    608ns  1364437.        0B       0 \n\n\nNotice the Rcpp function is slightly faster than my Armadillo implementation."
   },
   {
-    "objectID": "books/05-Fresh-Banana-Leaves/index.html",
-    "href": "books/05-Fresh-Banana-Leaves/index.html",
-    "title": "Fresh Banana Leaves",
-    "section": "",
-    "text": "TipBook\n\n\n\nFresh Banana Leaves: Healing Indigenous Landscapes Through Indigenous Science\nJessica Hernandez PhD\n\n\n\n\n\n\n\n\nNoteBook Availability\n\n\n\nAvailable from the Broome Library\nBookshop Link"
+    "objectID": "blog/2021-05-01-rcpp-functions/index.html#rcpp-functions",
+    "href": "blog/2021-05-01-rcpp-functions/index.html#rcpp-functions",
+    "title": "Rcpp Functions",
+    "section": "Rcpp Functions",
+    "text": "Rcpp Functions\nFor more accurate information, I highly recommend looking Rcpp for everyone’s Chapter 23 and Chapter 31. I will talk about certain functions I think are important to know.\n\nDistributions\nAs the same with R, the R Math library and Rcpp contain four different functions for each distribution. The letter at the beginning of the distribution indicates the functions capabilities.\n\n\n\n\n\n\n\nLetter\nFunctionality\n\n\n\n\ndXXX\nreturns the height of the probability density function\n\n\npXXX\nreturns the cumulative density function value\n\n\nqXXX\nreturns the inverse cumulative density function (percentiles)\n\n\nrXXX\nreturns a randomly generated number\n\n\n\n\nRcpp\nThe Rcpp distribution functions are vectorized to accept and return vector. The tables below provide more details about each function.\ndXXX\n\n\n\nArgument\nData Type\nDescription\n\n\n\n\nx\nNumericVector\nrandom variable\n\n\npar\ndouble\nparameters\n\n\nlog\nbool\nreturn log value\n\n\n\npXXX\n\n\n\nArgument\nData Type\nDescription\n\n\n\n\nq\nNumericVector\nrandom variable\n\n\npar\ndouble\nparameters\n\n\nlower\nbool\nreturn lower value\n\n\nlog\nbool\nreturn log value\n\n\n\nqXXX\n\n\n\nArgument\nData Type\nDescription\n\n\n\n\np\nNumericVector\nprobability\n\n\npar\ndouble\nparameters\n\n\nlower\nbool\nreturn lower value\n\n\nlog\nbool\nreturn log value\n\n\n\nrXXX\n\n\n\nArgument\nData Type\nDescription\n\n\n\n\nn\nint\nnumber of random variables\n\n\npar\ndouble\nparameters\n\n\n\n\n\nR\nThe R Math library distribution functions return scalar values. The tables below describe the functions in more detail.\ndXXX\n\n\n\nArgument\nData Type\nDescription\n\n\n\n\nx\ndouble\nrandom variable\n\n\npar\ndouble\nparameters\n\n\nlog\nint\nreturn log value\n\n\n\npXXX\n\n\n\nArgument\nData Type\nDescription\n\n\n\n\nq\ndouble\nrandom variable\n\n\npar\ndouble\nparameters\n\n\nlower\nint\nreturn lower value\n\n\nlog\nint\nreturn log value\n\n\n\nqXXX\n\n\n\nArgument\nData Type\nDescription\n\n\n\n\np\nNumericVector\nprobability\n\n\npar\ndouble\nparameters\n\n\nlower\nint\nreturn lower value\n\n\nlog\nint\nreturn log value\n\n\n\nrXXX\n\n\n\nArgument\nData Type\nDescription\n\n\n\n\npar\ndouble\nparameters\n\n\n\n\n\nAvailable Distributions\nThe table below describe a select number of distribution functions available in R and Rcpp.\n\n\n\ncode\nDistributions\n\n\n\n\nunif\nUniform Distribution\n\n\nnorm\nNormal Distribution\n\n\nchisq\n\\(\\chi²\\) Distribution\n\n\nt\nt Distribution\n\n\nf\nF Distribution\n\n\nexp\nExponential Distribution\n\n\nbinom\nBinomial Distribution\n\n\npois\nPoisson Distribution"
   },
   {
-    "objectID": "books/07-Make-it-Stick/index.html",
-    "href": "books/07-Make-it-Stick/index.html",
-    "title": "Make it Stick",
-    "section": "",
-    "text": "TipBook\n\n\n\nMake it Stick: The Science of Successful Learning\nPeter Brown\nHenry Roediger III\nMark McDaniel\n\n\n\n\n\n\n\n\nNoteBook Availability\n\n\n\nBookshop Link"
+    "objectID": "blog/2021-05-01-rcpp-functions/index.html#next-steps-..",
+    "href": "blog/2021-05-01-rcpp-functions/index.html#next-steps-..",
+    "title": "Rcpp Functions",
+    "section": "Next steps ..",
+    "text": "Next steps ..\nI don’t know"
   },
   {
-    "objectID": "books/09-Solito/index.html",
-    "href": "books/09-Solito/index.html",
-    "title": "Solito",
-    "section": "",
-    "text": "TipBook\n\n\n\nSolito: A Memoir\nJavier Zamora\n\nBook Availability\nBookshop Link"
+    "objectID": "blog/2021-05-01-rcpp-functions/index.html#footnotes",
+    "href": "blog/2021-05-01-rcpp-functions/index.html#footnotes",
+    "title": "Rcpp Functions",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nI didn’t find any in its documentation.↩︎\nIf not all.↩︎\nFor more information about the R Math Library, click here.↩︎\nNote that this is misspelled in Rcpp for everyone.↩︎"
   },
   {
-    "objectID": "books/11-Inclusive-Teaching/index.html",
-    "href": "books/11-Inclusive-Teaching/index.html",
-    "title": "Inclusive teaching",
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html",
+    "title": "Wellness Plan Spring 2023",
     "section": "",
-    "text": "TipBook\n\n\n\nInclusive Teaching: Strategies for Promoting Equity in the College Classroom\nKelly Hogan and Viji Sathy\n\nBook Availability\nBookshop Link"
+    "text": "Before designing a wellness plan, I need to assess all areas of my life and see what I can improve. Below is a list of areas that are important to me:\n\n\n\nMental\nEmotional\nSocial\nSpiritual\n\n\n\nPhysical\nEnvironmental\nFinancial\nCareer\n\n\n\nWhile there are many other aspects of my life that I would like to improve on, this is a good starting point for this semester."
   },
   {
-    "objectID": "books/13-Peoples-History-Science/index.html",
-    "href": "books/13-Peoples-History-Science/index.html",
-    "title": "A People’s History of Science",
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#areas-of-improvement",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#areas-of-improvement",
+    "title": "Wellness Plan Spring 2023",
     "section": "",
-    "text": "TipBook\n\n\n\nA People’s History of Science: Miners, Midwives, and Low Mechanicks\nClifford Conner\n\nBook Availability\nBookshop Link"
+    "text": "Before designing a wellness plan, I need to assess all areas of my life and see what I can improve. Below is a list of areas that are important to me:\n\n\n\nMental\nEmotional\nSocial\nSpiritual\n\n\n\nPhysical\nEnvironmental\nFinancial\nCareer\n\n\n\nWhile there are many other aspects of my life that I would like to improve on, this is a good starting point for this semester."
   },
   {
-    "objectID": "books/15-If-I-Must-Die/index.html",
-    "href": "books/15-If-I-Must-Die/index.html",
-    "title": "If I Must Die",
-    "section": "",
-    "text": "TipBook\n\n\n\nIf I Must Die: Poetry and Prose\nRefaat Alareer\n\n\nBookshop"
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#goals",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#goals",
+    "title": "Wellness Plan Spring 2023",
+    "section": "Goals",
+    "text": "Goals\nLooking at the areas that I want to focus on, I want to create realistic goals. Additionally, each goal can satisfy multiple aspects of my life. I will use SMART goals to ensure SMART goals to make sure I create achievable goals. The period for all the goals is the Spring semester.\n\nGoal 1Goal 2Goal 3Goal 4Goal 5\n\n\n\n\n\n\n\n\nNoteGoal\n\n\n\nI will spend at least 1 hour every day, Monday through Friday, working on research related to my dissertation.\n\n\nI want to increase my research productivity for my own career goals. Additionally, working on this will help me through my tenure process.\n\n\n\n\n\n\n\n\nNoteGoal\n\n\n\nI will learn how to create a new tea-related beverage at home each month.\n\n\nThis goal has the potential to serve three aspects of my life: Physical, Environmental, and Financial. Learning how to create new tea drinks will allow me to save money instead of buying them from different coffee shops. Additionally, I will know what ingredients are used in the drinks. Therefore, I will be able to improve the physical aspect of my life. Lastly, this will help the environmental part of my life by reducing my environmental impact and using less plastic.\n\n\n\n\n\n\n\n\nNoteGoal\n\n\n\nI will travel to a new city in Southern CA each month and buy their local newspaper.\n\n\nOne of my main goals is to travel more globally and locally. I especially want to get to know small communities located in Southern California. For that reason, I want to make an effort to explore more of Southern CA. This goal has the potential to affect four aspects of my life: mental, social, spiritual, and physical.\n\n\n\n\n\n\n\n\nNoteGoal\n\n\n\nI will go swimming two times a week for 30 minutes.\n\n\nWhen I was planning to move to Camarillo, I wanted to start something new for my physical health. Therefore, I decided to start swimming.\n\n\n\n\n\n\n\n\nNoteGoal\n\n\n\nI will go to the gym three times a week for 1 hour.\n\n\nSimilar to swimming, I want to develop new habits and exercise more. Developing this habit and going to the gym more will help my physical health."
   },
   {
-    "objectID": "books/15-If-I-Must-Die/index.html#book-availability",
-    "href": "books/15-If-I-Must-Die/index.html#book-availability",
-    "title": "If I Must Die",
-    "section": "",
-    "text": "Bookshop"
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#plan",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#plan",
+    "title": "Wellness Plan Spring 2023",
+    "section": "Plan",
+    "text": "Plan\n\nGoal 1Goal 2Goal 3Goal 4Goal 5\n\n\nSince I am struggling to keep my research productivity up, I will try new strategies. To get more research done, I plan to work on research as the very first thing I do when I get into my office. If I complete this task at the beginning of my day, I will get it out of the way and focus on things that are easier for me. The idea is to do the things I struggle with at the very beginning of my day.\nAdditionally, I plan to use the Forest App to maintain my focus. I will do a 20 minute session of writing1 and then do a 10 minute break. I will repeat this process until I complete an hour of writing.\n\n\nRight now, I am working on learning how to make a chai latte at home. So far, I have learned how to make oat milk how I like it. Next, I want to make chai concentrate using raw ingredients. I have bought many of the tools and feel ready to start experimenting with making the concentrate.\nOther types of teas that I want to learn are hibiscus and Thai.\n\n\nI first plan to visit Ojai in February. Depending on the weather, I want to visit Twentynine Palms for the super bloom; otherwise, I will visit Carpinteria. Lastly, I want to visit Idyllwild. I want to visit a special event/festival for each location if possible.\n\n\nBecause I set this goal for two 30 minute sessions, I believe I can complete this task. It is easier to spend a quick 30 minute session than a full hour.\n\n\nSimilar to my research goals, I plan to go to the gym in the morning and get them done early so I can focus on other things I am interested in. I plan to go to the gym early every Monday, Wednesday, and Friday. This task will be before my writing sessions."
   },
   {
-    "objectID": "books/17-Leslie-Jones/index.html",
-    "href": "books/17-Leslie-Jones/index.html",
-    "title": "Leslie F*cking Jones",
-    "section": "",
-    "text": "TipBook\n\n\n\nLeslie F*cking Jones\nLeslie Jones\n\nBook Availability\nBookshop"
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#accountability",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#accountability",
+    "title": "Wellness Plan Spring 2023",
+    "section": "Accountability",
+    "text": "Accountability\nThere are two ways that I will try told hold myself accountable. First, I will share my wellness plan with friends and family members. Second, I will create an incentive plan for each goal I complete. I will reassess my goals before spring break (3/17/23) and adjust accordingly. Overall, I want to create consistency with these goals. Any positive gain will be a win. At the end of the semester, I plan to reflect on the process and see what worked and what did not."
   },
   {
-    "objectID": "books/19-Bigger-Picture/index.html",
-    "href": "books/19-Bigger-Picture/index.html",
-    "title": "A Bigger Picture",
-    "section": "",
-    "text": "TipBook\n\n\n\nA Bigger Picture: My Fight to Bring a New African Voice to the Climate Crisis\nVanessa Nakate\n\nBook Availability\nBookshop"
+    "objectID": "blog/2023-01-27-wellness-plan-spring-2023/index.html#footnotes",
+    "href": "blog/2023-01-27-wellness-plan-spring-2023/index.html#footnotes",
+    "title": "Wellness Plan Spring 2023",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nwriting means any task related to research↩︎"
   },
   {
-    "objectID": "canvas.html",
-    "href": "canvas.html",
-    "title": "Canvas",
+    "objectID": "blog/2024-12-21-r2py/index.html",
+    "href": "blog/2024-12-21-r2py/index.html",
+    "title": "R 2 Python",
     "section": "",
-    "text": "Notebook\nExit Ticket\nR Code Reference"
+    "text": "I first learned about programming, when I did a Biostatistics internship where we analyzed data using SAS1. This was the first time where I sent commands to a computer to conduct a task, and I thoroughly enjoyed doing this. However, when my internship was over, I no longer had access to SAS at my own institution and could not learn more about Statistics or programming because of a huge financial barrier. This is where I learned about R and it being free and open-source software. This was a game changer! I was able to learn more about statistics and programming because the ultimate barrier was removed. Yes, it was completely different from SAS, but I can learn, and no one can stop me.\nAfter CSUMB, I went on to get my Master’s in Public Health2 at San Diego State University where I expanded my R skills and really got to learn how to use RStudio. Afterwards, I started my PhD in Applied Statistics at UC Riverside where I refined my programming skills even further. Additionally, I learned how to program in c++, well at least via Rcpp, to efficiently complete my dissertation. As you can see, my programming journey primarily focused on langauges that helped my Statistics journey, it being R.\nAs an Assistant Professor of Statistics at CSUCI where we are planning to launch a new BS in Data Science program this upcoming Fall 2025. As part of the program, we are planning to teach an Introduction to Data Science course with python, in addition to several other courses that will be taught in R or SQL. Therefore, there is a need for me to learn python and SQL to properly train my students.\nAs I am learning python, I am not really planning to switch to it. I will still use R for all my work. In honesty, I would rather get better at c++ via rcpp, learn rust, learn julia, or truthfully get better at vim via neovim. However, I understand that python is a popular language for data scientists, and it would be a disservice to my students if I do not learn and properly train them."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "INQS",
+    "objectID": "blog/2024-12-21-r2py/index.html#my-programming-journey",
+    "href": "blog/2024-12-21-r2py/index.html#my-programming-journey",
+    "title": "R 2 Python",
     "section": "",
-    "text": "Isaac Quintanilla Salinas\n\nAssistant Professor of Statistics\nCSU Channel Islands Orcid\nAll official inquiries come from my official CSUCI email account.\n\n\n\n\nBiography\nIsaac Quintanilla Salinas is a graduate from the Department of Statistics at the University of California, Riverside with a PhD in Applied Statistics. He joined the Department of Mathematics at the California State University Channel Islands in Fall 2022. Prior to his doctoral research, Dr. Quintanilla Salinas earned his MPH from San Diego State University and BS in Biology from the California State University Monterey Bay.\nDr. Quintanilla Salinas research focuses on developing statistical models to understand the association between survival and longitudinal outcomes. His dissertation “Multilevel Time-Varying Joint Models for Longitudinal and Survival Outcomes” develops a novel model to address challenges of modeling dependent outcomes. Additionally, Dr. Quintanilla Salinas collaborates with several researchers at different institutions in the fields of Public Health, Psychology, Biology, Geographic Information Systems, and Education.\n\n\n\n\n\n\nEducation\n\nUC Riverside\n\nPhD in Applied Statistics\n\nSan Diego State University\n\nMaster’s in Public Health\n\nCSU Monterey Bay\n\nBS Biology\n\n\n\n\nInterests\n\nJoint Longitudinal and Survival Models\nHealth and Well Being\nEducation\nAlgorithmic Bias"
+    "text": "I first learned about programming, when I did a Biostatistics internship where we analyzed data using SAS1. This was the first time where I sent commands to a computer to conduct a task, and I thoroughly enjoyed doing this. However, when my internship was over, I no longer had access to SAS at my own institution and could not learn more about Statistics or programming because of a huge financial barrier. This is where I learned about R and it being free and open-source software. This was a game changer! I was able to learn more about statistics and programming because the ultimate barrier was removed. Yes, it was completely different from SAS, but I can learn, and no one can stop me.\nAfter CSUMB, I went on to get my Master’s in Public Health2 at San Diego State University where I expanded my R skills and really got to learn how to use RStudio. Afterwards, I started my PhD in Applied Statistics at UC Riverside where I refined my programming skills even further. Additionally, I learned how to program in c++, well at least via Rcpp, to efficiently complete my dissertation. As you can see, my programming journey primarily focused on langauges that helped my Statistics journey, it being R.\nAs an Assistant Professor of Statistics at CSUCI where we are planning to launch a new BS in Data Science program this upcoming Fall 2025. As part of the program, we are planning to teach an Introduction to Data Science course with python, in addition to several other courses that will be taught in R or SQL. Therefore, there is a need for me to learn python and SQL to properly train my students.\nAs I am learning python, I am not really planning to switch to it. I will still use R for all my work. In honesty, I would rather get better at c++ via rcpp, learn rust, learn julia, or truthfully get better at vim via neovim. However, I understand that python is a popular language for data scientists, and it would be a disservice to my students if I do not learn and properly train them."
+  },
+  {
+    "objectID": "blog/2024-12-21-r2py/index.html#how-will-i-learn",
+    "href": "blog/2024-12-21-r2py/index.html#how-will-i-learn",
+    "title": "R 2 Python",
+    "section": "How will I learn?",
+    "text": "How will I learn?\nEvery time I began to work with python, I always dreaded it. I think because I was coming from R as a Statistician, I was always so upset on how difficult it is to begin working in python. In R, getting started is super easy: install R from CRAN, install RStudio form Posit, and then install R packages and there we go!. In python, it is install Anacanda, use jupyter or spyder, and try to do data analysis. And so I do it for a few days, then I need to run another program, most likely R, and learn that it will no longer run due to changes in R. I later learned that Anaconda changed my system, and I would have to delete it get back to my work. I do not know what is going on with Anaconda, but changing R in my system without telling me is unacceptable3. This leads me back to the R community for solutions.\n\nLearning python, the R way!\nReading a few blog posts online, many R users learning python recommended to just simply install python, install VS Code, and have VS code point to the python version you would like to work with. Afterwards install the python libraries4, the same way as you would install R packages. Fortunately, Posit is developing their next generation Data Science IDE, called Positron, designed for both R and python users. What I appreciate the most is that they have instructions to install python via pyenv. As of right now, it has allowed me to learn python without changing my system. Additionally, I am able to learn positron, which is not bad at all. My only gripe is that I can not move the console to the top-right as I have it in my RStudio.\n\n\nIntro to Data Science\nThe main mechanism I am using to learn python is by converting Data Science in a Box to a python-based course instead of an R-based course. There are several reasons to do it this way. First, I understand what is going on in the course and can read the R code, so I can translate to python and know when I am making a mistake. Second, I have not found python versions of this course5; therefore, it will force me to really learn python. Third, the course is very user-friendly for our students. The topics they provide are fascinating, and I believe it is more suitable to my students. Fourth, there license is very permissable, CC BY-SA 4.0 for the win! Fifth, other faculty members in my department have expressed interest in teaching a Data Science course with this material. Therefore, for all these reasons, and many more, I will be learning python, well the basics at least, by converting Data Science in a Box from R to python.\nWhile I am translating/designing this course, there will be some deviations from the standard data science course. Most of decisions I will make is based on what is pedagogically more feasible for my students. For example, I will be using plotnine, the ggplot2 of python, to create graphics since the syntax is exactly the same as in R. Another one is using the polars library, an alternate version of pandas, for data frames due to the simple nature data manipulation6. These design changes are meant to show students what is possible without scarying them away from the field. I do not know what other changes I will make, but I am positive there will be more.\nLastly, as I am part of the Southern California Consortium for Data Science, I will try to incorporate their recommendations in the course."
+  },
+  {
+    "objectID": "blog/2024-12-21-r2py/index.html#conclusion",
+    "href": "blog/2024-12-21-r2py/index.html#conclusion",
+    "title": "R 2 Python",
+    "section": "Conclusion",
+    "text": "Conclusion\nAs I continue with building this Data Science Course, I will try to write blog posts writing my experiences, giving out tips, and possibly tutorials. I will also be writing about my experience with positron and a few other tools, possibly quarto7, and much more."
+  },
+  {
+    "objectID": "blog/2024-12-21-r2py/index.html#disclaimer",
+    "href": "blog/2024-12-21-r2py/index.html#disclaimer",
+    "title": "R 2 Python",
+    "section": "Disclaimer",
+    "text": "Disclaimer\nWhile I do want these posts to highlight my raw experiences, they will be edited from time to time to ensure that R programmers will properly learn how to use python from a statisticians perspective. However, at the end of each post, there will be a reflection that will not change from the original post."
+  },
+  {
+    "objectID": "blog/2024-12-21-r2py/index.html#resources",
+    "href": "blog/2024-12-21-r2py/index.html#resources",
+    "title": "R 2 Python",
+    "section": "Resources",
+    "text": "Resources\nHere are some resources that I found useful. I will be updating it as I learn more about python and positron.\n\nPositron\n\nR Package Development\n\nConversion Guides\n\nConversion R and Python\ndplyr vs polars\ndplyr vs pandas"
+  },
+  {
+    "objectID": "blog/2024-12-21-r2py/index.html#footnotes",
+    "href": "blog/2024-12-21-r2py/index.html#footnotes",
+    "title": "R 2 Python",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nYes, I know SAS and R are not considered programming languages, but I honestly do not care. It is gate-keepery language designed to make people feel bad.↩︎\nIn hindsight, this is probably my most important education. It taught me how to work with communities and to be willing to break norms when they are not working.↩︎\nOn a side note: I learned that there may be licensing issues for Anaconda for Universities. So it is an out for me.↩︎\nI am not sure what packages are called in python.↩︎\nI will admit, I have not tried that hard to look for a python version of the course material↩︎\nAlso, it is much faster than pandas and have and R version as well.↩︎\nI am pretty good at this.↩︎"
+  },
+  {
+    "objectID": "blog/2024-12-26-python-programming/index.html",
+    "href": "blog/2024-12-26-python-programming/index.html",
+    "title": "Basic Python Programming",
+    "section": "",
+    "text": "When writing this post, I realize how difficult it will be for me to create a comprehensive tutorial about Python. There are things I learned along the way that makes it easier for me to pick up Python from programming in R, and most importantly c++. For example, Python’s indexing begins with 0 instead of 1, python does not uses braces for code blocks, or how functions can be applied to objects. This makes it easier for me to learn programming in python. However, I certainly struggled with these topics when first learning about it, but I managed to learn it. And I believe anyone can as well."
+  },
+  {
+    "objectID": "blog/2024-12-26-python-programming/index.html#introduction",
+    "href": "blog/2024-12-26-python-programming/index.html#introduction",
+    "title": "Basic Python Programming",
+    "section": "",
+    "text": "When writing this post, I realize how difficult it will be for me to create a comprehensive tutorial about Python. There are things I learned along the way that makes it easier for me to pick up Python from programming in R, and most importantly c++. For example, Python’s indexing begins with 0 instead of 1, python does not uses braces for code blocks, or how functions can be applied to objects. This makes it easier for me to learn programming in python. However, I certainly struggled with these topics when first learning about it, but I managed to learn it. And I believe anyone can as well."
+  },
+  {
+    "objectID": "blog/2024-12-26-python-programming/index.html#recommended-material",
+    "href": "blog/2024-12-26-python-programming/index.html#recommended-material",
+    "title": "Basic Python Programming",
+    "section": "Recommended Material",
+    "text": "Recommended Material\n\nWes McKinney’s Python for Data Analysis"
+  },
+  {
+    "objectID": "blog/2024-12-26-python-programming/index.html#post-1-122624",
+    "href": "blog/2024-12-26-python-programming/index.html#post-1-122624",
+    "title": "Basic Python Programming",
+    "section": "Post 1 12/26/24",
+    "text": "Post 1 12/26/24\n\nLoaded Modules\n\nimport math\nimport numpy as np\n\n\n\nPython as a calculator\nThis is almost a direct copy of my own tutorial written in R. Notice how several of the commands you learned in R also work in Python, with some slight deviations.\n\nCalculator\nThis section focuses on the basic calculation that can be done in R. This is done by using different operators in Python. The table below provides some of the basic operators Python can use:\n\n\n\nOperator\nDescription\n\n\n\n\n+\nAddition\n\n\n-\nSubtraction\n\n\n*\nMultiplication\n\n\n/\nDivides\n\n\n**\nExponentiate\n\n\n?\nHelp Documentation\n\n\n\n\nAddition\nTo add numbers in R, all you need to use the + operator. For example \\(2 + 2 = 4\\). When you type it in R you have:\n\n2 + 2\n\n4\n\n\nWhen you ask R to perform a task, it prints out the result of the task. As we can see above, R prints out the number 4.\nTo add more than 2 numbers, you can simply just type it in.\n\n2 + 2 + 2\n\n6\n\n\nThis provides the number 6.\n\n\nSubtraction\nTo subtract numbers, you need to use the - operator. Try 4 - 2:\n\n4 - 2\n\n2\n\n\nTry 4 - 6 - 4\n\n4 - 6 - 4\n\n-6\n\n\nNotice that you get a negative number.\nNow try 4 + 4 - 2 + 8:\n\n4 + 4 - 2 + 8\n\n14\n\n\n\n\nMultiplication\nTo multiply numbers, you will need to use the * operator. Try 4 * 4:\n\n4 * 4\n\n16\n\n\n\n\nDivision\nTo divide numbers, you can use the / operator. Try 9 / 3:\n\n9 / 3\n\n3.0\n\n\n\n\nExponents\nTo exponentiate a number to the power of another number, you can use the ** operator. Try 2**5:\n\n2**5\n\n32\n\n\n\n\nRoots\nTo take the n-th root of a value, use the ** operator with the / operator to take the n-th root. For example, to take \\(\\sqrt[5]{35}\\), type 32**(1/5):\n\n32**(1/5)\n\n2.0\n\n\n\n\nLogarithms\nWe will use the math module for mathematical functions:\n\nimport math\n\nTo take the natural logarithm of a value, you will use the math.log() function. Try math.log(5):\n\nmath.log(5, 10)\n\n0.6989700043360187\n\n\nIf you want to take the logarithm of a different base, you will use the math.log(X, Y), where X is the number you wish to take the logarithm and Y is the base of the log1.\nIf you want to find \\(e^5\\), you will use the math.exp() function. Try math.exp(2):\n\nmath.exp(2)\n\n7.38905609893065\n\n\n\n\n\nComparing Numbers\nAnother important part of R is comparing numbers. When you compare two numbers, R will tell if the statement is True or False. Below are the different comparisons you can make:\n\n\n\nOperator\nDescription\n\n\n\n\n&gt;\nGreater Than\n\n\n&lt;\nLess Than\n\n\n&gt;=\nGreater than or equal\n\n\n&lt;=\nLess than or equal\n\n\n==\nEquals\n\n\n!=\nNot Equals\n\n\n\n\nLess than/Greater than\nTo check if one number is less than or greater than another number, you will use the &gt; or &lt; operators. Try 5 &gt; 4:\n\n5 &gt; 4\n\nTrue\n\n\nNotice that R states it’s true. It evaluates the expression and tells you if it’s true or not. Try 5 &lt; 4:\n\n5 &lt; 4\n\nFalse\n\n\nNotice that R tells you it is false.\n\n\nLess than or equal to/Greater than or equal to\nTo check if one number is less than or equal to/greater than or equal to another number, you will use the &gt;= or &lt;= operators. Try 5 &gt;= 5:\n\n5 &gt;= 5\n\nTrue\n\n\nTry 5 &gt;= 4:\n\n5 &gt;= 4\n\nTrue\n\n\nTry 5 &lt;= 4\n\n5 &lt;= 4\n\nFalse\n\n\n\n\nEquals and Not Equals\nTo check if 2 numbers are equal to each other, you can use the == operator. Try 3 == 3:\n\n3 == 3\n\nTrue\n\n\nTry 4 == 3\n\n3 == 4\n\nFalse\n\n\nAnother way to see if 2 numbers are not equal to each other, you can use the !=. Try 3 != 4:\n\n3 != 4\n\nTrue\n\n\nTry 3 != 3:\n\n3 != 3\n\nFalse\n\n\nYou may be asking why use != instead of ==. They both provides similar results. Well the reason is that you may need the True output for analysis. One is only true when they are equal, while the other is true when they are not equal.\nIn general, the ! operator means not or opposite. It can be used to change an True to a False and vice-versa.\n\n\n\n\nModules and Functions\nAs I am learning Python, I am noticing the importance of modules since it extends the functionality of Python, the same way as R packages do. Base Python, is very bare-bones. I think the reason being is that R loads several packages up for your own use, I assumed Python would load a bit more. Anyways, we need to load modules for more functionality.\n\nLoad a Module\nThe import command will load up a module. The\n\nimport math\nimport numpy as np\n\n\n\n\nTuples and Lists\nAfter getting a handle of python with basic computations and basic modules, my next urging was to create a vector in the same way that I do it in R. After researching around, I noticed that Python had these vector-like objects called Tuple and Lists. The main differenece is that Tuples are immutable (cannot alter) and Lists are mutable (can alter).\nTo create a Tuple, we name an object, use the = sign, list a set of values (seperated by commas), and surround the lists by paranthesis ().\n\na = (1, 2, 3, 4, 5)\n\nTo create a List, we follow the same format as a Tuple, but change the paranthesis to square brackets:\n\nb = [1, 2, 3, 4, 5]\n\nNow if you try to perform an operation to a Tuple or List, you will get an error:\n\na+5\n\nTypeError: can only concatenate tuple (not \"int\") to tuple\n\nb+8\n\nTypeError: can only concatenate list (not \"int\") to list\n\n\nOther operations may lead to other things:\n\na*5\n\n(1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5)\n\nb*5\n\n[1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]\n\n\nAs you can see, you cannot treat this as the traditional vector from R, this has lead me to look at arrays from Numpy.\n\n\nNumpy\nNumpy, or Numerical Python, is a Python module used for scientific computing. From what I can tell, you conduct computational tasks on a Numpy array. This makes me think that Numpy is closest to vector a matrix operations from R.\n\nCreate a Numpy Array\nTo create a numpy array, we will input a list into the function np.array:\n\nc = np.array([1,2,3,4,5])\n\nPrinting out c will display the array:\n\nc\n\narray([1, 2, 3, 4, 5])\n\n\nWe can do some basic operations on the array:\n\nc + 2\n\narray([3, 4, 5, 6, 7])\n\nc/2\n\narray([0.5, 1. , 1.5, 2. , 2.5])\n\nc*2\n\narray([ 2,  4,  6,  8, 10])\n\n\nAdditionally, we can apply basic functions to the object c:\n\nc.shape\n\n(5,)\n\nc.mean()\n\nnp.float64(3.0)\n\nc.sum()\n\nnp.int64(15)\n\nnp.median(c)\n\nnp.float64(3.0)\n\n\nNotice how some functions, like shape, and be provided after the object (seperated by a period) without paranthesis. Other objects need the paranthesis to be executed. You can also type the name of the function first, and put the object in the paranthesis.\n\n\nIndexing a Numpy Array\nWe can index the array c using the square brackets on the object:\n\nc[0]\n\nnp.int64(1)\n\nc[2]\n\nnp.int64(3)\n\nc[0:2]\n\narray([1, 2])\n\nc[0:3]\n\narray([1, 2, 3])\n\n\nFor the code block above, we notice a few things. First is that indexing stats with 0. Second, when we are indexing sequential values using the : operator2, it does not return the last element indicated on the right of the colon.\nNow, let’s create a new array called d which is a subset of c[0:3]:\n\nd = c[0:3]\nd\n\narray([1, 2, 3])\n\n\nWe have a new array with the first 3 elements. Now let’s change the second value of d to 909.\n\nd[1] = 909\nd\n\narray([  1, 909,   3])\n\n\nIt goes as expected. Let’s print out c:\n\nc\n\narray([  1, 909,   3,   4,   5])\n\n\nNotice how c now contains the value 909, even though that d was the only one changed. This is because Python creates the object, and the names of those objects (c and d) point and/or transform that object as necessary. Any changes to one named object will change the overall object. It does not create a new object like in R.\nAfter I learned this, I did not know how I feel about this. I personally liked the R’s way to copy and paste objects, which allowed me to manipulate something without having to worry about changing the original. After some thinking, I don’t think I liked it, but that could be because I am stuck in my ways. There may be some advantages on how Python treats objects, but as of right now, I do not know."
+  },
+  {
+    "objectID": "blog/2024-12-26-python-programming/index.html#post-2-12282024",
+    "href": "blog/2024-12-26-python-programming/index.html#post-2-12282024",
+    "title": "Basic Python Programming",
+    "section": "Post 2 12/28/2024",
+    "text": "Post 2 12/28/2024"
+  },
+  {
+    "objectID": "blog/2024-12-26-python-programming/index.html#footnotes",
+    "href": "blog/2024-12-26-python-programming/index.html#footnotes",
+    "title": "Basic Python Programming",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nI tried to type the argument Base= but did not work↩︎\nThe same as R.↩︎"
+  },
+  {
+    "objectID": "books.html",
+    "href": "books.html",
+    "title": "Reading List",
+    "section": "",
+    "text": "Invisible Women\n\n\n\nsociology\n\n\n\n\n\n\n\n\n\nJul 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nA Bigger Picture\n\n\n\nmemoir\n\nclimate change\n\n\n\n\n\n\n\n\n\nJun 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nLast Human Job\n\n\n\nsociology\n\n\n\n\n\n\n\n\n\nMay 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nLeslie F*cking Jones\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\nApr 30, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nHow to Be a Chicana Role Model\n\n\n\nstories\n\n\n\n\n\n\n\n\n\nMar 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nIf I Must Die\n\n\n\npoetry\n\n\n\n\n\n\n\n\n\nJan 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nThe Fantasy Economy\n\n\n\neconomics\n\neducation\n\n\n\n\n\n\n\n\n\nAug 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nA People’s History of Science\n\n\n\nhistory\n\n\n\n\n\n\n\n\n\nApr 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nWhy Don’t Students Like School?\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nJan 10, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nInclusive teaching\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nDec 28, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nThrivers\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nDec 20, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSolito\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\nAug 25, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nLimitless Mind\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nAug 12, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nMake it Stick\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nAug 5, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nHappiness\n\n\n\npsychology\n\nempowerment\n\n\n\n\n\n\n\n\n\nJul 22, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nFresh Banana Leaves\n\n\n\nindigenous studies\n\nenvironmental conservation\n\n\n\n\n\n\n\n\n\nJul 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nBlack Man in a White Coat\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\nJul 2, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nEducated\n\n\n\nmemoir\n\n\n\n\n\n\n\n\n\nJun 29, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nTeach Students How To Learn\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nJun 26, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSmall Teaching\n\n\n\nlearning\n\n\n\n\n\n\n\n\n\nJun 26, 2023\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "books/02-Small-Teaching/index.html",
+    "href": "books/02-Small-Teaching/index.html",
+    "title": "Small Teaching",
+    "section": "",
+    "text": "TipBook\n\n\n\nSmall Teaching: Everyday Lessons from the Science of Learning\n2nd Edition\nJames Lang\n\n\n\n\n\n\n\n\nNoteBook Availability\n\n\n\nPhysical Copy Available from the Broome Library: Link\nBookshop Link"
+  },
+  {
+    "objectID": "books/04-Black-In-A-White-Coat/index.html",
+    "href": "books/04-Black-In-A-White-Coat/index.html",
+    "title": "Black Man in a White Coat",
+    "section": "",
+    "text": "TipBook\n\n\n\nBlack Man in a White Coat: A Doctor’s Reflections on Race and Medicine\nDamon Tweedy M.D.\n\n\n\n\n\n\n\n\nNoteBook Availability\n\n\n\nBookshop Link"
+  },
+  {
+    "objectID": "books/06-Happiness/index.html",
+    "href": "books/06-Happiness/index.html",
+    "title": "Happiness",
+    "section": "",
+    "text": "TipBook\n\n\n\nHappiness: A Guide to Developing Life’s Most Important Skill\nMatthieu Ricard\n\n\n\n\n\n\n\n\nNoteBook Availability\n\n\n\nBookshop Link"
+  },
+  {
+    "objectID": "books/08-Limitless-Mind/index.html",
+    "href": "books/08-Limitless-Mind/index.html",
+    "title": "Limitless Mind",
+    "section": "",
+    "text": "TipBook\n\n\n\nLimitless Mind: Learn, Lead, and Live Without Borders\nJo Boaler\n\nBook Availability\nBookshop Link"
+  },
+  {
+    "objectID": "books/10-Thrivers/index.html",
+    "href": "books/10-Thrivers/index.html",
+    "title": "Thrivers",
+    "section": "",
+    "text": "TipBook\n\n\n\nThrivers: The Surprising Reasons Why Some Kids Struggle and Others Shine\nMichele Borba\n\nBook Availability\nBookshop Link"
+  },
+  {
+    "objectID": "books/12-Why-Dont-Like-School/index.html",
+    "href": "books/12-Why-Dont-Like-School/index.html",
+    "title": "Why Don’t Students Like School?",
+    "section": "",
+    "text": "TipBook\n\n\n\nWhy Don’t Students Like School?: A Cognitive Scientist Answers Questions About How the Mind Works and What It Means for the Classroom\nDaniel Willingham\n\nBook Availability\nBookshop Link"
+  },
+  {
+    "objectID": "books/14-The-Fantasy-Economy/index.html",
+    "href": "books/14-The-Fantasy-Economy/index.html",
+    "title": "The Fantasy Economy",
+    "section": "",
+    "text": "TipBook\n\n\n\nThe Fantasy Economy: Neoliberalism, Inequality, and the Education Reform Movement\nNeil Kraus\n\nBook Availability\nBookshop"
+  },
+  {
+    "objectID": "books/16-Chicana-Role-Model/index.html",
+    "href": "books/16-Chicana-Role-Model/index.html",
+    "title": "How to Be a Chicana Role Model",
+    "section": "",
+    "text": "TipBook\n\n\n\nHow to Be a Chicana Role Model\nMichele Serros\n\nBook Availability"
+  },
+  {
+    "objectID": "books/18-Human-Job/index.html",
+    "href": "books/18-Human-Job/index.html",
+    "title": "Last Human Job",
+    "section": "",
+    "text": "TipBook\n\n\n\nThe Last Human Job: The Work of Connecting in a Disconnected World\nAllison Pugh\n\nBook Availability\nBookshop"
+  },
+  {
+    "objectID": "books/20-Invisible-Women/index.html",
+    "href": "books/20-Invisible-Women/index.html",
+    "title": "Invisible Women",
+    "section": "",
+    "text": "TipBook\n\n\n\nInvisible Women: Data Bias in a World Designed for Men\nCaroline Criado Perez\n\nBook Availability\nBookshop"
+  },
+  {
+    "objectID": "courses.html",
+    "href": "courses.html",
+    "title": "Courses",
+    "section": "",
+    "text": "AY 26-27AY 25-26AY 24-25AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Machine Learning\nData 300: Intro to Data Management\nData 426: Statistical Computing\n\n\n\n\nMath 201: Elementary Statistics\nMath 202: Biostatistics\nMath 352: Probability and Statistics\nMath 408: Machine Learning\nMath 453: Mathematical Statistics\n\n\n\n\nMath 201: Elementary Statistics\nMath 453: Mathematical Statistics\nMath 497: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
+  },
+  {
+    "objectID": "courses.html#csu-channel-islands",
+    "href": "courses.html#csu-channel-islands",
+    "title": "Courses",
+    "section": "",
+    "text": "AY 26-27AY 25-26AY 24-25AY 23-24AY 22-23\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Machine Learning\nData 300: Intro to Data Management\nData 426: Statistical Computing\n\n\n\n\nMath 201: Elementary Statistics\nMath 202: Biostatistics\nMath 352: Probability and Statistics\nMath 408: Machine Learning\nMath 453: Mathematical Statistics\n\n\n\n\nMath 201: Elementary Statistics\nMath 453: Mathematical Statistics\nMath 497: Introduction to Monte Carlo Methods\n\n\n\n\nMath 201: Elementary Statistics\nMath 398: Advanced Research Investigation\nMath 408: Advanced Data Analysis\n\n\n\n\nMath 352: Probability and Statistics\nMath 408: Advanced Data Analysis\nMath 453: Mathematical Statistics"
+  },
+  {
+    "objectID": "courses.html#uc-riverside",
+    "href": "courses.html#uc-riverside",
+    "title": "Courses",
+    "section": "UC Riverside",
+    "text": "UC Riverside\n\nAllAssociate InstructorTeaching Assistant\n\n\n\nSTAT 127: Introduction to Quality Management\nSTAT 147: Introduction to Statistical Computing\nSTAT 100: Introduction to Statistics\nSTAT 170: Regression and ANOVA\nSTAT 048: Introduction to Business Statistics\nUB: Math Courses\nUB: Public Health Courses\nUB: Research Courses\n\n\n\n\nSTAT 127: Introduction to Quality Management\nSTAT 147: Introduction to Statistical Computing\n\n\n\n\nSTAT 100: Introduction to Statistics\nSTAT 170: Regression and ANOVA\nSTAT 048: Introduction to Business Statistics"
+  },
+  {
+    "objectID": "p/cif26/index.html#chatgpt",
+    "href": "p/cif26/index.html#chatgpt",
+    "title": "Deep Learning",
+    "section": "ChatGPT",
+    "text": "ChatGPT\nChat Generative Pre-Trained Transformer\n\nDecoder-Only Transformer"
+  },
+  {
+    "objectID": "p/cif26/index.html#question",
+    "href": "p/cif26/index.html#question",
+    "title": "Deep Learning",
+    "section": "Question",
+    "text": "Question\nHow can I learn about the models used in ChatGPT?\n\nIs there a pathway for me to build the skills needed to learn how to create my own ChatGPT?"
+  },
+  {
+    "objectID": "p/cif26/index.html#deep-learning-1",
+    "href": "p/cif26/index.html#deep-learning-1",
+    "title": "Deep Learning",
+    "section": "Deep Learning",
+    "text": "Deep Learning\nWhat is Deep Learning?"
+  },
+  {
+    "objectID": "p/cif26/index.html#classical-definition",
+    "href": "p/cif26/index.html#classical-definition",
+    "title": "Deep Learning",
+    "section": "Classical Definition",
+    "text": "Classical Definition\nThe act of using composite functions to predict an outcome variable \\(Y\\)."
+  },
+  {
+    "objectID": "p/cif26/index.html#modern-definition",
+    "href": "p/cif26/index.html#modern-definition",
+    "title": "Deep Learning",
+    "section": "Modern Definition",
+    "text": "Modern Definition\nThe use of backpropagation to train models."
+  },
+  {
+    "objectID": "p/cif26/index.html#our-goal",
+    "href": "p/cif26/index.html#our-goal",
+    "title": "Deep Learning",
+    "section": "Our Goal",
+    "text": "Our Goal\nGiven Data \\(\\boldsymbol X\\) and its corresponding \\(\\boldsymbol Y\\), find the function \\(f\\) with parameters \\(\\boldsymbol \\theta\\):\n\\[\nY  = f(\\boldsymbol X; \\boldsymbol \\theta)\n\\]"
+  },
+  {
+    "objectID": "p/cif26/index.html#characterizing-f",
+    "href": "p/cif26/index.html#characterizing-f",
+    "title": "Deep Learning",
+    "section": "Characterizing \\(f\\)",
+    "text": "Characterizing \\(f\\)\nMachine Learning Techniques:\n\nLinear Regression\n\nPolynomial Regression\n\nNonlinear Models\n\nSpline Functions\n\nTree-Based Models\nSupport Vector Machines\nDeep Learning Models\n\nNueral Networks"
+  },
+  {
+    "objectID": "p/cif26/index.html#neural-network-composition",
+    "href": "p/cif26/index.html#neural-network-composition",
+    "title": "Deep Learning",
+    "section": "Neural Network Composition",
+    "text": "Neural Network Composition\n\nInputs: A set of characteristics in the data that we use to predict the outcome of interest\nOutputs: A set of variables (may be one) we wish to predict\nHidden Layers: A set of functions that will transform the data such that it can better predict the outputs\n\nEach hidden layer will has nodes that indicates the transformation"
+  },
+  {
+    "objectID": "p/cif26/index.html#neural-networks-1",
+    "href": "p/cif26/index.html#neural-networks-1",
+    "title": "Deep Learning",
+    "section": "Neural Networks",
+    "text": "Neural Networks\n\\[\nY = f(\\boldsymbol X; \\boldsymbol \\theta)\n\\]"
+  },
+  {
+    "objectID": "p/cif26/index.html#regression-neural-network",
+    "href": "p/cif26/index.html#regression-neural-network",
+    "title": "Deep Learning",
+    "section": "Regression Neural Network",
+    "text": "Regression Neural Network"
+  },
+  {
+    "objectID": "p/cif26/index.html#classification-neural-network",
+    "href": "p/cif26/index.html#classification-neural-network",
+    "title": "Deep Learning",
+    "section": "Classification Neural Network",
+    "text": "Classification Neural Network"
+  },
+  {
+    "objectID": "p/cif26/index.html#hidden-layer-1",
+    "href": "p/cif26/index.html#hidden-layer-1",
+    "title": "Deep Learning",
+    "section": "Hidden Layer 1",
+    "text": "Hidden Layer 1\nWith \\(p\\) predictors of \\(X\\):\n\\[\na^{(1)}_k(X) = A^{(1)}_k  = g\\left\\{\\alpha_{k0} + \\sum^p_{j=1}\\alpha_{kj}X_{j}\\right\\}\n\\] for \\(k = 1, \\cdots, 5\\) nodes."
+  },
+  {
+    "objectID": "p/cif26/index.html#hidden-layer-2",
+    "href": "p/cif26/index.html#hidden-layer-2",
+    "title": "Deep Learning",
+    "section": "Hidden Layer 2",
+    "text": "Hidden Layer 2\n\\[\na^{(2)}_l(X) = A^{(2)}_l = g\\left\\{\\beta_{l0} + \\sum^5_{k=1}\\beta_{lk}A^{(1)}_{k}\\right\\}\n\\] for \\(l = 1, \\cdots, 4\\) nodes."
+  },
+  {
+    "objectID": "p/cif26/index.html#hidden-layer-3",
+    "href": "p/cif26/index.html#hidden-layer-3",
+    "title": "Deep Learning",
+    "section": "Hidden Layer 3 +",
+    "text": "Hidden Layer 3 +\n\\[\na^{(3)}_m(X) = A^{(3)}_l = g\\left\\{\\gamma_{m0} + \\sum^4_{l=1}\\gamma_{ml}A^{(2)}_{l}\\right\\}\n\\] for \\(m = 1, \\cdots, 3\\) nodes."
+  },
+  {
+    "objectID": "p/cif26/index.html#output-layer-regression",
+    "href": "p/cif26/index.html#output-layer-regression",
+    "title": "Deep Learning",
+    "section": "Output Layer Regression",
+    "text": "Output Layer Regression\n\\[\nf(X) = \\hat y = \\delta_{0} + \\sum^3_{m=1}\\delta_{m}A^{(3)}_m\n\\]"
+  },
+  {
+    "objectID": "p/cif26/index.html#output-layer-classification",
+    "href": "p/cif26/index.html#output-layer-classification",
+    "title": "Deep Learning",
+    "section": "Output Layer Classification",
+    "text": "Output Layer Classification\n\\[\nf(X)_o = \\hat y_o = \\delta_{0o} + \\sum^3_{m=1}\\delta_{0}A^{(3)}_m\n\\]"
+  },
+  {
+    "objectID": "p/cif26/index.html#activations-function-gcdot",
+    "href": "p/cif26/index.html#activations-function-gcdot",
+    "title": "Deep Learning",
+    "section": "Activations Function \\(g(\\cdot)\\)",
+    "text": "Activations Function \\(g(\\cdot)\\)\n\nSigmoidal: \\(g(z) = \\frac{1}{1+e^{-z}}\\) (nn_sigmoidal)\nReLU (rectified linear unit): \\(g(z) = (z)_+ = zI(z\\geq0)\\) (nn_relu)\nHyperbolic Tangent: \\(g(z) = \\frac{\\sinh(z)}{\\cosh(z)} = \\frac{\\exp(z) - \\exp(-z)} {\\exp(z) + \\exp(-z)}\\) (nn_tanh)\n\nOtherwise, the neural network is just an overparameterized linear model."
+  },
+  {
+    "objectID": "p/cif26/index.html#optimizer",
+    "href": "p/cif26/index.html#optimizer",
+    "title": "Deep Learning",
+    "section": "Optimizer",
+    "text": "Optimizer\nThe optimizer is the mathematical algorithm used to find the numerical values for the parameters \\(\\alpha\\), \\(\\beta\\), \\(\\gamma\\), and \\(\\delta\\).\n\nThe most basic algorithm used in gradient descent."
+  },
+  {
+    "objectID": "p/cif26/index.html#recurrent-neural-networks-1",
+    "href": "p/cif26/index.html#recurrent-neural-networks-1",
+    "title": "Deep Learning",
+    "section": "Recurrent Neural Networks",
+    "text": "Recurrent Neural Networks\nRecurrent Neural Networks are designed to analyze input data that is sequential data.\n\nAn RNN can accounts for the position of a data point in the sequence as well as the distance it has to other data points.\n\n\nUsing the data sequence, we can predict and outcome \\(Y\\)."
+  },
+  {
+    "objectID": "p/cif26/index.html#rnn-model",
+    "href": "p/cif26/index.html#rnn-model",
+    "title": "Deep Learning",
+    "section": "RNN Model",
+    "text": "RNN Model"
+  },
+  {
+    "objectID": "p/cif26/index.html#rnn-hidden-state",
+    "href": "p/cif26/index.html#rnn-hidden-state",
+    "title": "Deep Learning",
+    "section": "RNN Hidden State",
+    "text": "RNN Hidden State"
+  },
+  {
+    "objectID": "p/cif26/index.html#inputs-and-outputs",
+    "href": "p/cif26/index.html#inputs-and-outputs",
+    "title": "Deep Learning",
+    "section": "Inputs and Outputs",
+    "text": "Inputs and Outputs\n\nWith Time-Series data, the data acts as both inputs and outputs.\nThere is a usually a lead-up in the input before we get an output."
+  },
+  {
+    "objectID": "p/cif26/index.html#given-the-data",
+    "href": "p/cif26/index.html#given-the-data",
+    "title": "Deep Learning",
+    "section": "Given the Data",
+    "text": "Given the Data\n\\[\nX_{(0)}\\rightarrow\nX_{(1)}\\rightarrow\nX_{(2)}\\rightarrow\n\\cdots\\rightarrow\nX_{(J-1)}\\rightarrow\nX_{(J)}\n\\]"
+  },
+  {
+    "objectID": "p/cif26/index.html#data-point-1",
+    "href": "p/cif26/index.html#data-point-1",
+    "title": "Deep Learning",
+    "section": "Data Point 1",
+    "text": "Data Point 1\n\n\nInput\n\\[\nX_{(0)},\nX_{(1)},\nX_{(2)},\nX_{(3)},\nX_{(4)},\nX_{(5)}\n\\]\n\nOutput\n\\[\nX_{(6)}\n\\]"
+  },
+  {
+    "objectID": "p/cif26/index.html#data-point-2",
+    "href": "p/cif26/index.html#data-point-2",
+    "title": "Deep Learning",
+    "section": "Data Point 2",
+    "text": "Data Point 2\n\n\nInput\n\\[\nX_{(1)},\nX_{(2)},\nX_{(3)},\nX_{(4)},\nX_{(5)},\nX_{(6)}\n\\]\n\nOutput\n\\[\nX_{(7)}\n\\]"
+  },
+  {
+    "objectID": "p/cif26/index.html#data-point-3",
+    "href": "p/cif26/index.html#data-point-3",
+    "title": "Deep Learning",
+    "section": "Data Point 3",
+    "text": "Data Point 3\n\n\nInput\n\\[\nX_{(2)},\nX_{(3)},\nX_{(4)},\nX_{(5)},\nX_{(6)},\nX_{(7)}\n\\]\n\nOutput\n\\[\nX_{(8)}\n\\]"
+  },
+  {
+    "objectID": "p/cif26/index.html#data-point-4",
+    "href": "p/cif26/index.html#data-point-4",
+    "title": "Deep Learning",
+    "section": "Data Point 4",
+    "text": "Data Point 4\n\n\nInput\n\\[\nX_{(3)},\nX_{(4)},\nX_{(5)},\nX_{(6)},\nX_{(7)},\nX_{(8)}\n\\]\n\nOutput\n\\[\nX_{(9)}\n\\]"
+  },
+  {
+    "objectID": "p/cif26/index.html#data-point-5",
+    "href": "p/cif26/index.html#data-point-5",
+    "title": "Deep Learning",
+    "section": "Data Point 5",
+    "text": "Data Point 5\n\n\nInput\n\\[\nX_{(3)},\nX_{(4)},\nX_{(5)},\nX_{(6)},\nX_{(7)},\nX_{(8)}\n\\]\n\nOutput\n\\[\nX_{(9)}\n\\]"
+  },
+  {
+    "objectID": "p/cif26/index.html#problems-with-rnn",
+    "href": "p/cif26/index.html#problems-with-rnn",
+    "title": "Deep Learning",
+    "section": "Problems with RNN",
+    "text": "Problems with RNN\n\nRecurrent Neural Networks suffer from exploding or disappearing gradient due the unfolding."
+  },
+  {
+    "objectID": "p/cif26/index.html#lstm",
+    "href": "p/cif26/index.html#lstm",
+    "title": "Deep Learning",
+    "section": "LSTM",
+    "text": "LSTM\nThe Long Short-Term Memory approach is used to conteract the issues with gradients by adding a “memory” structure to the nuerons.\n\nThis is done by incorporating 2 pathways, a long-term and short-term pathway."
+  },
+  {
+    "objectID": "p/cif26/index.html#lstm-components",
+    "href": "p/cif26/index.html#lstm-components",
+    "title": "Deep Learning",
+    "section": "LSTM Components",
+    "text": "LSTM Components\nThe creation of the 2 pathways are constructed using 3 “gates”:\n\nInput Gate\nOutput Gate\nForget Gate\n\n\nAdditionally, LSTM uses sigmoid and hyperbolic tangent activation functions to see which values will be incorporated into the pathways."
+  },
+  {
+    "objectID": "p/cif26/index.html#forget-gate",
+    "href": "p/cif26/index.html#forget-gate",
+    "title": "Deep Learning",
+    "section": "Forget Gate",
+    "text": "Forget Gate\nThe forget gate decides what information is useful from the long-term memory, and what information should be forgotten. The function below states what percent of the long-term memory should be remembered. \\[\nf_t = \\sigma\\left(\\boldsymbol W_f [h_{t-1}, x_t] + b_f\\right)\n\\]\n\n\\(W_f\\) is the weighting matrix full of parameters\n\\(b_f\\) is the bias term"
+  },
+  {
+    "objectID": "p/cif26/index.html#input-gate",
+    "href": "p/cif26/index.html#input-gate",
+    "title": "Deep Learning",
+    "section": "Input Gate",
+    "text": "Input Gate\nThe input gate controls how the long term memory should be modified based on both the short-term memory and the new input. The \\(i_t\\) function tells us what percent should be remembered, and \\(j_t\\) tells us what to remember. \\[\ni_t = \\sigma\\left(\\boldsymbol W_i [h_{t-1}, x_t] + b_i\\right)\n\\]\n\\[\nj_t = \\tanh\\left(\\boldsymbol W_j [h_{t-1}, x_t] + b_j\\right)\n\\]\n\n\\(W_i\\) and \\(W_j\\) is the weighting matrix full of parameters\n\\(b_i\\) and \\(b_j\\) is the bias term"
+  },
+  {
+    "objectID": "p/cif26/index.html#long-term-memory",
+    "href": "p/cif26/index.html#long-term-memory",
+    "title": "Deep Learning",
+    "section": "Long-term Memory",
+    "text": "Long-term Memory\nThis is how the long-term memory is modified\n\\[\nC_t = f_t \\bigodot C_{t-1} + i_t \\bigodot j_t\n\\]\n\n\\(\\bigodot\\) is the element-wise multiplication of the vectors"
+  },
+  {
+    "objectID": "p/cif26/index.html#output-gate",
+    "href": "p/cif26/index.html#output-gate",
+    "title": "Deep Learning",
+    "section": "Output Gate",
+    "text": "Output Gate\nThe output gate tells us how is the short-term memory is updated. This is dony by figuring out what percent will be used from the new long-term memory.\n\\[\no_t = \\sigma\\left(\\boldsymbol W_o [h_{t-1}, x_t] + b_o\\right)\n\\]\n\n\\(W_o\\) is the weighting matrix full of parameters\n\\(b_o\\) is the bias term"
+  },
+  {
+    "objectID": "p/cif26/index.html#short-term-memory",
+    "href": "p/cif26/index.html#short-term-memory",
+    "title": "Deep Learning",
+    "section": "Short-term Memory",
+    "text": "Short-term Memory\nThe short-term memory is costructed by combining the output gate and new long-term memory. \\[\nh_t = o_t\\tanh\\left(C_t\\right)\n\\]\nThis is also the new predicted value."
+  },
+  {
+    "objectID": "p/cif26/index.html#lstm-model",
+    "href": "p/cif26/index.html#lstm-model",
+    "title": "Deep Learning",
+    "section": "LSTM Model",
+    "text": "LSTM Model"
+  },
+  {
+    "objectID": "p/cif26/index.html#lstm-model-1",
+    "href": "p/cif26/index.html#lstm-model-1",
+    "title": "Deep Learning",
+    "section": "LSTM Model",
+    "text": "LSTM Model"
+  },
+  {
+    "objectID": "p/cif26/index.html#phrase",
+    "href": "p/cif26/index.html#phrase",
+    "title": "Deep Learning",
+    "section": "Phrase",
+    "text": "Phrase\n\n\n\n\n\n\n\n\nAll models are wrong,\nsome are useful!\n\nHow do we input this into a neural network?"
+  },
+  {
+    "objectID": "p/cif26/index.html#word-embeddings-1",
+    "href": "p/cif26/index.html#word-embeddings-1",
+    "title": "Deep Learning",
+    "section": "Word embeddings",
+    "text": "Word embeddings\nA word embedding represents a word as a vector of learned numbers.\n\n\\[\n\\text{embedding}(\\text{cat}) = \\mathbf{u} =\n\\begin{bmatrix}\n0.8 & 0.3 & -0.2 & 0.6\n\\end{bmatrix}\n\\]\n\n\n\nWords used in similar contexts often have similar vectors.\nEach coordinate represents a learned feature.\nIndividual coordinates usually have no simple interpretation."
+  },
+  {
+    "objectID": "p/cif26/index.html#word-embedding-dog",
+    "href": "p/cif26/index.html#word-embedding-dog",
+    "title": "Deep Learning",
+    "section": "Word Embedding (Dog)",
+    "text": "Word Embedding (Dog)\n\\[\n\\text{embedding}(\\text{dog}) = \\mathbf{v} =\n\\begin{bmatrix}\n0.1 & 0.3 & 0.2 & 0.7\n\\end{bmatrix}\n\\]"
+  },
+  {
+    "objectID": "p/cif26/index.html#comparing-embeddings",
+    "href": "p/cif26/index.html#comparing-embeddings",
+    "title": "Deep Learning",
+    "section": "Comparing embeddings",
+    "text": "Comparing embeddings\nCosine similarity compares the directions of two nonzero vectors:\n\\[\n\\operatorname{similarity}(\\mathbf{u}, \\mathbf{v})\n=\n\\frac{\\mathbf{u}^{\\mathsf T}\\mathbf{v}}\n{\\|\\mathbf{u}\\|\\,\\|\\mathbf{v}\\|}\n\\]"
+  },
+  {
+    "objectID": "p/cif26/index.html#what-are-tokens",
+    "href": "p/cif26/index.html#what-are-tokens",
+    "title": "Deep Learning",
+    "section": "What Are Tokens?",
+    "text": "What Are Tokens?\n\nA token is a unit of text that a language model processes.\nA token may represent:\n\nAn entire word: cat\nPart of a word: play and ing\nA punctuation mark: !\n\nA tokenizer converts text into a sequence of tokens.\n\n\n\n\n\n\n\nNote\n\n\nTokens are not always words. The exact split depends on the tokenizer."
+  },
+  {
+    "objectID": "p/cif26/index.html#from-text-to-token-ids",
+    "href": "p/cif26/index.html#from-text-to-token-ids",
+    "title": "Deep Learning",
+    "section": "From Text to Token IDs",
+    "text": "From Text to Token IDs\nBefore text enters a Transformer, the tokenizer splits it into tokens and assigns each token an integer ID.\nIllustrative example:\nInput text:    \"I am here!\"\n\nTokens:        [\"I\", \" am\", \" here\", \"!\"]\n\nEach ID identifies an entry in the tokenizer’s vocabulary.\nSpaces may be included within tokens."
+  },
+  {
+    "objectID": "p/cif26/index.html#why-use-subword-tokens",
+    "href": "p/cif26/index.html#why-use-subword-tokens",
+    "title": "Deep Learning",
+    "section": "Why Use Subword Tokens?",
+    "text": "Why Use Subword Tokens?\nMany tokenizers use subword tokenization: common words may remain whole, while less common words are split into smaller pieces.\nIllustrative splits:\n\n\n\nText\nPossible tokens\n\n\n\n\ncat\ncat\n\n\nplaying\nplay, ing\n\n\nunhappiness\nun, happi, ness\n\n\n\nSubword tokens help models:\n\nRepresent many words using a manageable vocabulary.\nProcess unfamiliar words by splitting them into smaller pieces.\nReuse pieces that occur across different words."
+  },
+  {
+    "objectID": "p/cif26/index.html#encoder-decoder-models",
+    "href": "p/cif26/index.html#encoder-decoder-models",
+    "title": "Deep Learning",
+    "section": "Encoder-Decoder Models",
+    "text": "Encoder-Decoder Models\nThe purpose of Encoder-Decoder models are designed to translate a sequence from one form to another."
+  },
+  {
+    "objectID": "p/cif26/index.html#translate",
+    "href": "p/cif26/index.html#translate",
+    "title": "Deep Learning",
+    "section": "Translate…",
+    "text": "Translate…\nAll models are wrong,\nsome are useful!"
+  },
+  {
+    "objectID": "p/cif26/index.html#to-gen-alpha",
+    "href": "p/cif26/index.html#to-gen-alpha",
+    "title": "Deep Learning",
+    "section": "To Gen Alpha",
+    "text": "To Gen Alpha\nAll models are lowkey cap, but some still slap."
+  },
+  {
+    "objectID": "p/cif26/index.html#to-boomer",
+    "href": "p/cif26/index.html#to-boomer",
+    "title": "Deep Learning",
+    "section": "To Boomer",
+    "text": "To Boomer\nAll models are full of baloney, but some are worth a darn."
+  },
+  {
+    "objectID": "p/cif26/index.html#encoder-decoder-models-1",
+    "href": "p/cif26/index.html#encoder-decoder-models-1",
+    "title": "Deep Learning",
+    "section": "Encoder-Decoder Models",
+    "text": "Encoder-Decoder Models\nEncoder-Decoder models are designed to take in a sequence, conduct mathematical functions, and transform it to a new sequence. Commonly known as seq2seq problems."
+  },
+  {
+    "objectID": "p/cif26/index.html#encoder",
+    "href": "p/cif26/index.html#encoder",
+    "title": "Deep Learning",
+    "section": "Encoder",
+    "text": "Encoder\n\nThe Encoder component is designed to handle the input sequence and model it with numerical values.\n\nConverts words (or other sequences to numbers) to embeddings\nComputes numberical values in an LSTM\nConstructs the Long-Term and Short-Term Memory to be used in the decoder\n\nKnown as the Context Vector"
+  },
+  {
+    "objectID": "p/cif26/index.html#decoder",
+    "href": "p/cif26/index.html#decoder",
+    "title": "Deep Learning",
+    "section": "Decoder",
+    "text": "Decoder\n\nThe Decoder component takes the inputs from the long-term and short-term memory of the encoder component and inputs it into a new LSTM cell\nThe LSTM cell will then predict the first value (word) of a sequence.\nThe word perdicted will then be used for a new LSTM cell to predict the next word.\nThe process continues until an &lt;EOS&gt; token (end of sequence) is produced."
+  },
+  {
+    "objectID": "p/cif26/index.html#encoder-decoder-model-1",
+    "href": "p/cif26/index.html#encoder-decoder-model-1",
+    "title": "Deep Learning",
+    "section": "Encoder-Decoder Model",
+    "text": "Encoder-Decoder Model"
+  },
+  {
+    "objectID": "p/cif26/index.html#attention-models-1",
+    "href": "p/cif26/index.html#attention-models-1",
+    "title": "Deep Learning",
+    "section": "Attention Models",
+    "text": "Attention Models\nAttention models modify the Encoder-Decoder model by incorporating what is known as attention in the model.\n\nAttention is defined as incorporating the inputs short-term memory from the encoder model to the decoders inputs."
+  },
+  {
+    "objectID": "p/cif26/index.html#attention-model",
+    "href": "p/cif26/index.html#attention-model",
+    "title": "Deep Learning",
+    "section": "Attention Model",
+    "text": "Attention Model"
+  },
+  {
+    "objectID": "p/cif26/index.html#attention-is-all-you-need",
+    "href": "p/cif26/index.html#attention-is-all-you-need",
+    "title": "Deep Learning",
+    "section": "Attention is All You Need!",
+    "text": "Attention is All You Need!\nIn 2017, Google Researchers published a paper Attention is all you need indicating that the attention from encoder-decoder models is all you need for translation. They proposed a new framework to incoporate the attention-only models, Transformers."
+  },
+  {
+    "objectID": "p/cif26/index.html#why-attention",
+    "href": "p/cif26/index.html#why-attention",
+    "title": "Deep Learning",
+    "section": "Why Attention?",
+    "text": "Why Attention?\nA basic recurrent encoder–decoder summarizes an input sequence in one fixed-length vector. This can create a bottleneck for long sequences.\nTransformers gives the decoder access to every encoder output."
+  },
+  {
+    "objectID": "p/cif26/index.html#transformers-encoder-architecture",
+    "href": "p/cif26/index.html#transformers-encoder-architecture",
+    "title": "Deep Learning",
+    "section": "Transformers Encoder Architecture",
+    "text": "Transformers Encoder Architecture\n\nTake tokens and convert the to embeddings\nApply a mathematical formula to indicate the position for each token\nApply the self-Attention component\n\nCompute 3 initial vectors for each token: Queries, Keys, and Values\nConduct Vector Operations to obtain the Self-Attention component for each token in the encoder\n\nCombine Self-Attention with Word Embedding and Positional Encding, called final vector"
+  },
+  {
+    "objectID": "p/cif26/index.html#transformer-decoder-architecture",
+    "href": "p/cif26/index.html#transformer-decoder-architecture",
+    "title": "Deep Learning",
+    "section": "Transformer Decoder Architecture",
+    "text": "Transformer Decoder Architecture\n\nBegin with an SOS Token (\\(T_0\\))\nConvert token to word embeddings\nApply a mathematical formula for the positional encoding\nApply the self-Attention component\nCompute 3 initial vectors for each token: Queries, Keys, and Values\nConduct Vector Operations to obtain the Self-Attention component for each token in the decoder\nCombine Self-Attention with Word Embedding and Positional Encding\nCreate a new Query (\\(Q_n\\)) vector for the decoder tokens\nUsing the final vector from the tokens in the encoder, compute new vectors for Key (\\(K_n\\)) and Values (\\(V_n\\))\nCombine the compute the cosine of similarity between \\(Q_n\\) and \\(K_n\\), called \\(S_n\\)\nCombine \\(S_n\\) with \\(V_n\\) to create the Encoder-Decoder Attention (ECA) Vector\nUse ECA in a neural network and predict the next token, \\(T_1\\).\nRepeat steps 2 through 10 until EOS token is produced"
+  },
+  {
+    "objectID": "p/cif26/index.html#positional-encoding",
+    "href": "p/cif26/index.html#positional-encoding",
+    "title": "Deep Learning",
+    "section": "Positional Encoding",
+    "text": "Positional Encoding\nPositional encoding adds token-order information before self-attention.\n\nA token embedding represents a token’s identity, \\(T_i\\).\nA positional encoding represents its location in the sequence \\(P_i\\).\n\n\\[\nPE_i = T_i + P_i\n\\]\n\nA neural network is used to convert the tokens to numbers.\nA combination of sine and cosine functions are used to find the position."
+  },
+  {
+    "objectID": "p/cif26/index.html#queries-keys-and-values",
+    "href": "p/cif26/index.html#queries-keys-and-values",
+    "title": "Deep Learning",
+    "section": "Queries, Keys, and Values",
+    "text": "Queries, Keys, and Values\nSelf-Attention compares a query with keys, then combines the corresponding values, for all tokens.\n\n\n\nComponent\nRole\n\n\n\n\nQuery \\(Q_t\\)\nRepresents the information needed at output step \\(t\\)\n\n\nKey \\(K_t\\)\nRepresents input position \\(t\\) for comparison\n\n\nValue \\(V_t\\)\nSupplies information for the context vector"
+  },
+  {
+    "objectID": "p/cif26/index.html#basic-transformer",
+    "href": "p/cif26/index.html#basic-transformer",
+    "title": "Deep Learning",
+    "section": "Basic Transformer",
+    "text": "Basic Transformer"
+  },
+  {
+    "objectID": "p/cif26/index.html#transformer---encoder",
+    "href": "p/cif26/index.html#transformer---encoder",
+    "title": "Deep Learning",
+    "section": "Transformer - Encoder",
+    "text": "Transformer - Encoder"
+  },
+  {
+    "objectID": "p/cif26/index.html#transformer---decoder",
+    "href": "p/cif26/index.html#transformer---decoder",
+    "title": "Deep Learning",
+    "section": "Transformer - Decoder",
+    "text": "Transformer - Decoder"
+  },
+  {
+    "objectID": "p/cif26/index.html#transformer---translation",
+    "href": "p/cif26/index.html#transformer---translation",
+    "title": "Deep Learning",
+    "section": "Transformer - Translation",
+    "text": "Transformer - Translation"
+  },
+  {
+    "objectID": "p/cif26/index.html#what-are-transformers",
+    "href": "p/cif26/index.html#what-are-transformers",
+    "title": "Deep Learning",
+    "section": "What Are Transformers?",
+    "text": "What Are Transformers?\nTransformers are the main architecture used in Large Language Models.\n\nChatGPT and Claude primarily used Decoder-Only Models that need to predict several tokens."
+  },
+  {
+    "objectID": "p/cif26/index.html#where-can-i-learn-more",
+    "href": "p/cif26/index.html#where-can-i-learn-more",
+    "title": "Deep Learning",
+    "section": "Where can I learn more?",
+    "text": "Where can I learn more?\n\nMath 408"
+  },
+  {
+    "objectID": "p/cif26/index.html#other-useful-resources",
+    "href": "p/cif26/index.html#other-useful-resources",
+    "title": "Deep Learning",
+    "section": "Other Useful Resources",
+    "text": "Other Useful Resources"
   },
   {
     "objectID": "p/plotathon/f22.html#website",

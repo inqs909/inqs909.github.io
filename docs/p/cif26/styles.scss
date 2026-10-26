@@ -1,0 +1,130 @@
+/*-- scss:defaults --*/
+
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,700,300italic,700italic);
+
+// fonts
+
+// colors
+$body-bg: #FFFFFF !default;
+$body-color: #222 !default;
+$link-color: #BB0F33 !default;
+$selection-bg: $link-color !default;
+$selection-color: #fff !default;
+$input-panel-bg: rgba(233, 236, 239, 0.2) !default;
+$presentation-heading-color: #BB0F33 !default;
+$code-block-bg: rgba(254, 254, 254, 0.52)  !default;
+$red: #BB0F33;
+$blue: #00475D;
+
+
+// headings
+$presentation-heading-font-weight: 700 !default;
+$presentation-heading-text-shadow: 2px 2px 2px $body-bg !default;
+
+$presentation-heading-text-transform: uppercase !default;
+
+/*-- scss:rules --*/
+
+#title-slide .date {
+  display: none;
+}
+
+#title-slide .title,
+#title-slide .subtitle,
+#title-slide .quarto-title-author-name {
+  text-shadow: none;
+  color: $red;
+}
+
+.reveal p {
+  font-weight: 300;
+  text-shadow: 1px 1px $body-bg;
+}
+
+.reveal p code {
+  display: inline-block;
+  border-radius: 7px;
+}
+
+.reveal small code {
+  vertical-align: baseline;
+}
+
+section.has-light-background {
+  p,
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-shadow: none;
+  }
+}
+
+h2 {
+  font-size: 0.95em;
+}
+
+.columns h3 {
+  font-size: 0.95em;
+}
+
+
+
+.reveal .slides section .subtitle {
+  font-size: 1.5em;
+  font-style: italic;
+  text-transform: uppercase;
+  margin-top: -10px;
+}
+
+.agenda {
+}
+
+
+
+
+.agenda-inactive {
+  opacity: 0.25;
+  margin-top: -0.5em;
+  margin-bottom: -0.5em;
+  color: $red;
+  text-shadow: none;
+}
+
+.agenda-active {
+  color: $red;
+  font-size: 1.5em;
+  margin-top: -0.5em;
+  margin-bottom: -0.5em;
+  color: $red;
+  text-shadow: none;
+}
+
+.reveal .controls button {
+  transform: scale(0.5) !important;       /* adjust size: 0.7 = 70% */
+}
+
+.figure-caption, figcaption {
+  text-align: center !important;
+}
+
+a {
+  text-decoration: underline !important;
+}
+
+.scrollable pre,
+div.scrollable pre {
+  max-height: 320px;        /* change the height as you like */
+  overflow: auto;           /* add scrollbars when content exceeds height */
+  padding: 0.75rem;         /* optional: nicer spacing */
+  border-radius: 6px;       /* optional */
+  background: var(--quarto-code-bg, #f6f8fa); /* uses Quarto var if available */
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.03) inset;
+}
+
+/* ensure long lines don't cause horizontal overflow (or allow horiz scroll) */
+.scrollable pre {
+  white-space: pre;         /* keep original formatting; change to pre-wrap if you prefer wrapping */
+  overflow-x: auto;         /* allow horizontal scroll for very long lines */
+}
+
