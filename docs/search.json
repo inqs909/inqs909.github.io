@@ -3176,5 +3176,215 @@
     "title": "One- & Two-Way ANOVA",
     "section": "Tukey HSD",
     "text": "Tukey HSD\n\nTukey HSDComparison Plot\n\n\n\nTukeyHSD(two_aov)\n\n#&gt;   Tukey multiple comparisons of means\n#&gt;     95% family-wise confidence level\n#&gt; \n#&gt; Fit: aov(formula = len ~ dose * supp, data = .)\n#&gt; \n#&gt; $dose\n#&gt;         diff       lwr       upr   p adj\n#&gt; 1-0.5  9.130  6.362488 11.897512 0.0e+00\n#&gt; 2-0.5 15.495 12.727488 18.262512 0.0e+00\n#&gt; 2-1    6.365  3.597488  9.132512 2.7e-06\n#&gt; \n#&gt; $supp\n#&gt;       diff       lwr       upr     p adj\n#&gt; VC-OJ -3.7 -5.579828 -1.820172 0.0002312\n#&gt; \n#&gt; $`dose:supp`\n#&gt;                 diff        lwr         upr     p adj\n#&gt; 1:OJ-0.5:OJ     9.47   4.671876  14.2681238 0.0000046\n#&gt; 2:OJ-0.5:OJ    12.83   8.031876  17.6281238 0.0000000\n#&gt; 0.5:VC-0.5:OJ  -5.25 -10.048124  -0.4518762 0.0242521\n#&gt; 1:VC-0.5:OJ     3.54  -1.258124   8.3381238 0.2640208\n#&gt; 2:VC-0.5:OJ    12.91   8.111876  17.7081238 0.0000000\n#&gt; 2:OJ-1:OJ       3.36  -1.438124   8.1581238 0.3187361\n#&gt; 0.5:VC-1:OJ   -14.72 -19.518124  -9.9218762 0.0000000\n#&gt; 1:VC-1:OJ      -5.93 -10.728124  -1.1318762 0.0073930\n#&gt; 2:VC-1:OJ       3.44  -1.358124   8.2381238 0.2936430\n#&gt; 0.5:VC-2:OJ   -18.08 -22.878124 -13.2818762 0.0000000\n#&gt; 1:VC-2:OJ      -9.29 -14.088124  -4.4918762 0.0000069\n#&gt; 2:VC-2:OJ       0.08  -4.718124   4.8781238 1.0000000\n#&gt; 1:VC-0.5:VC     8.79   3.991876  13.5881238 0.0000210\n#&gt; 2:VC-0.5:VC    18.16  13.361876  22.9581238 0.0000000\n#&gt; 2:VC-1:VC       9.37   4.571876  14.1681238 0.0000058\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\nAnalysis of Variance"
+  },
+  {
+    "objectID": "p/fifthyac/index.html#cejst",
+    "href": "p/fifthyac/index.html#cejst",
+    "title": "Banned Data",
+    "section": "CEJST",
+    "text": "CEJST\nClimate and Economic Justice Screening Tool (CEJST) is a tool created from President Biden’s executive order 14008 to tackle climate change at home and abroad."
+  },
+  {
+    "objectID": "p/fifthyac/index.html#cejst-history",
+    "href": "p/fifthyac/index.html#cejst-history",
+    "title": "Banned Data",
+    "section": "CEJST History",
+    "text": "CEJST History\nIn early 2025, President Trump issued an Executive order (Initial Recissions of Harmful Executve Orders and Action) rescinding President Biden’s Executive Order establishing Justice40 initiative and creating the CEJST.\n\nThis resulted in the removal of CEJST from federal websites."
+  },
+  {
+    "objectID": "p/fifthyac/index.html#cejst-1",
+    "href": "p/fifthyac/index.html#cejst-1",
+    "title": "Banned Data",
+    "section": "CEJST",
+    "text": "CEJST\nClimate and Economic Justice Screening Tool (CEJST) is a tool designed to tackle climate change at home and abroad."
+  },
+  {
+    "objectID": "p/fifthyac/index.html#cejst-2",
+    "href": "p/fifthyac/index.html#cejst-2",
+    "title": "Banned Data",
+    "section": "CEJST",
+    "text": "CEJST\nThis tool provides information about locations in the counntry to that are both at risk for climate change disasters, …\n\nas well as, highlighting economic, social, and health injustice, at the census tract."
+  },
+  {
+    "objectID": "p/fifthyac/index.html#cejst-history-1",
+    "href": "p/fifthyac/index.html#cejst-history-1",
+    "title": "Banned Data",
+    "section": "CEJST History",
+    "text": "CEJST History\nIn early 2025, President Trump issued an Executive order (Initial Recissions of Harmful Executve Orders and Action) rescinding President Biden’s Executive Order establishing Justice40 initiative and creating the CEJST.\n\nThis resulted in the removal of CEJST from federal websites."
+  },
+  {
+    "objectID": "p/fifthyac/index.html#cejst-3",
+    "href": "p/fifthyac/index.html#cejst-3",
+    "title": "Banned Data",
+    "section": "CEJST",
+    "text": "CEJST\nThe tool both provide an interactive map showing locations in the United States with the greatest risk …\n\nand provide publically-available data for local governments to analyze and use."
+  },
+  {
+    "objectID": "p/fifthyac/index.html#life-expectancy-years",
+    "href": "p/fifthyac/index.html#life-expectancy-years",
+    "title": "Banned Data",
+    "section": "Life Expectancy (Years)",
+    "text": "Life Expectancy (Years)"
+  },
+  {
+    "objectID": "p/fifthyac/index.html#fire-risk",
+    "href": "p/fifthyac/index.html#fire-risk",
+    "title": "Banned Data",
+    "section": "Fire Risk",
+    "text": "Fire Risk"
+  },
+  {
+    "objectID": "p/fifthyac/index.html#flood-risk",
+    "href": "p/fifthyac/index.html#flood-risk",
+    "title": "Banned Data",
+    "section": "Flood Risk",
+    "text": "Flood Risk"
+  },
+  {
+    "objectID": "p/fifthyac/index.html#wastewater-discharge",
+    "href": "p/fifthyac/index.html#wastewater-discharge",
+    "title": "Banned Data",
+    "section": "Wastewater Discharge",
+    "text": "Wastewater Discharge"
+  },
+  {
+    "objectID": "p/fifthyac/index.html#hazardous-waste-proximity",
+    "href": "p/fifthyac/index.html#hazardous-waste-proximity",
+    "title": "Banned Data",
+    "section": "Hazardous Waste Proximity",
+    "text": "Hazardous Waste Proximity"
+  },
+  {
+    "objectID": "p/fifthyac/index.html#asthma-rate",
+    "href": "p/fifthyac/index.html#asthma-rate",
+    "title": "Banned Data",
+    "section": "Asthma Rate",
+    "text": "Asthma Rate"
+  },
+  {
+    "objectID": "p/fifthyac/index.html#diabetes-rate",
+    "href": "p/fifthyac/index.html#diabetes-rate",
+    "title": "Banned Data",
+    "section": "Diabetes Rate",
+    "text": "Diabetes Rate"
+  },
+  {
+    "objectID": "p/fifthyac/index.html#coronary-heart-disease",
+    "href": "p/fifthyac/index.html#coronary-heart-disease",
+    "title": "Banned Data",
+    "section": "Coronary Heart Disease",
+    "text": "Coronary Heart Disease"
+  },
+  {
+    "objectID": "p/fifthyac/index.html#linguistic-isolation-percentage",
+    "href": "p/fifthyac/index.html#linguistic-isolation-percentage",
+    "title": "Banned Data",
+    "section": "Linguistic Isolation Percentage",
+    "text": "Linguistic Isolation Percentage"
+  },
+  {
+    "objectID": "p/fifthyac/index.html#cejst-4",
+    "href": "p/fifthyac/index.html#cejst-4",
+    "title": "Banned Data",
+    "section": "CEJST",
+    "text": "CEJST\nAll data is aggregated to the census tract level, for comunities to identify which locations have the greated need.\n\nA census tract is a geographical unit within a county that has a relatively low number of people living within it (1000-8000)."
+  },
+  {
+    "objectID": "p/fifthyac/index.html#cejst-history-2",
+    "href": "p/fifthyac/index.html#cejst-history-2",
+    "title": "Banned Data",
+    "section": "CEJST History",
+    "text": "CEJST History\nIn April 2025, insterest groups sued the federal government to of the removal of CEJST.\n\nIn March of 2026, the lawsuit was dismissed by a federal judge."
+  },
+  {
+    "objectID": "p/fifthyac/index.html#ventura-county-1",
+    "href": "p/fifthyac/index.html#ventura-county-1",
+    "title": "Banned Data",
+    "section": "Ventura County",
+    "text": "Ventura County"
+  },
+  {
+    "objectID": "p/fifthyac/index.html#cejst-data",
+    "href": "p/fifthyac/index.html#cejst-data",
+    "title": "Banned Data",
+    "section": "CEJST Data",
+    "text": "CEJST Data"
+  },
+  {
+    "objectID": "p/fifthyac/index.html#ventura-county-2",
+    "href": "p/fifthyac/index.html#ventura-county-2",
+    "title": "Banned Data",
+    "section": "Ventura County",
+    "text": "Ventura County"
+  },
+  {
+    "objectID": "p/fifthyac/index.html#cejst-5",
+    "href": "p/fifthyac/index.html#cejst-5",
+    "title": "Banned Data",
+    "section": "CEJST",
+    "text": "CEJST\nCEJST was last updated in December of 2024."
+  },
+  {
+    "objectID": "p/fifthyac/index.html#cejst-data-1",
+    "href": "p/fifthyac/index.html#cejst-data-1",
+    "title": "Banned Data",
+    "section": "CEJST Data",
+    "text": "CEJST Data"
+  },
+  {
+    "objectID": "p/fifthyac/index.html#cejst-6",
+    "href": "p/fifthyac/index.html#cejst-6",
+    "title": "Banned Data",
+    "section": "CEJST",
+    "text": "CEJST\nClimate and Economic Justice Screening Tool (CEJST) is a tool created from President Biden’s executive order 14008 to tackle climate change at home and abroad."
+  },
+  {
+    "objectID": "p/fifthyac/index.html#resources",
+    "href": "p/fifthyac/index.html#resources",
+    "title": "Banned Data",
+    "section": "Resources",
+    "text": "Resources"
+  },
+  {
+    "objectID": "p/fifthyac/index.html#cejst-energy-burden",
+    "href": "p/fifthyac/index.html#cejst-energy-burden",
+    "title": "Banned Data",
+    "section": "CEJST: Energy Burden",
+    "text": "CEJST: Energy Burden\n\n\nAverage household annual energy cost in dollars divided by the average household income.\nARE at or above the 90th percentile for energy cost OR PM2.5 in the air\nAND are at or above the 65th percentile for low income"
+  },
+  {
+    "objectID": "p/fifthyac/index.html#cejst-housing-burden",
+    "href": "p/fifthyac/index.html#cejst-housing-burden",
+    "title": "Banned Data",
+    "section": "CEJST: Housing Burden",
+    "text": "CEJST: Housing Burden\n\n\nExperienced historic underinvestment OR are at or above the 90th percentile for housing cost OR lack of green space OR lack of indoor plumbing OR lead paint, AND are at or above the 65th percentile for low income\nPercent of a census tract’s population in households where household income is at or below 200% of the Federal poverty level, not including students enrolled in higher education."
+  },
+  {
+    "objectID": "p/fifthyac/index.html#cejst-history-3",
+    "href": "p/fifthyac/index.html#cejst-history-3",
+    "title": "Banned Data",
+    "section": "CEJST History",
+    "text": "CEJST History\nDuring this time, several activists have downloaded the data and made it available for public-use.\n\nThere is an interactive map online that counties can use to determine where the greatest need is located."
+  },
+  {
+    "objectID": "p/fifthyac/index.html#cejst-7",
+    "href": "p/fifthyac/index.html#cejst-7",
+    "title": "Banned Data",
+    "section": "CEJST",
+    "text": "CEJST\nUsing the CEJST Tool,"
+  },
+  {
+    "objectID": "p/fifthyac/index.html#why-is-data-needed",
+    "href": "p/fifthyac/index.html#why-is-data-needed",
+    "title": "Banned Data",
+    "section": "Why is Data needed?",
+    "text": "Why is Data needed?\n\nData can provide insight on where action is needed.\n\n\nData can highlight"
+  },
+  {
+    "objectID": "p/fifthyac/index.html#where-is-data-used",
+    "href": "p/fifthyac/index.html#where-is-data-used",
+    "title": "Banned Data",
+    "section": "Where is Data used?",
+    "text": "Where is Data used?"
   }
 ]
