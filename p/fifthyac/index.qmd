@@ -239,6 +239,21 @@ Using the CEJST Tool,
 ```{r}
 ggplot(vc_check) +
   geom_sf() +
+  geom_text(
+    data = csuci_point,
+    aes(X, Y, label = label), 
+    size = 8
+  ) +
+  geom_text(
+    data = vc_point,
+    aes(X, Y, label = label), 
+    size = 8
+  ) +
+  geom_text(
+    data = hueneme_point,
+    aes(X, Y, label = label), 
+    size = 8
+  ) +
   theme_bw() 
 
 ```
@@ -248,6 +263,21 @@ ggplot(vc_check) +
 ```{r}
 ggplot(vcc) +
   geom_sf() +
+    geom_text(
+    data = csuci_point,
+    aes(X, Y, label = label), 
+    size = 8
+  ) +
+  geom_text(
+    data = vc_point,
+    aes(X, Y, label = label), 
+    size = 8
+  ) +
+  geom_text(
+    data = hueneme_point,
+    aes(X, Y, label = label), 
+    size = 8
+  ) +
   theme_bw() 
 
 ```
