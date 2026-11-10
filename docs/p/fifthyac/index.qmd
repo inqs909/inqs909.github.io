@@ -227,6 +227,10 @@ There is an interactive map online that counties can use to determine where the 
 
 :::
 
+## CEJST
+
+![CEJST Tool](img/vc_5.png){fig-align="center" width="10"}
+
 
 # Ventura County
 
@@ -242,17 +246,17 @@ ggplot(vc_check) +
   geom_text(
     data = csuci_point,
     aes(X, Y, label = label), 
-    size = 8
+    size = 7
   ) +
   geom_text(
     data = vc_point,
     aes(X, Y, label = label), 
-    size = 8
+    size = 7
   ) +
   geom_text(
     data = hueneme_point,
     aes(X, Y, label = label), 
-    size = 8
+    size = 7
   ) +
   theme_bw() 
 
@@ -266,17 +270,17 @@ ggplot(vcc) +
     geom_text(
     data = csuci_point,
     aes(X, Y, label = label), 
-    size = 8
+    size = 6
   ) +
   geom_text(
     data = vc_point,
     aes(X, Y, label = label), 
-    size = 8
+    size = 6
   ) +
   geom_text(
     data = hueneme_point,
     aes(X, Y, label = label), 
-    size = 8
+    size = 6
   ) +
   theme_bw() 
 
@@ -821,9 +825,18 @@ Information can tell us how to build a stronger community.
 
 :::
 
+::: {.fragment}
 
-## Other Data Removed
 
+::: {.callout-important}
+
+Any Removal of Data is an assault to community knowledge!
+:::
+
+
+:::
+
+## Other Data Purged
 
 
 ::: {.fragment}
@@ -873,3 +886,5 @@ Information can tell us how to build a stronger community.
 - [CA Open Data](https://data.ca.gov/)
 - [DataDryad](https://datadryad.org/)
 - [UCLA CHIS](https://healthpolicy.ucla.edu/our-work/california-health-interview-survey-chis)
+
+## Thank You!
